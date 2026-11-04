@@ -1,0 +1,535 @@
+package com.wasimaster.wmkeyboard.core.theme
+
+import java.io.ByteArrayOutputStream
+import java.util.zip.ZipEntry
+import java.util.zip.ZipOutputStream
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
+import org.junit.Test
+
+/**
+ * Reading a FlorisBoard `.flex` theme extension.
+ *
+ * The archives are built here rather than committed. Two reasons, and the second
+ * is the important one: FlorisBoard is Apache-2.0 and this repo is MIT, so no
+ * community pack belongs in the tree; and an archive built in the test is the
+ * only way to write the adversarial cases — three hundred entries, an entry
+ * named `../../etc/passwd`, a stylesheet in the older dialect — at all.
+ */
+class FlexThemeTest {
+
+    // ---- helpers ----
+
+    private fun flex(vararg entries: Pair<String, ByteArray>): ByteArray {
+        val out = ByteArrayOutputStream()
+        ZipOutputStream(out).use { zip ->
+            for ((name, bytes) in entries) {
+                zip.putNextEntry(ZipEntry(name))
+                zip.write(bytes)
+                zip.closeEntry()
+            }
+        }
+        return out.toByteArray()
+    }
+
+    private fun read(vararg entries: Pair<String, ByteArray>): FlexResult =
+        FlexTheme.read(flex(*entries).inputStream())
+
+    private fun manifest(themes: String, license: String = "Apache-2.0"): Pair<String, ByteArray> =
+        FlexTheme.MANIFEST to """
+            {
+              "${'$'}": "ime.extension.theme",
+              "meta": {
+                "id": "com.example.dusk",
+                "version": "1.0.0",
+                "title": "Dusk",
+                "maintainers": ["Someone"],
+                "license": "$license"
+              },
+              "themes": [$themes]
+            }
+        """.trimIndent().toByteArray()
+
+    private fun sheet(body: String): ByteArray = body.trimIndent().toByteArray()
+
+    private val dayEntry = """{ "id": "day", "label": "Dusk", "isNight": false }"""
+    private val nightEntry = """{ "id": "night", "label": "Dusk", "isNight": true }"""
+
+    /** A minimal v2 stylesheet: it names the elements only the newer dialect has. */
+    private val v2Sheet = sheet(
+        """
+        {
+          "window": { "background": "#101014" },
+          "key": {
+            "background": "#2C2C34",
+            "foreground": "#FFFFFF",
+            "shape": "rounded-corner(8dp)",
+            "border-color": "#40FFFFFF",
+            "border-width": "1dp"
+          },
+          "key:pressed": { "background": "#3C3C48" },
+          "key hint": { "foreground": "#A0A0A8" },
+          "key popup box": { "background": "#20202A", "foreground": "#FFFFFF" },
+          "smartbar candidate": { "foreground": "#E0E0E8" }
+        }
+        """,
+    )
+
+    private fun converted(result: FlexResult): FlexResult.Converted {
+        assertTrue("expected a conversion, got $result", result is FlexResult.Converted)
+        return result as FlexResult.Converted
+    }
+
+    // ---- the archive ----
+
+    @Test
+    fun `a theme extension is read`() {
+        val result = converted(read(manifest(dayEntry), "stylesheets/day.json" to v2Sheet))
+        assertEquals(1, result.themes.size)
+        assertEquals("Dusk", result.themes[0].theme.name)
+        assertEquals("Apache-2.0", result.license)
+        assertEquals(listOf("Someone"), result.authors)
+    }
+
+    @Test
+    fun `a ZIP that is not a theme extension is refused`() {
+        assertEquals(FlexResult.NotAFlex, read("pack.json" to """{"format":"wmstickers"}""".toByteArray()))
+        assertEquals(FlexResult.NotAFlex, read("readme.txt" to "hello".toByteArray()))
+        // The right manifest name but the wrong kind of extension.
+        assertEquals(
+            FlexResult.NotAFlex,
+            read(FlexTheme.MANIFEST to """{"${'$'}":"ime.extension.keyboard"}""".toByteArray()),
+        )
+    }
+
+    @Test
+    fun `something that is not a ZIP is refused`() {
+        // Plain text yields no entries rather than an error, so it comes back as
+        // "not one of ours" — which is what it is, and the wording the import
+        // shows for it is the right one.
+        assertEquals(FlexResult.NotAFlex, FlexTheme.read("not a zip at all".byteInputStream()))
+        assertEquals(FlexResult.NotAFlex, FlexTheme.read(ByteArray(0).inputStream()))
+    }
+
+    @Test
+    fun `a truncated archive is refused rather than half read`() {
+        val whole = flex(manifest(dayEntry), "stylesheets/day.json" to v2Sheet)
+        val result = FlexTheme.read(whole.copyOf(whole.size / 2).inputStream())
+        assertTrue("$result", result is FlexResult.Unreadable || result is FlexResult.NotAFlex)
+    }
+
+    @Test
+    fun `an archive of three hundred entries stops at the cap`() {
+        val padding = Array(300) { "junk/$it.bin" to ByteArray(64) }
+        // The manifest is first, so it is read; the entry cap stops the rest.
+        // The point is that this returns rather than running to completion.
+        val result = read(manifest(dayEntry), "stylesheets/day.json" to v2Sheet, *padding)
+        assertTrue("$result", result is FlexResult.Converted)
+    }
+
+    @Test
+    fun `an entry name that walks upwards is only ever a map key`() {
+        // Nothing here touches the filesystem, so the guard is structural. The
+        // assertion that matters is that such a name cannot be resolved into
+        // anything either: the stylesheet path below does not match it.
+        val result = read(
+            manifest(dayEntry),
+            "../../../../etc/passwd" to "root:x:0:0".toByteArray(),
+            "stylesheets/day.json" to v2Sheet,
+        )
+        assertTrue(result is FlexResult.Converted)
+        assertNull(FlexTheme.lookUp(mapOf("day.json" to ByteArray(1)), "../../day.txt"))
+    }
+
+    @Test
+    fun `a stylesheet is found by the path the manifest declares`() {
+        val entry = """{ "id": "x", "label": "X", "stylesheetPath": "styles/custom.json" }"""
+        assertTrue(read(manifest(entry), "styles/custom.json" to v2Sheet) is FlexResult.Converted)
+    }
+
+    // ---- the dialect ----
+
+    /**
+     * FlorisBoard 0.4's dialect. The element names differ — `keyboard` for the
+     * board, `key-popup` for the bubble, `smartbar-key` for a tool button — but
+     * the properties and the value syntax are the same, so it converts. An
+     * earlier build refused these outright, which threw away most of the themes
+     * in circulation: Dracula, Methone and Lurux are all this dialect.
+     */
+    @Test
+    fun `the older dialect is read, not refused`() {
+        val v1 = sheet(
+            """
+            {
+              "@defines": { "--bg": "rgba(16,16,20,1)", "--fg": "rgba(248,248,242,1)" },
+              "keyboard": { "background": "var(--bg)" },
+              "key": { "background": "rgba(68,71,90,1)", "foreground": "var(--fg)" },
+              "key-popup": { "background": "rgba(90,90,110,1)" },
+              "smartbar-key": { "foreground": "var(--fg)" },
+              "emoji-key": { "background": "rgba(0,0,0,0)" },
+              "system-nav-bar": { "background": "var(--bg)" }
+            }
+            """,
+        )
+        val theme = converted(read(manifest(dayEntry), "stylesheets/day.json" to v1)).themes[0].theme
+        assertEquals(0xFF101014, theme.boardBackground)
+        assertEquals(0xFF44475A, theme.keyBackground)
+        assertEquals(0xFF5A5A6E, theme.popupBackground)
+        assertEquals(0xFFF8F8F2, theme.toolbarIcon)
+        assertEquals(0xFF101014, theme.navigationBarBackground)
+    }
+
+    // ---- what lands ----
+
+    @Test
+    fun `colours land on the fields that mean the same surface`() {
+        val theme = converted(read(manifest(dayEntry), "stylesheets/day.json" to v2Sheet)).themes[0].theme
+        assertEquals(0xFF101014, theme.boardBackground)
+        assertEquals(0xFF2C2C34, theme.keyBackground)
+        assertEquals(0xFFFFFFFF, theme.keyText)
+        assertEquals(0xFF3C3C48, theme.pressedKeyBackground)
+        assertEquals(0xFF20202A, theme.popupBackground)
+        assertEquals(0xFFA0A0A8, theme.hintText)
+        assertEquals(0xFFE0E0E8, theme.suggestionText)
+        assertEquals(KeyShapeKind.ROUNDED, theme.keyShape)
+        assertEquals(8, theme.keyCornerRadiusDp)
+        assertEquals(1f, theme.keyBorderWidthDp, 0.001f)
+    }
+
+    @Test
+    fun `a field the sheet says nothing about is left to derive`() {
+        val theme = converted(read(manifest(dayEntry), "stylesheets/day.json" to v2Sheet)).themes[0].theme
+        // Null is not "missing": these derive a legible colour from their
+        // neighbours, which beats one scraped off a different surface.
+        assertNull(theme.modifierKeyText)
+        assertNull(theme.chipText)
+        assertNull(theme.toolbarIcon)
+        assertNull(theme.toolCircleBackground)
+    }
+
+    @Test
+    fun `a day and night pair becomes two themes, told apart`() {
+        val result = converted(read(manifest("$dayEntry, $nightEntry"), "stylesheets/day.json" to v2Sheet, "stylesheets/night.json" to v2Sheet))
+        assertEquals(2, result.themes.size)
+        assertEquals(listOf(false, true), result.themes.map { it.theme.dark })
+        assertEquals(listOf("Dusk (light)", "Dusk (dark)"), result.themes.map { it.theme.name })
+        // The extension's own title travels out, so the pair can become one
+        // family named after the extension rather than after its first look.
+        assertEquals("Dusk", result.title)
+    }
+
+    @Test
+    fun `per-key rules become key overrides`() {
+        val withCodes = sheet(
+            """
+            {
+              "window": { "background": "#101014" },
+              "key": { "background": "#2C2C34", "foreground": "#FFFFFF" },
+              "key popup box": { "background": "#20202A" },
+              "key[code=-11]": { "background": "#404050" },
+              "key[code=32]": { "background": "#1A1A22" },
+              "key[code=97]": { "background": "#503030" }
+            }
+            """,
+        )
+        val theme = converted(read(manifest(dayEntry), "stylesheets/day.json" to withCodes)).themes[0].theme
+        assertEquals(0xFF404050, theme.keyOverrides["SHIFT"]?.background)
+        assertEquals(0xFF1A1A22, theme.keyOverrides["SPACE"]?.background)
+        // A printable code styles the letter it types, so it follows that letter
+        // across every layout.
+        assertEquals(0xFF503030, theme.keyOverrides["a"]?.background)
+    }
+
+    @Test
+    fun `unreadable key text is dropped rather than shipped`() {
+        val unreadable = sheet(
+            """
+            {
+              "window": { "background": "#101014" },
+              "key": { "background": "#101014", "foreground": "#131318" },
+              "key popup box": { "background": "#20202A" }
+            }
+            """,
+        )
+        val result = converted(read(manifest(dayEntry), "stylesheets/day.json" to unreadable))
+        assertTrue(FlexUnsupported.LOW_CONTRAST_FALLBACK in result.dropped)
+        val theme = result.themes[0].theme
+        assertTrue(contrastRatio(theme.keyText, theme.keyBackground) > 3f)
+    }
+
+    @Test
+    fun `what could not be carried is named`() {
+        val fancy = sheet(
+            """
+            {
+              "@font `comic`": [{ "src": "uri(`flex:/fonts/Comic.ttf`)" }],
+              "window": { "background": "#101014", "font-family": "`comic`" },
+              "key": {
+                "background": "#2C2C34",
+                "foreground": "#FFFFFF",
+                "shadow-elevation": "4dp",
+                "shadow-color": "#FF0000",
+                "margin": "2dp",
+                "shape": "rounded-corner(12dp, 4dp, 12dp, 4dp)"
+              },
+              "key popup box": { "background": "#20202A" },
+              "incognito-indicator": { "foreground": "#FF0000" }
+            }
+            """,
+        )
+        val result = converted(read(manifest(dayEntry), "stylesheets/day.json" to fancy))
+        // The sheet names a face and the archive does not carry it, which is
+        // the only shape that is still a loss. A `.flex` that ships the file
+        // installs it instead; see the font tests below.
+        assertTrue(FlexUnsupported.FONT in result.dropped)
+        assertTrue(FlexUnsupported.PER_ELEMENT_SPACING in result.dropped)
+        assertTrue(FlexUnsupported.PER_CORNER_RADIUS in result.dropped)
+        assertTrue(FlexUnsupported.UNKNOWN_ELEMENT in result.dropped)
+        // The lift and its colour are carried now, so neither is reported as lost.
+        assertEquals(4f, result.themes[0].theme.keyElevationDp, 0.001f)
+        assertEquals(0xFFFF0000L, result.themes[0].theme.keyShadowColor)
+        assertTrue(FlexUnsupported.SHADOW_COLOR !in result.dropped)
+    }
+
+    @Test
+    fun `the counts describe how much of the sheet was used`() {
+        val result = converted(read(manifest(dayEntry), "stylesheets/day.json" to v2Sheet))
+        assertEquals(6, result.ruleCount)
+        assertEquals(6, result.mappedRuleCount)
+    }
+
+    @Test
+    fun `a variable is resolved against the defines block`() {
+        val withVars = sheet(
+            """
+            {
+              "@defines": { "--surface": "#123456", "--ink": "#FFFFFF" },
+              "window": { "background": "var(--surface)" },
+              "key": { "background": "var(--surface)", "foreground": "var(--ink)" },
+              "key popup box": { "background": "var(--surface)" }
+            }
+            """,
+        )
+        val theme = converted(read(manifest(dayEntry), "stylesheets/day.json" to withVars)).themes[0].theme
+        assertEquals(0xFF123456, theme.boardBackground)
+        assertEquals(0xFFFFFFFF, theme.keyText)
+    }
+
+    @Test
+    fun `a sheet that names no surface is not a theme`() {
+        val empty = sheet("""{ "key hint": { "foreground": "#FFFFFF" } }""")
+        assertEquals(FlexResult.NotAFlex, read(manifest(dayEntry), "stylesheets/day.json" to empty))
+    }
+
+    @Test
+    fun `an image the sheet points at comes back as bytes`() {
+        val withImage = sheet(
+            """
+            {
+              "window": { "background": "#101014", "background-image": "images/bg.png" },
+              "key": { "background": "#2C2C34" },
+              "key popup box": { "background": "#20202A" }
+            }
+            """,
+        )
+        val bytes = ByteArray(32) { it.toByte() }
+        val result = converted(
+            read(manifest(dayEntry), "stylesheets/day.json" to withImage, "images/bg.png" to bytes),
+        )
+        // Bytes, not base64 and not a file: encoding needs android.util.Base64,
+        // which would put this parser out of reach of this test.
+        assertNotNull(result.themes[0].images[FlexTheme.IMAGE_BACKGROUND])
+        assertEquals(32, result.themes[0].images[FlexTheme.IMAGE_BACKGROUND]?.size)
+    }
+
+    @Test
+    fun `a converted theme survives the codec`() {
+        val theme = converted(read(manifest(dayEntry), "stylesheets/day.json" to v2Sheet)).themes[0].theme
+        assertEquals(theme, ThemeCodec.decode(ThemeCodec.encode(theme)))
+    }
+
+    // ---- fonts a theme ships with itself ----
+
+    /** A sheet that declares a face and points the board at it. */
+    private fun fontSheet(family: String = "ndot", path: String = "fonts/Ndot57-Regular.otf") = sheet(
+        """
+        {
+          "@font `$family`": [{ "src": "uri(`flex:/$path`)" }],
+          "window": { "background": "#101014", "font-family": "`$family`" },
+          "key": { "background": "#2C2C34", "foreground": "#FFFFFF" }
+        }
+        """,
+    )
+
+    @Test
+    fun `a typeface the archive carries comes with the theme`() {
+        // Two of the six themes on the addon store ship their own face, and one
+        // of them is the dot-matrix font its whole look is built around.
+        val result = read(
+            manifest(dayEntry),
+            "stylesheets/day.json" to fontSheet(),
+            "fonts/Ndot57-Regular.otf" to ByteArray(4096) { 7 },
+        )
+        val converted = (result as FlexResult.Converted).themes.single()
+        val font = checkNotNull(converted.font) { "no font came across" }
+        assertEquals("ndot", font.name)
+        assertEquals("Ndot57-Regular.otf", font.fileName)
+        assertEquals(4096, font.bytes.size)
+        // And nothing is reported as lost, because nothing was.
+        assertFalse(FlexUnsupported.FONT in result.dropped)
+    }
+
+    @Test
+    fun `a font named but not shipped is still reported`() {
+        val result = read(
+            manifest(dayEntry),
+            "stylesheets/day.json" to fontSheet(),
+        )
+        assertTrue(FlexUnsupported.FONT in (result as FlexResult.Converted).dropped)
+        assertNull(result.themes.single().font)
+    }
+
+    @Test
+    fun `the at-rule is matched with its family name attached`() {
+        // The rule is always written `@font `name``, never the bare word, so
+        // matching the bare word meant a theme that shipped a face said
+        // nothing at all about it.
+        val result = read(
+            manifest(dayEntry),
+            "stylesheets/day.json" to fontSheet(family = "inter", path = "fonts/Inter.ttf"),
+            "fonts/Inter.ttf" to ByteArray(64) { 3 },
+        )
+        assertEquals("inter", (result as FlexResult.Converted).themes.single().font?.name)
+    }
+
+    @Test
+    fun `a sheet that sets no font asks for none`() {
+        val result = read(manifest(dayEntry), "stylesheets/day.json" to v2Sheet)
+        val converted = result as FlexResult.Converted
+        assertNull(converted.themes.single().font)
+        assertFalse(FlexUnsupported.FONT in converted.dropped)
+    }
+
+    // ---- the v2 way of naming a key ----
+
+    @Test
+    fun `a key named by its output is read like one named by its code`() {
+        // snygg v2's own spelling, which FlorisBoard's default themes carry
+        // beside `key[code=10]`. A theme written against v2 alone names only
+        // this, and reading codes only left it with no enter colour at all.
+        val converted = converted(
+            read(
+                manifest(dayEntry),
+                "stylesheets/day.json" to sheet(
+                    """
+                    {
+                      "window": { "background": "#101014" },
+                      "key": { "background": "#2C2C34", "foreground": "#FFFFFF" },
+                      "key[output=`@k3:action/enter`]": {
+                        "background": "#4CAF50", "foreground": "#000000"
+                      },
+                      "key[output=`@floris:action/backspace`]": { "background": "#222222" },
+                      "key[output=` `]": { "background": "#333333" }
+                    }
+                    """,
+                ),
+            ),
+        )
+        val theme = converted.themes.single().theme
+        assertEquals(0xFF4CAF50L, theme.enterKeyBackground)
+        assertEquals(0xFF000000L, theme.enterKeyText)
+        // The namespace in front of the id changes between releases, so it is
+        // stripped: `@k3:`, `@floris:` and `@fl:` all name the same actions.
+        assertEquals(0xFF222222L, theme.keyOverrides.getValue("DELETE").background)
+        assertEquals(0xFF333333L, theme.keyOverrides.getValue("SPACE").background)
+    }
+
+    @Test
+    fun `a code and an output naming the same key do not fight`() {
+        val converted = converted(
+            read(
+                manifest(dayEntry),
+                "stylesheets/day.json" to sheet(
+                    """
+                    {
+                      "window": { "background": "#101014" },
+                      "key": { "background": "#2C2C34" },
+                      "key[code=10]": { "background": "#4CAF50" },
+                      "key[output=`@k3:action/enter`]": { "background": "#FF0000" }
+                    }
+                    """,
+                ),
+            ),
+        )
+        // The code wins: it is the older and more widely written form, and a
+        // sheet carrying both is saying the same thing twice.
+        val theme = converted.themes.single().theme
+        assertEquals(0xFF4CAF50L, theme.enterKeyBackground)
+        assertEquals(0xFF4CAF50L, theme.keyOverrides.getValue("ENTER").background)
+    }
+
+    @Test
+    fun `the v2 element names upstream actually ships are read`() {
+        val converted = converted(
+            read(
+                manifest(dayEntry),
+                "stylesheets/day.json" to sheet(
+                    """
+                    {
+                      "window-inner": { "background": "#101014" },
+                      "key": { "background": "#2C2C34" },
+                      "smartbar-shared-actions-row": { "background": "#181820" },
+                      "smartbar-candidates-row": { "foreground": "#DDDDEE" }
+                    }
+                    """,
+                ),
+            ),
+        )
+        val theme = converted.themes.single().theme
+        // `window-inner` is the board; the row names were guessed at from the
+        // 0.4 spellings and matched no sheet ever written.
+        assertEquals(0xFF101014L, theme.boardBackground)
+        assertEquals(0xFF181820L, theme.suggestionBarBackground)
+        assertEquals(0xFFDDDDEEL, theme.suggestionText)
+        assertFalse(FlexUnsupported.UNKNOWN_ELEMENT in converted.dropped)
+    }
+
+    @Test
+    fun `content scale says how a key's picture fits it`() {
+        val converted = converted(
+            read(
+                manifest(dayEntry),
+                "stylesheets/day.json" to sheet(
+                    """
+                    {
+                      "window": { "background": "#101014" },
+                      "key": { "background": "#2C2C34", "content-scale": "fill-bounds" }
+                    }
+                    """,
+                ),
+            ),
+        )
+        assertEquals("STRETCH", converted.themes.single().theme.keyTextureScale)
+    }
+
+    @Test
+    fun `an inherited font family is not a font at all`() {
+        val result = read(
+            manifest(dayEntry),
+            "stylesheets/day.json" to sheet(
+                """
+                {
+                  "window": { "background": "#101014", "font-family": "inherit" },
+                  "key": { "background": "#2C2C34" }
+                }
+                """,
+            ),
+        )
+        val converted = result as FlexResult.Converted
+        assertNull(converted.themes.single().font)
+        assertFalse(FlexUnsupported.FONT in converted.dropped)
+    }
+}

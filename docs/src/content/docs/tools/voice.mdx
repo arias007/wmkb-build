@@ -1,0 +1,421 @@
+---
+title: "Voice typing"
+description: "Dictation through your device's speech engine: a full panel, a compact bar over the keys, or a draggable bar with the keyboard out of the way."
+sidebar:
+  order: 3
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import KeyCap from '@components/KeyCap.astro';
+import GestureDemo from '@components/GestureDemo.astro';
+import Shot from '@components/Shot.astro';
+
+Voice typing turns speech into text using your device's own speech recognizer: no setup, works in any language your device supports. Tap the mic, talk, and words appear as you speak.
+
+<PhoneFrame caption="The voice panel: a pulsing mic button on the left, the handwriting-style action rail on the right.">
+<Shot id="tools/voice-panel-listening" alt="The voice panel: a pulsing mic button on the left, the handwriting-style action rail on the right." />
+</PhoneFrame>
+
+## Starting dictation
+
+Open **Voice typing** from the toolbar (or the toolbox if you haven't pinned it). What opens depends on **Voice typing view**, covered below. There are three of them:
+
+- **Full panel** (the default) replaces the whole keyboard with a large mic button and a level-driven pulse ring. A four-key action rail runs down the right side: <KeyCap>Delete</KeyCap>, <KeyCap>Space</KeyCap>, a context-aware <KeyCap>Enter</KeyCap>, and a key that closes the panel and returns you to normal typing. In a search box that Enter key shows a search icon, rather than promising a newline it won't insert. Drag sideways on <KeyCap>Delete</KeyCap> to delete by word or by letter, the way the keyboard's own <KeyCap>⌫</KeyCap> swipe does, highlighting what letting go will take and giving it back as you drag back; drag sideways on <KeyCap>Space</KeyCap> to move the cursor. The collapsed bar's backspace takes the same delete swipe. Next to it a column of punctuation keys, <KeyCap>.</KeyCap> <KeyCap>,</KeyCap> <KeyCap>?</KeyCap> <KeyCap>!</KeyCap>, puts a mark in by hand without saying it (see [Fixing it while you talk](#fixing-it-while-you-talk)).
+- **Compact bar over the keys** replaces the suggestion strip with a small mic and status text, and the keys stay visible underneath. Dictate a sentence, then tap a letter key to fix a misheard word without leaving the view. While the mic is off and you're typing a word, the suggestion strip comes back over the bar, so you can pick the word (or, in Chinese, the characters for your pinyin). The bar returns as soon as the word is in.
+- **Collapsed bar, keyboard hidden** hands the keyboard's whole window back to the app you're typing in and leaves a small draggable pill of dictation controls floating over it. See [The collapsed bar](#the-collapsed-bar).
+
+You aren't locked into the one you picked. The panel and the compact bar each carry a collapse button down to the pill, and the pill carries a button back up, so switching is one tap from wherever you are.
+
+Tap the mic to start listening. Tap it again to finish. While it's listening you don't have to hit the mic itself: in the full panel the whole area left of the action rail is the stop button (it picks up a faint tint to show it), and on the compact bar anywhere that isn't another button stops it. The stop press tends to happen mid-thought without looking, so it gets the biggest target on the screen.
+
+The Voice tool on the toolbar is a stop button too. Tap it while a dictation is running on the panel or the compact bar and the phrase is finished exactly as if you had tapped the mic, then the view closes once the words are in. So one button starts a dictation and ends it, which matters most with [Whisper](/tools/whisper/) or a [transcription server](/tools/transcription-server/), where nothing is typed until you say you're done. To throw a dictation away instead, use the compact bar's close button or the panel's keyboard key.
+
+With the Voice tool pinned to the toolbar, press and hold it instead of tapping and a small menu lists the three [voice typing modes](#typing-while-you-dictate), with the one in force ticked. Pick one and dictation starts in it at once, and that mode stays the mode until you pick another. It is the quick way to switch between one block at a time and typing while you speak without a trip through settings; **Hold the tool to pick a mode** on the Voice typing screen gives the hold back to the toolbar if you would rather bind it to another tool. The full panel adds walkie-talkie dictation on a long press: holding the mic past the **Hold to talk** threshold (200 to 1500&nbsp;ms, default 600) starts listening only while your finger stays down, and releasing stops it immediately. A quick tap-and-release still toggles listening on, same as before. Neither bar has the gesture. Both bar mics are plain tap-to-toggle buttons.
+
+<GestureDemo type="long-press" caption="Hold the mic in the full panel to dictate walkie-talkie style." />
+
+Recognized words stream into the text field live as you talk, underlined until the phrase is finished. That's the system recognizer and [Asr4All](/tools/asr4all/), the offline engine that hears as you speak. [Offline voice](/tools/whisper/) covers how Whisper's panel differs: a whisper.cpp model shows its words under the microphone while it transcribes, and types them once it's done. WM Keyboard works out the spacing around what you dictate from the characters already next to the cursor, so starting mid-sentence or dictating over a selection doesn't leave a double space or a missing one. With **Automatic space after punctuation** on, a phrase that ends on a full stop, comma or other mark gets the space after it that a typed mark would, and a letter you type next on the keys takes a capital after a full stop the way it would after a typed one.
+
+Every word you dictate is learned the same way a typed word is, so frequent dictated vocabulary starts showing up in suggestions and autocorrect too.
+
+### If the mic can't open
+
+- **Password and other secure fields** never get a mic. Tapping the voice tool in one shows a brief "You cannot use voice typing in a password field" toast and opens nothing. If you land in a password field with a view already open, the panel reads "Voice typing does not work in password fields." and the compact bar reads "Not available in password fields".
+- **No microphone permission** shows an explanation and an "Allow microphone" button. Tapping it opens a system permission prompt through a small trampoline screen (IMEs can't show permission dialogs directly), and the keyboard rechecks automatically once you're back. The bars have room for one line, so they say "The app needs microphone permission" with an **Allow** chip.
+- **No speech recognizer on the device** (a phone without Google services, such as a recent Huawei) means the system engine can't run. The panel says so, with a **Choose a voice engine** button that opens Voice typing settings, where an engine that runs on the keyboard itself, such as Whisper, works without any recognizer. Either bar reads "Speech recognition is not available".
+
+### Opening on voice typing
+
+If you dictate more than you type, switch on **Reopen voice typing where you left it** on the Voice typing screen. After that, closing the keyboard with the voice panel, the compact bar or the collapsed bar on screen means the next field you tap opens on the same view and starts listening. That holds when you send a message, switch apps or tap into another box.
+
+You turn it off by leaving voice typing yourself. Press Back or the close button on the panel or the compact bar, the keyboard button on the collapsed bar, or the Voice tool, and the keyboard opens on its keys from then on. Open voice typing again and it sticks again. Password fields always open on the keys, and without the microphone permission the view asks for it instead of listening.
+
+## Typing while you dictate
+
+<SettingsPath path="Voice typing / Voice typing mode" />
+
+By default, dictation owns the field while it runs. The words being recognized sit there as composing text, and the first key you press ends the session. **Voice typing mode** offers two other ways to work, both of which leave the mic open while you use the keyboard.
+
+- **One block at a time** (the default) is the behaviour described everywhere else on this page. Speak, watch the words appear live, and the first keystroke stops the mic.
+- **Type while you speak** keeps the mic running through everything you do. Nothing goes into the field until you pause: each phrase lands whole, at wherever your cursor is by then. Keys, glide typing, suggestions, cursor moves, layout switches and panels-that-aren't-a-panel all carry on around it. A small mic chip sits in front of the suggestions; press and hold it for the whole control bar, with the language, the microphone and Cancel, in place of the suggestions. The down arrows on the bar fold it back to the chip.
+- **Type while you speak, plain text** is the same, minus every text rule. No spoken punctuation, no punctuation from the recognizer, and no spaces added around what lands. You control all of it from the keys. It's the one to pick for code, terminals, and anywhere you want exactly the words you said and nothing else.
+
+The two type-while-you-speak modes only make sense while the keys are on screen, and the only voice view that leaves them there is **Compact bar over the keys**. The full panel and the collapsed bar both take the keyboard's place, so with either of those the mode menu on the Voice tool offers **One block at a time** alone, and the hold gives itself back to the toolbar. Plain text also needs the system recognizer: it is the only engine that can be asked for no punctuation, while the offline models and a transcription server punctuate on their own, so plain text is left out of the menu for them. Settings lists the same choices, plus whichever mode is in force so you can move off it, and with another view it says which view brings the other two.
+
+<PhoneFrame side caption="An interactive session: one pulsing mic at the left of the suggestion strip, keys and candidates untouched.">
+{/* shot: tools/voice-mic-chip */}
+</PhoneFrame>
+
+A pause is not a full stop. The recognizer capitalizes the first word of every phrase as if it opened a sentence, because it can't see the field; the keyboard can, and it keeps that capital only where the words in front of your cursor end a sentence: nothing at all, a new line, or a full stop, question mark or exclamation mark, in whatever script wrote it. A phrase that lands after a comma, or after a word you just typed, starts small. A phrase that does open a sentence gets its capital even from a recognizer that writes in lower case, so "done period" followed by "and then" comes out as "Done. And then". A first word spelled with a capital further in (iPhone, eBay) is left as it is. This is about what's written, not about the keys: the capital lands on the first word of an empty field whether or not that field asks the keyboard for sentence capitals, and whether or not **Automatic capitals** is on. The word I and its contractions keep their capital anywhere, and so does anything with a second capital inside it (NASA, McKinsey). A name at the start of a phrase can't be told from a sentence capital, so shift it the way you would a typed one. Spacing and the capital are read again after every phrase, so a long dictation with pauses in it comes out as one sentence rather than a row of them. Plain text is judged the same way. It asks the recognizer for no capitals, so usually there is nothing to decide, but the system recognizer puts one on regardless and Whisper has no such switch at all. When a capital does arrive, where your cursor sits still decides it. Plain text never adds one the recognizer left off, though. What plain text drops is the punctuation and the spacing, not the first letter of a sentence.
+
+Sentences *inside* one phrase get the same treatment. A recognizer cases the phrase it was handed and nothing within it, so dictating "ready period this one" came back as "ready. this one". The keyboard raises the first letter after each full stop, question mark or exclamation mark. That works in any script that has capitals, behind a closing quote or bracket, and only where a space follows, so `3.5` and `site.com` are left alone. A stop that closes a single letter is read as an initial rather than an end: "e.g. this" and "9 a.m. tomorrow" keep their small words. Everything else stays as the recognizer cased it.
+
+The reason the default can't do this is worth knowing: a partial result is cumulative. Each one rewrites the whole phrase, not just the new words, so a letter you type into the middle of it gets overwritten by the next partial a moment later. The two interactive modes solve that by never putting a partial in the field at all. You lose the live preview of the sentence, and in exchange you get the whole keyboard back while the mic is open.
+
+Pair them with **Compact bar over the keys**, which is where they make the most sense. In that view an interactive session shrinks to a single pulsing mic at the left of the suggestion strip, and the strip keeps its room, so your candidates, the emoji row and the clipboard chip all stay reachable while you talk. Tap the mic to end the session. Tapping the voice tool does the same and puts the mic away once the last phrase has landed; with nothing running it just puts it away. If something goes wrong (no permission, no recognizer, no offline model), the full compact bar comes back for as long as it has something to tell you.
+
+Two smaller things change in these modes. They always keep listening, whatever **Keep listening** is set to, because a session that ended at the first pause would leave you typing into a closed mic. And they're far more patient with silence: twelve quiet retries instead of two, which is roughly a minute and a half of not talking, because silence is the normal state of a mode where you speak a line and then spend a while fixing it by hand.
+
+## Dictating into the keyboard's own boxes
+
+The keyboard's own text boxes, such as the AI chat and its Custom prompt, the emoji, GIF, dictionary and clipboard searches, Find and replace, the clip editor and a plugin's text box, carry a small mic at the right end of their suggestion strip. Tap it and speak: the phrase goes into that box at its caret, in place of any selected text, and never into the app behind the keyboard. The Voice tool does the same while one of these boxes has the keys.
+
+While it listens, the strip shows what has been heard so far in place of the suggestions. Tap the mic or anywhere on that line to finish, or the close button to throw the phrase away. Dictation stops at the first pause, whatever **Keep listening** is set to, and it ends by itself if the box closes before the words arrive.
+
+It uses the same engine, language, spoken punctuation, spacing and capitals as dictation anywhere else. A search box drops the full stop a recognizer puts at the end of a phrase, so you search for `cat` rather than `Cat.`. Nothing dictated into these boxes is learned, the same as typing into them. A password field behind the keyboard doesn't stop you here, because the words never reach it.
+
+The mic sits on the suggestion strip, so it only shows while **Suggestions** is on (Typing → Suggestions). The typing test, the word card's spelling and the Learn from text speller don't get one. Neither do the calculator and the converters, which have no strip.
+
+## The collapsed bar
+
+The third surface isn't a keyboard at all. Pick **Collapsed bar, keyboard hidden**, or tap the collapse button in the panel or the compact bar, and the keyboard gives its whole window back to the app you're typing in. What's left is a small pill of dictation controls floating on top. Only the pill itself is touchable: taps anywhere around it go through to the app underneath, so you can scroll the thing you're dictating into while you talk.
+
+<PhoneFrame side caption="The collapsed bar floating over an app, with the keyboard out of the way.">
+{/* shot: tools/voice-collapsed-bar */}
+</PhoneFrame>
+
+Drag it wherever you want it. Where it settles is remembered, so it comes back in the same place next time:
+
+- Lying flat, it snaps to the nearest of three rests across the screen (left, centre or right) and keeps whatever height you dragged it to. It starts centred and docked at the bottom.
+- Standing upright, it docks to whichever side edge you let go nearest, and keeps its position along that edge. It starts on the right, halfway down.
+
+The hamburger swaps the row of controls for a second page: back, undo, the language chip, a button that stands the bar upright (or lays it flat again), and a shortcut into the voice settings. The first page has the status line, undo when there's something to undo, an exit button, backspace, and the mic.
+
+That exit button is two different buttons depending on how you got here, which is worth knowing because they don't do the same thing:
+
+- **Arrived by collapsing** from the panel or the compact bar, you get an expand button that takes you back to the surface you came from. It undoes the switch.
+- **Chose the collapsed bar in settings**, and you get a keyboard button instead. That brings the keys back for now, and the bar stays your default for the next time you open voice typing.
+
+The bar isn't just for one field. It stands in for the keyboard on every new field until you bring the keyboard back, and it survives the keyboard's process being killed in between. Two things put the keys back on their own without disarming it: a password field, which never gets the bar, and a panel opened over the top (a hardware shortcut can do that). Both end the current dictation session, and closing the panel brings the bar back.
+
+## Undoing a dictated phrase
+
+<PhoneFrame caption="The Undo control, shown after a phrase commits.">
+{/* shot: tools/voice-undo */}
+</PhoneFrame>
+
+An **Undo** control appears (bottom-left in the panel, as a small icon on either bar) right after a phrase commits, as long as it's still sitting immediately before your cursor. Tapping it removes exactly that dictated text in one step. It disappears again once you dictate something else, edit the text some other way, or the text it would remove is no longer where dictation left it.
+
+It stays while the mic is open, too. Tapped while a phrase is still being heard, it takes back that phrase instead: the words heard so far go, and listening starts over, so a sentence that came out wrong can be said again without stopping. Between phrases, with nothing being heard, it removes the last phrase that landed, as above.
+
+The engines that record a clip and type it once it's transcribed, such as [Whisper](/tools/whisper/), a [transcription server](/tools/transcription-server/), [Parakeet](/tools/parakeet/) and [Moonshine](/tools/moonshine/), have no words to show while you talk, so for them Undo counts a phrase as being heard as soon as the clip has picked up speech. It shows from that moment, and tapping it throws the clip away untranscribed and starts a new one. Before you've said anything it removes the last phrase that landed, the same as with any engine. While a clip is being transcribed it can't be taken back yet; Undo then removes the phrase before it.
+
+### Fixing it while you talk
+
+In the default mode a phrase being heard sits in the field as one piece that the recognizer keeps rewriting, so nothing can be typed into it. The keys on the voice surfaces work around that rather than ending the dictation. A punctuation key, <KeyCap>Delete</KeyCap>, <KeyCap>Space</KeyCap> or <KeyCap>Enter</KeyCap> on the panel's rails, or the collapsed bar's backspace, pressed in the middle of a phrase lands the words heard so far as if you had paused, puts the key in after them, and goes straight back to listening. So "meet me at noon", a tap on <KeyCap>?</KeyCap>, then "or later" comes out as one line with your question mark in it. The few words you say in the moment the mic is restarting can be missed, so press at a natural break.
+
+The engines that record a clip get the same keys, a phrase at a time. A key pressed once the clip has picked up speech ends the clip there and sends it off to be transcribed; the key waits, goes in after the words when they land, and then the mic opens again for the next phrase, whether or not **Keep listening** is on. Keys pressed while a clip is still being transcribed, after a key, a pause or a tap on the mic, wait for it the same way and go in in the order you pressed them, so a quick <KeyCap>?</KeyCap> then <KeyCap>Enter</KeyCap> still reads right. What these engines can't do is show the phrase in the field while you say it: there is no live text to type into until the clip is transcribed, which with a server or a large model can take a second or two. The mic stays open through that "Transcribing" stretch, so you can carry on talking: what you say goes into the next clip and lands after the key. A key pressed before you've said anything just goes in. Keys on the keyboard itself still end the dictation, as described under [Continuous mode](#continuous-mode); [Type while you speak](#typing-while-you-dictate) is the mode for typing freely with the mic open.
+
+## Continuous mode
+
+<SettingsPath path="Voice typing / Keep listening" />
+
+With **Keep listening** on (the default), finishing one sentence doesn't stop dictation. The next listening session starts on its own, so you can keep talking sentence after sentence without re-tapping the mic. Turn it off and each session ends after one utterance. Tap the mic again for the next one.
+
+**Stop after a pause**, next to it, is for the engines that record a whole clip, [offline Whisper](/tools/whisper/) and the [transcription server](/tools/transcription-server/) among them: off by default, and from 0.5 to 4 seconds it ends their clip by itself once you have said something and then gone quiet for that long. [Asr4All](/tools/asr4all/), [Offline Sherpa](/tools/sherpa/) and [Offline Omnilingual](/tools/omnilingual/) write while you speak and hear the same pause with the **Phrase end detector** below. The system recognizer already stops on a pause and ignores it. With **Keep listening** off the pause ends the whole dictation, so nothing has to be pressed to finish.
+
+### Hearing the end of a phrase
+
+<SettingsPath path="Voice typing / Phrase end detector" />
+
+**Phrase end detector** decides, for Asr4All, Sherpa and Omnilingual, when you have stopped talking: that is when **Stop after a pause** starts counting, and where Omnilingual cuts its phrases. It shows on the screen once one of those engines is on the **Recognition engine** list.
+
+- **Auto**, the default, uses Silero where it can run and loudness everywhere else. Sherpa and Omnilingual models carry Silero, so they get it. Asr4All gets it once ONNX Runtime and a Silero copy are on the phone, and loudness until then.
+- **Silero VAD** is a 2 MB network that tells speech from other sound, so a fan or traffic does not hold the phrase open. Sherpa and Omnilingual bring their own copy; for Asr4All, the row under the choice downloads one (1.8 MB).
+- **FireRedVAD** is a newer detector, 2.3 MB, downloaded from the row under the choice. On its makers' benchmark of 102 languages it scored an F1 of 97.6 against Silero's 96.0, and raised far fewer false alarms (2.7% of silence taken for speech, against 9.4%).
+- **Loudness only** uses no model. Anything loud enough counts as speech, the way the pause stop has always worked for Whisper and the server: it costs nothing and downloads nothing, but a noisy room can keep it listening and a soft voice can fall under it.
+- **Your own model** takes a Silero or TEN VAD `.onnx` file from **Pick file**. The keyboard opens it first and keeps it only if it is a model sherpa-onnx can run; for TEN, that means the copy in sherpa-onnx's releases, which carries the details it needs, not the one from TEN's own page. TEN is not offered as a download because its licence adds conditions to Apache-2.0.
+
+The model detectors run on ONNX Runtime, the runtime Sherpa uses. A detector that cannot run yet (no runtime, or its file not downloaded) gives way to what **Auto** would pick, so dictation always has some way to stop by itself.
+
+**Speech threshold**, under it, is how sure the detector must be that a moment is speech, from 10% to 90% (50% by default). Lower keeps listening through soft or distant speech, but noise can hold the phrase open; higher ends the phrase sooner in a noisy room, but a quiet voice can be taken for silence. For **Loudness only** it sets how loud counts as speech, and 50% is the level the pause stop has always used.
+
+**Smart Turn**, off by default, adds a second opinion at each pause. [Smart Turn v3.2](https://huggingface.co/pipecat-ai/smart-turn-v3) listens to the last 8 seconds and judges from your voice, not your words, whether you finished what you were saying or stopped mid-thought: the falling voice at the end of a sentence, a word left hanging, an "um". When you sound finished, the phrase ends after a short pause (0.3 seconds, or 0.5 for Omnilingual, which waits that long to cut a phrase anyway); when you don't, it waits out the whole **Stop after a pause**. You can then set a long pause for thinking and still not wait at the end of every sentence. It was trained on 23 languages, downloads 8.7 MB from the row under the switch, and runs on ONNX Runtime. Until its model is on the phone, every pause is waited out as without it.
+
+Whisper, Whistle, Parakeet, Moonshine and the transcription server record a whole clip and keep the recorder's own loudness stop; the detector does not apply to them.
+
+**Reduce background noise**, below it, cleans the microphone's audio before an offline engine hears it: Whisper, Whistle, Asr4All, Parakeet, Moonshine, Sherpa and Omnilingual. The system recognizer and the transcription server get the microphone as it is. It has three settings, and Off is the default.
+
+- **Light** runs [RNNoise](https://github.com/xiph/rnnoise), a tiny network that adds about 10 ms. It makes the audio quieter to listen to, but a recognizer can lose words to it: on noisy test recordings (street, café and fan noise mixed into LibriSpeech at 0 to 10 dB) RNNoise 0.1.1 raised Whisper Tiny's word error rate from 27% to 33%. The 0.2 model it runs now did no better: on a second set made the same way it took Whisper Tiny from 23% to 29%, as 0.1.1 did. It is part of the offline engines' shared libraries, so on the Play build, or a GitHub or F-Droid build that has not fetched those yet, the first phrase after you turn it on goes through as recorded while they download.
+- **Strong** runs [DPDFNet](https://github.com/ceva-ip/DPDFNet), a DeepFilterNet model, on ONNX Runtime, the runtime [Offline Sherpa](/tools/sherpa/) uses. It keeps a little of the microphone under the cleaned audio, because a recognizer copes better with some noise left in than with speech scrubbed thin. On the same recordings it brought Whisper Tiny's error rate down from 27% to 24%, and Sherpa's English model's from 33% to 31%. It costs more: a 9 MB model that downloads from the row under the setting, about five times RNNoise's work for the phone, and 40 ms of delay. Until the model and the runtime are on the phone, Strong runs as Light.
+
+Between sentences the mic is really closed for a moment: the recognizer has stopped hearing and is working out the words. The pulse ring goes away and the line shows "…" for exactly that stretch, so you can see when to wait. It comes back when the next sentence is listening. Pressing the mic while it's working out the words makes that sentence the last one.
+
+That stretch has a limit. A recognizer that stops on its own pause is expected to send the words it heard, but some don't always: Transcribro, a Whisper-based recognizer often installed on phones without Google's, shows the words a moment after the pause and then sends its result many seconds later, or never, which left the spinner turning. Once the words of a finished sentence are on screen, the keyboard waits 3 seconds for the recognizer to confirm them; with no words at all it waits 12. Then it ends the sentence itself, keeps the words already shown, and carries on listening.
+
+Continuous mode is also patient with silence: a pause that would normally time out the recognizer restarts listening quietly instead of surfacing an error, but only for two silent retries in a row. After that it gives up and goes idle, so an abandoned open mic doesn't sit there listening forever.
+
+Dictation ends completely the moment you type a key, swipe, or tap a suggestion. There's no pausing and picking up where you left off. Partial results build up as one continuous chunk, so typing in the middle of an utterance would corrupt it rather than interrupt it. What was heard before the key stays in the field. With an engine that records a clip, such as Whisper or a transcription server, that means the clip isn't thrown away either: once it has picked up speech, the key finishes it, and its words land when the transcription is done. They go in after whatever you typed in the meantime, since the key can't wait for them. Whichever view you're in stays open afterward, so you can tap the mic to resume. The keys on the voice surfaces themselves don't end it (see [Fixing it while you talk](#fixing-it-while-you-talk)). A tap on the Voice tool is the exception among the ways out: it finishes the phrase first (see [Starting dictation](#starting-dictation)). Dictation also stops when you close the panel, dismiss either bar, or switch to a different tool panel.
+
+That last paragraph describes the default mode. If you want the mic to survive typing, see [Typing while you dictate](#typing-while-you-dictate). Both interactive modes ignore the **Keep listening** setting and always chain.
+
+## Spoken punctuation
+
+<SettingsPath path="Voice typing / Spoken punctuation" />
+
+With this on (the default), saying certain words types the punctuation mark instead of the word itself. It only applies to finished phrases, never to the live partial text, and it knows four sets of words: English, Bangla, Portuguese and Spanish. The sentence marks come first:
+
+| Say (English) | Types | Say (Bangla) | Types |
+|---|---|---|---|
+| "new paragraph" | two line breaks | "নতুন প্যারা" | two line breaks |
+| "new line" | line break | "নতুন লাইন" | line break |
+| "question mark" | `?` | "প্রশ্নবোধক চিহ্ন" / "প্রশ্নবোধক" | `?` |
+| "exclamation mark" / "exclamation point" | `!` | "বিস্ময়সূচক চিহ্ন" / "বিস্ময়বোধক" | `!` |
+| "full stop" / "period" | `.` | "দাঁড়ি" | `।` |
+| "comma" | `,` | "কমা" | `,` |
+| "colon" | `:` | "কোলন" | `:` |
+| "semicolon" | `;` | "সেমিকোলন" | `;` |
+
+Punctuation attaches straight to the word before it with no space. The trade-off is deliberate. While this is on, a sentence that uses one of these words as a word types the symbol instead. Turn it off if you want to say "period" or "comma" out loud and have it come out as a word.
+
+English also knows the marks past the end of a sentence. Each one sits against its neighbours the way it would if you had typed it: an opening mark closes up to the word after it, a joining mark closes up on both sides, and an operator keeps a space on each side.
+
+| Say | Types | Spacing |
+|---|---|---|
+| "ellipsis" / "dot dot dot" | `…` | after the word: `wait…` |
+| "open quote", "close quote" | `"` | around the words: `said "hi" twice` |
+| "open parenthesis", "close parenthesis" | `(` `)` | around the words: `see (page two) now` |
+| "open bracket", "close bracket" | `[` `]` | same |
+| "open brace", "close brace" | `{` `}` | same |
+| "apostrophe" | `'` | joins: `rock'n` |
+| "hyphen" | `-` | joins: `well-known` |
+| "dash" | `-` | stands apart: `one - two` |
+| "en dash", "em dash" | `–` `—` | joins |
+| "slash" / "forward slash" | `/` | joins: `and/or` |
+| "backslash" | `\` | joins |
+| "underscore" | `_` | joins: `snake_case` |
+| "at sign" | `@` | joins: `me@example` |
+| "caret" | `^` | joins |
+| "hashtag" / "hash sign" / "pound sign" | `#` | before the word: `#blessed` |
+| "dollar sign" | `$` | before the word: `$5` |
+| "tilde" | `~` | before the word |
+| "percent sign" | `%` | after the word: `50%` |
+| "degree sign" | `°` | after the word |
+| "asterisk" | `*` | after the word |
+| "copyright sign", "registered sign", "trademark sign" | `©` `®` `™` | after the word |
+| "ampersand" | `&` | stands apart: `salt & pepper` |
+| "plus sign", "equals sign" | `+` `=` | stands apart: `two + two = four` |
+| "greater than sign", "less than sign" | `>` `<` | stands apart |
+| "vertical bar" | `\|` | stands apart |
+
+A symbol whose plain name is an everyday word only answers to its longer name, which is why so many of these end in "sign". "Fifty percent is greater than ten plus one" stays a sentence; "fifty percent sign" is `50%`.
+
+Portuguese and Spanish know the names Gboard uses. A bare "ponto" or "punto" is not among them, because both are everyday words; say "ponto final" or "punto final" for the full stop.
+
+| Say (Portuguese) | Say (Spanish) | Types |
+|---|---|---|
+| "novo parágrafo" | "nuevo párrafo" | two line breaks |
+| "nova linha" | "nueva línea" | line break |
+| "ponto de interrogação" / "interrogação" | "signo de interrogación" | `?` |
+| "ponto de exclamação" / "exclamação" | "signo de exclamación" | `!` |
+| "ponto final" | "punto final" | `.` |
+| "vírgula" | "coma" | `,` |
+| "dois pontos" | "dos puntos" | `:` |
+| "ponto e vírgula" | "punto y coma" | `;` |
+| "reticências" | "puntos suspensivos" | `…` |
+| "abre aspas", "fecha aspas" | "abrir comillas", "cerrar comillas" | `"` |
+| "abre parênteses", "fecha parênteses" | "abrir paréntesis", "cerrar paréntesis" | `(` `)` |
+| "hífen" | "guion" | `-` |
+| "travessão" | | `—` |
+| "arroba" | "arroba" | `@` |
+
+Any other language has no table, so its dictation is typed exactly as it was heard.
+
+## Adding punctuation and capitals
+
+<SettingsPath path="Voice typing / Add punctuation and capitals" />
+
+Two of the offline engines write the words they hear and nothing else. Omnilingual, and every [Sherpa](/tools/sherpa/) model but the German, Spanish, Korean and eight-language ones, hand over a phrase in lower case with no full stops or commas, so a minute of dictation would come out as one long run of words. **Add punctuation and capitals**, on by default, fixes that on the phone. When a phrase is finished, a punctuation model reads it and puts in full stops, commas and question marks, and the first letter of every sentence becomes a capital. The row shows only while Sherpa or [Omnilingual](/tools/omnilingual/) is on the engine list, and not in **Type while you speak, plain text**.
+
+The marks are the language's own: `।` after Bangla and Hindi, `،` and `؟` in Arabic, `۔` in Urdu, `。` and `，` in Chinese, `、` in Japanese, and an opening `¿` on a Spanish question. Names get their capitals from the keyboard's word lists and from the capitals it has learned from your typing, so "london" becomes "London" once a list or you have spelled it that way. An English phrase also takes the name capitals of Sherpa's **Punctuation (English)** model when that is downloaded.
+
+The model is Horizon Labs' punctuation-restoration-small, an mmBERT model trained in 88 languages, made smaller for phones. Download it from the **Punctuation model** row under the setting: 151 MB from the keyboard's data repository at a fixed version, every file checked against its SHA-256, and about 90 MB of memory while it is loaded. A phrase takes a few tens of milliseconds after you stop. Until it is downloaded, English still gets punctuation from **Punctuation (English)** if you have that model, and other languages stay as the engine wrote them. It needs ONNX Runtime, the same on-demand part Sherpa and Omnilingual run on.
+
+**Which punctuation model**, under the setting, narrows that. **Whichever is on the phone** is the behaviour above. **Multilingual only** ignores the English model. **English only, the small one** ignores the big model, so an English dictation gets by on 8 MB and nothing else is punctuated. **Import a punctuation model** takes any [sherpa-onnx online punctuation model](https://k2-fsa.github.io/sherpa/onnx/punctuation/index.html): pick its `.onnx` file and `bpe.vocab` together, name it, and give it language codes. It goes before the listed models for those languages. Sherpa's other kind of punctuation model, the offline CT-Transformer, is refused.
+
+It was picked by measurement. News paragraphs from FLORES-200, with their punctuation and capitals taken out, were put back together by each candidate. On the marks it scored 0.81 F1 in English, 0.73 in Bangla, 0.78 in Hindi, 0.84 in Spanish, 0.73 in Arabic and 0.83 in Chinese, ahead of every other model tried in each of them. Full stops and question marks are its strong side; commas are where it misses most. It never types a colon, a dash, an exclamation mark or quotes. Thai, Lao, Khmer, Burmese and Tibetan are not among its languages, and a dictation in a language it lacks is left alone.
+
+Engines that punctuate for themselves are never touched: Whisper, Whistle, Asr4All, Parakeet, Moonshine, those four Sherpa models, the phone's recognizer and a transcription server. Nor is dictation into the keyboard's own search boxes. [Spoken punctuation](#spoken-punctuation) still works with it on: a mark you say goes in first, and the model adds nothing next to it.
+
+## Tidying dictation with AI
+
+A recognizer writes down what you said, word for word: the "um"s, the false starts, the word you said twice, and both halves of "let's meet at three, no, four". **Tidy dictation with AI**, off by default, hands each phrase to the model the [AI tool](/tools/ai/) uses, the way Gboard's Rambler does on Google's servers, and puts the cleaned version in its place. Filler and repeats go, a spoken correction keeps only the correction ("let's meet at four"), and punctuation and obvious mishearings get fixed. Your words, your language and your tone stay; it doesn't summarize, translate or answer what you said.
+
+The phrase goes into the field as heard first, and the surface says **Tidying up…** while the model works. The cleaned text only replaces it if the phrase is still exactly what sits in front of your cursor, so typing, moving the cursor or leaving the field in the meantime just keeps what you said. So does a model that fails, gives nothing back or is still thinking after 15 seconds. Nothing you dictated is ever lost to the rewrite. The next phrase of a continuous dictation starts once the answer is in, and tapping the mic while it's tidying makes that phrase the last one. **Undo** takes back the tidied phrase.
+
+It uses whatever provider and model the AI tool is set to, cloud or on-device, and is skipped without a word when that provider isn't set up yet, when [data saver](/privacy/data-saver/) is holding cloud AI back, in password fields, in the keyboard's own search boxes, for phrases of only a word or two, and in **Type while you speak, plain text**, whose point is the words exactly as said. A small on-device model tidies less reliably than a cloud one, and it holds the next phrase back for longer.
+
+## Language and engine
+
+<SettingsPath path="Voice typing / Voice typing language" />
+
+Out of the box, dictation listens for the language of the layout you're typing on, and switching layouts switches it. **Voice typing language** lets you break that link. It opens a list with **Follow the keyboard** at the top, your keyboard languages under it, and then the other languages speech recognition commonly handles:
+
+- **Follow the keyboard** is the default and works the way dictation always has.
+- **One language ticked** keeps dictation in that language whatever the layout. Type on your Bangla layout and still dictate in English, say.
+- **Several ticked** lets you speak any of them. Dictation starts in your keyboard's language when it's one of the ticked ones, otherwise in the first you ticked.
+
+How well "several" works depends on the engine. The system recognizer is asked to detect the language among your picks, and to follow a switch in the middle of a sentence, on Android 14 and later. That's a request, and only recognizers that support it (Google's is one) act on it. Others, and older Android versions, hear the starting language alone. [Offline Whisper](/tools/whisper/) and the [transcription server](/tools/transcription-server/) work the language out themselves with several picked. A whisper.cpp Whisper model chooses among your picks only, whatever they are. A LiteRT Whisper model chooses among every language it knows, so give it a multilingual one that covers all of them; its grouped models can only be told one language, and with one picked, they are.
+
+A language chip sits in the corner of the voice panel whenever there's a choice to make: two or more keyboard languages, or a choice already made. It shows what dictation listens for, **EN** or **EN+BN**, and it's drawn brighter when you've picked rather than followed the keyboard. Tap it for a menu: **Follow the keyboard**, each of your keyboard languages, **All my languages** to listen for every one of them at once, and **More languages…** to open the full list in settings. A pick from the menu is saved, the same as one made in settings, and a session that's listening starts again in it.
+
+The compact bar over the keys can carry the same chip. Turn on **Language button on the compact bar** (it shows under **Voice typing view** while the compact bar is the one picked) and the chip sits between the status text and the undo button, with the same menu behind it. It's off by default because that bar has room for one line.
+
+On Android 12 and up the system recognizer prefers to run fully on-device, once your phone has that language's model installed. It's faster, needs no network, and skips the little beep before it starts listening. If a language's on-device model can't handle recognition, WM Keyboard falls back to the network recognizer transparently. The same happens when the on-device recognizer opens the microphone and then hears nothing at all, with no level and no words for the first couple of seconds. Some phones' on-device model stalls that way, which used to look like a dead microphone. That language then stays on the network recognizer until the keyboard restarts. **Prefer on-device recognition**, shown while the phone's recognizer is on the engine list, turns the on-device recognizer off altogether.
+
+**Recognition service**, on the same screen, picks which app does the recognising. **Phone's default** is whichever one Android has set; the list also holds every other app on the phone that offers speech recognition to other apps, such as Marmalade, Transcribro or FUTO Voice Input. Pick one and the mic sends your speech to it instead, with no change to anything else on this page. **Prefer on-device recognition** is hidden while another app is picked, since it only steers the phone's default. If that app is uninstalled, dictation goes back to the phone's default, and the row says the app is gone until you pick again.
+
+### Hinglish, Banglish and other romanized languages
+
+A romanized language is dictated as the language itself. No engine knows "Hindi in Latin letters" as a language of its own, so with **Hinglish · Hindi (Romanized)** picked, every engine is asked for Hindi, and the Devanagari it writes is then spelled the way you'd type it on the Hinglish layout. "कल मीटिंग है, प्लीज कैलेंडर पे डाल देना" lands as "Kal meeting hai, please calendar pe daal dena". The live words change script before they reach the field, so you never see the Devanagari.
+
+Each word goes through that language's spelling lists first. An English word the recognizer wrote in the native script comes back as the English word when the lists know it (मीटिंग is "meeting", not "miting"), and a common word takes the spelling people chat in. Every other word is spelled out by rules for its script. Tamil, Telugu, Kannada, Malayalam and Sinhala keep every vowel they say (nuvvu ekkada unnaavu, kohomada). Roman Russian follows Translit (privet, horosho). Words the recognizer already wrote in Latin letters stay as they are, and native digits come out as 0–9. Konkani's Romi has spelling rules of its own, so it is dictated as before.
+
+<SettingsPath path="Languages & layouts / Hinglish / Voice typing / Romanized dictation model" />
+
+Rules spell a letter the same way every time, so a long or rare word can come out stiffer than anyone would write it. The **Romanized dictation model** is for those words. It is IndicXlit, the transliteration model by [AI4Bharat](https://github.com/AI4Bharat/IndicXlit) behind [Neural suggestions](/languages/phonetic/#neural-suggestions), trained the other way round: from Bangla, Hindi, Urdu, Assamese, Marathi, Nepali, Gujarati, Punjabi, Odia, Tamil, Telugu, Kannada or Malayalam script back to Latin letters. Download it from the romanized language's page (Hinglish, Banglish and the rest), or from the native language's page under Neural suggestions. There is no switch: once it is on the phone, dictation uses it.
+
+The phrase still lands the moment it's heard, spelled as above. Then, before the next phrase starts, the model spells again each word of five letters or more that the lists didn't know, and the phrase is swapped for that version if it is still right in front of the cursor. Live words aren't touched. Shorter words stay with the rules: a common word like है or কি that the lists leave out reads better spelled by the rules, and the model tends to hear it as an English word ("key" for की). On 1,500 test words a language from AI4Bharat's Aksharantar set, the model spelled 54% the way people write them, against 29% for the rules alone; Hindi went from 39% to 60%, Bangla from 26% to 44%.
+
+It is a 13&nbsp;MB download from the data repository's `models` release, checked against a SHA-256 built into the app, plus ONNX Runtime (about 33&nbsp;MB) if nothing else has fetched it yet. It runs on the phone, and nothing you say leaves it. When the model isn't there, or hasn't got through a phrase's words within about half a second, the rules' spelling stays. Delete it from the same row, or from **Downloads** on the storage screen.
+
+Hinglish dictation runs on whatever engine, model and server Hindi is set to, and the same goes for every romanized language. Whistle knows none of them and steps aside for the next engine on the list. Picking Hindi and Hinglish together leaves the Devanagari as it was heard, since nothing says which of the two a word was meant for. With [Tidy dictation with AI](#tidying-dictation-with-ai) on, the model is told the phrase is Hindi (or Bangla, or Tamil) in Latin letters, so it keeps it in Latin letters and puts an English word the rules spelled by sound back to its English spelling.
+
+### An engine for each language
+
+<SettingsPath path="Voice typing / Engine for each language" />
+
+**Engine for each language** gives each of your keyboard languages its own engine, and for Offline Whisper, Asr4All, Parakeet, Moonshine, Sherpa and Omnilingual its own model: English on the system recognizer and Bangla on a Whisper model, say. Tap a language to see what can take it on this phone. Only engines that know the language and models that are downloaded are listed. **Default** follows the **Recognition engine** list. Dictation picks the engine for the language it starts in.
+
+Turn on **Change engine from the voice tool** and the voice panel gets an engine chip in its bottom left corner. It names the engine the language you dictate in uses, and a tap lists the same choices for that language, with **As in settings** to go back to the default. A pick is saved the same way as one made in settings, and a session that's listening starts again on it.
+
+On Android 13 and up, a chip offers to download a model that's available for your language but not installed yet. It's named for the language you're actually dictating in: "Get Spanish for offline voice typing", "Get Bangla for offline voice typing", and so on. A dictation language the catalogue doesn't recognise reads "Get this language for offline voice typing" rather than guessing. Tap the chip to start the system's own download. Progress shows on the chip until the model is installed.
+
+<PhoneFrame caption="Offline model download chip in the voice panel.">
+{/* shot: tools/voice-offline-model-chip */}
+</PhoneFrame>
+
+## Choosing the microphone
+
+<SettingsPath path="Voice typing / Microphone" />
+
+All of this is behind **Microphone switch**, which is on by default. Turn it off and voice typing always listens through the microphone Android picks: the keyboard never moves the audio to a headset, the **Microphone** row is hidden and the switch leaves every voice view.
+
+By default voice typing listens through whichever microphone Android picks, which is a wired or USB headset when one is plugged in and the phone's own microphone otherwise. Android does not switch dictation to a Bluetooth headset on its own. **Microphone** changes that: choose **Bluetooth headset**, **Wired headset**, **USB microphone** or **Phone microphone**, and voice typing uses that kind whenever one is connected. When none is, it goes back to the automatic choice, so a headset left at home doesn't leave you with a dead mic.
+
+When more than one microphone is connected, every voice view gets a microphone switch: the bottom right corner of the panel, beside the collapse button on the compact bar, and next to the status line on the collapsed bar (in the column on the upright one). Its icon is the kind in use: a phone, a headset, USB or Bluetooth. It's filled while a microphone you picked is the one listening, and outlined while Android's own choice is. Tap it to move to the next connected microphone. The pick is saved as the **Microphone** setting, and a session that's listening starts again on the new one.
+
+When a session starts on a microphone the keyboard hasn't named yet, it says which, with the device's own name: "Using Bluetooth mic (X7)", "Using Built-in mic (Pixel 8)". The panel shows it as a toast along its bottom edge for a couple of seconds, and the two bars show it in their status line until the first words arrive. It's said after a tap on the switch, when the microphone changes, and on the first dictation each time the keyboard opens, not on every sentence of a continuous session. In **Type while you speak**, the compact bar shrinks to a single microphone button so the suggestions keep their room, and that button has no switch beside it. Change the microphone in settings there, or from the panel.
+
+How far the choice reaches depends on the engine. [Offline Whisper](/tools/whisper/) and the [transcription server](/tools/transcription-server/) record with the keyboard's own capture, so every kind works for them. The system recognizer records the audio itself, and the only way to move it is to route the phone's call audio to a Bluetooth headset, so with it the chip offers **Auto** and **Bluetooth** only. A Bluetooth headset's microphone works over the same link a phone call uses, so while it's in use music on that headset drops to call quality. The keyboard gives the link back about a second after dictation stops.
+
+## Options
+
+<SettingsPath path="Voice typing" />
+
+Everything below lives on the Voice typing screen, under Features on the settings home screen, rather than on the tool page. The microphone can be reached from a key or a hardware shortcut with the tool nowhere on the toolbar, so these aren't really the tool's settings.
+
+| Setting | Default | What it does |
+|---|---|---|
+| Use voice typing | On | The switch at the top of the screen. Off removes the microphone from the whole keyboard and hides every other row here. See [Turning voice typing off](#turning-voice-typing-off). |
+| Voice typing view | Full panel | A choice of three, not a switch: which surface the mic button opens. **Full panel**, **Compact bar over the keys**, or **Collapsed bar, keyboard hidden**. |
+| Language button on the compact bar | Off | Shown while **Voice typing view** is the compact bar. Adds the language chip to the bar, so you can pick what dictation listens for without opening the panel. See [Language and engine](#language-and-engine). |
+| Voice typing mode | One block at a time | Another choice of three: whether the keys work while the mic is open. **One block at a time**, **Type while you speak**, or **Type while you speak, plain text**. See [Typing while you dictate](#typing-while-you-dictate). |
+| Hold the tool to pick a mode | On | A press and hold on the toolbar's Voice tool opens a menu of the three modes; picking one makes it the mode and starts dictation. Off gives the hold back to the toolbar's own press-and-hold action. |
+| Reopen voice typing where you left it | Off | Close the keyboard with a voice view open and the next field opens on that view, already listening. See [Opening on voice typing](#opening-on-voice-typing). |
+| Pause media during voice typing | Off | The keyboard takes the audio focus while the microphone listens, so music, podcasts and video pause. They resume about a second after dictation ends, which keeps a continuous session from restarting the music between sentences. An app that ignores the request keeps playing. |
+| Microphone switch | On | Off leaves the microphone to Android and takes the switch off the voice views. See [Choosing the microphone](#choosing-the-microphone). |
+| Microphone | Automatic | Which microphone voice typing listens through: **Automatic**, **Bluetooth headset**, **Wired headset**, **USB microphone** or **Phone microphone**. A pick is preferred whenever one of its kind is connected, and automatic stands in when none is. See [Choosing the microphone](#choosing-the-microphone). |
+| Change engine from the voice tool | Off | An engine chip on the voice panel for the language you dictate in. See [An engine for each language](#an-engine-for-each-language). |
+| Hold to talk | 600&nbsp;ms | How long you hold the microphone before a tap becomes a press-and-hold, from 200 to 1500&nbsp;ms. Raise it if a slow press keeps stopping your dictation. Lower it if you mean to hold and it keeps latching on. |
+| Keep listening | On | Starts the next sentence automatically after each one commits. |
+| Keep the screen on | On | The screen stays on while the microphone is open or a clip is being transcribed. The screen turning off closes the keyboard, and that ends the dictation: a press of the power button still does, and loses what was being said. |
+| Stop after a pause | Off | Ends a phrase by itself once you have said something and then gone quiet for this long, from 0.5 to 4 seconds. See [Continuous mode](#continuous-mode). |
+| Phrase end detector | Auto | How Asr4All, Sherpa and Omnilingual hear that pause: **Auto**, **Silero VAD**, **FireRedVAD**, **Loudness only** or **Your own model**. See [Hearing the end of a phrase](#hearing-the-end-of-a-phrase). |
+| Speech threshold | 50% | How sure the phrase end detector must be that a moment is speech. |
+| Smart Turn | Off | At each pause, ends the phrase early when you sound finished, and waits out the whole pause when you don't. Needs its 8.7 MB model. |
+| Spoken punctuation | On | Saying "comma", "question mark" or "দাঁড়ি" types the mark. |
+| Add punctuation and capitals | On | Full stops, commas, question marks and sentence capitals for Sherpa and Omnilingual, which write bare words. Needs its 151 MB model, downloaded from the row under it. See [Adding punctuation and capitals](#adding-punctuation-and-capitals). |
+| Tidy dictation with AI | Off | Sends each phrase to the AI tool's model to take out filler words, repeats and spoken corrections. Hidden in plain text mode. See [Tidying dictation with AI](#tidying-dictation-with-ai). |
+
+The screen reads from the top: **Recognition engine**, then a **Languages** group with **Voice typing language** and **Engine for each language** (see [Language and engine](#language-and-engine)), then **Dictation** with the view, the mode, **Keep listening**, **Stop after a pause**, **Phrase end detector** (with **Speech threshold** and **Smart Turn** under it, while Asr4All, Sherpa or Omnilingual is on the list), **Spoken punctuation**, **Add punctuation and capitals** and **Tidy dictation with AI**. The rest sit in a closed **Advanced** fold under it: **Hold the tool to pick a mode**, **Reopen voice typing where you left it**, **Pause media during voice typing**, the microphone switch and pick, **Change engine from the voice tool**, **Hold to talk** and **Reduce background noise**. **Words to listen for** is a fold of its own.
+
+At the top of the screen, **Recognition engine** is a [provider list](/tools/providers/) of dictation engines. Dictation uses the first one on it that is switched on and can run on the phone; the others are there for a language that has an engine of its own, and the phone's recognizer answers when nothing on the list can. **Add a provider** offers **Phone's recognizer**, **Whistle** on a 64-bit ARM phone, a small fast model for seven languages (see [Offline voice (Whistle)](/tools/whistle/)), **Whisper** in an edition with the offline engine built in (see [Offline voice (Whisper)](/tools/whisper/)), **Asr4All**, English dictation that shows the words while you speak (see [Offline voice (Asr4All)](/tools/asr4all/)), **Parakeet**, 25 European languages that the model tells apart (see [Offline voice (Parakeet)](/tools/parakeet/)), **Moonshine**, a small quick English model (see [Offline voice (Moonshine)](/tools/moonshine/)), **Sherpa**, streaming models for 13 languages including Bangla that type while you speak (see [Offline voice (Sherpa)](/tools/sherpa/)), **Omnilingual**, one model for about 380 keyboard languages, many with no other voice typing (see [Offline voice (Omnilingual)](/tools/omnilingual/)), and **Transcription server** in every build, which sends each phrase to a speech-to-text server you run (see [Transcription server](/tools/transcription-server/)). A transcription server can be added more than once, each with its own address, key, model and route; the first one on the list is the one dictation sends to. Press an engine's row to open its own screen: its models for an offline engine, **Recognition service** and **Prefer on-device recognition** for the phone's recognizer, **Translate to English** for Whisper, and what every server is sent with for a transcription server.
+
+Until you edit the list, it is worked out from your earlier choice: that engine first, then your transcription server if you had one, then the phone's recognizer. "Use the system recognizer" on the voice panel moves the phone's recognizer to the top of the list. The phone's recognizer's **?** carries this note about what it sends:
+
+> Recognition uses the speech recognizer of your device. On Android 12 and later it runs on your device when the language model is installed. If it is not, the audio goes to the recognizer service while you speak. Press and hold the microphone to speak in walkie-talkie style. It stops when you let go.
+
+### Turning voice typing off
+
+If you never dictate, turn off **Use voice typing** at the top of the Voice typing screen. With it off, the keyboard never opens the microphone:
+
+- The Voice tool leaves the toolbar and the toolbox, and a key, a hardware shortcut or a press-and-hold bound to it does nothing. On the Tools screen its row says that voice typing is off, and its own switch can't be turned on until you turn voice typing back on.
+- The keyboard's own boxes (the search, translate and AI fields, and the rest) lose the microphone at the end of their strip.
+- The [collapsed bar](#the-collapsed-bar) doesn't show, even if you left the keyboard collapsed to it.
+- A dictation that's running when you switch it off stops, and its view closes.
+
+Nothing of voice typing is loaded while it's off. The system recognizer is only asked for when a dictation starts, and an [offline Whisper](/tools/whisper/) model is only read when a phrase is transcribed, so a keyboard that never dictates never holds either one in memory. The rest of the screen is hidden while the switch is off, but your choices are kept for when you turn it on again.
+
+### Words to listen for
+
+A recognizer trained on everyone's speech spells a name its own way. The **Words to listen for** group tells it about yours. It shows for the system recognizer, the transcription server, [Whistle](/tools/whistle/), Whisper's whisper.cpp models and [Sherpa](/tools/sherpa/#words-to-listen-for). Engines that can't take a hint (Whisper's older LiteRT models, Asr4All, Parakeet, Moonshine, Omnilingual) don't show the group while they're the first engine on the list.
+
+- **Listen for my words** (on by default) sends a list of your own words with each phrase: the words you added by hand, the words in Android's personal dictionary (when **Use the Android dictionary** is on), and the words the keyboard learned from your typing that no word list has, such as names, most used first. Common words the recognizer already knows are left out, since they don't help. The system recognizer also gets permission to use what it knows about your phone itself, such as your contacts; the keyboard never reads your contacts for this.
+- **More words to listen for** takes your own list, separated by commas. These go first, ahead of the words from your dictionary.
+
+The system recognizer gets up to 200 words as a biasing list. It reads the list on Android 13 and later, and only if the recognizer on your phone supports biasing: Android leaves that to the recognizer, and one that doesn't ignores it. A transcription server gets up to 150 words as part of its prompt; see [Words and the prompt](/tools/transcription-server/#words-and-the-prompt) for why that list is shorter and how it's ordered. Sherpa gets the same 200 as hotwords, less any its model can't spell.
+
+<SettingsPath path="Tools / Voice typing" />
+
+The tool page carries only what belongs to the button:
+
+- **All voice typing settings**: opens the screen above.
+- **Enabled**: whether Voice typing appears on the toolbar and in the toolbox. Turning the tool off only takes the button away; the microphone is still reachable from a bound key and from the keyboard's own boxes. To switch voice typing off everywhere, use [Use voice typing](#turning-voice-typing-off) instead.
+- **Icon colour**: only shown if [colorful tool icons](/tools/overview/) is turned on globally. Overrides just this tool's icon color.
+- **Keyword shortcut**: the words that make the [Smart chips](/smart/chips/) suggestion offer to open this panel.
+
+## Privacy: what leaves your device
+
+On-device recognition (Android 12+, once the language's model is installed) never sends audio anywhere. Without that model installed, dictating with the system recognizer sends your audio to the OS's speech recognition service while you talk (the same behavior any app using Android's standard speech APIs has). See [Network policy](/privacy/network/) for the fuller picture of what WM Keyboard can and can't send.
+
+Want a hard guarantee that audio never leaves the device, whichever model is installed? [Offline voice typing with Whisper](/tools/whisper/) is a second dictation engine that transcribes entirely on-device. It's a bigger download and it doesn't stream words live the way the system recognizer does. In exchange it makes no network calls at all, beyond the one-time model download.
+
+Want the phone to do less work instead? A [transcription server](/tools/transcription-server/) sends each phrase to a server you choose, on your own network or a hosted service, and types what comes back. The audio goes to that address and nowhere else.
+
+With **Listen for my words** on, the list of your own words goes to the same place the audio goes: the system recognizer, or your transcription server. On-device recognition, and the offline engines (Whistle, Whisper, Sherpa), keep it on the phone too.
+
+With **Tidy dictation with AI** on, the text of each phrase (never the audio) also goes to the AI tool's provider. Pick an on-device model there to keep it on the phone.
+
+## Details & edge cases
+
+**Errors show specific messages.** A network problem says "No connection. Check your network and try again." A busy recognizer, or another app holding the mic, says "The microphone is busy. Close the other apps that use it and try again." A language the device can't recognise at all says "Speech recognition does not support this language on your device." A network hiccup mid-utterance keeps whatever was already heard instead of throwing it away. The Microphone access tile in Quick Settings, or the developer Sensors off toggle, can let a session start and then hand it silence. The panel notices and says "The microphone is blocked. Turn on Microphone access in Quick Settings, then try again." Either bar says "Microphone blocked in Quick Settings". Tap the mic again once you've turned access back on.
+
+**Switching tools closes dictation.** Opening any other panel (Handwriting, Clipboard, Emoji, and so on) ends the current dictation session first.
+
+**Every row carries the usual restore button** once you move it off the default listed above. See [Putting one setting back](/reference/settings/#putting-one-setting-back). Where the collapsed bar last rested isn't one of those rows. It has no control on the settings screen, and you reset it by dragging the bar somewhere else.
+
+**The three views aren't full equivalents.** Continuous mode, spoken punctuation, and undo behave the same way whichever one you're in, because they live in the dictation session rather than in the view. Two things are panel-only: hold-to-talk, and the offline-model download chip. The language chip sits on the panel and, behind the hamburger, on the collapsed bar. The compact bar gets one only with **Language button on the compact bar** on. Without it, dictation still listens for the language you picked, or follows your layout, and you change it in settings or with a layout switch instead. Neither bar prompts you to download an offline model.
+
+Related: [Offline voice (Whisper)](/tools/whisper/) covers the second dictation engine, including its model catalog, per-language routing, downloads, and the full offline privacy guarantee.

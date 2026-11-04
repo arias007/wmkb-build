@@ -1,0 +1,143 @@
+---
+title: "Hindi"
+description: "Type Hindi the way you text it: Latin letters in, Devanagari out. Plus InScript and Remington for typing the script directly."
+sidebar:
+  order: 3.5
+---
+
+import SettingsPath from '@components/SettingsPath.astro';
+
+Hindi ships five layouts. **हिन्दी** is the standard InScript keymap and it's what you get when you add Hindi. **Hindi phonetic** is a QWERTY grid that turns romanized Hindi into Devanagari as you type, so `kaise ho` commits कैसे हो. **हिन्दी वर्णमाला** puts the letters themselves on the keys, four pages of them, with the vowel signs and half forms on press and hold. **Remington (GAIL)** is the typewriter layout. **Hindi Flick A (Gboard)** is a phone-pad board where a key types another letter when you flick it upward. This page is mostly about the phonetic one, because it's the one with moving parts.
+
+## Turning it on
+
+<SettingsPath path="Languages & layouts / हिन्दी · Hindi / Layouts / Hindi phonetic" />
+
+Add Hindi, open its screen, and tap the **Hindi phonetic** card under **Layouts** to turn it on. Tap the InScript card on the same screen to turn it off if you don't want both. Then do the one thing that makes the biggest difference: download the Hindi word list from the **Dictionary** row on that screen. Hindi ships no word list inside the app, and the next two sections explain why this layout cares about that more than most.
+
+Until the list is there, the suggestion strip shows a **Get the Hindi word list for better words** chip the first time you switch to the layout. Tap it and it opens the same screen.
+
+## How it reads what you type
+
+Every key is where it is on the English layout. What you type shows up as Devanagari in the composing text straight away, with no separate conversion step, and the space commits it.
+
+| You type | You get | Why |
+|---|---|---|
+| `tum`, `aap`, `naam` | तुम, आप, नाम | "a" is the inherent vowel and writes nothing after a consonant; "aa" is आ |
+| `mera`, `bhi`, `tu` | मेरा, भी, तू | a vowel that ends a word is long, because Hindi never says a final short "a" |
+| `jao`, `khao` | जाओ, खाओ | an "a" running into "o" or "u" is long |
+| `hindi`, `lamba`, `rang` | हिंदी, लंबा, रंग | a nasal before the stop it belongs to is written as ं |
+| `namaste`, `dost`, `kya` | नमस्ते, दोस्त, क्या | these clusters join |
+| `karna`, `sakta`, `uska` | करना, सकता, उसका | these don't, because the ending is its own piece of grammar |
+| `pakka`, `baccha` | पक्का, बच्चा | a doubled consonant joins |
+| `roTi`, `paRhna` | रोटी, पढ़ना | capitals spell the retroflex letters exactly |
+| `Bahut` | बहुत | a capital that spells nothing reads as its lowercase self |
+
+### Hindi phonetic key map
+
+Every key the rules read. The same tables are in the app, under **Key map** on Hindi's own screen (see [Options](#options)).
+
+**Vowels.** The first form is the letter on its own, the second the sign it becomes after a consonant. Shift gives the long vowels too, if you'd rather do that than double the letter.
+
+| Key | Letter | After a consonant |
+|---|---|---|
+| `a` | अ | nothing: the inherent vowel |
+| `aa`, `A` | आ | ा |
+| `i` | इ | ि |
+| `ee`, `ii`, `I` | ई | ी |
+| `u` | उ | ु |
+| `oo`, `uu`, `U` | ऊ | ू |
+| `e` | ए | े |
+| `ai` | ऐ | ै |
+| `o` | ओ | ो |
+| `au`, `ou` | औ | ौ |
+| `RRi` | ऋ | ृ |
+
+**Consonants.**
+
+| | | | | |
+|---|---|---|---|---|
+| `k` क | `kh` ख | `g` ग | `gh` घ | |
+| `ch`, `c` च | `chh` छ | `j` ज | `jh` झ | |
+| `T` ट | `Th` ठ | `D` ड | `Dh` ढ | `N` ण |
+| `t` त | `th` थ | `d` द | `dh` ध | `n` न |
+| `p` प | `ph`, `f` फ | `b` ब | `bh` भ | `m` म |
+| `y` य | `r` र | `l` ल | `v`, `w` व | |
+| `sh` श | `Sh` ष | `s` स | `h` ह | |
+| `z` ज़ | `q` क | `R` ड़ | `Rh` ढ़ | |
+| `ksh` क्ष | `gy`, `jn` ज्ञ | `x` क्स | | |
+
+**Signs.** `M` is ं (anusvara) and `H` is ः (visarga). You rarely need `M`: a nasal before the stop it belongs to is written as ं on its own, as `hindi` shows. A capital that isn't in these tables reads as its lowercase letter.
+
+### Why Hindi is harder than it looks
+
+Bangla's Avro is a spelling scheme people learn: every cluster you type is a conjunct, and you press a key for the inherent vowel when you want it. Nobody learns a scheme for Hinglish. People write Hindi in Latin letters the way it sounds, and spoken Hindi drops its inherent vowel wherever it can. So the `rn` in `karna` is two syllables (करना) while the `st` in `namaste` is one conjunct (नमस्ते), and nothing in the spelling says which. The same goes for `t`, which is त in `tum` and ट in `roti`, and for a lone `a`, which is short in `nazar` and long in `kitab`.
+
+The layout handles that in three layers, in this order.
+
+1. **A list of known spellings**, about 900 of them. Everyday words whose Latin spelling doesn't carry enough to get the script right (`theek` is ठीक, `pani` is पानी, `nahi` is नहीं), chat shorthand (`h` is है, `nhi` is नहीं, `kr` is कर, `bhut` is बहुत), and English loanwords (`school` is स्कूल, `doctor` is डॉक्टर). A spelling on the list is settled there, and it shows in the composing text the moment you finish typing it.
+2. **The Hindi word list, if you've downloaded it.** What you typed and every word on the list are both reduced to a loose key. The key forgets aspiration, forgets whether a consonant is dental or retroflex, forgets conjuncts, forgets every "a" inside the word, and treats ड़ as either "d" or "r". Words with the same key are candidates and the most frequent one leads. Details you did type count against a candidate that contradicts them: `kaam` asks for a long vowel, so it gets काम even though कम is the commoner word, and `thak` gets थक rather than तक. Details you left out cost very little, because that's how everyone types. Nasal marks nobody writes are forgiven too, so `nahi`, `nahin` and `nhi` all find नहीं.
+3. **The rules alone.** They make the likelier guess: clusters stay apart unless they open or close the word, double a consonant, come before "y", or are one of a short table of pairs that usually join (`tr`, `dr`, `sw`, an `s` before t/p/k/m, `r` before the last consonant of the word). A grammatical ending (`na`, `ne`, `ni`, `ta`, `te`, `ti`, `ka`, `ki`, `ke`, `ko`, `se`, `me`, `kar`, `wala`) never joins the stem before it.
+
+With the word list installed, layer 3 rarely decides anything. Without it, layer 3 decides every word that isn't on the list in layer 1, and it will sometimes guess wrong. That's why the strip also carries the other readings of what you typed: the same spelling with its last "a" long (`pyar` offers प्यार, `sarkar` offers सरकार), with every cluster joined, with none joined, and with the final vowel left short. Tap the one you meant.
+
+A word from the list only takes the commit from the rules' own reading when it's at least twice as frequent, the same near-tie protection Bangla has, so the keyboard doesn't swap the word you were looking at for one of about equal currency.
+
+:::note
+None of this is part of autocorrect and the autocorrect toggle doesn't control it. The known-spellings list has its own switch under [Options](#options).
+:::
+
+## Glide typing
+
+Swiping over this layout draws a romanization, not a Hindi word, so the stroke is decoded against romanized spellings and the result is turned into Devanagari. The known-spellings list is always there for that. The **Hinglish** word list (about a million romanized spellings, under Hinglish in the language catalogue) widens it a lot if you download it, and each spelling a swipe decodes goes through the same three layers above. See [Glide typing](/typing/glide-typing/).
+
+## Converting text you already have
+
+With the layout on, selecting text puts two more chips on the [selection bar](/smart/selection-actions/). **Hindi** rewrites selected Hinglish in Devanagari, word by word, through the same three layers. **Hinglish** goes the other way and writes Devanagari back in Latin letters the way it's said, so करना comes out `karna` and नमस्ते comes out `namaste`.
+
+The [typing test](/tools/utilities/) has a Hindi word list and quotations of its own, so it works before you've downloaded anything.
+
+## Editing
+
+Backspace inside a word you're still typing removes one Latin letter per press, and the Devanagari redraws. Over text that's already committed it removes one code point, or a whole conjunct if you turn on <SettingsPath path="Languages & layouts / Hindi / Clusters / Conjunct-aware backspace" />. That toggle is off by default and applies to every Hindi layout.
+
+## हिन्दी वर्णमाला: the letters on the keys
+
+<SettingsPath path="Languages & layouts / हिन्दी · Hindi / Layouts / हिन्दी वर्णमाला" />
+
+No transliteration, no keymap to learn: the Devanagari is printed on the keys, in alphabet order, and you tap what you want. Devanagari has far more letters, signs and conjuncts than fit on one grid, so they're spread over four pages of fifty keys. The key in the bottom-left corner of the fifth row says which page you're on (**1/4**), and each tap takes you to the next one; the fourth takes you back to the first.
+
+- **1/4**: the vowels अ to औ, the consonants क to श, then ष स ह, the four conjuncts ज्ञ क्ष श्र, ऋ, and nukta ़, anusvara ं and halant ्.
+- **2/4**: conjuncts: the `र` ligatures (क्र, ग्र, द्र, …), the reph forms (र्क, र्ग, र्च, …) and the `त` and `द` families.
+- **3/4**: more conjuncts: the `य` ligatures, then the न, म, प, ब, ल and ष families.
+- **4/4**: the rest of the script: candra vowels (ऍ ऑ ऎ ऒ), the Sindhi and Kashmiri letters (ॹ ॺ ॻ ॼ ॾ ॿ), the matras that aren't on the other pages, the Vedic accents ॒ ॑, and ऽ ॥ ॐ.
+
+**?१२३** reaches the numbers and symbols from any page, and **।** sits beside the space bar where the full stop usually is. The bottom row is the usual one otherwise, with a comma key next to **?१२३**, so the bottom row settings (the 🌐 key, comma as emoji) treat it like every other layout. Switching fields or closing the keyboard brings you back to page one.
+
+## Options
+
+<SettingsPath path="Languages & layouts / हिन्दी · Hindi" />
+
+- **Layouts**: InScript, Hindi phonetic, हिन्दी वर्णमाला, Remington (GAIL), and Hindi Flick A (Gboard), one card each, turned on and off independently.
+- **Key hints**: <SettingsPath path="Languages & layouts / Hindi / Key hints / Show the letter each key types" />. Off, Added, or Whole letter. It puts the Devanagari a key is about to write in its corner. It's the same shared setting Bangla's Avro uses, and it shows only while a transliterating layout is active.
+- **Key map**: a folded group just below the hints while Hindi phonetic is on, with the same tables as the [key map](#hindi-phonetic-key-map) above. **Full guide** at the bottom, <SettingsPath path="Languages & layouts / Hindi / Key map / Full guide" />, opens this page in your browser.
+- **Suggestion strip**: <SettingsPath path="Languages & layouts / Hindi / Suggestion strip / Keep the first two words in place" />, off by default, shown while Hindi phonetic is on. Turn it on and the strip's first two words stay in place: what you typed in English letters on the left, the rules' Devanagari reading of it next to it, and the suggestions after them. The space bar still writes the same word as before, and that word is the bold one. **Suggestions after them** picks what fills the rest: **Smart**, **Hindi only**, or **English only**. The same setting on Bangla's screen is described on [Bangla](/languages/bengali/#options).
+- **Neural suggestions**: <SettingsPath path="Languages & layouts / Hindi / Suggestion strip / Neural suggestions" />, off by default, shown while Hindi phonetic is on. Up to three readings from IndicXlit, a small transliteration model, right after the word the space bar writes, which stays as it is unless the next switch is on. A 13&nbsp;MB download shared by every language that has it, plus ONNX Runtime. See [Neural suggestions](/languages/phonetic/#neural-suggestions).
+- **Let it choose the word**: <SettingsPath path="Languages & layouts / Hindi / Suggestion strip / Let it choose the word" />, off by default, shown while Neural suggestions is on. When the rules spell no known word and the known-spellings list has nothing for the spelling, the space bar writes the model's best listed reading instead, with the rules' spelling second in the strip. Right first word on Aksharantar test words: 49% instead of 41%. See [Let it choose the word](/languages/phonetic/#let-it-choose-the-word).
+- **Spellings**: <SettingsPath path="Languages & layouts / Hindi / Spellings / Use known spellings" />, on by default. Switch it off for the letter-for-letter reading. Without a downloaded word list this leaves the rules on their own, so expect more wrong guesses.
+- **Dictionary words**: <SettingsPath path="Languages & layouts / Hindi / Spellings / Correct to dictionary words" />, on by default. Off, space commits exactly what the rules spell instead of a word from the list that sounds like it, and the list's words stay in the suggestion strip. This runs whether or not autocorrect is on.
+- **The words before**: <SettingsPath path="Languages & layouts / Hindi / Spellings / Use the words before" />, on by default. One spelling can stand for several words, and the one or two words you typed just before pick between them, on the strip and for what space writes: "kam" is काम or कम by what came before. The evidence is your own typing and, where the language has one, the downloaded word-pair data. A known spelling only trades places with another known spelling of the same buffer, so the composing text is still what space writes. Turn it off if a word comes out differently after certain words than you expect.
+- **Also suggest from**: with English picked, the phonetic layout's strip also carries the word as you typed it in Latin letters, and an **English words** group appears right below: **Type English words as English** makes the space bar write `hello` as hello, and **Switch on the suggestion strip** shows or hides the small button that turns that on and off while you type. See [English on Avro and Hindi phonetic](/smart/mixed-language/#english-on-avro-and-hindi-phonetic).
+- **Numerals**: `०-९` or `0-9`.
+- **Dictionary**: the downloadable Hindi list has about 243,000 words. You can import your own as well, and imported words are found phonetically too.
+- **Clusters**: conjunct-aware backspace, above.
+
+## Details & edge cases
+
+**Hinglish is a different language, not this layout.** Picking Hinglish · Hindi (Romanized) from the catalogue gives you a Latin QWERTY that stays Latin and suggests romanized words. Hindi phonetic is the opposite: it converts what you type into Devanagari.
+
+**The composing text can change its mind as you type.** `kar` reads कर, `karn` closes on a cluster and reads कर्न, and the `a` that makes it an infinitive opens it back up to करना. What you see at each point is what a space would commit at that point.
+
+**The phonetic machinery only loads if the layout is on.** Hindi with just InScript enabled builds none of it.
+
+**It's new, and the rule table is a draft.** The join table, the list of endings and the known spellings were written without a native speaker on hand. If a common word comes out wrong with the word list installed, [say so on the issue](https://github.com/wasi-master/wmkeyboard/issues/239) and name the word.

@@ -1,0 +1,146 @@
+---
+title: "App launcher"
+description: "Open any app, or a specific screen inside one, straight from the keyboard. Full screen, in a floating window, in split screen, or two at once as a pair."
+sidebar:
+  order: 17
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import KeyCap from '@components/KeyCap.astro';
+import Shot from '@components/Shot.astro';
+
+The app launcher puts your app drawer inside the keyboard: a searchable grid of every launchable app, your work apps included, sorted into folders if you like, with the ones you pinned and the ones you opened recently in a row on top. Tap an app to jump to it. Hold one for a menu that opens it in a floating window or in split screen instead, pairs it with a second app, or takes you inside it to open a specific screen, like a settings page or a compose view, without going through the app's own navigation first.
+
+It's handy mid-conversation: someone asks for a booking reference, you hop to the airline app, copy it, and the keyboard is still where you left it when you come back.
+
+<PhoneFrame caption="The app grid with a pinned row on top and search in the header.">
+  <Shot id="tools/app-launcher-grid" alt="The app grid with a pinned row on top and search in the header." />
+</PhoneFrame>
+
+## Opening the panel
+
+Open **Apps** from the [toolbar, or the toolbox](/tools/overview/) if you haven't pinned it. Typing `apps` or `launch` offers the tool on the suggestion strip too. On a hardware keyboard, use the [leader key](/reference/shortcuts/): double-tap <KeyCap>Ctrl</KeyCap>, then press <KeyCap>J</KeyCap>.
+
+## The grid
+
+- **Search** sits in the header. Tap it and the keys come back under a shortened panel, filtering live over app names and package names as you type.
+- **Split screen pairs**, if you saved any, get their own row on top. See [split screen pairs](#split-screen-pairs) below.
+- **Folders** come first in the grid, before the apps that are in none. Tap one to open it. See [folders](#folders) below.
+- **Work apps** sit in the grid with a briefcase on their icon. See [work apps](#work-apps) below.
+- **Pinned and recent apps** lead the grid in their own row. Pin and unpin from the menu a hold opens, from the grid or from the shortcut row alike. Recents track the last apps you opened from this tool, ten by default and adjustable from 4 to 20, and they never leave your device.
+- **Tap** launches the app, the way **Open apps** in the options says: normally by default. The panel closes itself, since you are about to leave the app you were typing in anyway.
+- **Hold** opens the app's menu, described next.
+- **Hidden apps** stay out of the grid and the shortcut row. Hold an app, open its page from the menu, and tap the eye to hide it. Search still finds hidden apps, shown dimmed, so you can open one or show it again from its page.
+
+## The hold menu
+
+Hold any app, in the grid or in the shortcut row, and a small menu opens over the panel. Tap outside it to close it.
+
+- **Open**: a normal, full-screen launch.
+- **Open in a floating window**: asks Android for a window about 70% of the screen, centred (on ColorOS, its own floating window). See [floating windows](#floating-windows-and-split-screen) for when you actually get one.
+- **Open in split screen**: puts the app beside the one you are typing in.
+- **Pair in split screen with…**: starts a [pair](#split-screen-pairs). A banner asks for the second app, and your next tap picks it. Tap **Cancel**, or the first app again, to back out.
+- **Pin app** or **Unpin app**.
+- **Add to folder**, or **Take out of folder** for an app that is in one. See [folders](#folders).
+- **Screens, hide and App info…**: the app's page, below. With **Open screens inside apps** off it reads **Hide and App info…**.
+
+The two split screen items only show on Android 12L (API 32) or later, or on an older version with the [split screen helper](#split-screen-helper) on, and never for a work app.
+
+## Folders
+
+Folders group apps the way a home screen does: a "Banking" folder for the bank apps, a "Travel" one for the airline and the maps. The grid shows each folder as a tile with up to four of its apps' icons and its name under it, ahead of the loose apps. An app lives in one folder at most.
+
+- **Make one**: hold an app, pick **Add to folder**, then **New folder**. The folder opens with its name box up and the keys under it; type a name and press <KeyCap>Enter</KeyCap> or the check. Leave it empty and the folder keeps the name "Folder".
+- **Fill it**: hold another app, pick **Add to folder**, and tap the folder. An app already in a folder moves to the new one.
+- **Take an app out**: hold it, in the folder or in the grid, and pick **Take out of folder**. A folder left with no apps goes away.
+- **Rename, reorder or remove**: open the folder and use the bar above its apps. Tap the name to type a new one, the arrows move the folder one place earlier or later in the grid, and the bin removes it. Holding a folder's tile offers the same in a menu. Removing a folder puts its apps back in the grid; it never uninstalls or hides anything.
+
+Back, on the panel or the system's, leaves a name box, then the folder, then the panel. Search ignores folders: it finds an app wherever you filed it.
+
+### Folders from your home screen
+
+The folders on your home screen belong to the home screen app, and Android gives no other app a way to read them, so the keyboard can't copy them over. What it can read is the category each app declares for itself on the Play Store, such as Games, Social or Maps. **Add to folder** → **Sort all apps by category** makes a folder per category, named the way your phone names it in your language, for every app that is in no folder yet. Apps you filed by hand stay where they are, a category joins a folder of the same name if you have one, and a category with a single app gets no folder of its own. Many apps declare no category at all; those stay loose. Categories need Android 8 or later.
+
+Folders are kept on this device only. They name apps that are installed here, so they don't travel with [settings sync](/reference/settings/backup/) the way your other choices do; they do go into backups.
+
+## Work apps
+
+If your phone has a work profile, its apps show in the grid next to your personal ones, each with a small briefcase on its icon. An app installed in both profiles shows twice, once per profile, and each copy has its own pin, hidden state, folder and recent entry. Tapping a work app opens it in the work profile.
+
+When work apps are paused, from the quick settings tile or the work tab of your home screen, the work apps show dimmed. Tapping one asks Android to open it, and Android answers with its own "Turn on work apps?" prompt. Only the home screen app may switch the profile back on directly, so the keyboard leaves that decision to the system.
+
+A work app opens normally or in a floating window. Split screen and pairs aren't offered for work apps, because the system call that opens an app in another profile has no way to ask for split screen. A work app's page lists the screens the work profile shows to launchers, and **App info** opens the work profile's own settings page for it.
+
+The keyboard needs no extra permission for any of this. Android lets any app list and open the apps of the other profiles of the same person, through the same launcher list the home screen uses. Android 15's private space is the exception: only the default home screen app can see it, so its apps never show here. Turn **Work apps** off in the options to keep the grid to your personal apps.
+
+## An app's page
+
+The last item of the hold menu opens the app's page: the app's icon, name and package, a pin toggle, a hide toggle, an **App info** shortcut to the system settings page, and, with **Open screens inside apps** on, every screen (activity) the app declares.
+
+Screens the app allows others to open are listed first. Tap one to open it directly. Android blocks the rest for anyone but the app itself, and those stay hidden unless you turn on **Show private screens**. Then they show dimmed with a lock, so you can explore what an app contains without wondering why a tap did nothing.
+
+This works without any special permission. The keyboard sees the same launcher list the home screen does, and for those apps it can read the full screen table.
+
+## Floating windows and split screen
+
+**Split screen** needs Android 12L (API 32) or later. From that version the system's split screen accepts a "launch next to" request from a keyboard: the app you picked lands in one half and the app you were typing in moves to the other. On older versions a keyboard can't start split screen by itself, so the option is left out of the menu and the settings unless the [split screen helper](#split-screen-helper) is on. If you're already in split screen, the app replaces the other half. Opening the app you're typing in opens a second copy of it beside the first, if the app allows more than one window.
+
+**Floating windows** depend on the device more than on the Android version. Android only honours a window size from another app when the screen is already in a desktop or freeform window mode: many tablets and foldables with desktop windowing, Chromebooks, and external desktop displays. On an ordinary phone screen the app just opens full screen. The exception is ColorOS (OPPO, OnePlus and realme phones): there the app opens in ColorOS's own floating window, the same one the Smart Sidebar opens, sized and placed by ColorOS. The menu says so under the item when the device has neither. The keyboard doesn't use hidden Android APIs to force a floating window.
+
+Some phone makers change how both work. If split screen opens apps full screen on your phone, try the split screen helper below. If an option still does nothing useful, set **Open apps** back to **Normally**.
+
+### Split screen helper
+
+Some phones ignore the keyboard's "launch next to" request and open the app full screen. Those phones still have split screen, behind the **Split screen** item in the Recents menu, and an accessibility service is the only way another app can press that switch. **Split screen helper** is that service. With it on, opening an app in split screen first puts the app you're typing in into split screen, then the app you picked opens in the free half a little over half a second later. A pair presses the switch between its two apps.
+
+Before pressing the switch, the service checks where the app windows sit on screen, to see whether split screen is already up, because pressing it then would close split screen instead. It never reads what is in those windows, does nothing at any other time and keeps nothing. Turn it on from the **Split screen helper** row on this page, which explains the service first and then opens Android's accessibility settings, or from [Permissions](/reference/settings/permissions/).
+
+The helper is offered below Android 16, and not on Samsung phones or in the Google Play build. On Android 7 to 12, where a keyboard can't start split screen by itself, turning it on is what brings the split screen options in.
+
+## Split screen pairs
+
+A pair is two apps you often use side by side, like a video and your notes, or a chat and a translator. Tap the pair's chip and the first app opens full screen, then the second opens beside it about two thirds of a second later. The first app ends up on top (or on the left), the second below (or on the right).
+
+To make one, hold the first app, pick **Pair in split screen with…**, then tap the second app. The chip shows both icons, overlapped, and both names until you give it one. Hold a chip to open it or remove it.
+
+<SettingsPath path="Tools / App launcher / Split screen pairs" /> lists every pair. Tap one to name it, and use its buttons to swap its sides, move it up or down the row, or delete it. A pair whose app you uninstalled leaves the row but stays in the list, so it comes back if you reinstall the app.
+
+Pairs need split screen, so they only show on Android 12L or later, or with the [split screen helper](#split-screen-helper) on. With the helper, the second app waits a little longer: about 2.2 seconds after the first on Android 15 and on Xiaomi, Redmi and POCO phones, about two thirds of a second elsewhere, then the switch, then the second app.
+
+## Options
+
+<SettingsPath path="Tools / App launcher" />
+
+The screen opens with the two rows every tool has, plus the keyword group that only the tools you can summon by typing carry. The app launcher is one of them:
+
+- **Enabled**: which way this starts depends on how you answered the setup wizard. The app launcher is only in the "show me everything" starter set, so the two simpler answers leave it off until you turn it on here.
+- **Icon colour**: only shown while [colorful tool icons](/reference/settings/tools/) is on globally (it is by default). It overrides this tool's icon colour, a deep purple out of the box.
+- **Trigger words**: "apps, launch" to begin with, under a **Keyword shortcut** heading. A **Match capitals** toggle sits below it, off by default, and a **Reset to defaults** row turns up once you've edited the words.
+
+Then the launcher's own group:
+
+- **Open apps**: what a tap on an app does. **Normally** by default, **Floating**, or **Split screen** (Android 12L and later, or with the split screen helper on). The hold menu offers all of them whatever you pick.
+- **Split screen helper**: says whether the [split screen helper](#split-screen-helper) is on, and turns it on. Not on Android 16 or later, on Samsung phones or in the Google Play build.
+- **Split screen pairs**: says how many pairs you have and opens their list. Android 12L and later, or with the helper on.
+- **Sort order**: **A to Z** by default, or **Recent first** to lead with the apps you opened most recently.
+- **App names**: on by default. Off leaves bare icons with no label underneath.
+- **Apps per row**: **Auto** by default, which fits as many apps as the keyboard width holds. Pick a number from 3 to 8 to fix it. Icons that don't fit their cell shrink to fit.
+- **Icon size**: 42 dp by default, anywhere from 30 to 60. On Auto, bigger icons also mean fewer apps per row. The pinned and recent row keeps its own size.
+- **Icon shape**: **Circle** by default, **Rounded square**, or **As on the phone** to keep the shape your home screen gives each icon.
+- **Recent apps**: on by default. Turning it off stops the tracking and deletes the stored list.
+- **How many recent apps**: 10 by default, anywhere from 4 to 20. Lowering it drops the extra entries straight away rather than hiding them. Pick a multiple of your grid width and the row fills cleanly with no gap at the end.
+- **Open screens inside apps**: on by default. Off leaves the app's page as its pin, hide and **App info** actions, without the screen list. The hold menu still reaches the page either way, since hiding an app has no other door.
+- **Show private screens**: off by default, and only shown while **Open screens inside apps** above is on. There's no screen list to add it to with that switch off. Lists the screens other apps may not open, dimmed. They're debugging fare, and a tap on one does nothing.
+- **Hidden apps**: says how many apps you hid. Tap it to bring all of them back to the grid at once. One at a time goes through the app's own page, which a search reaches even while the app is hidden.
+- **Work apps**: on by default. Lists the apps of your work profile too. Off keeps the grid to your personal profile. Without a work profile it changes nothing.
+- **App folders**: says how many folders you have. Tap it to remove all of them at once and put their apps back in the grid. Folders are made and changed in the panel itself.
+
+## Privacy notes
+
+- The app list is read from the system on your device and never leaves it.
+- Recents, pins, hidden apps, folders and split screen pairs are stored as plain package names in the keyboard's own settings, nowhere else. A work app's entry adds the work profile's number to its package name.
+- The tool is unavailable before the first unlock after a reboot, like every tool that starts other apps.
+
+The app launcher is the **App launcher** bundle on [Extensions](/reference/settings/extensions/). Off there, the tool and the split-screen pairs screen leave the keyboard and the app until the bundle is switched back on.
+

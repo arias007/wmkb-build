@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">Het gedownloade bestand is beschadigd. De checksum komt niet overeen. Probeer de download opnieuw.</string>
+    <string name="core_input_cjk_download_error_http">De server gaf HTTP-status %1$s terug.</string>
+    <string name="core_input_cjk_download_error_network">De download is mislukt. Controleer je verbinding en probeer het opnieuw.</string>
+    <string name="core_input_cjk_download_error_network_detail">De download is mislukt: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">Er is onvoldoende opslagruimte op uw apparaat. Maak eerst wat ruimte vrij.</string>
+    <string name="core_input_cjk_download_error_truncated">De verbinding werd verbroken tijdens het downloaden. Druk op Hervatten om door te gaan.</string>
+    <string name="core_input_cjk_download_error_unavailable">Dit pakket is nog niet beschikbaar.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">Een tabel met radicale codes voor Hanzi-tekens, 29.000 tekens. Het toetsenbord heeft dit pakket nodig voor de Cangjie- en Quick-indelingen.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Cangjie (倉頡)-woordenboek</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Kana-lezingen van mozc, 1,08 miljoen items, ongeveer 42 MB. Het toetsenbord heeft dit pakket nodig voor Japanse conversie.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Japans kana-naar-kanji-woordenboek</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Een tabel met Jyutping-lezingen naar Hanzi-tekens, 163.000 vermeldingen. Het toetsenbord heeft dit pakket nodig voor Kantonese conversie.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Kantonees Jyutping-woordenboek</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Welke woorden volgen op elkaar, geteld op basis van Chinese web- en nieuwsteksten. Wordt geleverd met het Pinyin-woordenboek. Hiermee geven initialen zoals wbxh eerst 我不喜欢 en niet twee ongerelateerde woorden.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Chinese woordparen</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Hanzi-tekens en zinnen uit CC-CEDICT, 120.000 vermeldingen. Het toetsenbord heeft dit pakket nodig voor Chinese conversie.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Chinees Pinyin-woordenboek</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Woordenlijsten van OpenCC, 50.000 ingangen, ongeveer 1 MB. Met Traditionele karakters ingeschakeld, gebruikt het toetsenbord dit om de juiste vorm van het woord te schrijven, zoals 頭髮 in plaats van 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Zinstabel voor traditionele karakters</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">Een tabel met streekvolgorde voor Hanzi-tekens. Het toetsenbord heeft dit pakket nodig voor de streekindeling.</string>
+    <string name="core_input_cjk_pack_stroke_title">Chinees streepjes (笔画) woordenboek</string>
+    <string name="core_input_double_pinyin_custom_label">Aangepast</string>
+    <string name="core_input_double_pinyin_off_label">Uit (volledige Pinyin)</string>
+    <string name="core_input_im_note_candidates">Voor sommige toetsen geeft deze methode een lijst met keuzes. Het toetsenbord gebruikt altijd de eerste keuze.</string>
+    <string name="core_input_im_note_missing_files">Deze bestanden zijn niet geselecteerd, dus hun onderdeel ontbreekt: %1$s. Om ze toe te voegen, importeer ze opnieuw en selecteer ze samen.</string>
+    <string name="core_input_im_note_module">Deze methode gebruikt een plug-in, zoals Anthy, die het toetsenbord niet kan uitvoeren. De toetsen die deze gebruiken, doen hier niets.</string>
+    <string name="core_input_im_note_other_method">Deze methode geeft sommige toetsen aan een andere invoermethode. Dat deel werkt hier niet.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">De app kan %1$d spellingsregel niet lezen, dus wordt deze overgeslagen.</item>
+        <item quantity="other">De app kan %1$d spellingsregels niet lezen, dus worden deze overgeslagen.</item>
+    </plurals>
+    <string name="core_input_im_note_space">Deze methode gebruikt de spatiebalk als toets, bijvoorbeeld voor een toon. Hier typt de spatiebalk altijd een spatie.</string>
+    <string name="core_input_im_note_truncated">De tabel is erg groot, dus de app heeft alleen het eerste deel bewaard.</string>
+    <string name="core_input_im_note_unused_files">De app heeft deze bestanden niet gebruikt: %1$s.</string>
+    <string name="core_input_im_refused_broken">Het bestand bevat een fout, dus de app kan het niet lezen: %1$s</string>
+    <string name="core_input_im_refused_empty">Het bestand bevat niets om mee te typen.</string>
+    <string name="core_input_im_refused_no_dictionary">Het schema heeft zijn woordenboek nodig. Importeer opnieuw en kies ook %1$s.</string>
+    <string name="core_input_im_refused_not_method">De app kan dat niet lezen als invoermethode. Het leest .cin-tabellen, Rime-schema\'s en woordenboeken (.schema.yaml, .dict.yaml) en m17n .mim-bestanden.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">De app las dit als een .cin-tabel met %1$d invoer. Typ een code en kies vervolgens het teken uit de suggestiebalk.</item>
+        <item quantity="other">De app las dit als een .cin-tabel met %1$d invoeren. Typ een code en kies vervolgens het teken uit de suggestiebalk.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">De app las dit als een m17n-invoermethode met %1$d regel. De toetsen schrijven de tekst terwijl je typt.</item>
+        <item quantity="other">De app las dit als een m17n-invoermethode met %1$d regels. De toetsen schrijven de tekst terwijl je typt.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">De app heeft dit gelezen als een Rime-schema met %1$d woordenboekitem. Typ de lettergrepen en kies vervolgens de woorden uit de suggestiebalk.</item>
+        <item quantity="other">De app heeft dit gelezen als een Rime-schema met %1$d woordenboekitems. Typ de lettergrepen en kies vervolgens de woorden uit de suggestiebalk.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">De app las dit als een Rime-codetabel met %1$d item. Typ een code en kies vervolgens het teken uit de suggestiebalk.</item>
+        <item quantity="other">De app las dit als een Rime-codetabel met %1$d items. Typ een code en kies vervolgens het teken uit de suggestiebalk.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Mozc\'s eigen systeemwoordenboek, met zijn verbindingskosten, segmenter en suggestiefilter. De Mozc-engine converteert hiermee; de ingebouwde engine gebruikt dit niet.</string>
+    <string name="core_input_mozc_pack_title">Mozc-woordenboek</string>
+    <string name="core_input_rime_pack_base_subtitle">Interpunctie, symbolen, de woordfrequentietabel en de conversie tussen Vereenvoudigd en Traditioneel Chinees die elk RIME-schema gebruikt. Gedownload met het eerste schema.</string>
+    <string name="core_input_rime_pack_base_title">RIME-essentials</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">RIME\'s Zhuyin-schema op de standaard Dachen-toetsenindeling, met het woordenboek van Terra Pinyin.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">RIME\'s vijfde generatie Cangjie-schema, tekens en zinsdelen.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Een grote moderne vereenvoudigd Chinese woordenschat voor Pinyin, met dubbele Pinyin en 9-toets varianten. Het compileren duurt een minuut of langer.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">Het rime-kantonees schema voor Kantonees, met bijbehorende woord- en zinslijsten.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">RIME\'s eigen Pinyin-schema, met het streekschema waarmee het tekens opzoekt.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Japans handschriftmodel</string>
+    <string name="core_input_zinnia_pack_subtitle">Het model van het Tegaki-project voor zinnia, de offline handschriftherkenner die Chinees en Japans leest waar die van ML Kit dat niet doet.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Handschriftmodel voor Vereenvoudigd Chinees</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Traditioneel Chinees handschriftmodel</string>
+</resources>

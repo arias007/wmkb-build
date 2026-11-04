@@ -1,0 +1,103 @@
+---
+title: "Importing from Espanso"
+description: "Move snippets between WM Keyboard and Espanso: what converts both ways, what doesn't, and why."
+sidebar:
+  order: 7
+---
+
+import SettingsPath from '@components/SettingsPath.astro';
+
+[Espanso](https://espanso.org) is a text expander for Windows, macOS and Linux, and the [Espanso Hub](https://hub.espanso.org/search) is a few hundred snippet packages people have written and shared. WM Keyboard reads that format and writes it, so a package from the Hub works on your phone and the snippets you wrote on your phone work on your computer.
+
+Both directions are honest about being lossy. An import always ends on a dialog listing what changed before anything is written, and an export tells you afterwards what Espanso could not carry. Neither format is a superset of the other.
+
+## Bringing snippets in
+
+<SettingsPath path="Text expansion" />
+
+**Import** offers three sources:
+
+- **A WM Keyboard file**, the `.wmsnippets.json` this app exports. Nothing is converted and nothing is lost.
+- **An Espanso file**, either a `.yml` match file or a package `.zip`. Both shapes of archive work: the one the Hub attaches to its releases, and the one you get by zipping a package directory.
+- **A web address**, for the common case of finding a package on the Hub and wanting it without a detour through a file manager.
+
+Paste a Hub package page (`https://hub.espanso.org/all-emojis`) and the app finds the newest version for you. A direct link to a `.yml` or a `.zip` works too, as does a GitHub file page, which is rewritten to its raw address. Addresses have to be `https`.
+
+Whichever route, the snippets land in a folder named after the package, which is what lets you [switch the whole set off](/tools/snippets/#folders) with one switch when it turns out to be firing at the wrong moments. Clear the folder name in the dialog if you would rather they came in loose.
+
+An Espanso pack can also be served from an [addon repository](/development/addon-repos/repo-format/), where it is its own `espanso` type. A repository can point straight at a Hub package with no conversion step, and the preview lists what the conversion costs before you install rather than after.
+
+## What converts
+
+| Espanso | Becomes |
+|---|---|
+| `trigger` | The snippet's trigger word |
+| `triggers` | Each one becomes a [trigger](/tools/snippets/#several-triggers) for the same snippet |
+| `replace` | The snippet's text |
+| `label` | The snippet's name |
+| `propagate_case`, `uppercase_style` | [Match the trigger's capitals](/tools/snippets/#matching-capitals) |
+| `regex` | A [pattern trigger](/tools/snippets/#pattern-triggers). Named captures become `$1` to `$9` |
+| `$\|$` | `{cursor}` |
+| `vars` of type `echo` | Written straight into the text |
+| `vars` of type `clipboard` | `{clip}` |
+| `vars` of type `date` | `{date:…}`, with the offset kept |
+| `vars` of type `random` | `{random:…}` |
+| A `replace` that is nothing but one `choice` variable | A snippet with [several expansions](/tools/snippets/#several-expansions), offered as chips |
+| `global_vars` | Resolved into each snippet that uses them |
+
+Espanso trigger words nearly always start with a colon or a semicolon, and that is exactly why this works at all: those triggers get their own matching path in WM Keyboard, because the keyboard's word buffer never holds punctuation. Multi-word triggers like `gr db` come in through the same path, for the same reason. See [Triggers with punctuation or spaces in them](/tools/snippets/#triggers-with-punctuation-or-spaces-in-them).
+
+## When a trigger fires
+
+Espanso fires a match the moment its last character is typed, unless the match says otherwise. WM Keyboard reads the same options into each snippet's [Expand immediately](/tools/snippets/#expanding-immediately) and **Also inside words** switches:
+
+| In the Espanso file | In WM Keyboard |
+|---|---|
+| none of `word`, `left_word`, `right_word` | Expands immediately, inside words too |
+| `left_word: true` | Expands immediately, at the start of a word only |
+| `word: true`, or `left_word` and `right_word` together | Waits for a space, punctuation or Enter, as an ordinary trigger does |
+| `right_word: true` alone | Waits for the space, at the start of a word only (see below) |
+
+So `:shrug` from a Hub package turns into the shrug as soon as you type the `g`, as it does on a computer. A `regex` match always waits for the space, since a pattern is matched over whole words.
+
+## What doesn't
+
+Every one of these is reported in the import dialog with a count, so you know what a package lost before you accept it.
+
+- **Commands.** A `shell` or `script` variable runs a program on a computer. It is read, discarded and never run, in either direction. A snippet that was only a command comes in with that part empty.
+- **Forms.** A `form` match keeps its layout as ordinary text, with the cursor parked in the first blank and the remaining `[[fields]]` left visible so you can see what belongs where.
+- **Rich text.** A `markdown` or `html` match keeps its words and loses its formatting, because a snippet goes into the field you are typing in as plain characters.
+- **Pictures.** An `image_path` match is skipped.
+- **App filters.** `apps` and `exclude_apps` name desktop windows and executables, which mean nothing to an Android app, so they are ignored rather than half-translated.
+- **`right_word` on its own.** It lets a trigger start in the middle of a word as long as a space or punctuation follows it. WM Keyboard waits for the space the same way, but wants a word boundary in front of a trigger that starts with a letter or a digit, so such a trigger works as a whole word only. A trigger starting with punctuation is unaffected, since the punctuation is its own boundary. Every other combination maps across exactly; see [when a trigger fires](#when-a-trigger-fires).
+- **Pick-from-a-list inside a sentence.** A `choice` variable that sits in the middle of longer text becomes a random pick, because only part of what gets typed would be up for choosing. A match that is nothing but the choice keeps its list: it becomes a snippet with several expansions, and the suggestion bar asks the same question Espanso would have.
+- **Triggers that don't end in a word.** A trigger made entirely of punctuation, like `->`, or one ending in it, like `x:`, cannot be watched for: there is no last word to look it up by. Its snippet still arrives and still inserts from the panel. Punctuation at the front or in the middle is fine, and so are spaces.
+- **Other files.** `imports` cannot follow a file onto a phone. Inside a package archive they are resolved within the archive.
+- **Slow patterns.** A regular expression WM Keyboard will not run (see [pattern triggers](/tools/snippets/#pattern-triggers)) is removed and the snippet kept.
+
+One more case: a snippet whose text already contains something in braces that this app expands, like a template package containing a literal `{date}`, will expand it rather than write it out. The dialog counts those too.
+
+## Sending snippets out
+
+**Export** offers the same three-way choice:
+
+- **A WM Keyboard file**, which keeps everything, folders and ask-first snippets included.
+- **An Espanso match file**, a `.yml` to drop into Espanso's match folder. Find that folder with `espanso path config`.
+- **An Espanso package**, a `.zip` holding `package.yml`, `_manifest.yml` and a `README.md`. Install it with `espanso install --path`, or use it as the starting point for something you want to publish to the Hub. The app asks for a package name and sanitizes it to the lowercase letters, digits and hyphens the Hub requires.
+
+Going out, each trigger says when it fires, so it behaves the same on both devices: `word: true` on one that waits for the space, `left_word: true` on one that expands immediately at a word start, and nothing on one that expands immediately inside words too, since that is Espanso's default.
+
+A snippet with [several expansions](/tools/snippets/#several-expansions) goes out as a `choice` variable when every one of them is plain text, which is Espanso's own way of asking you to pick. When one of them holds a date, the clipboard or a capture reference, a choice cannot carry it, so only the default is written and the export says so. [Linked snippets](/tools/snippets/#linked-snippets) have no Espanso equivalent at all and are reported rather than half-translated.
+
+Four more things are written out as they stand, with a note afterwards: `{uuid}`, `{app}`, `{package}` and `{selection}`. So is **Ask before it expands**, which Espanso cannot say, so those snippets expand on their own there. A folder that is switched off is still exported, since Espanso has no folder switch and silently dropping the snippets would be worse.
+
+None of this ever writes a `shell` or `script` variable. Generating a file that runs commands on somebody's machine is not something an export gets to do on your behalf.
+
+## Details & edge cases
+
+- Folders become comments in the exported file, one heading per folder, since Espanso has no folder of its own.
+- A snippet with no trigger at all still needs a key Espanso can find it by, so the export gives it one made from its name, like `:myaddress`.
+- Pattern captures swap notation both ways. WM Keyboard numbers them (`$1`), Espanso names them (`{{g1}}`), and an unnamed group in front of a named one shifts the numbering. The four capture transforms (`${1:upper}` and friends) have no Espanso equivalent and are noted on the way out.
+- Date formats are translated a specifier at a time between Espanso's strftime (`%d/%m/%Y`) and this app's (`dd/MM/yyyy`). Anything with no equivalent is dropped and counted rather than guessed at.
+- A file is capped at 4 MB and 500 snippets, the same caps a `.wmsnippets.json` gets.
+- Neither `.yml` nor `.yaml` is claimed by name. Those extensions are far too generic for that, and claiming them would offer WM Keyboard for every YAML file on your phone. Tapping a match file in a file manager still works: the app claims the YAML content types instead and recognizes the file by the `matches:` key inside it. The snippets land in one folder named after the file, so the whole pack has a single off switch, and the same confirm dialog you get from the Text expansion screen lists what the conversion cost before anything is written.

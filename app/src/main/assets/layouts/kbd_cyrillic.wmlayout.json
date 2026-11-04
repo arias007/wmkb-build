@@ -1,0 +1,236 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_kbd_cyrillic",
+    "name": "Адыгэбзэ (Kabardian)",
+    "langId": "kbd",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "й"
+            },
+            {
+              "label": "ц",
+              "longPress": [
+                "цӀ"
+              ]
+            },
+            {
+              "label": "у"
+            },
+            {
+              "label": "к",
+              "longPress": [
+                "къ",
+                "кӀ",
+                "кхъ",
+                "ку",
+                "къу",
+                "кӀу",
+                "кхъу"
+              ]
+            },
+            {
+              "label": "е",
+              "longPress": [
+                "ё"
+              ]
+            },
+            {
+              "label": "н"
+            },
+            {
+              "label": "г",
+              "longPress": [
+                "гъ",
+                "гу",
+                "гъу"
+              ]
+            },
+            {
+              "label": "ш"
+            },
+            {
+              "label": "щ",
+              "longPress": [
+                "щӀ"
+              ]
+            },
+            {
+              "label": "з"
+            },
+            {
+              "label": "х",
+              "longPress": [
+                "хъ",
+                "хь",
+                "ху",
+                "хъу"
+              ]
+            },
+            {
+              "label": "ъ"
+            }
+          ],
+          [
+            {
+              "label": "ф",
+              "longPress": [
+                "фӀ"
+              ]
+            },
+            {
+              "label": "ы"
+            },
+            {
+              "label": "в"
+            },
+            {
+              "label": "а"
+            },
+            {
+              "label": "п",
+              "longPress": [
+                "пӀ"
+              ]
+            },
+            {
+              "label": "р"
+            },
+            {
+              "label": "о"
+            },
+            {
+              "label": "л",
+              "longPress": [
+                "лъ",
+                "лӀ"
+              ]
+            },
+            {
+              "label": "д",
+              "longPress": [
+                "дж",
+                "дз"
+              ]
+            },
+            {
+              "label": "ж",
+              "longPress": [
+                "жь"
+              ]
+            },
+            {
+              "label": "э"
+            },
+            {
+              "label": "Ӏ",
+              "longPress": [
+                "Ӏу"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "я"
+            },
+            {
+              "label": "ч"
+            },
+            {
+              "label": "с"
+            },
+            {
+              "label": "м"
+            },
+            {
+              "label": "и"
+            },
+            {
+              "label": "т",
+              "longPress": [
+                "тӀ"
+              ]
+            },
+            {
+              "label": "ь"
+            },
+            {
+              "label": "б"
+            },
+            {
+              "label": "ю"
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": ",",
+              "longPress": [
+                "!",
+                "?"
+              ],
+              "role": "Comma"
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ],
+              "role": "Period"
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+---
+title: "Privacy policy (F-Droid edition)"
+description: "The formal policy for the F-Droid build: no Google library compiled in, nothing collected, and every network call named."
+sidebar:
+  label: "Privacy policy (F-Droid)"
+  order: 9
+---
+
+**Effective 20 October 2026.** This policy covers the WM Keyboard Android app
+(`com.wasimaster.wmkeyboard`) as built and distributed by F-Droid, and this
+documentation site. WM Keyboard is written and published by Wasi Master, an
+individual developer.
+
+:::note[This page covers the F-Droid build]
+The F-Droid build and the others are not the same app underneath, so they get
+one policy each rather than one policy with a page of footnotes.
+
+This page is the F-Droid build, which F-Droid compiles from source. It is
+compiled with `wmkb.enableFdroid=true`, `wmkb.enablePlayStore=false` and
+`wmkb.enableGms=false`, which means no Google library is on its compile
+classpath at all. Up to 0.6.2 this was the `lite` edition, which GitHub
+published too.
+
+If you installed from Google Play or GitHub, you have a build that does carry
+Google libraries. Read [Privacy policy (Google Play
+edition)](/privacy/policy/) instead. The app tells you which one you have
+under About: the version line says F-Droid on this one.
+:::
+
+## The summary
+
+WM Keyboard collects nothing. There is no account, no advertising, no
+tracking, no analytics, no crash reporting, and no server belonging to this
+project that the app sends anything to. What you type is processed on your
+device and stays there.
+
+In this build there is no caveat to that. The other builds have to disclose
+Google's ML Kit reporting its own diagnostics; this build does not contain
+ML Kit, so there is nothing of that kind to disclose. The one Google-adjacent
+code path that survives is downloadable fonts, and it is inert on a device
+without Google Play services. See [What this build does not
+contain](#what-this-build-does-not-contain) below for the exact list.
+
+The app does not sell, rent or share personal information, because it does not
+receive any in the first place.
+
+## What this build does not contain
+
+These are compiled out, not switched off. They are absent from the APK, and
+you can check that against the [F-Droid build
+recipe](https://github.com/wasi-master/wmkeyboard/blob/main/fdroid/com.wasimaster.wmkeyboard.yml)
+and the source it builds from.
+
+| Absent | What it would have done | What you lose |
+|---|---|---|
+| **Google ML Kit** | reports device and app information, a per-install identifier, and timing and error data to Google whenever one of its features runs | handwriting input, OCR, QR and barcode scanning, document scanning, sticker background removal |
+| **Google Play in-app updates** | asks the Play Store whether a newer version exists | nothing: F-Droid's own client handles updates |
+| **The self-updater** | downloads an APK from the project's GitHub releases and installs it | nothing, and it could not have worked here anyway: F-Droid signs its builds with its own key, so an APK from GitHub cannot install over an F-Droid install. This build has no `REQUEST_INSTALL_PACKAGES` permission and no installer code. What it has instead is a check that asks F-Droid, described below |
+| **Play Feature Delivery** | downloads a feature's native library as a separate module | nothing: this edition downloads those libraries itself, after you agree to it (see below) |
+| **Google Play services auth** | gets an OAuth token for Google Drive | Drive as a backup destination. Local storage, WebDAV, an S3-compatible bucket, an SFTP, SMB, NFS or FTP server, a Synology or QNAP NAS, a Git repository, a mail account, Dropbox, OneDrive, Box, pCloud, MEGA, iCloud Drive and Proton Drive all still work |
+| **LiteRT-LM** | runs a language model on the device | the LiteRT-LM models (`.litertlm` and `.task` files). GGUF models still run on the device through llama.cpp, which this edition builds from source, and cloud AI providers still work with your own key |
+| **Qualcomm QNN runtime** | runs an on-device AI model on a Snapdragon phone's NPU, under Qualcomm's own licence | the **NPU** choice under Compute, which this edition could not use anyway without LiteRT-LM |
+| **LiteRT Whisper models** | offline dictation on Google's LiteRT | the older LiteRT Whisper models. Offline Whisper on whisper.cpp and the other offline voice engines still work |
+
+The native libraries for offline voice typing (whisper.cpp, ExecuTorch and
+sherpa-onnx), for grammar and spell checking (Harper and Hunspell), for the
+RIME engine for Chinese (librime), the Mozc engine for Japanese (Mozc),
+on-device translation (Bergamot), neural phonetic suggestions (IndicXlit) and
+GGUF models for on-device AI (llama.cpp) are built from source with the rest of
+this edition, but they are not in the APK. The keyboard downloads one the first time
+its feature needs it, from the project's data repository on GitHub, and only
+after you turn on **Download feature libraries** under Privacy. F-Droid did not
+build or review those downloaded files, which is why the setting is off until
+you turn it on, and why it asks you to confirm. Before the keyboard uses a
+file, it checks the file's SHA-256 against a value built into the app. Until
+you turn the setting on, those features say that they need it.
+
+Only one Google code path is left. The
+keyboard can ask Android's downloadable-font provider for a font: some
+scripts' default keyboard face, and every "Google font" choice in the theme
+editor, come from there rather than from the APK. That provider is part of
+Google Play services. On a device that does not have Play services or microG,
+the request is never made and the keyboard falls back to the Noto faces
+bundled in the app. On a device that does have it, Google Play services makes
+the request and receives the font family name and this app's package name.
+Nothing about you goes with it, and the app never sees the network call. It
+asks the system for a font and gets one back.
+
+## What stays on your device
+
+The keyboard writes several things to its own private app storage. None of it
+is transmitted anywhere by the app.
+
+- **Learned words and word pairs.** Words you use that were not already in a
+  dictionary, plus the bigrams, trigrams and skip-grams (the word two or three back paired with the one that followed) used to predict and rank the next word.
+- **Clipboard history**, if you have the clipboard tool enabled, along with
+  anything you pinned.
+- **Typing statistics**, such as counts of keystrokes and words, if you have
+  statistics enabled.
+- **Your settings**, themes, layouts, snippets and personal dictionary
+  entries.
+- **Downloaded data**, such as dictionaries and emoji keyword packs.
+
+You can delete all of it. Learned data is one confirmed tap on the app's
+Privacy screen, and clipboard history and typing statistics each have a clear
+action of their own on the storage screen under About. Uninstalling removes
+everything the app ever wrote.
+
+Password fields, and any field an app marks as sensitive, are excluded from
+learning, suggestions and clipboard capture automatically. Incognito mode
+applies the same exclusions to everything for as long as it is on.
+
+## What leaves your device, and only when you ask
+
+Typing itself never uses the network. A set of optional tools do, each one
+only while you are actively using it. This is the same list as the other
+builds minus the rows that need code this build does not have.
+
+| Tool | What it sends | To |
+|---|---|---|
+| Translate | the text in the panel | Google Translate's public endpoint, or Google Cloud Translation with your own key |
+| Web and image search | your query | Brave Search, or Tavily if you add a Tavily key |
+| GIF and sticker search | your query | KLIPY, GIPHY |
+| Dictionary | one word | `kaikki.org`, `en.wiktionary.org`, `api.dictionaryapi.dev`, `api.urbandictionary.com` if you turn it on, in the order you set |
+| Synonyms, from the word menu | one word | `api.datamuse.com`, `kaikki.org`, `api.dictionaryapi.dev`, in the order you set |
+| Encyclopedia | your query | Wikipedia |
+| Weather | a location you entered | Open-Meteo |
+| Currency and crypto rates | nothing identifying | currency-api (`cdn.jsdelivr.net`) and Frankfurter, or ExchangeRate-API, Coinbase or CoinGecko if you pick one |
+| Photo backgrounds | your search terms | Unsplash, Pexels |
+| AI writing tools | the text you ran an action on | the provider you chose, using your own API key, or a server you run yourself |
+| AI chat's Deep research and Summarize | the search queries the model planned, and an ordinary request for each page read; the pages' text then goes to your AI provider with your question | your web search provider, and the websites of the pages read |
+| Grammar check, with LanguageTool switched on | the text in the field, its language, and your LanguageTool username and key if you set them. Never a password field or text typed in incognito. Nothing at all with Harper, the default | `api.languagetool.org` (LanguageTool's public server), `api.languagetoolplus.com` with a Premium account, or a LanguageTool server you run yourself |
+| Sticker generator, with an online engine switched on | your prompt in English with the style's words, the seed, the picture size and count, and your key for that service. Nothing at all with On this phone, the default | the engine you picked: `image.pollinations.ai` or `gen.pollinations.ai`, `aihorde.net`, `api.openai.com`, `generativelanguage.googleapis.com`, `api.x.ai`, `api.stability.ai`, `api.bfl.ai`, `external.api.recraft.ai`, `api.replicate.com`, `fal.run`, `api.together.ai`, `router.huggingface.co`, `api.cloudflare.com`, or a Stable Diffusion, ComfyUI or OpenAI-compatible server you entered; the pictures are fetched back from that service's storage |
+| Voice typing | your speech audio | Android's own speech service |
+| Language and model downloads | nothing about you | GitHub, Hugging Face, and Mozilla for the Firefox Translations models |
+
+Under default settings, typing on its own reaches none of these. A weather or
+currency smart chip waits for your tap before it fetches anything, and language
+data downloads only when you accept the prompt or press the button. Each has its
+own switch. Every service in the table can also be pointed at another server,
+including one you run yourself, under Advanced › Servers. [Network
+policy](/privacy/network/) documents every one of these in full, including what
+is cached and for how long, and [Permissions](/privacy/permissions/) covers
+what each Android permission is for.
+
+Every one of them is an ordinary HTTPS request made by this app's own code. You
+can read that code: there is no SDK in between, and the whole tree is public.
+
+When you use one of these tools, your data is handled by that service under
+its own privacy policy, not this one. The app ships no key for the AI
+providers: those only work if you supply your own. The default services those
+tools talk to are not free software. Every one of them is opt-in, and the
+keyboard is fully usable with all of them untouched. Most also have a free,
+self-hostable alternative you can switch to above.
+
+Voice typing is the row to read carefully. Until you set up one of the
+offline engines (which needs **Download feature libraries** on and a model
+downloaded), dictation goes through Android's own `SpeechRecognizer`. On most
+devices that is a Google component and your audio may leave the device. If
+that matters to you, use an offline engine or do not use voice typing.
+
+
+### The update check
+
+One request in this build is not a tool. About once every six hours, and only
+while you have the settings app open, it asks `f-droid.org` which version
+of WM Keyboard F-Droid has. If that is newer than yours, a card offers to open
+F-Droid. It downloads nothing and installs nothing; the F-Droid client does
+that, the same as it would without this check. Turn the card off with **Ask me
+about updates** under About, and the check stops asking on its own initiative.
+It asks F-Droid rather than GitHub deliberately, so the version you are offered
+is one you can actually install from where you installed this.
+
+## Permissions
+
+This build asks for the same Android permissions as the others, and every
+one belongs to a single optional feature that is off until you turn it on:
+microphone for voice input, camera for the camera tool, contacts for name
+suggestions, calendar for the calendar tool, photos for the clipboard's
+screenshot capture, notification access for media controls and one-time-code
+chips, usage access for the clipboard's "show source app". Each shows a plain
+explanation inside the app before Android's own prompt appears, and refusing
+leaves the rest of the keyboard working. The full list is on
+[Permissions](/privacy/permissions/).
+
+## Backups
+
+Backups are optional and written to the destination you choose. That can be
+local storage, a cloud drive you connect, a WebDAV server, an S3-compatible
+bucket, an SFTP, SMB, NFS or FTP server you run, a Synology or QNAP NAS, a
+Git repository you own, a folder in your own mail account, or a Box, pCloud,
+MEGA, iCloud Drive or Proton Drive account. Google Drive is not offered in this edition.
+By default the file is plain JSON. Turn on a backup passphrase and it is
+encrypted with AES-GCM under a PBKDF2-HMAC-SHA512 key. Nothing is uploaded
+anywhere by default and no copy is sent to the developer. See
+[Backup and restore](/privacy/backup/).
+
+## Children
+
+WM Keyboard is not directed at children and collects no data from anyone,
+including children. There is nothing to delete on request because nothing is
+ever received.
+
+## Third-party components
+
+The app bundles open-source libraries and data (dictionaries, emoji
+annotations, fonts). None of them phone home. The full list, with licences, is
+in the app under About, Licences and attributions, and the app is MIT
+licensed.
+
+## Changes
+
+If this policy changes, the effective date at the top changes with it, and the
+history of every edit is public in the
+[repository](https://github.com/wasi-master/wmkeyboard/commits/main/docs/src/content/docs/privacy/policy-fdroid.mdx).
+
+## Contact
+
+Questions about this policy: `arianmollik323@gmail.com`, or open an issue at
+[github.com/wasi-master/wmkeyboard/issues](https://github.com/wasi-master/wmkeyboard/issues).

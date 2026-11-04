@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">El fitxer descarregat està malmès. La suma de verificació no coincideix. Torna a provar la descàrrega.</string>
+    <string name="core_input_cjk_download_error_http">El servidor ha retornat l\'estat HTTP %1$s.</string>
+    <string name="core_input_cjk_download_error_network">La descàrrega no ha funcionat. Comprova la teva connexió i torna-ho a provar.</string>
+    <string name="core_input_cjk_download_error_network_detail">La descàrrega no ha funcionat: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">No hi ha prou emmagatzematge al teu dispositiu. Allibera una mica d\'espai primer.</string>
+    <string name="core_input_cjk_download_error_truncated">La connexió s\'ha interromput durant la descàrrega. Prem Reprèn per continuar.</string>
+    <string name="core_input_cjk_download_error_unavailable">Aquest paquet encara no està disponible.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">Una taula de codis radicals per a caràcters Hanzi, 29.000 caràcters. El teclat necessita aquest paquet per als dissenys Cangjie i Quick.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Diccionari Cangjie (倉頡)</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Lectures Kana de mozc, 1,08 milions d\'entrades, uns 42 MB. El teclat necessita aquest paquet per a la conversió al japonès.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Diccionari japonès de kana a kanji</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Una taula de lectures Jyutping per a caràcters Hanzi, 163.000 entrades. El teclat necessita aquest paquet per a la conversió al cantonès.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Diccionari de cantonès Jyutping</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Quines paraules segueixen quines, comptades a partir de textos web i notícies en xinès. Ve amb el diccionari Pinyin. Amb això, inicials com wbxh donen 我不喜欢 primer i no dues paraules sense relació.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Parells de paraules en xinès</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Caràcters i frases Hanzi de CC-CEDICT, 120.000 entrades. El teclat necessita aquest paquet per a la conversió al xinès.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Diccionari xinès Pinyin</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Frases d\'OpenCC, 50.000 entrades, aproximadament 1 MB. Amb els caràcters tradicionals activats, el teclat l\'utilitza per escriure la forma correcta de la paraula, com ara 頭髮 i no 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Taula de frases de caràcters tradicionals</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">Una taula d\'ordre de traços per als caràcters Hanzi. El teclat necessita aquest paquet per a la disposició de traços.</string>
+    <string name="core_input_cjk_pack_stroke_title">Diccionari de traços xinesos (笔画)</string>
+    <string name="core_input_double_pinyin_custom_label">Personalitzat</string>
+    <string name="core_input_double_pinyin_off_label">Desactivat (Pinyin complet)</string>
+    <string name="core_input_im_note_candidates">Per a algunes tecles, aquest mètode ofereix una llista d\'opcions. El teclat sempre utilitza la primera opció.</string>
+    <string name="core_input_im_note_missing_files">Aquests fitxers no s\'han seleccionat, per la qual cosa falta la seva part: %1$s. Per incloure\'ls, importa\'ls de nou i selecciona\'ls junts.</string>
+    <string name="core_input_im_note_module">Aquest mètode utilitza un connector, com ara Anthy, que el teclat no pot executar. Les tecles que l\'utilitzen no fan res aquí.</string>
+    <string name="core_input_im_note_other_method">Aquest mètode cedeix algunes tecles a un altre mètode d\'entrada. Aquesta part no funciona aquí.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">L\'aplicació no pot llegir %1$d regla d\'ortografia, així que l\'omet.</item>
+        <item quantity="other">L\'aplicació no pot llegir %1$d regles d\'ortografia, així que les omet.</item>
+    </plurals>
+    <string name="core_input_im_note_space">Aquest mètode utilitza la barra espaiadora com a tecla, per exemple per a un to. Aquí la barra espaiadora sempre escriu un espai.</string>
+    <string name="core_input_im_note_truncated">La taula és molt gran, així que l\'aplicació només n\'ha conservat la primera part.</string>
+    <string name="core_input_im_note_unused_files">L\'aplicació no ha utilitzat aquests fitxers: %1$s.</string>
+    <string name="core_input_im_refused_broken">El fitxer té un error, per la qual cosa l\'aplicació no el pot llegir: %1$s</string>
+    <string name="core_input_im_refused_empty">El fitxer no conté res amb què escriure.</string>
+    <string name="core_input_im_refused_no_dictionary">L\'esquema necessita el seu diccionari. Importa de nou i tria també %1$s.</string>
+    <string name="core_input_im_refused_not_method">L\'aplicació no pot llegir això com un mètode d\'entrada. Llegeix taules .cin, esquemes i diccionaris Rime (.schema.yaml, .dict.yaml) i fitxers .mim m17n.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">L\'aplicació ha llegit això com una taula .cin amb %1$d entrada. Escriviu un codi i, a continuació, trieu el caràcter de la franja de suggeriments.</item>
+        <item quantity="other">L\'aplicació ha llegit això com una taula .cin amb %1$d entrades. Escriviu un codi i, a continuació, trieu el caràcter de la franja de suggeriments.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">L\'aplicació ha llegit això com un mètode d\'entrada m17n amb %1$d regla. Les tecles escriuen el text a mesura que escriviu.</item>
+        <item quantity="other">L\'aplicació ha llegit això com un mètode d\'entrada m17n amb %1$d regles. Les tecles escriuen el text a mesura que escriviu.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">L\'aplicació ha llegit això com un esquema Rime amb %1$d entrada de diccionari. Escriu les síl·labes i després tria les paraules de la barra de suggeriments.</item>
+        <item quantity="other">L\'aplicació ha llegit això com un esquema Rime amb %1$d entrades de diccionari. Escriu les síl·labes i després tria les paraules de la barra de suggeriments.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">L\'aplicació ha llegit això com una taula de codis Rime amb %1$d entrada. Escriviu un codi i, a continuació, trieu el caràcter de la barra de suggeriments.</item>
+        <item quantity="other">L\'aplicació ha llegit això com una taula de codis Rime amb %1$d entrades. Escriviu un codi i, a continuació, trieu el caràcter de la barra de suggeriments.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">El diccionari del sistema propi de Mozc, amb els seus costos de connexió, segmentador i filtre de suggeriments. El motor Mozc converteix amb això; el motor integrat no l\'utilitza.</string>
+    <string name="core_input_mozc_pack_title">Diccionari Mozc</string>
+    <string name="core_input_rime_pack_base_subtitle">Puntuació, símbols, la taula de freqüència de paraules i la conversió al xinès simplificat i tradicional que fa servir cada esquema RIME. Es descarrega amb el primer esquema.</string>
+    <string name="core_input_rime_pack_base_title">Essencials del RIME</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">Esquema Zhuyin de RIME al mapa de tecles estàndard Dachen, amb el diccionari de Terra Pinyin.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">Esquema Cangjie de cinquena generació de RIME, caràcters i frases.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Un vocabulari modern ampli en xinès simplificat per a Pinyin, amb variants de Pinyin doble i teclat de 9 tecles. Compilar-lo requereix un minut o més.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">L\'esquema rime-cantonese per al cantonès, amb les seves llistes de paraules i frases.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">L\'esquema Pinyin propi de RIME, amb l\'esquema de traços amb què busca caràcters.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Model d\'escriptura a mà en japonès</string>
+    <string name="core_input_zinnia_pack_subtitle">El model del projecte Tegaki per a Zinnia, el reconeixedor d\'escriptura manual fora de línia que llegeix xinès i japonès on el de ML Kit no ho fa.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Model d\'escriptura a mà en xinès simplificat</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Model d\'escriptura a mà en xinès tradicional</string>
+</resources>

@@ -1,0 +1,98 @@
+---
+title: "Docs component gallery"
+description: "Live demos of every custom component available to documentation authors."
+sidebar:
+  label: "Component gallery"
+  order: 7
+---
+
+import KeyCap from '@components/KeyCap.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import Flavor from '@components/Flavor.astro';
+import Since from '@components/Since.astro';
+import PhoneFrame from '@components/PhoneFrame.astro';
+import LayoutExplorer from '@components/LayoutExplorer.astro';
+import ThemePreview from '@components/ThemePreview.astro';
+import GestureDemo from '@components/GestureDemo.astro';
+import qwertyAfar from '../../../../../app/src/main/assets/layouts/aa.wmlayout.json';
+import bengali from '../../../../../app/src/main/assets/layouts/bpy_bengali.wmlayout.json';
+import midnight from '@assets/themes/midnight.wmtheme.json';
+import FilterTable from '@components/FilterTable.astro';
+import languages from '@data/languages.json';
+
+Every component in `CONTENT_GUIDE.md`'s table, rendered live. Import them from
+`@components/*`. (The rest of `src/components/` is Starlight overrides and
+homepage furniture, not building blocks for a page.) The conventions live in
+[CONTENT_GUIDE.md](https://github.com/wasi-master/wmkeyboard/blob/main/docs/CONTENT_GUIDE.md).
+
+## Inline
+
+Keys: press <KeyCap>Shift</KeyCap> then <KeyCap>?123</KeyCap>, or hold
+<KeyCap>Space</KeyCap>. Builds: <Flavor edition="google" />
+<Flavor edition="fdroid" /> <Flavor edition="all" />. Versions: <Since v="1.4" />.
+
+Settings location chip:
+
+<SettingsPath path="Typing / Gestures / Spacebar swipes" />
+
+## PhoneFrame
+
+Left empty, it renders the screenshot-pending placeholder. Given an image (or a
+`<video>`), it renders a device frame:
+
+<PhoneFrame caption="An empty PhoneFrame: the placeholder stubs use." />
+
+## LayoutExplorer
+
+Renders any `.wmlayout.json` straight from `app/src/main/assets/layouts/`.
+Import the file, then pass it in. Keys with alternates show the first one as a
+corner hint; hover or tap that key for the full long-press set. A layout whose
+keys carry shift labels gets a ⇧ toggle:
+
+<LayoutExplorer layout={qwertyAfar} />
+
+<LayoutExplorer layout={bengali} title="Bishnupriya Manipuri (shift layer demo)" />
+
+## ThemePreview
+
+Renders real theme specs (the same format as `.wmtheme.json` exports)
+on a mock keyboard. The default set exercises gradients (linear, radial,
+sweep), translucent keys, pill/cut key shapes, borders, key sheens and the
+HUE_CYCLE animation:
+
+<ThemePreview caption="ThemeSpec-shaped approximations of several built-in themes." />
+
+Pass `specs` to render an actual export file:
+
+<ThemePreview
+	specs={[midnight]}
+	caption="The Midnight theme from the addon repository, rendered from its real .wmtheme.json."
+/>
+
+## FilterTable
+
+Client-filterable, sortable table for big datasets. It's live on the
+[language overview](/languages/overview/) (843 rows) and
+[dictionaries](/languages/dictionaries/) (333 rows) pages. The data is
+generated from the app's registries by `docs/scripts/extract_data.py`:
+
+<FilterTable
+	columns={[{ label: 'Id' }, { label: 'Name' }, { label: 'Script' }]}
+	rows={languages.slice(0, 40).map((l) => [l.id, l.name, l.script])}
+	placeholder="Filter (first 40 languages shown here)…"
+/>
+
+## GestureDemo
+
+Stylised, looping gesture explainers. They illustrate concepts, so use a screen
+recording when you need the *real* behaviour. Four types:
+
+<GestureDemo type="space-swipe" caption="space-swipe: a short spacebar swipe switches language" />
+
+<GestureDemo type="space-hold" caption="space-hold: hold, then drag through the language picker" />
+
+<GestureDemo type="long-press" caption="long-press: an accent popup on a held key" />
+
+<GestureDemo type="glide" caption="glide: trace a word without lifting" />
+
+All four freeze to a static end-state under `prefers-reduced-motion`.

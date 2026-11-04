@@ -1,0 +1,386 @@
+package com.wasimaster.wmkeyboard.core.settings
+
+import com.wasimaster.wmkeyboard.core.theme.DEFAULT_THEME_ID
+import com.wasimaster.wmkeyboard.core.theme.ThemeSpec
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertSame
+import org.junit.Test
+
+/**
+ * The theme layout overlay: which spec is active, how its overrides land on
+ * [KeyboardSettings], and the ordering contract with [resolvedFor] — the theme
+ * reshapes the base look, an explicit per-screen sizing override still wins.
+ */
+class ThemeOverridesTest {
+
+    private val wide = ThemeSpec(
+        id = "wide",
+        name = "Wide",
+        toolWidthDp = 56,
+        toolbarHeightDp = 52,
+        keyHeightDp = 60,
+        fontScale = 1.2f,
+        boldKeyLabels = true,
+        sidePadScale = 0.1f,
+        gestureTrailWidthDp = 4f,
+    )
+
+    // ---- a layout's own theme (issue #61) --------------------------------
+
+    @Test
+    fun `a grid naming a theme selects it and switches the auto pair off`() {
+        val settings = KeyboardSettings(
+            keyboardThemeId = DEFAULT_THEME_ID,
+            customThemes = listOf(wide),
+            autoTheme = AutoThemeSettings(enabled = true),
+        )
+        val themed = settings.applyLayoutTheme("wide")
+        assertEquals("wide", themed.effectiveThemeId(darkSlot = true))
+        assertSame(wide, themed.activeThemeSpec(darkSlot = true))
+        assertEquals(false, themed.autoTheme.enabled)
+        // A view, not a write: the settings it was laid over are untouched.
+        assertEquals(DEFAULT_THEME_ID, settings.keyboardThemeId)
+        assertEquals(true, settings.autoTheme.enabled)
+    }
+
+    @Test
+    fun `a grid naming a theme this device lacks changes nothing`() {
+        val settings = KeyboardSettings(keyboardThemeId = "wide", customThemes = listOf(wide))
+        assertSame(settings, settings.applyLayoutTheme("gone"))
+        assertSame(settings, settings.applyLayoutTheme(null))
+        // Already showing: the same instance, so the remembers downstream hold.
+        assertSame(settings, settings.applyLayoutTheme("wide"))
+    }
+
+    // ---- spec selection ----------------------------------------------
+
+    @Test
+    fun `the selected custom theme is the active spec`() {
+        val settings = KeyboardSettings(keyboardThemeId = "wide", customThemes = listOf(wide))
+        assertEquals("wide", settings.effectiveThemeId(darkSlot = false))
+        assertSame(wide, settings.activeThemeSpec(darkSlot = false))
+    }
+
+    @Test
+    fun `the default theme has no spec to override with`() {
+        val settings = KeyboardSettings(keyboardThemeId = DEFAULT_THEME_ID)
+        assertNull(settings.activeThemeSpec(darkSlot = false))
+    }
+
+    @Test
+    fun `a selected variant of a custom family is the active spec`() {
+        val night = wide.copy(id = "wide_v0", name = "Wide night")
+        val family = wide.copy(variants = listOf(night))
+        val settings = KeyboardSettings(keyboardThemeId = "wide_v0", customThemes = listOf(family))
+        assertEquals("Wide night", settings.activeThemeSpec(darkSlot = false)?.name)
+    }
+
+    @Test
+    fun `a selected built-in variant is the active spec`() {
+        // Glacier moved inside the Snow family; a selection from before the
+        // grouping must keep resolving.
+        val settings = KeyboardSettings(keyboardThemeId = "builtin_glacier")
+        assertEquals("builtin_glacier", settings.activeThemeSpec(darkSlot = false)?.id)
+    }
+
+    @Test
+    fun `the default panel shortlist names themes that exist`() {
+        val flattened = com.wasimaster.wmkeyboard.core.theme.BuiltInThemes
+            .flatMap { listOf(it) + it.variants }
+            .map { it.id }
+        for (id in DefaultThemesPanelBuiltIns) {
+            assertEquals("$id is not a built-in", true, id in flattened)
+        }
+    }
+
+    // ---- where a pressed theme is stored ---------------------------------
+
+    @Test
+    fun `a press is the manual selection while the auto pair is off`() {
+        val settings = KeyboardSettings(keyboardThemeId = "wide", customThemes = listOf(wide))
+        assertEquals(
+            ThemeSelectionTarget.MANUAL,
+            settings.themeSelectionTarget(darkSlot = false, modeOwnsTheme = false),
+        )
+        // The slot answer is meaningless with the pair off, and does not change it.
+        assertEquals(
+            ThemeSelectionTarget.MANUAL,
+            settings.themeSelectionTarget(darkSlot = true, modeOwnsTheme = false),
+        )
+    }
+
+    @Test
+    fun `a press goes to the half of the pair that is due`() {
+        val settings = KeyboardSettings(
+            keyboardThemeId = "wide",
+            autoTheme = AutoThemeSettings(enabled = true),
+        )
+        assertEquals(
+            ThemeSelectionTarget.AUTO_LIGHT,
+            settings.themeSelectionTarget(darkSlot = false, modeOwnsTheme = false),
+        )
+        assertEquals(
+            ThemeSelectionTarget.AUTO_DARK,
+            settings.themeSelectionTarget(darkSlot = true, modeOwnsTheme = false),
+        )
+    }
+
+    @Test
+    fun `the half a press would go to is the half the board reads`() {
+        // The pairing this type exists for: a stored id nothing resolves is the
+        // bug, so the target and the resolver must name the same half.
+        val settings = KeyboardSettings(
+            keyboardThemeId = DEFAULT_THEME_ID,
+            customThemes = listOf(wide),
+            autoTheme = AutoThemeSettings(
+                enabled = true,
+                lightThemeId = DEFAULT_THEME_ID,
+                darkThemeId = "wide",
+            ),
+        )
+        val pressed = "wide"
+        for (darkSlot in listOf(false, true)) {
+            val stored = when (settings.themeSelectionTarget(darkSlot, modeOwnsTheme = false)) {
+                ThemeSelectionTarget.AUTO_LIGHT ->
+                    settings.copy(autoTheme = settings.autoTheme.copy(lightThemeId = pressed))
+                ThemeSelectionTarget.AUTO_DARK ->
+                    settings.copy(autoTheme = settings.autoTheme.copy(darkThemeId = pressed))
+                ThemeSelectionTarget.MANUAL -> settings.copy(keyboardThemeId = pressed)
+                ThemeSelectionTarget.NONE -> settings
+            }
+            assertEquals(pressed, stored.effectiveThemeId(darkSlot))
+        }
+    }
+
+    @Test
+    fun `a random half takes no press, because its set decides`() {
+        val settings = KeyboardSettings(
+            autoTheme = AutoThemeSettings(
+                enabled = true,
+                darkRandom = true,
+                darkPoolIds = setOf("wide"),
+            ),
+        )
+        assertEquals(
+            ThemeSelectionTarget.NONE,
+            settings.themeSelectionTarget(darkSlot = true, modeOwnsTheme = false),
+        )
+        // Only the random half. The fixed one still takes a press.
+        assertEquals(
+            ThemeSelectionTarget.AUTO_LIGHT,
+            settings.themeSelectionTarget(darkSlot = false, modeOwnsTheme = false),
+        )
+    }
+
+    @Test
+    fun `a mode that carries a theme takes no press`() {
+        val settings = KeyboardSettings(autoTheme = AutoThemeSettings(enabled = true))
+        assertEquals(
+            ThemeSelectionTarget.NONE,
+            settings.themeSelectionTarget(darkSlot = false, modeOwnsTheme = true),
+        )
+    }
+
+    @Test
+    fun `only a mode naming a theme owns it`() {
+        val plain = KeyboardMode(id = "m1", name = "Work")
+        val themed = KeyboardMode(id = "m2", name = "Night", themeId = "wide")
+        val settings = KeyboardSettings(keyboardModes = listOf(plain, themed))
+        assertNull(settings.modeThemeOwner(null))
+        assertNull(settings.modeThemeOwner("gone"))
+        assertNull(settings.modeThemeOwner("m1"))
+        assertEquals(themed, settings.modeThemeOwner("m2"))
+    }
+
+    @Test
+    fun `auto-theme picks the slot's id, not the selected one`() {
+        val settings = KeyboardSettings(
+            keyboardThemeId = "wide",
+            customThemes = listOf(wide),
+            autoTheme = AutoThemeSettings(
+                enabled = true,
+                lightThemeId = DEFAULT_THEME_ID,
+                darkThemeId = "wide",
+            ),
+        )
+        assertEquals(DEFAULT_THEME_ID, settings.effectiveThemeId(darkSlot = false))
+        assertNull(settings.activeThemeSpec(darkSlot = false))
+        assertSame(wide, settings.activeThemeSpec(darkSlot = true))
+    }
+
+    @Test
+    fun `a random slot resolves to the theme it selected, and the other half does not`() {
+        val settings = KeyboardSettings(
+            keyboardThemeId = DEFAULT_THEME_ID,
+            customThemes = listOf(wide),
+            autoTheme = AutoThemeSettings(
+                enabled = true,
+                lightThemeId = DEFAULT_THEME_ID,
+                darkThemeId = "builtin_ocean",
+                lightRandom = true,
+                lightPoolIds = setOf("wide", "builtin_snow"),
+                shuffleLightId = "wide",
+            ),
+        )
+        assertEquals("wide", settings.effectiveThemeId(darkSlot = false))
+        assertSame(wide, settings.activeThemeSpec(darkSlot = false))
+        // The dark half is not random, so it still shows the one theme it names.
+        assertEquals("builtin_ocean", settings.effectiveThemeId(darkSlot = true))
+    }
+
+    // ---- the overlay --------------------------------------------------
+
+    @Test
+    fun `a set override beats the global, an unset one falls through`() {
+        val base = KeyboardSettings(keyHeightDp = 48, keyGapScale = 1.5f, fontScale = 1f)
+        val overlaid = base.applyThemeOverrides(wide)
+        assertEquals(60, overlaid.keyHeightDp)
+        assertEquals(1.2f, overlaid.fontScale, 0f)
+        assertEquals(56, overlaid.toolbarBehavior.toolWidthDp)
+        // The legacy symmetric override still reaches both edges (issue #41).
+        assertEquals(0.1f, overlaid.layoutBehavior.sidePadLeftScale, 0f)
+        assertEquals(0.1f, overlaid.layoutBehavior.sidePadRightScale, 0f)
+        assertEquals(4f, overlaid.gesture.trailWidthDp, 0f)
+        // keyGapScale is null on the spec: the user's global stands.
+        assertEquals(1.5f, overlaid.keyGapScale, 0f)
+        // Trail opacity unset: untouched.
+        assertEquals(base.gesture.trailOpacity, overlaid.gesture.trailOpacity, 0f)
+    }
+
+    @Test
+    fun `a per-edge pad beats the legacy symmetric one on the edge it names`() {
+        val lopsided = wide.copy(sidePadRightScale = 0.25f)
+        val overlaid = KeyboardSettings().applyThemeOverrides(lopsided)
+        assertEquals(0.1f, overlaid.layoutBehavior.sidePadLeftScale, 0f)
+        assertEquals(0.25f, overlaid.layoutBehavior.sidePadRightScale, 0f)
+    }
+
+    @Test
+    fun `a theme with no overrides returns the same settings instance`() {
+        // The caller remembers on the result; a fresh-but-equal copy per frame
+        // would defeat the per-keystroke skip.
+        val base = KeyboardSettings()
+        assertSame(base, base.applyThemeOverrides(ThemeSpec(id = "plain", name = "Plain")))
+        assertSame(base, base.applyThemeOverrides(null))
+    }
+
+    @Test
+    fun `theme selection fields are never touched`() {
+        val base = KeyboardSettings(keyboardThemeId = "wide", customThemes = listOf(wide))
+        val overlaid = base.applyThemeOverrides(wide)
+        assertEquals("wide", overlaid.keyboardThemeId)
+        assertSame(base.customThemes, overlaid.customThemes)
+        assertSame(base.autoTheme, overlaid.autoTheme)
+    }
+
+    // ---- ordering with resolvedFor ------------------------------------
+
+    @Test
+    fun `a per-screen sizing override beats the theme`() {
+        val base = KeyboardSettings(
+            keyHeightDp = 48,
+            sizingOverrides = mapOf(
+                ScreenVariant.LANDSCAPE to SizingOverride(keyHeightDp = 40, fontScale = 0.9f),
+            ),
+        )
+        val resolved = base.applyThemeOverrides(wide).resolvedFor(ScreenVariant.LANDSCAPE)
+        assertEquals(40, resolved.keyHeightDp)
+        assertEquals(0.9f, resolved.fontScale, 0f)
+        // Fields the variant does not size still carry the theme's values.
+        assertEquals(52, resolved.toolbarHeightDp)
+        assertEquals(56, resolved.toolbarBehavior.toolWidthDp)
+    }
+
+    @Test
+    fun `on a screen with no sizing override the theme's sizes stand`() {
+        val base = KeyboardSettings(keyHeightDp = 48)
+        val resolved = base.applyThemeOverrides(wide).resolvedFor(ScreenVariant.PORTRAIT)
+        assertEquals(60, resolved.keyHeightDp)
+        assertEquals(1.2f, resolved.fontScale, 0f)
+    }
+
+    /**
+     * The shape's own defaults are the least specific step of the four, beside
+     * the device form's: a theme that authors a key height beats them, and a
+     * number the user set for that shape beats the theme.
+     */
+    @Test
+    fun `a theme's key height beats the landscape default`() {
+        val base = KeyboardSettings(keyHeightDp = 48)
+            .applyScreenDefaults(ScreenVariant.LANDSCAPE)
+        assertEquals(33, base.keyHeightDp)
+        assertEquals(60, base.applyThemeOverrides(wide).keyHeightDp)
+
+        val perScreen = base
+            .applyThemeOverrides(wide)
+            .copy(sizingOverrides = mapOf(ScreenVariant.LANDSCAPE to SizingOverride(keyHeightDp = 50)))
+            .resolvedFor(ScreenVariant.LANDSCAPE)
+        assertEquals(50, perScreen.keyHeightDp)
+    }
+
+    @Test
+    fun `the variant's keyboard scale multiplies the theme's key height`() {
+        val base = KeyboardSettings(
+            keyHeightDp = 48,
+            sizingOverrides = mapOf(
+                ScreenVariant.LANDSCAPE to SizingOverride(keyboardScale = 0.5f),
+            ),
+        )
+        val resolved = base.applyThemeOverrides(wide).resolvedFor(ScreenVariant.LANDSCAPE)
+        assertEquals(30, resolved.keyHeightDp)
+    }
+}
+
+/**
+ * The key sound a theme carries ([keySound]), which beats the global sound
+ * setting — so the shapes that mean "this theme has no sound of its own" have
+ * to be recognised as such. Issue #238: a theme saved with the Pack style and
+ * no pack named overrode the user's pick with a sound that could never play,
+ * and every key on the board fell back to the system click.
+ */
+class ThemeKeySoundTest {
+
+    private fun themed(style: String?, id: String? = null) =
+        ThemeSpec(id = "t", name = "T", soundStyle = style, soundCustomId = id)
+
+    @Test
+    fun `a theme naming no style follows the global setting`() {
+        assertNull(themed(null).keySound())
+    }
+
+    @Test
+    fun `a fixed style needs no id`() {
+        assertEquals(KeySoundStyle.THOCK to "", themed("THOCK").keySound())
+    }
+
+    @Test
+    fun `an unknown style name costs the field, not the theme`() {
+        assertNull(themed("GONG").keySound())
+    }
+
+    @Test
+    fun `custom with a sound named carries it`() {
+        assertEquals(
+            KeySoundStyle.CUSTOM to "Typewriter",
+            themed("CUSTOM", "Typewriter").keySound(),
+        )
+    }
+
+    @Test
+    fun `pack with a pack named carries it`() {
+        assertEquals(KeySoundStyle.PACK to "pack_7", themed("PACK", "pack_7").keySound())
+    }
+
+    @Test
+    fun `custom naming nothing follows the global setting`() {
+        assertNull(themed("CUSTOM").keySound())
+        assertNull(themed("CUSTOM", "").keySound())
+    }
+
+    @Test
+    fun `pack naming nothing follows the global setting`() {
+        assertNull(themed("PACK").keySound())
+        assertNull(themed("PACK", "").keySound())
+    }
+}

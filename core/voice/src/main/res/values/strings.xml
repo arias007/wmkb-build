@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  :core:voice. Offline voice typing (Whisper): the model catalog, the model
+  downloads, and the engine errors.
+
+  The Whisper model names themselves ("Whisper Base (40 languages)",
+  "base.en", and so on) are catalog identifiers published by the model authors,
+  so they are not translated and stay in the Kotlin source. Language names are
+  proper nouns and are not translated either. What lives here is the text the
+  app writes about those models.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ================================================================== -->
+    <!-- Model badges and size classes. Shown as chips beside a model name. -->
+    <!-- ================================================================== -->
+
+    <!-- Badge on the one model the app points people at first. -->
+    <string name="core_voice_tier_recommended_label">Recommended</string>
+
+    <!-- The five Whisper size classes, smallest to largest. Each one names how
+         big the model is, not how good it is. -->
+    <string name="core_voice_size_tiny_label">Tiny</string>
+    <string name="core_voice_size_base_label">Base</string>
+    <string name="core_voice_size_small_label">Small</string>
+    <string name="core_voice_size_medium_label">Medium</string>
+    <string name="core_voice_size_turbo_label">Turbo</string>
+    <string name="core_voice_size_large_label">Large</string>
+
+    <!-- How many languages one model can transcribe. %1$d is that number. -->
+    <plurals name="core_voice_model_language_count">
+        <item quantity="one">%1$d language</item>
+        <item quantity="other">%1$d languages</item>
+    </plurals>
+
+    <!-- ================================================================== -->
+    <!-- What each model in the catalog is good for. Shown when a row opens.  -->
+    <!-- "Tiny", "Base", "Small", "Medium" and "Large" inside these values    -->
+    <!-- name the size classes above. Translate them the same way.           -->
+    <!-- ================================================================== -->
+
+    <string name="core_voice_model_base_world_body">This model uses the language you type in instead of a guess. Short phrases become much more reliable. Select it when its list has your languages.</string>
+    <string name="core_voice_model_base_eu_body">This model uses the language you type in, the same as the 40 language model. It covers only the European languages, so the download is smaller.</string>
+    <string name="core_voice_model_small_world_body">This model uses the language you type in and has the accuracy of the Small model. It is the most accurate model that still fits on a phone.</string>
+    <string name="core_voice_model_base_multi_body">This model balances accuracy and speed. It covers every language that Whisper knows. Select it if the Small model is too slow.</string>
+    <string name="core_voice_model_tiny_multi_body">This is the fastest multilingual model. It works well with clear speech, but noise reduces the accuracy.</string>
+    <string name="core_voice_model_small_multi_body">This model gives the best accuracy that still runs well on a phone. It handles accents and background noise better than the Base model. It covers every language that Whisper knows.</string>
+    <string name="core_voice_model_medium_multi_body">This model gives almost desktop accuracy. Each phrase takes several seconds. The model uses almost one gigabyte of memory while it runs.</string>
+    <string name="core_voice_model_large_multi_body">This is one of the most accurate Whisper models, but it is too large for most phones. The download is 1.5 GB. Only a device with a large amount of memory can load it.</string>
+    <string name="core_voice_model_turbo_multi_body">This model recognises the language you speak much better than the smaller models. Select it if a smaller model transcribes your speech as the wrong language. It is a big download, and each phrase takes several seconds.</string>
+    <string name="core_voice_model_large_v3_multi_body">This is the most accurate Whisper model, and the best at recognising which language you speak. The download is 1.5 GB. Only a device with a large amount of memory can load it. The Turbo model is almost as accurate and is half the size.</string>
+    <!-- Description of a model built for one language. %1$s is the name of that
+         language. Language names are not translated. -->
+    <string name="core_voice_model_single_language_body">This model handles <xliff:g id="language" example="German">%1$s</xliff:g> only. It has no language detection step. This makes it faster and a little more accurate than a multilingual model of the same size.</string>
+
+    <!-- Descriptions of the whisper.cpp models. Whisper is the model's name and
+         is not translated. "Your own words" are the words the user listed to
+         listen for and the words in their dictionary. -->
+    <string name="core_voice_model_cpp_small_body">This model gives the best accuracy that still runs well on a phone. It uses the language you dictate in, in any of the 99 languages that Whisper knows, and it listens for your own words.</string>
+    <string name="core_voice_model_cpp_base_body">This model balances accuracy and speed. It uses the language you dictate in, in any of the 99 languages that Whisper knows, and it listens for your own words. Select it if the Small model is too slow.</string>
+    <string name="core_voice_model_cpp_tiny_body">This is the fastest model. It works well with clear speech, but noise reduces the accuracy. It uses the language you dictate in and listens for your own words.</string>
+    <string name="core_voice_model_cpp_turbo_body">This model is almost as accurate as the largest model, at half the size. Each phrase takes several seconds, and it cannot translate.</string>
+    <string name="core_voice_model_cpp_medium_body">This model gives almost desktop accuracy. Each phrase takes several seconds. The model uses almost one gigabyte of memory while it runs.</string>
+    <string name="core_voice_model_cpp_large_body">This is the most accurate Whisper model. The download is 1.1 GB. Only a device with a large amount of memory can load it. The Turbo model is almost as accurate and is half the size.</string>
+
+    <!-- ================================================================== -->
+    <!-- Model download failures. Shown under the model row in settings.     -->
+    <!-- ================================================================== -->
+
+    <!-- %1$s is how many megabytes the user must free. -->
+    <string name="core_voice_download_space_error">There is not enough storage on your device. You must free about <xliff:g id="megabytes" example="512">%1$s</xliff:g> MB first.</string>
+    <!-- %1$s is the HTTP status code the server sent. Hugging Face is the name
+         of the site the models come from. -->
+    <string name="core_voice_download_http_error">The Hugging Face server did not send the file. The error code is HTTP <xliff:g id="status_code" example="404">%1$s</xliff:g>.</string>
+    <string name="core_voice_download_interrupted_error">The connection stopped during the download. Try again to continue from where it stopped.</string>
+    <!-- A Whistle or whisper.cpp model arrived but is not the exact file the
+         app expects. -->
+    <string name="core_voice_whistle_checksum_error">The downloaded model is damaged. Download it again.</string>
+
+    <!-- ================================================================== -->
+    <!-- Offline voice typing failures. Shown on the voice panel.            -->
+    <!-- ================================================================== -->
+
+    <string name="core_voice_whisper_model_load_error">The voice model did not load. The file is possibly damaged. Delete the model in settings and download it again.</string>
+    <!-- Play and GitHub builds: the interpreter arrives on demand the first
+         time offline dictation is used. Same wording family as the AI
+         part's in :core:intelligence. -->
+    <string name="core_voice_whisper_module_downloading">The offline voice typing part of the keyboard is downloading. Try again in a moment.</string>
+    <string name="core_voice_whisper_module_restart">The offline voice typing part just finished installing. Close and reopen the keyboard to use it.</string>
+    <string name="core_voice_whisper_runtime_load_error">The LiteRT voice library did not load, so the model file is not at fault. Pick a Whisper model without LiteRT in its name.</string>
+    <string name="core_voice_whisper_transcribe_error">Voice typing did not work. Try again, or select a smaller model.</string>
+    <!-- %1$s is how many frequency bands the model asks for. The app makes the
+         number of bands that the file downloaded with the model describes, so a
+         mismatch means one of the two files is wrong. -->
+    <string name="core_voice_whisper_mel_bins_error">This voice model needs a <xliff:g id="band_count" example="128">%1$s</xliff:g> band spectrogram, which does not match the file it downloaded with. Delete the model in settings and download it again.</string>
+
+</resources>

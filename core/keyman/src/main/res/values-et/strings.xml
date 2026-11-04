@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <plurals name="core_keyman_diagonal_flicks_dropped">
+        <item quantity="one">Rakendus eemaldas %1$d diagonaalse viipe. See klaviatuur toetab ainult üles-, alla-, vasakule- ja paremale viipeid.</item>
+        <item quantity="other">Rakendus eemaldas %1$d diagonaalset viibet. See klaviatuur toetab ainult üles-, alla-, vasakule- ja paremale viipeid.</item>
+    </plurals>
+    <plurals name="core_keyman_keys_type_their_labels">
+        <item quantity="one">%1$d klahv trükib sellele märgitud märgi. Algne klaviatuur kasutas reeglit, et otsustada, mida see trükib.</item>
+        <item quantity="other">%1$d klahvi trükivad neile märgitud märgid. Algne klaviatuur kasutas reegleid, et otsustada, mida need trükivad.</item>
+    </plurals>
+    <plurals name="core_keyman_multitap_unconverted">
+        <item quantity="one">Sellel klaviatuuril on %1$d klahv, mida tuleb lehtede või märkide vahel liikumiseks korduvalt vajutada. Rakendus ei saa seda tsüklit kopeerida, seega toimib iga vajutus esimese vajutusena.</item>
+        <item quantity="other">Sellel klaviatuuril on %1$d klahvi, mida tuleb lehtede või märkide vahel liikumiseks korduvalt vajutada. Rakendus ei saa neid tsükleid kopeerida, seega toimib iga vajutus esimese vajutusena.</item>
+    </plurals>
+    <string name="core_keyman_rules_missing">See klaviatuur kasutab reegleid, et otsustada, mida selle klahvid trükivad. Rakendusel neid reegleid pole, seega trükib iga klahv sellele trükitud märgi.</string>
+    <plurals name="core_keyman_special_keys_dropped">
+        <item quantity="one">Rakendus eemaldas %1$d klahvi. Sellel klaviatuuril pole klahvi, mis teeks sama asja.</item>
+        <item quantity="other">Rakendus eemaldas %1$d klahvi. Sellel klaviatuuril pole klahve, mis teeksid sama asja.</item>
+    </plurals>
+</resources>

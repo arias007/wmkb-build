@@ -1,0 +1,275 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_ckb_sorani",
+    "name": "قوەرتی (Qwerty)",
+    "langId": "ckb",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ق",
+              "longPress": [
+                "1"
+              ]
+            },
+            {
+              "label": "و",
+              "longPress": [
+                "2"
+              ]
+            },
+            {
+              "label": "ە",
+              "shiftLabel": "ي",
+              "longPress": [
+                "3"
+              ]
+            },
+            {
+              "label": "ر",
+              "shiftLabel": "ڕ",
+              "longPress": [
+                "4"
+              ]
+            },
+            {
+              "label": "ت",
+              "shiftLabel": "ط",
+              "longPress": [
+                "5"
+              ]
+            },
+            {
+              "label": "ی",
+              "shiftLabel": "ێ",
+              "longPress": [
+                "6"
+              ]
+            },
+            {
+              "label": "ئ",
+              "shiftLabel": "ء",
+              "longPress": [
+                "7"
+              ]
+            },
+            {
+              "label": "ح",
+              "shiftLabel": "ع",
+              "longPress": [
+                "8"
+              ]
+            },
+            {
+              "label": "ۆ",
+              "shiftLabel": "ؤ",
+              "longPress": [
+                "9"
+              ]
+            },
+            {
+              "label": "پ",
+              "shiftLabel": "ث",
+              "longPress": [
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ا",
+              "shiftLabel": "أ",
+              "longPress": [
+                "@",
+                "أ",
+                "إ",
+                "آ",
+                "ٱ"
+              ]
+            },
+            {
+              "label": "س",
+              "shiftLabel": "ش",
+              "longPress": [
+                "#"
+              ]
+            },
+            {
+              "label": "د",
+              "shiftLabel": "ذ",
+              "longPress": [
+                "$",
+                "ﮆ"
+              ]
+            },
+            {
+              "label": "ف",
+              "longPress": [
+                "_"
+              ]
+            },
+            {
+              "label": "گ",
+              "shiftLabel": "غ",
+              "longPress": [
+                "&"
+              ]
+            },
+            {
+              "label": "ه",
+              "shiftLabel": "ھ",
+              "longPress": [
+                "-",
+                "ة"
+              ]
+            },
+            {
+              "label": "ژ",
+              "longPress": [
+                "+"
+              ]
+            },
+            {
+              "label": "ک",
+              "shiftLabel": "ك",
+              "longPress": [
+                "(",
+                "ڪ"
+              ]
+            },
+            {
+              "label": "ل",
+              "shiftLabel": "ڵ",
+              "longPress": [
+                ")"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "ز",
+              "shiftLabel": "ض",
+              "longPress": [
+                "*"
+              ]
+            },
+            {
+              "label": "خ",
+              "shiftLabel": "ص",
+              "longPress": [
+                "\""
+              ]
+            },
+            {
+              "label": "ج",
+              "shiftLabel": "چ",
+              "longPress": [
+                "'"
+              ]
+            },
+            {
+              "label": "ڤ",
+              "shiftLabel": "ظ",
+              "longPress": [
+                ":"
+              ]
+            },
+            {
+              "label": "ب",
+              "shiftLabel": "ى",
+              "longPress": [
+                ";"
+              ]
+            },
+            {
+              "label": "ن",
+              "longPress": [
+                "!"
+              ]
+            },
+            {
+              "label": "م",
+              "shiftLabel": "ـ",
+              "longPress": [
+                "?"
+              ]
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "،",
+              "longPress": [
+                "؟",
+                "؛",
+                "ـ",
+                ",",
+                "!",
+                "?"
+              ]
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                "؟",
+                "،",
+                "؛",
+                "٪",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

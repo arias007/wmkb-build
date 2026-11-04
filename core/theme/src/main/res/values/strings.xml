@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Strings owned by :core:theme.
+
+  The module holds the theme model and the built-in theme gallery. The only
+  user-facing text here is the name of each built-in theme, which the theme
+  picker in the app, the onboarding screen and the keyboard theme panel all
+  draw.
+
+  A theme also has an id, and the id is not text. Ids are stored in the
+  settings and written into exported .wmtheme.json files, so they stay in the
+  Kotlin code and never change. The name below is the label only.
+
+  Referenced from another module as
+  com.wasimaster.wmkeyboard.theme.R.string.core_theme_… - the R classes are
+  non-transitive, so the import has to name this module.
+-->
+<resources>
+
+    <!-- ================================================================== -->
+    <!-- Built-in themes. Each name is one card in the theme picker.        -->
+    <!-- The names come from the colours of the theme, so translate them as -->
+    <!-- the colour word, not as a technical term.                          -->
+    <!-- ================================================================== -->
+
+    <!-- Blue. -->
+    <string name="core_theme_builtin_ocean_label">Ocean</string>
+    <!-- Green. -->
+    <string name="core_theme_builtin_forest_label">Forest</string>
+    <!-- Orange. -->
+    <string name="core_theme_builtin_sunset_label">Sunset</string>
+    <!-- Pink and purple. -->
+    <string name="core_theme_builtin_berry_label">Berry</string>
+    <!-- Deep red. -->
+    <string name="core_theme_builtin_crimson_label">Crimson</string>
+    <!-- Grey and blue. -->
+    <string name="core_theme_builtin_slate_label">Slate</string>
+    <!-- True black. The theme saves power on an OLED screen. -->
+    <string name="core_theme_builtin_pitch_label">Pitch black</string>
+    <!-- Light theme, cool white. -->
+    <string name="core_theme_builtin_snow_label">Snow</string>
+    <!-- Light theme, soft green. -->
+    <string name="core_theme_builtin_mint_label">Mint</string>
+    <!-- Light theme, soft pink. -->
+    <string name="core_theme_builtin_rose_label">Rose</string>
+    <!-- Light theme, warm brown. -->
+    <string name="core_theme_builtin_sand_label">Sand</string>
+
+    <!-- ================================================================== -->
+    <!-- Built-in themes that paint a gradient behind the keys.             -->
+    <!-- ================================================================== -->
+
+    <!-- Purple and blue, like a cloud of stars. -->
+    <string name="core_theme_builtin_nebula_label">Nebula</string>
+    <!-- Orange and red, and the gradient moves. -->
+    <string name="core_theme_builtin_sunset_drift_label">Sunset drift</string>
+    <!-- Green and blue, and the colours turn slowly. Named after the northern lights. -->
+    <string name="core_theme_builtin_aurora_label">Aurora</string>
+    <!-- Dark blue, darkest at the edges. -->
+    <string name="core_theme_builtin_deep_sea_label">Deep sea</string>
+
+    <!-- ================================================================== -->
+    <!-- Built-in themes made of frosted glass: see-through keys over a     -->
+    <!-- blurred background. "Frost" is the glass, not the weather.         -->
+    <!-- ================================================================== -->
+
+    <!-- Dark glass over the app behind the keyboard. -->
+    <string name="core_theme_builtin_frost_label">Frost</string>
+    <!-- Dark glass over the phone's own wallpaper. -->
+    <string name="core_theme_builtin_frost_wallpaper_label">Frost wallpaper</string>
+    <!-- The light version of Frost. -->
+    <string name="core_theme_builtin_frost_light_label">Frost light</string>
+    <!-- Dark glass with clear, lens-like keys (Apple's "liquid glass" look). -->
+    <string name="core_theme_builtin_frost_liquid_label">Frost liquid</string>
+    <!-- Light theme, pale blue ice. -->
+    <string name="core_theme_builtin_glacier_label">Glacier</string>
+
+    <!-- ================================================================== -->
+    <!-- Built-in themes that show off a key shape.                         -->
+    <!-- ================================================================== -->
+
+    <!-- The keys are round, like bubbles. -->
+    <string name="core_theme_builtin_bubble_label">Bubble</string>
+    <!-- The keys have cut corners, like a cut gem. -->
+    <string name="core_theme_builtin_facet_label">Facet</string>
+
+    <!-- ================================================================== -->
+    <!-- Built-in themes that copy a well-known code editor colour scheme.  -->
+    <!-- Each name is the name of that scheme, so it stays in English in    -->
+    <!-- every language.                                                    -->
+    <!-- ================================================================== -->
+
+    <string name="core_theme_builtin_dracula_label" translatable="false">Dracula</string>
+    <string name="core_theme_builtin_alucard_label" translatable="false">Alucard</string>
+    <string name="core_theme_builtin_nord_label" translatable="false">Nord</string>
+    <string name="core_theme_builtin_solarized_dark_label" translatable="false">Solarized Dark</string>
+    <string name="core_theme_builtin_solarized_light_label" translatable="false">Solarized Light</string>
+    <string name="core_theme_builtin_catppuccin_mocha_label" translatable="false">Catppuccin Mocha</string>
+    <string name="core_theme_builtin_catppuccin_latte_label" translatable="false">Catppuccin Latte</string>
+    <string name="core_theme_builtin_catppuccin_frappe_label" translatable="false">Catppuccin Frappé</string>
+    <string name="core_theme_builtin_catppuccin_macchiato_label" translatable="false">Catppuccin Macchiato</string>
+    <string name="core_theme_builtin_tokyo_night_label" translatable="false">Tokyo Night</string>
+
+    <!-- Our own palette: neon pink and cyan on near black. -->
+    <string name="core_theme_builtin_cyberpunk_label">Cyberpunk</string>
+
+    <!-- ================================================================== -->
+    <!-- Labels of the built-in theme families. A family is one theme with  -->
+    <!-- more than one look; the label names the group, not one look.       -->
+    <!-- ================================================================== -->
+
+    <!-- The family of the dark colour themes (Ocean, Forest, ..., Pitch black). -->
+    <string name="core_theme_family_ocean_label">Nightfall</string>
+    <!-- The family of the light colour themes (Snow, Mint, Rose, Sand, ...). -->
+    <string name="core_theme_family_snow_label">Pastel</string>
+    <!-- The family of the themes that paint a gradient behind the keys. -->
+    <string name="core_theme_family_gradient_label">Gradients</string>
+    <!-- The family of the frosted-glass themes (Frost, Frost wallpaper, Frost light). -->
+    <string name="core_theme_family_frost_label">Frost</string>
+    <!-- The names of these three families are project names. Keep in English. -->
+    <string name="core_theme_family_dracula_label" translatable="false">Dracula</string>
+    <string name="core_theme_family_solarized_label" translatable="false">Solarized</string>
+    <string name="core_theme_family_catppuccin_label" translatable="false">Catppuccin</string>
+
+    <!-- Palette styles: the ways one app colour is grown into a whole theme
+         palette. Same idea as the styles Android offers for wallpaper colours
+         (Settings, Wallpaper and style). -->
+    <string name="core_theme_palette_style_tonal_spot">Tonal spot</string>
+    <string name="core_theme_palette_style_vibrant">Vibrant</string>
+    <string name="core_theme_palette_style_expressive">Expressive</string>
+    <string name="core_theme_palette_style_fidelity">Fidelity</string>
+    <string name="core_theme_palette_style_neutral">Neutral</string>
+    <string name="core_theme_palette_style_monochrome">Monochrome</string>
+    <string name="core_theme_palette_style_rainbow">Rainbow</string>
+    <string name="core_theme_palette_style_fruit_salad">Fruit salad</string>
+
+</resources>

@@ -1,0 +1,210 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_hyw",
+    "name": "Արեւմտահայերէն (Western Armenian)",
+    "langId": "hyw",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ք"
+            },
+            {
+              "label": "ւ"
+            },
+            {
+              "label": "ե",
+              "longPress": [
+                "է",
+                "և"
+              ]
+            },
+            {
+              "label": "ր",
+              "longPress": [
+                "ռ"
+              ]
+            },
+            {
+              "label": "դ",
+              "longPress": [
+                "թ"
+              ]
+            },
+            {
+              "label": "յ"
+            },
+            {
+              "label": "ը"
+            },
+            {
+              "label": "ի"
+            },
+            {
+              "label": "ո",
+              "longPress": [
+                "օ"
+              ]
+            },
+            {
+              "label": "բ",
+              "longPress": [
+                "փ"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ա"
+            },
+            {
+              "label": "ս",
+              "longPress": [
+                "շ"
+              ]
+            },
+            {
+              "label": "տ",
+              "longPress": [
+                "ծ"
+              ]
+            },
+            {
+              "label": "ֆ"
+            },
+            {
+              "label": "կ"
+            },
+            {
+              "label": "հ"
+            },
+            {
+              "label": "ճ",
+              "longPress": [
+                "ջ",
+                "չ"
+              ]
+            },
+            {
+              "label": "գ"
+            },
+            {
+              "label": "լ"
+            },
+            {
+              "label": "՞",
+              "longPress": [
+                "՜",
+                "՛",
+                "՝",
+                "֊",
+                "«",
+                "»"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "զ",
+              "longPress": [
+                "ժ"
+              ]
+            },
+            {
+              "label": "խ",
+              "longPress": [
+                "ղ"
+              ]
+            },
+            {
+              "label": "ց",
+              "longPress": [
+                "ձ"
+              ]
+            },
+            {
+              "label": "վ"
+            },
+            {
+              "label": "պ"
+            },
+            {
+              "label": "ն"
+            },
+            {
+              "label": "մ"
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": ",",
+              "longPress": [
+                "՝",
+                "!",
+                "?"
+              ],
+              "role": "Comma"
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ],
+              "role": "Period"
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

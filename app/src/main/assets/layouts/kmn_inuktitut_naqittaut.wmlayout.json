@@ -1,0 +1,1898 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_kmn_inuktitut_naqittaut",
+    "name": "Qaniujaaqpait | ᖃᓂᐅᔮᖅᐸᐃᑦ",
+    "langId": "ike-Cans",
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ᕐ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_R",
+                "longPress": [
+                  {
+                    "id": "T_NG"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖕ"
+              ]
+            },
+            {
+              "label": "ᑉ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_P"
+              }
+            },
+            {
+              "label": "ᖅ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_Q",
+                "longPress": [
+                  {
+                    "id": "T_Y"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᔾ"
+              ]
+            },
+            {
+              "label": "ᒃ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_K"
+              }
+            },
+            {
+              "label": "ᑦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_T",
+                "longPress": [
+                  {
+                    "id": "T_TH"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖮ"
+              ]
+            },
+            {
+              "label": "ᒡ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_C",
+                "longPress": [
+                  {
+                    "id": "T_S"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᔅ"
+              ]
+            },
+            {
+              "label": "ᒻ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_M",
+                "longPress": [
+                  {
+                    "id": "T_F"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᕝ"
+              ]
+            },
+            {
+              "label": "ᓐ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_N",
+                "longPress": [
+                  {
+                    "id": "T_Y"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᔾ"
+              ]
+            },
+            {
+              "label": "ᓪ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_L",
+                "longPress": [
+                  {
+                    "id": "T_LH"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖦ"
+              ]
+            },
+            {
+              "label": "ᐞ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LENGTHEN"
+              },
+              "width": 0.1
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.3
+            },
+            {
+              "label": "ᕆ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_RI",
+                "longPress": [
+                  {
+                    "id": "T_RII"
+                  },
+                  {
+                    "id": "T_NGI"
+                  },
+                  {
+                    "id": "T_NGII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᕇ",
+                "ᖏ",
+                "ᖐ"
+              ]
+            },
+            {
+              "label": "ᐃ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_I",
+                "longPress": [
+                  {
+                    "id": "T_II"
+                  },
+                  {
+                    "id": "T_PI"
+                  },
+                  {
+                    "id": "T_PII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᐄ",
+                "ᐱ",
+                "ᐲ"
+              ]
+            },
+            {
+              "label": "ᕿ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_QI",
+                "longPress": [
+                  {
+                    "id": "T_QII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖀ"
+              ]
+            },
+            {
+              "label": "ᑭ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_KI",
+                "longPress": [
+                  {
+                    "id": "T_KII"
+                  },
+                  {
+                    "id": "T_NNGI"
+                  },
+                  {
+                    "id": "T_NNGII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᑮ",
+                "ᙱ",
+                "ᙲ"
+              ]
+            },
+            {
+              "label": "ᑎ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_TI",
+                "longPress": [
+                  {
+                    "id": "T_TII"
+                  },
+                  {
+                    "id": "T_THI"
+                  },
+                  {
+                    "id": "T_THII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᑏ",
+                "ᖨ",
+                "ᖩ"
+              ]
+            },
+            {
+              "label": "ᓯ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_SI",
+                "longPress": [
+                  {
+                    "id": "T_SII"
+                  },
+                  {
+                    "id": "T_CI"
+                  },
+                  {
+                    "id": "T_CII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓰ",
+                "ᒋ",
+                "ᒌ"
+              ]
+            },
+            {
+              "label": "ᒥ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_MI",
+                "longPress": [
+                  {
+                    "id": "T_MII"
+                  },
+                  {
+                    "id": "T_FI"
+                  },
+                  {
+                    "id": "T_FII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᒦ",
+                "ᕕ",
+                "ᕖ"
+              ]
+            },
+            {
+              "label": "ᓂ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NI",
+                "longPress": [
+                  {
+                    "id": "T_NII"
+                  },
+                  {
+                    "id": "T_YI"
+                  },
+                  {
+                    "id": "T_YII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓃ",
+                "ᔨ",
+                "ᔩ"
+              ]
+            },
+            {
+              "label": "ᓕ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LI",
+                "longPress": [
+                  {
+                    "id": "T_LII"
+                  },
+                  {
+                    "id": "T_LHI"
+                  },
+                  {
+                    "id": "T_LHII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓖ",
+                "ᖠ",
+                "ᖡ"
+              ]
+            },
+            {
+              "label": "'",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_QUOTE",
+                "longPress": [
+                  {
+                    "id": "T_DBLQUOTE"
+                  }
+                ]
+              },
+              "width": 0.7,
+              "longPress": [
+                "\""
+              ]
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.45
+            },
+            {
+              "label": "ᕈ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_RO",
+                "longPress": [
+                  {
+                    "id": "T_ROO"
+                  },
+                  {
+                    "id": "T_NGO"
+                  },
+                  {
+                    "id": "T_NGOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᕉ",
+                "ᖑ",
+                "ᖒ"
+              ]
+            },
+            {
+              "label": "ᐅ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_O",
+                "longPress": [
+                  {
+                    "id": "T_OO"
+                  },
+                  {
+                    "id": "T_PO"
+                  },
+                  {
+                    "id": "T_POO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᐆ",
+                "ᐳ",
+                "ᐴ"
+              ]
+            },
+            {
+              "label": "ᖁ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_QO",
+                "longPress": [
+                  {
+                    "id": "T_QOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖂ"
+              ]
+            },
+            {
+              "label": "ᑯ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_KO",
+                "longPress": [
+                  {
+                    "id": "T_KOO"
+                  },
+                  {
+                    "id": "T_NNGO"
+                  },
+                  {
+                    "id": "T_NNGOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᑰ",
+                "ᙳ",
+                "ᙴ"
+              ]
+            },
+            {
+              "label": "ᑐ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_TO",
+                "longPress": [
+                  {
+                    "id": "T_TOO"
+                  },
+                  {
+                    "id": "T_THO"
+                  },
+                  {
+                    "id": "T_THOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᑑ",
+                "ᖪ",
+                "ᖫ"
+              ]
+            },
+            {
+              "label": "ᓱ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_SO",
+                "longPress": [
+                  {
+                    "id": "T_SOO"
+                  },
+                  {
+                    "id": "T_CO"
+                  },
+                  {
+                    "id": "T_COO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓲ",
+                "ᒍ",
+                "ᒎ"
+              ]
+            },
+            {
+              "label": "ᒧ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_MO",
+                "longPress": [
+                  {
+                    "id": "T_MOO"
+                  },
+                  {
+                    "id": "T_FO"
+                  },
+                  {
+                    "id": "T_FOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᒨ",
+                "ᕗ",
+                "ᕘ"
+              ]
+            },
+            {
+              "label": "ᓄ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NO",
+                "longPress": [
+                  {
+                    "id": "T_NOO"
+                  },
+                  {
+                    "id": "T_YO"
+                  },
+                  {
+                    "id": "T_YOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓅ",
+                "ᔪ",
+                "ᔫ"
+              ]
+            },
+            {
+              "label": "ᓗ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LO",
+                "longPress": [
+                  {
+                    "id": "T_LOO"
+                  },
+                  {
+                    "id": "T_LHO"
+                  },
+                  {
+                    "id": "T_LHOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓘ",
+                "ᖢ",
+                "ᖣ"
+              ]
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  },
+                  {
+                    "id": "T_EXCLAM"
+                  },
+                  {
+                    "id": "T_QUERY"
+                  }
+                ]
+              },
+              "width": 0.55,
+              "longPress": [
+                ",",
+                "!",
+                "?"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.3
+            },
+            {
+              "label": "ᕋ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_RA",
+                "longPress": [
+                  {
+                    "id": "T_RAA"
+                  },
+                  {
+                    "id": "T_NGA"
+                  },
+                  {
+                    "id": "T_NGAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᕌ",
+                "ᖓ",
+                "ᖔ"
+              ]
+            },
+            {
+              "label": "ᐊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_A",
+                "longPress": [
+                  {
+                    "id": "T_AA"
+                  },
+                  {
+                    "id": "T_PA"
+                  },
+                  {
+                    "id": "T_PAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᐋ",
+                "ᐸ",
+                "ᐹ"
+              ]
+            },
+            {
+              "label": "ᖃ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_QA",
+                "longPress": [
+                  {
+                    "id": "T_QAA"
+                  },
+                  {
+                    "id": "T_NUNAVUT_H"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖄ",
+                "ᕼ"
+              ]
+            },
+            {
+              "label": "ᑲ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_KA",
+                "longPress": [
+                  {
+                    "id": "T_KAA"
+                  },
+                  {
+                    "id": "T_NNGA"
+                  },
+                  {
+                    "id": "T_NNGAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᑳ",
+                "ᙵ",
+                "ᙶ"
+              ]
+            },
+            {
+              "label": "ᑕ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_TA",
+                "longPress": [
+                  {
+                    "id": "T_TAA"
+                  },
+                  {
+                    "id": "T_THA"
+                  },
+                  {
+                    "id": "T_THAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᑖ",
+                "ᖬ",
+                "ᖭ"
+              ]
+            },
+            {
+              "label": "ᓴ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_SA",
+                "longPress": [
+                  {
+                    "id": "T_SAA"
+                  },
+                  {
+                    "id": "T_CA"
+                  },
+                  {
+                    "id": "T_CAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓵ",
+                "ᒐ",
+                "ᒑ"
+              ]
+            },
+            {
+              "label": "ᒪ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_MA",
+                "longPress": [
+                  {
+                    "id": "T_MAA"
+                  },
+                  {
+                    "id": "T_FA"
+                  },
+                  {
+                    "id": "T_FAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᒫ",
+                "ᕙ",
+                "ᕚ"
+              ]
+            },
+            {
+              "label": "ᓇ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NA",
+                "longPress": [
+                  {
+                    "id": "T_NAA"
+                  },
+                  {
+                    "id": "T_YA"
+                  },
+                  {
+                    "id": "T_YAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓈ",
+                "ᔭ",
+                "ᔮ"
+              ]
+            },
+            {
+              "label": "ᓚ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LA",
+                "longPress": [
+                  {
+                    "id": "T_LAA"
+                  },
+                  {
+                    "id": "T_LHA"
+                  },
+                  {
+                    "id": "T_LHAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᓛ",
+                "ᖤ",
+                "ᖥ"
+              ]
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 0.7
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:more"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.85
+            },
+            {
+              "label": "?!#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols2",
+                "id": "T_SYMBOL"
+              },
+              "width": 1.2
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      },
+      "k:more": {
+        "rows": [
+          [
+            {
+              "label": "1",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_1"
+              }
+            },
+            {
+              "label": "2",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_2"
+              }
+            },
+            {
+              "label": "3",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_3"
+              }
+            },
+            {
+              "label": "4",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_4"
+              }
+            },
+            {
+              "label": "5",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_5"
+              }
+            },
+            {
+              "label": "6",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_6"
+              }
+            },
+            {
+              "label": "7",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_7"
+              }
+            },
+            {
+              "label": "8",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_8"
+              }
+            },
+            {
+              "label": "9",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_9"
+              }
+            },
+            {
+              "label": "0",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_0"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.3
+            },
+            {
+              "label": "!",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_EXCLAM"
+              }
+            },
+            {
+              "label": "ᖏ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NGI",
+                "longPress": [
+                  {
+                    "id": "T_NGII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖐ"
+              ]
+            },
+            {
+              "label": "ᐱ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_PI",
+                "longPress": [
+                  {
+                    "id": "T_PII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᐲ"
+              ]
+            },
+            {
+              "label": "ᙱ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NNGI",
+                "longPress": [
+                  {
+                    "id": "T_NNGII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᙲ"
+              ]
+            },
+            {
+              "label": "ᖨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_THI",
+                "longPress": [
+                  {
+                    "id": "T_THII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖩ"
+              ]
+            },
+            {
+              "label": "ᒋ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_CI",
+                "longPress": [
+                  {
+                    "id": "T_CII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᒌ"
+              ]
+            },
+            {
+              "label": "ᕕ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_FI",
+                "longPress": [
+                  {
+                    "id": "T_FII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᕖ"
+              ]
+            },
+            {
+              "label": "ᔨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_YI",
+                "longPress": [
+                  {
+                    "id": "T_YII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᔩ"
+              ]
+            },
+            {
+              "label": "ᖠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LHI",
+                "longPress": [
+                  {
+                    "id": "T_LHII"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖡ"
+              ]
+            },
+            {
+              "label": "-",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_HYPHEN"
+              },
+              "width": 0.7
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.45
+            },
+            {
+              "label": "?",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_QUERY"
+              }
+            },
+            {
+              "label": "ᖑ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NGO",
+                "longPress": [
+                  {
+                    "id": "T_NGOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖒ"
+              ]
+            },
+            {
+              "label": "ᐳ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_PO",
+                "longPress": [
+                  {
+                    "id": "T_POO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᐴ"
+              ]
+            },
+            {
+              "label": "ᙳ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NNGO",
+                "longPress": [
+                  {
+                    "id": "T_NNGOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᙴ"
+              ]
+            },
+            {
+              "label": "ᖪ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_THO",
+                "longPress": [
+                  {
+                    "id": "T_THOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖫ"
+              ]
+            },
+            {
+              "label": "ᒍ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_CO",
+                "longPress": [
+                  {
+                    "id": "T_COO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᒎ"
+              ]
+            },
+            {
+              "label": "ᕗ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_FO",
+                "longPress": [
+                  {
+                    "id": "T_FOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᕘ"
+              ]
+            },
+            {
+              "label": "ᔪ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_YO",
+                "longPress": [
+                  {
+                    "id": "T_YOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᔫ"
+              ]
+            },
+            {
+              "label": "ᖢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LHO",
+                "longPress": [
+                  {
+                    "id": "T_LHOO"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖣ"
+              ]
+            },
+            {
+              "label": ";",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_SEMICOLON",
+                "longPress": [
+                  {
+                    "id": "T_COLON"
+                  }
+                ]
+              },
+              "width": 0.55,
+              "longPress": [
+                ":"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.3
+            },
+            {
+              "label": "ᕼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NUNAVUT_H"
+              }
+            },
+            {
+              "label": "ᖓ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NGA",
+                "longPress": [
+                  {
+                    "id": "T_NGAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖔ"
+              ]
+            },
+            {
+              "label": "ᐸ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_PA",
+                "longPress": [
+                  {
+                    "id": "T_PAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᐹ"
+              ]
+            },
+            {
+              "label": "ᙵ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NNGA",
+                "longPress": [
+                  {
+                    "id": "T_NNGAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᙶ"
+              ]
+            },
+            {
+              "label": "ᖬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_THA",
+                "longPress": [
+                  {
+                    "id": "T_THAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖭ"
+              ]
+            },
+            {
+              "label": "ᒐ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_CA",
+                "longPress": [
+                  {
+                    "id": "T_CAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᒑ"
+              ]
+            },
+            {
+              "label": "ᕙ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_FA",
+                "longPress": [
+                  {
+                    "id": "T_FAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᕚ"
+              ]
+            },
+            {
+              "label": "ᔭ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_YA",
+                "longPress": [
+                  {
+                    "id": "T_YAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᔮ"
+              ]
+            },
+            {
+              "label": "ᖤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LHA",
+                "longPress": [
+                  {
+                    "id": "T_LHAA"
+                  }
+                ]
+              },
+              "longPress": [
+                "ᖥ"
+              ]
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 0.7
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "letters"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.85
+            },
+            {
+              "label": "?!#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols2",
+                "id": "T_SYMBOL"
+              },
+              "width": 1.2
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      },
+      "symbols2": {
+        "rows": [
+          [
+            {
+              "label": "!",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_EXCLAM"
+              }
+            },
+            {
+              "label": "@",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_ATSIGN"
+              }
+            },
+            {
+              "label": "#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_NUM"
+              }
+            },
+            {
+              "label": "$",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_DOLLAR",
+                "longPress": [
+                  {
+                    "id": "T_CENT"
+                  }
+                ]
+              },
+              "longPress": [
+                "¢"
+              ]
+            },
+            {
+              "label": "%",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_PERCENT"
+              }
+            },
+            {
+              "label": "*",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_STAR"
+              }
+            },
+            {
+              "label": "&",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_AMPERSAND"
+              }
+            },
+            {
+              "label": "(",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LBRKT"
+              }
+            },
+            {
+              "label": ")",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_RBRKT"
+              }
+            },
+            {
+              "label": "=",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_EQUAL"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.3
+            },
+            {
+              "label": "¼",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 51,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "½",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 52,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "¾",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 53,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "⅔",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 55,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "®",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 50,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "©",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 56,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "^",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 54,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "÷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 57,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "-",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_HYPHEN"
+              }
+            },
+            {
+              "label": "+",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_PLUS"
+              },
+              "width": 0.7
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.45
+            },
+            {
+              "label": "\\",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 191,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "•",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 56,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "|",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 220,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "“",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LDBLQUOTE"
+              }
+            },
+            {
+              "label": "‘",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LQUOTE"
+              }
+            },
+            {
+              "label": "’",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_RQUOTE"
+              }
+            },
+            {
+              "label": "”",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_RDBLQUOTE"
+              }
+            },
+            {
+              "label": "Ŋ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 186,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "Ł",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 222,
+                "modifiers": 112
+              }
+            },
+            {
+              "label": "/",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 191,
+                "modifiers": 96
+              },
+              "width": 0.55
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.3
+            },
+            {
+              "label": "`",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_BKQUOTE"
+              }
+            },
+            {
+              "label": "{",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LBRACE"
+              }
+            },
+            {
+              "label": "[",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_LBRKT"
+              }
+            },
+            {
+              "label": "<",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 188,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": ">",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "]",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_RBRKT"
+              }
+            },
+            {
+              "label": "}",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "T_RBRACE"
+              }
+            },
+            {
+              "label": "ŋ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 186,
+                "modifiers": 96
+              }
+            },
+            {
+              "label": "ł",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 222,
+                "modifiers": 96
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 0.7
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "letters"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.85
+            },
+            {
+              "label": "?!#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "T_SYMBOL"
+              },
+              "width": 1.2
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    },
+    "keyman": {
+      "keyboardId": "inuktitut_naqittaut"
+    }
+  }
+}

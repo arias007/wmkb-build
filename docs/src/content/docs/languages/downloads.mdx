@@ -1,0 +1,139 @@
+---
+title: "Downloads & mobile data"
+description: "What a language downloads, when it downloads, and which downloads ask before spending your mobile data."
+sidebar:
+  order: 11
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import Flavor from '@components/Flavor.astro';
+import Shot from '@components/Shot.astro';
+
+Adding a language can pull files down. Most of them are tiny and one of them is 42&nbsp;MB. This page lists exactly what gets fetched, when, and what it costs, so nothing on your bill is a surprise.
+
+<PhoneFrame caption="Download language data? The prompt shown as you add a language, with the rough size on it.">
+  <Shot id="languages/download-language-data-prompt" alt="Download language data? The prompt shown as you add a language, with the rough size on it." />
+</PhoneFrame>
+
+## What arrives on its own
+
+Two kinds of file, both small, both behind switches that ship on:
+
+- **Emoji keyword packs**, so emoji search answers in the language you're typing rather than only in English. 131 languages have one, Banglish included. They're gzipped JSON, mostly 70 to 100&nbsp;KB, and the largest in the whole set is Banglish at 130&nbsp;KB.
+- **Word-pair data**, the bigrams and trigrams predictions rank with, so the keyboard knows which word tends to follow which. 455 languages have a pack: English (about 1.1&nbsp;MB), Bangla (about 1.8&nbsp;MB) and Banglish (about 315&nbsp;KB), and 49 more built from the [Leipzig Corpora Collection](https://wortschatz.uni-leipzig.de/en)'s web and news text: Spanish, French, German, Portuguese, Russian, Italian, Turkish, Indonesian, Vietnamese, Polish, Dutch, Ukrainian, Korean, Romanian, Greek, Czech, Hungarian, Swedish, Hebrew, Malay, Swahili, Tagalog, Nepali, Sinhala, Azerbaijani, Uzbek, Kazakh, Danish, Finnish, Norwegian Bokmål, Slovak, Bulgarian, Serbian, Croatian, Bosnian, Catalan, and every language with a [phonetic layout](/languages/phonetic/): Hindi, Urdu, Marathi, Gujarati, Punjabi, Odia, Assamese, Tamil, Telugu, Kannada, Malayalam, Persian and Arabic. Each is 1 to 2&nbsp;MB, a little less for Odia and Assamese, which the collection has least text for. Another 341 packs are built from open web text: [HPLT](https://hplt-project.org/), [MADLAD-400](https://huggingface.co/datasets/allenai/MADLAD-400), AI4Bharat's [Sangraha](https://huggingface.co/datasets/ai4bharat/sangraha) for Indian languages, Wikipedia, and [Tatoeba](https://tatoeba.org/)'s sentences. That covers Sanskrit, Maithili, Bhojpuri, Sindhi, Konkani, Santali, Mizo, Chhattisgarhi, Thai, Burmese, Khmer, Lao, Amharic, Tigrinya, Pashto, Kurdish, Uyghur, Tibetan, Hausa, Yoruba, Igbo, Zulu, Xhosa, Somali, Oromo, Quechua, Guarani and hundreds more. The best-covered are 1 to 2&nbsp;MB, and a language with little text online gets a few hundred kilobytes or less. A few other languages still have only a small pack from Tatoeba, and some codes share a pack with another code for the same language, such as Dari and Iranian Persian. If you already have one of the small packs a new one replaced, the keyboard swaps it for the new one by itself, unless you turned off **Download data automatically** or deleted the pack.
+
+The same text gave 260 languages a longer, better-ranked word list. A word list you've already downloaded isn't replaced by itself: delete and download it again to get the new one.
+
+Both are gated on **Download data automatically** (<SettingsPath path="Languages & layouts / Language data / Download data automatically" />, default **on**, except on F-Droid builds, where it starts **off**). Emoji packs have a narrower switch of their own on top of that, **Download automatically** under <SettingsPath path="Emoji / Emoji keywords" /> (also default **on**), and both have to be on for a pack to arrive by itself.
+
+The check runs from the keyboard rather than the settings app, and it reads your enabled-language list rather than running once at install. Add Tamil today and its pack is fetched the next time you type on the keyboard. Anything already on disk is skipped. A download that fails is left alone until the keyboard's process next starts, so a dead connection doesn't turn into a retry loop.
+
+Word lists join in under the same switch, but only on Wi-Fi or another unmetered connection, because they're the big ones. Without one a language has no glide typing and no suggestions, so an enabled language whose list never arrived gets it here at the size tier the add-a-language prompt uses. A language whose list ships with the app (English, Bangla) is skipped. So is one whose list you deleted: Delete sticks until you download that list again by hand.
+
+Downloads you ask for queue up rather than cancel each other. Adding two languages in the setup wizard fetches both word lists, one after the other.
+
+## What waits for you to ask
+
+| Download | Where | Rough size |
+|---|---|---|
+| Word list, per size tier | Languages → *(a language)* → Dictionaries | Named per size in the dialog that Download opens. The full remote files run from a few KB to about 41 MB, and a size tier stops the transfer well short of that. [Downloadable dictionaries](/languages/dictionaries/) lists every one |
+| **Download language data?** prompt (word list, emoji keywords, word-pair data and, for Chinese, Cantonese and Japanese, the conversion tables their layouts need, in one go) | Shown as you add a language | Named on the dialog |
+| **Download the *(pack)*?** prompt | Shown as you switch on a Chinese, Cantonese or Japanese layout whose table isn't on the device | Named on the dialog |
+| **Download all** | Languages → *(a language)* → Dictionaries heading, while anything is missing | Named on the button |
+| Word list at another size | Languages → *(a language)* → Dictionaries → Word list → the arrow button on a downloaded list | Named per size in the same dialog Download opens |
+| Pinyin table | Languages → Chinese → Chinese options | About 2.6 MB |
+| Stroke table | Languages → Chinese → Chinese options | About 450 KB |
+| Cangjie table | Languages → Chinese → Chinese options | About 350 KB |
+| Traditional characters phrase table | Languages → Chinese → Chinese options, or Cantonese → Cantonese options (one file for both) | About 1 MB |
+| Jyutping table | Languages → Cantonese → Cantonese options | About 3.4 MB |
+| Kana to kanji table | Languages → Japanese → Japanese options | **About 42 MB** |
+| Contracted braille tables | Languages → Braille (6-key chord) → Braille (6-key chord) options | About 4 MB |
+| Niqqud model | Languages → Hebrew → Hebrew options | **About 308 MB** |
+| Tashkeel model | Languages → Arabic → Arabic options | About 21 MB |
+| Furigana readings | Languages → Japanese → Japanese options | About 24 MB |
+| Words with ё | Languages → Russian → Russian options | About 865 KB |
+| Turkish spelling rules | Languages → Turkish → Turkish options | About 15 MB, 38 MB unpacked |
+
+The keyboard reads a Pinyin, Jyutping or kana table once and keeps a faster copy of it next to the download, so these take a little over twice their size in storage: about 90 MB for the kana table. Deleting the table deletes the copy.
+
+Pressing the button is the consent, and nothing here starts on its own. That includes changing a downloaded list's size: the arrow button on the **Word list** row opens the same dialog, names the same per-size transfer, and downloads nothing until you pick one. Some of these name a size first and some don't. The add-language dialog and the **Download all** button each name the whole set they're about to fetch, the word-list dialog names each size, and the Japanese pack's row says "about 42 MB" because it's the one worth warning about. The Pinyin, Stroke, Cangjie and Jyutping rows describe what the table holds rather than what it weighs, so the column above is the place to check those. The only thing that can come between is the mobile-data question below. The add-language prompt is the one with a way out: **Download** fetches the set, **Not now** adds the language with nothing, and **Cancel** backs out of the language too. Word-list tiers and how downloaded and imported lists combine are covered on [Downloadable dictionaries](/languages/dictionaries/). The CJK tables and what each one is for are on [Chinese, Japanese & Korean](/languages/cjk/). Those five are the only ones the keyboard will point you at unprompted: bring up a Chinese, Cantonese or Japanese layout whose table isn't on the device and a chip on the strip names the pack and opens that row, before you've typed anything, because without it the layout converts nothing and nothing else on screen would say so. It still downloads only when you press the button. Several tables asked for at once, as adding Chinese asks for three, download one after another rather than all at the same time.
+
+### Turkish spelling
+
+A Turkish word can take suffix after suffix, so no word list holds them all and a correct `evlerimizden` can look like a typo. **Turkish spelling rules** fixes that: with them the keyboard checks Turkish with Hunspell and [hunspell-tr](https://github.com/tdd-ai/hunspell-tr), leaves a correctly suffixed word alone and suggests `geliyorum` for `gelyorum`. Download the rules under **Languages → Turkish → Turkish options**, plus the spelling library if it isn't on the phone yet.
+
+### Japanese furigana
+
+**Add furigana** on the selection bar writes a reading in brackets after each run of kanji, since a text field can't show ruby: 学校へ行きます becomes 学校（がっこう）へ行（い）きます. Download **Furigana readings** under **Languages → Japanese → Japanese options** first. It picks each word's commonest reading from Mozc's dictionary without parsing the grammar, so a word with several readings can come out wrong, and it's worth a read before you send it to a learner.
+
+### Hebrew niqqud
+
+**Add niqqud** on the selection bar puts the points on selected Hebrew text, replacing any it already has. It needs two downloads, both under **Languages → Hebrew → Hebrew options**: the Phonikud model, about 308 MB, and ONNX Runtime if a voice engine or neural readings haven't brought it already. The model comes straight from Hugging Face, pinned to one checked version. It runs on the phone, so your text stays there.
+
+It takes a few hundred MB of memory while it runs and lets go a minute after the last use, and a long selection can take several seconds. Phonikud was trained for speech, so a few points follow how a word sounds today rather than formal grammar: expect to check anything that has to be correct by the book.
+
+### Arabic tashkeel
+
+**Add tashkeel** on the selection bar puts the marks on selected Arabic text, replacing any it already has. It needs two downloads, both under **Languages → Arabic → Arabic options**: the CATT model, about 21 MB, and ONNX Runtime if something else hasn't brought it already. It runs on the phone. It reads Arabic only, so it stays away from a selection with پ چ ژ or گ in it, and it can get a name or a foreign word wrong.
+
+## Without a connection
+
+Every download on this page can come in from a file instead. Each language's Dictionaries group ends with a **Language pack** row: **Get the files** links that language's pack, one zip with its word list, word pairs, emoji names and (for Chinese, Japanese and Cantonese) conversion tables, to fetch in a browser on any device, and **Import** installs it. It's the way to set up a phone with no connection, or the [build with no internet permission](/development/building/#a-build-with-no-internet-permission). Full detail is on [Using it without internet](/privacy/offline/#language-packs).
+
+## The one that checks your connection
+
+The **Downloads** row in [Data saver](/privacy/data-saver/)
+(<SettingsPath path="Advanced / Data saver / Downloads" />, default **Ask each time**)
+puts a size-naming confirmation in front of **Download all** while data
+saver is on. Data saver never turns on by itself unless you pick a trigger
+for it, such as **On mobile data or a metered network**. That's the one tap that fetches a word list, emoji
+keywords and word-pair data together, so it's the one most likely to
+surprise you. Set the row to **Allow** and the button goes straight out on
+whatever connection is up; set it to **Turn off** and it says so instead of
+downloading. The same row covers the Whisper and on-device AI model
+downloads, which used to have a switch of their own.
+
+Nothing else on this page consults it. The automatic emoji and word-pair packs start on whatever is up, and so does every individual Download button: a word list, an emoji pack, and the CJK tables, including the 42&nbsp;MB Japanese one. For the automatic pair that's a few hundred kilobytes a language, which is why it's allowed to be quiet. For the manual ones the size is printed before you press.
+
+If your plan is tight, three habits keep it that way:
+
+- Turn **Download data automatically** off. Nothing is fetched until you ask for it on a language's own screen.
+- Answer **Not now** to the add-language prompt. Come back to **Download all** on the language's screen when you're on Wi-Fi.
+- Leave the CJK tables, the Japanese one above all, for a Wi-Fi moment. Nothing else about a language comes close to it except a word list taken at the Everything tier.
+
+Nothing here downloads in the background when the keyboard isn't running, and nothing resumes on a schedule. No job queue sits waiting for a better connection. See [Network policy](/privacy/network/) for the full accounting of what this keyboard contacts and when.
+
+## What asks elsewhere in the app
+
+Three downloads outside the language screens treat a metered connection differently, and the line is drawn at size rather than by oversight:
+
+| Download | When it asks | What you get |
+|---|---|---|
+| Whisper voice models <Flavor edition="google" /> | Metered connection **and** the model is 150 MB or larger | A dialog naming the model, its size, and the connection, such as **Download on mobile data?**, with a confirm button worded for that connection and a plain **Cancel** |
+| On-device AI models <Flavor edition="google" /> | Metered connection **and** the model is 500 MB or larger | The same dialog |
+| Rotating photo backgrounds | Never asks. It's a setting instead: **Use mobile data**, off by default, in a theme's Online photos group | A rotation waits for Wi-Fi rather than prompting |
+
+Models under those thresholds go through without a word, as long as Data saver is set to allow downloads. The smallest Whisper model is about 42&nbsp;MB and the smallest on-device AI model about 143&nbsp;MB. One setting overrides the size line for both: the **Downloads** row in [Data saver](/privacy/data-saver/), which is **Ask each time** by default, so while data saver is on every model raises the same dialog whatever its size. Set it to **Turn off** and no model downloads while data saver is on. Full detail on those two is on [Offline voice (Whisper)](/tools/whisper/) and [AI writing tools](/tools/ai/).
+
+## Options
+
+<SettingsPath path="Languages & layouts / Language data" />
+
+| Setting | Where | Default |
+|---|---|---|
+| Download data automatically | Languages → Language data | On (off on F-Droid builds) |
+| Downloads (on a metered connection) | Data saver | Ask each time |
+| Download automatically (emoji keywords) | Emoji → Emoji keywords | On |
+| Download all | Languages → *(a language)* → Dictionaries | A button (no stored value), shown while anything is missing |
+| Dictionary size tier | Languages → *(a language)* → Dictionaries → Word list → Download, or the arrow button on a downloaded list | Large (up to 300,000 words), remembered once you change it |
+| Use mobile data (photo backgrounds) | Appearance → Keyboard themes → *(edit a theme)* → Board → Rotating background → Online photos | Off |
+
+## Details & edge cases
+
+- **"Automatically" means the keyboard, not the app.** The automatic pass lives in the keyboard service and runs when your settings change while it's up. Sitting in the settings app after adding a language doesn't fetch anything. Opening a text field does.
+- **Nothing downloads before the first unlock.** The automatic pass is skipped entirely until the phone has been unlocked once after a restart, because the files it writes live in storage that isn't readable before then. Type on a still-locked device and the packs arrive later.
+- **A failed automatic download is not retried in that session.** The language is remembered as given up on for the life of the keyboard's process, so a bad connection costs one attempt rather than a stream of them. Restarting the keyboard (or the phone) clears the mark.
+- **Deleting a language's emoji keywords tells the automatic pass to leave it alone.** That's how deleting the pack sticks instead of it quietly reappearing on your next connection.
+- **Everything comes from one place.** Word lists, emoji keywords, word-pair data and the CJK tables all download from the same public data repository over plain HTTPS. No analytics, no per-download reporting, nothing else contacted.
+- **Sizes shown are the compressed transfer, not what lands on disk.** For word lists they're also an upper bound. The transfer stops early at words that occur only once in the source, so a finished download is often smaller than the number promised.

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Font picker (Settings > Keyboard font). Generic names for the font a key
+      currently draws with, used when the font itself has no name to show.
+    -->
+    <!-- A font file the user imported, when the file gave no name of its own. -->
+    <string name="ime_font_custom_label">Custom font</string>
+    <!-- A font from the installed font library, when its name is not available. -->
+    <string name="ime_font_installed_label">Installed font</string>
+    <!-- The font your device uses when you select no other font. -->
+    <string name="ime_font_system_default_label">System default</string>
+
+    <!--
+      Script names for the per-script font pickers. Each one heads the font list
+      for one writing system, and is shown only while a language that uses that
+      script is on. These name a script, not a font.
+    -->
+    <!-- The English font, which Cyrillic and Greek also follow. -->
+    <string name="ime_font_script_latin_label">English</string>
+    <!-- Sample line the English font rows are drawn in: a pangram, so every
+         letter of the alphabet shows in the face being offered. -->
+    <string name="ime_font_latin_sample">The quick brown fox jumps over the lazy dog</string>
+    <string name="ime_font_script_bengali_label">Bengali</string>
+    <string name="ime_font_script_arabic_label">Arabic</string>
+    <string name="ime_font_script_hebrew_label">Hebrew</string>
+    <string name="ime_font_script_armenian_label">Armenian</string>
+    <string name="ime_font_script_georgian_label">Georgian</string>
+    <string name="ime_font_script_devanagari_label">Devanagari</string>
+    <string name="ime_font_script_gurmukhi_label">Gurmukhi</string>
+    <string name="ime_font_script_gujarati_label">Gujarati</string>
+    <string name="ime_font_script_odia_label">Odia</string>
+    <string name="ime_font_script_tamil_label">Tamil</string>
+    <string name="ime_font_script_telugu_label">Telugu</string>
+    <string name="ime_font_script_kannada_label">Kannada</string>
+    <string name="ime_font_script_malayalam_label">Malayalam</string>
+    <string name="ime_font_script_sinhala_label">Sinhala</string>
+    <string name="ime_font_script_thai_label">Thai</string>
+    <string name="ime_font_script_lao_label">Lao</string>
+    <string name="ime_font_script_khmer_label">Khmer</string>
+    <string name="ime_font_script_myanmar_label">Myanmar</string>
+    <string name="ime_font_script_ethiopic_label">Ethiopic</string>
+    <string name="ime_font_script_korean_label">Korean</string>
+    <string name="ime_font_script_japanese_label">Japanese</string>
+    <string name="ime_font_script_chinese_label">Chinese</string>
+    <string name="ime_font_script_piqad_label">Klingon pIqaD</string>
+
+    <!--
+      Scanner panel. The F-Droid build of the app leaves out the text
+      scanner, so this message fills the panel in place of the camera.
+    -->
+
+</resources>

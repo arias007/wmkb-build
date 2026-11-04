@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">Den downloadede fil er beskadiget. Dens kontrolsum stemmer ikke overens. Prøv at downloade igen.</string>
+    <string name="core_input_cjk_download_error_http">Serveren returnerede HTTP-status %1$s.</string>
+    <string name="core_input_cjk_download_error_network">Downloaden virkede ikke. Tjek din forbindelse og prøv igen.</string>
+    <string name="core_input_cjk_download_error_network_detail">Downloaden virkede ikke: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">Der er ikke nok lagerplads på din enhed. Frigør noget plads først.</string>
+    <string name="core_input_cjk_download_error_truncated">Forbindelsen stoppede under downloaden. Tryk på Genoptag for at fortsætte.</string>
+    <string name="core_input_cjk_download_error_unavailable">Denne pakke er endnu ikke tilgængelig.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">En tabel med radikale koder til Hanzi-tegn, 29.000 tegn. Tastaturet har brug for denne pakke til Cangjie- og Quick-layouts.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Cangjie (倉頡) ordbog</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Kana-læsninger fra mozc, 1,08 millioner poster, ca. 42 MB. Tastaturet skal bruge denne pakke til japansk konvertering.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Japansk kana til kanji-ordbog</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">En tabel med Jyutping-læsninger til Hanzi-tegn, 163.000 poster. Tastaturet har brug for denne pakke til kantonesisk konvertering.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Kantonesisk Jyutping-ordbog</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Hvilke ord følger hvilke, talt fra kinesisk web- og nyhedstekst. Leveres med Pinyin-ordbogen. Med den giver initialer som wbxh 我不喜欢 først og ikke to urelaterede ord.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Kinesiske ordpar</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Hanzi-tegn og fraser fra CC-CEDICT, 120.000 indgange. Tastaturet har brug for denne pakke til kinesisk konvertering.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Kinesisk Pinyin-ordbog</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Fraser fra OpenCC, 50.000 poster, ca. 1 MB. Med traditionelle tegn slået til, bruger tastaturet det til at skrive den korrekte form for ordet, såsom 頭髮 og ikke 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Tabel for traditionelle tegn-fraser</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">En tabel over stregrækkefølge for Hanzi-tegn. Tastaturet skal bruge denne pakke til streglayoutet.</string>
+    <string name="core_input_cjk_pack_stroke_title">Kinesisk streg (笔画) ordbog</string>
+    <string name="core_input_double_pinyin_custom_label">Brugerdefineret</string>
+    <string name="core_input_double_pinyin_off_label">Fra (fuld Pinyin)</string>
+    <string name="core_input_im_note_candidates">For nogle taster giver denne metode en liste over valgmuligheder. Tastaturet bruger altid det første valg.</string>
+    <string name="core_input_im_note_missing_files">Disse filer blev ikke valgt, så deres del mangler: %1$s. For at inkludere dem skal du importere igen og vælge dem sammen.</string>
+    <string name="core_input_im_note_module">Denne metode bruger et plug-in, såsom Anthy, som tastaturet ikke kan køre. Tasterne, der bruger det, gør intet her.</string>
+    <string name="core_input_im_note_other_method">Denne metode giver nogle taster til en anden inputmetode. Den del virker ikke her.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">Appen kan ikke læse %1$d stave-regel, så den springer den over.</item>
+        <item quantity="other">Appen kan ikke læse %1$d stave-regler, så den springer dem over.</item>
+    </plurals>
+    <string name="core_input_im_note_space">Denne metode bruger mellemrumstasten som en tast, for eksempel til en tone. Her skriver mellemrumstasten altid et mellemrum.</string>
+    <string name="core_input_im_note_truncated">Tabellen er meget stor, så appen beholdt kun den første del.</string>
+    <string name="core_input_im_note_unused_files">Appen brugte ikke disse filer: %1$s.</string>
+    <string name="core_input_im_refused_broken">Filen indeholder en fejl, så appen kan ikke læse den: %1$s</string>
+    <string name="core_input_im_refused_empty">Filen har intet at skrive med.</string>
+    <string name="core_input_im_refused_no_dictionary">Skemaet har brug for sin ordbog. Importer igen og vælg også %1$s.</string>
+    <string name="core_input_im_refused_not_method">Appen kan ikke læse det som en inputmetode. Den læser .cin-tabeller, Rime-skemaer og ordbøger (.schema.yaml, .dict.yaml) samt m17n .mim-filer.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">Appen læste dette som en .cin-tabel med %1$d post. Indtast en kode, og vælg derefter tegnet fra forslagsfeltet.</item>
+        <item quantity="other">Appen læste dette som en .cin-tabel med %1$d poster. Indtast en kode, og vælg derefter tegnet fra forslagsfeltet.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">Appen læste dette som en m17n-inputmetode med %1$d regel. Tasterne skriver teksten, mens du skriver.</item>
+        <item quantity="other">Appen læste dette som en m17n-inputmetode med %1$d regler. Tasterne skriver teksten, mens du skriver.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">Appen læste dette som et Rime-skema med %1$d ordbogspost. Skriv stavelserne, og vælg derefter ordene fra forslagslinjen.</item>
+        <item quantity="other">Appen læste dette som et Rime-skema med %1$d ordbogsposter. Skriv stavelserne, og vælg derefter ordene fra forslagslinjen.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">Appen læste dette som en Rime-kodetabel med %1$d post. Indtast en kode, og vælg derefter tegnet fra forslagsstriben.</item>
+        <item quantity="other">Appen læste dette som en Rime-kodetabel med %1$d poster. Indtast en kode, og vælg derefter tegnet fra forslagsstriben.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Mozcs egen systemordbog med dens forbindelsesomkostninger, segmentering og forslagsfilter. Mozc-motoren konverterer med denne; den indbyggede motor bruger den ikke.</string>
+    <string name="core_input_mozc_pack_title">Mozc-ordbog</string>
+    <string name="core_input_rime_pack_base_subtitle">Tegnsætning, symboler, ord-frekvenstabellen og konvertering mellem forenklet og traditionelt kinesisk, som alle RIME-skemaer bruger. Downloades med det første skema.</string>
+    <string name="core_input_rime_pack_base_title">RIME essentials</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">RIME\'s Zhuyin-skema på standard Dachen-tastaturlayoutet, med Terra Pinyins ordbog.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">RIME\'s femtegenerations Cangjie-skema, tegn og fraser.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Et stort moderne forenklet kinesisk ordforråd til Pinyin, med Double Pinyin og 9-tast-varianter. Det tager et minut eller mere at kompilere det.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">Rime-kantonesisk-skemaet til kantonesisk med dets ord- og frase-lister.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">RIME\'s eget Pinyin-skema, med stregskemaet som det bruger til at slå tegn op med.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Japansk håndskriftsmodel</string>
+    <string name="core_input_zinnia_pack_subtitle">Tegaki-projektets model til Zinnia, den offline håndskriftsgenkendelse, der læser kinesisk og japansk, hvor ML Kit ikke gør.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Model til forenklet kinesisk håndskrift</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Traditionel kinesisk håndskriftsmodel</string>
+</resources>

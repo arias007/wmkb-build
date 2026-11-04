@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Three screens of the settings app:
+
+  * Dictionary, the list of words the keyboard learned from your typing.
+  * Never suggest, the list of words the keyboard keeps out of suggestions.
+  * Backup, which writes one file with your keyboard in it and reads it back.
+
+  The backup screen names the parts of that file (settings, themes, clipboard
+  and so on) in three places: the toggles that select what goes in, the dialog
+  that lists what a file holds, and the message after a restore. The message
+  puts the name in the middle of a sentence, so each name has a second value in
+  lower case. A translation cannot make a lower-case form on its own.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ================================================================== -->
+    <!-- Dictionary: the words the keyboard learned.                        -->
+    <!-- ================================================================== -->
+
+    <string name="backup_dictionary_info">Words learned from your typing, and any you add. They stay on your device.</string>
+    <!-- "Learn from typing" is a setting on the Privacy screen. -->
+    <string name="backup_dictionary_empty">Nothing here yet. Words appear as you type, if \"Learn from typing\" is on in Privacy. You can also add a word above.</string>
+    <!-- Row subtitle for a word the user added themselves (a dialog, the
+         strip's Add, the learn chip). %1$s is the "Seen N times" count, which
+         every row carries (#165). -->
+    <string name="backup_dictionary_added_subtitle">You added this word · <xliff:g id="seen" example="Seen 3 times">%1$s</xliff:g></string>
+    <!-- Appended to a word's row when its capitals are kept as written (#100).
+         %1$s is the row's ordinary subtitle. -->
+    <string name="backup_dictionary_pinned_subtitle"><xliff:g id="standing" example="You added this word">%1$s</xliff:g> · capitals kept</string>
+    <!-- The switch in the edit dialog that pins a word's capitals. -->
+    <string name="backup_word_keep_case_title">Keep these capitals</string>
+    <string name="backup_word_keep_case_info">Typing the word with other capitals does not change how it is spelled</string>
+    <!-- Personal dictionary by language (#930). A word's row starts with the
+         language it is filed under. %1$s is the language, %2$s the row's
+         ordinary subtitle. -->
+    <string name="backup_dictionary_language_subtitle"><xliff:g id="language" example="Bangla">%1$s</xliff:g> · <xliff:g id="standing" example="Seen 3 times">%2$s</xliff:g></string>
+    <!-- A word filed under no one language, on its row, its chip and in the
+         language choice. -->
+    <string name="backup_dictionary_every_language">All languages</string>
+    <!-- The filter chip that shows every word, whatever its language. -->
+    <string name="backup_dictionary_filter_everything">All words</string>
+    <!-- A filter chip: %1$s is a language (or "All languages"), %2$d how
+         many words are filed under it. -->
+    <string name="backup_dictionary_language_chip"><xliff:g id="language" example="Bangla">%1$s</xliff:g> · <xliff:g id="count" example="34">%2$d</xliff:g></string>
+    <!-- Heading over the language choice in the add and edit dialogs. -->
+    <string name="backup_word_language_label">Language</string>
+    <string name="backup_word_language_info">A word you file under one language is offered less while you type another. Typing it elsewhere does not move it.</string>
+    <!-- Heading over the words moved up or down from the keyboard's word card. -->
+    <string name="backup_rank_adjustments_title">Rank adjustments</string>
+    <!-- Row subtitles under that heading. %1$d is the number of steps. -->
+    <string name="backup_rank_adjustment_up_subtitle">Moved up <xliff:g id="steps" example="3">%1$d</xliff:g></string>
+    <string name="backup_rank_adjustment_down_subtitle">Moved down <xliff:g id="steps" example="3">%1$d</xliff:g></string>
+    <string name="backup_rank_edit_title">Rank of <xliff:g id="word" example="mary">%1$s</xliff:g></string>
+    <string name="backup_rank_edit_label">Steps up or down</string>
+    <!-- Screen reader name of the button that removes an adjustment. %1$s is the word. -->
+    <string name="backup_rank_reset_desc">Reset the rank of <xliff:g id="word" example="mary">%1$s</xliff:g></string>
+    <!-- Row subtitle. %1$d is how many times the keyboard saw the word. -->
+    <plurals name="backup_dictionary_seen_count">
+        <item quantity="one">Seen %1$d time</item>
+        <item quantity="other">Seen %1$d times</item>
+    </plurals>
+    <!-- Bulk clean-up of words the keyboard saw only once, which is where
+         typos and stray swipes end up. -->
+    <string name="backup_tidy_words_action">Remove one-off words</string>
+    <!-- Personal dictionary: moving words to and from Android's own personal dictionary (#174). -->
+    <string name="backup_android_import_title">Import from Android\'s dictionary</string>
+    <string name="backup_android_import_subtitle">Add the words saved in Android\'s personal dictionary</string>
+    <string name="backup_android_export_title">Export to Android\'s dictionary</string>
+    <string name="backup_android_export_subtitle">Copy your words to Android\'s personal dictionary, for other keyboards and the spell checker</string>
+    <!-- Gboard is Google's keyboard; do not translate the name. -->
+    <string name="backup_gboard_import_title">Import a Gboard dictionary</string>
+    <string name="backup_gboard_import_subtitle">The PersonalDictionary.zip from Gboard\'s Export. Its words come here, and its shortcuts become snippets</string>
+    <string name="backup_android_import_dialog_title">Words from Android</string>
+    <string name="backup_android_export_dialog_title">Words to copy to Android</string>
+    <string name="backup_android_nothing_to_import_body">Every word in Android\'s dictionary is already in your personal dictionary.</string>
+    <string name="backup_android_nothing_to_export_body">Every word in your personal dictionary is already in Android\'s.</string>
+    <string name="backup_android_unavailable_title">Android\'s dictionary is not available</string>
+    <string name="backup_android_unavailable_body">Android only shares its personal dictionary with the keyboard in use. Make WM Keyboard your current keyboard, then try again.</string>
+    <string name="backup_android_select_all_action">Select all</string>
+    <string name="backup_android_select_none_action">Select none</string>
+    <string name="backup_android_import_action">Add %1$d</string>
+    <string name="backup_android_export_action">Copy %1$d</string>
+    <plurals name="backup_android_exported_toast">
+        <item quantity="one">Copied %d word to Android</item>
+        <item quantity="other">Copied %d words to Android</item>
+    </plurals>
+    <string name="backup_tidy_words_title">Remove one-off words?</string>
+    <!-- %1$d is how many words were seen exactly once. -->
+    <plurals name="backup_tidy_words_body">
+        <item quantity="one">%1$d word here has only been seen once. That is usually a typo or a stray swipe. Words you added yourself are kept.</item>
+        <item quantity="other">%1$d words here have only been seen once each. Those are usually typos and stray swipes. Words you added yourself are kept.</item>
+    </plurals>
+    <!-- Bulk clean-up of words a downloaded, bundled or imported word list
+         already holds (#981). -->
+    <string name="backup_trim_listed_action">Remove words the lists know</string>
+    <string name="backup_trim_listed_title">Remove words the lists know?</string>
+    <!-- %1$d is how many personal words a word list already holds. -->
+    <plurals name="backup_trim_listed_body">
+        <item quantity="one">%1$d word here is already in a word list, so the keyboard knows it without this copy. It forgets how often you typed it. A word with pinned capitals goes only if the list writes it the same way, and rank changes made from the word card are kept.</item>
+        <item quantity="other">%1$d words here are already in a word list, so the keyboard knows them without this copy. It forgets how often you typed them. A word with pinned capitals goes only if the list writes it the same way, and rank changes made from the word card are kept.</item>
+    </plurals>
+
+    <!-- ================================================================== -->
+    <!-- Never suggest: the words the keyboard keeps out of suggestions.    -->
+    <!-- ================================================================== -->
+
+    <string name="backup_blacklist_info">Words the keyboard never suggests or corrects to. You can still type them.</string>
+    <string name="backup_blacklist_empty">No words in this list yet. Add a word above.</string>
+    <string name="backup_blacklist_no_matches">No blocked word matches \"%1$s\".</string>
+    <plurals name="backup_word_list_show_more">
+        <item quantity="one">Show %1$d more word</item>
+        <item quantity="other">Show %1$d more words</item>
+    </plurals>
+
+    <!-- ================================================================== -->
+    <!-- The Add word dialog and the word rows. Both lists use these.       -->
+    <!-- ================================================================== -->
+
+    <string name="backup_add_word_action">Add word</string>
+    <string name="backup_add_word_title">Add word</string>
+    <!-- Label of the text field in the Add word dialog. -->
+    <string name="backup_word_field_label">Word</string>
+    <string name="backup_word_shortcut_label">Shortcut (optional)</string>
+    <!-- Under the shortcut box when adding a word to the personal dictionary. -->
+    <string name="backup_word_shortcut_hint">Type this and the word is offered as a suggestion</string>
+    <!-- Screen reader name of the delete button on a word row. %1$s is the word. -->
+    <string name="backup_delete_word_desc">Delete %1$s</string>
+
+    <!-- The Edit word dialog a personal dictionary row opens. -->
+    <string name="backup_edit_word_title">Edit word</string>
+    <!-- Label of the number field. The weight is the count the row shows as
+         "Seen N times". -->
+    <string name="backup_word_weight_label">Weight</string>
+    <string name="backup_word_weight_info">A higher weight makes the keyboard suggest this word sooner. A word you add starts at 1. The weight goes up each time you type the word.</string>
+    <!-- Shown under the number field when it does not hold a valid weight.
+         %1$d is the highest weight allowed. -->
+    <string name="backup_word_weight_error">Enter a number from 1 to %1$d.</string>
+    <!-- Screen reader names of the two stepper buttons beside the weight field. -->
+    <string name="backup_weight_lower_desc">Lower the weight</string>
+    <string name="backup_weight_raise_desc">Raise the weight</string>
+
+    <!-- ================================================================== -->
+    <!-- Names of the parts of a backup file. Used as a toggle title on the -->
+    <!-- Backup screen and as a line title in the import dialog.            -->
+    <!-- ================================================================== -->
+
+    <string name="backup_section_settings_label">Settings</string>
+    <string name="backup_section_themes_label">Themes</string>
+    <string name="backup_section_dictionary_label">Dictionary</string>
+    <string name="backup_section_clipboard_label">Clipboard</string>
+    <string name="backup_section_snippets_label">Snippets</string>
+    <string name="backup_section_stickers_label">Sticker packs</string>
+    <string name="backup_section_icons_label">Icon packs</string>
+    <!-- A zip of everything downloaded, for a phone that can't reach the host (#1045). -->
+    <string name="backup_downloads_title">Downloaded files</string>
+    <string name="backup_downloads_info">Word lists, RIME\'s packs, voice and AI models and the feature libraries. They stay out of a backup because they can be downloaded again, and they can run to hundreds of megabytes. Keep this file if your new phone may not be able to reach the place they come from. A library goes back in only if it matches what this version of the keyboard expects.</string>
+    <string name="backup_downloads_export_title">Save downloaded files</string>
+    <string name="backup_downloads_export_subtitle">One zip file you keep and open on the next phone</string>
+    <string name="backup_downloads_export_action">Save</string>
+    <string name="backup_downloads_import_title">Restore downloaded files</string>
+    <string name="backup_downloads_import_subtitle">From a zip saved here. Restart the keyboard afterwards</string>
+    <string name="backup_downloads_import_action">Open</string>
+    <string name="backup_downloads_failed">Couldn\'t finish. Check that there is enough free space and try again.</string>
+    <plurals name="backup_downloads_exported">
+        <item quantity="one">Saved %1$d file.</item>
+        <item quantity="other">Saved %1$d files.</item>
+    </plurals>
+    <!-- %2$d is how many files in the zip were left out. -->
+    <plurals name="backup_downloads_imported">
+        <item quantity="one">Restored %1$d file, %2$d left out. Restart the keyboard to use them.</item>
+        <item quantity="other">Restored %1$d files, %2$d left out. Restart the keyboard to use them.</item>
+    </plurals>
+    <string name="backup_section_wordlists_label">Custom word lists</string>
+    <string name="backup_section_addons_label">Add-on repositories</string>
+    <string name="backup_section_emoji_label">Emoji history</string>
+    <string name="backup_section_statistics_label">Typing statistics</string>
+    <string name="backup_section_vocab_label">Vocabulary</string>
+    <string name="backup_section_swipe_label">Swipe style</string>
+    <string name="backup_section_notes_label">Notes</string>
+    <string name="backup_section_clock_label">Clock</string>
+    <string name="backup_section_kaomoji_label">Kaomoji</string>
+    <string name="backup_section_ai_memory_label">AI memory</string>
+    <string name="backup_section_todo_label">To-do list</string>
+
+    <!-- The same names in the middle of a sentence, for the list in     -->
+    <!-- backup_restore_done ("The app restored themes, snippets.").      -->
+
+    <string name="backup_section_settings_label_lowercase">settings</string>
+    <string name="backup_section_themes_label_lowercase">themes</string>
+    <string name="backup_section_dictionary_label_lowercase">dictionary</string>
+    <string name="backup_section_clipboard_label_lowercase">clipboard</string>
+    <string name="backup_section_snippets_label_lowercase">snippets</string>
+    <string name="backup_section_stickers_label_lowercase">sticker packs</string>
+    <string name="backup_section_icons_label_lowercase">icon packs</string>
+    <string name="backup_section_wordlists_label_lowercase">custom word lists</string>
+    <string name="backup_section_addons_label_lowercase">add-on repositories</string>
+    <string name="backup_section_emoji_label_lowercase">emoji history</string>
+    <string name="backup_section_statistics_label_lowercase">typing statistics</string>
+    <string name="backup_section_vocab_label_lowercase">vocabulary</string>
+    <string name="backup_section_swipe_label_lowercase">swipe style</string>
+    <string name="backup_section_notes_label_lowercase">notes</string>
+    <string name="backup_section_clock_label_lowercase">clock</string>
+    <string name="backup_section_kaomoji_label_lowercase">kaomoji</string>
+    <string name="backup_section_ai_memory_label_lowercase">AI memory</string>
+    <string name="backup_section_todo_label_lowercase">to-do list</string>
+
+    <!-- How much of each part a backup file holds. %1$d is the count. These -->
+    <!-- go after the name of the part: "Themes: 3 custom themes".           -->
+
+    <plurals name="backup_section_settings_count">
+        <item quantity="one">%1$d setting</item>
+        <item quantity="other">%1$d settings</item>
+    </plurals>
+    <plurals name="backup_section_themes_count">
+        <item quantity="one">%1$d custom theme</item>
+        <item quantity="other">%1$d custom themes</item>
+    </plurals>
+    <plurals name="backup_section_dictionary_count">
+        <item quantity="one">%1$d learned word</item>
+        <item quantity="other">%1$d learned words</item>
+    </plurals>
+    <plurals name="backup_section_clipboard_count">
+        <item quantity="one">%1$d clip</item>
+        <item quantity="other">%1$d clips</item>
+    </plurals>
+    <plurals name="backup_section_snippets_count">
+        <item quantity="one">%1$d snippet</item>
+        <item quantity="other">%1$d snippets</item>
+    </plurals>
+    <plurals name="backup_section_stickers_count">
+        <item quantity="one">%1$d sticker</item>
+        <item quantity="other">%1$d stickers</item>
+    </plurals>
+    <plurals name="backup_section_icons_count">
+        <item quantity="one">%1$d icon</item>
+        <item quantity="other">%1$d icons</item>
+    </plurals>
+    <plurals name="backup_section_wordlists_count">
+        <item quantity="one">%1$d word list</item>
+        <item quantity="other">%1$d word lists</item>
+    </plurals>
+    <plurals name="backup_section_addons_count">
+        <item quantity="one">%1$d repository</item>
+        <item quantity="other">%1$d repositories</item>
+    </plurals>
+    <plurals name="backup_section_emoji_count">
+        <item quantity="one">%1$d recent emoji</item>
+        <item quantity="other">%1$d recent emoji</item>
+    </plurals>
+    <plurals name="backup_section_statistics_count">
+        <item quantity="one">%1$d day of typing</item>
+        <item quantity="other">%1$d days of typing</item>
+    </plurals>
+    <plurals name="backup_section_vocab_count">
+        <item quantity="one">%d word studied</item>
+        <item quantity="other">%d words studied</item>
+    </plurals>
+    <plurals name="backup_section_swipe_count">
+        <item quantity="one">%1$d word you have swiped</item>
+        <item quantity="other">%1$d words you have swiped</item>
+    </plurals>
+    <plurals name="backup_section_notes_count">
+        <item quantity="one">%1$d note</item>
+        <item quantity="other">%1$d notes</item>
+    </plurals>
+    <plurals name="backup_section_clock_count">
+        <item quantity="one">%1$d alarm</item>
+        <item quantity="other">%1$d alarms</item>
+    </plurals>
+    <plurals name="backup_section_kaomoji_count">
+        <item quantity="one">%1$d kaomoji</item>
+        <item quantity="other">%1$d kaomoji</item>
+    </plurals>
+    <plurals name="backup_section_todo_count">
+        <item quantity="one">%1$d task</item>
+        <item quantity="other">%1$d tasks</item>
+    </plurals>
+    <plurals name="backup_section_ai_memory_count">
+        <item quantity="one">%1$d memory</item>
+        <item quantity="other">%1$d memories</item>
+    </plurals>
+
+    <!-- ================================================================== -->
+    <!-- Backup: what the export file holds.                                -->
+    <!-- ================================================================== -->
+
+    <string name="backup_info">Save your keyboard to a file. You can keep the file, move it to another device, or restore from it after you install the app again. Choose what goes into the file in What goes in an export.</string>
+    <string name="backup_include_nav_subtitle">%1$d of %2$d parts included</string>
+
+    <string name="backup_include_settings_subtitle">Every keyboard setting</string>
+    <string name="backup_include_secrets_title">Include API keys</string>
+    <string name="backup_include_secrets_subtitle">The keys for translate, GIF, search and AI, and your locked notes</string>
+    <string name="backup_include_secrets_info">This setting is off at the start. A backup file is easy to send to yourself or to put in a shared folder. These keys spend real money on your accounts.\n\nTurn it on only for a backup that you keep to yourself. Anyone who opens that file can use your keys.</string>
+    <string name="backup_include_themes_subtitle">Your custom themes</string>
+    <string name="backup_include_themes_info">The colours, the gradients and the layout of your saved themes. The file does not hold the background image of a theme. It holds only the theme itself.</string>
+    <string name="backup_include_dictionary_subtitle">The words the keyboard learned from you</string>
+    <string name="backup_include_dictionary_info">Your personal words and your next-word patterns. This setting is off at the start, because this is personal typing data. Turn it on for a backup that you keep to yourself.</string>
+    <string name="backup_include_clipboard_subtitle">The saved clipboard history</string>
+    <string name="backup_include_clipboard_info">Your pinned clips and your recent text clips. The file leaves out images and files, because they stay on your device and do not open on another device.</string>
+    <string name="backup_include_snippets_subtitle">Your saved text snippets</string>
+    <string name="backup_include_stickers_subtitle">Your own sticker packs, with the images</string>
+    <!-- .wmstickers is a file name extension. Keep it as it is. -->
+    <string name="backup_include_stickers_info">The backup holds the images, so a restore on another device gets packs that work. This can add megabytes to the file. For one pack, a .wmstickers file is smaller.</string>
+    <string name="backup_include_icons_subtitle">Your own icon packs, with the images</string>
+    <!-- SVG is the image format of an icon pack. Keep the name as it is. -->
+    <string name="backup_include_icons_info">The backup holds the SVG files, so a restore on another device gets packs that work. This makes the file larger.</string>
+    <string name="backup_include_wordlists_subtitle">The word lists you imported for any language</string>
+    <string name="backup_include_addons_subtitle">The add-on sources you added, so you can install from them again</string>
+    <string name="backup_include_emoji_subtitle">Your recent emoji, your favourites and the skin tone of each one</string>
+    <string name="backup_include_statistics_subtitle">Your daily typing counts and your all-time speed</string>
+    <string name="backup_include_vocab_subtitle">Your word lists, imported packs and learning progress. Downloaded packs are left out; they can be downloaded again.</string>
+    <string name="backup_include_notes_subtitle">Your notes, their tags, and what is in the trash</string>
+    <string name="backup_include_notes_info">Locked notes stay out of the file unless Include API keys is on. A backup file is easy to share, and a locked note is one you asked to keep from view.</string>
+    <string name="backup_include_clock_subtitle">Alarms, timer presets, countdowns and the clock settings</string>
+    <string name="backup_include_kaomoji_subtitle">Your kaomoji library: the faces you added, their tags, the order and your favourites</string>
+    <string name="backup_include_todo_subtitle">Your tasks and their steps, done or not</string>
+    <string name="backup_include_ai_memory_subtitle">What the AI remembers about you, from Settings › AI › Memory</string>
+    <string name="backup_include_ai_memory_info">Off unless you turn it on. These facts come from your chats, so a backup that holds them is as personal as the chats. Sync never carries them to another phone.</string>
+    <string name="backup_include_clock_info">Running timers, the stopwatch and the history stay on this phone. Sync leaves the clock out unless you turn it on, so two phones do not ring for one alarm.</string>
+    <string name="backup_include_swipe_subtitle">How you swipe: where your finger lands, the readings you corrected, and the shape you draw each word in. Holds the words you have swiped.</string>
+    <string name="backup_include_addons_info">This is only the list of addresses. The add-ons themselves go into the sections above. An installed theme is a custom theme, and an installed pack is an icon pack.</string>
+
+    <!-- ================================================================== -->
+    <!-- Backup: export and import.                                         -->
+    <!-- ================================================================== -->
+    <string name="backup_import_note">An import of settings changes only the settings that the file names. The other settings stay as they are. The dictionary, the clipboard and the snippets in the file replace the ones on your device.</string>
+
+    <string name="backup_export_done">The app exported the backup.</string>
+    <!-- Shown after an export that holds the keys for the network tools. -->
+    <string name="backup_export_done_with_keys">The app exported the backup with your API keys in it. Keep that file as safe as a password.</string>
+    <string name="backup_export_write_error">The app could not write that file.</string>
+    <string name="backup_import_read_error">The app could not read that file.</string>
+    <string name="backup_not_a_backup">That file is not a WM Keyboard backup.</string>
+    <string name="backup_not_a_settings_backup">That file is not a WM Keyboard settings backup.</string>
+
+    <!-- ================================================================== -->
+    <!-- The import dialog for a full backup file.                          -->
+    <!-- ================================================================== -->
+
+    <string name="backup_import_confirm_title">Import backup?</string>
+    <string name="backup_location_no_internet">This build has no internet access, so it can\'t reach this place. A folder on the phone still works.</string>
+    <string name="backup_import_contains">The file has these items:</string>
+    <string name="backup_import_missing">Not in this file, so left as they are: %1$s. A file holds only the parts that were picked when it was made, and the automatic backup, sync and Export to a file each have their own list of parts.</string>
+    <!-- One line per part of the backup. %1$s is the name of the part, for
+         example "Themes". %2$s is how much of it the file holds, for example
+         "3 custom themes". -->
+    <string name="backup_import_section_line">• %1$s: %2$s</string>
+    <string name="backup_import_merge_note">The app merges the settings into your current settings. The dictionary, the clipboard and the snippets replace the ones on your device.</string>
+    <!-- Shown for a backup file that holds the keys for the network tools. -->
+    <string name="backup_import_api_keys_note">The file has API keys. They replace the keys that you set here.</string>
+    <!-- %1$s is a list of the parts that the app restored, for example
+         "themes, snippets". -->
+    <string name="backup_restore_done">The app restored %1$s.</string>
+    <string name="backup_restore_nothing">The file has nothing to restore.</string>
+    <string name="backup_restore_settings_failed">The app could not apply the settings. Your settings did not change.</string>
+
+    <!-- ================================================================== -->
+    <!-- The import dialog for the older settings-only file.                -->
+    <!-- ================================================================== -->
+
+    <string name="backup_import_settings_confirm_title">Import settings?</string>
+    <!-- %1$d is how many settings the file holds. -->
+    <plurals name="backup_import_settings_overwrite">
+        <item quantity="one">The app replaces %1$d setting with the value from that file.</item>
+        <item quantity="other">The app replaces %1$d settings with the values from that file.</item>
+    </plurals>
+    <!-- %1$d is how many entries in the file the app cannot read. -->
+    <plurals name="backup_import_settings_skipped">
+        <item quantity="one">The app cannot read %1$d entry. The app skips it.</item>
+        <item quantity="other">The app cannot read %1$d entries. The app skips them.</item>
+    </plurals>
+    <!-- %1$d is how many settings the app restored. -->
+    <plurals name="backup_restore_settings_count">
+        <item quantity="one">The app restored %1$d setting.</item>
+        <item quantity="other">The app restored %1$d settings.</item>
+    </plurals>
+    <string name="backup_restore_rolled_back">The app could not apply that backup. Your settings did not change.</string>
+
+
+    <!-- ==== The backup that runs without being asked. ==== -->
+
+    <string name="backup_auto_group_title">Automatic backup</string>
+    <string name="backup_auto_folder_title">Folder</string>
+    <string name="backup_auto_folder_none">Not set</string>
+    <string name="backup_auto_enabled_title">Back up automatically</string>
+    <string name="backup_auto_enabled_subtitle">The app writes a backup on a timer.</string>
+    <string name="backup_auto_enabled_needs_folder">Choose a folder first.</string>
+    <string name="backup_auto_enabled_needs_sign_in">Sign in first.</string>
+    <string name="backup_auto_enabled_needs_details">Fill in the connection details first.</string>
+    <string name="backup_auto_interval_title">How often</string>
+    <plurals name="backup_auto_interval_hours">
+        <item quantity="one">Every hour</item>
+        <item quantity="other">Every %d hours</item>
+    </plurals>
+    <plurals name="backup_auto_interval_days">
+        <item quantity="one">Every day</item>
+        <item quantity="other">Every %d days</item>
+    </plurals>
+    <string name="backup_auto_keep_title">Backups to keep</string>
+    <string name="backup_auto_keep_subtitle">The app deletes the oldest backup when there are more than this. It always keeps the newest one. Each device counts only its own backups.</string>
+    <plurals name="backup_auto_keep_value">
+        <item quantity="one">%d backup</item>
+        <item quantity="other">%d backups</item>
+    </plurals>
+    <string name="backup_auto_staggered_title">Keep older backups spread out</string>
+    <string name="backup_auto_staggered_subtitle">Also keep one a day for a week, one a week for five weeks and one a month for a year</string>
+    <string name="backup_auto_staggered_info">Backups to keep counts the newest backups. With this on, the app also spares some older ones instead of deleting them: the newest backup of each of the last 7 days, of each of the last 5 weeks, and of each of the last 12 months. That is at most 24 more files, and fewer when one backup stands for several of them. A setting you changed by mistake a month ago can then still be taken back, without keeping a month of daily backups to do it. The ages count back from your newest backup, so a phone that stops backing up for a while keeps its old copies until new ones replace them. This setting is off by default.</string>
+    <!-- #970: a second automatic backup on its own schedule, smaller and more often than the main one. -->
+    <string name="backup_frequent_title">Frequent backup</string>
+    <string name="backup_frequent_info">A second automatic backup beside the main one, with its own schedule, sections and number of copies. Use it for what changes often and is small, like your settings and layouts, every hour or so, and leave the bulky and personal things to the main backup once a day. It goes to the same locations under the same conditions, and pausing backups pauses it too. Its files are named apart, so each kind keeps its own copies, and the restore list shows both. It never includes API keys.</string>
+    <string name="backup_frequent_enabled_title">Also back up often</string>
+    <string name="backup_frequent_enabled_subtitle">A second, smaller backup on its own schedule, to the same locations</string>
+    <string name="backup_frequent_interval_title">How often, frequent backup</string>
+    <string name="backup_frequent_keep_title">Frequent backups to keep</string>
+    <string name="backup_frequent_keep_subtitle">Counted apart from the main backups</string>
+    <string name="backup_frequent_encrypt_title">Encrypt frequent backups</string>
+    <string name="backup_frequent_encrypt_subtitle">With the passphrase under Protect with a passphrase</string>
+    <string name="backup_frequent_encrypt_needs_passphrase">Set a passphrase under Protect with a passphrase first</string>
+    <string name="backup_contents_column_main">Main</string>
+    <string name="backup_contents_column_frequent">Frequent</string>
+    <string name="backup_frequent_contents_title">What goes in a frequent backup</string>
+    <string name="backup_auto_unmetered_title">Only on Wi-Fi</string>
+    <string name="backup_auto_unmetered_subtitle">Wait for a connection that costs you nothing</string>
+    <string name="backup_auto_unmetered_info">A backup can be a few megabytes, and it goes out every time the timer comes round. With this on, the app waits for Wi-Fi, or for any other connection that Android does not count as metered. With it off, a backup goes out over mobile data as soon as it is due. Folder locations need no connection at all, so this setting only shows when a backup goes to a server or a cloud account. This setting is on by default.</string>
+    <string name="backup_auto_charging_title">Only while charging</string>
+    <string name="backup_auto_charging_subtitle">Wait until your device is plugged in</string>
+    <string name="backup_auto_charging_info">This is what the app always did. Turn it off if you rarely charge your device for long enough, because a backup that never finds a charger never runs, and nothing tells you that it did not. The work itself is a few seconds of copying, so it costs little battery.</string>
+    <string name="backup_auto_encrypt_title">Protect with a passphrase</string>
+    <string name="backup_auto_encrypt_subtitle">The app encrypts each backup. You need the passphrase to restore one.</string>
+    <string name="backup_auto_encrypt_info">The app stores the passphrase on this device, because an automatic backup has nobody to type it. This protects the backup file where it goes, for example in a cloud folder. It does not protect it from a person who holds your unlocked device. Write the passphrase down: without it, a backup cannot be restored.</string>
+    <string name="backup_auto_passphrase_label">Passphrase</string>
+    <string name="backup_auto_passphrase_show">Show the passphrase</string>
+    <string name="backup_auto_passphrase_hide">Hide the passphrase</string>
+    <string name="backup_auto_personal_warning">This backup holds words that you typed, text that you copied, or what the AI remembers about you, and no passphrase protects it. The app writes it to your locations on a timer. Turn on a passphrase, or turn off the dictionary, the clipboard, the swipe style and AI memory in What goes in a backup.</string>
+    <string name="backup_auto_now_action">Back up now</string>
+    <string name="backup_auto_running">Backing up…</string>
+    <!-- %1$s is the name of the file that the app wrote. -->
+    <string name="backup_auto_done">The app wrote %1$s.</string>
+    <!-- %1$s is the file name. %2$s is a list of the parts that the app left
+         out because the backup was too large, for example "stickers, icons". -->
+    <string name="backup_auto_done_skipped">The app wrote %1$s. It left out %2$s, because the backup was too large.</string>
+    <string name="backup_auto_locked">The app cannot back up while the device is locked. Unlock it and try again.</string>
+    <string name="backup_auto_skipped">There is nothing to back up. Choose at least one part in What goes in a backup.</string>
+    <!-- %1$s is a relative time, for example "2 hours ago". -->
+    <string name="backup_auto_last_run">Last backup: %1$s</string>
+    <string name="backup_auto_never">The app has not made an automatic backup yet.</string>
+    <string name="backup_auto_error_permission">The app can no longer write to your backup folder. Choose the folder again.</string>
+    <string name="backup_auto_error_permission_account">The app lost access to your account. Sign in again.</string>
+    <string name="backup_auto_error_permission_server">The server did not accept the sign-in details. Check them.</string>
+    <string name="backup_auto_error_target_remote">The app cannot find the backup location. Check the details of this location.</string>
+    <string name="backup_auto_error_target">The app cannot find your backup folder. It may be deleted, or the card may be out.</string>
+    <string name="backup_auto_error_space">There is not enough space for a backup.</string>
+    <string name="backup_auto_error_memory">The keyboard ran out of memory while making the backup. Your older backups are untouched. Try again, or leave some large sections out.</string>
+    <string name="backup_auto_error_unsafe">The app did not write here, because the location is not safe.</string>
+    <string name="backup_auto_error_unsafe_sftp">The server key changed since the first connection. This can be a new server, or a device that intercepts your connection. If you changed the server, open this location and select Forget the server key.</string>
+    <string name="backup_auto_error_unsafe_git">The repository is public. Anybody can read a backup in it, and its history keeps every old backup. Make the repository private, or turn on Allow a public repository.</string>
+    <string name="backup_auto_error_unsafe_smb">The server cannot encrypt the connection. Turn off Encrypt the connection only if you trust every device on this network.</string>
+    <string name="backup_auto_error_io">The last backup did not finish. The app tries again later.</string>
+
+    <!-- ==== Where the automatic backup goes. ==== -->
+    <!-- One line under each option in the backup destination picker. -->
+    <string name="backup_auto_dest_folder_desc">A folder on your device, or one that another storage app gives you</string>
+    <string name="backup_auto_dest_webdav_desc">Your own server, such as Nextcloud. It needs a URL, a user name and a password</string>
+    <string name="backup_auto_dest_drive_desc">Your Google account, in a private app space that other apps cannot read</string>
+    <string name="backup_auto_dest_s3_desc">A bucket on AWS, R2, B2 or MinIO. It needs a key and a secret</string>
+    <string name="backup_auto_dest_ftp_desc">An FTP server. It needs a host, a user name and a password</string>
+    <string name="backup_auto_dest_dropbox_desc">Your Dropbox account, in the app folder</string>
+    <string name="backup_auto_dest_onedrive_desc">Your Microsoft account, in the app folder</string>
+    <string name="backup_auto_dest_sftp_desc">An SSH server. It needs a host, a user name, and a password or a key</string>
+    <string name="backup_auto_dest_smb_desc">A shared folder on a Windows computer or a NAS</string>
+    <string name="backup_auto_dest_git_desc">A private repository on GitHub, GitLab, Gitea or Forgejo. It needs a token</string>
+    <string name="backup_auto_dest_imap_desc">A folder in your email account. It needs the IMAP server and a password</string>
+    <string name="backup_auto_dest_nearby_desc">A computer with WM Keyboard, over KDE Connect on the same network. Made when you pair it</string>
+    <string name="backup_auto_dest_folder">Folder</string>
+    <string name="backup_auto_dest_webdav">WebDAV</string>
+    <string name="backup_auto_dest_drive">Google Drive</string>
+
+    <string name="backup_auto_webdav_url_label">Server address</string>
+    <string name="backup_auto_webdav_url_hint">The full address of the folder to write into, for example https://cloud.example.com/remote.php/dav/files/me/backups</string>
+    <string name="backup_auto_webdav_user_label">User name</string>
+    <string name="backup_auto_webdav_password_label">Password</string>
+    <string name="backup_auto_webdav_password_hint">If your server can make app passwords, use one here instead of your account password.</string>
+    <string name="backup_auto_webdav_needs_https">This address is not https. The app sends your user name and password with every upload, and on a plain http address anyone on the network can read them, so the app does not use it. Addresses on your Tailscale network are the exception.</string>
+    <string name="backup_auto_webdav_user_hint">Leave empty for a server that does not ask you to sign in</string>
+    <string name="backup_webdav_taildrive_share_label">Share</string>
+    <string name="backup_webdav_taildrive_share_hint">As Tailscale shows it: your tailnet, the computer, and the share name, for example example.ts.net/laptop/wmkeyboard</string>
+    <string name="backup_webdav_tailnet_note">This address is on your Tailscale network. It is plain http, but Tailscale encrypts everything between your devices. Tailscale must be connected on this phone.</string>
+
+    <string name="backup_auto_drive_title">Google Drive</string>
+    <string name="backup_auto_drive_checking">Checking…</string>
+    <string name="backup_auto_drive_authorized">The app can write to its folder in your Drive.</string>
+    <string name="backup_auto_drive_not_authorized">The app needs your permission first.</string>
+    <string name="backup_auto_drive_authorize">Allow access to Drive</string>
+    <string name="backup_auto_drive_info">The app writes to a hidden folder of its own in your Drive. It cannot see your other files, and the folder does not show up beside your documents. To take this permission back, go to your Google account and open the list of apps with account access. To keep backups you can see in the Drive app, select A folder you can see above.</string>
+
+    <!-- ==== The other four destinations. ==== -->
+
+    <string name="backup_auto_dest_s3">S3</string>
+    <string name="backup_auto_dest_ftp">FTP</string>
+    <string name="backup_auto_dest_dropbox">Dropbox</string>
+    <string name="backup_auto_dest_onedrive">OneDrive</string>
+    <string name="backup_auto_dest_sftp" translatable="false">SFTP</string>
+    <string name="backup_auto_dest_smb">Windows share (SMB)</string>
+    <string name="backup_auto_dest_git">Git repository</string>
+    <string name="backup_auto_dest_imap">Email (IMAP)</string>
+    <string name="backup_auto_dest_nearby">Nearby device</string>
+
+    <string name="backup_auto_s3_endpoint_label">Endpoint</string>
+    <string name="backup_auto_s3_endpoint_hint">Leave this empty for Amazon S3. For other services, put their address here, for example https://your-account.r2.cloudflarestorage.com or the address of your own MinIO server.</string>
+    <string name="backup_auto_s3_bucket_label">Bucket</string>
+    <string name="backup_auto_s3_region_label">Region</string>
+    <string name="backup_auto_s3_region_hint">Use us-east-1 if your service does not have regions.</string>
+    <string name="backup_auto_s3_prefix_label">Folder in the bucket</string>
+    <string name="backup_auto_s3_prefix_hint">Leave this empty to put backups at the top of the bucket.</string>
+    <string name="backup_auto_s3_key_label">Access key ID</string>
+    <string name="backup_auto_s3_secret_label">Secret access key</string>
+    <string name="backup_auto_s3_path_style_title">Put the bucket in the path</string>
+    <string name="backup_auto_s3_path_style_subtitle">Turn this on for MinIO, and for any address that is an IP address. Leave it off for Amazon S3 and Cloudflare R2.</string>
+    <string name="backup_auto_s3_cleartext">This endpoint is not https. The app signs every request with your secret key, and on a plain http address anyone on the network can read what is sent.</string>
+
+    <string name="backup_auto_ftp_host_label">Server</string>
+    <string name="backup_auto_ftp_port_label">Port</string>
+    <string name="backup_auto_ftp_user_label">User name</string>
+    <string name="backup_auto_ftp_password_label">Password</string>
+    <string name="backup_auto_ftp_path_label">Directory</string>
+    <string name="backup_auto_ftp_path_hint">Leave this empty to use the directory you land in after you sign in.</string>
+    <string name="backup_auto_ftp_secure_title">Use TLS</string>
+    <string name="backup_auto_ftp_secure_subtitle">Encrypts the connection before the app signs in. Leave this on unless your server cannot do it.</string>
+    <string name="backup_auto_ftp_cleartext">Without TLS, your password and your backup both cross the network as plain text that anyone in between can read. If you must leave this off, turn on Protect with a passphrase in Automatic backup.</string>
+
+    <string name="backup_auto_oauth_signed_in">Signed in.</string>
+    <string name="backup_auto_oauth_signed_out">Not signed in yet.</string>
+    <string name="backup_auto_oauth_signing_in">Signing in…</string>
+    <string name="backup_auto_oauth_sign_in">Sign in</string>
+    <string name="backup_auto_oauth_sign_out">Sign out</string>
+    <string name="backup_auto_oauth_cancelled">Sign in stopped. Nothing changed.</string>
+    <string name="backup_auto_oauth_failed">The app could not finish signing in. Try again.</string>
+    <string name="backup_auto_oauth_no_browser">The app could not open a browser to sign in.</string>
+    <string name="backup_auto_dropbox_info">The app gets a folder of its own inside your Dropbox and can see nothing else. You can find the folder under Apps, and you can delete it. To take this permission back, open the connected apps list in your Dropbox account.</string>
+    <!-- The Backup & restore hub. -->
+    <string name="backup_hub_backup_on">Automatic backup is on</string>
+    <string name="backup_hub_backup_off">Automatic backup is off</string>
+    <plurals name="backup_hub_backup_where">
+        <item quantity="one">%1$s, to one location</item>
+        <item quantity="other">%1$s, to %2$d locations</item>
+    </plurals>
+    <string name="backup_hub_no_locations">Add a location to start</string>
+    <string name="backup_hub_sync_on">Sync is on</string>
+    <string name="backup_hub_sync_now">Sync now</string>
+    <string name="backup_hub_syncing">Syncing…</string>
+    <string name="backup_hub_last_sync">Last sync: %1$s</string>
+    <string name="backup_hub_never_synced">This device has not synced yet</string>
+    <!-- %1$s is how often ("Every day"), %2$s how many are kept ("5 backups"). -->
+    <string name="backup_hub_auto_summary"><xliff:g id="interval">%1$s</xliff:g>, keeps <xliff:g id="count">%2$s</xliff:g></string>
+
+    <string name="backup_locations_title">Locations</string>
+    <string name="backup_locations_info">Each automatic backup goes to the locations that you tick in Automatic backup. Sync uses the locations that you tick in Sync devices. Nothing goes to a WM Keyboard server.</string>
+    <string name="backup_location_add">Add a location</string>
+    <string name="backup_location_add_subtitle">A folder, your own server, or a cloud account</string>
+    <string name="backup_location_type_title">Add a location</string>
+    <string name="backup_location_type_subtitle">Where should the backups go?</string>
+    <string name="backup_location_paused">Paused</string>
+    <string name="backup_location_last_backup">Last backup: %1$s</string>
+    <string name="backup_location_never">No backup here yet</string>
+    <string name="backup_location_more">More options for %1$s</string>
+    <string name="backup_location_restore">Restore from %1$s</string>
+    <string name="backup_location_remove">Remove</string>
+    <string name="backup_location_remove_title">Remove %1$s?</string>
+    <string name="backup_location_remove_body">The backups that are already there stay there. The app stops writing to this location and forgets how to sign in to it.</string>
+    <string name="backup_location_name_label">Name</string>
+    <!-- One example per kind of location, under the optional Name field. -->
+    <string name="backup_location_name_hint_folder">Optional. For example, SD card or Phone copies.</string>
+    <string name="backup_location_name_hint_webdav">Optional. For example, Nextcloud or Home server.</string>
+    <string name="backup_location_name_hint_s3">Optional. For example, R2 bucket or Work AWS.</string>
+    <string name="backup_location_name_hint_ftp">Optional. For example, NAS or Router storage.</string>
+    <string name="backup_location_name_hint_drive">Optional. For example, Personal Drive.</string>
+    <string name="backup_location_name_hint_dropbox">Optional. For example, Family Dropbox.</string>
+    <string name="backup_location_name_hint_onedrive">Optional. For example, Work OneDrive.</string>
+    <string name="backup_location_name_hint_sftp">Optional. For example, Home server or VPS.</string>
+    <string name="backup_location_name_hint_smb">Optional. For example, NAS or Office PC.</string>
+    <string name="backup_location_name_hint_git">Optional. For example, Private repo.</string>
+    <string name="backup_location_name_hint_imap">Optional. For example, Mail archive.</string>
+    <string name="backup_location_name_hint_nearby">Optional. For example, My laptop.</string>
+    <string name="backup_location_not_backed_up">Automatic backups do not go here</string>
+    <!-- %1$s is the location's backup state, such as "Last backup: 2 hours ago". -->
+    <string name="backup_location_state_syncs"><xliff:g id="state">%1$s</xliff:g>. Syncs here.</string>
+    <string name="backup_auto_targets_title">Back up to</string>
+    <string name="backup_auto_targets_info">Each automatic backup goes to every location that you tick here. A location that you untick keeps its settings, and gets no backups until you tick it again.</string>
+    <string name="backup_auto_targets_none">Add a location on the Backup &amp; restore screen first.</string>
+    <string name="backup_sync_targets_title">Sync through</string>
+    <string name="backup_sync_targets_info">Your devices must share at least one of these locations. If you tick more than one, the app writes the sync file to each of them, so sync keeps working while one service is down. That uses a little more data.</string>
+    <string name="backup_sync_paired_title">Sync with paired devices</string>
+    <string name="backup_sync_wifi_only_title">Sync only on Wi-Fi</string>
+    <string name="backup_sync_wifi_only_subtitle">On mobile data, sync waits for Wi-Fi. Sync now still runs</string>
+    <string name="backup_sync_paired_subtitle">A computer with WM Keyboard that you pair over KDE Connect syncs with this phone</string>
+    <string name="backup_sync_paired_info">A paired computer becomes a location here, Nearby device, and is ticked. Sync this device is turned on with it. The two send each other their sync files while both are on the same network and the keyboard is open.</string>
+    <string name="backup_auto_needs_target">Tick a location in Back up to.</string>
+    <string name="backup_sync_needs_target">Tick a location in Sync through.</string>
+    <string name="backup_sync_secrets_unprotected">We strongly suggest that you turn on Protect with a passphrase in Automatic backup first</string>
+    <string name="backup_secrets_unprotected_subtitle">We strongly suggest that you turn on Protect with a passphrase first</string>
+    <string name="backup_secrets_warning_title">Include keys without a passphrase?</string>
+    <string name="backup_secrets_warning_body">No passphrase protects these files. Anyone who can open the location can read your API keys and passwords, and use them. We strongly suggest that you turn on Protect with a passphrase in Automatic backup first.</string>
+    <string name="backup_secrets_warning_confirm">Include them</string>
+    <string name="backup_location_folder_choose">Choose a folder</string>
+    <string name="backup_location_folder_change">Choose another folder</string>
+    <string name="backup_location_test">Test the connection</string>
+    <string name="backup_location_testing">Testing…</string>
+    <string name="backup_location_test_ok">It works. Backups can go here.</string>
+
+    <string name="backup_auto_needs_location">Add a location first.</string>
+    <string name="backup_auto_contents_title">What goes in a backup</string>
+    <string name="backup_auto_protect_title">Protection</string>
+    <string name="backup_auto_protect_info">One passphrase protects the automatic backups and the sync files. Use the same passphrase on every device that syncs.</string>
+
+    <string name="backup_files_title">Files</string>
+    <string name="backup_files_export_title">Export to a file</string>
+    <string name="backup_files_export_subtitle">Save a copy that you move yourself</string>
+    <string name="backup_files_import_title">Import a file</string>
+    <string name="backup_files_import_subtitle">Restore from a backup or a settings file</string>
+    <string name="backup_files_contents_title">What goes in an export</string>
+
+    <!-- Sync between devices. -->
+    <string name="backup_sync_title">Sync devices</string>
+    <string name="backup_sync_nav_subtitle">Keep your keyboard the same on all your devices</string>
+    <string name="backup_sync_screen_subtitle">Keep your devices the same</string>
+    <string name="backup_sync_enabled_title">Sync this device</string>
+    <string name="backup_sync_enabled_subtitle">Share changes with your other devices</string>
+    <string name="backup_sync_mode_title">When to sync</string>
+    <string name="backup_sync_mode_soon">Soon after a change</string>
+    <string name="backup_sync_mode_soon_desc">About a minute after you change something, and every hour for changes from other devices</string>
+    <string name="backup_sync_mode_schedule">On a schedule</string>
+    <string name="backup_sync_mode_schedule_desc">At a fixed interval. Uses the least data.</string>
+    <string name="backup_sync_mode_manual">Only when I ask</string>
+    <string name="backup_sync_mode_manual_desc">Only when you press Sync now</string>
+    <string name="backup_sync_interval_title">How often</string>
+    <string name="backup_sync_secrets_title">Sync API keys and passwords</string>
+    <string name="backup_sync_secrets_subtitle">A passphrase protects them</string>
+    <string name="backup_sync_contents_title">What syncs</string>
+    <string name="backup_sync_local_note">Some settings stay on each device, because they only fit that device: the keyboard size and position, one-handed mode, the hardware keyboard, paired computers and the app lock. To keep more on this device, use Keep on this device below.</string>
+    <string name="backup_sync_keep_local_title">Keep on this device</string>
+    <string name="backup_sync_keep_local_info">Settings you tick here stay as they are on this device. Changes you make to them here are not sent, and changes from your other devices are not taken. Untick one later and this device takes what your other devices have.</string>
+    <string name="backup_sync_keep_toolbar_title">Toolbar and toolbox</string>
+    <string name="backup_sync_keep_toolbar_subtitle">Which tools, in what order, and how they look</string>
+    <string name="backup_sync_keep_layouts_title">Languages and layouts</string>
+    <string name="backup_sync_keep_layouts_subtitle">The layouts you switch between, extra languages, and the layout for each app</string>
+    <string name="backup_sync_keep_theme_title">Theme</string>
+    <string name="backup_sync_keep_theme_subtitle">The theme in use, light and dark, and when it switches. Your own themes still sync</string>
+    <string name="backup_sync_first_note">Each device keeps one sync file at a location. Every device reads the files of the others, and the newest change to each setting wins. The first time a device syncs, the settings of your other devices win, and anything that only this device has goes to the others.</string>
+    <string name="backup_sync_error_passphrase">Another device uses a different passphrase. Use the same passphrase on every device.</string>
+    <string name="backup_sync_done_nothing">Synced. Nothing was new.</string>
+    <plurals name="backup_sync_done_changes">
+        <item quantity="one">Synced. %1$d change came from your other devices.</item>
+        <item quantity="other">Synced. %1$d changes came from your other devices.</item>
+    </plurals>
+    <string name="backup_sync_locked">The app cannot sync while the device is locked. Unlock it and try again.</string>
+    <string name="backup_sync_skipped">There is nothing to sync. Choose at least one location and one part on the Sync devices screen.</string>
+    <string name="backup_remote_restore_loading">Looking for backups…</string>
+    <string name="backup_remote_restore_downloading">Downloading the backup…</string>
+    <string name="backup_remote_restore_empty">There are no automatic backups here yet.</string>
+    <string name="backup_remote_restore_note">This list shows the backups of every device that uses this location. Each device keeps and deletes only its own backups.</string>
+    <string name="backup_remote_restore_this_device">This device</string>
+    <string name="backup_remote_restore_unknown_device">A device that did not record its name</string>
+    <!-- %1$s is a date and time, %2$s a file size such as "5.9 MB". -->
+    <string name="backup_remote_restore_entry"><xliff:g id="when">%1$s</xliff:g>, <xliff:g id="size">%2$s</xliff:g></string>
+    <string name="backup_remote_restore_encrypted">Protected with a passphrase</string>
+    <string name="backup_remote_restore_failed">The app could not download that backup. Try again.</string>
+    <string name="backup_auto_onedrive_info">The app gets a folder of its own inside your OneDrive and can see nothing else. You can find the folder under Apps. To take this permission back, open the list of apps in your Microsoft account.</string>
+    <string name="backup_blacklist_clear_title">Clear the blacklist</string>
+    <plurals name="backup_blacklist_clear_subtitle">
+        <item quantity="one">Remove the one blocked word</item>
+        <item quantity="other">Remove all %1$d blocked words</item>
+    </plurals>
+    <string name="backup_blacklist_clear_confirm">Every word on the blacklist is removed and can be suggested again. Words you have taught the keyboard are not affected.</string>
+    <!-- %1$s is what the user typed into the dictionary search field. -->
+    <!-- Personal dictionary order (#194). The label above the three keys,
+         then the keys. -->
+    <string name="backup_dictionary_sort_label">Sort by</string>
+    <string name="backup_dictionary_sort_weight">Weight</string>
+    <string name="backup_dictionary_sort_name">Alphabetical</string>
+    <string name="backup_dictionary_sort_added">Date added</string>
+    <!-- The button under the sort keys. It shows the current direction, and a
+         press reverses it. -->
+    <string name="backup_dictionary_sort_most_used">Highest weight first</string>
+    <string name="backup_dictionary_sort_least_used">Lowest weight first</string>
+    <string name="backup_dictionary_sort_a_to_z">A to Z, capital letters first</string>
+    <string name="backup_dictionary_sort_z_to_a">Z to A, capital letters first</string>
+    <string name="backup_dictionary_sort_newest">Newest first</string>
+    <string name="backup_dictionary_sort_oldest">Oldest first</string>
+    <!-- Screen reader action name of that button. -->
+    <string name="backup_dictionary_sort_reverse">Reverse the order</string>
+    <string name="backup_dictionary_no_matches">No learned word matches \"%1$s\".</string>
+    <string name="backup_blacklist_scope_title">Blocked from the keyboard</string>
+    <string name="backup_blacklist_scope_subtitle">Where a word you block with Never suggest applies</string>
+    <string name="backup_blacklist_scope_info">Pressing and holding a suggestion and choosing Never suggest blocks the word. This decides whether it is blocked in every language or only in the language you were typing. Words you add on this screen ask each time.</string>
+    <string name="backup_blacklist_scope_all_label">All languages</string>
+    <string name="backup_blacklist_scope_current_label">Current language</string>
+    <string name="backup_blacklist_scope_all_desc">The word is never suggested, whatever language you type in.</string>
+    <string name="backup_blacklist_scope_current_desc">The word is never suggested in the language you were typing. Other languages still suggest it.</string>
+    <string name="backup_blacklist_language_label">Block in</string>
+    <string name="backup_blacklist_all_languages_label">All languages</string>
+    <string name="backup_blacklist_language_word_subtitle">Only in <xliff:g id="language" example="French">%1$s</xliff:g></string>
+
+    <!-- Shared by the new location kinds. -->
+    <string name="backup_location_folder_label">Folder</string>
+    <string name="backup_location_folder_made_hint">The app makes this folder if it is not there.</string>
+    <!-- %1$s is a full server address, for example https://cloud.example.com/remote.php/dav/files/me/WM%20Keyboard/ -->
+    <string name="backup_location_address">Address: <xliff:g id="address" example="https://cloud.example.com/remote.php/dav/files/me/">%1$s</xliff:g></string>
+
+    <!-- WebDAV services -->
+    <string name="backup_webdav_preset_title">Service</string>
+    <string name="backup_webdav_preset_other">Other WebDAV server</string>
+    <string name="backup_webdav_server_label">Server</string>
+    <string name="backup_webdav_server_hint">The name of your server, for example cloud.example.com</string>
+    <string name="backup_webdav_server_id_label">kDrive ID</string>
+    <string name="backup_webdav_server_id_hint">The number in the address of your kDrive</string>
+    <string name="backup_webdav_nextcloud_sign_in">Sign in with Nextcloud</string>
+    <string name="backup_webdav_nextcloud_waiting">Waiting for the browser…</string>
+    <string name="backup_webdav_nextcloud_failed">The app could not finish the Nextcloud sign-in. Check the server name, or type a user name and an app password.</string>
+
+    <!-- S3 services -->
+    <string name="backup_s3_preset_title">Service</string>
+    <string name="backup_s3_preset_other">Other S3 service</string>
+    <string name="backup_s3_account_id_label">Account ID</string>
+    <string name="backup_s3_account_id_hint">The account ID from the dashboard of the service</string>
+    <string name="backup_s3_account_endpoint_label">Endpoint</string>
+    <string name="backup_s3_account_endpoint_hint">The endpoint host from the console of the service, without https://</string>
+    <string name="backup_s3_account_server_label">Server and port</string>
+    <string name="backup_s3_account_server_hint">For example, nas.local:9000</string>
+    <!-- %1$s is a list of region codes, for example "us-east-1, eu-west-1". -->
+    <string name="backup_s3_region_examples">For example, <xliff:g id="regions" example="us-east-1, eu-west-1">%1$s</xliff:g></string>
+    <!-- %1$s is the endpoint address the app uses. -->
+    <string name="backup_s3_endpoint_is">Endpoint: <xliff:g id="endpoint" example="https://s3.us-west-004.backblazeb2.com">%1$s</xliff:g></string>
+
+    <!-- Google Drive: which part of Drive -->
+    <string name="backup_drive_space_title">Where in Drive</string>
+    <string name="backup_drive_space_hidden">Hidden app folder</string>
+    <string name="backup_drive_space_folder">A folder you can see</string>
+    <string name="backup_drive_folder_label">Folder in My Drive</string>
+    <string name="backup_drive_folder_hint">The app makes this folder. Use / for a folder in a folder.</string>
+    <string name="backup_drive_folder_info">The backups go into this folder, and you can open them in the Drive app. The app can see only the files it made, and none of your other files. The app cannot see a folder of this name that you made yourself, so it makes its own. To take this permission back, go to your Google account and open the list of apps with account access.</string>
+
+    <!-- SFTP -->
+    <string name="backup_sftp_password_hint">Leave this empty if you use a key.</string>
+    <string name="backup_sftp_key_label">Private key</string>
+    <string name="backup_sftp_key_hint">Optional. Paste a whole OpenSSH or PEM private key: Ed25519, ECDSA or RSA. The app tries the key before the password.</string>
+    <string name="backup_sftp_key_passphrase_label">Key passphrase</string>
+    <string name="backup_sftp_key_passphrase_hint">Only if the key is encrypted.</string>
+    <string name="backup_sftp_path_hint">Leave this empty to use your home folder. The app makes the folder if it is not there.</string>
+    <string name="backup_sftp_host_key_title">Server key</string>
+    <!-- %1$s is the key type, for example ssh-ed25519. %2$s is its fingerprint, for example SHA256:abc… -->
+    <string name="backup_sftp_host_key_value"><xliff:g id="type" example="ssh-ed25519">%1$s</xliff:g> <xliff:g id="fingerprint" example="SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8">%2$s</xliff:g></string>
+    <string name="backup_sftp_host_key_none">The app saves the key of the server at the first connection, and after that it connects only to a server with the same key. Select Test the connection to save it now.</string>
+    <string name="backup_sftp_host_key_forget">Forget the server key</string>
+    <string name="backup_sftp_legacy_title">Allow old algorithms</string>
+    <string name="backup_sftp_legacy_subtitle">Also offers SHA-1, for old NAS devices. Keep this off unless the connection fails without it.</string>
+
+    <!-- SMB -->
+    <string name="backup_smb_host_hint">A name or an IP address, for example 192.168.1.20</string>
+    <string name="backup_smb_share_label">Share</string>
+    <string name="backup_smb_share_hint">Only the name of the share. For \\nas\backups, type backups.</string>
+    <string name="backup_smb_path_hint">A folder in the share. Leave this empty to use the top of the share. The app makes the folder if it is not there.</string>
+    <string name="backup_smb_domain_label">Domain</string>
+    <string name="backup_smb_domain_hint">Usually empty. Only for a computer in a Windows domain.</string>
+    <string name="backup_smb_encrypt_title">Encrypt the connection</string>
+    <string name="backup_smb_encrypt_subtitle">Needs SMB 3. Turn this off only for an old server that cannot encrypt.</string>
+    <string name="backup_smb_cleartext">Without encryption, your backup crosses the network as plain bytes. The sign-in stays protected. If you must keep this off, turn on Protect with a passphrase in Automatic backup.</string>
+
+    <!-- Git -->
+    <string name="backup_git_provider_title">Host</string>
+    <string name="backup_git_provider_github" translatable="false">GitHub</string>
+    <string name="backup_git_provider_gitlab" translatable="false">GitLab</string>
+    <string name="backup_git_provider_gitea" translatable="false">Gitea / Forgejo</string>
+    <string name="backup_git_server_label">Server</string>
+    <!-- %1$s is the host name of the public service, for example github.com -->
+    <string name="backup_git_server_hint">Leave this empty for <xliff:g id="host" example="github.com">%1$s</xliff:g>. For your own server, type its address.</string>
+    <string name="backup_git_cleartext">This address is not https. The token and every backup cross the network as plain text. Use it only on a network you trust.</string>
+    <string name="backup_git_repository_label">Repository</string>
+    <string name="backup_git_repository_hint">The owner and the name, for example me/keyboard-backups. You can also paste the address of the repository.</string>
+    <string name="backup_git_token_label">Access token</string>
+    <string name="backup_git_token_hint_github">A fine-grained token for this repository only, with Contents set to Read and write.</string>
+    <string name="backup_git_token_hint_gitlab">A project access token with the api scope and the Developer role.</string>
+    <string name="backup_git_token_hint_gitea">An access token with Read and write for repositories.</string>
+    <string name="backup_git_branch_label">Branch</string>
+    <string name="backup_git_branch_hint">Leave this empty to use the default branch.</string>
+    <string name="backup_git_path_hint">Leave this empty to use the top of the repository.</string>
+    <string name="backup_git_message_label">Commit message</string>
+    <string name="backup_git_message_hint">{action}, {file}, {device} and {date} change into the action, the file name, this device and the time. Empty is {action} {file}.</string>
+    <string name="backup_git_author_name_label">Commit author name</string>
+    <string name="backup_git_author_email_label">Commit author email</string>
+    <string name="backup_git_author_hint">Leave the author empty to use the account of the token.</string>
+    <string name="backup_git_skip_ci_title">Add [skip ci]</string>
+    <string name="backup_git_skip_ci_subtitle">Stops a backup from starting the CI of the repository</string>
+    <string name="backup_git_allow_public_title">Allow a public repository</string>
+    <string name="backup_git_allow_public_subtitle">Anybody can read a backup in a public repository</string>
+    <string name="backup_git_info">Each backup and each deleted old backup is a commit. The history of the repository keeps all of them. The app refuses a public repository. Turn on Protect with a passphrase in Automatic backup.</string>
+    <string name="backup_git_public_warning">Anybody can read a backup in a public repository, and its history keeps every old backup after the app deletes it. Turn on Protect with a passphrase in Automatic backup.</string>
+
+    <!-- IMAP -->
+    <string name="backup_imap_host_hint">The IMAP server of your mail service, for example imap.gmail.com</string>
+    <string name="backup_imap_security_title">Security</string>
+    <string name="backup_imap_security_tls" translatable="false">TLS</string>
+    <string name="backup_imap_security_starttls" translatable="false">STARTTLS</string>
+    <string name="backup_imap_security_none">None</string>
+    <string name="backup_imap_password_hint">Most mail services need an app password here. Make one in the security settings of your account.</string>
+    <string name="backup_imap_mailbox_label">Mail folder</string>
+    <string name="backup_imap_mailbox_hint">The app makes this folder. Keep only backups in it, because the app deletes old backups from it.</string>
+    <string name="backup_imap_cleartext">Without TLS, your password and your backup cross the network as plain text that anyone in between can read.</string>
+    <string name="backup_imap_info">Each backup is one email in this folder. Some services, such as Gmail, keep a deleted email in another folder, so old backups can still use space in your account.</string>
+    <!-- Pausing the scheduled backup and sync. -->
+    <string name="backup_pause_title">Pause backups</string>
+    <string name="backup_pause_subtitle">Skip the scheduled backups for a while. Locations, schedule and passphrase stay as they are</string>
+    <string name="backup_paused_title">Backups are paused</string>
+    <string name="sync_pause_title">Pause sync</string>
+    <string name="sync_pause_subtitle">Skip the scheduled syncs for a while. Sync now still works</string>
+    <string name="sync_paused_title">Sync is paused</string>
+    <!-- %1$s is a date and time, such as "Oct 26, 14:00". -->
+    <string name="backup_paused_until">Until %1$s. Tap to resume</string>
+    <string name="backup_paused_forever">Until you resume. Tap to resume</string>
+    <string name="backup_pause_resume">Resume</string>
+    <string name="backup_pause_dialog_title">Pause for how long?</string>
+    <string name="backup_pause_hour">1 hour</string>
+    <string name="backup_pause_day">1 day</string>
+    <string name="backup_pause_week">1 week</string>
+    <string name="backup_pause_until_resumed">Until I resume</string>
+    <string name="backup_hub_backup_paused">Automatic backup is paused</string>
+    <string name="backup_hub_sync_paused">Sync is paused</string>
+    <string name="backup_hub_paused">Paused</string>
+    <!-- Sync groups: several people sharing one location. -->
+    <string name="backup_sync_group_title">Sync group</string>
+    <string name="backup_sync_group_none">None. Syncs with the devices here that have no group</string>
+    <!-- %1$s is the group name. -->
+    <string name="backup_sync_group_value">%1$s. Syncs only with devices in this group</string>
+    <string name="backup_sync_group_info">Use a group when several people share one location, such as a family folder. Give all your devices the same group name, and pick a different name from the other people. Devices sync only with the devices in their own group, and devices with no group sync with each other. The group also shows next to each backup when you restore.</string>
+    <string name="backup_sync_group_label">Group name</string>
+    <string name="backup_sync_group_supporting">Letters, digits and hyphens, up to 12. Leave it empty for no group</string>
+    <!-- %1$s is the group name as it will be saved. -->
+    <string name="backup_sync_group_saved_as">Saved as %1$s</string>
+    <string name="backup_sync_group_found">Groups at your sync locations</string>
+    <string name="backup_sync_group_loading">Looking for groups…</string>
+    <string name="backup_sync_group_found_none">No other device syncs at these locations yet.</string>
+    <string name="backup_sync_group_no_group">No group</string>
+    <!-- %1$s is a location's name. -->
+    <string name="backup_sync_group_join_note">Other devices sync at %1$s, in groups that this device is not in. Pick the group to join, or keep this device\'s group.</string>
+    <string name="backup_sync_group_change_note">In a new group, this device syncs as if for the first time: the settings of the group win, and anything that only this device has goes to the group.</string>
+    <string name="backup_remote_restore_all_groups">All</string>
+    <!-- %1$s is a device name, %2$s the sync group it was in. -->
+    <string name="backup_remote_restore_device_group">%1$s · %2$s</string>
+
+    <!-- Box, pCloud, Synology, QNAP, NFS, MEGA, iCloud Drive and Proton Drive locations. -->
+    <string name="backup_auto_dest_box" translatable="false">Box</string>
+    <string name="backup_auto_dest_box_desc">A folder in your Box. Sign in through the browser</string>
+    <string name="backup_auto_dest_pcloud" translatable="false">pCloud</string>
+    <string name="backup_auto_dest_pcloud_desc">A folder in your pCloud. Sign in with your email and password</string>
+    <string name="backup_auto_dest_synology" translatable="false">Synology</string>
+    <string name="backup_auto_dest_synology_desc">Synology Drive or a shared folder on your Synology NAS. Needs its address and your DSM account</string>
+    <string name="backup_auto_dest_qnap" translatable="false">QNAP</string>
+    <string name="backup_auto_dest_qnap_desc">A shared folder on your QNAP NAS. Needs its address and your QTS account</string>
+    <string name="backup_auto_dest_nfs" translatable="false">NFS</string>
+    <string name="backup_auto_dest_nfs_desc">A folder in an NFS export on your network. Needs the server and the export path</string>
+    <string name="backup_auto_dest_mega" translatable="false">MEGA</string>
+    <string name="backup_auto_dest_mega_desc">A folder in your MEGA, encrypted on this phone. Sign in with your email and password</string>
+    <string name="backup_auto_dest_icloud" translatable="false">iCloud Drive</string>
+    <string name="backup_auto_dest_icloud_desc">A folder in your iCloud Drive. Sign in with your Apple Account and a code from your Apple device</string>
+    <string name="backup_auto_dest_proton" translatable="false">Proton Drive</string>
+    <string name="backup_auto_dest_proton_desc">A folder in your Proton Drive, encrypted on this phone. Sign in with your Proton account</string>
+
+    <string name="backup_location_name_hint_box">Optional. For example, Work Box.</string>
+    <string name="backup_location_name_hint_pcloud">Optional. For example, pCloud backups.</string>
+    <string name="backup_location_name_hint_synology">Optional. For example, Home NAS.</string>
+    <string name="backup_location_name_hint_qnap">Optional. For example, Office NAS.</string>
+    <string name="backup_location_name_hint_nfs">Optional. For example, File server.</string>
+    <string name="backup_location_name_hint_mega">Optional. For example, MEGA.</string>
+    <string name="backup_location_name_hint_icloud">Optional. For example, iCloud.</string>
+    <string name="backup_location_name_hint_proton">Optional. For example, Proton.</string>
+
+    <string name="backup_cloud_folder_hint">A folder in your account. Use / for a folder in a folder. The app makes it if it is not there.</string>
+    <string name="backup_cloud_email_label">Email</string>
+    <string name="backup_cloud_password_hint">The app uses the password only to sign in, and does not keep it.</string>
+    <string name="backup_cloud_code_label">Verification code</string>
+    <string name="backup_cloud_code_hint">The 6-digit code from your authenticator app.</string>
+    <string name="backup_cloud_code_submit">Continue</string>
+    <!-- %1$s is the account the location is signed in to, an email address. -->
+    <string name="backup_cloud_signed_in_as">Signed in as %1$s.</string>
+    <string name="backup_cloud_sign_in_failed">The app could not sign in. Check the email and the password, then try again.</string>
+    <string name="backup_cloud_code_failed">The code was not accepted. Try again with a new code.</string>
+    <string name="backup_box_info">The app sees your whole Box, because Box has no folder only for apps. It writes only to the folder below. To take this permission back, open the apps list in your Box account settings.</string>
+
+    <string name="backup_pcloud_region_title">Data region</string>
+    <string name="backup_pcloud_region_us">United States</string>
+    <string name="backup_pcloud_region_eu">Europe</string>
+    <string name="backup_pcloud_other_region">Your account is in the other data region. The app changed it. Select Sign in again.</string>
+    <string name="backup_pcloud_info">The app keeps only the sign-in token from pCloud, not your password. To end the sign-in, open the devices list in your pCloud account settings.</string>
+
+    <string name="backup_nas_server_label">Address</string>
+    <string name="backup_nas_server_hint_synology">For example, nas.local or 192.168.1.20:5001. The app uses HTTPS on port 5001 if you type no port. QuickConnect addresses do not work.</string>
+    <string name="backup_nas_server_hint_qnap">For example, nas.local or 192.168.1.20. The app uses HTTPS on port 443 if you type no port. myQNAPcloud links do not work.</string>
+    <string name="backup_nas_path_hint_synology">From the top of the NAS. /home/Drive is your Synology Drive, so /home/Drive/WM Keyboard puts backups there. The app makes the last folders if they are not there.</string>
+    <string name="backup_nas_path_hint_qnap">From the top of the NAS, starting with a shared folder, for example /Public/WM Keyboard. The app makes the folders below the share.</string>
+    <string name="backup_nas_own_cert_title">Accept the certificate of the NAS</string>
+    <string name="backup_nas_own_cert_subtitle">Most NAS boxes on a home network use a certificate that they made themselves. The app remembers the certificate of the first connection and refuses a different one later.</string>
+    <string name="backup_nas_cert_title">Certificate</string>
+    <!-- %1$s is the start of a SHA-256 fingerprint. -->
+    <string name="backup_nas_cert_value">Remembered: %1$s…</string>
+    <string name="backup_nas_cert_none">None yet. The first backup or test remembers it.</string>
+    <string name="backup_nas_cert_forget">Forget the certificate</string>
+    <string name="backup_nas_two_step_title">Two-step verification</string>
+    <string name="backup_nas_two_step_hint">If your account uses a verification code, sign in once here with a code. The NAS then trusts this phone, and backups do not need a code.</string>
+    <string name="backup_nas_two_step_sign_in">Sign in with the code</string>
+    <string name="backup_nas_two_step_done">This phone is trusted. Backups sign in without a code.</string>
+    <string name="backup_nas_cleartext">The address must start with https://, because the sign-in sends your password. An address on your Tailscale network can use http://.</string>
+    <string name="backup_auto_error_unsafe_nas">The certificate of the NAS is not trusted, or it changed since the first connection. If the NAS made its own certificate, turn on Accept the certificate of the NAS. If you changed the certificate, select Forget the certificate.</string>
+
+    <string name="backup_nfs_export_label">Export</string>
+    <string name="backup_nfs_export_hint">The exported folder on the server, for example /srv/nfs/backups or /volume1/backups.</string>
+    <string name="backup_nfs_path_hint">A folder in the export. Leave this empty to use the top of the export. The app makes the folder if it is not there.</string>
+    <string name="backup_nfs_uid_label">User ID</string>
+    <string name="backup_nfs_gid_label">Group ID</string>
+    <string name="backup_nfs_ids_hint">The numbers the files are written as. Use the IDs of your account on the server.</string>
+    <string name="backup_nfs_port_label">NFS port</string>
+    <string name="backup_nfs_mount_port_label">Mount port</string>
+    <string name="backup_nfs_ports_hint">0 asks the server. Change this only if the server has no portmapper.</string>
+    <string name="backup_nfs_info">The export must allow connections from ports above 1024, because Android apps cannot use the others. On Linux, add insecure to the export. On a Synology NAS, turn on Allow connections from non-privileged ports. NFS sends files without encryption, so turn on Protect with a passphrase in Automatic backup.</string>
+    <string name="backup_auto_error_permission_nfs">The server refused this phone. Check that the export allows the address of this phone and connections from ports above 1024, and that the user ID can write to the folder.</string>
+
+    <string name="backup_mega_info">MEGA encrypts every file on this phone before it goes up, as the MEGA app does. The app keeps the sign-in session, not your password. To end it, close the session in the MEGA security settings.</string>
+
+    <string name="backup_icloud_apple_id_label">Apple Account</string>
+    <string name="backup_icloud_password_hint">The app keeps this password, because iCloud asks for it again about once a day.</string>
+    <string name="backup_icloud_code_hint_device">Apple sent a code to your Apple devices. Type it here.</string>
+    <string name="backup_icloud_code_hint_sms">Apple sent a code to your phone number in a text message. Type it here.</string>
+    <!-- %1$s is a date. -->
+    <string name="backup_icloud_trusted_until">Signed in. Sign in again before %1$s.</string>
+    <string name="backup_icloud_needs_approval">Your account uses Advanced Data Protection. Approve the request on your Apple device, then select Sign in again. Also turn on Access iCloud Data on the Web in the iCloud settings of your Apple device.</string>
+    <string name="backup_icloud_info">iCloud has no public interface for Android. The app uses the same one as iCloud.com, so Apple can change it without notice. Apple asks for a new code about once a month, and the location then shows that you must sign in again.</string>
+
+    <string name="backup_proton_user_label">Proton account</string>
+    <string name="backup_proton_mailbox_label">Mailbox password</string>
+    <string name="backup_proton_mailbox_hint">Your account has a second password. Type it here.</string>
+    <string name="backup_proton_captcha">Proton wants to check that you are a person. Sign in once on proton.me in a browser on this network, then try again here.</string>
+    <string name="backup_proton_info">Proton Drive encrypts every file on this phone, as the Proton apps do. Proton has no public interface for apps like this one yet, so Proton can change it, and backups can then stop until the app is updated. The app keeps the sign-in session and your key password in a protected form, not your password.</string>
+    <string name="backup_auto_error_unsafe_proton">Proton did not prove that it knows your password. The sign-in stopped, because a device between you and Proton can cause this.</string>
+</resources>

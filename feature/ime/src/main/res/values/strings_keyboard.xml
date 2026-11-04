@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Key names spoken by a screen reader. Each one names a key on the
+         keyboard, so keep them short: a screen reader says them on every
+         press. -->
+    <string name="ime_key_space">Space</string>
+    <string name="ime_key_delete">Delete</string>
+    <string name="ime_key_forward_delete">Forward delete</string>
+    <!-- Name of the key that types a line break instead of sending the
+         message. Offered on the enter key's long press in chat apps. -->
+    <string name="ime_key_newline">New line</string>
+    <string name="ime_key_shift">Shift</string>
+    <string name="ime_key_shift_on">Shift on</string>
+    <string name="ime_key_caps_lock_on">Caps lock on</string>
+    <string name="ime_key_caps_lock">Caps lock</string>
+    <string name="ime_key_tab">Tab</string>
+    <string name="ime_key_arrow_left">Left</string>
+    <string name="ime_key_arrow_right">Right</string>
+    <string name="ime_key_arrow_up">Up</string>
+    <string name="ime_key_arrow_down">Down</string>
+    <string name="ime_key_escape">Escape</string>
+    <string name="ime_key_language_switch">Switch language</string>
+    <!-- Name of the key that opens the system list of keyboards. -->
+    <string name="ime_key_input_method_picker">Switch keyboard</string>
+    <string name="ime_key_emoji">Emoji</string>
+    <!-- Fallback name for a key that has no label of its own. -->
+    <string name="ime_key_generic">Key</string>
+    <string name="ime_key_modifier_control">Control</string>
+    <string name="ime_key_modifier_alt">Alt</string>
+    <string name="ime_key_modifier_meta">Meta</string>
+    <!-- %1$s is a modifier key name: Control, Alt or Meta. The key stays on
+         until the user presses it again. -->
+    <string name="ime_key_modifier_locked">%1$s locked</string>
+    <!-- %1$s is a modifier key name: Control, Alt or Meta. The key is on for
+         the next key press only. -->
+    <string name="ime_key_modifier_on">%1$s on</string>
+    <!-- Screen reader action on a key. %1$s is the name of the key. -->
+    <string name="ime_key_type_action">Type %1$s</string>
+    <!-- Spoken after the key's own letter when a predicted word floats over it. -->
+    <string name="ime_key_octopus_offer">suggests %1$s</string>
+    <string name="ime_key_octopus_action">Insert %1$s</string>
+
+    <!-- Names for the enter key. The field that has the cursor decides which
+         one the keyboard shows. -->
+    <string name="ime_enter_search">Search</string>
+    <string name="ime_enter_send">Send</string>
+    <string name="ime_enter_go">Go</string>
+    <string name="ime_enter_next">Next</string>
+    <string name="ime_enter_previous">Previous</string>
+    <string name="ime_enter_done">Done</string>
+    <string name="ime_enter_default">Enter</string>
+
+    <!-- Spoken names for punctuation keys. A screen reader reads most of these
+         characters as silence, so the keyboard gives it a word to say. -->
+    <string name="ime_punct_period">Full stop</string>
+    <string name="ime_punct_comma">Comma</string>
+    <string name="ime_punct_question_mark">Question mark</string>
+    <string name="ime_punct_exclamation_mark">Exclamation mark</string>
+    <string name="ime_punct_apostrophe">Apostrophe</string>
+    <string name="ime_punct_quote">Quote</string>
+    <string name="ime_punct_semicolon">Semicolon</string>
+    <string name="ime_punct_colon">Colon</string>
+    <string name="ime_punct_hyphen">Hyphen</string>
+    <string name="ime_punct_underscore">Underscore</string>
+    <string name="ime_punct_slash">Slash</string>
+    <string name="ime_punct_backslash">Backslash</string>
+    <string name="ime_punct_left_parenthesis">Left parenthesis</string>
+    <string name="ime_punct_right_parenthesis">Right parenthesis</string>
+    <string name="ime_punct_left_bracket">Left bracket</string>
+    <string name="ime_punct_right_bracket">Right bracket</string>
+    <string name="ime_punct_left_brace">Left brace</string>
+    <string name="ime_punct_right_brace">Right brace</string>
+    <string name="ime_punct_at_sign">At sign</string>
+    <string name="ime_punct_hash">Hash</string>
+    <string name="ime_punct_dollar_sign">Dollar sign</string>
+    <string name="ime_punct_percent">Percent</string>
+    <string name="ime_punct_ampersand">Ampersand</string>
+    <string name="ime_punct_asterisk">Asterisk</string>
+    <string name="ime_punct_plus">Plus</string>
+    <string name="ime_punct_equals">Equals</string>
+    <string name="ime_punct_less_than">Less than</string>
+    <string name="ime_punct_greater_than">Greater than</string>
+    <string name="ime_punct_vertical_bar">Vertical bar</string>
+    <string name="ime_punct_tilde">Tilde</string>
+    <string name="ime_punct_caret">Caret</string>
+    <string name="ime_punct_backtick">Backtick</string>
+
+    <!-- Keyboard chrome: the floating window, one-handed mode, the top strip
+         and the toolbar. All of these are content descriptions. -->
+    <string name="ime_floating_dock_desc">Dock the keyboard</string>
+    <string name="ime_floating_resize_desc">Resize the keyboard</string>
+    <string name="ime_one_handed_flip_desc">Move the keyboard to the other side</string>
+    <string name="ime_one_handed_exit_desc">Leave one-handed mode</string>
+    <string name="ime_emoji_row_show_desc">Show the emoji row</string>
+    <string name="ime_emoji_row_close_desc">Close the emoji row</string>
+    <!-- Long-press labels for an emoji suggestion in the strip. The one that
+         shows is the opposite of what a tap does, so they are announced as the
+         action, not as "long press". -->
+    <string name="ime_emoji_suggestion_hold_keep">Keep the word and add the emoji</string>
+    <string name="ime_emoji_suggestion_hold_replace">Replace the word with the emoji</string>
+    <string name="ime_suggestions_show_desc">Show the suggestion strip</string>
+    <string name="ime_toolbar_show_desc">Show the toolbar</string>
+    <string name="ime_toolbar_hide_desc">Hide the toolbar</string>
+    <string name="ime_autofill_dismiss_desc">Hide the autofill suggestions</string>
+    <!-- #1003: in a password field with no saved login on the strip. %1$s is the password manager app, such as Bitwarden. -->
+    <string name="ime_password_manager_chip">Open <xliff:g id="app" example="Bitwarden">%1$s</xliff:g></string>
+    <string name="ime_password_manager_dismiss_desc">Hide the password manager button</string>
+    <string name="ime_smart_replies_dismiss_desc">Hide the smart replies</string>
+    <string name="ime_candidates_more_desc">More candidates</string>
+    <string name="ime_emoji_panel_open_desc">Open the emoji panel</string>
+    <string name="ime_symbol_set_switch_desc">Switch the symbol set</string>
+    <!-- Menu item on a held entry of the symbol row: takes that entry out of
+         its set. %1$s is the entry, such as https:// or .com. -->
+    <string name="ime_symbol_row_remove">Remove \"<xliff:g id="entry" example="https://">%1$s</xliff:g>\"</string>
+    <!-- Menu item on a held entry of the symbol row: switches the whole row
+         off while the named keyboard mode is on. %1$s is the mode's name. -->
+    <string name="ime_symbol_row_hide_in_mode">Hide the row in <xliff:g id="mode" example="Browser">%1$s</xliff:g></string>
+    <!-- Menu item on a held entry of the symbol row: deletes the set the entry
+         belongs to. %1$s is the set's name. -->
+    <string name="ime_symbol_row_delete_set">Delete the \"<xliff:g id="set" example="Links">%1$s</xliff:g>\" set</string>
+    <!-- Menu item on a held entry of the symbol row: opens the settings for
+         the row, or for the keyboard mode that is showing it. -->
+    <string name="ime_symbol_row_settings">Symbol row settings</string>
+    <!-- Title of the question asked before a symbol set is deleted. %1$s is
+         the set's name. -->
+    <string name="ime_symbol_row_delete_confirm_title">Delete \"<xliff:g id="set" example="Links">%1$s</xliff:g>\"?</string>
+    <string name="ime_symbol_row_delete_confirm_body">The set and all its entries go. A keyboard mode that offered it shows your other sets instead.</string>
+
+    <!-- Screen reader name for pressing and holding a word on the suggestion
+         strip, which opens the menu below. -->
+    <string name="ime_suggestion_hold_label">Word options</string>
+    <!-- An alternative on the recent-word row (#842), read by TalkBack as what a tap does. %1$s is the word written, %2$s the one that would replace it. -->
+    <string name="ime_recent_word_replace_desc">Change <xliff:g id="word" example="form">%1$s</xliff:g> to <xliff:g id="offer" example="from">%2$s</xliff:g></string>
+    <!-- Shown over the strip while a held word is slid up or down (#790). %1$s is the word, %2$s its new rank, such as +2 or −3. -->
+    <string name="ime_suggestion_rank_badge">\"<xliff:g id="word" example="mary">%1$s</xliff:g>\" rank <xliff:g id="rank" example="+2">%2$s</xliff:g></string>
+    <!-- The same, slid back to where it started: lifting changes nothing. -->
+    <string name="ime_suggestion_rank_unchanged">\"<xliff:g id="word" example="mary">%1$s</xliff:g>\" unchanged</string>
+    <!-- An item in that menu. %1$s is the word the user held. -->
+    <string name="ime_suggestion_never_suggest">Never suggest \"<xliff:g id="word" example="mary">%1$s</xliff:g>\"</string>
+    <!-- Menu item that takes a word back off the never-suggest list. %1$s is
+         the word the user held. -->
+    <string name="ime_word_menu_allow_again">Suggest \"<xliff:g id="word" example="mary">%1$s</xliff:g>\" again</string>
+    <!-- Menu item that adds the word being typed to the personal dictionary.
+         %1$s is that word, as typed. -->
+    <string name="ime_word_menu_add">Add \"<xliff:g id="word" example="Wasi">%1$s</xliff:g>\"</string>
+    <!-- Menu item that forgets a word. %1$s is the word the user held. -->
+    <string name="ime_word_menu_delete">Delete \"<xliff:g id="word" example="mary">%1$s</xliff:g>\"</string>
+    <!-- Menu item that forgets what the keyboard learned about a word (how
+         often it was used, its capitals, its rank) but keeps the word, which
+         the word lists still offer. %1$s is the word the user held. -->
+    <string name="ime_word_menu_forget">Forget what you learned about \"<xliff:g id="word" example="Toolbar">%1$s</xliff:g>\"</string>
+    <!-- Menu item that decodes the swipe that wrote the word the cursor is in
+         again, this time against every word list rather than the narrower set
+         the user has glide typing limited to. %1$s is that word. -->
+    <!-- The held-word menu's Retype (#844): takes the word before the cursor back out to type it again. %1$s is that word. -->
+    <string name="ime_word_menu_retype">Retype \"<xliff:g id="word" example="form">%1$s</xliff:g>\"</string>
+    <string name="ime_word_menu_search_all">Search all words for \"<xliff:g id="word" example="van">%1$s</xliff:g>\"</string>
+    <!-- Menu item that opens the word card, where the word is spelled,
+         weighted, ranked, deleted or banned. -->
+    <string name="ime_word_menu_edit">Edit…</string>
+    <!-- Menu item that looks up synonyms for the held word, to put one in its
+         place (#321). %1$s is the word the user held. -->
+    <string name="ime_word_menu_synonyms">Synonyms for \"<xliff:g id="word" example="happy">%1$s</xliff:g>\"</string>
+    <string name="ime_word_menu_rank_up">Suggest \"<xliff:g id="word" example="form">%1$s</xliff:g>\" higher</string>
+    <string name="ime_word_menu_rank_down">Suggest \"<xliff:g id="word" example="form">%1$s</xliff:g>\" lower</string>
+
+    <!-- The synonyms sheet: a panel over the keyboard that lists synonyms for
+         a held word. Tapping one puts it in place of the word. -->
+    <!-- The sheet's heading. %1$s is the held word. -->
+    <string name="ime_synonyms_title">Synonyms for \"<xliff:g id="word" example="happy">%1$s</xliff:g>\"</string>
+    <string name="ime_synonyms_close_desc">Close synonyms</string>
+    <string name="ime_synonyms_loading">Looking up synonyms…</string>
+    <!-- %1$s is the held word. -->
+    <string name="ime_synonyms_not_found">No synonyms found for \"<xliff:g id="word" example="happy">%1$s</xliff:g>\".</string>
+    <string name="ime_synonyms_failed">Could not reach a synonym source. Check the connection and try again.</string>
+    <string name="ime_synonyms_no_sources">All synonym sources are off. Turn one on in Typing, Suggestions, Synonym sources.</string>
+    <string name="ime_synonyms_retry">Try again</string>
+    <!-- Under the list: where the synonyms came from. %1$s is the source's
+         name, such as "Datamuse thesaurus". -->
+    <string name="ime_synonyms_from">From <xliff:g id="source" example="Datamuse thesaurus">%1$s</xliff:g></string>
+    <!-- Over the list when it holds related words rather than synonyms,
+         because no source listed synonyms for the word. -->
+    <string name="ime_synonyms_similar_note">No synonyms are listed for this word. These words have a similar meaning.</string>
+    <!-- Spoken label of a synonym. %1$s is the synonym. -->
+    <string name="ime_synonyms_pick_desc">Use \"<xliff:g id="word" example="glad">%1$s</xliff:g>\"</string>
+
+    <!-- The word card: a panel over the keyboard about one suggested word. -->
+    <!-- Heading over the list of places the word was found. -->
+    <string name="ime_word_card_sources_title">Where it comes from</string>
+    <!-- Shown while the engine is still looking the word up. -->
+    <string name="ime_word_card_loading">Looking it up…</string>
+    <!-- No list, dictionary or contact has the word. -->
+    <string name="ime_word_card_unknown">No word list has this word</string>
+    <!-- The personal dictionary has it; %d is how many times it was typed. -->
+    <plurals name="ime_word_card_learned_seen">
+        <item quantity="one">Personal dictionary, typed <xliff:g id="count" example="1">%d</xliff:g> time</item>
+        <item quantity="other">Personal dictionary, typed <xliff:g id="count" example="12">%d</xliff:g> times</item>
+    </plurals>
+    <!-- The personal dictionary has it because the user added it by hand. -->
+    <string name="ime_word_card_learned_added">Personal dictionary, added by hand</string>
+    <!-- Appended to a personal-dictionary row: the language the word was last
+         typed under. %1$s is the language name. -->
+    <string name="ime_word_card_learned_language">Last typed in <xliff:g id="language" example="English">%1$s</xliff:g></string>
+    <!-- Appended to a personal-dictionary row when its capitals are pinned. -->
+    <string name="ime_word_card_case_pinned">Capitals kept as written</string>
+    <!-- The word has shapes learned from the user's own swipes; %d is how many ways of drawing it are kept. -->
+    <plurals name="ime_word_card_swipe_shapes">
+        <item quantity="one">Learned from your swipes, <xliff:g id="count" example="1">%d</xliff:g> way of drawing it</item>
+        <item quantity="other">Learned from your swipes, <xliff:g id="count" example="3">%d</xliff:g> ways of drawing it</item>
+    </plurals>
+    <!-- Word card action: drop the learned swipe shapes for this word, keeping the word. -->
+    <string name="ime_word_card_forget_shapes">Forget my swipes for it</string>
+    <!-- The word is waiting to be learned; %d is how many times it was seen. -->
+    <plurals name="ime_word_card_pending">
+        <item quantity="one">Seen <xliff:g id="count" example="1">%d</xliff:g> time, not learned yet</item>
+        <item quantity="other">Seen <xliff:g id="count" example="2">%d</xliff:g> times, not learned yet</item>
+    </plurals>
+    <!-- A downloaded or built-in word list has it. %1$s is the list's name. -->
+    <string name="ime_word_card_pack">In the <xliff:g id="list" example="English">%1$s</xliff:g> word list</string>
+    <!-- A word list's name when the list has a variant. %1$s is the language,
+         %2$s the variant ("Portuguese (Brazil)"). -->
+    <string name="ime_word_card_pack_variant"><xliff:g id="language" example="Portuguese">%1$s</xliff:g> (<xliff:g id="variant" example="Brazil">%2$s</xliff:g>)</string>
+    <!-- The word's place in that list. %1$s is its rank, %2$s the list size,
+         both already formatted as numbers. -->
+    <string name="ime_word_card_pack_rank">#<xliff:g id="rank" example="4,512">%1$s</xliff:g> of <xliff:g id="size" example="300,000">%2$s</xliff:g></string>
+    <!-- One of the user's imported word lists has it. -->
+    <string name="ime_word_card_custom">In an imported word list</string>
+    <!-- Android's own personal dictionary has it. -->
+    <string name="ime_word_card_system">In the Android personal dictionary</string>
+    <!-- The word is a contact's name. -->
+    <string name="ime_word_card_contact">A contact\'s name</string>
+    <!-- The word is an installed app's name. -->
+    <string name="ime_word_card_app">An installed app\'s name</string>
+    <!-- The word is on the never-suggest list. -->
+    <string name="ime_word_card_blacklisted">On the never-suggest list</string>
+    <!-- Heading over the word's spelling and the switch that keeps it. -->
+    <string name="ime_word_card_spelling_title">Spelling</string>
+    <!-- Button that hands the keys to the spelling bar so the word can be retyped. -->
+    <string name="ime_word_card_respell">Change</string>
+    <!-- Switch that keeps the word spelled the way it is now. -->
+    <string name="ime_word_card_keep_capitals">Keep these capitals</string>
+    <!-- Explains that switch. -->
+    <string name="ime_word_card_keep_capitals_hint">Stops the keyboard relearning the word\'s capitals from how you type it. Words the keyboard has not learned have no spelling to keep — change the spelling to teach it one.</string>
+    <!-- The spelling bar, before anything has been typed into it. %1$s is the
+         word being respelled. -->
+    <string name="ime_word_spell_hint">Type a new spelling for \"<xliff:g id="word" example="teh">%1$s</xliff:g>\"</string>
+    <!-- Screen reader names of the spelling bar's two buttons. -->
+    <string name="ime_word_spell_apply_desc">Use this spelling</string>
+    <string name="ime_word_spell_cancel_desc">Leave the spelling alone</string>
+
+    <!-- Heading over the control that edits the personal dictionary's count. -->
+    <string name="ime_word_card_weight_title">Learned weight</string>
+    <!-- Explains the learned-weight control. -->
+    <string name="ime_word_card_weight_hint">How strongly the personal dictionary favours the word. 0 forgets it.</string>
+    <!-- The learned-weight control's value when the word is not learned. -->
+    <string name="ime_word_card_weight_none">Not learned</string>
+    <!-- Heading over the control that moves the word up or down the strip. -->
+    <string name="ime_word_card_offset_title">Rank adjustment</string>
+    <!-- Explains the rank-adjustment control. -->
+    <string name="ime_word_card_offset_hint">Moves the word up or down the suggestion strip, whatever list it comes from.</string>
+    <!-- The rank-adjustment control's value when the word is not adjusted. -->
+    <string name="ime_word_card_offset_normal">Normal</string>
+    <!-- A rank adjustment with its sign. %1$d is the number of steps. -->
+    <string name="ime_word_card_offset_value">%1$+d</string>
+    <!-- Screen reader names of the two stepper buttons. -->
+    <string name="ime_word_card_step_up_desc">Raise</string>
+    <string name="ime_word_card_step_down_desc">Lower</string>
+    <!-- Screen reader name of the button that closes the card. -->
+    <string name="ime_word_card_close_desc">Close the word card</string>
+    <!-- Screen reader name for the chip that takes an autocorrect back. The
+         word on the chip is read after this, so it says what pressing does. -->
+    <string name="ime_undo_correction_desc">Put back the word you typed</string>
+    <string name="ime_capture_undo_desc">Undo the last change</string>
+    <string name="ime_capture_redo_desc">Redo the change you undid</string>
+    <string name="ime_capture_keys_lower_desc">Put the keys down</string>
+    <!-- Screen reader names of the focus switch on a tool's own field (#665),
+         which sends the keys to the app's field or back. Each says what a
+         press does. -->
+    <string name="ime_capture_focus_to_app_desc">Type in the app instead</string>
+    <string name="ime_capture_focus_to_field_desc">Type in this box again</string>
+    <!-- In a tool's empty box while its keys go to the app's field (#665). -->
+    <string name="ime_capture_focus_app_hint">Typing in the app. Tap to type here</string>
+
+    <!-- Shown under a glide's word picker once the finger has slid down away
+         from the words: lifting now types nothing. -->
+    <string name="ime_glide_picker_cancel_hint">Lift to cancel</string>
+    <string name="ime_incognito_on_desc">Incognito is on</string>
+    <string name="ime_power_saving_on_desc">Power saving is on</string>
+    <string name="ime_panel_back_desc">Back to the keyboard</string>
+    <string name="ime_toolbox_desc">Toolbox</string>
+    <string name="ime_hardware_keys_show_desc">Show keys</string>
+    <string name="ime_hardware_keys_hide_desc">Hide keys</string>
+
+    <!-- The chip that offers the last copied text. -->
+    <!-- Marks a chip that holds a one-time code the keyboard found in a
+         copied message. Keep it short: it sits beside the code itself. -->
+    <string name="ime_clip_chip_code_badge">Code</string>
+    <string name="ime_clip_chip_screenshot">Screenshot</string>
+    <string name="ime_clip_chip_image">Copied image</string>
+    <string name="ime_clip_chip_item">Copied item</string>
+    <string name="ime_clip_chip_dismiss_desc">Hide the copied text</string>
+    <!-- Accessibility label of a press and hold on a copy's chip on the strip (#612). -->
+    <string name="ime_clip_chip_delete_desc">Delete this copy</string>
+    <string name="ime_clip_chip_more_desc">Show more recent copies</string>
+    <!-- The ✕ on the chip that offers a code found in a notification. -->
+    <string name="ime_otp_chip_dismiss_desc">Hide the code</string>
+    <!-- Screen reader text for the chip that offers a snippet the user marked
+         "ask first". %1$s is the name that the user gave the snippet. -->
+    <string name="ime_snippet_offer_desc">Insert the snippet %1$s</string>
+    <!-- Screen reader text for a chip that replaces text a snippet has already
+         put in, with one of the snippet's other expansions. %1$s is the name
+         the user gave the snippet the expansion belongs to. -->
+    <string name="ime_snippet_swap_desc">Use %1$s instead</string>
+    <!-- The arrow on a chip that stands for a linked snippet: opens what that
+         snippet has to offer. %1$s is the linked snippet's name. -->
+    <string name="ime_snippet_offer_more_desc">More from %1$s</string>
+    <!-- Goes back from a linked snippet to the one whose trigger was typed.
+         %1$s is the name of the snippet it goes back to. -->
+    <string name="ime_snippet_offer_back_desc">Back to %1$s</string>
+    <!-- The chip that asks whether a word no dictionary knows should be
+         remembered. %1$s is the word, spelled exactly as it was typed. -->
+    <string name="ime_learn_word_offer">Add \"%1$s\"?</string>
+    <!-- The ✕ on that chip: screen reader text. %1$s is the word. -->
+    <string name="ime_learn_word_never_desc">Never learn %1$s</string>
+    <!-- The chip that asks whether swipe typing should start leaning on the
+         words this keyboard has learned, rather than the whole dictionary. -->
+    <string name="ime_sandbox_offer_prefer">Tune swiping to your words?</string>
+    <!-- The second rung: swiping answers only with learned words. -->
+    <string name="ime_sandbox_offer_only">Swipe using only your words?</string>
+    <!-- The ✕ on the sandbox chip: screen reader text. -->
+    <string name="ime_sandbox_offer_never_desc">Don\'t ask about this again</string>
+    <!-- The chip shown when glide typing is on but the active language has no
+         word list to decode a swipe against. %1$s is the language's English
+         name. Tapping the chip opens that language's page, where a list downloads. -->
+    <string name="ime_glide_word_list_offer">Glide typing needs a %1$s word list</string>
+    <string name="ime_phonetic_word_list_offer">Get the %1$s word list for better words</string>
+    <!-- The ✕ on that chip: screen reader text. -->
+    <string name="ime_glide_word_list_offer_dismiss_desc">Dismiss</string>
+    <!-- The chip shown when a conversion keyboard (Chinese Pinyin, Japanese,
+         Cantonese, stroke, Cangjie) has no dictionary pack, so typing a reading
+         offers no characters. %1$s is the pack's name, e.g. "Chinese Pinyin
+         dictionary". Tapping the chip opens that language's page, where the
+         pack downloads. -->
+    <string name="ime_conversion_pack_offer">Download the %1$s to type characters</string>
+    <!-- Holding a Chinese or Japanese candidate (#580). -->
+    <string name="ime_candidate_menu_earlier">Earlier</string>
+    <string name="ime_candidate_menu_later">Later</string>
+    <string name="ime_candidate_menu_never">Never show</string>
+    <string name="ime_candidate_menu_first_desc">Type only %1$s, the first character</string>
+    <string name="ime_candidate_menu_last_desc">Type only %1$s, the last character</string>
+    <string name="ime_candidate_menu_close_desc">Close the candidate menu</string>
+    <string name="ime_conversion_pack_improve_offer">Download %1$s for better candidates</string>
+    <!-- The ✕ on that chip: screen reader text. -->
+    <string name="ime_conversion_pack_offer_dismiss_desc">Dismiss</string>
+    <!-- The chip offering to decode a swiped word's stroke against every word
+         list, shown while the cursor rests inside a word a swipe wrote. -->
+    <string name="ime_glide_search_all_offer">Search all words for this swipe</string>
+    <!-- The \u2715 on that chip: screen reader text. -->
+    <string name="ime_glide_search_all_dismiss_desc">Dismiss</string>
+    <!-- Easter egg: shown in the strip when S, O and S are keyed in a row on the
+         morse layout. The dots and dashes at the start are morse for SOS. -->
+    <string name="ime_morse_sos_egg_info">··· −−− ··· received. Help is not on the way.</string>
+
+    <!-- The Modes panel: which keyboard mode is active. -->
+    <string name="ime_modes_empty">No modes yet. Create one in Settings → Modes.</string>
+    <string name="ime_modes_none_subtitle">No mode, even where one is bound to this app or field</string>
+    <string name="ime_modes_auto_subtitle">Follow the app and field bindings of each mode</string>
+    <string name="ime_modes_manual_note">A manual pick lasts until you switch apps.</string>
+    <string name="ime_modes_settings_desc">Mode settings</string>
+    <string name="ime_modes_active_desc">Active</string>
+
+    <!-- One-line recap of what a mode changes. The keyboard joins these parts
+         with a middle dot, so each one is a fragment and not a sentence. -->
+    <string name="ime_mode_summary_emoji_row_off">Emoji row off</string>
+    <string name="ime_mode_summary_emoji_button">Emoji button</string>
+    <string name="ime_mode_summary_emoji_row">Emoji row</string>
+    <string name="ime_mode_summary_symbol_row">Symbol row</string>
+    <string name="ime_mode_summary_symbol_row_off">Symbol row off</string>
+    <!-- %1$s is a list of field types, such as "text, email". -->
+    <string name="ime_mode_summary_fields">%1$s fields</string>
+    <string name="ime_mode_summary_none">No overrides</string>
+    <!-- %1$d is how many tools the mode pins to the toolbar. -->
+    <plurals name="ime_mode_summary_pinned_tools">
+        <item quantity="one">%1$d pinned tool</item>
+        <item quantity="other">%1$d pinned tools</item>
+    </plurals>
+    <!-- %1$d is how many tools the mode adds to the toolbar it inherits. -->
+    <plurals name="ime_mode_summary_pinned_tools_added">
+        <item quantity="one">+%1$d pinned tool</item>
+        <item quantity="other">+%1$d pinned tools</item>
+    </plurals>
+    <!-- %1$d is how many apps the mode is bound to. -->
+    <plurals name="ime_mode_summary_apps">
+        <item quantity="one">%1$d app</item>
+        <item quantity="other">%1$d apps</item>
+    </plurals>
+
+    <!-- Tool names. Every surface that names a tool reads these: the toolbar,
+         the toolbox, the settings screens and the hardware shortcut legend. -->
+    <string name="ime_tool_emoji">Emoji</string>
+    <string name="ime_tool_clipboard">Clipboard</string>
+    <string name="ime_tool_clipboard_search">Clipboard search</string>
+    <string name="ime_tool_recent_copies">Recent copies</string>
+    <string name="ime_tool_leave_field">Leave field</string>
+    <string name="ime_tool_quick_note">Quick note</string>
+    <string name="ime_tool_read_back">Read back</string>
+    <string name="ime_tool_snippets">Snippets</string>
+    <string name="ime_tool_text_edit">Text editing</string>
+    <string name="ime_tool_trackpad">Trackpad</string>
+    <string name="ime_tool_one_handed">One-handed</string>
+    <string name="ime_tool_split">Split</string>
+    <string name="ime_tool_floating">Floating</string>
+    <string name="ime_tool_persistent">Keep on screen</string>
+    <string name="ime_tool_resize">Resize</string>
+    <string name="ime_resize_reset">Reset</string>
+    <string name="ime_resize_done">Done</string>
+    <string name="ime_resize_height_handle_desc">Drag to change the keyboard height</string>
+    <string name="ime_resize_bottom_handle_desc">Drag to move the bottom edge of the keyboard</string>
+    <string name="ime_resize_left_handle_desc">Drag to change the space left of the keyboard</string>
+    <string name="ime_resize_right_handle_desc">Drag to change the space right of the keyboard</string>
+    <string name="ime_resize_move_desc">Drag to move the keyboard up or down</string>
+    <string name="ime_tool_settings">Settings</string>
+    <string name="ime_tool_flashlight">Flashlight</string>
+    <string name="ime_tool_compass">Compass</string>
+    <string name="ime_tool_level">Level</string>
+    <string name="ime_tool_undo">Undo</string>
+    <string name="ime_tool_redo">Redo</string>
+    <string name="ime_tool_moon_phase">Moon</string>
+    <string name="ime_tool_weather">Weather</string>
+    <string name="ime_tool_calendar">Calendar</string>
+    <string name="ime_tool_incognito">Incognito</string>
+    <string name="ime_tool_power_saving">Power saving</string>
+    <!-- The tool that changes how the keyboard looks: its theme, its icons,
+         its emoji face and the font on its keys. Named for what it covers
+         rather than for the theme grid it opened with. -->
+    <string name="ime_tool_themes">Appearance</string>
+    <string name="ime_tool_autocorrect">Autocorrect</string>
+    <string name="ime_tool_selection_actions">Selection actions</string>
+    <string name="ime_tool_phonetic_english">English words</string>
+    <!-- The strip button on Bengali layouts. ANSI is the name of the encoding, not a word to translate. -->
+    <string name="ime_ansi_button" translatable="false">ANSI</string>
+    <string name="ime_ansi_output">ANSI output</string>
+    <!-- The strip button on Burmese layouts. Zawgyi is the name of the encoding, not a word to translate. -->
+    <string name="ime_zawgyi_button" translatable="false">Zawgyi</string>
+    <string name="ime_zawgyi_output">Zawgyi output</string>
+    <!-- The strip button on Chinese and Cantonese layouts: 繁 is the first character of 繁體, Traditional. Not translated. -->
+    <string name="ime_traditional_button" translatable="false">繁</string>
+    <string name="ime_traditional_output">Traditional characters</string>
+    <!-- Strip chip after a paste the keyboard found to be in Zawgyi, the old Burmese font encoding. Tapping it replaces the paste with Unicode. -->
+    <string name="ime_zawgyi_paste_offer">Pasted Zawgyi. Convert to Unicode</string>
+    <!-- Strip chip on a Burmese layout when the text box already holds Zawgyi. Tapping it makes the keyboard write Zawgyi in this text box. -->
+    <string name="ime_zawgyi_field_offer">This text is Zawgyi. Write Zawgyi here</string>
+    <string name="ime_zawgyi_offer_dismiss_desc">Leave it as it is</string>
+    <string name="ime_tool_sound_haptics">Sound &amp; haptics</string>
+    <string name="ime_tool_numpad">Numpad</string>
+    <string name="ime_tool_handwriting">Handwriting</string>
+    <string name="ime_tool_camera">Camera</string>
+    <string name="ime_tool_dictionary">Dictionary</string>
+    <string name="ime_tool_vocabulary">Vocabulary</string>
+    <string name="ime_tool_learn_from_text">Learn from text</string>
+    <string name="ime_tool_find_replace">Find &amp; replace</string>
+    <string name="ime_tool_notes">Notes</string>
+    <string name="ime_tool_todo">To-do list</string>
+    <string name="ime_tool_wm_pass">WM Pass</string>
+    <string name="ime_wmpass_username">Username</string>
+    <string name="ime_wmpass_password">Password</string>
+    <string name="ime_wmpass_code">Code</string>
+    <string name="ime_wmpass_open">Open WM Pass</string>
+    <string name="ime_wmpass_retry">Check again</string>
+    <string name="ime_wmpass_empty">No logins in the vault yet.</string>
+    <string name="ime_wmpass_locked">The vault is locked. Unlock it in WM Pass, then come back.</string>
+    <string name="ime_wmpass_no_vault">WM Pass has no vault yet. Make one there first.</string>
+    <string name="ime_wmpass_off">To use this, turn on Let WM Keyboard fill in WM Pass, under Settings, Security.</string>
+    <string name="ime_wmpass_missing">This tool types logins from WM Pass, a separate password manager. It is not installed.</string>
+    <string name="ime_wmpass_untrusted">An app using WM Pass\'s name is installed, but it is not signed by WM Pass, so it was not asked for anything.</string>
+    <string name="ime_tool_location">Location</string>
+    <string name="ime_tool_clock">Clock</string>
+    <string name="ime_tool_music_id">Music ID</string>
+    <string name="ime_tool_home_assistant">Smart home</string>
+    <string name="ime_tool_send_files">Send files</string>
+    <string name="ime_tool_gallery">Gallery</string>
+    <!-- Learn from text (#174): the panel that lists words the keyboard does not know yet. -->
+    <string name="ime_learn_select_all_action">Select all</string>
+    <string name="ime_learn_select_none_action">Select none</string>
+    <string name="ime_learn_add_action">Add %1$d</string>
+    <string name="ime_learn_text_action">Learn text</string>
+    <string name="ime_learn_pairs_label">Word pairs</string>
+    <string name="ime_learn_pairs_desc">Also learn the word pairs in this text</string>
+    <string name="ime_learn_sort_frequent_label">Most used</string>
+    <string name="ime_learn_sort_text_label">Text order</string>
+    <string name="ime_learn_sort_alpha_label">A to Z</string>
+    <string name="ime_learn_sort_desc">Change the order</string>
+    <plurals name="ime_learn_found_count">
+        <item quantity="one">%d new word</item>
+        <item quantity="other">%d new words</item>
+    </plurals>
+    <string name="ime_learn_scanning_progress">Reading the text…</string>
+    <!-- The row at the top of the grid of extra word suggestions; tapping it goes back to the keys. -->
+    <string name="ime_suggestion_pages_close">Back to the keys</string>
+    <string name="ime_learn_empty">No new words here. The keyboard knows every word in this text.</string>
+    <!-- Under the line above: this tool lists words to add, not the words already learned. -->
+    <string name="ime_learn_empty_learned_hint">Looking for the words the keyboard has learned? They are in the personal dictionary in Settings.</string>
+    <string name="ime_learn_open_dictionary_action">Open the dictionary</string>
+    <string name="ime_learn_blocked_info">This is a password field, so nothing was read.</string>
+    <string name="ime_learn_partial_info">Only part of this field could be read.</string>
+    <string name="ime_learn_capped_info">Showing the first %1$d new words.</string>
+    <plurals name="ime_learn_result_words">
+        <item quantity="one">Added %d word</item>
+        <item quantity="other">Added %d words</item>
+    </plurals>
+    <plurals name="ime_learn_result_pairs">
+        <item quantity="one">%d word pair</item>
+        <item quantity="other">%d word pairs</item>
+    </plurals>
+    <string name="ime_learn_result_both">%1$s · %2$s</string>
+    <string name="ime_learn_result_text_only">Learned text statistics</string>
+    <string name="ime_learn_count_label">×%1$d</string>
+    <string name="ime_learn_seen_label">seen %1$d</string>
+    <string name="ime_learn_edited_label">%1$s → %2$s</string>
+    <string name="ime_learn_more_desc">More for %1$s</string>
+    <string name="ime_learn_edit_action">Edit</string>
+    <string name="ime_learn_show_action">Show in text</string>
+    <string name="ime_learn_never_action">Never suggest</string>
+    <string name="ime_learn_ignore_action">Ignore</string>
+    <string name="ime_learn_edit_hint">Spelling to add</string>
+    <string name="ime_learn_edit_done_action">Done</string>
+    <string name="ime_tool_translate">Translate</string>
+    <string name="ime_tool_gif">GIFs</string>
+    <string name="ime_tool_sticker">Stickers</string>
+    <string name="ime_tool_emoji_mix">Emoji mixes</string>
+    <string name="ime_emoji_mix_no_source">No source is on. Add one under Settings › Emoji › Emoji mixes.</string>
+    <string name="ime_emoji_mix_first_desc">First emoji</string>
+    <string name="ime_emoji_mix_second_desc">Second emoji</string>
+    <string name="ime_emoji_mix_none">No mix</string>
+    <string name="ime_emoji_mix_search_desc">Search the emoji</string>
+    <string name="ime_emoji_mix_swap_desc">Swap the two emoji</string>
+    <string name="ime_emoji_mix_shuffle_desc">A random mix</string>
+    <string name="ime_emoji_mix_shuffle_hold_desc">Choose what the shuffle picks from</string>
+    <string name="ime_emoji_mix_shuffle_title">Shuffle from</string>
+    <string name="ime_emoji_mix_shuffle_first">First</string>
+    <string name="ime_emoji_mix_shuffle_second">Second</string>
+    <string name="ime_emoji_mix_shuffle_all">Every category</string>
+    <string name="ime_emoji_mix_clear_desc">Take this emoji out</string>
+    <string name="ime_emoji_mix_previews_held">Data saver holds the pictures on this connection.</string>
+    <string name="ime_emoji_mix_pick_first">Pick an emoji below.</string>
+    <string name="ime_emoji_mix_pick_second">Pick a second emoji to try them together.</string>
+    <string name="ime_emoji_mix_more_desc">More for this mix</string>
+    <string name="ime_emoji_mix_item_desc">Mix of %1$s and %2$s</string>
+    <string name="ime_emoji_mix_star">Star</string>
+    <string name="ime_emoji_mix_unstar">Remove the star</string>
+    <string name="ime_emoji_mix_add_to_stickers">Add to my stickers</string>
+    <string name="ime_emoji_mix_save_to_gallery">Save to photos</string>
+    <string name="ime_emoji_mix_open_desc">All mixes of this emoji</string>
+    <string name="ime_emoji_mix_field_refuses_toast">This field does not take pictures</string>
+    <string name="ime_emoji_mix_fetch_failed_toast">Could not get that mix</string>
+    <string name="ime_emoji_mix_pack_name">Emoji mixes</string>
+    <string name="ime_tool_web_search">Search</string>
+    <string name="ime_tool_image_search">Images</string>
+    <string name="ime_tool_ocr">Scan text</string>
+    <string name="ime_tool_qr_scan">QR scan</string>
+    <string name="ime_tool_doc_scan">Doc scan</string>
+    <string name="ime_tool_voice">Voice</string>
+    <string name="ime_tool_grammar">Grammar</string>
+    <string name="ime_tool_wikipedia">Wikipedia</string>
+    <string name="ime_tool_symbols">Symbols</string>
+    <string name="ime_tool_calculator">Calculator</string>
+    <string name="ime_tool_unit_convert">Units</string>
+    <string name="ime_tool_currency">Currency</string>
+    <string name="ime_tool_qr_gen">QR code</string>
+    <string name="ime_tool_password_gen">Password</string>
+    <string name="ime_tool_text_repeat">Repeat</string>
+    <string name="ime_tool_typing_test">Typing speed</string>
+    <string name="ime_tool_statistics">Statistics</string>
+    <string name="ime_tool_media_control">Media</string>
+    <string name="ime_tool_kde_connect" translatable="false">KDE Connect</string>
+    <string name="ime_tool_plugins">Plugins</string>
+    <string name="ime_tool_app_launcher">Apps</string>
+    <!-- Artificial intelligence. Keep the short form the toolbar can fit. -->
+    <string name="ime_tool_ai">AI</string>
+    <string name="ime_tool_modes">Modes</string>
+    <string name="ime_tool_fancy">Fancy text</string>
+    <string name="ime_tool_custom_layout">Secondary layout</string>
+    <string name="ime_tool_cursor_left">Left</string>
+    <string name="ime_tool_cursor_right">Right</string>
+    <string name="ime_tool_cursor_word_left">Word left</string>
+    <string name="ime_tool_cursor_word_right">Word right</string>
+    <string name="ime_tool_cursor_up">Up</string>
+    <string name="ime_tool_cursor_down">Down</string>
+    <string name="ime_tool_cursor_home">Line start</string>
+    <string name="ime_tool_cursor_end">Line end</string>
+    <string name="ime_tool_hide_keyboard">Hide</string>
+    <string name="ime_tool_language">Language</string>
+    <string name="ime_tool_page_up">Page up</string>
+    <string name="ime_tool_page_down">Page down</string>
+    <string name="ime_tool_select_word">Select word</string>
+    <string name="ime_tool_select_line">Select line</string>
+    <string name="ime_tool_select_mode">Selection mode</string>
+    <string name="ime_tool_copy">Copy</string>
+    <string name="ime_tool_cut">Cut</string>
+    <string name="ime_tool_paste">Paste</string>
+
+    <!-- The toolbox: the grid of every tool that is not on the toolbar. -->
+    <string name="ime_toolbox_hint_drag">Press and hold a tool, then drag it. Drop it on the toolbar to pin it. Drop it in this grid to change the order. Drop it below the grid to remove it.</string>
+    <!-- Shown before the drag hint when a mode owns the tool arrangement.
+         %1$s is the name the user gave the mode. -->
+    <string name="ime_toolbox_hint_mode">The %1$s mode is on, so the keyboard saves this arrangement for that mode. Other apps keep their own.</string>
+    <string name="ime_toolbox_hint_dismiss_desc">Hide the hint</string>
+    <!-- Pill shown while a tool is being dragged, naming where the new
+         arrangement is saved. %1$s is the name the user gave the mode. -->
+    <string name="ime_toolbox_drag_scope_mode">Changing the tool order for only the %1$s mode</string>
+    <string name="ime_toolbox_drag_scope_global">Changing the global tool order outside modes</string>
+    <string name="ime_toolbox_empty">Every tool is on the toolbar.</string>
+    <!-- The toolbox search (#687). Typed with the keyboard's own keys. -->
+    <string name="ime_toolbox_search_desc">Search tools</string>
+    <string name="ime_toolbox_search_hint">Search tools…</string>
+    <string name="ime_toolbox_search_clear_desc">Close the search</string>
+    <!-- %1$s is what the user typed. -->
+    <string name="ime_toolbox_search_no_match">No tool is called \"%1$s\".</string>
+    <!-- Toolbox folders (#709): drop one tool on another to make one. -->
+    <string name="ime_toolbox_folder_default_name">Folder</string>
+    <string name="ime_toolbox_folder_rename_desc">Rename the folder</string>
+    <string name="ime_toolbox_folder_rename_done_desc">Keep the name</string>
+    <string name="ime_toolbox_folder_name_hint">Folder name…</string>
+    <string name="ime_toolbox_folder_pin_desc">Pin the folder to the toolbar</string>
+    <string name="ime_toolbox_folder_unpin_desc">Remove the folder from the toolbar</string>
+    <string name="ime_toolbox_folder_main_desc">On the toolbar, tap for the first tool and hold for the folder</string>
+    <string name="ime_toolbox_folder_ungroup_desc">Ungroup the folder</string>
+    <string name="ime_toolbox_folder_take_out">Drop here to take the tool out of the folder</string>
+    <string name="ime_toolbox_folder_empty">Every tool in this folder is on the toolbar.</string>
+    <!-- Spoken for a folder cell. %1$s is the folder name. -->
+    <plurals name="ime_toolbox_folder_desc">
+        <item quantity="one">%1$s, folder with %2$d tool</item>
+        <item quantity="other">%1$s, folder with %2$d tools</item>
+    </plurals>
+
+    <!-- Tool panels that open over the keys. -->
+    <string name="ime_translate_hint">Type the text to translate…</string>
+    <string name="ime_web_search_hint">Search the web</string>
+    <string name="ime_image_search_hint">Search images</string>
+    <!-- Camera button beside the image search box: opens the camera to search with a photo (#349). -->
+    <string name="ime_image_search_by_photo_desc">Search with a photo</string>
+    <!-- Web search panel: open the typed query as a search page in the browser. -->
+    <string name="ime_search_in_browser_desc">Search in the browser</string>
+    <!-- Names the search service. Brave is a brand name: keep it as it is. -->
+    <string name="ime_search_attribution_brave">via Brave</string>
+    <!-- Names the search service. Tavily is a brand name: keep it as it is. -->
+    <string name="ime_search_attribution_tavily">via Tavily</string>
+    <string name="ime_unit_convert_title">Unit converter</string>
+    <string name="ime_password_tab_passphrase">Passphrase</string>
+    <!-- Tab in the password generator: a code made of digits only. -->
+    <string name="ime_password_tab_pin">PIN</string>
+    <string name="ime_typing_test_restart">Restart</string>
+    <string name="ime_ai_replace">Replace</string>
+    <string name="ime_ai_insert">Insert</string>
+    <string name="ime_ai_settings_desc">AI settings</string>
+
+    <!-- The Fancy Text style strip. -->
+    <string name="ime_fancy_style_switch_desc">Switch fancy style</string>
+
+    <!-- The dictionary bar: a row of chips, one per dictionary on the device. -->
+    <string name="ime_dictionary_bar_all">All</string>
+    <string name="ime_dictionary_bar_words">Words</string>
+    <string name="ime_dictionary_bar_emoji">Emoji</string>
+    <string name="ime_dictionary_bar_filter_desc">Choose which language\'s dictionaries to show</string>
+    <string name="ime_dictionary_bar_empty">No dictionaries on this device for this language</string>
+    <!-- %1$s is the chip's label, such as "English · Words". -->
+    <string name="ime_dictionary_bar_chip_on">%1$s, on. Tap to turn off</string>
+    <string name="ime_dictionary_bar_chip_off">%1$s, off. Tap to turn on</string>
+
+    <!-- The app-launcher panel. -->
+    <string name="ime_launcher_search_hint">Search apps</string>
+    <string name="ime_launcher_loading">Loading apps…</string>
+    <string name="ime_launcher_empty">No apps match</string>
+    <string name="ime_launcher_pinned_label">Pinned</string>
+    <string name="ime_launcher_recents_label">Recent</string>
+    <string name="ime_launcher_activities_label">Screens</string>
+    <string name="ime_launcher_app_info_action">App info</string>
+    <string name="ime_launcher_pin_action">Pin app</string>
+    <string name="ime_launcher_unpin_action">Unpin app</string>
+    <string name="ime_launcher_hide_action">Hide app from the grid</string>
+    <string name="ime_launcher_unhide_action">Show app in the grid again</string>
+    <!-- Marks a search result the user hid from the grid. -->
+    <string name="ime_launcher_hidden_label">Hidden from the grid</string>
+    <!-- Marks a screen inside an app that only the app itself may open. -->
+    <string name="ime_launcher_not_exported_label">Not openable from outside the app</string>
+    <!-- The menu a press and hold on an app opens. -->
+    <string name="ime_launcher_open_action">Open</string>
+    <string name="ime_launcher_open_floating_action">Open in a floating window</string>
+    <string name="ime_launcher_open_split_action">Open in split screen</string>
+    <!-- Under "Open in a floating window" on a device without a desktop or freeform window mode. -->
+    <string name="ime_launcher_floating_unsupported">This device may open it full screen</string>
+    <string name="ime_launcher_pair_action">Pair in split screen with…</string>
+    <!-- Opens the app's own page: its screens (activities), hide and App info. -->
+    <string name="ime_launcher_page_action">Screens, hide and App info…</string>
+    <string name="ime_launcher_page_no_screens_action">Hide and App info…</string>
+    <string name="ime_launcher_menu_close">Close menu</string>
+    <!-- Banner while picking the second app of a split-screen pair. %1$s is the first app's name. -->
+    <string name="ime_launcher_pair_prompt">Tap the app to open beside %1$s</string>
+    <string name="ime_launcher_pair_cancel">Cancel</string>
+    <!-- Label over the row of saved split-screen pairs. -->
+    <string name="ime_launcher_combos_label">Split screen pairs</string>
+    <!-- A pair's label when it has no name. %1$s and %2$s are the two app names. -->
+    <string name="ime_launcher_combo_label">%1$s + %2$s</string>
+    <string name="ime_launcher_combo_open_action">Open both in split screen</string>
+    <string name="ime_launcher_combo_remove_action">Remove this pair</string>
+    <string name="ime_launcher_folder_default_name">Folder</string>
+    <string name="ime_launcher_folder_add_action">Add to folder</string>
+    <string name="ime_launcher_folder_take_out_action">Take out of folder</string>
+    <string name="ime_launcher_folder_pick_title">Add %1$s to</string>
+    <string name="ime_launcher_folder_new_action">New folder</string>
+    <string name="ime_launcher_group_action">Sort all apps by category</string>
+    <string name="ime_launcher_group_note">A folder per Play category for every app not in a folder yet</string>
+    <string name="ime_launcher_group_none_toast">None of these apps names a category</string>
+    <string name="ime_launcher_folder_open_action">Open folder</string>
+    <string name="ime_launcher_folder_rename_action">Rename folder</string>
+    <string name="ime_launcher_folder_rename_done_desc">Keep this name</string>
+    <string name="ime_launcher_folder_name_hint">Folder name</string>
+    <string name="ime_launcher_folder_move_earlier_action">Move folder earlier</string>
+    <string name="ime_launcher_folder_move_later_action">Move folder later</string>
+    <string name="ime_launcher_folder_delete_action">Remove folder</string>
+    <string name="ime_launcher_folder_delete_note">Its apps go back to the grid</string>
+    <string name="ime_launcher_folder_back_desc">Back to all apps</string>
+    <string name="ime_launcher_work_desc">Work app</string>
+    <string name="ime_launcher_work_paused_desc">Work app, paused</string>
+    <string name="ime_launcher_work_package">%1$s · work profile</string>
+
+    <!-- The Snippets panel. Keep the words inside the braces as they are: the
+         keyboard looks for them and puts a value in their place. -->
+    <string name="ime_snippets_empty">No snippets yet.\nVariables: {date} {time} {datetime} {clip}</string>
+    <string name="ime_snippets_variables">Variables: {date} {time} {datetime} {clip}</string>
+    <string name="ime_snippets_settings_desc">Snippet settings</string>
+    <!-- The search in the snippets panel's header. -->
+    <string name="ime_snippets_search_desc">Search snippets</string>
+    <string name="ime_snippets_search_hint">Search snippets…</string>
+    <string name="ime_snippets_search_clear_desc">Clear the search</string>
+    <string name="ime_snippets_no_match">No snippets match “%1$s”.</string>
+
+    <!-- Shown on a snippet that expands from a pattern instead of one word.
+         %1$s is the pattern itself, for example ^hello (.+)$ — leave it as is. -->
+    <string name="ime_snippets_pattern_label">Pattern: %1$s</string>
+
+    <!-- Snippet folders. A folder is a named group of snippets. -->
+    <!-- How many snippets a folder holds. %1$d is the number. -->
+    <plurals name="ime_snippets_folder_count">
+        <item quantity="one">%1$d snippet</item>
+        <item quantity="other">%1$d snippets</item>
+    </plurals>
+    <!-- Marks a folder whose snippets no longer expand while you type. They
+         still work when you press them here. Keep it very short. -->
+    <string name="ime_snippets_folder_off">Off</string>
+    <!-- Read out for a folder. %1$s is its name. -->
+    <string name="ime_snippets_folder_desc">Folder %1$s. Press to open, press and hold to switch its automatic text on or off.</string>
+    <string name="ime_snippets_folder_empty">This folder is empty.</string>
+    <!-- Read out for a snippet that has more than one thing to insert. %1$s is
+         its name and %2$d is how many things it offers. -->
+    <plurals name="ime_snippets_tile_options_desc">
+        <item quantity="one">%1$s. %2$d option. Press and hold to choose.</item>
+        <item quantity="other">%1$s. %2$d options. Press and hold to choose.</item>
+    </plurals>
+
+    <!-- The emoji panel. -->
+    <string name="ime_emoji_search_hint">Type to search…</string>
+    <string name="ime_emoji_search_delete_desc">Delete from the text field</string>
+    <string name="ime_emoji_tab_search_desc">Search emoji</string>
+    <string name="ime_emoji_tab_kaomoji">Kaomoji</string>
+    <string name="ime_emoji_tab_emoticons">Emoticons</string>
+
+    <!-- The kaomoji tab: its tag strip, edit rail, editor and tag list. -->
+    <string name="ime_kaomoji_all">All</string>
+    <string name="ime_kaomoji_favourites">Favourites</string>
+    <string name="ime_kaomoji_recent">Recent</string>
+    <string name="ime_kaomoji_untagged">No tag</string>
+    <string name="ime_kaomoji_search">Search kaomoji</string>
+    <string name="ime_kaomoji_search_hint">Search by tag or face</string>
+    <string name="ime_kaomoji_add">Add a kaomoji</string>
+    <string name="ime_kaomoji_edit_mode">Edit kaomoji</string>
+    <string name="ime_kaomoji_done">Done</string>
+    <string name="ime_kaomoji_tags">Tags</string>
+    <string name="ime_kaomoji_favourite">Add to favourites</string>
+    <string name="ime_kaomoji_unfavourite">Remove from favourites</string>
+    <string name="ime_kaomoji_edit">Edit</string>
+    <string name="ime_kaomoji_copy">Copy</string>
+    <string name="ime_kaomoji_delete">Delete</string>
+    <string name="ime_kaomoji_delete_confirm">Tap again to delete</string>
+    <string name="ime_kaomoji_cancel">Cancel</string>
+    <string name="ime_kaomoji_save">Save</string>
+    <string name="ime_kaomoji_face_hint">Type or paste a face</string>
+    <string name="ime_kaomoji_new_tag">New tag</string>
+    <string name="ime_kaomoji_rename">Rename tag</string>
+    <string name="ime_kaomoji_rename_hint">Tag name</string>
+    <string name="ime_kaomoji_move_up">Move up</string>
+    <string name="ime_kaomoji_move_down">Move down</string>
+    <string name="ime_kaomoji_hide_tag">Hide from the tag strip</string>
+    <string name="ime_kaomoji_show_tag">Show in the tag strip</string>
+    <string name="ime_kaomoji_more_settings">Kaomoji settings</string>
+    <string name="ime_kaomoji_kind_kaomoji">Kaomoji</string>
+    <string name="ime_kaomoji_kind_emoticon">Emoticon</string>
+    <string name="ime_kaomoji_empty">No kaomoji here yet. Add one with +.</string>
+    <string name="ime_kaomoji_empty_favourites">Hold a face and tap the star to keep it here.</string>
+    <string name="ime_kaomoji_empty_recent">The faces you use show up here.</string>
+    <string name="ime_emoji_tab_most_used">Most used</string>
+    <string name="ime_emoji_tab_recent">Recent</string>
+    <string name="ime_emoji_clear_recents">Clear recents</string>
+    <string name="ime_emoji_favourite">Favourite</string>
+    <string name="ime_emoji_favourited">Favourited</string>
+    <string name="ime_emoji_reorder_favourites">Reorder favourites</string>
+    <string name="ime_emoji_remove_from_recents">Remove from recents</string>
+    <!-- Button in the press and hold window of an emoji. It sends a moving
+         version of that emoji, as an image, to the app you are typing in. -->
+    <string name="ime_emoji_send_animated">Send animated emoji</string>
+    <!-- Credit under that button. "Noto Animated Emoji" is the name of the
+         image set and CC BY 4.0 is the name of its licence. Keep both. -->
+    <string name="ime_emoji_animated_credit">Noto Animated Emoji, Google, CC BY 4.0</string>
+    <!-- Button in the press and hold window of an emoji. It sends the emoji as
+         an image, in the emoji font of the keyboard. -->
+    <string name="ime_emoji_send_sticker">Send image as sticker</string>
+    <string name="ime_emoji_reorder_hint">Drag the handles. The top of the list comes first.</string>
+    <!-- Position of one emoji in the reorder list. %1$d is the position. -->
+    <string name="ime_emoji_reorder_index">%1$d.</string>
+    <!-- Drag handle beside one emoji. %1$s is the emoji itself. -->
+    <string name="ime_emoji_reorder_handle_desc">Move %1$s</string>
+
+    <!-- The clipboard panel. -->
+    <string name="ime_clipboard_search_hint">Search the clipboard…</string>
+    <string name="ime_clipboard_search_clear_desc">Clear the search</string>
+    <!-- The clipboard header's keyboard button: keep the keys under a smaller clipboard, or give the clipboard the whole keyboard back. -->
+    <string name="ime_clipboard_keys_show_desc">Show the keys under the clipboard</string>
+    <string name="ime_clipboard_keys_hide_desc">Hide the keys</string>
+    <string name="ime_clipboard_empty">The clipboard history is empty.\nCopied text shows here.</string>
+    <!-- %1$s is what the user typed in the clipboard search box. -->
+    <string name="ime_clipboard_no_match">No clips match “%1$s”.</string>
+    <string name="ime_clip_pin">Pin</string>
+    <string name="ime_clip_unpin">Unpin</string>
+    <!-- Button in the press-and-hold details for an image clip. The image is
+         fitted into a transparent 512 × 512 sticker canvas before sending. -->
+    <string name="ime_clip_send_as_sticker">Send as sticker</string>
+    <string name="ime_clip_edit">Edit</string>
+    <string name="ime_clip_edit_title">Edit clip</string>
+    <string name="ime_clip_edit_save">Save</string>
+    <string name="ime_clip_edit_placeholder">Type the clip’s text</string>
+    <!-- A clip's own labels (#612): the hold popup's action, and the editor opened on them. -->
+    <string name="ime_clip_tags">Tags</string>
+    <string name="ime_clip_tags_title">Tags</string>
+    <string name="ime_clip_tags_placeholder">Tags, with a comma between them</string>
+    <!-- The hold popup's action and the clip shortcut button that open the QR code tool on a text clip (#766). -->
+    <string name="ime_clip_qr">QR code</string>
+    <!-- Clipboard hold menu: search for the clip's text with the web search tool, or on Wikipedia. -->
+    <string name="ime_clip_search_web">Search the web</string>
+    <string name="ime_clip_search_wikipedia">Search Wikipedia</string>
+    <!-- A folder of pinned clips (#768), named after a tag. %1$s is the tag, %2$d how many clips it holds. -->
+    <plurals name="ime_clip_folder_open_desc">
+        <item quantity="one">Open folder %1$s, %2$d clip</item>
+        <item quantity="other">Open folder %1$s, %2$d clips</item>
+    </plurals>
+    <!-- The back button over an open folder of pinned clips (#768). -->
+    <string name="ime_clip_folder_back_desc">Back to pinned clips</string>
+    <string name="ime_clip_edit_rich_note">Saving a change drops the formatting</string>
+    <!-- The bar at the bottom of the clipboard panel after a delete. %1$d is how many clips it would bring back. -->
+    <plurals name="ime_clip_deleted">
+        <item quantity="one">Clip deleted</item>
+        <item quantity="other">%1$d clips deleted</item>
+    </plurals>
+    <string name="ime_clip_undo_delete">Undo</string>
+    <!-- Spoken action on the Undo bar: it can also be swiped away, which ends the Undo at once. -->
+    <string name="ime_clip_undo_dismiss">Dismiss</string>
+    <!-- Actions in the press-and-hold popup of a clip. -->
+    <string name="ime_clip_open_link">Open link</string>
+    <string name="ime_clip_view_image">View</string>
+    <string name="ime_clip_extract_text">Extract text</string>
+    <string name="ime_clip_translate_image">Translate</string>
+    <string name="ime_clip_extract_parts">Extract</string>
+    <string name="ime_clip_extract_links">Links</string>
+    <string name="ime_clip_extract_places">Places</string>
+    <string name="ime_clip_extract_phones">Phone numbers</string>
+    <string name="ime_clip_extract_codes">One-time codes</string>
+    <string name="ime_clip_entity_copied_toast">Copied to the clipboard</string>
+    <string name="ime_clip_view_text">View full text</string>
+    <!-- The (i) icon under a clip's full text, which opens the clip's details: when it was copied, its type, its size. -->
+    <string name="ime_clip_details_desc">Details</string>
+    <!-- The bar on top of the clipboard panel that drags it taller or shorter, for a screen reader. -->
+    <string name="ime_clipboard_height_desc">Clipboard panel height. Drag up or down</string>
+    <string name="ime_clipboard_height_taller">Make the panel taller</string>
+    <string name="ime_clipboard_height_shorter">Make the panel shorter</string>
+    <string name="ime_media_height_desc">Emoji, GIF and sticker panel height. Drag up or down</string>
+    <string name="ime_full_bleed_height_desc">Tool height. Drag up or down</string>
+    <string name="ime_panel_over_keys_height_desc">Panel height over the keys. Drag up or down</string>
+    <!-- The bin beside the clipboard search bar, for a screen reader. -->
+    <string name="ime_clipboard_clear_desc">Delete all unpinned clips</string>
+    <!-- The question the bin asks before it deletes. %1$d is how many clips it deletes. -->
+    <!-- Asked before a pinned clip is deleted, when that setting is on (#636). -->
+    <string name="ime_clip_delete_pinned_question">Delete this pinned clip?</string>
+    <plurals name="ime_clip_clear_question">
+        <item quantity="one">Delete %1$d unpinned clip? Pinned clips stay.</item>
+        <item quantity="other">Delete %1$d unpinned clips? Pinned clips stay.</item>
+    </plurals>
+    <!-- The two tabs of the clipboard history, when the tabs setting is on. -->
+    <string name="ime_clipboard_tab_unpinned">Unpinned</string>
+    <string name="ime_clipboard_tab_pinned">Pinned</string>
+    <string name="ime_clipboard_tab_unpinned_empty">No unpinned clips.\nNew copies show here.</string>
+    <string name="ime_clipboard_tab_pinned_empty">No pinned clips.\nPin a clip to keep it here.</string>
+    <!-- A clip pinned or unpinned while the tabs are on moves to the other tab; this says where it went (#612). -->
+    <string name="ime_clip_pinned_notice">Pinned. It is in the Pinned tab now</string>
+    <string name="ime_clip_unpinned_notice">Unpinned. It is in the Unpinned tab now</string>
+    <!-- The .* button beside the clipboard search, for a screen reader (#612). -->
+    <string name="ime_clipboard_regex_on_desc">Search with regular expressions</string>
+    <string name="ime_clipboard_regex_off_desc">Search as plain text</string>
+    <!-- The filter button inside the clipboard search bar (#612). -->
+    <string name="ime_clipboard_filter_desc">Filter and sort the clips</string>
+    <string name="ime_clip_order_newest">Newest first</string>
+    <string name="ime_clip_order_oldest">Oldest first</string>
+    <string name="ime_clip_filter_all">All</string>
+    <string name="ime_clip_filter_images">Images</string>
+    <string name="ime_clip_filter_files">Files</string>
+    <!-- Filter showing clips with the same text but for case and spacing (#612). -->
+    <string name="ime_clip_filter_duplicates">Duplicates</string>
+    <!-- A tag filter chip pressed a second time: only the clips that do not carry tag %1$s. -->
+    <string name="ime_clip_filter_without_tag">Not #%1$s</string>
+    <!-- Hold popup: delete the other clips the duplicates filter groups with this one (#612). -->
+    <string name="ime_clip_keep_only">Keep only this one</string>
+    <!-- Hold popup, while searching: close the search and scroll the history to this clip (#612). -->
+    <string name="ime_clip_show_in_history">Show in history</string>
+    <!-- Selection bar: run the copy rules over the picked clips (#612). -->
+    <string name="ime_clip_tidy">Tidy</string>
+    <string name="ime_clip_tidy_none_toast">The copy rules change nothing in these clips</string>
+    <!-- Clipboard selection bar button: converts the picked clips' Burmese between Zawgyi (the old font encoding) and Unicode. -->
+    <string name="ime_clip_zawgyi">Zawgyi ⇄ Unicode</string>
+    <string name="ime_clip_zawgyi_none_toast">Nothing in these clips needed converting</string>
+    <plurals name="ime_clip_zawgyi_converted_toast">
+        <item quantity="one">Converted %1$d clip</item>
+        <item quantity="other">Converted %1$d clips</item>
+    </plurals>
+    <plurals name="ime_clip_tidied_toast">
+        <item quantity="one">%1$d clip tidied</item>
+        <item quantity="other">%1$d clips tidied</item>
+    </plurals>
+    <!-- The button that brings back the folded strip of parts found in clips. %1$d is how many parts it holds. -->
+    <plurals name="ime_clip_entity_show_desc">
+        <item quantity="one">Show %1$d part found in your clips</item>
+        <item quantity="other">Show %1$d parts found in your clips</item>
+    </plurals>
+    <string name="ime_clip_entity_hide_desc">Hide the parts found in your clips</string>
+    <!-- Picking several clips to combine or delete them (#612). -->
+    <string name="ime_clip_select">Select</string>
+    <string name="ime_clip_select_cancel_desc">Stop selecting</string>
+    <string name="ime_clip_select_all_desc">Select all, or none</string>
+    <plurals name="ime_clip_selected_count">
+        <item quantity="one">%1$d selected</item>
+        <item quantity="other">%1$d selected</item>
+    </plurals>
+    <string name="ime_clip_picked_desc">Selected</string>
+    <string name="ime_clip_not_picked_desc">Not selected</string>
+    <!-- Joining the picked clips into one clip (#612). -->
+    <string name="ime_clip_combine">Combine</string>
+    <plurals name="ime_clip_combine_title">
+        <item quantity="one">Combine %1$d clip</item>
+        <item quantity="other">Combine %1$d clips</item>
+    </plurals>
+    <string name="ime_clip_combine_joiner">Between the clips</string>
+    <string name="ime_clip_combine_base">Prefix, in front of them all (optional, $1 is the first clip\'s group)</string>
+    <string name="ime_clip_combine_append">Pattern: keep only the part that matches (optional)</string>
+    <string name="ime_clip_combine_template">Combination: what each match becomes, $1 for its groups (optional)</string>
+    <string name="ime_clip_combine_result">Result, press to edit</string>
+    <string name="ime_clip_combine_result_edited">Result, edited by hand</string>
+    <string name="ime_clip_combine_originals">The clips, with the part each gives marked</string>
+    <string name="ime_clip_combine_delete">Delete these clips after combining</string>
+    <string name="ime_clip_combine_bad_pattern">The pattern is not finished, so nothing can be combined yet</string>
+    <string name="ime_clip_combine_no_match">No clip has a part that matches the pattern</string>
+    <string name="ime_clip_joiner_space">Space</string>
+    <string name="ime_clip_joiner_newline">New line</string>
+    <string name="ime_clip_joiner_comma">Comma</string>
+    <string name="ime_clip_joiner_semicolon">Semicolon</string>
+    <string name="ime_clip_joiner_bar">Bar</string>
+    <!-- Dragging clips into an order of the user's own (#612). -->
+    <string name="ime_clip_reorder">Reorder</string>
+    <string name="ime_clip_reorder_hint">Drag a clip by its handle, or press and hold it, to move it. It stays where you put it.</string>
+    <string name="ime_clip_reorder_done">Done</string>
+    <string name="ime_clip_reorder_handle_desc">Drag to move this clip</string>
+    <string name="ime_clip_reorder_top_desc">Move to the top</string>
+    <string name="ime_clipboard_view_list_desc">Show clips as a list</string>
+    <string name="ime_clipboard_view_grid_desc">Show clips as a grid</string>
+    <!-- Spoken before a clip's content when clip numbers are on. %1$d is the clip's number in the history. -->
+    <string name="ime_clip_number_desc">Clip <xliff:g id="number" example="3">%1$d</xliff:g></string>
+    <string name="ime_clip_entity_hint">Found in your clips. Press to paste only this part</string>
+    <!-- Title of the popup for one part of a clip. %1$s names the kind of
+         part, such as a phone number or a one-time code. -->
+    <string name="ime_clip_entity_popup_title">%1$s · part of this clip</string>
+    <string name="ime_clip_type_text">Text</string>
+    <string name="ime_clip_type_rich_text">Rich text</string>
+    <string name="ime_clip_type_link">Link</string>
+    <string name="ime_clip_type_image">Image</string>
+    <string name="ime_clip_type_file">File</string>
+    <string name="ime_clip_type_folder">Folder</string>
+    <string name="ime_clip_type_video">Video</string>
+    <string name="ime_clip_video_desc">Copied video</string>
+    <string name="ime_clip_hidden_desc">Hidden</string>
+    <!-- How long a copied text is. %1$d is the number of characters. -->
+    <!-- Time left before a clip in the clipboard panel expires. "min" and "h" are short unit names. -->
+    <plurals name="ime_clip_left_minutes">
+        <item quantity="one">%d min left</item>
+        <item quantity="other">%d min left</item>
+    </plurals>
+    <plurals name="ime_clip_left_hours">
+        <item quantity="one">%d h left</item>
+        <item quantity="other">%d h left</item>
+    </plurals>
+    <plurals name="ime_clip_left_days">
+        <item quantity="one">%d day left</item>
+        <item quantity="other">%d days left</item>
+    </plurals>
+    <plurals name="ime_clip_character_count">
+        <item quantity="one">%1$d character</item>
+        <item quantity="other">%1$d characters</item>
+    </plurals>
+    <!-- Stands in for a clip the keyboard keeps hidden, such as a password.
+         %1$d is how many characters the clip holds. -->
+    <plurals name="ime_clip_hidden_summary">
+        <item quantity="one">Hidden · %1$d character</item>
+        <item quantity="other">Hidden · %1$d characters</item>
+    </plurals>
+    <!-- Labels in the press-and-hold details popup for one clip. -->
+    <string name="ime_clip_info_copied">Copied</string>
+    <string name="ime_clip_info_edited">Edited</string>
+    <string name="ime_clip_info_from">From</string>
+    <string name="ime_clip_info_type">Type</string>
+    <string name="ime_clip_info_size">Size</string>
+    <string name="ime_clip_info_private">Private</string>
+    <string name="ime_clip_info_private_detail">The keyboard hides this clip in the panel and deletes it sooner than other clips.</string>
+
+    <!-- The legend the physical keyboard shows after the leader key. -->
+    <!-- %1$s names the leader key, such as "Double tap Ctrl". -->
+    <string name="ime_tool_picker_leader">%1$s, then:</string>
+    <!-- The pill that points at the legend, shown while the leader key waits.
+         %1$s is the key that opens the legend. Key names are not translated. -->
+    <string name="ime_tool_picker_help">%1$s for all keys</string>
+    <!-- Content description of the button that closes the list of keys. -->
+    <string name="ime_tool_picker_close_desc">Close the list of keys</string>
+
+    <!-- The list a physical keyboard's language switch shows. Heading of the
+         list, and the content description of the button that closes it. -->
+    <string name="ime_language_switch_title">Input language</string>
+    <string name="ime_language_switch_close_desc">Close the language list</string>
+
+    <!-- Last row of the language list. It opens the system list of the other
+         keyboards that are installed on the device. -->
+    <string name="ime_language_picker_other_keyboards">Other keyboards…</string>
+    <string name="ime_language_picker_language_settings">Language settings</string>
+
+    <!-- The chip the suggestion strip shows for a tool. %1$s is a tool name. -->
+    <!-- Spoken by TalkBack for the AI continuation chip in the suggestion strip (#944). %1$s is the continuation. -->
+    <string name="ime_ai_suggest_desc">AI suggestion: %1$s. Double-tap to insert, hold to hide in this field.</string>
+    <string name="ime_smart_send_link">Receive the file</string>
+    <string name="ime_smart_open_tool">Open %1$s</string>
+    <!-- Where a currency chip's converted amount would be, while the exchange
+         rates wait for a tap before they are fetched. -->
+    <string name="ime_smart_rates_tap">Get the rate</string>
+    <!-- The same, on a weather chip whose forecast is fetched only when it is tapped. -->
+    <string name="ime_smart_weather_tap">Get the forecast</string>
+
+    <!-- Contextual chips: the label each narrow hint chip shows. %1$s is the
+         term the lookup chips were typed with. -->
+    <string name="ime_smart_define_word">Define “%1$s”</string>
+    <!-- A plainer word was typed; %1$s is what was typed, %2$s the stronger word offered. -->
+    <string name="ime_smart_vocab_offer"><xliff:g id="typed" example="hate">%1$s</xliff:g> → <xliff:g id="word" example="abhor">%2$s</xliff:g></string>
+    <!-- A vocabulary word was typed; tapping opens its card. -->
+    <string name="ime_smart_vocab_word"><xliff:g id="word" example="abhor">%1$s</xliff:g> ›</string>
+    <string name="ime_smart_vocab_daily">Word of the day: <xliff:g id="word" example="alacrity">%1$s</xliff:g> ›</string>
+    <string name="ime_smart_vocab_hourly">Word of the hour: <xliff:g id="word" example="alacrity">%1$s</xliff:g> ›</string>
+    <string name="ime_smart_vocab_daily_dismiss_desc">Hide the word of the day</string>
+    <string name="ime_smart_wiki_word">“%1$s” on Wikipedia</string>
+    <string name="ime_smart_translate_offer">Translate</string>
+    <string name="ime_smart_gif_offer">Find a GIF</string>
+    <!-- The message button on a contact chip, for screen readers. %1$s is the contact's name. -->
+    <string name="ime_smart_contact_message">Text <xliff:g id="name" example="Jane Doe">%1$s</xliff:g></string>
+    <!-- The repeat chip: the same text typed several times in a row. %1$s is that text. -->
+    <string name="ime_smart_repeat_offer">Repeat “<xliff:g id="text" example="no">%1$s</xliff:g>”</string>
+    <!-- The small count beside it. %1$s is how many copies are in the field so far. -->
+    <string name="ime_smart_repeat_count">×<xliff:g id="count" example="3">%1$s</xliff:g></string>
+
+    <!-- Badge on the preview of a theme that moves while you type. -->
+    <string name="ime_theme_animated_badge">Animated</string>
+    <string name="ime_theme_animated_desc">This theme is animated</string>
+
+    <!-- The theme editor's live keyboard: the line it types into, above the keys. -->
+    <string name="ime_theme_preview_field_hint">Tap the keys to try the theme</string>
+    <string name="ime_theme_preview_clear_desc">Clear the text</string>
+
+    <!-- Selection macros: the bar of one-tap actions for what is selected.
+         The chip faces themselves live in :core:content, beside the engine
+         that picks them; only the bar's own furniture is here. -->
+    <string name="ime_selection_macro_back_desc">Back to the selection actions</string>
+    <string name="ime_selection_macro_stop_label">Stop</string>
+    <string name="ime_selection_macro_open_in_desc">Open in %1$s</string>
+    <string name="ime_selection_macro_busy_desc">Working</string>
+    <!-- The AI Translate action as a chip on the selection bar, where the plain Translate chip (the Translate tool) can sit beside it (#434). -->
+    <string name="ime_selection_macro_ai_translate_label">AI translate</string>
+    <string name="ime_selection_macro_nothing_to_undo_toast">Nothing left to undo</string>
+    <string name="ime_selection_macro_grammar_clean_toast">Nothing to fix</string>
+    <string name="ime_selection_macro_deepl_clean_toast">DeepL Write has nothing to change</string>
+    <string name="ime_selection_macro_grammar_unavailable_toast">The grammar checker is not available</string>
+    <string name="ime_selection_macro_find_none_toast">No other match</string>
+    <string name="ime_selection_macro_bengali_unavailable_toast">Bengali is not loaded</string>
+    <string name="ime_selection_macro_hindi_unavailable_toast">Hindi phonetic is not loaded</string>
+    <string name="ime_selection_macro_no_app_toast">No app can open this</string>
+    <string name="ime_find_not_addressable">This field cannot be searched</string>
+    <string name="ime_find_secure_field">Password fields cannot be searched</string>
+    <!-- The chip after the recent searches in the Find and replace panel that forgets them. -->
+    <string name="ime_find_history_clear">Clear</string>
+    <string name="ime_find_history_desc">Recent search</string>
+    <!-- The Find and replace panel. -->
+    <string name="ime_find_hint">Find</string>
+    <string name="ime_replace_hint">Replace with</string>
+    <string name="ime_find_case_label" translatable="false">Aa</string>
+    <string name="ime_find_case_desc">Match case</string>
+    <string name="ime_find_whole_word_label" translatable="false">[ab]</string>
+    <string name="ime_find_whole_word_desc">Whole word</string>
+    <string name="ime_find_regex_label" translatable="false">.*</string>
+    <string name="ime_find_regex_desc">Regular expression</string>
+    <string name="ime_find_preserve_case_label" translatable="false">AB</string>
+    <string name="ime_find_preserve_case_desc">Preserve case</string>
+    <string name="ime_find_clear_desc">Clear <xliff:g id="field" example="Find">%1$s</xliff:g></string>
+    <string name="ime_find_prev_desc">Previous match</string>
+    <string name="ime_find_next_desc">Next match</string>
+    <string name="ime_find_replace_action">Replace</string>
+    <string name="ime_find_replace_all_action">All</string>
+    <!-- %1$d the match selected, %2$d how many there are -->
+    <string name="ime_find_count">%1$d of %2$d</string>
+    <!-- %1$d how many matches there are, none of them selected -->
+    <string name="ime_find_count_none_selected">%1$d found</string>
+    <string name="ime_find_no_matches">No matches</string>
+    <string name="ime_find_too_many">Showing the first %1$d</string>
+    <string name="ime_find_regex_error">Pattern: %1$s</string>
+    <string name="ime_find_timeout">The pattern takes too long on this text</string>
+    <string name="ime_find_searching">Searching</string>
+    <!-- The network activity dot on the toolbar. %1$s is a server name. -->
+    <string name="ime_netlog_dot_desc">The keyboard is contacting <xliff:g id="host" example="translate.googleapis.com">%1$s</xliff:g></string>
+
+</resources>

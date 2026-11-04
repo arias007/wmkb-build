@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">سرور فایل را ارسال نکرد. کد خطا HTTP %1$s است.</string>
+    <string name="core_pred_wordlist_malformed_error">آن لیست کلمات خالی یا غیرقابل خواندن است.</string>
+    <string name="core_pred_wordlist_memory_error">این دستگاه حافظه کافی برای لیست کلماتی با این اندازه ندارد. اندازه کوچک‌تری انتخاب کنید.</string>
+    <string name="core_pred_wordlist_no_space_error">فضای ذخیره‌سازی کافی روی دستگاه شما وجود ندارد. تعدادی از فایل‌ها را حذف کنید و دوباره تلاش کنید.</string>
+    <string name="core_pred_wordlist_save_error">برنامه نمی‌تواند فهرست کلمات را ذخیره کند. دوباره تلاش کنید.</string>
+    <string name="core_pred_wordlist_size_all_label">همه</string>
+    <string name="core_pred_wordlist_size_large_label">بزرگ</string>
+    <string name="core_pred_wordlist_size_medium_label">متوسط</string>
+    <string name="core_pred_wordlist_size_small_label">کوچک</string>
+    <string name="core_pred_wordlist_source_aosp_detail">فهرست منتخب که صفحه‌کلید خود اندروید استفاده می‌کند. کلمات کمتر، با نام‌ها و غلط‌های املایی کمتر در میان آن‌ها.</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">شمرده شده از زیرنویس‌ها و متن‌های وب. کلمات بسیار بیشتر، با نام‌ها، اصطلاحات عامیانه و غلط‌های تایپی بیشتر.</string>
+    <string name="core_pred_wordlist_source_frequency_label">بسامد</string>
+    <string name="core_pred_wordlist_variant_australia_label">استرالیا</string>
+    <string name="core_pred_wordlist_variant_brazil_label">برزیل</string>
+    <string name="core_pred_wordlist_variant_canada_label">کانادا</string>
+    <string name="core_pred_wordlist_variant_europe_label">اروپا</string>
+    <string name="core_pred_wordlist_variant_uk_label">بریتانیا</string>
+    <string name="core_pred_wordlist_variant_us_label">ایالات متحده</string>
+</resources>

@@ -1,0 +1,250 @@
+---
+title: "Languages overview"
+description: "1,555 languages, each enabled independently with its own layouts, numerals, and dictionary."
+sidebar:
+  label: "Overview"
+  order: 1
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import KeyCap from '@components/KeyCap.astro';
+import LayoutExplorer from '@components/LayoutExplorer.astro';
+import cherokee from '../../../../../app/src/main/assets/layouts/chr_cherokee.wmlayout.json';
+import Shot from '@components/Shot.astro';
+
+WM Keyboard's language catalogue holds 1,555 entries. Alongside the languages you'd expect are InScript variants, minority Cyrillic alphabets, and a dozen constructed languages. Every one you enable becomes a full input mode with its own layout, dictionary, and settings, and you move between them without leaving the keyboard.
+
+<PhoneFrame caption="The Languages screen: your enabled languages and Add language to search the full catalogue.">
+  <Shot id="languages/list-overview" alt="The Languages screen: your enabled languages, plus Add language to search the full catalogue." />
+</PhoneFrame>
+
+## Suggested languages
+
+The Add language screen opens with a short **Suggested for you** group, so the language you came for is usually already on screen. Each row says why it's there: "One of the languages on your device", or "Many people type this language in Bangladesh". Tapping one adds it exactly like tapping a search result does.
+
+Two things on the device feed that list, in this order:
+
+- **Your phone's language list** (Settings → System → Languages), in your own preference order. Anything you've told Android you read is a strong signal that you type it too.
+- **Your region**, which maps to the languages widely typed there. A Bangladeshi SIM suggests Bangla and Sylheti, an Indian one Hindi, Bangla, Tamil, Telugu, Marathi and so on, and a Bosnian one Bosnian, Croatian and Serbian.
+
+Where a language has a [Romanized variant](#adding-a-language), it sits directly under its own language: Banglish under Bangla, Hinglish under Hindi. Wanting one is a good reason to be shown the other. That holds even when the language itself is already on, because somebody typing Bangla is exactly the person who'd want Banglish offered.
+
+Four things can say what your region is: the SIM's country, the network's country, your phone's time zone, and last the region attached to your locale. Only the first of them with anything to offer is used. They disagree more often than you'd think. A phone set to English (United Kingdom) sitting in Dhaka carries both BD and GB, and reading both would bury Bangla under Welsh, Irish and Scottish Gaelic. The SIM and the time zone say where the phone actually is, while a locale's region is very often just the ROM it shipped with.
+
+Nothing else is read. The keyboard doesn't look at what you've typed, your contacts, your accounts, or which apps you have installed. None of this needs a permission, and no part of it leaves the device. See [Permissions](/privacy/permissions/) for the full accounting.
+
+Suggestions stay suggestions: nothing is enabled until you tap it. A brand-new install is the one exception, since it starts out in the languages your phone is already set to. See [What ships](#what-ships).
+
+## Adding a language
+
+<PhoneFrame side caption="Add language: search matches endonym, English name, id, and locale.">
+  <Shot id="languages/add-language-search" alt="Add language: search matches endonym, English name, id, and locale." />
+</PhoneFrame>
+
+Tap **Add language** to search the whole registry. The screen that opens leads with the suggestions above the search results. The search box matches on endonym, English name, id, locale tag, and the names and ids of the layouts the language ships, so "german", "Deutsch", "de", "de-DE" and "QWERTZ" all find the same entry. Tap an unadded language and it's enabled immediately on its first layout, then that language's own screen opens so you can pick a different layout or turn on suggestions from another enabled language.
+
+If the language has data to download (a word list, emoji keywords, an n-gram pack of word pairs, or any mix of the three) you're asked once, right there, with the rough size for the lot on the dialog. **Download** starts all of them in the background. **Not now** adds the language without them. **Cancel** backs out of the whole thing, for the tap that landed on the wrong row. Nothing is enabled until you answer, so Cancel really does leave your language list as it was. You can start any of them by hand later from the language's own screen. Emoji keywords also have an automatic download of their own, covered in [Emoji search in your language](/emoji/customization/#emoji-search-in-your-language), but the prompt is the one chance to get the word list at the same time.
+
+Removing a language asks the mirror question when it has files on disk: delete its downloaded word list and keywords to get the storage back, or keep them for next time. The language goes either way, because the dialog is only about the files. Deleting the keywords also tells the automatic download to leave that language alone, so they don't quietly come back.
+
+Language names in the list are shown as `endonym · English`, for example "বাংলা · Bangla" or "Русский · Russian". The native name comes first and the English name after it, so you can find a language whether or not you can already read its script. English itself is just "English", since repeating it would say nothing.
+
+:::tip[Typing a language in Latin letters]
+Fifteen languages (including Bangla, Hindi, Arabic, and Russian) have a separate Romanized entry in the catalogue: Banglish, Hinglish, Arabizi, Translit, and so on. These type on a plain Latin QWERTY layout and draw suggestions from a transliterated word list. Romi Konkani is one of them but its list is not transliterated: Romi is the Latin spelling Konkani has been written in since the 16th century, so its words come from text people wrote that way. Each one is its own selectable language rather than a mode switch on the native-script one. Phonetic typing is different again: Bangla's Avro, Hindi phonetic and Urdu phonetic take Latin letters and commit native script, and so does Bangla's Khipro, which composes the script from lowercase keys by fixed rules instead of by sound. They're covered on [Bangla](/languages/bengali/), [Hindi](/languages/hindi/) and [Urdu](/languages/urdu/). Marathi, Gujarati, Punjabi, Odia, Assamese, Tamil, Telugu, Kannada, Malayalam, Persian and Arabic have phonetic layouts too, covered on [Phonetic typing in more languages](/languages/phonetic/). Vietnamese Telex and VNI work the same way inside one script, building the accented letters and tones out of plain keys. See [Vietnamese](/languages/vietnamese/). Burmese types Unicode and can also write Zawgyi, the old font encoding much Burmese text is still in, for the apps and friends that use it. See [Burmese](/languages/burmese/).
+:::
+
+## Each language has its own screen
+
+Tap any enabled language to reach its screen. **Layouts** and **Dictionaries** are always there. The rest of the groups appear only where they mean something, so most languages show four or five in all:
+
+<PhoneFrame side caption="A language's own screen: layout cards, numeral system, and other enabled languages to suggest from.">
+  <Shot id="languages/language-detail-screen" alt="A language's own screen: a row of layout cards, numeral system, and other enabled languages to suggest from." />
+</PhoneFrame>
+
+- **Layouts**: a row of cards, one per layout the language ships. Each card is the keyboard itself drawn small, with your theme, fonts, key height, number row and toolbar, so you see what typing on that layout looks like before you pick it. The first time a card comes into view it shows a grey outline of keys while its keyboard is drawn, one card at a time, and only once the row stops moving, so scrolling stays smooth. After that the drawing is kept, even across restarts, so the row opens straight onto the finished cards. Change your theme, fonts or key size and the cards keep their old picture until the new one is ready. A long layout name wraps onto a second line under the card rather than being cut off. A tick and a tinted card mark the layouts that are on. Tap a card to turn its layout on or off, and scroll the row sideways for the rest. Where a language has more layouts from the Keyman project, the row ends on a **More layouts** card that opens them, as the same kind of cards, with a search box and the download for each one's typing rules. See [Keyman layouts](/languages/keyman/). A card shows its layout as it looks once it is on, so the spacebar already names it if another layout of the same language is on too. At least one layout has to stay enabled somewhere across your whole set, so tapping the last one says so and leaves it on.
+- **Use a layout from another language**: under the cards. It lists the layouts of every other language that uses the same letters, with a search box that takes a layout name or a language name, so QWERTZ, AZERTY or Colemak can be the layout you type English on. Pick one and it's copied to a layout of your own in this language, named with the language it came from ("QWERTZ (German)"), and turned on. The copy uses this language's dictionary, autocorrect and spelling rules, sits on the Layouts shelf with the rest, and is yours to edit. Picking the same layout again turns the existing copy back on rather than making a second one. Keyman layouts and phonetic boards aren't offered, because what their keys type depends on their own language.
+- **Autocorrect**: **Autocorrect this language**, on by default. Turn it off and every word you type in this language stays as typed, while your other languages are still corrected: English fixed, romanized Bangla left alone. The suggestion strip still offers its words to tap. The row is hidden while the main **Autocorrect** switch in Typing is off, because that switch turns it off for every language. It keeps its answer for when that switch comes back on. See [Autocorrect](/smart/autocorrect/#one-language-at-a-time).
+- **Spacing**: **Space after a suggestion**, on by default, except for Bangla, where it starts off so a kar picked inside a word doesn't split it. Turn it off and a word you pick from the suggestion strip while typing this language goes in without a space after it, so an ending can follow straight on: pick a Bangla word and add its case marker or suffix without deleting a space first. Your other languages still get the space. The row is hidden while the main **Space after a suggestion** switch in Typing is off, because that switch turns the space off for every language. See [Suggestions & prediction](/smart/suggestions/).
+- **Numerals**: which digits the number row and keypad show while this language is active. Two options: the language's own digits (the default) or plain `0-9`. This is set per language, so Arabic can show `٠-٩` while English next to it stays on `0-9`. Languages that already use `0-9` don't get the group at all, and no language offers another language's digits, since nobody writes Bangla with Persian numerals.
+- **Also suggest from**: appears once you have more than one language enabled. Toggle other enabled languages on to blend their words into suggestions while you type this one. Words pulled in this way are never autocorrected away.
+- **Dictionaries**: the language's word list, emoji keywords and word pairs, one row each. A row on the device has a checkbox and a delete button, a row that is not has a Download button, and a **Download all** button sits in the heading while anything is missing. [Downloadable dictionaries](/languages/dictionaries/) covers it in full.
+- For Chinese, Japanese, and Cantonese, a conversion-dictionary group with a larger conversion dictionary plus script and input-scheme options. [Chinese, Japanese & Korean](/languages/cjk/) covers it.
+
+Three more groups turn up on the languages that have them: **Clusters** on a conjunct script (see the note below), **Spellings** on Bangla, whose "Use known spellings" switch turns "tmr" into তোমার and "table" into টেবিল, and **Style** on the Fancy Text entry, which is where its 32 styles are listed.
+
+A **Remove** button sits at the bottom once you have more than one language enabled. Removing a language turns off every layout that belongs to it. If anything was downloaded for it, a dialog asks whether that goes too, and names the size: its word list and phonetic index, emoji keywords, word pairs, spell checker, Chinese or Japanese dictionaries and Bangla's Avro dictionary. The neural suggestions model is shared, so it's offered only when no language left on still uses it. **Keep** removes the language and leaves the files.
+
+## Switching between enabled languages
+
+Once more than one layout is enabled, cycle between them with the <KeyCap>🌐</KeyCap> key, a spacebar swipe, or by holding the spacebar and dragging to the one you want. [Switching languages](/languages/switching/) has the full detail, including the hold-drag picker and how the cycle order is set. That order is its own setting, **Switch order** on the Languages screen, and it reorders every enabled *layout* rather than every language. AZERTY and QWERTY keep separate slots in the cycle even though they're both "English."
+
+## Where languages show up outside the keyboard
+
+Two settings on the Languages screen connect your language choices to the rest of Android. Both sit on the language list itself rather than on any per-language screen.
+
+**Remember language per app**, under Per-app language, is off by default. Turn it on and the keyboard remembers which layout you last explicitly switched to in each app. Reopening that app's text field restores it, while apps you haven't picked a language in follow your last-used layout globally. A field that requires Latin input (a password box) or that advertises its own language to the keyboard still overrides the memory either way.
+
+**List languages in the Android switcher**, under System language switcher, is off by default. Turn it on and every enabled layout is registered as an Android input-method subtype, so the system's "Choose input method" sheet lists each one and can switch directly to it. It starts off because that sheet draws a subtype's label in the same slot where it draws the name of a keyboard with no subtypes, so a single language name sitting there just reads as the keyboard's name. Left off, switching stays entirely inside the keyboard. It still tells Android the language you're typing in, under the keyboard's own name, so a system spell checker set to "use system language" checks that language rather than the phone's. Turn it on and a second toggle appears: **Show app name first**, off by default, which puts "WM Keyboard" ahead of the language in the switcher's label instead of after it.
+
+<PhoneFrame caption="Further down the Languages screen: per-app language memory and the Android system switcher toggle.">
+  <Shot id="languages/list-per-app-and-switcher" alt="Further down the Languages screen: per-app language memory and the Android system switcher toggle." />
+</PhoneFrame>
+
+## The language the app itself speaks
+
+Everything above is about the languages you *type*. The words the app *shows
+you*, on its settings screens, its panels and its keys, are a separate thing,
+and they now come in 48 languages besides English.
+
+The app follows your phone's language on its own. Set the phone to German and
+the settings screens are in German the next time you open them. To give the app
+a language of its own, without changing the phone, open Settings, then Apps,
+then WM Keyboard, then Language, and pick one there. That entry is an Android
+13 feature and does not appear on older releases, which follow the phone.
+
+A right-to-left phone language (Arabic, Hebrew, Persian, Urdu) translates the
+text but does not mirror the keyboard. The keys stay where the layout puts
+them, so the Arabic board has ض at the left end of its top row and backspace on
+the right whatever the phone is set to. The suggestion strip still runs
+right-to-left while you type a right-to-left script.
+
+On a right-to-left board the bracket keys draw the glyph your text will show.
+Right-to-left text flips paired brackets, so the opening bracket reads as `)`,
+and the key that types it is drawn as `)` too. The same goes for `[ ]`,
+`{ }`, `< >` and `« »`, in the corner hints and the hold popups as well. The
+characters typed are the standard ones, so an opening bracket stays an opening
+bracket when the text is copied anywhere else.
+
+The 48 are Arabic, Bengali, Bulgarian, Catalan, Chinese, Croatian, Czech,
+Danish, Dutch, Estonian, Finnish, French, German, Greek, Gujarati, Hebrew,
+Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Korean,
+Latvian, Lithuanian, Malayalam, Marathi, Norwegian, Persian, Polish,
+Portuguese, Punjabi, Romanian, Russian, Slovak, Slovenian, Spanish, Swahili,
+Swedish, Tamil, Telugu, Thai, Turkish, Ukrainian, Urdu, Vietnamese and Zulu.
+
+:::caution[These are machine translations]
+Google Play translated them, and nobody has read them line by line. Expect a
+clumsy sentence, and expect a term that does not match the one your phone uses
+for the same idea. A string that has no translation yet falls back to English,
+so a screen can show both at once. Corrections are welcome: report the string
+and the language, and see [Contributing](/development/contributing/) for how
+translations get regenerated.
+:::
+
+:::note[Visarga on the colon key]
+Bengali (ঃ) and Devanagari (ः) both write a visarga that's drawn as a colon and does a different job. The symbol layers are one grid shared by every language, so there's no key to give it. It rides the long-press of the colon key instead, on every layout in those two scripts.
+:::
+
+:::note[Conjunct clusters]
+A language on a script that forms conjunct clusters (Bengali, Devanagari, Tamil, Gurmukhi, and several others) gets a **Clusters** group on its own screen. Its **Conjunct-aware backspace** toggle is off by default, and turning it on makes one backspace remove a whole cluster like ক্ষ or क्ष instead of one code point at a time. It's per language, so you can have whole clusters go in one press in Bangla and code points in Hindi.
+:::
+
+:::note[The Persian half-space]
+Persian writes می‌رود and کتاب‌ها with a zero-width non-joiner between the parts: the letters stay unjoined but no space is typed. The Persian board has a key for it next to the space bar, drawn as ◌│◌. Its grid follows the standard Iranian arrangement, so چ sits at the end of the third row and ژ is the long-press on ز. A second Persian layout, **فارسی (Gboard)**, lays the keys out the way Gboard does: ژ gets a key of its own beside ز, there is no <KeyCap>Shift</KeyCap>, and the vowel marks, ؟ and ! are the hold on the full stop. Add it from the language's layout list.
+
+You don't have to press it for a word the Persian word list knows. Type or glide میکنم or سگها and the suggestion is می‌کنم or سگ‌ها, and autocorrect puts the half-space in when you press space, the same way it puts back a missing accent in Polish. If yours still suggests میکنم, it was downloaded before the half-spaces were added to the list: download it again from the language's Dictionary screen.
+:::
+
+:::note[Vowel marks in Arabic and Persian]
+Neither script has capitals, so <KeyCap>Shift</KeyCap> opens a second set of keys instead. On both boards its top row holds the vowel marks: fatha, damma, kasra, the three tanwin, sukun and shadda, then the superscript alef. Persian adds the hamza above and the madda at the end of that row and follows the Iranian standard layout (ISIRI 9147) for the rest of the shifted set, so ؤ ئ أ إ آ ة sit on the home row and « » are on ن and م.
+:::
+
+## What ships
+
+WM Keyboard ships 3,388 layouts in total, in six groups. On a television every one of them is drawn as an even grid for the remote (see [Android TV and Google TV](/typing/television/)).
+
+36 are built into the app: QWERTY, AZERTY, Dvorak, Colemak, Workman, Halmak, Avro, Khipro Classic, Khipro Dark, Probhat, Jatiya, BSTI, dedicated layouts for French, German, Spanish, Korean, Russian, Arabic, Greek, Hebrew, and Hindi, and the phonetic grids for Hindi, Urdu, Marathi, Gujarati, Punjabi, Odia, Assamese, Tamil, Telugu, Kannada, Malayalam, Persian and Arabic. Two more boards put more than one letter on a key: T9 and Compact QWERTY. See [Ambiguous layouts](/languages/ambiguous/) for how those two work. T9 also ships as a layout file for 315 more languages.
+
+Every letter layout carries the same alternates as QWERTY: a digit on each key of the top letter row, 1 to 0, and a symbol on the keys of the two rows below, shown in the key's corner and typed by a press and hold. On Russian, Ukrainian, Greek, Hebrew, Arabic, Korean, Hindi and Bangla that puts the digit ahead of the letters already on the hold, so ё sits on е behind the 5. AZERTY's lower rows differ in a few places for French: <KeyCap>c</KeyCap> holds `ç` first, <KeyCap>d</KeyCap> holds `€` before `$`, and French's symbols page has `€` on the currency key. Layouts whose author placed digits somewhere else are left as they were, and so are the [Keyman layouts](/languages/keyman/), the Chinese and Japanese layouts and Vietnamese VNI, where a digit means something else to the keyboard. Layouts you make yourself get only the alternates you give them.
+
+829 more are bundled as individual layout files, one per language or variant that isn't among those 21. English has QWERTZ among them, the German grid with Y and Z swapped, for anyone whose hands learned German keyboards but who types in English. Bosnian and Croatian open on QWERTZ too, the grid keyboards are sold with there, with the plain QWERTY version still on the shelf.
+
+Those files include every layout HeliBoard, FlorisBoard and FUTO Keyboard ship that had no match here, so moving over from one of them doesn't mean learning a new grid. Some highlights:
+
+- **Hebrew SI-1452**, the 2018 Israeli standard. ץ and ן move to the top left, ת takes ן's old place, and the bottom row ends at צ. The niqqud are on long-press of the keys the standard puts them on.
+- **Gboard+ for English and Hebrew**, each in two versions. Both carry tool shortcuts and extra characters on long-press. The plain one also puts punctuation on a flick down from each bottom-row letter (z gives `*`, m gives `?`); the swipe-safe one leaves those flicks off, so a glided word can never set one off. The Hebrew pair has no Shift key: each letter's shifted form and its second long-press entry are the English letter on the same key of an SI-1452 desktop keyboard, and on the plain version a flick up from a bottom-row letter types it too, so you can type an English word without switching layouts.
+- **Russian Student, ЯЖЕРТЫ and ЯВЕРТЫ**, the phonetic grids, plus Bulgarian Dvorak.
+- **German, Spanish and Swedish Dvorak**, Bone, Colemak-DH (ANSI), ClearFlow and KASROZ. The last two use tall shift, delete and space keys that cover two rows, and keep a 🌐 key in the bottom row, between <KeyCap>?123</KeyCap> and the comma, so you can switch away from them.
+- **Korean phonetic and Danmoeum** (단모음, where tapping ㅂ ㅈ ㄷ ㄱ ㅅ twice quickly types ㅃ ㅉ ㄸ ㄲ ㅆ, and ㅏ ㅐ ㅓ twice types ㅑ ㅒ ㅕ), Lulua for Arabic, Arabic as Gboard draws it (every letter on a key, no shift key, harakat on long-press of the top row), Akkhor and Unijoy for Bangla, and alphabet-order boards for Kannada, Marathi, Gurmukhi, Gujarati, Malayalam and Tamil.
+- **"Letters row" and "letters on keys" versions** for languages whose usual grid here keeps some letters behind a long-press: Bashkir, Kazakh, Tatar, Chuvash, Yakut, Tajik, Northern and Inari Sami, Esperanto, Ewe, Hausa, Hungarian, Lithuanian, Bosnian, Croatian, Romanian and more. The original layout is still there. The new one sits next to it.
+
+22 languages came with them, mostly minority languages of Russia and the Nordic countries that these keyboards type and WM Keyboard didn't: Kaitag, Abaza, Aghul, Rutul, Tabasaran, Tsakhur, Forest and Tundra Enets, Nganasan, Nenets, Ingrian, Karelian, Ludian, Votic, Lakota, Pite, Ume, Southern and Lule Sami, and Latin-script Kazakh, Kashmiri and Tamazight.
+
+640 more come from comparing every keyboard in Gboard against this list. A board Gboard has and WM Keyboard didn't is here under its language's name with "(Gboard)" after it: Hindi Flick A, Urdu in alphabet order, Baybayin, a desktop-shaped English board with its number row. Where the two had the same keys, the letters Gboard keeps on press and hold were added to the WM Keyboard layout after what each key already offered, so nothing moved. They brought 316 languages, listed under English names. Boards Gboard fills in after you type a consonant, as it does for Amharic, are fixed here: the forms it would show are on press and hold.
+
+77 are [phonetic layouts](/languages/phonetic/#languages-with-rules-only) for languages that had none, from Maithili and Pashto to Santali in Ol Chiki. Nine language and script pairs came with them.
+
+663 more come from the same comparison against Samsung Keyboard. Samsung's alphabetical and column boards for the Indic languages keep the vowels on one page and the vowel signs and conjuncts on the next, and the key in the corner turns the page. Its QWERTY boards are here for each Latin-script language it offers, as are its versions with ɛ and ɔ on keys, with ñ on a key, and with an apostrophe key. QWERTZ and AZERTY stay only where they are the language's usual board, such as Breton, Occitan and Low German. T9 keypads with Samsung's own letter groups sit alongside the ETSI ones. The rest are its national boards where ours differs, named "(Samsung)". Where a Samsung board matched one of ours, the letters it holds for that language joined the end of our key's long-press, so nothing moved. They bring 286 more languages, nearly all minority languages written in Latin script, and none of them has a word list yet. Its Korean [Moakey, Vega and Cheonjiin Plus](/languages/cjk/) and its 12-key Zhuyin and stroke pads came with typing engines of their own.
+
+The remaining 862 are key grids converted from the [Keyman keyboards repository](https://github.com/keymanapp/keyboards), which is where most of the long tail comes from. They're what takes the language count past 800. See [Keyman layouts](/languages/keyman/) for what they are and what they can and can't do yet.
+
+Which of them start enabled depends on your phone. A fresh install reads your phone's language list and turns on one layout per language it recognises, up to four, always including English. English is there because it's what fields that force plain ASCII fall back to: passwords, URLs, email addresses. A phone set to Bangla starts with Avro and QWERTY. A phone set only to English starts with QWERTY alone. Your region is *not* used here. Being somewhere is a reason to offer a language, not to switch your keyboard to it.
+
+Every other language sits in the catalogue until you add it, loaded on demand, so a language you haven't picked yet costs nothing.
+
+## The long tail
+
+Past the languages most keyboards cover, the catalogue reaches into territory most don't:
+
+- **Indic InScript** layouts for Marathi, Nepali, Sanskrit, Tamil (Tamil99), Sinhala (Wijesekara), Telugu, Kannada, Malayalam, Gujarati, Punjabi, Odia, Konkani, Maithili, Bodo, Dogri, and Bhojpuri. On Marathi, every key's shifted letter is also its first press-and-hold alternate, so hold क for ख without touching shift. Conjuncts ride along on the hold too: क्ष on क, ज्ञ on ज, त्र on त, श्र on स.
+- **Minority Cyrillic** alphabets: Tatar, Bashkir, Chuvash, Chechen, Ossetian, Yakut, Udmurt, Komi, Kalmyk, Tuvan, Buryat, Erzya, Mari, Adyghe, Kabardian, Abkhaz, Avar, Lezgian, and more.
+- **Ethiopic** script for Amharic, Tigrinya, and Tigre; **Syriac**, **Polytonic Greek**, and classical **Sanskrit** and **Latin** for liturgical and historical typing; **Thaana** (Dhivehi), **Tifinagh** (Tamazight, Tachelhit), and **N'Ko**. Tachelhit also has a Latin entry of its own, since most of what is written in it online uses the Latin alphabet.
+- **Syllabaries**: Cherokee has its own script, and Inuktitut types in Canadian Aboriginal Syllabics.
+- **Constructed languages** (twelve of them): the auxiliary-language family Esperanto, Interlingua, Ido, Interlingue, Novial, Lingua Franca Nova, Kotava, and Volapük, alongside Lojban, Klingon, Tolkien's Quenya, and Toki Pona. Klingon and Lojban have extras of their own, below.
+
+<PhoneFrame caption={`The Cherokee syllabary (${cherokee.layout?.name ?? cherokee.name}) rendered from its real layout file.`}>
+  <LayoutExplorer layout={cherokee} />
+</PhoneFrame>
+
+### Klingon and Lojban
+
+In Klingon a capital is a different letter: `q` and `Q` are two consonants, and `D`, `H`, `I` and `S` are only ever written as capitals. Lojban is written in lower case, and a capital there marks stress. So for both languages the keyboard never changes case on its own. Auto-capitalize leaves the start of a sentence alone, a capital is not carried over from the language you switched from, and a suggestion is never re-cased to follow what you typed.
+
+- **Layouts.** Klingon's QWERTY types `D`, `H`, `I`, `S` and `Q` without Shift, and puts `ch`, `gh`, `ng` and `tlh` on keys of their own where English has letters Klingon never uses. Hold `q` for `Q` and `t` for `tlh`. Klingon also has a **pIqaD** layout in its own alphabet, with its digits on the top row's holds. pIqaD lives in Unicode's Private Use Area, which no phone font covers, so the first time the layout is shown the keyboard downloads a font for it (Klingon pIqaD HaSta, about 100 KB, SIL Open Font License) and draws the keys in it from then on. pIqaD has its own row at <SettingsPath path="Appearance / Keyboard font / Klingon pIqaD font" />, apart from English, so you can draw it in any pIqaD font you import without changing the font of your Latin keys. The app you type into needs a pIqaD font of its own to show what you write.
+- **Word list.** Klingon's downloadable word list keeps every word's capitals, and the strip keeps words apart that differ only in case: typing `qa` offers `qaH` (sir), typing `Qa` offers `QaH` (help). A word typed with the right letters in the wrong case, such as `qapla'`, is fixed to `Qapla'` when you press space. A Klingon list downloaded before this update was all lower case, so download it again to get its capitals.
+- **Endings.** Once what you have typed is a whole Klingon word, the strip also offers its likeliest endings, so `jatlh` offers `jatlhpu'` and `jatlhbe'`. Whether a word takes noun or verb endings is read from the forms the word list already has.
+- **Numbers.** Type digits and the strip offers the number in Klingon words: `42` becomes `loSmaH cha'`.
+- **Glide.** The apostrophe is a letter in both languages, so a swipe draws it through the `'` key without the **Apostrophe in a glide** setting having to name one, and a swipe through the `ch` key writes the `c` of `ch`.
+
+The registry also carries a handful of entries that aren't spoken languages at all but behave like one in every setting on this page: IPA, musical notation, chorded Braille, and Morse code, plus a Unicode "fancy text" keyboard with 31 switchable styles. These get their own pages, [Music, braille & Morse](/languages/notation/) and [Fancy text](/languages/fancy-text/), because typing on them works differently enough to need separate walkthroughs.
+
+## Options
+
+<SettingsPath path="Languages & layouts" />
+
+Everything on this page is reachable from the app's **Languages** screen, and the exhaustive setting-by-setting reference lives on [Languages](/reference/settings/languages/) in the Settings reference. A few settings that touch languages live elsewhere:
+
+- **Emoji keyword downloads** sit under <SettingsPath path="Emoji / Emoji keywords" /> and are covered on [Emoji customization](/emoji/customization/).
+- **Word lists, emoji keywords, word pairs and custom dictionaries** sit under <SettingsPath path="Languages & layouts / (a language) / Dictionaries" /> and are covered on [Downloadable dictionaries](/languages/dictionaries/).
+- **Your own layouts**, including edits of a shipped layout, live under <SettingsPath path="Layout & size / Key layouts" /> and are covered on [Custom layouts & the layout editor](/languages/custom-layouts/).
+
+## Details & edge cases
+
+- **A language you haven't added yet isn't silently active.** Only enabled layouts are ever offered on the <KeyCap>🌐</KeyCap> cycle or spacebar swipe. Everything else sits in the catalogue, unloaded, until you search for it and tap it.
+- **Dictionaries aren't tied to whether a language is "complete."** Only English and Bangla bundle a built-in word list. Nearly every other language in the catalogue starts with zero suggestions beyond what you type, until you download or import one. See [Downloadable dictionaries](/languages/dictionaries/) for exactly which languages have which.
+- **"Also suggest from" only adds words.** It never demotes the language you're actually typing. Suggestions from a secondary language are blended in below your main language's, even when the secondary has a large downloaded dictionary and the main language only its built-in one, and they're exempt from autocorrect, so a word you meant to borrow doesn't get "corrected" back.
+- **A letter of the alphabet gets a key; an accent gets a hold.** Swedish å, ä and ö, Danish and Greenlandic æ and ø, Norwegian ø and æ, Faroese ð, Estonian õ and ü, Icelandic þ and æ, Turkish ı and ğ, Maltese ġ and ħ: each has its own seat in its alphabet, so each gets its own key, exactly where that language's national keyboard puts it. French é, Spanish á, Polish ą, Czech č and German ä sort with the letter they're built on, so they stay on its long-press, which is also where every phone keyboard keeps them. If a layout is missing a key its national keyboard has, that's a bug worth reporting.
+- **A sentence mark replaces the full stop on the letters page only.** Japanese `。`, Bengali and Hindi `।`, Armenian `։`, Khmer `។`, Burmese `။` and the rest take the key beside the spacebar, with ASCII `.` moved to the front of its long-press. Every other layer leaves the key as a plain `.` and puts the mark on its long-press instead. That covers the symbols pages, an Fn or Number layer and a secondary grid, because those are where decimals, file names and addresses are typed. In a layout of your own, set a key's **Field adaptation** to "exactly as laid out" to keep a literal full stop anywhere at all.
+- **A question mark is always one hold away.** On the built-in Latin grids it's the hold on <KeyCap>m</KeyCap>. AZERTY keeps it on the apostrophe key instead, with <KeyCap>/</KeyCap> on the <KeyCap>m</KeyCap>. A layout that has no key like that gets it at the front of the full stop key's long-press instead, so holding the key beside the spacebar and letting go types it. Languages written in Arabic script (Persian, Urdu, Arabic, Pashto, Sorani, Sindhi) and Dhivehi get their own `؟` there rather than `?`, and on those languages every key that would type `?`, the one on the symbols page included, types `؟` instead, with `?` first on its long-press for addresses and code.
+- **Sorani's four-row and five-row standard layouts and New Qwerty have no Shift.** Letters like ڵ, ڕ and ڤ sit on their own keys or on the hold of their base letter, and the Shift position on the five-row layout types the Tatweel ـ.
+- **The Arabic vowel marks are on the full stop's hold.** On every Arabic-script layout, the end of the full stop key's long-press carries fatha, damma, kasra, sukun, shadda, the three tanwin, the dagger alef, maddah, hamza above and below, and the subscript alef. Each one is drawn on a dotted circle so you can see it, and typing it puts it over the letter before the cursor. Sorani is the exception: Kurdish isn't written with them, so its full stop key leaves them off.
+- **Numerals change the glyphs, not the script.** Switching Hindi from `०-९` to `0-9` leaves its dictionary, its layout, and the script its letters use alone. All it changes is which glyphs `0`-`9` show as and, depending on the field, which glyphs get committed.
+- **Romanized languages widen the catalogue's reach without doubling its content.** Banglish, Hinglish, Arabizi, and the other twelve Romanized entries are dictionary-only variants: same underlying language, plain Latin QWERTY layout, suggestions from a Latin-script list.
+- **Per-app language memory and the system switcher are independent of each other.** You can have Android list every layout as a subtype while per-app memory stays off, or the reverse. Turning one off doesn't touch the other.
+
+## Every language
+
+import FilterTable from '@components/FilterTable.astro';
+import languages from '@data/languages.json';
+
+All {languages.length} registered languages. Filter by name, id or script;
+click a heading to sort.
+
+<FilterTable
+	columns={[{ label: 'Id' }, { label: 'Name' }, { label: 'English name' }, { label: 'Script' }]}
+	rows={languages.map((l) => [l.id, l.name, l.english, l.script])}
+	placeholder="Filter 1,555 languages…"
+	caption="Generated from the app's language registry."
+/>
+{/* keep it */}

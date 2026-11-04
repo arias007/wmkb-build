@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <plurals name="core_keyman_diagonal_flicks_dropped">
+        <item quantity="one">ॲपने %1$d डायगोनल फ्लिक काढले. हा कीबोर्ड फक्त वर, खाली, डावीकडे आणि उजवीकडे फ्लिकला सपोर्ट करतो.</item>
+        <item quantity="other">ॲपने %1$d डायगोनल फ्लिक्स काढले. हा कीबोर्ड फक्त वर, खाली, डावीकडे आणि उजवीकडे फ्लिकला सपोर्ट करतो.</item>
+    </plurals>
+    <plurals name="core_keyman_keys_type_their_labels">
+        <item quantity="one">%1$d की त्यावर छापलेले अक्षर टाईप करते. मूळ कीबोर्डने काय टाईप करायचे हे ठरवण्यासाठी नियमाचा वापर केला.</item>
+        <item quantity="other">%1$d की त्यावर छापलेली अक्षरे टाईप करतात. मूळ कीबोर्डने काय टाईप करायचे हे ठरवण्यासाठी नियमांचा वापर केला.</item>
+    </plurals>
+    <plurals name="core_keyman_multitap_unconverted">
+        <item quantity="one">या कीबोर्डमध्ये %1$d की आहे जी तुम्ही पेजेस किंवा अक्षरांच्या चक्रासाठी वारंवार टॅप करता. ॲप हे चक्र कॉपी करू शकत नाही, म्हणून प्रत्येक टॅप पहिल्या टॅपप्रमाणे कार्य करते.</item>
+        <item quantity="other">या कीबोर्डमध्ये %1$d की आहेत ज्या तुम्ही पेजेस किंवा अक्षरांच्या चक्रासाठी वारंवार टॅप करता. ॲप ही चक्रे कॉपी करू शकत नाही, म्हणून प्रत्येक टॅप पहिल्या टॅपप्रमाणे कार्य करते.</item>
+    </plurals>
+    <string name="core_keyman_rules_missing">हे कीबोर्ड त्याच्या की काय टाईप करतील हे ठरवण्यासाठी नियमांचा वापर करते. ॲपमध्ये ते नियम नाहीत, त्यामुळे प्रत्येक की त्यावर छापलेले अक्षरच टाईप करते.</string>
+    <plurals name="core_keyman_special_keys_dropped">
+        <item quantity="one">ॲपने %1$d की काढली आहे. या कीबोर्डमध्ये असे काम करणारी कोणतीही की नाही.</item>
+        <item quantity="other">ॲपने %1$d की काढल्या आहेत. या कीबोर्डमध्ये असे काम करणाऱ्या कोणत्याही की नाहीत.</item>
+    </plurals>
+</resources>

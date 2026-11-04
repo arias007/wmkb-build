@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ================================================================== -->
+    <!-- Online photo backgrounds: find photos, keep photos, and the        -->
+    <!-- background that changes on a schedule.                             -->
+    <!-- ================================================================== -->
+
+    <!-- Rows in the theme editor, and the screens they open -->
+    <string name="photo_find_title">Find a photo online</string>
+    <string name="photo_find_subtitle">Search Unsplash and Pexels</string>
+    <string name="photo_library_title">Photo collection</string>
+    <string name="photo_library_subtitle">The photos you keep, ready for any theme</string>
+    <string name="photo_rotation_title">Rotating background</string>
+    <string name="photo_rotation_subtitle">Change the background on a schedule</string>
+    <string name="photo_detail_title">Photo</string>
+    <string name="photo_services_title">Photo services</string>
+    <string name="photo_services_subtitle">Keys for Unsplash and Pexels</string>
+
+    <!-- Service keys -->
+    <string name="photo_providers_section_title">Photo services</string>
+    <string name="photo_unsplash_key_label">Unsplash access key</string>
+    <string name="photo_unsplash_key_hint">Get a free key at unsplash.com/developers</string>
+    <string name="photo_pexels_key_label">Pexels API key</string>
+    <string name="photo_pexels_key_hint">Get a free key at pexels.com/api</string>
+    <string name="photo_providers_body">Photos come from Unsplash and Pexels. The app can use its own key. Add your own key to get more requests each hour.</string>
+
+    <!-- Browse -->
+    <string name="photo_provider_all_label">All</string>
+    <string name="photo_orientation_landscape_label">Wide</string>
+    <string name="photo_color_any_label">Any color</string>
+    <string name="photo_color_monochrome_label">Black and white</string>
+    <string name="photo_color_black_label">Black</string>
+    <string name="photo_color_white_label">White</string>
+    <string name="photo_color_gray_label">Gray</string>
+    <string name="photo_color_brown_label">Brown</string>
+    <string name="photo_color_red_label">Red</string>
+    <string name="photo_color_orange_label">Orange</string>
+    <string name="photo_color_yellow_label">Yellow</string>
+    <string name="photo_color_green_label">Green</string>
+    <string name="photo_color_teal_label">Teal</string>
+    <string name="photo_color_blue_label">Blue</string>
+    <string name="photo_color_purple_label">Purple</string>
+    <string name="photo_color_magenta_label">Magenta</string>
+    <string name="photo_grid_band_body">The bright band on each photo is the part that the keyboard uses.</string>
+    <string name="photo_loading_more_progress">The app is getting more photos</string>
+    <string name="photo_end_of_results">There are no more photos for this search</string>
+    <!-- %1$s is the word that the user typed. -->
+    <string name="photo_search_empty">There are no photos for <xliff:g id="query" example="mountains">%1$s</xliff:g>. Try a different word.</string>
+    <string name="photo_idle_body">Type a subject, or select one of the chips above.</string>
+    <string name="photo_need_key_title">Add a key for a photo service</string>
+    <string name="photo_need_key_body">This app has no key for Unsplash or Pexels. Add your own key to search for photos.</string>
+    <string name="photo_need_key_action">Add a key</string>
+    <string name="photo_quota_title">There are no requests left</string>
+    <!-- %1$s is a service name, such as Unsplash. -->
+    <string name="photo_quota_body"><xliff:g id="service" example="Unsplash">%1$s</xliff:g> has no requests left in this hour. Add your own key to get more requests, or try again later.</string>
+    <!-- %1$s is a service name. Shown when the other service continues to work. -->
+    <string name="photo_quota_fallback_body"><xliff:g id="service" example="Unsplash">%1$s</xliff:g> has no requests left in this hour. These photos come from the other service.</string>
+    <string name="photo_key_rejected_title">The service did not accept the key</string>
+    <string name="photo_key_rejected_body">Examine the key, then try again.</string>
+
+    <!-- Credit. Both services make it necessary to show the name of the
+         photographer, with a link, where their photo is shown. -->
+    <!-- %1$s is a photographer, %2$s a service such as Unsplash. -->
+    <string name="photo_credit_line">Photo by <xliff:g id="photographer" example="Ana Silva">%1$s</xliff:g> on <xliff:g id="service" example="Unsplash">%2$s</xliff:g></string>
+    <string name="photo_licence_body">Unsplash and Pexels supply the photos. Each photo keeps the name of its photographer.</string>
+    <!-- %1$s is a description of the photo from the service, %2$s a photographer. -->
+    <string name="photo_tile_desc"><xliff:g id="description" example="a misty forest">%1$s</xliff:g>, by <xliff:g id="photographer" example="Ana Silva">%2$s</xliff:g></string>
+    <!-- Used when the service supplies no description of the photo. -->
+    <string name="photo_tile_fallback_desc">Photo by <xliff:g id="photographer" example="Ana Silva">%1$s</xliff:g></string>
+
+    <!-- Use a photo -->
+    <string name="photo_use_section_title">Preview this photo for</string>
+    <string name="photo_use_slot_title">Use it for</string>
+    <string name="photo_use_slot_portrait_label">Portrait</string>
+    <string name="photo_use_slot_landscape_label">Landscape</string>
+    <string name="photo_use_slot_both_label">Both</string>
+    <string name="photo_apply_action">Use as the background</string>
+    <string name="photo_save_action">Add to the collection</string>
+    <string name="photo_saved_action">In the collection</string>
+    <string name="photo_view_source_action">Open the page of the photo</string>
+    <string name="photo_download_progress">The app is getting the photo</string>
+    <!-- %1$s is the name of a theme. -->
+    <string name="photo_applied_title">This photo is the background of <xliff:g id="theme" example="Forest">%1$s</xliff:g></string>
+    <string name="photo_applied_body">Change the photo below, or press Done.</string>
+    <string name="photo_apply_no_themes_body">You have no themes of your own. Make a theme first, then use a photo on it.</string>
+    <string name="photo_preview_upright_label">Portrait</string>
+    <string name="photo_preview_sideways_label">Landscape</string>
+
+    <!-- Readability -->
+    <string name="photo_readability_warn_title">The keys are difficult to read</string>
+    <string name="photo_readability_warn_dark_body">This photo and the key text have almost the same brightness. A dark layer on the photo makes the keys easy to read.</string>
+    <string name="photo_readability_warn_light_body">This photo and the key text have almost the same brightness. A light layer on the photo makes the keys easy to read.</string>
+    <string name="photo_readability_fix_dark_action">Make the photo dark</string>
+    <string name="photo_readability_fix_light_action">Make the photo light</string>
+    <string name="photo_readability_busy_title">The photo has too much detail</string>
+    <string name="photo_readability_busy_body">This photo has much detail where the keys are. Blur the photo to make the key text easy to read.</string>
+    <string name="photo_readability_busy_action">Blur the photo</string>
+    <string name="photo_readability_ok_body">The keys are easy to read on this photo.</string>
+
+    <!-- Colors from a photo -->
+    <string name="photo_seed_title">Match the colors to the photo</string>
+    <string name="photo_seed_subtitle">Make the theme colors again from this photo</string>
+    <string name="photo_seed_from_collection_action">Match the colors to this photo</string>
+    <string name="photo_reveal_title">Show more of the photo</string>
+    <string name="photo_reveal_body">The app made the keys and the tool circles see-through, so that more of the photo is visible. Change the key colors in this theme to adjust it.</string>
+    <string name="photo_seed_keeps_image_body">The theme colors changed. The photo is still there, because the app kept the see-through board.</string>
+    <string name="photo_seed_dialog_body">The app replaces each color of the theme. The background image, the gradients, the key shape and the corners do not change.</string>
+
+    <!-- Rotation -->
+    <string name="photo_rotation_intro_title">A background that changes</string>
+    <string name="photo_rotation_intro_body">The keyboard keeps some photos ready and changes the background on a schedule. Your saved themes do not change.</string>
+    <string name="photo_rotation_start_action">Turn on the rotation</string>
+    <string name="photo_rotation_on_title">Rotate the background</string>
+    <string name="photo_rotation_on_subtitle">Turn it off to keep the photo that is up now</string>
+    <string name="photo_rotation_schedule_section_title">Schedule</string>
+    <string name="photo_rotation_interval_title">How frequently</string>
+    <string name="photo_rotation_shuffle_title">Change the photo now</string>
+    <string name="photo_rotation_shuffle_subtitle">Go to the next photo</string>
+    <string name="photo_rotation_shuffle_action">Change</string>
+    <string name="photo_rotation_now_section_title">In use now</string>
+    <string name="photo_rotation_now_empty_body">There is no photo yet. The app is getting the first photos.</string>
+    <!-- %1$d is the number of photos that are ready, %2$d the number that the app keeps. -->
+    <string name="photo_rotation_filling_progress">The app is getting photos: <xliff:g id="ready" example="3">%1$d</xliff:g> of <xliff:g id="total" example="8">%2$d</xliff:g></string>
+    <string name="photo_rotation_no_source_body">No source is on. Turn on one source or more below.</string>
+    <string name="photo_rotation_sources_section_title">Sources</string>
+    <string name="photo_rotation_source_saved_title">Photo collection</string>
+    <string name="photo_rotation_source_saved_subtitle">The photos you added yourself</string>
+    <string name="photo_rotation_source_online_title">Online photos</string>
+    <string name="photo_rotation_source_online_subtitle">New photos from Unsplash and Pexels</string>
+    <string name="photo_rotation_online_section_title">Online photos</string>
+    <string name="photo_rotation_subject_body">Subjects and search words are not necessary. If you give none, the app uses the selected photos of the service.</string>
+    <string name="photo_rotation_topics_title">Subjects</string>
+    <string name="photo_rotation_topics_subtitle">Optional</string>
+    <string name="photo_rotation_terms_label">Search words (optional)</string>
+    <string name="photo_rotation_terms_hint">Put a comma between the words</string>
+    <string name="photo_rotation_safe_title">Safe photos only</string>
+    <string name="photo_rotation_safe_subtitle">Tell the service to remove adult photos</string>
+    <string name="photo_rotation_wide_title">Wide photos only</string>
+    <string name="photo_rotation_wide_subtitle">A keyboard is wide and short, so wide photos fit better</string>
+    <string name="photo_rotation_metered_title">Use mobile data</string>
+    <string name="photo_rotation_metered_subtitle">Get photos when there is no Wi-Fi</string>
+    <string name="photo_rotation_metered_saver_subtitle">Off on mobile data while Data saver stops background downloads</string>
+    <string name="photo_rotation_metered_saver_nav_subtitle">Change what happens on mobile data</string>
+    <string name="photo_rotation_storage_section_title">Photos and storage</string>
+    <string name="photo_rotation_pool_title">Photos to keep ready</string>
+    <string name="photo_rotation_pool_info">More photos make the background repeat less frequently, but the app uses more storage. The app keeps the photos on the device, so the background changes also when there is no network.</string>
+    <string name="photo_rotation_scope_title">Change the background of</string>
+    <string name="photo_rotation_scope_pick_title">Select the themes</string>
+    <string name="photo_rotation_delete_downloads_title">Delete the photos that the app got</string>
+    <string name="photo_rotation_delete_downloads_subtitle">The app will get a new set at the next change</string>
+    <!-- %1$d is the number of subjects that the user selected. -->
+    <plurals name="photo_rotation_topics_value">
+        <item quantity="one">%1$d selected</item>
+        <item quantity="other">%1$d selected</item>
+    </plurals>
+
+    <!-- Library -->
+    <string name="photo_add_device_title">Add from this device</string>
+    <string name="photo_add_device_subtitle">The app copies each photo, so it stays available</string>
+    <string name="photo_storage_title">Storage in use</string>
+    <string name="photo_library_empty_title">The collection is empty</string>
+    <string name="photo_library_empty_body">Add photos from a service or from this device. The rotating background uses them.</string>
+    <string name="photo_library_empty_action">Find photos online</string>
+    <plurals name="photo_pool_count">
+        <item quantity="one">%1$d photo is ready</item>
+        <item quantity="other">%1$d photos are ready</item>
+    </plurals>
+
+    <!-- Accessibility -->
+    <string name="photo_high_contrast_body">High contrast keys is on, so the keyboard does not show background photos. You can select a photo here, but the keyboard does not show it.</string>
+
+
+    <!-- %1$d is a whole number of megabytes, for example 24. "MB" is a unit
+         symbol, not a countable noun: it does not inflect. -->
+    <string name="photo_value_megabytes">%1$d MB</string>
+
+    <string name="photo_rotation_look_section_title">How a photo changes the keyboard</string>
+    <string name="photo_rotation_seed_palette_title">Take colours from each photo</string>
+    <string name="photo_rotation_seed_palette_subtitle">Rebuild the theme colours to match the picture</string>
+    <string name="photo_rotation_seed_palette_info">Every time the picture changes, the keyboard picks a colour out of it and builds the theme around that. Leave this off to keep the colours you chose and change only the picture behind them.</string>
+    <string name="photo_rotation_readability_title">Dim a photo that hides the keys</string>
+    <string name="photo_rotation_readability_subtitle">Darken the picture on its own when the letters become hard to read</string>
+    <string name="photo_rotation_readability_info">Photos vary, and a bright one can leave the letters almost invisible. The keyboard checks the contrast after each change and lays a light shade over the picture only when it has to. Turn this off if you would rather the picture always came through exactly as it is.</string>
+    <string name="photo_rotation_key_opacity_title">How solid the keys stay</string>
+    <string name="photo_rotation_key_opacity_subtitle">How much of the picture shows through the keys</string>
+    <string name="photo_rotation_key_opacity_info">When you put a photo behind the keyboard, the keys are made partly see-through so that the picture is visible at all. Lower shows more of the picture and makes the letters harder to read; 100% hides the picture behind the keys entirely. This only changes keys whose colour is fully solid, so a theme where you already set your own transparency is left alone.</string>
+    <string name="photo_rotation_budget_title">Space for ready photos</string>
+    <string name="photo_rotation_budget_subtitle">How much room the waiting pictures may use</string>
+    <string name="photo_rotation_budget_info">The keyboard keeps a few pictures downloaded in advance so that a change is instant rather than a wait. When they pass this size, the oldest ones are deleted. Raise it if you keep a large pool ready, lower it to give the space back.</string>
+</resources>

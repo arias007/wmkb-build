@@ -1,0 +1,324 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_ckb_four_rows",
+    "name": "ستاندارد (Kurdish standard, 5 rows)",
+    "langId": "ckb",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ق",
+              "longPress": [
+                "1",
+                "ٯ",
+                "؈"
+              ]
+            },
+            {
+              "label": "ڤ",
+              "longPress": [
+                "2"
+              ]
+            },
+            {
+              "label": "ف",
+              "longPress": [
+                "3"
+              ]
+            },
+            {
+              "label": "غ",
+              "longPress": [
+                "4"
+              ]
+            },
+            {
+              "label": "ع",
+              "longPress": [
+                "5"
+              ]
+            },
+            {
+              "label": "ھ",
+              "output": "ه",
+              "longPress": [
+                "6",
+                "ھ"
+              ]
+            },
+            {
+              "label": "ە",
+              "longPress": [
+                "7",
+                "ة",
+                "ہ"
+              ]
+            },
+            {
+              "label": "ت",
+              "longPress": [
+                "8",
+                "ط"
+              ]
+            },
+            {
+              "label": "ح",
+              "longPress": [
+                "9"
+              ]
+            },
+            {
+              "label": "خ",
+              "longPress": [
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ش",
+              "longPress": [
+                "ض"
+              ]
+            },
+            {
+              "label": "س",
+              "longPress": [
+                "ص"
+              ]
+            },
+            {
+              "label": "ی",
+              "longPress": [
+                "ي",
+                "ې",
+                "ۍ"
+              ]
+            },
+            {
+              "label": "ێ",
+              "longPress": [
+                "ؽ"
+              ]
+            },
+            {
+              "label": "ل",
+              "longPress": [
+                "&"
+              ]
+            },
+            {
+              "label": "ڵ"
+            },
+            {
+              "label": "ا",
+              "longPress": [
+                "أ",
+                "إ",
+                "آ",
+                "ٱ"
+              ]
+            },
+            {
+              "label": "ن",
+              "longPress": [
+                "("
+              ]
+            },
+            {
+              "label": "ج",
+              "longPress": [
+                ")"
+              ]
+            },
+            {
+              "label": "چ",
+              "longPress": [
+                "/"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ب",
+              "longPress": [
+                "﷽"
+              ]
+            },
+            {
+              "label": "ز",
+              "longPress": [
+                "ظ"
+              ]
+            },
+            {
+              "label": "ر",
+              "longPress": [
+                "ࢪ"
+              ]
+            },
+            {
+              "label": "ڕ",
+              "longPress": [
+                "ڒ"
+              ]
+            },
+            {
+              "label": "د",
+              "longPress": [
+                "ذ",
+                "ﮆ"
+              ]
+            },
+            {
+              "label": "وو"
+            },
+            {
+              "label": "و"
+            },
+            {
+              "label": "ۆ",
+              "longPress": [
+                "ؤ",
+                "ۊ",
+                "ۋ",
+                "ۏ",
+                "ۉ",
+                "ۇ"
+              ]
+            },
+            {
+              "label": "ک",
+              "longPress": [
+                "ك",
+                "ڪ"
+              ]
+            },
+            {
+              "label": "گ",
+              "longPress": [
+                "ﷲ",
+                "ﷻ‌"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ـ",
+              "output": "ـ",
+              "width": 1.5
+            },
+            {
+              "label": "ئ",
+              "longPress": [
+                "ء",
+                "ﺋ",
+                "ﹳ"
+              ]
+            },
+            {
+              "label": "پ",
+              "longPress": [
+                "ث"
+              ]
+            },
+            {
+              "label": "ژ"
+            },
+            {
+              "label": "م",
+              "longPress": [
+                "ﷴ",
+                "ﷺ"
+              ]
+            },
+            {
+              "label": "؟",
+              "longPress": [
+                "?"
+              ]
+            },
+            {
+              "label": "،",
+              "longPress": [
+                "٫"
+              ]
+            },
+            {
+              "label": ":",
+              "longPress": [
+                "؛"
+              ]
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "،",
+              "longPress": [
+                "؟",
+                "؛",
+                "ـ",
+                ",",
+                "!",
+                "?"
+              ]
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                "؟",
+                "،",
+                "؛",
+                "٪",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

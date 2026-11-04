@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- About screen: the Share group. -->
+    <string name="about_share_play_link">Share the Play Store link</string>
+    <string name="about_share_fdroid_link">Share the F-Droid link</string>
+    <string name="about_share_github_link">Share the GitHub link</string>
+    <!-- Text the user sends when they share a link to the app. -->
+    <string name="about_share_blurb">Try WM Keyboard, a very good keyboard app!</string>
+    <!-- Title of the system share sheet. -->
+    <string name="about_share_chooser_title">Share WM Keyboard</string>
+
+    <!-- About screen: the App group. -->
+    <string name="about_app_title">App</string>
+    <string name="about_version_title">Version</string>
+    <string name="about_whats_new_subtitle">What changed in <xliff:g id="version" example="0.6.2">%1$s</xliff:g></string>
+    <!--
+      Subtitle of the version row.
+      %1$s = edition name (Standard or Offline, not translated), %2$s = build type name,
+      %3$s = store name with its separator, or empty,
+      %4$d = the numeric version code.
+    -->
+    <string name="about_version_subtitle"><xliff:g id="flavour" example="Standard">%1$s</xliff:g> build (<xliff:g id="build_type" example="release">%2$s</xliff:g><xliff:g id="channel" example=" · Play Store">%3$s</xliff:g>) · code <xliff:g id="version_code" example="3">%4$d</xliff:g></string>
+    <string name="about_licence_title">Licence</string>
+    <string name="about_source_title">Source code</string>
+    <!-- The switch that renames the launcher entry (#140). The names in quotes are app_name_short and app_name. -->
+    <string name="about_launcher_name_title">Short app name</string>
+    <string name="about_launcher_name_subtitle">Show \"WMK\" under the app icon, not \"WM Keyboard\"</string>
+    <string name="about_launcher_name_info">This changes only the name under the icon, in your app drawer and on your home screen. Everywhere else, such as the Android app settings, the keyboard list and the app stores, the app keeps its full name. If you opened the app from its icon, this screen opens again when you change the name. Your launcher can take a few seconds to show the new name. If the icon goes from your home screen, add it again from the app drawer.</string>
+    <!-- The switch that hides the launcher icon. "App info" is the name of Android's own page for an app. -->
+    <string name="about_launcher_shown_title">Show in app drawer</string>
+    <string name="about_launcher_shown_subtitle">The app icon in your app drawer and on your home screen</string>
+    <string name="about_launcher_shown_info">Turn this off to take the icon away. The keyboard keeps working, and these settings are still a tap away: the settings key on the keyboard, the keyboard\'s entry in Android\'s keyboard settings, or a settings link. The long-press shortcuts on the icon go with it. On Android 10 and newer, Android may put an icon back that opens the App info page instead, because it does that for every installed app with no icon of its own. Only apps that came with the phone escape it. To stop it for every app, run adb shell settings put global show_hidden_icon_apps_enabled 0 from a computer.</string>
+    <!-- The in-app interface language picker (#322). -->
+    <string name="about_app_language_title">App language</string>
+    <string name="app_language_pack_downloading">Downloading the language…</string>
+    <!-- %1$s: the language pack's file name on the release page. -->
+    <string name="app_language_pack_import">This offline build cannot download languages. On another device, get %1$s from this version\'s release page, then import it in Settings › About › Storage. Until then the app stays in English.</string>
+    <string name="app_language_pack_failed">The language did not download. The app stays in English. Check the connection, then pick the language again.</string>
+    <string name="about_app_language_subtitle">The language of the menus and settings. Your typing languages are in Settings, then Languages</string>
+    <!-- The option that follows the phone. %1$s is the phone's language, in that language. -->
+    <string name="about_app_language_system">System default (<xliff:g id="language" example="English">%1$s</xliff:g>)</string>
+    <string name="about_app_language_info">On Android 13 and newer, this is the same setting as the app language in the Android app settings. When you change one, the other changes too. On Android 12 and older, only the settings app changes. The keyboard stays in the language of your phone.</string>
+    <!-- The App language row on the English-only build, which GitHub alone
+         hands out. %1$d is how many languages the other build adds. -->
+    <plurals name="about_app_language_english_only">
+        <item quantity="one">This download of the app has English only. Press to get the version with %1$d more language</item>
+        <item quantity="other">This download of the app has English only. Press to get the version with %1$d more languages</item>
+    </plurals>
+    <plurals name="about_app_language_english_only_link">
+        <item quantity="one">This download of the app has English only. The version with %1$d more language is on GitHub</item>
+        <item quantity="other">This download of the app has English only. The version with %1$d more languages is on GitHub</item>
+    </plurals>
+    <string name="about_all_languages_dialog_title">Get every language?</string>
+    <!-- %1$d is how many languages the other build adds. -->
+    <plurals name="about_all_languages_dialog_body">
+        <item quantity="one">The app downloads the version of WM Keyboard with %1$d more language from GitHub. It is the same app, so it installs over this one and keeps your settings, your words and your themes. When the download is done, press Install. The app and the keyboard then restart once.</item>
+        <item quantity="other">The app downloads the version of WM Keyboard with %1$d more languages from GitHub. It is the same app, so it installs over this one and keeps your settings, your words and your themes. When the download is done, press Install. The app and the keyboard then restart once.</item>
+    </plurals>
+    <string name="about_all_languages_dialog_confirm">Download</string>
+    <string name="about_all_languages_checking_title">Finding the version with every language</string>
+    <string name="about_all_languages_download_title">Download every language</string>
+    <!-- %1$s is the version name, %2$s the download size. -->
+    <string name="about_all_languages_download_subtitle">Version <xliff:g id="version" example="0.5.11">%1$s</xliff:g>, <xliff:g id="size" example="48 MB">%2$s</xliff:g> from GitHub</string>
+    <string name="about_all_languages_downloading_title">Downloading every language</string>
+    <string name="about_all_languages_install_title">Install every language</string>
+    <string name="about_all_languages_install_subtitle">The app and the keyboard restart once. Your settings stay</string>
+    <string name="about_all_languages_installing_title">Installing every language</string>
+    <string name="about_all_languages_failed_title">Could not get every language</string>
+    <string name="about_all_languages_retry_subtitle">Press to try again</string>
+    <string name="about_all_languages_keep_title">Keep English only</string>
+    <string name="about_all_languages_keep_subtitle">Stop, and delete what was downloaded</string>
+    <string name="about_diagnostics_title">Diagnostics</string>
+    <string name="about_diagnostics_subtitle">A record of what the keyboard did. Read it, or send it with a bug report</string>
+    <string name="about_persona_title">How you set the keyboard up</string>
+    <string name="about_persona_subtitle">Your answers from setup. They still decide how much the keyboard shows you</string>
+    <string name="about_persona_unset">Not answered</string>
+    <string name="about_persona_value"><xliff:g example="A good middle" id="depth">%1$s</xliff:g> · <xliff:g example="Several languages" id="languages">%2$s</xliff:g></string>
+    <string name="about_persona_depth_minimal">Keep it simple</string>
+    <string name="about_persona_depth_balanced">A good middle</string>
+    <string name="about_persona_depth_power">Show me everything</string>
+    <string name="about_persona_languages_one">One language</string>
+    <string name="about_persona_languages_many">Several languages</string>
+    <string name="about_replay_onboarding_title">Run setup again</string>
+    <string name="about_replay_onboarding_subtitle">Walk through the first-run choices again. Your settings stay as they are</string>
+    <string name="about_free_software_body">WM Keyboard is free software. You can use it, change it and give it to other people. You must keep the copyright notice and the licence text with it.</string>
+
+    <!-- About screen: the Feedback group. -->
+    <string name="about_feedback_title">Feedback</string>
+    <string name="about_report_bug_title">Report a bug</string>
+    <string name="about_report_bug_subtitle">Open an issue on GitHub. Issues are public, easy to search and easy to track</string>
+    <string name="about_email_developer_title">Email the developer</string>
+    <string name="about_feedback_body">An issue is the better first choice. Another person can have the same problem. Email is also good if your report is private. In both cases, send the Diagnostics text above with your report. It says which build and which device this is, and it never contains the text you typed.</string>
+    <!-- Subject line of the bug-report email draft. -->
+    <string name="about_bug_report_email_subject">WM Keyboard bug report</string>
+    <!-- Shown when no email app can open the draft. %1$s = the email address of the maintainer. -->
+    <string name="about_no_email_app_error">Your device has no email app. Write to <xliff:g id="email" example="name@example.com">%1$s</xliff:g> instead.</string>
+
+    <!-- About screen: the Community group, the Telegram group and the project's social accounts. -->
+    <string name="about_community_title">Community</string>
+    <string name="about_community_body">The Telegram group is the quickest place to ask a question, see what other people have made and hear about a release first. Bugs still go to GitHub, where they can be tracked to a fix. Touch and hold an account to copy its link.</string>
+    <string name="about_telegram_title">Join the Telegram group</string>
+    <string name="about_telegram_subtitle">Ask questions, share layouts and themes, and hear about new releases first</string>
+    <!-- The pill on the Telegram row. Keep it one short word. -->
+    <string name="about_telegram_join">Join</string>
+    <string name="about_follow_title">Follow WM Keyboard</string>
+    <string name="about_follow_subtitle">Tips, new features and short videos</string>
+    <!-- Read out for a social account tile. %1$s = the platform, such as Instagram. %2$s = the account handle, such as @wmkeyboardapp. -->
+    <string name="about_social_cd">WM Keyboard on <xliff:g id="platform" example="Instagram">%1$s</xliff:g>, <xliff:g id="handle" example="@wmkeyboardapp">%2$s</xliff:g></string>
+    <string name="about_link_copied">Link copied</string>
+
+    <!-- About screen: the Documentation group. -->
+    <string name="about_documentation_title">Documentation</string>
+    <string name="about_user_guide_title">User guide</string>
+    <string name="about_privacy_policy_title">Privacy policy</string>
+    <string name="about_privacy_policy_subtitle">What leaves your device, and what never leaves it</string>
+    <!-- How a settings row offers a web link to itself (#646). The three options are Off, Hold and Button. -->
+    <string name="about_setting_links_title">Setting links</string>
+    <string name="about_setting_links_subtitle">Copy a web link that opens one setting</string>
+    <string name="about_setting_links_info">Use this to send someone to a setting. The copy has the path to the setting on its first line, so it can be found by hand too, and the link under it. The link opens this app on that screen and flashes the setting. If the app is not installed, the link opens a page on the website that tells how to get it. "Hold" copies the link when you touch and hold a setting or a group heading. While the favourites button is on, the hold opens a menu with Copy link in it. "Button" shows a small link button next to each setting and group heading. Settings with no fixed name, such as one language or one theme, have no link.</string>
+    <string name="about_setting_links_hold">Hold</string>
+    <string name="about_setting_links_button">Button</string>
+    <!-- Content description of the link button on a settings row. %1$s = the name of the setting. -->
+    <string name="about_setting_link_desc">Copy link to <xliff:g id="setting" example="Autocorrect">%1$s</xliff:g></string>
+    <!-- Shown after a setting link is copied, on Android versions that do not confirm a copy themselves. -->
+    <string name="about_setting_link_copied">Link copied</string>
+
+    <!-- About screen: the Third party group. -->
+    <string name="about_third_party_title">Third party</string>
+    <string name="about_licences_title">Open-source licences</string>
+    <string name="about_licences_subtitle">The libraries and the data inside this build</string>
+
+    <!-- About screen: the Word lists group. -->
+    <string name="about_word_lists_title">Word lists</string>
+    <string name="about_dictionaries_title">Dictionaries</string>
+    <string name="about_dictionaries_subtitle">The seed bigrams, the loanword map and the offensive word list are made by hand for this project, and they use its licence. The word lists you download keep the licences of their sources. The Open-source licences screen gives the full list.</string>
+
+    <!-- Licences screen: introduction and section headings. -->
+    <string name="about_licences_intro_body">This screen lists the components inside this build and the data the app can download. Press a row to read its full licence text. A row with no licence text in the app opens the terms of the provider.</string>
+    <string name="about_section_bundled_title">Inside the app</string>
+    <string name="about_section_data_packs_title">Data packs you can download</string>
+    <string name="about_data_packs_body">The app downloads the data packs from the WM Keyboard data repository when you need them. Each pack keeps the licence of its source, whether you install it or not.</string>
+    <string name="about_section_services_title">Online services</string>
+    <string name="about_services_body">Only the tool that uses an online service contacts it, and only when you open that tool. The app contains no code from those services.</string>
+    <!--
+      Subtitle of one row in the bundled and data-pack lists.
+      %1$s = what the app uses the component for,
+      %2$s = the copyright line of the component (never translated),
+      %3$s = the licence name (never translated).
+    -->
+    <string name="about_licence_row_subtitle"><xliff:g id="used_for">%1$s</xliff:g>\n<xliff:g id="copyright" example="Copyright Google LLC">%2$s</xliff:g> · <xliff:g id="licence" example="Apache-2.0">%3$s</xliff:g></string>
+    <!--
+      Subtitle of one row in the online services list.
+      %1$s = what the app uses the service for,
+      %2$s = the terms that apply (never translated).
+    -->
+    <string name="about_service_row_subtitle"><xliff:g id="used_for">%1$s</xliff:g> · <xliff:g id="terms" example="Provider terms">%2$s</xliff:g></string>
+    <string name="about_licence_text_error">The app cannot read this licence text.</string>
+
+    <!--
+      What the app uses each bundled component for. The component name, the
+      copyright line and the licence name stay in English next to these, so
+      each value here only says what the app does with the component.
+    -->
+    <string name="about_bundled_androidx_used">The user interface toolkit, navigation, DataStore, CameraX and autofill</string>
+    <string name="about_bundled_kotlin_used">The language runtime, concurrency and settings serialisation</string>
+    <string name="about_bundled_coil_used">Loads the images in the GIF, sticker and search panels</string>
+    <string name="about_bundled_okhttp_used">The HTTP client for Coil and the network tools</string>
+    <string name="about_bundled_jsch_used">The SSH connection under the SFTP backup location</string>
+    <string name="about_bundled_bouncycastle_used">The cryptography for the SFTP and SMB backup locations that Android does not have</string>
+    <!-- APNG is an image format. Keep it as it is. -->
+    <string name="about_bundled_apng_used">Reads animated PNG stickers</string>
+    <string name="about_bundled_lottie_used">Draws animated Telegram stickers</string>
+    <string name="about_bundled_zxing_used">Makes the QR codes</string>
+    <string name="about_bundled_zxingcpp_used">Reads QR codes and barcodes on the device without Google services (native library)</string>
+    <string name="about_bundled_zueci_used">Converts the character sets codes are written in, inside the zxing-cpp reader (native library)</string>
+    <string name="about_bundled_luaj_used">The Lua interpreter that runs the plugins in their sandbox</string>
+    <string name="about_bundled_opencv_used">Finds, flattens and cleans up pages in the built-in document scanner (native library)</string>
+    <string name="about_bundled_hunspell_used">Checks spelling and compound words against imported Hunspell dictionaries (native library)</string>
+    <string name="about_bundled_zinnia_used">Reads Chinese and Japanese handwriting on the device without Google services (native library)</string>
+    <string name="about_bundled_divvunspell_used">Checks spelling against GiellaLT finite-state spellers for Sámi, Greenlandic, Faroese and other languages (native library)</string>
+    <string name="about_bundled_voikko_used">Checks Finnish spelling, compound words and inflections against the downloaded voikko-fi dictionary (native library)</string>
+    <string name="about_bundled_harper_used">Checks the grammar and the style offline (native library)</string>
+    <string name="about_bundled_bergamot_used">Translates on the device without Google services (native library, 64-bit Android 9 and later)</string>
+    <string name="about_bundled_bergamot_libs_used">Built into the Bergamot translator\'s native library</string>
+    <string name="about_bundled_ct2_used">Runs the NLLB-200 translation model on the device (native library, 64-bit phones)</string>
+    <string name="about_bundled_ct2_libs_used">Built into the CTranslate2 native library</string>
+    <string name="about_pack_nllb_used">The translation model for the NLLB engine, 200 languages, downloaded from Hugging Face after you accept its non-commercial licence</string>
+    <string name="about_pack_firefox_translations_used">Translation models for the Bergamot engine, downloaded per language direction from Mozilla</string>
+    <string name="about_bundled_rust_crates_used">The libraries that the grammar library depends on</string>
+    <string name="about_bundled_tesseract_used">Reads text in most scripts for the text scanner (native library)</string>
+    <string name="about_bundled_leptonica_used">Prepares the photo for the text scanner (native library)</string>
+    <string name="about_bundled_mlkit_used">Reads handwriting, scans text and barcodes, scans documents, and removes the background from a sticker</string>
+    <string name="about_bundled_play_update_used">Offers the new version of this app, and downloads it (Play Store builds only)</string>
+    <string name="about_bundled_litert_lm_used">Runs the language models on your device</string>
+    <string name="about_bundled_litert_used">Runs offline Whisper speech to text on your device</string>
+    <!-- TFLite is the file format of the model, not an abbreviation to translate. -->
+    <string name="about_bundled_whisper_used">The speech recognition model, in TFLite versions that run on your device</string>
+    <string name="about_bundled_whisper_android_used">The reference for the mel spectrogram and the tokenizer port</string>
+    <string name="about_bundled_mnn_used">The engine that runs the sticker generator\'s models (native library)</string>
+    <string name="about_pack_sdxs_used">The sticker generator\'s one-step model, downloaded on demand</string>
+    <string name="about_pack_taesd_used">The small image decoder inside SDXS</string>
+    <string name="about_pack_waifu2x_used">The upscaler\'s networks, which redraw stickers and photos at a larger size, downloaded on demand</string>
+    <string name="about_pack_sd15_npu_used">The sticker generator\'s NPU model on Snapdragon 8 Gen 3 and newer, downloaded on demand from Qualcomm</string>
+    <string name="about_pack_nsfw_used">The sticker generator\'s picture safety filter, downloaded with its first model</string>
+    <string name="about_bundled_llama_cpp_used">The engine that runs GGUF models for on-device AI (native library)</string>
+    <string name="about_bundled_whisper_cpp_used">The engine that runs the faster Offline Whisper models on your device, and those models</string>
+    <string name="about_bundled_rime_used">The optional RIME engine for Chinese and Cantonese, with LevelDB, yaml-cpp, marisa-trie, OpenCC and Boost</string>
+    <string name="about_bundled_mozc_used">The optional Mozc engine for Japanese, with Abseil and Protocol Buffers, and the Mozc dictionary it downloads (IPAdic, the Okinawa dictionary and the Japanese usage dictionary)</string>
+    <string name="about_bundled_executorch_used">The engine that runs the Offline Asr4All models on your device</string>
+    <!-- Asr4All is a model name and is not translated. -->
+    <string name="about_bundled_futo_swipe_used">Glide typing powered by FUTO Swipe: the neural glide models, downloaded on request when that glide engine is picked</string>
+    <string name="about_bundled_asr4all_used">The Offline Asr4All speech recognition models, downloaded on request. They may not be used for surveillance or profiling; dictation is allowed</string>
+    <!-- Parakeet and Moonshine are model names and are not translated. -->
+    <string name="about_bundled_parakeet_used">The Offline Parakeet speech recognition model, downloaded on request</string>
+    <string name="about_bundled_moonshine_used">The Offline Moonshine speech recognition model, downloaded on request</string>
+    <string name="about_bundled_onnxruntime_used">The runtime behind Offline Sherpa, Offline Omnilingual and Neural suggestions, downloaded from Maven Central when one of them is first used</string>
+    <string name="about_bundled_sherpa_used">Offline Sherpa\'s and Offline Omnilingual\'s speech recognition toolkit, and k2-fsa\'s streaming models Sherpa downloads on request</string>
+    <string name="about_bundled_kiwi_used">Korean spacing correction, once downloaded</string>
+    <string name="about_bundled_webrtc_used">PairDrop transfers in Send files, once switched on</string>
+    <string name="about_bundled_vosk_used">Offline Sherpa\'s Bengali and Russian models, downloaded on request</string>
+    <string name="about_bundled_kroko_used">Offline Sherpa\'s German and Spanish models, downloaded on request</string>
+    <string name="about_bundled_mms_used">The offline voices Read back and the speaker buttons download on request</string>
+    <string name="about_bundled_silero_used">The voice detector Offline Sherpa and Offline Omnilingual download with each model, and Asr4All on request, to hear where a phrase ends</string>
+    <string name="about_bundled_firered_vad_used">A voice detector the phone downloads when you pick it as the Phrase end detector</string>
+    <string name="about_bundled_smart_turn_used">The model behind Smart Turn, downloaded on request, which hears whether you have finished speaking</string>
+    <string name="about_bundled_omnilingual_used">Offline Omnilingual\'s speech recognition model for 1,600 languages, downloaded on request</string>
+    <string name="about_bundled_opus_used">Compresses voice recordings before they are sent to a transcription server</string>
+    <string name="about_bundled_rnnoise_used">Reduce background noise at Light, in front of the offline voice engines</string>
+    <string name="about_bundled_dpdfnet_used">Reduce background noise at Strong, a DeepFilterNet model the phone downloads on request</string>
+    <string name="about_bundled_punctuation_used">Add punctuation and capitals for offline dictation, a model the phone downloads on request</string>
+    <string name="about_bundled_whistle_used">The Offline Whistle speech recognition engine and its model, which run on your device</string>
+    <string name="about_bundled_unicode_used">The emoji catalogue, names, keywords and skin tone sequences, and the levels of the common Chinese characters (Unihan kTGH)</string>
+    <!-- :tada: is one of the shortcodes and stays exactly as it is. -->
+    <string name="about_bundled_gemoji_used">The emoji shortcodes, the :tada: names that GitHub, Discord and Slack use</string>
+    <string name="about_bundled_banglatlit_used">Some of the romanized Bangla spellings the keyboard knows</string>
+    <!-- X11 is the window system of Linux; keysym is its word for a key's character. -->
+    <string name="about_bundled_keysyms_used">The table of X11 keysym names, to read Linux keyboard layouts</string>
+    <string name="about_bundled_keyman_used">The key grids for 862 layouts, mostly for languages no other keyboard covers</string>
+    <string name="about_bundled_indicxlit_used">The model behind Neural suggestions on the Indic phonetic layouts, downloaded when they are turned on</string>
+    <string name="about_bundled_avro_used">Desktop Avro\'s dictionary, suffixes, autocorrect and search rules, behind the Avro candidate list</string>
+    <string name="about_bundled_khipro_used">The rules of the Khipro Bangla layout</string>
+    <string name="about_bundled_bsti_used">The key assignments of the BSTI (BDS 1738:2018) Bangla layout</string>
+    <!-- Zawgyi is the name of a Burmese font encoding. Keep it as it is. -->
+    <string name="about_bundled_myanmar_tools_used">Tells Zawgyi Burmese from Unicode, and converts between the two</string>
+    <string name="about_bundled_cldr_zawgyi_used">The rules the Zawgyi and Unicode converters follow</string>
+    <string name="about_bundled_icu4x_used">Lowercases and normalises words for the prediction engine, and finds the words in Thai, Lao, Khmer and Burmese text</string>
+    <string name="about_bundled_futo_layouts_used">The key grids of the layouts converted from FUTO Keyboard\'s layout files</string>
+    <string name="about_bundled_floris_layouts_used">The key grids of the layouts converted from FlorisBoard\'s layout files</string>
+    <string name="about_bundled_opencc_used">The map between simplified and traditional characters, and the vocabulary of Taiwan and Hong Kong</string>
+    <string name="about_bundled_lshk_used">The Cantonese Jyutping syllable inventory</string>
+    <string name="about_bundled_palettes_used">The themes in the app: Dracula, Nord, Solarized, Catppuccin and Tokyo Night</string>
+    <string name="about_bundled_fonts_used">The keyboard typefaces, which the system downloads when you need them</string>
+    <!-- Inter and Manrope are the names of the typefaces. Keep them as they are. -->
+    <string name="about_bundled_ui_fonts_used">The typefaces of this app: Manrope for the headings, Inter for the text</string>
+
+    <!-- What the app uses each downloadable data pack for. -->
+    <string name="about_pack_wordlists_used">The prediction word lists for more than 300 languages, from FrequencyWords (OpenSubtitles), Leipzig Corpora, Wikimedia, wordfreq and others</string>
+    <!-- AOSP is the Android Open Source Project and stays as it is. -->
+    <string name="about_pack_aosp_wordlists_used">The curated word lists for 23 languages that Android\'s own keyboard uses, preferred where a language has one</string>
+    <string name="about_pack_offensive_used">The optional filter lists for the suggestions in the languages you download</string>
+    <string name="about_pack_emoji_keywords_used">The emoji search keywords in 141 languages, from KDE\'s kemoji</string>
+    <!-- "Noto Animated Emoji" is the name of the image set. Keep it as it is. -->
+    <string name="about_pack_animated_emoji_used">The moving emoji that the press and hold popup sends, from Noto Animated Emoji</string>
+    <string name="about_pack_noto_myanmar_used">The Burmese key font for phones set up for Zawgyi, downloaded when Unicode key font is turned on</string>
+    <string name="about_pack_cedict_used">The Chinese Pinyin conversion dictionary</string>
+    <!-- dictionary_oss is the name of the file inside mozc. -->
+    <string name="about_pack_mozc_used">The Japanese kana to kanji conversion dictionary (dictionary_oss)</string>
+    <string name="about_pack_hunspell_tr_used">Turkish spelling rules, downloaded on request and unchanged</string>
+    <string name="about_pack_catt_used">Adding tashkeel to Arabic: its encoder-only model, exported to ONNX and quantized, downloads on request</string>
+    <string name="about_pack_phonikud_used">Adding niqqud to Hebrew: the model downloads on request, and its character list ships with the app</string>
+    <string name="about_pack_eyo_used">The list of Russian words Restore ё reads, downloaded on request and unchanged</string>
+    <string name="about_pack_hazm_used">The Persian spacing rules behind Fix half-spaces</string>
+    <string name="about_pack_louis_used">Contracted braille: the translator ships as its own replaceable library, built by native/louis-jni from the release\'s source, and its tables download on request</string>
+    <string name="about_pack_tegaki_used">The Chinese and Japanese handwriting models zinnia reads with, downloaded per language</string>
+    <string name="about_pack_cantonese_used">The Cantonese Jyutping conversion dictionary</string>
+    <string name="about_pack_stroke_used">The stroke sequence input for Chinese</string>
+    <!-- kCangjie is the name of the field inside the Unihan database. -->
+    <string name="about_pack_kiwi_used">Korean spacing correction</string>
+    <string name="about_pack_hanja_used">The Hanja dictionary for Korean</string>
+    <string name="about_pack_wubi_used">The Wubi 86 input code table for Chinese</string>
+    <string name="about_pack_unihan_used">The Cangjie input code table (the kCangjie field)</string>
+    <string name="about_pack_cutout_used">The sticker editor\'s own background remover, used where Google Play services cannot supply one</string>
+    <string name="about_pack_paddle_used">The text scanner\'s reader for Chinese and Japanese, used where Google Play services cannot supply one, and in the F-Droid build for Latin script too; its per-script recognisers also read handwriting where ML Kit has no model</string>
+    <string name="about_pack_llm_used">The on-device AI models in the catalog. Each model row names its own licence; Gemma 3 has Google\'s terms, the others are Apache-2.0</string>
+
+    <!-- What the app uses each online service for. -->
+    <string name="about_service_brave_used">The web and image search results</string>
+    <string name="about_service_pairdrop_used">Finding PairDrop pages on your network, once switched on in Send files</string>
+    <string name="about_service_tavily_used">The web and image search results, when you add a Tavily key</string>
+    <string name="about_service_gif_used">The GIFs and the stickers</string>
+    <string name="about_service_wikipedia_used">The article search and the summaries</string>
+    <string name="about_service_translate_used">The translation tool</string>
+    <string name="about_service_weather_used">The weather and the geocoding</string>
+    <string name="about_service_currency_used">The currency conversion rates</string>
+    <string name="about_service_crypto_used">The cryptocurrency prices</string>
+    <string name="about_service_dictionary_used">The word definitions</string>
+    <string name="about_service_synonyms_used">Synonyms for a word you hold on the suggestion strip</string>
+    <string name="about_service_wiktionary_used">Definitions, synonyms and vocabulary words</string>
+    <string name="about_service_oewn_used">The offline dictionary of the Dictionary tool</string>
+    <string name="about_service_models_used">The downloads for the models that run on your device</string>
+    <!-- Used by every bring-your-own-key AI provider row. -->
+    <string name="about_service_byok_used">The optional AI tool, with your own key</string>
+
+    <!-- About › Supporters -->
+    <string name="about_supporters_title">Supporters</string>
+    <string name="about_supporters_subtitle">The people who chipped in to support the app</string>
+    <string name="supporters_intro">WM Keyboard is free, with no ads and no paid tier. These people supported it anyway. Only the name each one gave is shown here. The list on the website also shows what each one gave.</string>
+    <string name="supporters_support_title">Support WM Keyboard</string>
+    <string name="supporters_support_subtitle">Chip in once or every month on SupportKori. Your name joins the list below.</string>
+    <string name="supporters_coffee_button">Buy a coffee</string>
+    <string name="supporters_member_button">Become a monthly member</string>
+    <string name="supporters_list_title">Thank you</string>
+    <string name="supporters_empty">No one yet. You could be the first.</string>
+    <string name="supporters_kind_tip">Tip</string>
+    <string name="supporters_kind_member">Member</string>
+    <!-- %1$s: "Tip" or "Member", %2$s: the date -->
+    <string name="supporters_row_subtitle">%1$s · %2$s</string>
+    <string name="supporters_check_button">Check for new supporters</string>
+    <string name="supporters_check_hint">This is the list this version shipped with. Nothing is fetched until you press the button.</string>
+    <string name="supporters_checking">Checking…</string>
+    <string name="supporters_check_failed">Couldn\'t reach the list. Check your connection and try again.</string>
+    <string name="supporters_none_new">No one new since this version was built.</string>
+    <plurals name="supporters_added">
+        <item quantity="one">%d new supporter added.</item>
+        <item quantity="other">%d new supporters added.</item>
+    </plurals>
+    <string name="supporters_just_now">Just now</string>
+    <string name="supporters_hero_tagline">Free, with no ads and no paid tier, because of people like these.</string>
+    <string name="supporters_hero_none">Be the first to chip in</string>
+    <plurals name="supporters_hero_count">
+        <item quantity="one">%d person chipped in</item>
+        <item quantity="other">%d people chipped in</item>
+    </plurals>
+
+    <!-- About › Supporters, Google Play build: tips through Play billing -->
+    <string name="tips_title">Leave a tip</string>
+    <string name="tips_body">Your tip goes to the developer through Google Play. It unlocks nothing, because every feature is already yours.</string>
+    <string name="tips_tier_thanks">Thanks</string>
+    <string name="tips_tier_boost">Boost</string>
+    <string name="tips_tier_lunch">Lunch</string>
+    <string name="tips_tier_treat">Treat</string>
+    <string name="tips_tier_star">Star</string>
+    <string name="tips_tier_champion">Champion</string>
+    <string name="tips_tier_legend">Legend</string>
+    <string name="tips_name_label">Name on the Supporters list</string>
+    <string name="tips_name_hint">Shown on the Supporters list here and on the website. The website also shows the tier\'s price.</string>
+    <string name="tips_message_label">Message (optional)</string>
+    <string name="tips_message_hint">Shown under your name on the website only.</string>
+    <string name="tips_anonymous_title">Stay anonymous</string>
+    <string name="tips_anonymous_subtitle">Tip without being listed. Nothing is sent anywhere but Google Play.</string>
+    <!-- %1$s: the price, formatted by Google Play, for example "$4.99" -->
+    <string name="tips_button">Tip %1$s</string>
+    <string name="tips_paying">Opening Google Play…</string>
+    <string name="tips_pending">Your payment is pending. It finishes by itself, and then your name joins the list.</string>
+    <string name="tips_failed">The tip did not go through. Try again.</string>
+    <string name="tips_unavailable">Tips go through the Google Play Store, which is not available on this device.</string>
+    <string name="tips_thanks_title">Thank you!</string>
+    <!-- %1$s: the name the person typed -->
+    <string name="tips_thanks_named">Your support means a lot. %1$s is on the list below.</string>
+    <string name="tips_thanks_anonymous">Your support means a lot. You stay off the list, as you asked.</string>
+    <string name="tips_again">Tip again</string>
+
+</resources>

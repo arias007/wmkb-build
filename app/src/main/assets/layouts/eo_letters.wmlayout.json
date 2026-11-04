@@ -1,0 +1,315 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_eo_letters",
+    "name": "Esperanto (literoj sur klavoj)",
+    "langId": "eo",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ŝ",
+              "longPress": [
+                "q"
+              ]
+            },
+            {
+              "label": "ĝ",
+              "longPress": [
+                "w",
+                "ŵ"
+              ]
+            },
+            {
+              "label": "e",
+              "longPress": [
+                "é",
+                "ě",
+                "è",
+                "ê",
+                "ë",
+                "ę",
+                "ė",
+                "ē"
+              ]
+            },
+            {
+              "label": "r",
+              "longPress": [
+                "ř",
+                "ŕ",
+                "ŗ"
+              ]
+            },
+            {
+              "label": "t",
+              "longPress": [
+                "ť",
+                "ț",
+                "ţ",
+                "ŧ"
+              ]
+            },
+            {
+              "label": "ŭ",
+              "longPress": [
+                "y",
+                "ý",
+                "ŷ",
+                "ÿ",
+                "þ"
+              ]
+            },
+            {
+              "label": "u",
+              "longPress": [
+                "ŭ",
+                "ú",
+                "ů",
+                "û",
+                "ü",
+                "ù",
+                "ū",
+                "ũ",
+                "ű",
+                "ų",
+                "µ"
+              ]
+            },
+            {
+              "label": "i",
+              "longPress": [
+                "y",
+                "í",
+                "î",
+                "ï",
+                "ĩ",
+                "ì",
+                "į",
+                "ī",
+                "ı",
+                "ĳ"
+              ]
+            },
+            {
+              "label": "o",
+              "longPress": [
+                "ó",
+                "ö",
+                "ô",
+                "ò",
+                "õ",
+                "œ",
+                "ø",
+                "ō",
+                "ő",
+                "º"
+              ]
+            },
+            {
+              "label": "p"
+            }
+          ],
+          [
+            {
+              "label": "a",
+              "longPress": [
+                "á",
+                "à",
+                "â",
+                "ä",
+                "æ",
+                "ã",
+                "å",
+                "ā",
+                "ă",
+                "ą",
+                "ª"
+              ]
+            },
+            {
+              "label": "s",
+              "longPress": [
+                "ŝ",
+                "ß",
+                "š",
+                "ś",
+                "ș",
+                "ş"
+              ]
+            },
+            {
+              "label": "d",
+              "longPress": [
+                "ð",
+                "ď",
+                "đ"
+              ]
+            },
+            {
+              "label": "f"
+            },
+            {
+              "label": "g",
+              "longPress": [
+                "ĝ",
+                "ğ",
+                "ġ",
+                "ģ"
+              ]
+            },
+            {
+              "label": "h",
+              "longPress": [
+                "ĥ",
+                "ħ"
+              ]
+            },
+            {
+              "label": "j",
+              "longPress": [
+                "ĵ"
+              ]
+            },
+            {
+              "label": "k",
+              "longPress": [
+                "ķ",
+                "ĸ"
+              ]
+            },
+            {
+              "label": "l",
+              "longPress": [
+                "ĺ",
+                "ļ",
+                "ľ",
+                "ŀ",
+                "ł"
+              ]
+            },
+            {
+              "label": "ĵ"
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "z",
+              "longPress": [
+                "ź",
+                "ż",
+                "ž"
+              ]
+            },
+            {
+              "label": "ĉ",
+              "longPress": [
+                "x"
+              ]
+            },
+            {
+              "label": "c",
+              "longPress": [
+                "ĉ",
+                "ć",
+                "č",
+                "ç",
+                "ċ"
+              ]
+            },
+            {
+              "label": "v",
+              "longPress": [
+                "w",
+                "ŵ"
+              ]
+            },
+            {
+              "label": "b"
+            },
+            {
+              "label": "n",
+              "longPress": [
+                "ñ",
+                "ń",
+                "ņ",
+                "ň",
+                "ŉ",
+                "ŋ"
+              ]
+            },
+            {
+              "label": "m"
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": ",",
+              "longPress": [
+                "!",
+                "?"
+              ],
+              "role": "Comma"
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ],
+              "role": "Period"
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

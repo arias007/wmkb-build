@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Language settings: the add-language list, the per-language detail screen and
+  the dictionary download rows inside it.
+
+  Language names, layout names and script names are not here. They are proper
+  nouns that come from :core:language and stay in their own spelling.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ===== The languages summary and the add-language list ===== -->
+
+    <!-- One-line subtitle under a language that has a built-in dictionary.
+         %1$s is the name of its script, for example "Latin". -->
+    <string name="languages_row_subtitle_bundled"><xliff:g id="script" example="Latin">%1$s</xliff:g>, dictionary included</string>
+
+    <!-- Summary under the Languages row when nothing is turned on. -->
+    <string name="languages_summary_empty">No languages are on</string>
+
+    <!-- Summary under the Languages row. %1$s is the first few language names,
+         already joined with commas. %2$d is how many more are on. -->
+    <plurals name="languages_summary_more">
+        <item quantity="one"><xliff:g id="names" example="English, Bangla">%1$s</xliff:g> and %2$d more</item>
+        <item quantity="other"><xliff:g id="names" example="English, Bangla">%1$s</xliff:g> and %2$d more</item>
+    </plurals>
+
+    <!-- Why the app offers a language: it is one of the device languages. -->
+    <string name="languages_suggestion_reason_system">One of the languages on your device</string>
+    <!-- Why the app offers a language. %1$s is a country name from the system. -->
+    <string name="languages_suggestion_reason_region">Many people type this language in <xliff:g id="country" example="Bangladesh">%1$s</xliff:g></string>
+    <!-- Why the app offers a language, when the country name is not known. -->
+    <string name="languages_suggestion_reason_nearby">Many people near you type this language</string>
+
+    <string name="languages_search_hint">Search languages</string>
+    <string name="languages_suggested_title">Suggested for you</string>
+    <string name="languages_suggested_info">These come from the language settings and the region of your device. The keyboard does not read what you type. Your data stays on your device.</string>
+    <string name="languages_all_title">All languages</string>
+    <!-- Shown at the end of a language row that is already turned on. -->
+    <string name="languages_added_label">Added</string>
+    <!-- Empty state of the language search. %1$s is what the user typed. -->
+    <string name="languages_search_empty">No languages match “<xliff:g id="search_term" example="german">%1$s</xliff:g>”.</string>
+
+    <!-- Shown when the list is capped; the search box is the way to the rest. -->
+    <plurals name="languages_search_more_count">
+        <item quantity="one">%1$d more language. Search to find it.</item>
+        <item quantity="other">%1$d more languages. Search to find one.</item>
+    </plurals>
+
+    <!-- ===== One language: layouts, clusters, numerals ===== -->
+
+    <string name="languages_layouts_title">Layouts</string>
+    <string name="languages_layouts_info">Each card shows the keyboard as it looks with your theme and settings. Tap a card to turn that layout on or off. Scroll the row sideways to see all the layouts.</string>
+    <string name="languages_layout_keep_one">At least one layout must stay on.</string>
+
+    <!--
+      A row per switched-on layout under the cards, and its dialog: the name the
+      keyboard shows for that layout on the spacebar and in the language
+      switcher. %1$s in the title is the layout's own name, for example
+      "QWERTY"; %1$s in the subtitle is what the keyboard shows now, for
+      example "English (QWERTY)" or a name the user typed.
+    -->
+    <string name="languages_layout_name_title">Name for <xliff:g id="layout" example="QWERTY">%1$s</xliff:g></string>
+    <string name="languages_layout_name_subtitle">The keyboard shows “<xliff:g id="name" example="English (QWERTY)">%1$s</xliff:g>”</string>
+    <string name="languages_layout_name_body">This name is shown on the spacebar, in the switch preview and in the language picker. Leave it empty to use the automatic name.</string>
+    <string name="languages_layout_name_field_label">Name on the keyboard</string>
+    <string name="languages_layout_name_rename_action">Rename</string>
+    <string name="languages_layout_name_reset_action">Use the automatic name</string>
+
+    <!--
+      Issue #464: a layout of another language, such as QWERTZ for English.
+      %1$s is the English name of the language whose screen this is.
+    -->
+    <string name="languages_borrow_layout_title">Use a layout from another language</string>
+    <string name="languages_borrow_layout_subtitle">Type <xliff:g id="language" example="English">%1$s</xliff:g> on QWERTZ, AZERTY or another layout</string>
+    <string name="languages_borrow_layout_body">The layout gets the dictionary, autocorrect and spelling rules of <xliff:g id="language" example="English">%1$s</xliff:g>. It is added to your layouts and turned on.</string>
+    <string name="languages_borrow_layout_none">No other language that uses the same letters as <xliff:g id="language" example="English">%1$s</xliff:g> has a layout to offer.</string>
+    <!-- Toast. %1$s is the layout name, for example "QWERTZ (German)". -->
+    <string name="languages_borrow_layout_done"><xliff:g id="layout" example="QWERTZ (German)">%1$s</xliff:g> is on.</string>
+
+    <!--
+      The Keyman rules row. "Rules" is the word the Keyman project uses for the
+      part that decides what a key types, so someone who knows the keyboard
+      recognises it, and someone who does not gets told what it means in the
+      subtitle rather than in a term they have to look up.
+    -->
+    <!--
+      Names its layout because a language can offer several Keyman keyboards
+      and their rows stack under one heading, where a bare "Typing rules"
+      belongs to whichever toggle happens to sit above it.
+    -->
+    <string name="languages_keyman_rules_title_for">Typing rules for %1$s</string>
+    <string name="languages_keyman_rules_missing">Not downloaded. Each key types the character printed on it.</string>
+    <string name="languages_keyman_rules_installed">Downloaded, version %1$s. Press to remove.</string>
+    <string name="languages_keyman_rules_installed_unknown">Downloaded. Press to remove.</string>
+    <string name="languages_keyman_rules_checking">Checking keyman.com…</string>
+    <string name="languages_keyman_rules_downloading">Downloading, %1$d%%</string>
+    <string name="languages_keyman_rules_failed">Download failed. Press to try again.</string>
+
+    <!-- Asked once, when a layout that needs rules is switched on. -->
+    <string name="languages_keyman_prompt_title">Download typing rules for %1$s?</string>
+    <string name="languages_keyman_prompt_body">This keyboard uses rules to decide what its keys type. Without them, each key types the character printed on it. The rules are a few kilobytes and come from keyman.com.</string>
+    <string name="languages_keyman_prompt_download">Download</string>
+    <string name="languages_keyman_prompt_later">Not now</string>
+    <string name="languages_cjk_pack_prompt_title">Download the %1$s?</string>
+    <string name="languages_cjk_pack_prompt_body">%1$s types the reading and turns it into characters from this dictionary. Without it, no characters are offered. It is %2$s and works offline once downloaded.</string>
+
+    <!--
+      The way down to a language's converted Keyman layouts. Called "More
+      layouts" and not "Keyman layouts" because the row has to mean something to
+      someone who has never heard of the Keyman project; the description on the
+      page itself is where that name is introduced.
+    -->
+    <string name="languages_more_layouts_title">More layouts</string>
+    <plurals name="languages_more_layouts_subtitle">
+        <item quantity="one">%1$d more layout from the Keyman project</item>
+        <item quantity="other">%1$d more layouts from the Keyman project</item>
+    </plurals>
+    <string name="languages_more_layouts_body">These come from the Keyman project, an open collection of keyboards for languages that rarely get one. Many of them decide what a key types from rules rather than from the character printed on it, and those download a few kilobytes from keyman.com the first time you switch one on.</string>
+    <!-- Button on a layout card whose keyboard is not on the phone yet. Downloads every layout from the Keyman project at once. -->
+    <string name="languages_keyman_pack_get">Get Keyman layouts (2 MB)</string>
+    <string name="languages_keyman_pack_retry">Download failed. Try again</string>
+    <string name="languages_keyman_pack_downloading">Downloading layouts… <xliff:g id="percent" example="42">%1$d</xliff:g>%%</string>
+    <string name="languages_more_layouts_count">+<xliff:g id="count" example="12">%1$d</xliff:g></string>
+    <plurals name="languages_more_layouts_card_body">
+        <item quantity="one">layout from the Keyman project</item>
+        <item quantity="other">layouts from the Keyman project</item>
+    </plurals>
+    <string name="languages_more_layouts_search_hint">Search layouts</string>
+    <string name="languages_more_layouts_search_empty">No layouts match “<xliff:g id="search_term" example="phonetic">%1$s</xliff:g>”.</string>
+    <string name="languages_more_layouts_on_empty">None of these layouts is on. Tap a card to turn one on.</string>
+    <string name="languages_more_layouts_filter_all">All</string>
+    <string name="languages_more_layouts_filter_on">On</string>
+    <string name="languages_keyman_card_rules_get">Get typing rules</string>
+    <string name="languages_keyman_card_rules_retry">Download failed. Try again</string>
+    <string name="languages_keyman_card_rules_retry_desc">Try again to download typing rules for <xliff:g id="layout" example="Khmer Angkor">%1$s</xliff:g></string>
+    <string name="languages_keyman_card_rules_ready">Typing rules ready</string>
+    <string name="languages_keyman_card_rules_download_desc">Download typing rules for <xliff:g id="layout" example="Khmer Angkor">%1$s</xliff:g></string>
+    <string name="languages_keyman_card_rules_remove_desc">Remove typing rules for <xliff:g id="layout" example="Khmer Angkor">%1$s</xliff:g></string>
+    <string name="languages_keyman_remove_title">Remove typing rules for <xliff:g id="layout" example="Khmer Angkor">%1$s</xliff:g>?</string>
+    <string name="languages_keyman_remove_body">Until you download them again, each key of this layout types the character printed on it.</string>
+
+    <string name="languages_clusters_title">Clusters</string>
+    <string name="languages_conjunct_backspace_title">Conjunct-aware backspace</string>
+    <!-- %1$s is a sample cluster of the script, for example "ক্ষ". -->
+    <string name="languages_conjunct_backspace_subtitle">Delete a whole cluster like <xliff:g id="cluster" example="ক্ষ">%1$s</xliff:g> as one unit</string>
+    <!-- Stands in for a sample cluster when the script has no sample to show. -->
+    <string name="languages_conjunct_sample_fallback">a conjunct</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_conjunct_backspace_info">Backspace usually deletes one code point at a time. This sometimes leaves half-formed clusters on the screen. With this setting on, one press deletes the whole cluster while you type <xliff:g id="language" example="Bengali">%1$s</xliff:g>. Other languages keep their own setting.</string>
+
+    <string name="languages_autocorrect_group">Autocorrect</string>
+    <string name="languages_autocorrect_title">Autocorrect this language</string>
+    <string name="languages_autocorrect_subtitle">Fix typos when you press space</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_autocorrect_info">Turn this off to keep each word you type in <xliff:g id="language" example="Bengali">%1$s</xliff:g> as you typed it, while other languages are still corrected. The suggestion strip still shows its suggestions, and you can tap one. The autocorrect switch in Typing turns autocorrect off for all languages.</string>
+
+    <string name="languages_spacing_group">Spacing</string>
+    <string name="languages_space_after_suggestion_title">Space after a suggestion</string>
+    <string name="languages_space_after_suggestion_subtitle">Add a space when you select a word from the suggestion strip</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_space_after_suggestion_info">Turn this off to type a word you select from the suggestion strip in <xliff:g id="language" example="Bengali">%1$s</xliff:g> without a space after it, so you can add an ending straight away. Other languages still get the space. The Space after a suggestion switch in Typing turns the space off for all languages.</string>
+
+    <string name="languages_spelling_map_title">Spellings</string>
+    <string name="languages_spelling_map_row_title">Use known spellings</string>
+    <string name="languages_spelling_map_row_subtitle">Type "tmr" to get তোমার, and "table" to get টেবিল</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_spelling_map_info">Some words are not spelled the way they sound. "Table" is written টেবিল, not তাবলে, and people type "tmr" for তোমার with no vowels at all. This setting uses a list of those spellings while you type <xliff:g id="language" example="Bengali">%1$s</xliff:g>, so you get the word people write. Turn it off to get the letter-for-letter reading instead. Other languages keep their own setting.</string>
+    <string name="languages_phonetic_siblings_row_title">Correct to dictionary words</string>
+    <string name="languages_phonetic_siblings_row_subtitle">Type "asi" to get আছি instead of আসি</string>
+    <string name="languages_phonetic_siblings_info">Romanized typing is loose, so when you press space the keyboard can replace what you typed with a dictionary word that sounds the same. "asi" becomes আছি, the word people usually mean. This happens even with autocorrect off, because it is part of how <xliff:g id="language" example="Bengali">%1$s</xliff:g> is typed. Turn it off to always get exactly what the typing rules spell. The dictionary words still show in the suggestion strip, so you can tap one. Known spellings have their own setting above.</string>
+    <string name="languages_phonetic_context_row_title">Use the words before</string>
+    <string name="languages_phonetic_context_row_subtitle">Pick the reading that fits the words you already typed</string>
+    <string name="languages_phonetic_context_info">One romanized spelling can stand for several <xliff:g id="language" example="Bengali">%1$s</xliff:g> words. With this on, the keyboard looks at the one or two words you typed just before and moves up the reading that usually follows them, both in the suggestion strip and for what the space bar writes. It learns from what you type, and from the downloaded word-pair data where your language has it. A known spelling only trades places with another known spelling of the same word, so what you see while typing is still what space writes. Turn this off if the keyboard picks a different word than you expect after certain words.</string>
+
+    <!-- Phonetic layouts (Avro): the corner hints that show what each roman key types. -->
+    <string name="languages_translit_hints_title">Key hints</string>
+    <string name="languages_translit_hints_row_title">Show the letter each key types</string>
+    <string name="languages_translit_hints_row_subtitle">Put the <xliff:g id="language" example="Bengali">%1$s</xliff:g> a key is about to write in its corner</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_translit_hints_info">A phonetic layout types <xliff:g id="language" example="Bengali">%1$s</xliff:g> from roman keys, so the keys do not show what they write. This puts the answer in the corner of each key, and it follows the word you are typing: a k is ক at the start of a word, but after a consonant the same key joins to it. Shift changes the hints too, because a phonetic layout reads capitals as different letters. Choose how much of the joined letter to show. "Added" shows only the part the key writes. "Whole letter" repeats the consonant before it, so the hint is a shape that appears in real words.</string>
+    <string name="languages_translit_hints_off_label">Off</string>
+    <string name="languages_translit_hints_added_label">Added</string>
+    <string name="languages_translit_hints_cluster_label">Whole letter</string>
+    <!-- One line under each option in the key hints picker. -->
+    <string name="languages_translit_hints_off_desc">The keys show only their roman letter</string>
+    <string name="languages_translit_hints_added_desc">The corner shows only the part that the key writes</string>
+    <string name="languages_translit_hints_cluster_desc">The corner repeats the consonant before it, so the hint is a shape from a real word</string>
+    <!-- Phonetic layouts: the key map on the language's page, which roman keys type which letter. -->
+    <string name="languages_keymap_title">Key map</string>
+    <string name="languages_keymap_summary">Vowels, consonants, signs and the full guide</string>
+    <string name="languages_keymap_vowels">Vowels</string>
+    <string name="languages_keymap_vowels_note">The first letter is the vowel on its own. The second is the sign it becomes after a consonant.</string>
+    <string name="languages_keymap_consonants">Consonants</string>
+    <string name="languages_keymap_consonants_note">Two consonants in a row join into one letter where Bangla has that letter: "kt" is ক্ত, but "kb" stays কব. An r, y or w after a consonant always joins as a fola, and reph is a double r. Type a vowel between two consonants to keep them apart.</string>
+    <string name="languages_keymap_consonants_note_guessed">Whether two consonants join is a guess from how the word is said. The suggestion strip offers the other reading.</string>
+    <string name="languages_keymap_signs">Joins and signs</string>
+    <string name="languages_keymap_after_consonant">After a consonant</string>
+    <string name="languages_keymap_elsewhere">Anywhere else</string>
+    <string name="languages_keymap_before_consonant">Before a consonant</string>
+    <string name="languages_keymap_before_vowel">Before a vowel</string>
+    <string name="languages_keymap_after_t">After t</string>
+    <string name="languages_keymap_between_consonants">Between two consonants, keeps them apart</string>
+    <string name="languages_keymap_word_start">At the start of a word</string>
+    <string name="languages_phonetic_guide_title">Full guide</string>
+    <string name="languages_phonetic_guide_subtitle">Every rule with examples, on the WM Keyboard website</string>
+    <string name="languages_phonetic_guide_action">Open guide</string>
+
+    <string name="languages_numerals_title">Numerals</string>
+    <!-- Fancy Text: the styled-letters pseudo-language. -->
+    <string name="languages_fancy_style_title">Style</string>
+    <string name="languages_fancy_style_row_title">Fancy style</string>
+    <string name="languages_fancy_style_row_subtitle">The lettering the fancy keyboard types. Also switchable from the strip over the keys.</string>
+    <string name="languages_fancy_fonts_group">Your fonts</string>
+    <string name="languages_fancy_fonts_info">Make a style from any alphabet: copy a font\'s letters from a fancy-text website and paste them in. Your fonts join the strip over the keys after the built-in styles. Letters you leave out type plain. Separate the letters with spaces to give one letter several characters, such as (a) (b) (c).</string>
+    <string name="languages_fancy_fonts_add_title">Add a font</string>
+    <string name="languages_fancy_fonts_add_subtitle">Paste an alphabet and type in it from the strip</string>
+    <string name="languages_fancy_fonts_full">Room for 50 fonts. Delete one to add another.</string>
+    <string name="languages_fancy_fonts_edit_title">Edit font</string>
+    <string name="languages_fancy_fonts_empty">No fonts of your own yet.</string>
+    <string name="languages_fancy_fonts_delete_desc">Delete %1$s</string>
+    <string name="languages_fancy_fonts_name_label">Name</string>
+    <string name="languages_fancy_fonts_lower_label">Small letters, a to z</string>
+    <string name="languages_fancy_fonts_lower_hint">%1$d of 26. Paste a to z, or a to z, A to Z and 0 to 9 in one go.</string>
+    <string name="languages_fancy_fonts_upper_label">Capitals, A to Z</string>
+    <string name="languages_fancy_fonts_upper_hint">%1$d of 26. Left empty, capitals type the small letters.</string>
+    <string name="languages_fancy_fonts_digits_label">Digits, 0 to 9</string>
+    <string name="languages_fancy_fonts_digits_hint">%1$d of 10. Left empty, digits stay plain.</string>
+    <string name="languages_fancy_fonts_too_many">%1$d characters, more than %2$d. Separate letters with spaces if one letter is several characters.</string>
+    <string name="languages_fancy_fonts_reversed_title">Write backwards</string>
+    <string name="languages_fancy_fonts_reversed_subtitle">For upside-down letters: the line is reversed so it reads with the phone turned round. Types letter by letter, without suggestions.</string>
+    <string name="languages_vietnamese_tones_title">Tone marks</string>
+    <string name="languages_vietnamese_strict_tones_title">Only tone real syllables</string>
+    <string name="languages_vietnamese_strict_tones_subtitle">A tone key is a letter unless the word is one the language spells</string>
+    <string name="languages_vietnamese_strict_tones_info">Telex and VNI mark a tone whenever the vowels allow it, so typing fas gives fá even though f is not a Vietnamese onset and there is no word there. With this on, a tone key that would land on something that is not a word is typed as the letter it is drawn as instead, and only a syllable the language actually spells takes a tone. mix is still mĩ, because that is a word.</string>
+    <string name="languages_vietnamese_restore_marks_title">Fill in left-out marks</string>
+    <string name="languages_vietnamese_restore_marks_subtitle">With the Vietnamese word list, tieng becomes tiếng when it can only be one word</string>
+    <string name="languages_vietnamese_restore_marks_info">Telex and VNI type only the marks you spell. With this on, a word you finish without one of its marks gets it from the Vietnamese word list, but only when the list has one way to read it: tieng becomes tiếng and duong becomes đường. A word the list already has is never changed, and a spelling like toan, which can be toàn, toán or toản, stays as you typed it. One backspace takes the change back. This needs autocorrect on and the Vietnamese word list on the device.</string>
+    <string name="languages_numeral_system_title">Numeral system</string>
+    <!-- %1$s is the English name of the language, for example "Arabic". -->
+    <string name="languages_numeral_system_subtitle">The digits that the number row and the keypad show while you type <xliff:g id="language" example="Arabic">%1$s</xliff:g></string>
+    <!-- %1$s is the English name of the language. %2$s is the digits of that
+         language, shown as a range, for example "٠-٩". -->
+    <string name="languages_numeral_system_info">You select the digits for <xliff:g id="language" example="Arabic">%1$s</xliff:g>: its own digits, which are <xliff:g id="numeral_system" example="٠-٩">%2$s</xliff:g>, or 0-9. This applies to this language only. The keys always show the digits that you select. To set where the keyboard also types them, open Layout &amp; size, then Numerals.</string>
+
+    <string name="languages_secondary_title">Also suggest from</string>
+    <!-- %1$s is the English name of the language this screen is about. -->
+    <string name="languages_picker_hidden_group">Language switcher</string>
+    <string name="languages_picker_hidden_title">Do not show in the language switcher</string>
+    <string name="languages_picker_hidden_subtitle">Keep this language for its suggestions only</string>
+    <string name="languages_picker_hidden_info"><xliff:g id="language" example="Bangla (Romanized)">%1$s</xliff:g> stays on, but the globe key, the spacebar swipe and the language list do not stop at it. Its words continue to show on each keyboard that has it below Also suggest from. Use this when you want a language only for its words, such as English suggestions on a Swedish keyboard, and one keyboard less to switch through.</string>
+    <string name="languages_phonetic_english_group">English words</string>
+    <string name="languages_phonetic_english_title">Type English words as English</string>
+    <string name="languages_phonetic_english_subtitle">On the phonetic layout, hello stays hello</string>
+    <string name="languages_phonetic_english_info">With English picked above, the phonetic layout\'s strip already carries the word exactly as you typed it, in Latin letters, and leans English once the text around it is English.\n\nThis goes one step further: a word that reads as English and not as <xliff:g id="language" example="Bengali">%1$s</xliff:g> is written in English when you press space, and shows that way while you type it. Words both languages have follow the language of the words around them, and the word just before counts most: am after I is English, and the same letters on their own are not. A capital I on its own is always the English word. A capital letter anywhere after the first always means the phonetic layout.\n\nWhen the keyboard picks wrong, press backspace straight after the word to flip it to the other script, or tap the other one on the strip. It remembers, and after two flips it stops asking about that spelling.</string>
+    <!-- Phonetic layouts (Avro, Hindi phonetic): a strip whose first two words stay in place. -->
+    <string name="languages_phonetic_strip_title">Suggestion strip</string>
+    <string name="languages_phonetic_strip_fixed_title">Keep the first two words in place</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_phonetic_strip_fixed_subtitle">What you typed first, the <xliff:g id="language" example="Bengali">%1$s</xliff:g> word next, then suggestions</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_phonetic_strip_fixed_info">Usually the first word on the strip is the word that the space bar will write, so the words move as you type.\n\nWith this on, the first two words always stay in the same place. On the left is what you typed, in English letters. Next to it is the <xliff:g id="language" example="Bengali">%1$s</xliff:g> that the phonetic rules make from it, letter for letter. The suggestions come after them. Tap the left word to write in English, or the word next to it to write the exact <xliff:g id="language" example="Bengali">%1$s</xliff:g> reading.\n\nThe space bar does not change: it writes the same word as before. That word shows in bold, and in the autocorrect word color if you set one. The strip does not put a word in the middle on this layout, so that the left word is always first.</string>
+    <!-- Khipro layouts: a strip chip with the keys exactly as pressed (#772). -->
+    <string name="languages_khipro_english_title">Type English words as English on Khipro</string>
+    <string name="languages_khipro_english_subtitle">Separate from Avro\'s. Off, English words wait on the strip</string>
+    <string name="languages_khipro_english_info">With English picked above, keys that spell an English word, and no Bangla word the list or your dictionary knows, are written in English when you press space: hello stays hello, and ami is still আমি.\n\nOff, the space bar always writes the Bangla the keys spell, and an English word is only ever a chip on the strip, written when you tap it.\n\nKeys typed into the middle of a word are never taken as English, whichever way this is set. Avro has its own switch, so turning one on leaves the other as it was.</string>
+    <string name="languages_raw_keys_chip_title">Show the keys you pressed</string>
+    <string name="languages_raw_keys_chip_subtitle">prshn/ next to প্রশ্ন on the strip</string>
+    <string name="languages_raw_keys_chip_info">Khipro keys such as f and / change the letters before them, so the word on the strip does not always show which keys you pressed.\n\nWith this on, the second word on the strip is the keys exactly as you pressed them, modifiers included. Tap it to write those keys as they are, in English letters. The space bar does not change: it writes the Bengali word.\n\nWith this off, the keys show only when they are all letters and English is mixed in on the layout, for English words that the dictionary does not know.</string>
+    <string name="languages_phonetic_strip_source_title">Suggestions after them</string>
+    <string name="languages_phonetic_strip_source_subtitle">Which language fills the rest of the strip</string>
+    <string name="languages_phonetic_strip_source_smart_label">Smart</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_phonetic_strip_source_native_label"><xliff:g id="language" example="Bengali">%1$s</xliff:g> only</string>
+    <string name="languages_phonetic_strip_source_english_label">English only</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_phonetic_strip_source_smart_desc">Both languages. The language of the word and of the text around it comes first, and the best word of the other language gets the last place</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_phonetic_strip_source_native_desc">Only <xliff:g id="language" example="Bengali">%1$s</xliff:g> words from the word list and the known spellings</string>
+    <string name="languages_phonetic_strip_source_english_desc">Only English words that start with what you typed</string>
+    <!-- Phonetic layouts: desktop Avro's candidate list (the words it shows under the word being typed). -->
+    <string name="languages_phonetic_candidates_title">Avro candidate list</string>
+    <string name="languages_phonetic_candidates_subtitle">The words desktop Avro shows under the word you type</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_khipro_specs_group">Khipro\'s rules</string>
+    <string name="languages_khipro_specs_title">Layout rules</string>
+    <string name="languages_khipro_specs_bundled">The rules this version came with, from <xliff:g id="date" example="25 Oct 2026">%1$s</xliff:g>. Newer ones are looked for once a day while you type with Khipro. Tap to check now.</string>
+    <string name="languages_khipro_specs_downloaded">Updated rules from <xliff:g id="date" example="25 Oct 2026">%1$s</xliff:g>. Tap to check for newer ones.</string>
+    <string name="languages_khipro_specs_checking">Checking for newer rules…</string>
+    <string name="languages_khipro_specs_failed">Rules from <xliff:g id="date" example="25 Oct 2026">%1$s</xliff:g>. The last check installed nothing: <xliff:g id="reason" example="HTTP 404">%2$s</xliff:g>. Tap to try again.</string>
+    <string name="languages_khipro_specs_no_internet">Rules from <xliff:g id="date" example="25 Oct 2026">%1$s</xliff:g>. This build has no internet, so newer rules come in from a file: Import from a file on this screen takes the set\'s files.</string>
+    <string name="languages_khipro_specs_unsupported">The rules this version came with. This build cannot update them.</string>
+    <string name="languages_khipro_specs_up_to_date">Khipro\'s rules are up to date</string>
+    <string name="languages_khipro_specs_installed">Khipro\'s rules updated to <xliff:g id="date" example="25 Oct 2026">%1$s</xliff:g></string>
+    <string name="languages_khipro_specs_bundled_title">Use the bundled rules</string>
+    <string name="languages_khipro_specs_bundled_subtitle">Go back to the rules this version came with. The daily check leaves them until a newer set is published.</string>
+    <string name="languages_avro_dictionary_title">Desktop Avro\'s dictionary</string>
+    <string name="languages_avro_dictionary_download">The words only desktop Avro knows, <xliff:g id="size" example="580 KB">%1$s</xliff:g> to download. Tap to download.</string>
+    <string name="languages_avro_dictionary_downloaded">The words only desktop Avro knows, <xliff:g id="size" example="580 KB">%1$s</xliff:g></string>
+    <string name="languages_phonetic_candidates_info">Desktop Avro shows a short list under the word you type. The list is built the same way here. First comes the known spelling for what you typed, if there is one. Next come the <xliff:g id="language" example="Bengali">%1$s</xliff:g> dictionary words that sound like it, and the words made by adding an ending to one of them, such as বন্ধু + দের. The words closest to the letter-for-letter reading come first. Last is the letter-for-letter reading itself.\n\nIn the suggestion strip: the word that the space bar will write stays first, and the list follows it. Bar above the strip: the whole list goes in a row of its own above the strip, and you can scroll through it. The row stays while the layout is on, so the keyboard does not change height between words.\n\nThe space bar writes the same word with all three choices.</string>
+    <string name="languages_phonetic_candidates_off_label">Off</string>
+    <string name="languages_phonetic_candidates_strip_label">In the strip</string>
+    <string name="languages_phonetic_candidates_bar_label">Bar above</string>
+    <string name="languages_phonetic_candidates_off_desc">The strip shows its usual suggestions</string>
+    <string name="languages_phonetic_candidates_strip_desc">The strip shows the list after the word the space bar will write</string>
+    <string name="languages_phonetic_candidates_bar_desc">A row above the strip shows the whole list, and you can scroll it</string>
+    <!-- Phonetic layouts: IndicXlit, a small neural network that reads a word typed in Latin letters. -->
+    <string name="languages_neural_phonetic_title">Neural suggestions</string>
+    <!-- %1$s is the download size, for example "13 MB". -->
+    <string name="languages_neural_phonetic_subtitle">Up to three more readings of the word from a small AI model, after the word the space bar writes. <xliff:g id="size" example="13 MB">%1$s</xliff:g> to download, shared by every language</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_neural_phonetic_info">IndicXlit, a model by AI4Bharat, has learned from millions of words how people write <xliff:g id="language" example="Bengali">%1$s</xliff:g> in Latin letters, so it often knows the word when the spelling is loose, such as valobashi or bhalobasi for ভালোবাসি.
+
+Its readings come right after the word the space bar will write. That word never changes, and the model never corrects anything by itself: tap one of its readings to use it. Readings that are in the word list come first. Let it choose the word, below, changes that for spellings the keyboard has no word for.
+
+The model runs on the phone, and nothing you type leaves it. One download covers Bengali, Hindi, Urdu, Assamese, Marathi, Gujarati, Punjabi, Odia, Tamil, Telugu, Kannada and Malayalam.</string>
+    <!-- %1$s is the download size, for example "13 MB". -->
+    <string name="languages_neural_phonetic_metered_body">The model is a <xliff:g id="size" example="13 MB">%1$s</xliff:g> download, and ONNX Runtime about 33 MB more if it is not here yet.</string>
+    <string name="languages_neural_phonetic_model_title">Neural suggestions model</string>
+    <string name="languages_neural_leads_title">Let it choose the word</string>
+    <string name="languages_neural_leads_subtitle">When the rules spell no known word, the space bar writes the model\'s best reading from the word list</string>
+    <!-- %1$s is the English name of the language, for example "Bengali". -->
+    <string name="languages_neural_leads_info">The space bar usually writes what the phonetic rules spell. When that is not a word in the <xliff:g id="language" example="Bengali">%1$s</xliff:g> word list or among your own words, and the known-spellings list has nothing for what you typed, this lets the model\'s best reading that is in the word list go first instead, so a space writes it. The rules\' spelling comes right after it in the strip, one tap away.
+
+On test words the space bar wrote the right word 56%% of the time instead of 25%% in Bengali, and 49%% instead of 41%% in Hindi. The cost: a name or a rare word spelled exactly by the rules, but missing from the word list, can come out as a listed word that looks like it. About one such spelling in six did in Bengali, one in fifteen in Hindi. Words the list knows are left alone.</string>
+    <!-- %1$s is the size on the phone, for example "13 MB". -->
+    <string name="languages_neural_phonetic_delete_title">Delete the neural suggestions model?</string>
+    <string name="languages_neural_phonetic_delete_body">Neural suggestions turn off on every language that has them. Turning them on again downloads the model again.</string>
+    <string name="languages_neural_phonetic_model_ready">Ready, <xliff:g id="size" example="13 MB">%1$s</xliff:g></string>
+    <!-- %1$s is the download size, for example "13 MB". -->
+    <string name="languages_neural_phonetic_model_missing">Not downloaded, <xliff:g id="size" example="13 MB">%1$s</xliff:g>. Tap to download.</string>
+    <!-- %1$s and %2$s are sizes, for example "4 MB" of "13 MB". -->
+    <string name="languages_neural_phonetic_model_downloading">Downloading, <xliff:g id="done" example="4 MB">%1$s</xliff:g> of <xliff:g id="total" example="13 MB">%2$s</xliff:g></string>
+    <!-- Romanized dictation (#948): IndicXlit the other way round, Indic script back to Latin letters. -->
+    <string name="languages_romanized_dictation_group">Voice typing</string>
+    <string name="languages_romanized_dictation_model_title">Romanized dictation model</string>
+    <!-- %1$s is the download size, for example "13 MB". -->
+    <string name="languages_romanized_dictation_model_missing">Not downloaded, <xliff:g id="size" example="13 MB">%1$s</xliff:g>. Tap to download. Dictation in Latin letters then spells the words the keyboard does not know the way people write them.</string>
+    <string name="languages_romanized_dictation_delete_title">Delete the romanized dictation model?</string>
+    <string name="languages_romanized_dictation_delete_body">Dictation in Latin letters goes back to the spelling rules for the words the keyboard does not know. Tap the row to download the model again.</string>
+    <string name="languages_phonetic_english_switch_title">Switch on the suggestion strip</string>
+    <string name="languages_phonetic_english_switch_subtitle">A small button beside the suggestions turns English words on and off as you type</string>
+    <string name="languages_phonetic_english_switch_info">The button shows on this language\'s phonetic layout and is lit while English words are on. It is for the moment a word keeps coming out in the wrong script: tap it in the middle of the word and the word turns back before you press space.\n\nOff takes the button away and leaves the setting above exactly as you set it, so English words simply stay on. Shared by every language with a phonetic layout.</string>
+    <string name="languages_bengali_vowel_twice_title">Tap twice for আ or এ</string>
+    <string name="languages_bengali_vowel_twice_subtitle">On Probhat, Jatiya and BSTI, after a vowel: one tap gives য়া or য়ে, a second tap gives আ or এ</string>
+    <string name="languages_bengali_vowel_twice_info">After a vowel, the আ-কার and এ-কার keys write য়া and য়ে, as in কায়া and দিয়ে, because a bare া or ে cannot follow a vowel. With this on, pressing the key again straight away turns য়া into আ and য়ে into এ. Holding either key offers আ or এ whether this is on or not. Off by default, because a quick double press then types the glide twice.</string>
+    <string name="languages_ansi_group">ANSI output</string>
+    <string name="languages_ansi_allowed_title">Allow ANSI output</string>
+    <string name="languages_ansi_allowed_subtitle">An ANSI button on the Bengali layouts writes Bijoy-style text, so আ comes out as Av</string>
+    <string name="languages_ansi_allowed_info">ANSI is how Bengali was written before Unicode, in Bijoy and in fonts like SutonnyMJ: each Bengali letter is stored as a Latin character, and the font draws it as Bengali. Some design software and older documents still need it.\n\nWith this on, every Bengali layout gets an ANSI button beside the suggestions. Tap it and what you type goes into the text box as ANSI, so আমার সোনার বাংলা becomes Avgvi †mvbvi evsjv. Tap it again for Unicode.\n\nThe word you are typing shows as Unicode until you finish it. ANSI text only reads as Bengali in an ANSI font, so keep the button off everywhere else.</string>
+    <string name="languages_ansi_version_title">ANSI version</string>
+    <string name="languages_ansi_version_subtitle">Pick the one your ANSI font is made for</string>
+    <string name="languages_ansi_version_info">The ANSI fonts do not all put the letters in the same places, so there are three versions. Version 2 is the common one, used by SutonnyMJ and most Bijoy fonts. If the text comes out as the wrong letters in your font, try another version.</string>
+    <string name="languages_zawgyi_group">Zawgyi</string>
+    <string name="languages_zawgyi_allowed_title">Allow Zawgyi output</string>
+    <string name="languages_zawgyi_allowed_subtitle">A Zawgyi button on the Burmese layouts writes text for Zawgyi fonts</string>
+    <string name="languages_zawgyi_allowed_info">Zawgyi is the font encoding most Burmese text was written in before Unicode, and many phones, apps and friends still use it. It uses the same characters as Unicode but puts them in a different order, so text written for one reads as broken letters in the other.
+
+With this on, every Burmese layout gets a Zawgyi button beside the suggestions. Tap it and what you type goes into the text box as Zawgyi. Tap it again for Unicode. Suggestions, autocorrect and the word list keep working in Unicode while you type.
+
+The word you are typing shows as Unicode until you finish it. When the text box already holds Zawgyi, the keyboard offers to write Zawgyi there even with the button off.</string>
+    <string name="languages_zawgyi_key_font_title">Unicode key font</string>
+    <string name="languages_zawgyi_key_font_subtitle">Draw the Burmese keys in Noto Sans Myanmar, for a phone whose own font is Zawgyi</string>
+    <string name="languages_zawgyi_key_font_info">A phone set up for Zawgyi has a Zawgyi font in place of its Myanmar font, and that font shows Unicode letters in the wrong order. The keyboard\'s keys and suggestions are Unicode, so on such a phone they can look broken.
+
+With this on, the keyboard draws Burmese in its own copy of Noto Sans Myanmar, a Unicode font, whatever font the phone uses. The font is downloaded once from WM Keyboard\'s data repository (195 KB) the first time the keys need it. A Myanmar font you picked under Appearance still comes first.</string>
+    <string name="languages_ansi_version_option">Version <xliff:g id="number" example="2">%1$d</xliff:g></string>
+    <string name="languages_secondary_info">The keyboard offers words from these languages while you type <xliff:g id="language" example="Bengali">%1$s</xliff:g>. Autocorrect never changes them.</string>
+    <!-- Toast after adding a romanized language pairs it with a same-script
+         language. %1$s and %2$s are English names of the two languages. -->
+    <string name="languages_auto_pair_toast"><xliff:g id="language_one" example="Bangla (Romanized)">%1$s</xliff:g> and <xliff:g id="language_two" example="English">%2$s</xliff:g> now suggest each other\'s words. You can change this on each language\'s page.</string>
+
+    <!-- ===== Dictionaries ===== -->
+
+    <!-- Group on one language's screen: its word list, emoji keywords and
+         word pairs, each with a checkbox, a Download or a Delete button. -->
+    <string name="languages_dictionaries_title">Dictionaries</string>
+    <string name="languages_dictionaries_info">Each item works offline after the download. The checkbox turns an item off and keeps the file. Delete removes the file from the device.</string>
+    <!-- Button in the heading of the Dictionaries group. It downloads every
+         item that is not on the device yet. %1$s is a size like "4.2 MB". -->
+    <string name="languages_dictionaries_download_all_action">Download all (<xliff:g id="size" example="4.2 MB">%1$s</xliff:g>)</string>
+
+    <string name="languages_words_title">Word list</string>
+    <!-- The same row when one language has more than one list. %1$s tells them
+         apart, for example "Brazil". -->
+    <string name="languages_words_title_variant">Word list (<xliff:g id="variant" example="Brazil">%1$s</xliff:g>)</string>
+    <!-- Under the word list of a language that ships one in the app. -->
+    <string name="languages_words_builtin">Built-in list</string>
+    <string name="languages_words_builtin_more">Built-in list. A bigger list is available.</string>
+    <string name="languages_words_missing">For suggestions, autocorrect and glide typing</string>
+    <!-- Dialog that opens from Download on the word list. -->
+    <string name="languages_words_download_title">Download a word list</string>
+    <string name="languages_words_download_variant_label">Variant</string>
+    <!-- Heading over the choice between the AOSP list and the counted list. -->
+    <string name="languages_words_download_source_label">Source</string>
+    <!-- Tells one of a language's lists from its others, inside the row title.
+         %1$s is the source ("AOSP"), %2$s the region ("Brazil"). -->
+    <string name="languages_words_label_source_variant"><xliff:g id="source" example="AOSP">%1$s</xliff:g>, <xliff:g id="variant" example="Brazil">%2$s</xliff:g></string>
+    <string name="languages_words_download_size_label">Size</string>
+    <!-- Detail under one size in the dialog. %1$d is the most words the size
+         keeps, %2$s about how much it downloads, like "1.4 MB". -->
+    <plurals name="languages_words_download_size_detail">
+        <item quantity="one">Up to %1$,d word, about <xliff:g id="size" example="1.4 MB">%2$s</xliff:g> to download</item>
+        <item quantity="other">Up to %1$,d words, about <xliff:g id="size" example="1.4 MB">%2$s</xliff:g> to download</item>
+    </plurals>
+    <!-- Note at the bottom of the dialog. %1$s is a size like "1.1 MB". -->
+    <string name="languages_words_download_pairs_note">The word pairs for next-word predictions download with it, about <xliff:g id="size" example="1.1 MB">%1$s</xliff:g>.</string>
+    <!-- The same dialog, opened from the arrows on a word list that is already
+         on the device, to swap it for a bigger or a smaller one. -->
+    <string name="languages_words_resize_title">Change the size</string>
+    <!-- The same, for a language with more than one list to pick from. -->
+    <string name="languages_words_change_title">Change the word list</string>
+    <string name="languages_words_resize_note">The list on your device stays in place until the new one has finished downloading, and is then replaced by it.</string>
+
+    <!-- Emoji keywords row when the only keywords are ones the user imported. -->
+    <string name="languages_emoji_keywords_imported">Your imported keywords</string>
+
+    <!-- Row for the word-pair data (bigrams and trigrams) that next-word
+         predictions read. -->
+    <string name="languages_word_pairs_title">Word pairs</string>
+    <!-- %1$s is a size like "1.1 MB". -->
+    <string name="languages_word_pairs_download_size">Next-word predictions, <xliff:g id="size" example="1.1 MB">%1$s</xliff:g> to download</string>
+    <!-- %1$s is the size on the device, like "3 MB". -->
+    <string name="languages_word_pairs_downloaded">Next-word predictions, <xliff:g id="size" example="3 MB">%1$s</xliff:g></string>
+    <string name="languages_word_pairs_failed">The download failed. Try again.</string>
+    <string name="languages_word_pairs_delete_desc">Delete the word pairs</string>
+    <string name="languages_context_model_title">Context model</string>
+    <string name="languages_context_model_download_size">Sentence-aware predictions, <xliff:g id="size" example="4.9 MB">%1$s</xliff:g> to download</string>
+    <string name="languages_context_model_downloaded">Sentence-aware predictions, <xliff:g id="size" example="4.9 MB">%1$s</xliff:g></string>
+    <string name="languages_context_model_offline">Not on this phone. This build has no internet: Get the files on the Language pack row lists it, and Import there takes it.</string>
+    <string name="languages_context_model_failed">The download failed. Try again.</string>
+    <string name="languages_context_model_delete_desc">Delete the context model</string>
+    <string name="languages_context_model_variant_standard">Standard</string>
+    <string name="languages_context_model_variant_large">Large</string>
+    <!-- %1$s a size name (Standard, Large), %2$s the file size -->
+    <string name="languages_context_model_variant_size"><xliff:g id="variant" example="Large">%1$s</xliff:g>, <xliff:g id="size" example="16.7 MB">%2$s</xliff:g></string>
+    <string name="languages_context_model_downloaded_variant">Sentence-aware predictions, <xliff:g id="variant" example="Standard">%1$s</xliff:g> model, <xliff:g id="size" example="10.8 MB">%2$s</xliff:g></string>
+    <string name="languages_context_model_switch">Switch to the <xliff:g id="variant" example="Large">%1$s</xliff:g> model (<xliff:g id="size" example="16.7 MB">%2$s</xliff:g>)</string>
+
+    <!-- ===== Dictionary ===== -->
+
+    <string name="languages_custom_dictionaries_title">Custom dictionaries</string>
+    <string name="languages_custom_dictionaries_subtitle">Import your own word lists</string>
+    <string name="languages_hunspell_title">Hunspell spell checking</string>
+    <string name="languages_hunspell_subtitle">Words your imported Hunspell dictionary accepts, compound words included, are never autocorrected, and its spellings join the suggestions.</string>
+    <string name="languages_hunspell_list_off_subtitle">Its word list is switched off. Switch it on under Custom dictionaries to check words with it.</string>
+    <string name="languages_hunspell_not_in_build_subtitle">This build of the app has no Hunspell library. Suggestions come from the word list alone.</string>
+    <string name="languages_hunspell_module_missing_info">Hunspell is an extra part of the keyboard, about 4 MB with the GiellaLT speller engine it comes with. Download it to check words and compound words against your imported dictionary.</string>
+    <string name="languages_hunspell_module_installing_info">Downloading Hunspell…</string>
+    <string name="languages_hunspell_module_installing_sized_info">Downloading Hunspell: <xliff:g id="done" example="0.4 MB">%1$s</xliff:g> of <xliff:g id="total" example="1.1 MB">%2$s</xliff:g></string>
+    <string name="languages_hunspell_module_metered_body">Hunspell is a separate download of about 4 MB.</string>
+    <string name="languages_speller_title">GiellaLT speller</string>
+    <string name="languages_speller_download_size">A finite-state speller from GiellaLT that knows every inflected and compound form. <xliff:g id="download" example="10 MB">%1$s</xliff:g> download, <xliff:g id="storage" example="79 MB">%2$s</xliff:g> on the phone, <xliff:g id="licence" example="GPL-3.0-only">%3$s</xliff:g>.</string>
+    <string name="languages_speller_import_only_subtitle">GiellaLT builds a speller for this language. Import its .bhfst, or the .pkt.tar.zst from a GiellaLT release, to check words with it.</string>
+    <string name="languages_speller_installed">Version <xliff:g id="version" example="4.5.2">%1$s</xliff:g>, <xliff:g id="size" example="79 MB">%2$s</xliff:g>. Words it accepts are never autocorrected, and its spellings join the suggestions.</string>
+    <string name="languages_speller_imported">Imported, <xliff:g id="size" example="79 MB">%1$s</xliff:g>. Words it accepts are never autocorrected, and its spellings join the suggestions.</string>
+    <string name="languages_speller_failed">The speller did not download or unpack. Check the connection and the free storage.</string>
+    <string name="languages_speller_not_in_build_subtitle">This build of the app has no spelling library. Suggestions come from the word lists alone.</string>
+    <string name="languages_speller_import_action">Import</string>
+    <string name="languages_speller_delete_desc">Delete the speller</string>
+    <string name="languages_speller_import_done">Speller installed</string>
+    <string name="languages_speller_import_not_speller">That file is not a speller. Pick a .bhfst, a .zhfst or a GiellaLT .pkt.tar.zst.</string>
+    <string name="languages_speller_import_broken">That speller would not open. It may be damaged or made for a newer divvunspell.</string>
+    <string name="languages_speller_module_missing_info">Spell checking is an extra part of the keyboard, about 4 MB. Download it to use a GiellaLT speller.</string>
+    <string name="languages_speller_module_installing_info">Downloading spell checking…</string>
+    <string name="languages_speller_module_installing_sized_info">Downloading spell checking: <xliff:g id="done" example="1.2 MB">%1$s</xliff:g> of <xliff:g id="total" example="4 MB">%2$s</xliff:g></string>
+    <string name="languages_voikko_title">Voikko spell checking</string>
+    <string name="languages_voikko_download_size">Finnish spell checking that knows compound words and every inflection, used in place of a Hunspell dictionary. <xliff:g id="download" example="1.6 MB">%1$s</xliff:g> download, <xliff:g id="storage" example="4 MB">%2$s</xliff:g> on the phone, <xliff:g id="licence" example="GPL-2.0-or-later">%3$s</xliff:g>.</string>
+    <string name="languages_voikko_import_only_subtitle">Import a Voikko dictionary, a zip with a 5/mor-standard folder in it, to check words with it.</string>
+    <string name="languages_voikko_installed">Dictionary <xliff:g id="version" example="2.6">%1$s</xliff:g>, <xliff:g id="size" example="4 MB">%2$s</xliff:g>. Words Voikko accepts are never autocorrected, and its spellings join the suggestions.</string>
+    <string name="languages_voikko_imported">Imported, <xliff:g id="size" example="4 MB">%1$s</xliff:g>. Words Voikko accepts are never autocorrected, and its spellings join the suggestions.</string>
+    <string name="languages_voikko_failed">The dictionary did not download. Check the connection and the free storage.</string>
+    <string name="languages_voikko_not_in_build_subtitle">This build of the app has no Voikko library. Suggestions come from the word lists and any imported Hunspell dictionary.</string>
+    <string name="languages_voikko_delete_desc">Delete the Voikko dictionary</string>
+    <string name="languages_voikko_import_done">Voikko dictionary installed</string>
+    <string name="languages_voikko_import_not_dictionary">That file is not a Voikko dictionary. Pick a zip with a 5/mor-standard folder in it.</string>
+    <string name="languages_voikko_import_broken">That dictionary would not load. It may be damaged or made for a newer Voikko.</string>
+    <string name="languages_voikko_module_missing_info">Spell checking is an extra part of the keyboard, about 4.5 MB. Download it to check Finnish with Voikko.</string>
+    <string name="languages_hunspell_voikko_subtitle">Voikko checks this language instead while its dictionary is on the phone.</string>
+
+    <!-- State of a downloaded word list. %1$d is the number of words, %2$s its
+         size on your device, for example "4 MB". -->
+    <plurals name="languages_wordlist_downloaded">
+        <item quantity="one">%1$,d word, <xliff:g id="size" example="4 MB">%2$s</xliff:g></item>
+        <item quantity="other">%1$,d words, <xliff:g id="size" example="4 MB">%2$s</xliff:g></item>
+    </plurals>
+    <string name="languages_wordlist_preparing">Preparing the dictionary…</string>
+    <!-- Size choice in the download menu. %1$s is the name of the size, %2$d is
+         how many words that size keeps. -->
+    <plurals name="languages_wordlist_size_option">
+        <item quantity="one"><xliff:g id="size_name" example="Medium">%1$s</xliff:g>, up to %2$,d word</item>
+        <item quantity="other"><xliff:g id="size_name" example="Medium">%1$s</xliff:g>, up to %2$,d words</item>
+    </plurals>
+    <!-- Progress under a running download. %1$s is how much has arrived. -->
+    <string name="languages_wordlist_downloaded_bytes"><xliff:g id="size" example="2 MB">%1$s</xliff:g> downloaded</string>
+    <string name="languages_wordlist_delete_desc">Delete the dictionary</string>
+    <!-- The button beside Delete on a downloaded word list. Its icon is an up
+         arrow when only bigger sizes are left, a down arrow when only smaller
+         ones are, and both arrows in between. -->
+    <string name="languages_wordlist_resize_desc">Change the word list size</string>
+    <string name="languages_wordlist_change_desc">Change the word list</string>
+    <string name="languages_wordlist_resize_bigger_desc">Download a bigger word list</string>
+    <string name="languages_wordlist_resize_smaller_desc">Download a smaller word list</string>
+
+    <!-- ===== Emoji keywords ===== -->
+
+    <string name="languages_emoji_keywords_title">Emoji keywords</string>
+    <!-- State of a downloaded keyword list. %1$d is the number of emoji, %2$s
+         its size on your device, for example "120 KB". -->
+    <plurals name="languages_emoji_dict_downloaded">
+        <item quantity="one">%1$,d emoji, <xliff:g id="size" example="120 KB">%2$s</xliff:g></item>
+        <item quantity="other">%1$,d emoji, <xliff:g id="size" example="120 KB">%2$s</xliff:g></item>
+    </plurals>
+    <!-- The same row before the download. %1$d is the number of emoji, %2$s the
+         size of the download. -->
+    <plurals name="languages_emoji_dict_download_size">
+        <item quantity="one">%1$,d emoji, <xliff:g id="size" example="120 KB">%2$s</xliff:g> to download</item>
+        <item quantity="other">%1$,d emoji, <xliff:g id="size" example="120 KB">%2$s</xliff:g> to download</item>
+    </plurals>
+    <string name="languages_emoji_dict_delete_desc">Delete the emoji keywords</string>
+
+    <!-- ===== Shared download states ===== -->
+
+    <string name="languages_download_queued">Waiting…</string>
+    <string name="languages_cancel_download_desc">Cancel the download</string>
+    <string name="languages_resume_action">Resume</string>
+
+    <!-- ===== Chinese, Cantonese and Japanese options ===== -->
+
+    <!-- Group heading. %1$s is the English name of the language. -->
+    <string name="languages_cjk_options_title"><xliff:g id="language" example="Chinese">%1$s</xliff:g> options</string>
+    <string name="languages_cjk_download_info">Download a bigger conversion dictionary. It holds many more characters and phrases than the built-in set. It works offline after the download.</string>
+    <string name="languages_cjk_pack_unavailable">Not available yet, coming soon</string>
+
+    <!-- A FlorisBoard language pack (.flex) holds the same code tables as the
+         Cangjie, stroke and Wubi packs above, as an SQLite database. Importing one
+         fills those packs without a download. -->
+    <string name="languages_cjk_flex_import_title">Import from FlorisBoard</string>
+    <string name="languages_cjk_flex_import_subtitle">Read a FlorisBoard language pack (.flex). It can fill the Cangjie, stroke and Wubi tables above.</string>
+    <!-- %1$s is the name of the table inside the pack, such as "cangjie5".
+         %2$d is how many characters the app read from it. Not a plural: the
+         word "characters" agrees with a number that is always in the
+         thousands. -->
+    <string name="languages_cjk_flex_import_done" tools:ignore="PluralsCandidate">The app read <xliff:g id="table" example="cangjie5">%1$s</xliff:g> and added %2$d characters.</string>
+    <!-- %1$s is the list of tables in the pack, such as "zhengma, boshiamy". -->
+    <string name="languages_cjk_flex_import_unusable">This pack holds <xliff:g id="tables" example="zhengma, boshiamy">%1$s</xliff:g>. This keyboard types Cangjie, stroke and Wubi 86, so there is nothing in it to use.</string>
+    <string name="languages_cjk_flex_import_not_a_pack">That file is a FlorisBoard theme or keyboard extension, not a language pack. To import a theme, go to Themes.</string>
+    <string name="languages_cjk_flex_import_unreadable">The app cannot read that file as a FlorisBoard language pack.</string>
+    <!-- %1$d is the percentage that has arrived. -->
+    <string name="languages_cjk_downloading_percent">Downloading… %1$d%%</string>
+    <string name="languages_cjk_paused">Paused, press Resume to continue</string>
+    <string name="languages_cjk_downloaded">Downloaded, works offline</string>
+    <!-- %1$s is the name of the dictionary pack. -->
+    <string name="languages_cjk_delete_desc">Delete <xliff:g id="pack" example="Pinyin">%1$s</xliff:g></string>
+
+    <!-- ===== RIME engine (librime) for Chinese and Cantonese =====
+         RIME is the engine's name and stays in Latin letters; schema names
+         such as luna_pinyin are ids and stay as they are. "Compile" is what
+         RIME calls deploying: building its schemas into fast tables. -->
+    <string name="languages_rime_group_title">Conversion engine</string>
+    <string name="languages_rime_group_info">The built-in engine converts with the dictionaries above. RIME is the open-source engine behind Weasel, Squirrel and Trime. It reads RIME schemas, learns the words you pick, and can type schemas you import yourself. It needs its own library and schema packs, which it compiles on the phone.</string>
+    <string name="languages_rime_engine_title">Engine</string>
+    <string name="languages_rime_engine_builtin">Built-in</string>
+    <string name="languages_rime_engine_rime">RIME</string>
+    <string name="languages_rime_engine_subtitle">With RIME, the layouts of this language convert through the RIME schema you pick for each. The keys stay the same.</string>
+    <!-- %1$s is a size such as 2.9 MB. -->
+    <string name="languages_rime_library_missing">RIME needs its library, about <xliff:g id="size" example="2.9 MB">%1$s</xliff:g>. The built-in engine types until it is here.</string>
+    <string name="languages_rime_library_missing_unsized">RIME needs its library. The built-in engine types until it is here.</string>
+    <!-- %1$s and %2$s are sizes such as 1.2 MB and 2.9 MB. -->
+    <string name="languages_rime_library_installing">Downloading the RIME library: <xliff:g id="done" example="1.2 MB">%1$s</xliff:g> of <xliff:g id="total" example="2.9 MB">%2$s</xliff:g></string>
+    <string name="languages_rime_library_installing_unsized">Downloading the RIME library…</string>
+    <string name="languages_rime_library_failed">The RIME library did not download.</string>
+    <string name="languages_rime_status_title">RIME status</string>
+    <string name="languages_rime_status_off">Download a schema pack below. RIME starts when one is compiled.</string>
+    <string name="languages_rime_status_locked">RIME starts after you unlock the phone. Until then the built-in engine types.</string>
+    <string name="languages_rime_status_needs_library">Waiting for the RIME library.</string>
+    <string name="languages_rime_status_needs_deploy">The schemas changed and need to be compiled again.</string>
+    <string name="languages_rime_status_deploying_start">Getting ready to compile…</string>
+    <!-- %1$s is a schema name such as 朙月拼音. %2$d and %3$d count schemas. -->
+    <string name="languages_rime_status_deploying">Compiling <xliff:g id="schema" example="朙月拼音">%1$s</xliff:g>, <xliff:g id="done" example="2">%2$d</xliff:g> of <xliff:g id="total" example="6">%3$d</xliff:g>…</string>
+    <!-- %1$s lists the compiled schemas' names. -->
+    <string name="languages_rime_status_ready">Ready: <xliff:g id="schemas" example="朙月拼音, 注音">%1$s</xliff:g></string>
+    <!-- %1$s is the system's own error text, in English. -->
+    <string name="languages_rime_status_failed">Compiling failed: <xliff:g id="detail" example="out of space">%1$s</xliff:g></string>
+    <string name="languages_rime_deploy_action">Compile</string>
+    <string name="languages_rime_import_title">Import RIME schemas</string>
+    <string name="languages_rime_import_subtitle">A zip with .schema.yaml and .dict.yaml files, such as a schema from GitHub. They are compiled with the packs.</string>
+    <!-- %1$s lists the schema ids the zip brought. -->
+    <string name="languages_rime_import_done">Imported <xliff:g id="schemas" example="wubi86">%1$s</xliff:g>.</string>
+    <string name="languages_rime_import_failed">That zip has no RIME schema in it.</string>
+    <string name="languages_rime_imported_subtitle">Imported by you</string>
+    <!-- %1$s is the name of an imported zip. -->
+    <string name="languages_rime_remove_import_desc">Remove <xliff:g id="name" example="my_schema">%1$s</xliff:g></string>
+    <string name="languages_rime_method_info">Which compiled schema each kind of layout types through. Automatic takes the first downloaded pack that has one.</string>
+    <string name="languages_rime_method_auto">Automatic</string>
+    <string name="languages_rime_method_pinyin">Pinyin layouts</string>
+    <string name="languages_rime_method_t9">9-key Pinyin layout</string>
+    <string name="languages_rime_method_zhuyin">Zhuyin layout</string>
+    <string name="languages_rime_method_cangjie">Cangjie layout</string>
+    <string name="languages_rime_method_stroke">Stroke layout</string>
+    <string name="languages_rime_method_jyutping">Jyutping layout</string>
+    <string name="languages_rime_delete_all_title">Delete RIME data</string>
+    <string name="languages_rime_delete_all_subtitle">Removes the compiled schemas, your imported schemas and the words RIME learned from you. Downloaded packs stay and compile again.</string>
+
+    <!-- The Mozc engine for Japanese (Google's open-source converter). Mozc
+         is the engine's name and stays in Latin letters. -->
+    <string name="languages_mozc_group_title">Conversion engine</string>
+    <string name="languages_mozc_group_info">The built-in engine converts with the kana dictionary above. Mozc is Google\'s open-source Japanese engine, the one behind Google Japanese Input. It converts whole sentences, learns what you pick, and lets you move the boundaries between the parts of a reading. It needs its own library and dictionary.</string>
+    <string name="languages_mozc_engine_title">Japanese engine</string>
+    <string name="languages_mozc_engine_mozc">Mozc</string>
+    <string name="languages_mozc_engine_subtitle">With Mozc, every Japanese layout converts through Mozc: romaji, flick, 12-key and kana. The keys stay the same. The arrow keys resize the part of the reading being converted.</string>
+    <!-- %1$s is a size such as 2.9 MB. -->
+    <string name="languages_mozc_library_missing">Mozc needs its library, about <xliff:g id="size" example="2.9 MB">%1$s</xliff:g>. The built-in engine types until it is here.</string>
+    <string name="languages_mozc_library_missing_unsized">Mozc needs its library. The built-in engine types until it is here.</string>
+    <!-- %1$s and %2$s are sizes such as 1.2 MB and 2.9 MB. -->
+    <string name="languages_mozc_library_installing">Downloading the Mozc library: <xliff:g id="done" example="1.2 MB">%1$s</xliff:g> of <xliff:g id="total" example="2.9 MB">%2$s</xliff:g></string>
+    <string name="languages_mozc_library_installing_unsized">Downloading the Mozc library…</string>
+    <string name="languages_mozc_library_failed">The Mozc library did not download.</string>
+    <string name="languages_mozc_status_title">Mozc status</string>
+    <string name="languages_mozc_status_off">Mozc starts when you pick it above.</string>
+    <string name="languages_mozc_status_locked">Mozc starts after you unlock the phone. Until then the built-in engine types.</string>
+    <string name="languages_mozc_status_needs_library">Waiting for the Mozc library.</string>
+    <string name="languages_mozc_status_needs_data">Download the Mozc dictionary below. Mozc starts when it is here.</string>
+    <string name="languages_mozc_status_starting">Starting…</string>
+    <!-- %1$s is the dictionary's version, such as 3.35.6354.102. -->
+    <string name="languages_mozc_status_ready">Ready, dictionary <xliff:g id="version" example="3.35.6354.102">%1$s</xliff:g></string>
+    <!-- %1$s is Mozc's own error message, in English. -->
+    <string name="languages_mozc_status_failed">Mozc did not start: <xliff:g id="detail" example="invalid magic">%1$s</xliff:g></string>
+    <string name="languages_mozc_clear_title">Forget what Mozc learned</string>
+    <string name="languages_mozc_clear_subtitle">Clears the conversions, predictions and reading boundaries Mozc learned from your picks. The dictionary stays.</string>
+    <string name="languages_mozc_clear_done">Cleared.</string>
+
+    <string name="languages_cjk_traditional_title">Traditional characters</string>
+    <string name="languages_cjk_traditional_subtitle">The keyboard converts candidates to Traditional (繁體). With the phrase table pack, it converts word by word, so 头发 becomes 頭髮.</string>
+    <!-- Info text for the Traditional characters toggle. The Chinese characters
+         are examples and stay as they are. 发 is the Simplified form, 發 means
+         "to send" and 髮 means "hair". -->
+    <string name="languages_cjk_traditional_info">The keyboard converts each candidate from Simplified (简体) to Traditional (繁體) before it shows the candidate. Some Simplified characters have more than one Traditional form, and the word decides which one is correct: 发 is 發 in 發展 but 髮 in 頭髮, and 后 is 後 in 後來 but 后 in 皇后. With the phrase table pack downloaded, the keyboard reads whole words, so it writes the correct form. Without the pack, or for a word that is in no table, it converts one character at a time.</string>
+    <string name="languages_cjk_traditional_button_title">繁 button</string>
+    <string name="languages_cjk_traditional_button_subtitle">A button beside the candidates switches between Simplified and Traditional</string>
+    <string name="languages_cjk_reading_in_field_title">Show the reading in the text field</string>
+    <string name="languages_cjk_reading_in_field_subtitle">Off, the pinyin you type shows only on the keyboard, before the candidates</string>
+    <string name="languages_cjk_reading_in_field_info">On, the pinyin, zhuyin or Jyutping that you type shows underlined in the text field until you pick a candidate. Off, the text field stays as it is, and the keyboard shows what you typed at the start of the candidate strip. Only the candidate you pick goes into the text field, the way fcitx5 works.</string>
+    <string name="languages_cjk_reading_on_switch_title">When you switch language mid-reading</string>
+    <string name="languages_cjk_reading_on_switch_convert">Type the first candidate</string>
+    <string name="languages_cjk_reading_on_switch_convert_desc">The best candidates for everything that you typed go into the text field</string>
+    <string name="languages_cjk_reading_on_switch_typed">Type what you typed</string>
+    <string name="languages_cjk_reading_on_switch_typed_desc">The pinyin or zhuyin goes into the text field as letters, the way fcitx5 does it</string>
+    <string name="languages_cjk_reading_on_switch_discard">Discard it</string>
+    <string name="languages_cjk_reading_on_switch_discard_desc">Nothing goes into the text field</string>
+    <string name="languages_cjk_region_title">Regional wording</string>
+    <!-- The Chinese characters are examples and stay as they are. 出租車 and
+         計程車 both mean "taxi", but they are different words with different
+         readings. -->
+    <string name="languages_cjk_region_info">Taiwan and Hong Kong each prefer some character forms of their own. Taiwan also often uses different words for the same thing, for example 計程車 for 出租車. Only Taiwan wording changes the words. The other choices keep the word that you typed.</string>
+    <string name="languages_cjk_region_generic_title">Standard</string>
+    <string name="languages_cjk_region_generic_subtitle">Characters only, no changes to wording</string>
+    <string name="languages_cjk_region_taiwan_title">Taiwan (臺灣)</string>
+    <string name="languages_cjk_region_taiwan_subtitle">Character preferences of Taiwan, no changes to wording</string>
+    <string name="languages_cjk_region_taiwan_wording_title">Taiwan wording (臺灣用語)</string>
+    <!-- Example word pairs. The Chinese text stays as it is. -->
+    <string name="languages_cjk_region_taiwan_wording_subtitle">Changes words to the Taiwan words: 出租車 to 計程車, 光盤 to 光碟</string>
+    <string name="languages_cjk_region_hong_kong_title">Hong Kong (香港)</string>
+    <string name="languages_cjk_region_hong_kong_subtitle">Character preferences of Hong Kong</string>
+
+    <string name="languages_braille_download_info">Download liblouis\'s tables to type contracted braille. They work offline after the download.</string>
+    <string name="languages_braille_table_title">Contractions</string>
+    <string name="languages_braille_table_subtitle">Which contracted braille your words are read as. A word types when you press space or another key. Needs the tables above.</string>
+    <string name="languages_braille_table_uncontracted">None, English letter by letter</string>
+    <string name="languages_nikud_download_info">Download Phonikud to add niqqud to Hebrew text: select it and tap Add niqqud. It works offline after the download, and uses a lot of memory while it runs.</string>
+    <string name="languages_tashkeel_download_info">Download CATT to add tashkeel to Arabic text: select it and tap Add tashkeel. It works offline after the download.</string>
+    <string name="languages_tashkeel_library_ready">On this phone. Select Arabic text and tap Add tashkeel.</string>
+    <string name="languages_tashkeel_library_missing">Add tashkeel needs this and the model above.</string>
+    <string name="languages_hunspell_tr_download_info">Download spelling rules for Turkish. They know a word with any suffix, which no word list can hold. They work offline after the download.</string>
+    <string name="languages_hunspell_tr_library_title">Spelling library</string>
+    <string name="languages_hunspell_tr_library_ready">On this phone. Turkish is checked by the rules above once they are downloaded.</string>
+    <string name="languages_hunspell_tr_library_missing">The rules above need this.</string>
+    <string name="languages_ru_yo_download_info">Download the list of words with ё, then select Russian text and tap Restore ё. It works offline after the download.</string>
+    <string name="languages_nikud_library_title">ONNX Runtime</string>
+    <string name="languages_nikud_library_ready">On this phone. Select Hebrew text and tap Add niqqud.</string>
+    <string name="languages_nikud_library_missing">Add niqqud needs this and the model above.</string>
+    <string name="languages_kiwi_library_title">Spacing correction library</string>
+    <string name="languages_kiwi_library_ready">On this phone. Select Korean text and tap Fix spacing.</string>
+    <string name="languages_kiwi_library_installing">Downloading</string>
+    <string name="languages_kiwi_library_missing">About 18 MB. Fix spacing needs this and the model above.</string>
+    <string name="languages_cjk_hanja_title">Offer Hanja (漢字)</string>
+    <string name="languages_cjk_hanja_subtitle">Show the Hanja for the word you are typing on the suggestion strip</string>
+    <string name="languages_cjk_hanja_info">Tap one to write it in place of the Hangul. An ending stays in Hangul, so 학교에 can become 學校에. Needs the Hanja dictionary above. To see every choice for a word, turn on the scrolling suggestion strip.</string>
+    <string name="languages_cjk_lazy_title">Lazy pronunciation (懶音)</string>
+    <!-- Only "Match merged sounds" and "before" need translation. The rest is
+         Jyutping spelling and stays as it is. -->
+    <string name="languages_cjk_lazy_subtitle">Match merged sounds: n↔l, ng↔∅, gw→g before -o, -ng↔-n, -k↔-t…</string>
+    <string name="languages_cjk_loose_marks_title">Match kana without marks</string>
+    <!-- Only "also finds" needs translation. The rest is Japanese text and
+         stays as it is. -->
+    <string name="languages_cjk_loose_marks_subtitle">かつこう also finds 学校 (がっこう)</string>
+    <!-- The kana are examples and stay as they are. -->
+    <string name="languages_cjk_loose_marks_info">On the Flick and Kana JIS layouts, a small kana, a ゛ or a ゜ is an extra key. With this on, a plain kana also matches those forms: か finds が, つ finds っ and づ, は finds ば and ぱ, や finds ゃ. When two words are almost equally common, the one that you typed exactly comes first. A kana that you typed with a mark is not changed, and Romaji typing is not changed.</string>
+    <string name="languages_cjk_full_width_space_title">Full-width space</string>
+    <!-- 　 is the full-width space itself, drawn between the brackets, and stays
+         as it is. -->
+    <string name="languages_cjk_full_width_space_subtitle">The space bar types a full-width space [　]</string>
+    <string name="languages_cjk_full_width_space_info">Japanese and Chinese text is spaced with the ideographic space (U+3000), which is as wide as one character. With this on, the space bar types it instead of the narrow space used between words in other languages. A space pressed while you are still typing a reading picks a candidate as before, and only a press with nothing waiting to convert types a space.</string>
+    <string name="languages_cjk_space_steps_title">Space steps through candidates</string>
+    <string name="languages_cjk_space_steps_subtitle">Space highlights the next candidate, and Enter types it</string>
+    <string name="languages_cjk_space_steps_info">Off, the space bar types the first candidate straight away. On, the first press highlights it and each press after moves to the next one, the way Japanese input methods work. Enter types the highlighted candidate, typing on keeps it and starts a new reading, and backspace goes back to the reading. With a physical keyboard, the arrow keys move the highlight either way, Enter or space types it, and once something is highlighted the keys 1 to 9 pick a candidate and Escape goes back to the reading.</string>
+    <!-- Jianpin (简拼) is the standard name for abbreviated Pinyin, where a
+         syllable is typed as its first letter only. Keep the Chinese in the
+         title. The examples in the subtitle are Pinyin and stay as they are. -->
+    <string name="languages_cjk_jianpin_title">Jianpin (简拼)</string>
+    <string name="languages_cjk_jianpin_subtitle">Type only the first letter of a syllable: wm finds 我们, zg finds 中国</string>
+    <string name="languages_cjk_jianpin_info">A letter that is not a whole syllable stands for every syllable that starts with it, so wm finds 我们 and haod finds 好的. Each letter is one syllable: hd means h… plus d…. A syllable that you type in full is matched exactly and ranks first. The letters z, c and s also cover zh, ch and sh. A Double Pinyin scheme does not use this, because every syllable is exactly two keys there.</string>
+    <string name="languages_cjk_prediction_title">Next-word suggestions (联想)</string>
+    <string name="languages_cjk_prediction_subtitle">After you pick Chinese text, show the words that usually come next</string>
+    <string name="languages_cjk_prediction_info">When a conversion is complete and nothing is composing, the strip shows the words that usually follow the text before the cursor. Tap one to type it, and the strip shows what follows that. The words that you write after others come first, then the common word pairs, then the rest of a word that the last character starts (无 gives 聊). This needs the word pairs pack.</string>
+    <string name="languages_cjk_shortcuts_title">Date, time and numbers</string>
+    <string name="languages_cjk_shortcuts_subtitle">rq types the date, sj the time, xq the weekday, v and a number gives Chinese numerals</string>
+    <string name="languages_cjk_shortcuts_info">Type rq for the date, sj for the time and xq for the weekday. These show after the best candidate for the same letters. Type v and then a number, for example v1234.5, to get it as 一千二百三十四点五, as 壹仟贰佰叁拾肆点伍 for amounts, or digit by digit. No pinyin syllable starts with v, so this does not change pinyin.</string>
+    <string name="languages_cjk_fuzzy_title">Fuzzy Pinyin</string>
+    <!-- Only "Match confusable sounds" needs translation. The rest is Pinyin
+         spelling and stays as it is. -->
+    <string name="languages_cjk_fuzzy_subtitle">Match confusable sounds: zh↔z, ch↔c, sh↔s, n↔l, an↔ang, in↔ing…</string>
+    <string name="languages_cjk_fuzzy_pairs_info">Pick the sounds you want matched. Every one is on to start with. Switching a pair off makes your spelling of it exact again, which gives you back some precision: the ending pairs are a regional accent and cost you little, while n↔l affects every syllable that starts with either.</string>
+    <!-- Subtitle under a fuzzy pair. "Initial" and "final" are the standard Pinyin terms for the start and end of a syllable. -->
+    <string name="languages_cjk_fuzzy_pair_initial">Start of a syllable</string>
+    <string name="languages_cjk_fuzzy_pair_final">End of a syllable</string>
+    <string name="languages_cjk_fuzzy_pairs_reset_title">Match every pair again</string>
+    <string name="languages_cjk_pinyin_group_title">Pinyin</string>
+    <string name="languages_cjk_double_pinyin_title">Double Pinyin scheme</string>
+    <string name="languages_cjk_double_pinyin_info">Double Pinyin: type each syllable with exactly two keys. It needs the Pinyin dictionary above.</string>
+    <!-- Row, and the title of its editor screen, for a Double Pinyin scheme the
+         user writes themselves. -->
+    <string name="languages_cjk_double_pinyin_custom_title">Custom Double Pinyin scheme</string>
+    <!-- fcitx is the name of a Linux input method and stays as it is. -->
+    <string name="languages_cjk_double_pinyin_custom_subtitle">Set your own keys. Copy, paste, import or export the scheme, in the same format as fcitx</string>
+    <!-- Menu item and dialog title: replace the editor's text with the key table
+         of one of the built-in schemes, to edit from there. -->
+    <string name="double_pinyin_editor_start_from">Start from a scheme</string>
+    <string name="double_pinyin_editor_start_from_body">This replaces the text in the editor with that scheme\'s keys. Nothing is saved until you press Save.</string>
+    <string name="double_pinyin_editor_saved">Saved. The keyboard now types with this scheme.</string>
+    <string name="double_pinyin_editor_read_in">File read in. Press Save to type with it.</string>
+    <string name="double_pinyin_editor_read_failed">That file could not be read</string>
+    <string name="double_pinyin_editor_exported">Scheme exported</string>
+    <string name="double_pinyin_editor_export_failed">The file could not be written</string>
+    <!-- Status line under the editor. -->
+    <string name="double_pinyin_status_empty">No scheme yet. Write one, paste one, or start from a built-in scheme in the menu. While this is empty, you type full Pinyin.</string>
+    <!-- %1$s lists Pinyin initials and finals, such as "zh, iong". -->
+    <string name="double_pinyin_status_unmapped">No key types: <xliff:g id="pinyin" example="zh, iong">%1$s</xliff:g></string>
+    <string name="double_pinyin_status_complete">Every initial and final has a key</string>
+    <!-- %1$d lines of the scheme were skipped; %2$d is the number of the first
+         one, and %3$s says what is wrong with it. Tapping the line selects it. -->
+    <plurals name="double_pinyin_status_problems">
+        <item quantity="one"><xliff:g id="count" example="1">%1$d</xliff:g> line skipped. Line <xliff:g id="line" example="12">%2$d</xliff:g>: <xliff:g id="reason" example="not a Pinyin initial, final or syllable">%3$s</xliff:g></item>
+        <item quantity="other"><xliff:g id="count" example="3">%1$d</xliff:g> lines skipped. First, line <xliff:g id="line" example="12">%2$d</xliff:g>: <xliff:g id="reason" example="not a Pinyin initial, final or syllable">%3$s</xliff:g></item>
+    </plurals>
+    <string name="double_pinyin_problem_not_pinyin">before the = is not a Pinyin initial, final or syllable</string>
+    <string name="double_pinyin_problem_not_a_letter">keys must be the letters a to z</string>
+    <string name="double_pinyin_problem_not_a_mapping">not in the form pinyin=key</string>
+
+    <!-- Button that takes a language off the list. %1$s is its English name. -->
+    <string name="languages_remove_action">Remove <xliff:g id="language" example="Bengali">%1$s</xliff:g></string>
+
+    <!-- Dialog shown as the user adds a language. It offers the downloads that
+         make the language work properly: the word list, the emoji keywords and
+         the word-pair data predictions use. -->
+    <string name="languages_data_download_title">Download language data?</string>
+    <!-- %1$s is the language name, %2$s a data size like "4.2 MB". -->
+    <string name="languages_data_download_body">The keyboard can download the data <xliff:g id="language" example="German">%1$s</xliff:g> needs to predict and correct well: a word list, emoji keywords and word-pair data, whichever of those exist. This uses about <xliff:g id="size" example="4.2 MB">%2$s</xliff:g> of data. You can also download them later from the language screen.</string>
+    <string name="languages_data_download_dismiss_action">Not now</string>
+
+
+    <!-- Dialog after the user removes a language that has downloaded files. -->
+    <string name="languages_data_delete_title">Delete the downloaded files?</string>
+    <!-- %1$s is the language name, %2$s a data size like "4.2 MB". -->
+    <string name="languages_data_delete_body"><xliff:g id="language" example="German">%1$s</xliff:g> has files downloaded for it, such as its word list, emoji keywords, spell checker or dictionaries. Delete them and get about <xliff:g id="size" example="4.2 MB">%2$s</xliff:g> of storage back?</string>
+    <string name="languages_data_delete_dismiss_action">Keep them</string>
+
+</resources>

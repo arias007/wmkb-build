@@ -1,0 +1,233 @@
+---
+title: "Keys & typing basics"
+description: "Key presses, long-press popups, shift behavior, the number row and key previews."
+sidebar:
+  order: 1
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import KeyCap from '@components/KeyCap.astro';
+import GestureDemo from '@components/GestureDemo.astro';
+import Shot from '@components/Shot.astro';
+
+Every key does more than the letter printed on it. A tap commits that letter. A hold opens accents, digits, symbols, or an editing command on six letters you can arm yourself. This page covers what one key does under your finger, before the gestures that travel across several.
+
+## Tapping and long-pressing a key
+
+<SettingsPath path="Key press / Key popup" />
+
+<PhoneFrame side caption="Holding a letter opens its accent and symbol alternates.">
+  <Shot id="typing/long-press-popup" alt="Holding a letter opens its accent and symbol alternates." />
+</PhoneFrame>
+
+While you hold a key, its character floats in a bubble above your finger. That bubble is the **key popup**, and it lets you confirm what you hit before you let go. It's on by default, and by default it grows upward out of the pressed key instead of hovering above it with a gap (the **Popup on key** toggle). Even a fast tap leaves it up for at least 140&nbsp;ms after you release, so a quick press still flashes something readable. On number, phone and date/time keypads it stays hidden by default, a numeric PIN field included. Echoing each digit large enough to read over your shoulder is not much of a favor. The **Popup on number pads** toggle brings it back on those keypads if you want it there. A key with a [flick](/typing/gestures/#flick-keys) or a [swipe](/typing/gestures/#swipes-on-keys) on it shows the bubble too, until you swipe or hold long enough to bring up its cross of directions.
+
+<GestureDemo type="long-press" caption="Hold a key past the long-press delay to open its alternates." />
+
+Hold past the **long-press delay** (300&nbsp;ms by default) and the key's alternates pop up, if it has any. `Q`–`P` lead with the digits 1–0. `A`–`L` and `Z`–`M` lead with a symbol (`@`, `#`, `$`, `&`…). Some letters carry accented forms after that first alternate: `e`, `u`, `i`, `o` after their digit (`e` → è é ê ë, `u` → ù ú û ü, and so on), and `a`, `s`, `z`, `c`, `n` after their symbol. The first alternate also prints as a small corner hint on the key itself, so you can see what a hold will lead with before you commit to it. That's the **Press and hold hints** toggle, on by default. Every other layout laid out as QWERTY gets the same digits and symbols at the front of its holds, ahead of its own accents, unless it already puts digits on its keys; a popup you wrote yourself in the layout editor is left as you wrote it, an empty one included. A layout you made or imported borrows none of them: its keys hold what you gave them and nothing more.
+
+With <KeyCap>Shift</KeyCap> on or caps lock locked, the popup and the corner hint show capitals: holding `e` offers È É Ê Ë, and the one you pick is typed as a capital. Digits and symbols stay as they are.
+
+On a right-to-left language (Arabic, Persian, Urdu, Hebrew), the corner hint and the popup draw a bracket the way it will look in your text. Right-to-left text flips `(` into `)`, `<` into `>`, and the same for `[ ]`, `{ }` and `« »`, so a key that types `(` shows `)`, which is what lands on the screen. Only the drawing changes; the key types the same character it always did.
+
+A popup with more alternates than fit across the screen wraps onto a second row and a third, so nothing ever sits off the edge where you can't reach it. That's the case you meet with "All accents on press and hold" turned on, or with a raised popup text size, or on a key you gave a long list of your own.
+
+Keep your finger down and you can pick one without a second tap. The popup opens with its first alternate right over the key you're holding and highlighted, and the rest spread out on both sides of it: the second just to its right, the third just to its left, and so on outward, so the next alternate is one short slide away in either direction. Sliding the finger moves the highlight, and letting go types whatever is lit. The slide counts from where your finger started, so moving one alternate's width moves the highlight one alternate along, wherever on the key you pressed. Up and down work the same way: the highlight stays a row above your finger, so sliding up one row's height reaches the row above without your thumb climbing onto it and hiding it. On a key near either edge, where the popup has no room on one side, the alternates run away from the edge in reading order instead, so the first one still sits over the key. Turn off **Centre on the key** to have every popup run in reading order, all to one side of the first alternate. The alternate you're aiming at grows as your finger nears it and shrinks as you move on, and the highlight gives a little under your finger as it moves, then steps to the next alternate almost instantly once your finger crosses into it. If you'd rather nothing moved, turn on **Classic press-and-hold popup** under Accessibility. Hold and release without moving and you get that first alternate, which is what a hold does on any other keyboard. To back out, slide well away from the popup before you lift. If you'd rather have the older two-step popup, which stays open after you lift so you can tap the one you want, turn **Choose without lifting** off.
+
+Eight settings under **Alternate keys** shape that popup. **Alternate key size** and **Alternate key spacing** make the characters bigger and give each one more room, and the size slider reaches ×3.20, well past what the preview bubble allows. **Alternate key columns** is Auto by default, fitting as many per row as the screen takes. Set it to a number from 3 to 11 instead and every row gets that many equal columns, so a long list reads as a block and each character stays put between one hold and the next. When that many don't fit across the screen, the spacing between characters shrinks first, then the number of columns. **Closest to the key first** flips which end of a wrapped popup the list starts at: off, it fills top-down like lines of text, which puts the first alternate furthest from your thumb; on, it fills from the key outward the way stock keyboards do, so the first alternate is the nearest one. **Order of the alternates** is a list you drag: a letter's popup holds up to three groups, the alternates the layout itself puts under the key, the accents that **All accents** and **Native letters first** add, and the capital or shifted form that **Shifted letter on press and hold** adds, and this decides which comes first. Inside a group the order stays as it was. The default is the layout's own, then the accents, then the capital, which is how the popup was always built; put the capital first if a hold is how you type capitals. **Remember the punctuation key's pick** makes the comma and full stop keep what you last chose from them: pick `?` from the comma and it types `?` until you pick something else.
+
+The popup isn't only for characters. A key in a [custom layout](/languages/custom-layouts/) can carry action alternates too, so a hold on <KeyCap>Enter</KeyCap> can offer <KeyCap>Tab</KeyCap>, and a hold on any key can open voice typing or the editing pad. Every key can have alternates except the four that hold for something else already: <KeyCap>⌫</KeyCap>, <KeyCap>⌦</KeyCap> and <KeyCap>Space</KeyCap> hold to repeat, and a braille dot holds as part of its chord.
+
+A few more long-press behaviors live under the same **Press and hold shortcuts** settings group:
+
+<SettingsPath path="Key press / Press and hold shortcuts" />
+
+- **All accents on press and hold** (off by default) adds each Latin letter's complete accent set to its long-press popup. Nothing is taken away to make room: the digit or symbol stays, with every accent beside it.
+- **No accents on press and hold** (off by default) does the opposite: it takes every accented letter out of the letter popups, the layout's own included, on every layout at once. The digits, symbols and shortcuts stay. It wins when both are on.
+- **Top row press and hold** (Auto by default) decides what the holds on `Q`–`P` type, whatever the number row is doing. **Auto** keeps the digits without the number row and drops them with it. **Digits** keeps them either way. **Symbols** puts `! @ # $ % ^ & * ( )` in their place. **None** drops them.
+- **Your hold symbols** lets you pick the symbol each letter holds, on every layout, without editing one: type a symbol under a letter and a hold on that letter offers it first, in place of the digit or symbol the layout put there, with the corner hint to match. A box left empty keeps the layout's own. **SwiftKey** fills in the set SwiftKey uses (`@` on A, `#` on S, `&` on D, and so on), and **Clear all** goes back to every layout's own.
+- **Your language's letters first** (on by default) puts the letters of the language you're typing ahead of the number or symbol that opens a key's popup. On German, holding <KeyCap>u</KeyCap> types ü instead of 7. English has no accented letters, so its keys stay as they were. A key whose popup you edited yourself keeps the order you typed.
+- **Shifted letter on press and hold** (off by default) puts each key's shifted character at the end of its popup: the capital in Latin scripts, the key's second letter in Arabic, Devanagari and other scripts without capitals. Handy on its own, and the way to type a capital out of the [drag off ?123 or ABC](/typing/gestures/#dragging-from-123-or-abc), which types on a layer the Shift key isn't on.
+- **Press and hold ?123 for the number pad** (on by default) makes a long press on the symbols key open a full numeric keypad panel over the current field. A quick tap still switches to the symbols layer as usual.
+- **Press and hold enter for emoji** (off by default) puts an emoji entry at the front of the <KeyCap>Enter</KeyCap> key's popup, so a hold and release opens the emoji panel. Where Enter shows Send or Search, the line break stays in the popup next to it.
+- **Currency keys** lets you reorder or replace the glyphs the <KeyCap>$</KeyCap> key's popup offers (৳ € £ ¥ ₹ ₿ by default). Type them space-separated, with the one you use most first.
+
+On the <KeyCap>?123</KeyCap> page of a language with a currency of its own, that key shows the language's currency instead of <KeyCap>$</KeyCap>, the way Gboard does: ₹ on Hindi and the other Indian languages, ৳ on Bangla, € on German or French, ₽ on Russian, and so on. <KeyCap>$</KeyCap> moves to the front of its popup, and your **Currency keys** follow it. A layout that draws its own symbols page keeps whatever it put there.
+
+English, Spanish and Portuguese are written across several currencies, so they go by where your phone is: its SIM, then its network, its time zone and its languages. English shows £ in Britain, € in Ireland and ₹ in India, and stays on <KeyCap>$</KeyCap> anywhere the keyboard has no answer for. Portuguese shows R$ in Brazil and € everywhere else. Spanish shows the currency of the Spanish-speaking country you're in, and € outside them.
+
+The letter that holds <KeyCap>$</KeyCap>, <KeyCap>d</KeyCap> on QWERTY, leads with the same currency, and <KeyCap>$</KeyCap> sits right behind it. To put a different symbol there, set it under **Your hold symbols**. A popup you wrote yourself in the layout editor keeps its order.
+
+## Shift, caps lock, and auto-capitalization
+
+<SettingsPath path="Key press / Timing" />
+
+<PhoneFrame side caption="Shift off, one-shot Shift, and Caps Lock: the three states the key cycles through.">
+  ![Shift off, one-shot Shift, and Caps Lock: the three states the key cycles through.](@assets/screens/typing/shift-states.webp)
+</PhoneFrame>
+
+<KeyCap>Shift</KeyCap> cycles through three states. From off, one tap arms a one-shot **Shift** that capitalizes only the next letter and then reverts on its own. A second tap inside the **caps-lock double-tap** window (350&nbsp;ms by default, adjustable 150–600&nbsp;ms) locks **Caps Lock** instead. From either state, a single tap that *isn't* a fast double-tap turns it back off. Getting out of caps lock takes one plain tap, not another double-tap. The key shows which state it's in: its icon turns the theme's accent color for Shift, and sits on a patch of that color for Caps Lock. With text selected, <KeyCap>Shift</KeyCap> changes the selection's case instead, the way SwiftKey's does: each press steps it through lower case, Title Case and UPPER CASE, and the selection stays put so you can keep pressing (see [Text editing](/tools/text-editing/)).
+
+You can also hold <KeyCap>Shift</KeyCap> and type with another finger, the way a physical Shift works: every letter tapped while it's down comes out a capital, and lifting it puts the keyboard back where it was, without arming Shift for the letter after. Hold it past the long-press time without typing anything and it locks **Caps Lock**, the way a long press of Shift does on most keyboards. That is also the way to caps lock with the cursor on a word while **Shift changes the case of the word at the cursor** is on, where a tap of Shift re-cases the word instead. Under caps lock a held Shift does nothing extra, since the letters are capitals already. Tap <KeyCap>Enter</KeyCap> while holding Shift and it's Shift+Enter, the same as on Gboard.
+
+Auto-capitalization arms Shift for you at the start of a sentence, but only when three things line up: **Automatic capital letters** is on (the default), the field is a plain text field rather than a structured keypad, and the active language's script has letter case at all. Bangla, for instance, doesn't, so auto-capitalize never fires while you type it. It re-checks after every sentence-ending mark (`.`, `!`, `?`, `।`) and whenever you move the cursor or switch fields. A mark inside a quotation or a bracket that opened in the middle of a sentence ends only the quoted words, not the sentence: `An "exclamation!" is` carries on in lower case. When the quotation is the whole sentence, as in `"Stop!" Then`, the next word gets its capital. Caps Lock is off limits to it, so an all-caps line you locked in stays locked in.
+
+Switching language re-checks it too whenever either side has no letter case. On Arabic, Bangla and the like, Shift opens a second set of letters rather than capitals, so a Shift armed or locked on English is dropped when you switch to one of them, and the keyboard opens on its plain letters. Switching back to English at the start of a sentence arms Shift again. Between two languages that both have case, English and Russian say, Shift stays as it was.
+
+<SettingsPath path="Typing / Automatic corrections" />
+
+That toggle lives on the Typing screen rather than here. See [Autocorrect](/smart/autocorrect/) for the rest of the automatic-corrections group it sits in.
+
+## Hold a letter for a quick edit
+
+<SettingsPath path="Key press / Press and hold shortcuts" />
+
+Six letters carry an editing command in their press-and-hold popup: <KeyCap>A</KeyCap> selects all, <KeyCap>C</KeyCap> copies, <KeyCap>X</KeyCap> cuts, <KeyCap>V</KeyCap> pastes, <KeyCap>Z</KeyCap> undoes, <KeyCap>Y</KeyCap> redoes. All six are on by default. They sit at the end of the popup, after the accents the key already has, so a hold on `C` offers `'çć` and then copy, and you slide onto the copy icon to run it. The icon lights up in the same highlight colour as a character does. Copy and cut select everything first if nothing is already selected, so one hold in an untouched field copies the whole field.
+
+The same six also run from a slide off the 🌐 key, if you turn on **Slide from 🌐 for shortcuts**: press 🌐, slide onto <KeyCap>C</KeyCap>, lift, and the text is copied. See [Switching languages](/languages/switching/#sliding-from--onto-a-shortcut).
+
+Those six keys are `a c v x z y` only because that is the QWERTY answer. The **Shortcut keys** row in the same group is where you move them onto keys your own layout actually draws. A Bengali or Russian grid has no `a` to hold, so without that row the switches would do nothing at all.
+
+<PhoneFrame caption="Copy at the end of C's press-and-hold popup, after the accents.">
+  ![Copy at the end of C's press-and-hold popup, after the accents.](@assets/screens/typing/hold-letter-clipboard.webp)
+</PhoneFrame>
+
+:::note
+This is a different mechanism from <KeyCap>Ctrl</KeyCap>+letter on a physical keyboard, which has its own toggle for whether it sends the same clipboard action or a raw key event (some apps, like terminals, need the raw event). See [Hardware keyboards](/typing/hardware-keyboard/).
+:::
+
+## The Enter key
+
+<SettingsPath path="Typing / Enter key" />
+
+<PhoneFrame side caption="Enter drawing a field's own action icon.">
+  <Shot id="typing/enter-action-icons" alt="Enter drawing a field's own action icon." />
+</PhoneFrame>
+
+The key's icon and behavior follow whatever the focused field asks for: Search, Send, Go, Next, Previous or Done, each with its own icon, or a plain newline when the field doesn't specify. When an app supplies its own label instead of a standard action ("Reply", "Post"), the key draws that text directly rather than an icon.
+
+A message box that asks for a line break gets one, even when the app also watches for the Enter key press itself. Discord's is the example: it declares Done and then asks the keyboard not to use it, so the key draws the newline symbol, and now it types the break straight into the box rather than pressing a key the app would have read as Send.
+
+Some apps change the action as you type, and the key follows. The Pixel Launcher's app search is one: the key shows Search while your words are a web search and an arrow once they match an app, and pressing it runs that search or opens the app instead of putting a line break in the box.
+
+**Shift and Enter type a new line** (on by default) lets you press <KeyCap>Shift</KeyCap> then <KeyCap>Enter</KeyCap>, or hold Shift on a physical keyboard, to force a line break in a field that would otherwise send or search. The key itself changes to the newline symbol while Shift is armed, so it never promises a Send it isn't about to do. Only a Shift you pressed yourself counts. The one-shot Shift that auto-capitalize arms at the start of a message is ignored, so the first line of a chat still sends normally, and Caps Lock is ignored too. Holding Shift down while you tap Enter counts as well.
+
+In a field with no Send or Search of its own, such as a document in Google Docs or Word, the keyboard sends a real Shift+Enter instead of a plain one. Those editors read Shift+Enter as a line break inside the paragraph and plain Enter as a new paragraph, so you get both. This works with the setting off too, since there's no action for it to override; an ordinary text box types the same new line either way.
+
+While that setting is on, the key carries both things at once: whichever one it's about to do fills the key, and the other sits small in the top right corner, the way a letter's alternate does. So a Send field shows the paper plane with a newline symbol in the corner, and arming Shift swaps the two over: the newline fills the key and the paper plane moves to the corner. Send never leaves the keyboard; it just changes places. The hold swaps with them: press and hold <KeyCap>Enter</KeyCap> while Shift is armed and the popup offers Send instead of a second line break. Sending that way also puts Shift down, so the next Enter in the emptied box sends again.
+
+There's a second way in that doesn't need the setting at all: in any field where Enter has taken on the app's own action, press and hold the key. The popup that opens carries a newline entry, the same as Gboard's. Tap it and you get a line break, whatever the app declared. This one is always available and it never sends.
+
+## Number row and numerals
+
+<SettingsPath path="Layout & size / Number row" />
+
+<PhoneFrame side caption="The number row above the letters.">
+  <Shot id="typing/number-row" alt="The number row above the letters." />
+</PhoneFrame>
+
+**Number row** (on by default) gives the digits 1–0 a dedicated row above the letters, so they don't need a long-press. While it's there, the digit that would otherwise be the top row's first long-press alternate is dropped, since the row makes it redundant. To keep those digits, or to hold the row's symbols on `Q`–`P` instead, change **Top row press and hold** under <SettingsPath path="Key press / Press and hold shortcuts" />. A few sub-settings sit under it. **Number row height** runs 32–100&nbsp;dp. **Symbols on shift** (off by default) swaps the row to `= \ < > [ ] { } | ~` while Shift is held, instead of digits. Only a finger on Shift does it: a tap of Shift for one capital, or the capital at the start of a sentence, leaves the digits in place. **Number row in symbols** (on by default) keeps the digit row up on the ?123 layer too. The symbols layer's own second page carries its arrow and comparison symbols either way. **Symbol row on number pads** (on by default) keeps the row over the keypad a number, phone, date or time field puts up, where it carries symbols rather than a second set of digits: `+ * # , ; ( ) - / .` on a phone field, `+ - * / = ( ) % : .` on the others. Turn it off for the bare keypad; the digits over the letters stay either way. You can change the keys of the number row on each layer, and the row that takes the place of the digits on the symbols layer, in the [layout editor](/reference/settings/keymaps/#the-rows-around-the-grid).
+
+If you'd rather move the cursor with keys than with a drag on the spacebar, **Arrow keys row** under Layout & size adds a row of ←&nbsp;↑&nbsp;↓&nbsp;→ under the spacebar, in the order you choose. See [Layout & size](/reference/settings/layout/#arrow-keys-row).
+
+<SettingsPath path="Layout & size / Numerals" />
+
+Separately, **numeral system** decides which *glyphs* the number row and keypad show, per language: Arabic can display ٠-٩ while English next to it stays on 0-9. Every language starts on **Auto**, which follows that language's own convention (Arabic and Sorani → Arabic-Indic, Persian/Urdu → Persian, Bangla → Bengali, Devanagari-script languages → Devanagari, everything else → Latin). Override it per language on that language's own screen rather than here (see [Languages](/languages/overview/)).
+
+This screen's **Type native digits in** setting answers a different question: whether those native glyphs are what actually gets *committed* when you type them. **Text fields**, the default, types the native glyphs everywhere except number, phone and date/time fields, which keep plain 0-9. **Everywhere** commits the native glyphs unconditionally. **Display only** always types plain ASCII digits, whatever the keys show.
+
+For a language with digits of its own, the other set is a press and hold away on the number row. Hold a digit and the first entry in its popup is the same digit in the other system, so a plain hold and release types it: `1` on an Arabic board that shows `١`, and `١` on one you've switched to `0-9`. Under **Display only** the hold offers the glyph the key shows, since a tap already types ASCII. Languages that only use `0-9` have nothing to offer, and their popups are unchanged.
+
+## Autopilot
+
+<SettingsPath path="Typing / Suggestions / Autopilot" />
+
+**Autopilot** (on by default) quietly widens a key's touch target toward the letter that continues the words the suggestion strip is offering, so the keys follow the same prediction the strip does, secondary languages and context included. A tap that lands just inside a neighboring key can still commit the letter you meant, but only near the shared edge. A deliberate press in the middle of a key is never second-guessed. It applies to the letters layer only, and it needs [Suggestions](/smart/suggestions/) turned on to have anything to predict from. See [Autocorrect](/smart/autocorrect/#reducing-typos-before-they-happen) for how it sits alongside autocorrect as an earlier line of defense against typos.
+
+**Strength** (1–10, 5 by default) sets how far an expected letter reaches over its neighbor. Two optional views show you what that reach looks like: **Show the effect** redraws the three likeliest letters at the size their touch areas have grown to, and **Outline the touch areas** traces the same edge. Both are off by default and are meant for tuning the slider, not for everyday typing. Neither shows during a glide, and neither comes back when you move the caret into an old word. **Size of the effect** (×1.0 to ×3.0) exaggerates both for readability, multiplying the growth alone; it changes the drawing and never the touch areas themselves.
+
+## Multi-touch and key repeat
+
+Every finger on the keyboard is tracked on its own, so pressing a second key before you release the first works correctly. Both register, whether that's rollover typing across the letters or two fast taps on the very same key.
+
+On the default layout, <KeyCap>⌫</KeyCap> and <KeyCap>Space</KeyCap> are the two keys that auto-repeat on a hold. Repeating has its own wait, **Time before a key repeats** (300&nbsp;ms by default, adjustable 150–800&nbsp;ms), separate from the long-press delay above. The two used to be one number, which meant lengthening the wait before accent popups also slowed backspace down. Past that wait each key fires again on its own cadence, **Delete repeat interval** and **Space repeat interval** (50&nbsp;ms and 100&nbsp;ms by default, both adjustable 20–200&nbsp;ms), because a runaway row of spaces costs more to undo than a fast delete does. A held backspace stops on its own once there's nothing left to delete. A press with the cursor already at the very start of a text box is passed to the app as a plain backspace key, so apps that split a page into blocks, such as Notion, join the empty line to the one above it the way they do with any other keyboard. In a text box on a web page, every backspace goes out as that key press, so code editors on a page such as Violentmonkey's script editor delete too; **Backspace as a key press on web pages** under Key press turns that off. **Holding delete clears words** (off by default, on the same Timing group) turns that repeat into one whole word per tick, at its own slower **Word delete interval** (140&nbsp;ms, adjustable 60–500&nbsp;ms); a single press still deletes one character either way. A forward-delete key (<KeyCap>⌦</KeyCap>) repeats the same way if you add one to a [custom layout](/languages/custom-layouts/), and clears words the same way too. No built-in layout places one, and a physical keyboard's Delete-forward key goes straight to the system rather than through this engine. Every other key long-presses into its popup or shortcut instead of repeating.
+
+<SettingsPath path="Accessibility / Touch" />
+
+**Ignore repeated presses** (off by default) filters out the accidental double-taps a hand tremor causes. Auto-repeat deliberately bypasses that filter: the software repeat is already deterministic, so filtering it would only cap how fast delete or space can go.
+
+Both delete keys also have a drag-to-delete-whole-words gesture, on by default, separate from this hold-and-repeat: leftward on <KeyCap>⌫</KeyCap>, rightward on <KeyCap>⌦</KeyCap>. [Gestures](/typing/gestures/) covers them.
+
+### What one press deletes
+
+A press of <KeyCap>⌫</KeyCap> takes one character as it appears on screen, which is not always one thing in the text underneath:
+
+- **A multi-part emoji goes whole.** A family, a flag, a thumbs-up with a skin tone or a keycap like 1️⃣ is several code points, and one press removes all of them.
+- **Invisible parts go with what they belong to.** A variation selector (which picks the text or emoji style of a symbol, or a variant form of a CJK character), the second half of a Windows line break, and a Korean syllable spelled out as separate jamo would each leave a press that changed nothing on screen, so they are taken together with the character before them.
+- **A mark you type with its own key comes off on its own.** An Arabic harakah, a Hebrew vowel point, a combining accent or a Persian zero-width non-joiner is deleted alone and leaves its letter in place, so fixing a wrong mark costs one press rather than a retyped letter.
+- **Indic conjuncts** follow a per-language setting: whole, or one part at a time. [Bengali](/languages/bengali/#editing-conjuncts-and-clusters) describes it.
+
+<KeyCap>⌦</KeyCap> has nothing typed ahead of the cursor to peel back, so it always takes the whole character after it, marks and all. What counts as one character comes from Android's own Unicode rules, with the keyboard's emoji rules on top for older Android versions that split emoji apart. On Android 15 and later those rules also treat a whole Indic conjunct as one character, so <KeyCap>⌦</KeyCap> takes क्ष in one press there.
+
+## Options
+
+<SettingsPath path="Key press" />
+
+| Setting | Default |
+| --- | --- |
+| Key popup | On |
+| Popup on key | On |
+| Popup on number pads | Off |
+| Minimum / maximum popup duration | 140&nbsp;ms / 750&nbsp;ms |
+| Popup font size | ×1.00 |
+| Popup height | 110&nbsp;dp |
+| Alternate key size | ×1.00 (×0.70–×3.20) |
+| Alternate key spacing | 10&nbsp;dp (0–32&nbsp;dp) |
+| Alternate key columns | Auto (or 3–11) |
+| Closest to the key first | Off |
+| Remember the punctuation key's pick | Off |
+| Order of the alternates | Layout's own, accents, capital |
+| Choose without lifting | On |
+| Popup distance above key | 10&nbsp;dp (0–96&nbsp;dp) |
+| Popup sideways shift | 0&nbsp;dp (−64–64&nbsp;dp) |
+| Popup color / Popup text color | Automatic |
+| Press and hold delay | 300&nbsp;ms (100–800&nbsp;ms) |
+| Time before a key repeats | 300&nbsp;ms (150–800&nbsp;ms) |
+| Delete repeat interval | 50&nbsp;ms (20–200&nbsp;ms) |
+| Space repeat interval | 100&nbsp;ms (20–200&nbsp;ms) |
+| Caps lock double press | 350&nbsp;ms (150–600&nbsp;ms) |
+| Press and hold hints | On |
+| All accents on press and hold | Off |
+| No accents on press and hold | Off |
+| Top row press and hold | Auto |
+| Your hold symbols | None (each layout's own) |
+| Your language's letters first | On |
+| Shifted letter on press and hold | Off |
+| Press and hold ?123 for the number pad | On |
+| Press and hold enter for emoji | Off |
+| Currency keys | ৳ € £ ¥ ₹ ₿ |
+| Press and hold A/C/X/V/Z/Y for select all/copy/cut/paste/undo/redo | On (each) |
+
+Open the **Key press** tile on the settings home grid, or search "Key press" in settings search. This table covers the Key popup, Alternate keys, Timing and Press and hold shortcuts groups. The same screen's Haptic feedback and Key press sound groups are covered on [Sound & vibration](/typing/feedback/). For the field-by-field breakdown see [Key press settings](/reference/settings/keypress/).
+
+A handful of related settings live elsewhere:
+
+- **Automatic capital letters** is on by default, under <SettingsPath path="Typing / Automatic corrections" />.
+- **Autopilot** (<SettingsPath path="Typing / Suggestions / Autopilot" />) and **Shift and Enter type a new line** (<SettingsPath path="Typing / Enter key" />) are both on by default.
+- **Swipe to delete** is on by default, under <SettingsPath path="Key press / Delete keys" />, and starts out deleting a word per step of the swipe.
+- **Number row** (<SettingsPath path="Layout & size / Number row" />) is on, and the numeral commit scope (<SettingsPath path="Layout & size / Numerals" />) starts on "Text fields". Full breakdown at [Layout & size settings](/reference/settings/layout/).
+- **Numeral system per language** starts on Auto, under <SettingsPath path="Languages & layouts / (a language) / Numerals" />. See [Languages](/languages/overview/).
+- **Ignore repeated presses** is off by default, under <SettingsPath path="Accessibility / Touch" />. See also [Accessibility](/accessibility/overview/).
+
+## Details & edge cases
+
+- **A hold-shortcut on A/C/X/V/Z/Y is appended to the end of that letter's accent popup, not swapped in for it.** With the Copy hold shortcut on, `c` still offers `'çć` first, then Copy. Use **Action position** to move the shortcut in among the accents, one slide from the key, or to the front, where a plain hold runs it.
+- **Exiting Caps Lock only takes one tap.** The double-tap window matters only on the way *into* Caps Lock. Any single tap while Shift or Caps Lock is already active turns it off.
+- **The Enter key never lies about what it's about to do.** With Shift + Enter's newline override active, the key visibly redraws to the newline symbol first. It doesn't swap behavior behind an unchanged icon. The action it stepped off doesn't vanish either. It moves to the key's corner, so you can see both what Enter does now and what letting the Shift go gives you back.
+- **A line break from the popup is a real one, even in apps that read Enter themselves.** Some chat apps watch for the Enter key press and send on it regardless of what the keyboard meant. The popup entry types the character straight into the field instead of pressing a key, so there's nothing for the app to catch. Shift + Enter works the same way, and so does plain Enter in a message box that asked for a line break.
+- **The long-press delay has one home.** It's the Key press → Timing slider (100–800&nbsp;ms). Accessibility → Touch shows the current value and links to it.
+- **Number row height is independent of key height.** Shrinking the digit row doesn't touch the letter keys below it, so you can get quick number access without paying for a full extra row of keyboard height.
+- **Ignore repeated presses only filters repeats of the *same* key.** Two different keys typed quickly are never blocked, so the setting can be raised without slowing normal typing down.
+
+See [Gestures](/typing/gestures/) for spacebar swipes, cursor control and the backspace word-delete drag. [Hardware keyboards](/typing/hardware-keyboard/) covers how physical Ctrl and Shift shortcuts differ from the on-screen ones here, and [Sound & vibration](/typing/feedback/) covers the rest of the Key press screen.

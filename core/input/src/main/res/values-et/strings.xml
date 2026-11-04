@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">Allalaaditud fail on rikutud. Selle kontrollsumma ei klapi. Proovige uuesti alla laadida.</string>
+    <string name="core_input_cjk_download_error_http">Server tagastas HTTP-oleku %1$s.</string>
+    <string name="core_input_cjk_download_error_network">Allalaadimine ebaõnnestus. Kontrollige oma ühendust ja proovige uuesti.</string>
+    <string name="core_input_cjk_download_error_network_detail">Allalaadimine ei õnnestunud: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">Seadmes pole piisavalt salvestusruumi. Vabasta esmalt veidi ruumi.</string>
+    <string name="core_input_cjk_download_error_truncated">Ühendus katkes allalaadimise ajal. Jätkamiseks vajutage nuppu Jätka.</string>
+    <string name="core_input_cjk_download_error_unavailable">See pakk pole veel saadaval.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">Radikaalkoodide tabel hiina tähemärkide jaoks, 29 000 tähemärki. Klaviatuur vajab seda paketti Cangjie ja Quick paigutuste jaoks.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Cangjie (倉頡) sõnastik</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Kana lugemid mozc-ist, 1,08 miljonit kirjet, umbes 42 MB. Klaviatuur vajab seda pakki jaapani keelde teisendamiseks.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Jaapani kana-kanji sõnastik</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Jyutpingi lugemite tabel hanzi märkide jaoks, 163 000 kirjet. Klaviatuur vajab seda paketti kantoni keele teisendamiseks.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Kantoni keele Jyutpingi sõnastik</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Millised sõnad järgnevad millistele, loendatuna hiina veebi- ja uudistetekstidest. Kaasas Pinyini sõnastikuga. Sellega annavad initsiaalid nagu wbxh esimesena tulemuse 我不喜欢, mitte kaks omavahel mitteseotud sõna.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Hiina keele sõnapaarid</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Hanzi märgid ja fraasid CC-CEDICT-ist, 120 000 kirjet. Klaviatuur vajab seda paketti hiina keelde teisendamiseks.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Hiina Pinyini sõnastik</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Fraasid OpenCC-st, 50 000 kirjet, umbes 1 MB. Kui traditsioonilised tähemärgid on sisse lülitatud, kasutab klaviatuur seda sõna õige kuju kirjutamiseks, näiteks 頭髮 mitte 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Traditsionaalsete märkide fraasitabel</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">Hanzi-märkide tõmmete järjekorra tabel. Klaviatuur vajab seda paketti tõmmete paigutuse jaoks.</string>
+    <string name="core_input_cjk_pack_stroke_title">Hiina keele kriipsude (笔画) sõnastik</string>
+    <string name="core_input_double_pinyin_custom_label">Kohandatud</string>
+    <string name="core_input_double_pinyin_off_label">Väljas (täielik Pinyin)</string>
+    <string name="core_input_im_note_candidates">Mõne klahvi puhul annab see meetod valikute loendi. Klaviatuur kasutab alati esimest valikut.</string>
+    <string name="core_input_im_note_missing_files">Neid faile ei valitud, seega on nende osa puudu: %1$s. Nende kaasamiseks importige uuesti ja valige need koos.</string>
+    <string name="core_input_im_note_module">See meetod kasutab pistikprogrammi, näiteks Anthy, mida klaviatuur ei saa käivitada. Klahvid, mis seda kasutavad, ei tee siin midagi.</string>
+    <string name="core_input_im_note_other_method">See meetod annab mõned klahvid teisele sisestusmeetodile. See osa siin ei tööta.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">Rakendus ei suuda lugeda %1$d õigekirjareeglit, seega jätab selle vahele.</item>
+        <item quantity="other">Rakendus ei suuda lugeda %1$d õigekirjareeglit, seega jätab need vahele.</item>
+    </plurals>
+    <string name="core_input_im_note_space">See meetod kasutab tühikuklahvi võtmena, näiteks tooni jaoks. Siin trükib tühikuklahv alati tühiku.</string>
+    <string name="core_input_im_note_truncated">Tabel on väga suur, seega jättis rakendus alles vaid selle esimese osa.</string>
+    <string name="core_input_im_note_unused_files">Rakendus ei kasutanud neid faile: %1$s.</string>
+    <string name="core_input_im_refused_broken">Failis on viga, seega rakendus ei saa seda lugeda: %1$s</string>
+    <string name="core_input_im_refused_empty">Failis pole midagi, millega kirjutada.</string>
+    <string name="core_input_im_refused_no_dictionary">Skeem vajab oma sõnastikku. Importige uuesti ja valige ka %1$s.</string>
+    <string name="core_input_im_refused_not_method">Rakendus ei saa seda sisestusmeetodina lugeda. See loeb .cin-tabeleid, Rime\'i skeeme ja sõnastikke (.schema.yaml, .dict.yaml) ning m17n .mim-faile.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">Rakendus luges seda kui .cin-tabelit, milles on %1$d kirje. Sisestage kood ja valige seejärel soovitusribalt märk.</item>
+        <item quantity="other">Rakendus luges seda kui .cin-tabelit, milles on %1$d kirjet. Sisestage kood ja valige seejärel soovitusribalt märk.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">Rakendus luges seda kui m17n-sisestusmeetodit %1$d reegliga. Klahvid kirjutavad teksti tippimise ajal.</item>
+        <item quantity="other">Rakendus luges seda kui m17n-sisestusmeetodit %1$d reegliga. Klahvid kirjutavad teksti tippimise ajal.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">Rakendus luges selle kui Rime’i skeemi %1$d sõnastiku kirje. Sisesta silbid, seejärel vali sõnad soovituste ribalt.</item>
+        <item quantity="other">Rakendus luges selle kui Rime’i skeemi %1$d sõnastiku kirjega. Sisesta silbid, seejärel vali sõnad soovituste ribalt.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">Rakendus luges seda kui Rime kooditabelit, milles on %1$d kirje. Sisestage kood ja valige seejärel märk soovituste ribalt.</item>
+        <item quantity="other">Rakendus luges seda kui Rime kooditabelit, milles on %1$d kirjet. Sisestage kood ja valige seejärel märk soovituste ribalt.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Mozci enda süsteemne sõnastik koos ühenduskulude, segmenteerija ja soovituste filtriga. Mozci mootor teisendab sellega; sisseehitatud mootor seda ei kasuta.</string>
+    <string name="core_input_mozc_pack_title">Mozc sõnastik</string>
+    <string name="core_input_rime_pack_base_subtitle">Kirjavahemärgid, sümbolid, sõnasagedustabel ning lihtsustatud ja traditsioonilise hiina keele teisendused, mida iga RIME skeem kasutab. Laaditakse alla esimese skeemiga.</string>
+    <string name="core_input_rime_pack_base_title">RIME põhielemendid</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">RIME Zhuyini skeem standardsel Dacheni klaviatuuripaigutusel koos Terra Pinyini sõnastikuga.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">RIME viienda põlvkonna Cangjie skeem, tähemärgid ja fraasid.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Mahukas tänapäevane lihtsustatud hiina keele sõnavara Pinyini jaoks, sealhulgas Double Pinyin ja 9-klahvilised variandid. Selle kompileerimine võtab aega minuti või kauem.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">Kantoni keele rime-cantonese skeem koos sõna- ja fraasiloenditega.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">RIME-i enda pinyini skeem, koos torkeskeemiga, millega see otsib üles märke.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Jaapani käekirja mudel</string>
+    <string name="core_input_zinnia_pack_subtitle">Tegaki projekti mudel zinnia jaoks – võrguühenduseta käekirjatuvastaja, mis loeb hiina ja jaapani keelt seal, kus ML Kit seda ei tee.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Lihtsustatud hiina keele käekirjamudel</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Traditsioonilise hiina keele käekirjamudel</string>
+</resources>

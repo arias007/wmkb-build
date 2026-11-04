@@ -1,0 +1,214 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_za",
+    "name": "Vahcuengh (Zhuang)",
+    "langId": "za",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "q",
+              "longPress": [
+                "ƽ"
+              ]
+            },
+            {
+              "label": "w",
+              "longPress": [
+                "ɯ",
+                "ƨ"
+              ]
+            },
+            {
+              "label": "e",
+              "longPress": [
+                "ə",
+                "з"
+              ]
+            },
+            {
+              "label": "r",
+              "longPress": [
+                "ч"
+              ]
+            },
+            {
+              "label": "t",
+              "longPress": [
+                "ƽ"
+              ]
+            },
+            {
+              "label": "y",
+              "longPress": [
+                "ƅ"
+              ]
+            },
+            {
+              "label": "u"
+            },
+            {
+              "label": "i"
+            },
+            {
+              "label": "o",
+              "longPress": [
+                "ɵ"
+              ]
+            },
+            {
+              "label": "p"
+            }
+          ],
+          [
+            {
+              "label": "a",
+              "longPress": [
+                "ə"
+              ]
+            },
+            {
+              "label": "s"
+            },
+            {
+              "label": "d",
+              "longPress": [
+                "ƌ"
+              ]
+            },
+            {
+              "label": "f"
+            },
+            {
+              "label": "g"
+            },
+            {
+              "label": "h",
+              "longPress": [
+                "ƅ"
+              ]
+            },
+            {
+              "label": "j",
+              "longPress": [
+                "з"
+              ]
+            },
+            {
+              "label": "k"
+            },
+            {
+              "label": "l"
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "z",
+              "longPress": [
+                "ƨ"
+              ]
+            },
+            {
+              "label": "x",
+              "longPress": [
+                "ч"
+              ]
+            },
+            {
+              "label": "c"
+            },
+            {
+              "label": "v"
+            },
+            {
+              "label": "b",
+              "longPress": [
+                "ƃ"
+              ]
+            },
+            {
+              "label": "n",
+              "longPress": [
+                "ŋ",
+                "ƌ"
+              ]
+            },
+            {
+              "label": "m",
+              "longPress": [
+                "ƃ"
+              ]
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": ",",
+              "longPress": [
+                "!",
+                "?"
+              ],
+              "role": "Comma"
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ],
+              "role": "Period"
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

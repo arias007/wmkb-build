@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">El servidor no ha enviat el fitxer. El codi d\'error és HTTP %1$s.</string>
+    <string name="core_pred_wordlist_malformed_error">Aquesta llista de paraules està buida o és il·legible.</string>
+    <string name="core_pred_wordlist_memory_error">Aquest dispositiu no té prou memòria per a una llista de paraules d\'aquesta mida. Tria una mida més petita.</string>
+    <string name="core_pred_wordlist_no_space_error">No hi ha prou espai d\'emmagatzematge al dispositiu. Esborreu alguns fitxers i torneu-ho a provar.</string>
+    <string name="core_pred_wordlist_save_error">L\'aplicació no pot desar la llista de paraules. Torneu-ho a provar.</string>
+    <string name="core_pred_wordlist_size_all_label">Tot</string>
+    <string name="core_pred_wordlist_size_large_label">Gran</string>
+    <string name="core_pred_wordlist_size_medium_label">Mitjà</string>
+    <string name="core_pred_wordlist_size_small_label">Petit</string>
+    <string name="core_pred_wordlist_source_aosp_detail">La llista comissariada que utilitza el propi teclat d\'Android. Menys paraules, amb menys noms i errades tipogràfiques entre elles.</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">Comptat a partir de subtítols i text web. Moltes més paraules, amb més noms, argot i errades tipogràfiques.</string>
+    <string name="core_pred_wordlist_source_frequency_label">Freqüència</string>
+    <string name="core_pred_wordlist_variant_australia_label">Austràlia</string>
+    <string name="core_pred_wordlist_variant_brazil_label">Brasil</string>
+    <string name="core_pred_wordlist_variant_canada_label">Canadà</string>
+    <string name="core_pred_wordlist_variant_europe_label">Europa</string>
+    <string name="core_pred_wordlist_variant_uk_label">Regne Unit</string>
+    <string name="core_pred_wordlist_variant_us_label">Estats Units</string>
+</resources>

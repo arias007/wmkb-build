@@ -1,0 +1,89 @@
+---
+/**
+ * Page heading with a breadcrumb trail above it.
+ *
+ * The crumbs come from `buildCrumbs` (src/lib/crumbs.ts), which Head.astro also
+ * reads to publish the BreadcrumbList — the markup and the visible trail have
+ * to say the same thing, and building each separately is how they stopped.
+ * `schemaJsonScript={false}` turns off astro-breadcrumbs' own JSON-LD for the
+ * same reason: it was a second, disagreeing BreadcrumbList on every page.
+ *
+ * starlight-theme-black also overrides `PageTitle` (its version carries the
+ * markdown actions and the prev/next buttons), and it steps aside whenever we
+ * claim a component first. So we render its override here rather than replacing
+ * it — the <h1 id="_top"> and the page description come from there.
+ */
+import { Icon } from '@astrojs/starlight/components';
+import { Breadcrumbs } from 'astro-breadcrumbs';
+import 'astro-breadcrumbs/breadcrumbs.css';
+import ThemeBlackPageTitle from 'starlight-theme-black/overrides/PageTitle.astro';
+
+import { buildCrumbs } from '../lib/crumbs';
+
+const { head } = Astro.locals.starlightRoute;
+
+/**
+ * Some pages draw their own heading: the addon store (inside its island, with
+ * its own breadcrumbs) and the /open/ doorway (one card, no page around it).
+ * Both hide the splash template's title panel with CSS, so rendering the
+ * template's `<h1>` here as well shipped a second, invisible `<h1>` — 78 store
+ * pages' worth. Those pages declare `wm:own-title`.
+ */
+const ownTitle = head.some((tag) => tag.tag === 'meta' && tag.attrs?.name === 'wm:own-title');
+
+const crumbs = buildCrumbs(Astro.locals.starlightRoute, Astro.url.pathname);
+---
+
+{
+	!ownTitle && (
+		<>
+			<Breadcrumbs crumbs={crumbs} ariaLabel="Breadcrumb" id="breadcrumbs" schemaJsonScript={false}>
+				<Icon name="right-caret" slot="separator" />
+			</Breadcrumbs>
+
+			{/* Renders the h1#_top, the description and the prev/next controls. An
+			    HTML comment would ship the literal `<h1>` in it to every page,
+			    where anything counting headings by pattern reads it as a second
+			    one. */}
+			<ThemeBlackPageTitle />
+		</>
+	)
+}
+
+<style>
+	/* astro-breadcrumbs ships unstyled-ish defaults; match Starlight's type scale. */
+	:global(.c-breadcrumbs) {
+		margin-bottom: 0.75rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	:global(.c-breadcrumbs__crumbs) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.4em;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	:global(.c-breadcrumbs__crumb) {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4em;
+	}
+	:global(.c-breadcrumbs__separator) {
+		display: inline-flex;
+		color: var(--sl-color-gray-4);
+	}
+	:global(.c-breadcrumbs__crumb a) {
+		color: var(--sl-color-gray-3);
+		text-decoration: none;
+	}
+	:global(.c-breadcrumbs__crumb a:hover) {
+		color: var(--sl-color-white);
+		text-decoration: underline;
+	}
+	:global(.c-breadcrumbs__crumb [aria-current='page']) {
+		color: var(--sl-color-gray-2);
+	}
+</style>

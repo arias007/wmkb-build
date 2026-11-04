@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Settings > Typing > Custom word lists. The user imports plain-text word
+         lists so the keyboard can complete and correct words it does not ship with. -->
+
+    <string name="customdict_info">Your own word lists, for languages with no bundled dictionary or on top of it.</string>
+
+    <!-- Subtitle of one word-list row. %1$d is how many words the file holds. -->
+    <plurals name="customdict_word_count">
+        <item quantity="one">%1$d word</item>
+        <item quantity="other">%1$d words</item>
+    </plurals>
+
+    <!-- Screen reader name of the delete button on a word-list row.
+         %1$s is the file name of the word list. -->
+    <string name="customdict_delete_list_desc">Delete the word list %1$s</string>
+
+    <!-- Switch under one language's word lists. It turns off the word list that
+         comes with the app and any list downloaded for that language, so only
+         the user's own imported lists give suggestions. -->
+    <string name="customdict_only_my_lists_title">Use only my word lists</string>
+    <string name="customdict_only_my_lists_subtitle">Turn off the bundled and downloaded word lists for this language</string>
+    <string name="customdict_only_my_lists_info">Your imported lists usually add to the words the keyboard already has. Turn this on and the keyboard forgets those words for this language and reads your lists only. Use it when the bundled list or a downloaded list suggests words that you do not want. Suggestions, autocorrect and glide typing all follow this setting. Words that you teach the keyboard as you type are kept. This setting is for one language. It changes nothing for your other languages.</string>
+    <!-- Warning under that switch when the user left the language with no list
+         that the keyboard can read. -->
+    <string name="customdict_only_my_lists_empty">No word list is on for this language, so the keyboard has no words to suggest. Turn on a list above, import one, or turn this setting off.</string>
+
+    <!-- Button that opens the file picker when a language has no word list yet. -->
+    <string name="customdict_import_action">Import word list</string>
+
+    <!-- Title of the dialog that downloads a word list from a link. -->
+    <string name="customdict_url_dialog_title">Load a word list from a URL</string>
+    <!-- Placeholder inside the link field of that dialog. -->
+    <string name="customdict_url_dialog_hint">A link to a plain text word list</string>
+
+    <!-- Shown after an import that found nothing usable in the file. -->
+    <string name="customdict_import_empty_error">The app found no words in that file. Make sure that it is a word list.</string>
+    <!-- Shown when a download of a word list does not work. -->
+    <string name="customdict_url_download_error">The app cannot download that list. Check the URL and try again.</string>
+    <!-- Shown after a word list imports. %1$d is how many words the app added,
+         %2$s is the English name of the language they went to. -->
+    <plurals name="customdict_import_added_words">
+        <item quantity="one">The app added %1$d word to %2$s.</item>
+        <item quantity="other">The app added %1$d words to %2$s.</item>
+    </plurals>
+
+    <!-- Subtitle parts of a word-list row that came from an AOSP dictionary
+         (HeliBoard, LeanType, FUTO), after the word count. %1$d is a count. -->
+    <plurals name="customdict_pair_count">
+        <item quantity="one">%1$d word pair</item>
+        <item quantity="other">%1$d word pairs</item>
+    </plurals>
+    <plurals name="customdict_shortcut_count">
+        <item quantity="one">%1$d shortcut</item>
+        <item quantity="other">%1$d shortcuts</item>
+    </plurals>
+
+    <!-- Dialog after the user picks a dictionary that holds more than words.
+         The user ticks which parts to import. -->
+    <string name="customdict_choose_title">Choose what to import</string>
+    <!-- Line under a dictionary's name in that dialog. %1$s is the language
+         code that the file says it is for, for example en_US. -->
+    <string name="customdict_choose_locale">The file is for <xliff:g id="locale" example="en_US">%1$s</xliff:g></string>
+    <string name="customdict_choose_words">Words</string>
+    <!-- %1$d is how many words the file holds. -->
+    <plurals name="customdict_choose_words_detail">
+        <item quantity="one">%1$d word, for suggestions and autocorrect</item>
+        <item quantity="other">%1$d words, for suggestions and autocorrect</item>
+    </plurals>
+    <string name="customdict_choose_pairs">Word pairs</string>
+    <!-- %1$d is how many pairs of words (a word and the word that often comes after it) the file holds. -->
+    <plurals name="customdict_choose_pairs_detail">
+        <item quantity="one">%1$d pair, for next-word predictions</item>
+        <item quantity="other">%1$d pairs, for next-word predictions</item>
+    </plurals>
+    <string name="customdict_choose_shortcuts">Shortcuts</string>
+    <!-- %1$d is how many shortcuts the file holds. A shortcut is a short form,
+         like "omw", that offers a longer text, like "on my way". -->
+    <plurals name="customdict_choose_shortcuts_detail">
+        <item quantity="one">%1$d shortcut. When you type the short form, the long form shows as the first suggestion.</item>
+        <item quantity="other">%1$d shortcuts. When you type the short form, the long form shows as the first suggestion.</item>
+    </plurals>
+
+    <!-- Shown after an import that added more than words. %1$s is a list such as
+         "1,200 words, 300 word pairs", made from the count strings above.
+         %2$s is the English name of the language. -->
+    <string name="customdict_import_added_parts">The app added <xliff:g id="parts" example="1,200 words, 300 word pairs">%1$s</xliff:g> to <xliff:g id="language" example="French">%2$s</xliff:g>.</string>
+
+    <!-- Import errors for AOSP dictionaries in version 4, which are two files:
+         NAME.header and NAME.body. -->
+    <string name="customdict_import_missing_body_error">This is the header of a dictionary that has two files. Its words are in the .body file that has the same name. Select the two files together.</string>
+    <string name="customdict_import_missing_header_error">This is the body of a dictionary that has two files. Select it together with the .header file that has the same name.</string>
+    <!-- Import errors for Hunspell spelling dictionaries, which are two files:
+         NAME.aff (the rules) and NAME.dic (the words). -->
+    <string name="customdict_import_missing_aff_error">This is the word file of a spelling dictionary that has two files. The rules that make its words are in the .aff file. Select the .dic and the .aff files together.</string>
+    <string name="customdict_import_missing_dic_error">This is the rules file of a spelling dictionary that has two files. Its words are in the .dic file. Select the .aff and the .dic files together.</string>
+    <!-- %1$d is the format version number written in the file. -->
+    <string name="customdict_import_unsupported_error">This dictionary uses format version <xliff:g id="version" example="402">%1$d</xliff:g>. The app cannot read this version.</string>
+
+    <!-- Settings > Emoji > Emoji keyword packs. Per-language keyword files that
+         make emoji search and emoji suggestions work in more languages. -->
+
+    <!-- %1$s is a short list of example search words, taken from the languages
+         this user types, joined with commas. -->
+    <string name="customdict_emoji_info">Emoji search includes English and Bengali keywords. A pack adds one more language. Then %1$s all find 💰. The words of the pack also show as emoji suggestions while you type.\n\nA pack adds to the bundled keywords. It does not replace them. One language can have more than one pack.</string>
+
+    <string name="customdict_emoji_downloads_title">Downloads</string>
+    <string name="customdict_emoji_auto_download_title">Download automatically</string>
+    <string name="customdict_emoji_auto_download_subtitle">Download keywords for the languages that you type</string>
+    <!-- Subtitle of the same row while the app-wide "Download data automatically" switch is off, which stops this one from ever running. -->
+    <string name="customdict_emoji_auto_download_info">When you turn a language on, the app downloads its emoji keywords in the background. This is about 100 KB, one time. If you turn this off, the Download buttons below are the only way to get the keywords.</string>
+
+    <!-- Subtitle of one emoji pack row. %1$d is how many emoji the pack names. -->
+    <plurals name="customdict_emoji_count">
+        <item quantity="one">%1$d emoji</item>
+        <item quantity="other">%1$d emoji</item>
+    </plurals>
+
+    <!-- Screen reader name of the delete button on an emoji pack row.
+         %1$s is the file name of the pack. -->
+    <string name="customdict_delete_pack_desc">Delete the emoji pack %1$s</string>
+
+    <!-- Button that opens the file picker when a language has no pack yet. -->
+    <string name="customdict_emoji_import_action">Import pack</string>
+
+    <!-- Footer that explains the file format an emoji pack must have. -->
+    <string name="customdict_emoji_format_info">Import format: a file with tab separators. Put one emoji on each line, then a tab, then the keywords with comma separators. You can add one more tab and a display name. The app ignores lines that start with \"# \". The JSON emoji dictionaries from the wmkeyboard-data repository import as they are.</string>
+
+    <!-- Title of the dialog that downloads an emoji pack from a link. -->
+    <string name="customdict_emoji_url_dialog_title">Load an emoji pack from a URL</string>
+    <!-- Placeholder inside the link field of that dialog. -->
+    <string name="customdict_emoji_url_dialog_hint">A link to an emoji keyword file with tab separators</string>
+
+    <!-- Shown after a pack import that found nothing usable in the file. -->
+    <string name="customdict_emoji_import_empty_error">The app found no emoji in that file. Make sure that it is a keyword pack.</string>
+    <!-- Shown after an emoji pack imports. %1$d is how many emoji got keywords,
+         %2$s is the English name of the language they went to. -->
+    <plurals name="customdict_emoji_import_added">
+        <item quantity="one">The app added keywords for %1$d emoji to %2$s.</item>
+        <item quantity="other">The app added keywords for %1$d emoji to %2$s.</item>
+    </plurals>
+
+    <!-- Used by both the word list screen and the emoji pack screen. -->
+
+    <!-- Button that opens the file picker when the language already has a list or a pack. -->
+    <string name="customdict_import_another_action">Import another</string>
+    <!-- Button that opens the download-from-a-link dialog. -->
+    <string name="customdict_from_url_action">From URL</string>
+
+    <string name="customdict_import_too_large_error">That file is too large to import.</string>
+    <string name="customdict_url_scheme_error">The app accepts only http:// and https:// links.</string>
+
+    <string name="customdict_list_off_subtitle">Switched off, still on the device</string>
+    <!-- Group header for a language the user has switched off that still has word lists on the device. %1$s is the language name. -->
+    <string name="customdict_language_off_header"><xliff:g example="Bengali" id="language">%1$s</xliff:g> (language switched off)</string>
+    <string name="customdict_language_off_caption">You have switched this language off, so these lists are not being read. They are still on the device and still count towards storage. Switch the language back on to use them, or delete them here.</string>
+    <string name="customdict_add_language_title">Add a word list for another language</string>
+    <plurals name="customdict_add_language_subtitle">
+        <item quantity="one">%d language has no list yet</item>
+        <item quantity="other">%d languages have no list yet</item>
+    </plurals>
+    <string name="customdict_emoji_format_title">Import format</string>
+</resources>

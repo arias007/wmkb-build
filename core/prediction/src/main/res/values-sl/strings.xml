@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">Strežnik ni poslal datoteke. Koda napake je HTTP %1$s.</string>
+    <string name="core_pred_wordlist_malformed_error">Ta seznam besed je prazen ali neberljiv.</string>
+    <string name="core_pred_wordlist_memory_error">Ta naprava nima dovolj pomnilnika za seznam besed te velikosti. Izberite manjšo velikost.</string>
+    <string name="core_pred_wordlist_no_space_error">V vaši napravi ni dovolj prostora. Izbrišite nekaj datotek in poskusite znova.</string>
+    <string name="core_pred_wordlist_save_error">Aplikacija ne more shraniti seznama besed. Poskusite znova.</string>
+    <string name="core_pred_wordlist_size_all_label">Vse</string>
+    <string name="core_pred_wordlist_size_large_label">Velik</string>
+    <string name="core_pred_wordlist_size_medium_label">Srednje</string>
+    <string name="core_pred_wordlist_size_small_label">Majhno</string>
+    <string name="core_pred_wordlist_source_aosp_detail">Izbrani seznam, ki ga uporablja Androidova lastna tipkovnica. Vsebuje manj besed, z manj imeni in tipkarskimi napakami.</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">Štetje iz podnapisov in spletnega besedila. Veliko več besed, z več imeni, slengom in tipkarskimi napakami.</string>
+    <string name="core_pred_wordlist_source_frequency_label">Pogostost</string>
+    <string name="core_pred_wordlist_variant_australia_label">Avstralija</string>
+    <string name="core_pred_wordlist_variant_brazil_label">Brazilija</string>
+    <string name="core_pred_wordlist_variant_canada_label">Kanada</string>
+    <string name="core_pred_wordlist_variant_europe_label">Evropa</string>
+    <string name="core_pred_wordlist_variant_uk_label">Združeno kraljestvo</string>
+    <string name="core_pred_wordlist_variant_us_label">Združene države</string>
+</resources>

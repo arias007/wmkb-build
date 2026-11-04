@@ -1,0 +1,503 @@
+---
+/**
+ * Renders real WM Keyboard themes (`.wmtheme.json` / ThemeSpec objects) as a
+ * live mock keyboard with a swatch per theme.
+ *
+ *   import midnight from '@assets/themes/midnight.wmtheme.json';
+ *   <ThemePreview specs={[midnight]} />
+ *   <ThemePreview />        — built-in showcase set (ThemeSpec-shaped)
+ *
+ * Honoured fields: boardBackground, boardGradient (LINEAR/RADIAL/SWEEP +
+ * angle), backgroundImageBase64 (+opacity/blur), keyShape (all eleven, the
+ * fancier ones approximated in CSS), keyGradient, keyBackground/keyText
+ * (alpha included),
+ * modifierKeyBackground/Text, enterKeyBackground/Text, keyBorderColor/
+ * WidthDp, keyCornerRadiusDp, toolbarIcon, toolCircleBackground/
+ * ActiveBackground, toolCircleRadiusDp, animation FLOW/HUE_CYCLE +
+ * animationSpeed, accent (active tool ring), dark.
+ * Not renderable in a static mock (ignored): pressedKeyBackground,
+ * gestureTrailColor, popup colors/radius, chipBackground, suggestionText,
+ * landscape background image.
+ */
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+
+interface Gradient {
+	colors: number[];
+	type?: 'LINEAR' | 'RADIAL' | 'SWEEP';
+	angleDeg?: number;
+}
+interface Spec {
+	id?: string;
+	name: string;
+	dark?: boolean;
+	boardBackground?: number;
+	boardGradient?: Gradient | null;
+	backgroundImageBase64?: string | null;
+	backgroundImageOpacity?: number;
+	backgroundImageBlur?: number;
+	keyShape?:
+		| 'ROUNDED' | 'SHARP' | 'PILL' | 'CUT' | 'SQUIRCLE' | 'ARCH'
+		| 'LEAF' | 'SLANT' | 'HEXAGON' | 'SCALLOP' | 'TICKET';
+	keyGradient?: Gradient | null;
+	keyBackground?: number;
+	keyText?: number;
+	modifierKeyBackground?: number;
+	modifierKeyText?: number | null;
+	enterKeyBackground?: number;
+	enterKeyText?: number;
+	keyBorderColor?: number | null;
+	keyBorderWidthDp?: number;
+	accent?: number;
+	toolbarIcon?: number | null;
+	toolCircleBackground?: number | null;
+	toolCircleActiveBackground?: number | null;
+	keyCornerRadiusDp?: number | null;
+	toolCircleRadiusDp?: number | null;
+	animation?: 'NONE' | 'FLOW' | 'HUE_CYCLE';
+	animationSpeed?: number;
+}
+interface Props {
+	specs?: Spec[];
+	caption?: string;
+}
+
+/** ARGB long (0xAARRGGBB, decimal in JSON) → CSS rgba(). */
+function css(v: number | null | undefined, fallback: string): string {
+	if (v == null) return fallback;
+	const n = Number(v) >>> 0;
+	const a = ((n >>> 24) & 255) / 255;
+	return `rgba(${(n >>> 16) & 255},${(n >>> 8) & 255},${n & 255},${+a.toFixed(3)})`;
+}
+function gradient(g: Gradient): string {
+	const stops = g.colors.map((c) => css(c, 'transparent')).join(',');
+	switch (g.type ?? 'LINEAR') {
+		case 'RADIAL':
+			return `radial-gradient(circle at 50% 35%, ${stops})`;
+		case 'SWEEP':
+			return `conic-gradient(from ${g.angleDeg ?? 0}deg at 50% 50%, ${stops})`;
+		default:
+			// Android's angle and CSS's angle zero-points differ; close enough for a mock.
+			return `linear-gradient(${(g.angleDeg ?? 45) + 90}deg, ${stops})`;
+	}
+}
+function imageMime(b64: string): string {
+	if (b64.startsWith('iVBOR')) return 'image/png';
+	if (b64.startsWith('R0lGO')) return 'image/gif';
+	if (b64.startsWith('UklGR')) return 'image/webp';
+	return 'image/jpeg';
+}
+
+/**
+ * The `clip-path` for a key shape, or `none` when `border-radius` covers it.
+ *
+ * The app draws these as real paths sized off each key. A mock keyboard has
+ * percentages instead, so the counts here (six bumps across a key, two down
+ * each side) are fixed rather than measured, and the corners of the ticket and
+ * the bumps of the scallop are polygons approximating their arcs.
+ */
+function clipFor(shape: string): string {
+	if (shape === 'CUT') {
+		return 'polygon(12% 0,88% 0,100% 22%,100% 78%,88% 100%,12% 100%,0 78%,0 22%)';
+	}
+	if (shape === 'SLANT') return 'polygon(16% 0,100% 0,84% 100%,0 100%)';
+	if (shape === 'HEXAGON') {
+		return 'polygon(16% 0,84% 0,100% 50%,84% 100%,16% 100%,0 50%)';
+	}
+	// Both remaining shapes walk the key's outline in percentages, so they share
+	// one corner-to-corner walk: `arc` appends one quarter or half turn of an
+	// ellipse as line segments.
+	const pts: string[] = [];
+	const arc = (
+		cx: number, cy: number, rx: number, ry: number,
+		fromDeg: number, toDeg: number, steps: number,
+	) => {
+		for (let i = 0; i <= steps; i++) {
+			const t = ((fromDeg + ((toDeg - fromDeg) * i) / steps) * Math.PI) / 180;
+			pts.push(`${(cx + rx * Math.cos(t)).toFixed(1)}% ${(cy + ry * Math.sin(t)).toFixed(1)}%`);
+		}
+	};
+	if (shape === 'TICKET') {
+		const rx = 12, ry = 26;
+		arc(0, 0, rx, ry, 90, 0, 4);
+		arc(100, 0, rx, ry, 180, 90, 4);
+		arc(100, 100, rx, ry, 270, 180, 4);
+		arc(0, 100, rx, ry, 0, -90, 4);
+		return `polygon(${pts.join(',')})`;
+	}
+	if (shape === 'SCALLOP') {
+		// Three bumps a side, tuned against a letter key. The real keyboard
+		// counts bumps off each key's own size, so a spacebar there keeps them
+		// small; percentages can't do that, so a wide key here gets wide bumps.
+		const across = 3, down = 3, dx = 14, dy = 14;
+		const stepX = (100 - 2 * dx) / across, stepY = (100 - 2 * dy) / down;
+		for (let i = 0; i < across; i++) {
+			arc(dx + stepX * (i + 0.5), dy, stepX / 2, dy, 180, 360, 6);
+		}
+		for (let j = 0; j < down; j++) {
+			arc(100 - dx, dy + stepY * (j + 0.5), dx, stepY / 2, -90, 90, 6);
+		}
+		for (let i = across - 1; i >= 0; i--) {
+			arc(dx + stepX * (i + 0.5), 100 - dy, stepX / 2, dy, 0, 180, 6);
+		}
+		for (let j = down - 1; j >= 0; j--) {
+			arc(dx, dy + stepY * (j + 0.5), dx, stepY / 2, 90, 270, 6);
+		}
+		return `polygon(${pts.join(',')})`;
+	}
+	return 'none';
+}
+
+/** ThemeSpec → the CSS custom properties the mock consumes. */
+function toVars(s: Spec): { vars: string; anim: string; dur: number; chipBg: string; chipKey: string } {
+	const keyText = css(s.keyText, '#e9e9ee');
+	const fillColor = css(s.boardBackground, '#17181c');
+	const fillImg = s.boardGradient ? gradient(s.boardGradient) : 'none';
+	const shape = s.keyShape ?? 'ROUNDED';
+	const radius =
+		shape === 'PILL' ? '999px'
+		: shape === 'SQUIRCLE' ? '0.95rem'
+		: shape === 'SHARP' ? '0px'
+		// Half of .tp-key's 2.7rem height, the way the app rounds these two off
+		// the key's short side. Percentages would arc across the whole width and
+		// turn the arch into a dome.
+		: shape === 'ARCH' ? '1.35rem 1.35rem 0.35rem 0.35rem'
+		: shape === 'LEAF' ? '1.35rem 0.3rem 1.35rem 0.3rem'
+		: shape === 'CUT' || shape === 'SLANT' || shape === 'HEXAGON'
+			|| shape === 'SCALLOP' || shape === 'TICKET' ? '0px'
+		: `${s.keyCornerRadiusDp ?? 9}px`;
+	const clip = clipFor(shape);
+	const sweep = s.boardGradient?.type === 'SWEEP';
+	const v: Record<string, string> = {
+		'--tp-fill-color': fillColor,
+		'--tp-fill-img': fillImg,
+		'--tp-fill-blur': sweep ? '26px' : '0px',
+		'--tp-fill-inset': sweep ? '-30%' : '0%',
+		'--tp-bgimg': s.backgroundImageBase64
+			? `url(data:${imageMime(s.backgroundImageBase64)};base64,${s.backgroundImageBase64})`
+			: 'none',
+		'--tp-bgimg-op': String(s.backgroundImageOpacity ?? 1),
+		'--tp-bgimg-blur': `${s.backgroundImageBlur ?? 0}px`,
+		'--tp-key': css(s.keyBackground, '#303338'),
+		'--tp-key-img': s.keyGradient ? gradient(s.keyGradient) : 'none',
+		'--tp-keytext': keyText,
+		'--tp-mod': css(s.modifierKeyBackground, '#222428'),
+		'--tp-modtext': css(s.modifierKeyText, keyText),
+		'--tp-enter': css(s.enterKeyBackground, '#4c8df6'),
+		'--tp-entertext': css(s.enterKeyText, '#0b1220'),
+		'--tp-radius': radius,
+		'--tp-clip': clip,
+		'--tp-bw': `${s.keyBorderWidthDp ?? 0}px`,
+		'--tp-bc': css(s.keyBorderColor, 'transparent'),
+		'--tp-accent': css(s.accent, '#8ab4f8'),
+		'--tp-tool-bg': css(s.toolCircleBackground, css(s.modifierKeyBackground, '#222428')),
+		'--tp-tool-active': css(s.toolCircleActiveBackground, css(s.accent, '#8ab4f8')),
+		'--tp-tool-icon': css(s.toolbarIcon, keyText),
+		'--tp-tool-radius': s.toolCircleRadiusDp != null ? `${s.toolCircleRadiusDp}px` : '50%',
+	};
+	return {
+		vars: Object.entries(v)
+			.map(([k, val]) => `${k}:${val}`)
+			.join(';'),
+		anim: (s.animation ?? 'NONE').toLowerCase(),
+		dur: 16 / (s.animationSpeed || 1),
+		chipBg: s.boardGradient ? gradient(s.boardGradient) : fillColor,
+		chipKey: css(s.keyBackground, '#303338'),
+	};
+}
+
+// Showcase set: ThemeSpec-shaped objects (same fields as .wmtheme.json),
+// approximating a spread of the app's built-in themes.
+const DEFAULTS: Spec[] = [
+	{ name: 'Ocean', boardBackground: 0xff151c20, keyBackground: 0xff2c3745, keyText: 0xffe9e9ee, modifierKeyBackground: 0xff212739, enterKeyBackground: 0xff3b82c4, enterKeyText: 0xfff4f4f8, accent: 0xff76a7d6, toolCircleBackground: 0xff2c3847 },
+	{ name: 'Pitch black', boardBackground: 0xff000000, keyBackground: 0xff1a1c21, keyText: 0xffe9e9ee, modifierKeyBackground: 0xff101216, enterKeyBackground: 0xff4c8df6, enterKeyText: 0xfff4f4f8, accent: 0xff7faff9, toolCircleBackground: 0xff1e2025 },
+	{ name: 'Snow', dark: false, boardBackground: 0xffe3e6ec, keyBackground: 0xffffffff, keyText: 0xff1b1c20, modifierKeyBackground: 0xffcbd1dd, enterKeyBackground: 0xff5b7db1, enterKeyText: 0xfff4f4f8, accent: 0xff506e9c, toolCircleBackground: 0xffffffff },
+	{ name: 'Nebula', boardGradient: { colors: [0xff2a1758, 0xff15306b, 0xff0b1b3a], type: 'LINEAR', angleDeg: 135 }, keyBackground: 0x59453076, modifierKeyBackground: 0x40311f5c, keyText: 0xfff2ecff, enterKeyBackground: 0xff8e5ac8, enterKeyText: 0xfff6f0ff, accent: 0xffb79cff, toolCircleBackground: 0x59453076 },
+	{ name: 'Aurora', boardGradient: { colors: [0xff0e3b43, 0xff14543b, 0xff14324f], type: 'SWEEP', angleDeg: 0 }, keyBackground: 0x59204a44, modifierKeyBackground: 0x40163830, keyText: 0xffe6fff4, enterKeyBackground: 0xff3e8e5a, enterKeyText: 0xfff4f4f8, accent: 0xff7ce8b5, toolCircleBackground: 0x59204a44, animation: 'HUE_CYCLE', animationSpeed: 0.6 },
+	{ name: 'Bubble', keyShape: 'PILL', boardGradient: { colors: [0xff16302e, 0xff0d1517], type: 'RADIAL' }, keyBackground: 0x5926504b, modifierKeyBackground: 0x401b3b37, keyText: 0xffe9e9ee, enterKeyBackground: 0xff00897b, enterKeyText: 0xfff4f4f8, accent: 0xff4daca2, toolCircleBackground: 0x5926504b },
+	{ name: 'Facet', keyShape: 'CUT', boardGradient: { colors: [0xff23262c, 0xff14161a], type: 'LINEAR', angleDeg: 90 }, keyGradient: { colors: [0x14ffffff, 0x00ffffff], type: 'LINEAR', angleDeg: 90 }, keyBackground: 0xff31353c, keyText: 0xffe9e9ee, modifierKeyBackground: 0xff24262c, enterKeyBackground: 0xff7a8699, enterKeyText: 0xfff4f4f8, accent: 0xffa2aab8, keyBorderColor: 0x338a94a6, keyBorderWidthDp: 1 },
+];
+
+const { specs = DEFAULTS, caption } = Astro.props;
+const model = specs.map((s) => ({ name: s.name, ...toVars(s) }));
+const first = model[0];
+
+const ROW0: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+const ROW1: [string, string?][] = [['q'], ['w'], ['e', 'è'], ['r'], ['t'], ['y'], ['u', 'ù'], ['i', 'ì'], ['o', 'ò'], ['p']];
+const ROW2: [string, string?][] = [['a', '@'], ['s', '#'], ['d', '$'], ['f'], ['g', '&'], ['h'], ['j'], ['k', '('], ['l', ')']];
+const ROW3: [string, string?][] = [['z', '*'], ['x', '"'], ['c', "'"], ['v'], ['b', ';'], ['n', '!'], ['m', '?']];
+---
+
+<figure class="wm-theme-preview not-content" style={first.vars} data-anim={first.anim} data-dur={first.dur}>
+	{model.length > 1 && (
+		<div class="tp-swatches" role="tablist" aria-label="Themes">
+			{model.map((t, i) => (
+				<button
+					type="button"
+					role="tab"
+					class="tp-swatch"
+					aria-selected={i === 0 ? 'true' : 'false'}
+					data-vars={t.vars}
+					data-anim={t.anim}
+					data-dur={t.dur}
+				>
+					<span class="tp-chip" style={`background:${t.chipBg}`}>
+						<span class="tp-chip-key" style={`background:${t.chipKey}`}></span>
+					</span>
+					{t.name}
+				</button>
+			))}
+		</div>
+	)}
+
+	<div class="tp-board" aria-hidden="true">
+		<div class="tp-bgimg"></div>
+		<div class="tp-fill"></div>
+		<div class="tp-ui">
+			<div class="tp-toolbar">
+				<span class="tp-tool tp-tool-on">
+					<svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+				</span>
+				<span class="tp-tool">
+					<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="10" r="1.1" fill="currentColor"/><circle cx="15" cy="10" r="1.1" fill="currentColor"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+				</span>
+				<span class="tp-tool">
+					<svg viewBox="0 0 24 24"><rect x="6" y="5" width="12" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 5V4a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 4v1" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+				</span>
+				<span class="tp-tool">
+					<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+				</span>
+			</div>
+			<div class="tp-row">
+				{ROW0.map((c) => (
+					<span class="tp-key">{c}</span>
+				))}
+			</div>
+			<div class="tp-row">
+				{ROW1.map(([c, hint]) => (
+					<span class="tp-key">{c}{hint && <i class="tp-hint">{hint}</i>}</span>
+				))}
+			</div>
+			<div class="tp-row tp-row-inset">
+				{ROW2.map(([c, hint]) => (
+					<span class="tp-key">{c}{hint && <i class="tp-hint">{hint}</i>}</span>
+				))}
+			</div>
+			<div class="tp-row">
+				<span class="tp-key tp-mod tp-wide">⇧</span>
+				{ROW3.map(([c, hint]) => (
+					<span class="tp-key">{c}{hint && <i class="tp-hint">{hint}</i>}</span>
+				))}
+				<span class="tp-key tp-mod tp-wide">⌫</span>
+			</div>
+			<div class="tp-row">
+				<span class="tp-key tp-mod tp-wide tp-small">?123</span>
+				<span class="tp-key">,<i class="tp-hint">!</i></span>
+				<span class="tp-key tp-spacebar"><span class="tp-space-label">◂&ensp;English&ensp;▸</span></span>
+				<span class="tp-key">.<i class="tp-hint">…</i></span>
+				<span class="tp-key tp-enter tp-wide">
+					<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5L20 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+				</span>
+			</div>
+		</div>
+	</div>
+	{caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+	.wm-theme-preview {
+		margin: 1.5rem 0;
+	}
+	.tp-swatches {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 0.75rem;
+	}
+	.tp-swatch {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45em;
+		margin: 0;
+		padding: 0.25em 0.7em 0.25em 0.3em;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 999px;
+		background: var(--sl-color-gray-6);
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-xs);
+		cursor: pointer;
+	}
+	.tp-swatch[aria-selected='true'] {
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-white);
+	}
+	.tp-chip {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: 50%;
+		border: 1px solid var(--sl-color-gray-4);
+	}
+	.tp-chip-key {
+		width: 0.6em;
+		height: 0.6em;
+		border-radius: 2px;
+	}
+
+	.tp-board {
+		position: relative;
+		overflow: hidden;
+		border-radius: 1rem;
+		border: 1px solid var(--sl-color-gray-5);
+		max-width: 27rem;
+	}
+	.tp-bgimg {
+		position: absolute;
+		inset: 0;
+		background: var(--tp-bgimg) center / cover no-repeat;
+		opacity: var(--tp-bgimg-op);
+		filter: blur(var(--tp-bgimg-blur));
+	}
+	.tp-fill {
+		position: absolute;
+		inset: var(--tp-fill-inset, 0%);
+		background-color: var(--tp-fill-color);
+		background-image: var(--tp-fill-img);
+		background-size: 100% 100%;
+		filter: blur(var(--tp-fill-blur, 0px));
+		transition: background-color 250ms ease;
+	}
+	/* Live theme animations. FLOW drifts the gradient; HUE_CYCLE rotates hue. */
+	[data-anim='flow'] .tp-fill {
+		background-size: 300% 300%;
+		animation: tp-flow calc(var(--dur, 16) * 1s) linear infinite alternate;
+	}
+	[data-anim='hue_cycle'] .tp-fill {
+		animation: tp-hue calc(var(--dur, 16) * 1s) linear infinite;
+	}
+	@keyframes tp-flow {
+		from { background-position: 0% 0%; }
+		to { background-position: 100% 100%; }
+	}
+	@keyframes tp-hue {
+		from { filter: blur(var(--tp-fill-blur, 0px)) hue-rotate(0deg); }
+		to { filter: blur(var(--tp-fill-blur, 0px)) hue-rotate(360deg); }
+	}
+	.tp-ui {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		padding: 12px 8px 12px;
+	}
+	.tp-toolbar {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0 0.6rem 0.2rem;
+	}
+	.tp-tool {
+		display: inline-flex;
+		width: 2.1rem;
+		height: 2.1rem;
+		align-items: center;
+		justify-content: center;
+		border-radius: var(--tp-tool-radius);
+		background: var(--tp-tool-bg);
+		color: var(--tp-tool-icon);
+	}
+	.tp-tool-on {
+		background: var(--tp-tool-active);
+	}
+	.tp-tool svg {
+		width: 1.1rem;
+		height: 1.1rem;
+	}
+	.tp-row {
+		display: flex;
+		justify-content: center;
+		gap: 6px;
+	}
+	.tp-row-inset {
+		padding: 0 4.5%;
+	}
+	.tp-key {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 0;
+		min-width: 0;
+		height: 2.7rem;
+		border-radius: var(--tp-radius);
+		clip-path: var(--tp-clip);
+		background-color: var(--tp-key);
+		background-image: var(--tp-key-img);
+		border: var(--tp-bw) solid var(--tp-bc);
+		color: var(--tp-keytext);
+		font-family: 'Roboto', var(--sl-font);
+		font-weight: 400;
+		font-size: 1.45rem;
+		line-height: 1;
+		text-align: center;
+	}
+	.tp-hint {
+		position: absolute;
+		top: 4px;
+		right: 7px;
+		font-size: 0.65rem;
+		font-style: normal;
+		opacity: 0.55;
+	}
+	.tp-mod {
+		background-color: var(--tp-mod);
+		color: var(--tp-modtext);
+	}
+	.tp-wide { flex-grow: 1.55; }
+	.tp-small { font-size: 0.72rem; font-weight: 500; }
+	.tp-spacebar {
+		flex-grow: 4.2;
+	}
+	.tp-space-label {
+		font-size: 0.8rem;
+		letter-spacing: 0.04em;
+		opacity: 0.55;
+	}
+	.tp-enter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--tp-enter);
+		color: var(--tp-entertext);
+	}
+	.tp-enter svg {
+		width: 1rem;
+		height: 1rem;
+	}
+	figcaption {
+		margin-top: 0.5rem;
+		color: var(--sl-color-gray-3);
+		font-size: var(--sl-text-sm);
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.tp-fill { animation: none !important; }
+	}
+</style>
+
+<script>
+	document.querySelectorAll('.wm-theme-preview').forEach((root) => {
+		const el = root as HTMLElement;
+		el.style.setProperty('--dur', el.dataset.dur ?? '16');
+		root.querySelectorAll<HTMLButtonElement>('.tp-swatch').forEach((btn) => {
+			btn.addEventListener('click', () => {
+				root.querySelectorAll('.tp-swatch').forEach((b) => b.setAttribute('aria-selected', 'false'));
+				btn.setAttribute('aria-selected', 'true');
+				el.setAttribute('style', btn.dataset.vars ?? '');
+				el.style.setProperty('--dur', btn.dataset.dur ?? '16');
+				el.dataset.anim = btn.dataset.anim ?? 'none';
+			});
+		});
+	});
+</script>

@@ -1,0 +1,37 @@
+name: Sync Wiki
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - '.github/workflows/wiki-sync.yml'
+      - '.github/scripts/convert-mdx.js'
+  workflow_dispatch:
+
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '20'
+
+      - name: Convert MDX to MD
+        run: |
+          node .github/scripts/convert-mdx.js docs/src/content/docs wiki-dist
+
+      - name: Sync docs to wiki
+        uses: Andrew-Chen-Wang/github-wiki-action@v5
+        with:
+          path: wiki-dist/
+          commit-message: "docs: Sync wiki from Astro docs"
+          # v5 renames README.md to Home.md and rewrites .md links by default;
+          # convert-mdx.js already writes wiki-ready pages, as v4 expected.
+          preprocess: false

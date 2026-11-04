@@ -1,0 +1,139 @@
+---
+title: "Servers"
+description: "The F-Droid edition's list of every online service and download repository, and how to point each one at a mirror or a server you run."
+sidebar:
+  order: 18.75
+---
+
+import SettingsPath from '@components/SettingsPath.astro';
+
+The Servers screen is in the F-Droid edition only. It lists every address the
+keyboard calls: each online service, and each git repository it downloads files
+from. Point one at a mirror, or at a server you run yourself, and the keyboard
+calls that instead. Leave a field empty and the keyboard calls the service's own
+server, which is what a fresh install does.
+
+The same fields also sit on each tool's own page, so the address for weather is
+under the Weather tool too. Both places edit one setting.
+
+This screen exists because F-Droid marks an app **TetheredNet** when it depends
+on a service that can't easily be replaced, and doesn't when a simple setting
+can point the app at a self-hostable alternative. Every service here is
+replaceable that way, including the ones that are already free software.
+
+The other editions show a note on this screen and never read these fields.
+
+## Options
+
+<SettingsPath path="Advanced / Servers" />
+
+### Repositories
+
+Four downloads are plain files in git repositories. A copy of a repository on
+another host works the same way, as long as it holds the same files.
+
+| Repository | What it's for | By default |
+|---|---|---|
+| Language data | Word lists, n-gram packs, emoji keyword dictionaries, Chinese and Japanese conversion dictionaries, vocabulary packs, and the copy of Keyman typing rules used when keyman.com can't serve them | `github.com/wasi-master/wmkeyboard-data` |
+| Add-on repository | The add-on repository listed on a fresh install, and the Noto Color Emoji font | `github.com/wasi-master/wmkeyboard-addon-repository` |
+| Key sound repository | The key sound repository listed on a fresh install | `github.com/wasi-master/wmkeyboard-monkeytype-sounds` |
+| Community addon repository | Themes and layouts people sent in, listed on a fresh install. Submissions still go to its GitHub issues | `github.com/wasi-master/wmkeyboard-community-addons` |
+| Espanso Hub | `hub.espanso.org` package links pasted on the Snippets screen | `github.com/espanso/hub` |
+
+For each one, **Hosted on** picks the kind of host, and the fields under it say
+where the repository is. **Paste a repository link** fills the fields in from a
+page address copied out of a browser, on any of these hosts. The line under the
+fields shows the address the files will come from.
+
+| Hosted on | Files come from |
+|---|---|
+| GitHub | `raw.githubusercontent.com/OWNER/REPO/BRANCH/` |
+| Forgejo or Gitea (Codeberg, gitea.com, or your own) | `HOST/OWNER/REPO/raw/branch/BRANCH/` |
+| GitLab | `HOST/OWNER/REPO/-/raw/BRANCH/` |
+| SourceHut | `git.sr.ht/~OWNER/REPO/blob/BRANCH/` |
+| Bitbucket | `bitbucket.org/OWNER/REPO/raw/BRANCH/` |
+| HTTPS folder | The folder address you type, with each file's path added |
+
+Details worth knowing:
+
+- A repository must be on `https://`. If a field is empty, the keyboard keeps
+  using the default repository, and the screen says so.
+- **Branch** can be empty. GitHub and GitLab then use the repository's default
+  branch; the others use `main`.
+- The Chinese and Japanese conversion dictionaries are checked against a
+  checksum after they download, so a mirror must serve exactly the same files.
+- An Espanso Hub package name is looked up by listing the package's version
+  folders. GitHub, Forgejo, Gitea and GitLab can list them. On SourceHut,
+  Bitbucket or a plain folder, paste a direct link to the package file instead.
+- Moving the add-on or key sound repository adds the new address to
+  [Add-ons](/reference/settings/addons/) the next time you open it. The old
+  entry stays until you remove it.
+- **Use the default repository** puts one repository back where a fresh install
+  has it.
+
+### Services
+
+Each row is a base address. The keyboard adds the same path it always does, so
+a server you point it at has to answer the same API. An address can start with
+`http://` as well as `https://`, for a server on your own network. Anything that
+isn't an address yet is ignored, and the field says which server the keyboard
+uses until it is.
+
+| Section | Service | By default |
+|---|---|---|
+| Downloads | Keyman keyboard catalogue | `https://api.keyman.com` |
+| Downloads | Keyman keyboard downloads | `https://downloads.keyman.com` |
+| Downloads | Noto animated emoji | `https://fonts.gstatic.com/s/e/notoemoji/latest` |
+| Translate | Google Translate, no key | `https://translate.googleapis.com` |
+| Translate | Google Cloud Translation | `https://translation.googleapis.com` |
+| Web and image search, and the Brave AI provider | Brave Search API | `https://api.search.brave.com` |
+| Web and image search | Tavily Search API | `https://api.tavily.com` |
+| GIFs and stickers | KLIPY | `https://api.klipy.com` |
+| GIFs and stickers | GIPHY | `https://api.giphy.com` |
+| GIFs and stickers | Signal sticker storage | `https://cdn-ca.signal.org` |
+| GIFs and stickers | Telegram Bot API | `https://api.telegram.org` |
+| Photos | Unsplash | `https://api.unsplash.com` |
+| Photos | Pexels | `https://api.pexels.com` |
+| Wikipedia | Wikipedia or another MediaWiki | `https://{lang}.wikipedia.org` |
+| Dictionary | Free Dictionary API | `https://api.dictionaryapi.dev` |
+| Dictionary | Urban Dictionary | `https://api.urbandictionary.com` |
+| Dictionary | Datamuse, for synonyms | `https://api.datamuse.com` |
+| Vocabulary lookups | kaikki.org (Wiktextract), also a Dictionary source | `https://kaikki.org` |
+| Vocabulary lookups | Wiktionary, also a Dictionary source | `https://en.wiktionary.org` |
+| Weather | Open-Meteo forecast | `https://api.open-meteo.com` |
+| Weather | Open-Meteo place search | `https://geocoding-api.open-meteo.com` |
+| Maps and addresses | Nominatim, for the Location tool's address lookup | `https://nominatim.openstreetmap.org` |
+| Currency rates | currency-api, and its second server | jsDelivr, then `https://latest.currency-api.pages.dev` |
+| Currency rates | Frankfurter | `https://api.frankfurter.dev` |
+| Speed test | Cloudflare speed test | `https://speed.cloudflare.com` |
+| Speed test | LibreSpeed server list, for the picker | `https://librespeed.org` |
+| Currency rates | ExchangeRate-API, Coinbase, CoinGecko | their own servers |
+| Song recognition | AudD, for the Music ID tool | `https://api.audd.io` |
+| Song recognition | AudioTag | `https://audiotag.info` |
+| Song recognition | Shazam via RapidAPI | `https://shazam.p.rapidapi.com` |
+| Song recognition | iTunes Search, for a recognised song's cover and store link | `https://itunes.apple.com` |
+| Song recognition | Deezer, the second cover lookup | `https://api.deezer.com` |
+| AI providers | Ollama, LM Studio, another OpenAI-compatible service | none, set them up to use them |
+| AI providers | Anthropic, OpenAI, Google Gemini, xAI, DeepSeek | their own servers |
+| Update check | F-Droid repository | `https://f-droid.org` |
+
+A few of these, in more detail:
+
+- **Wikipedia** reads `{lang}` as the language you search in. An address without
+  it, such as your own wiki, is used for every language.
+- **F-Droid repository** can be any repository that serves F-Droid's package
+  API. IzzyOnDroid does, at `https://apt.izzysoft.de/fdroid`.
+- The keyed services (Brave, Tavily, KLIPY, GIPHY, Unsplash, Pexels, Google's translation
+  and the AI providers) are here for a proxy or a service that copies their API.
+  Each of those tools also has a free server of its own to use instead:
+  SearXNG, a MediaWiki, LibreTranslate or Ollama.
+- LibreTranslate, SearXNG and a MediaWiki for GIFs and photos are not on this
+  screen. Add them to the tool's [provider list](/tools/providers/) on the
+  tool's own page, on any edition, as many as you like.
+
+Not in the list: Google Drive, Dropbox and OneDrive backups, which the F-Droid
+edition can't use at all. [Backups](/reference/settings/backup/) to WebDAV,
+S3-compatible storage, SFTP, SMB, FTP, a Git server, a mail server or a folder
+already take any address you give them.
+
+See [Network policy](/privacy/network/) for what each service is sent, and when.

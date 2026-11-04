@@ -1,0 +1,145 @@
+---
+title: "Installation"
+description: "Install from Google Play or F-Droid, download the standard or offline APK from GitHub, or build from source, and install it on your device."
+sidebar:
+  order: 1
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import Flavor from '@components/Flavor.astro';
+import { Steps } from '@astrojs/starlight/components';
+import Shot from '@components/Shot.astro';
+
+Install it from [Google Play](https://play.google.com/store/apps/details?id=com.wasimaster.wmkeyboard) or [F-Droid](https://f-droid.org/packages/com.wasimaster.wmkeyboard/), or grab a signed APK from the releases page and install that like any other app. Building it yourself works too, and takes a few minutes if you already have the Android SDK.
+
+## Installing from Google Play
+
+Open the [WM Keyboard listing](https://play.google.com/store/apps/details?id=com.wasimaster.wmkeyboard) and tap **Install**. There is nothing to pick: Play carries the standard build and serves your phone the right CPU architecture on its own.
+
+The Play copy differs from the GitHub APKs in a few ways:
+
+- **Heavier parts arrive when you first need them.** The on-device AI runtime, the on-device translation engine, handwriting recognition and the interpreter behind offline voice typing and the sticker editor's background remover are not in the first install. The first time you use one, Play downloads it, and the feature carries on by itself once it lands. See [Which build you have](/start/editions/).
+- **ML Kit comes from Google Play services** rather than from inside the app, so OCR and QR scanning use the copy Play services already keeps. Without Play services the QR scanner reads with zxing-cpp instead.
+- **Updates come from Play.** The app has no updater of its own there. When a new version is out, the settings app can offer it through Play's in-app update prompt.
+- **Two device-side extras are left out:** the accessibility service that keeps keyboard gestures working under TalkBack, and the photos permission that lets new screenshots turn up in the clipboard. Install from GitHub or F-Droid if you need either. See [Permissions](/privacy/permissions/).
+- **Play signs it with its own key.** Android only updates an app with a build signed by the same key, so you cannot install a GitHub or F-Droid APK over the Play copy, or the other way round. To switch, export a backup, uninstall, install from the other source, and import the backup. See [Updating and what carries over](#updating-and-what-carries-over).
+
+Its privacy policy is [Privacy policy (Google Play edition)](/privacy/policy/).
+
+## Downloading a release APK
+
+Each release on the [GitHub releases page](https://github.com/wasi-master/wmkeyboard/releases) has three builds, **standard**, **all languages** and **offline**. Most people want standard. The release page puts it first.
+
+<Steps>
+
+1. Open the latest release on GitHub.
+
+2. Take the **standard** build, unless you want a keyboard that can never reach the network.
+
+   **Standard** carries the keyboard and English, and fetches the rest when you use it. Features that need their own code (offline voice typing, grammar checking, the scanner, handwriting, on-device translation and on-device AI) download it the first time you use them. [Every feature library](/privacy/offline/#every-feature-library) is listed with what it adds. On Android 11 and later, the app's own screens download another language when you pick it, about 2 MB each. On Android 7 to 10, the standard build's screens stay in English. Every download is checked against a checksum built into the app.
+
+   **All languages** is the standard build with all 48 interface languages built in, so nothing has to be downloaded to see the app in yours. Take it on Android 7 to 10. It installs over the standard build and back, and its updater keeps you on it.
+
+   **Offline** has the internet permission removed, and is otherwise the standard build: English, with no feature libraries inside. It can't download anything, including its own update check, so you fetch the interface languages and feature libraries you want on another device and [import them](/privacy/offline/#the-offline-build), along with any language packs, models and GIF packs. Interface languages need Android 11 or later; on Android 7 to 10, take **offline, all languages** instead, which has all 48 built in. See [A build with no internet permission](/development/building/#a-build-with-no-internet-permission).
+
+3. Pick your CPU architecture. Almost every phone made since 2017 is `arm64-v8a`. Older or budget devices are `armeabi-v7a`. Emulators and a few tablets are `x86_64`. The `universal` APK holds all three and works anywhere, at several times the download size. The offline build comes in `arm64-v8a` and `universal`, the offline all-languages build in `universal` only.
+
+4. Download the APK to your device.
+
+5. Optional: verify the download. The release page shows a SHA-256 next to each file. Run `sha256sum <file>` on a computer, or use a checksum app on the phone, and compare the two.
+
+6. Open the APK to install it.
+
+</Steps>
+
+The release page carries the real size of every file next to its link, so check there rather than here.
+
+Up to 0.6.2, each release also had a Lite edition. If you installed it from GitHub, the app's updater moves you to the full build with the same languages: your settings stay. 0.6.3 had no real all-languages build (its `full-intl` files were copies of the standard one), so an all-languages install that updated to 0.6.3 is on the standard build; from 0.6.4 it can go back with About, then App language, or by installing the all-languages APK. From 0.6.3 there is no Lite edition anywhere; F-Droid builds the standard app without Google's SDKs.
+
+## Building the APK yourself
+
+<Steps>
+
+1. Install a JDK 17 or newer, and the Android SDK. The dictionary-compiler build tool pins its own JDK 17 toolchain. Foojay provisions that toolchain for you if you do not already have one.
+
+2. Clone the repository. From the repository root, run one of these commands:
+
+   ```sh
+   ./gradlew assembleIntlDebug   # every language
+   ./gradlew assembleEnDebug     # English only
+   ```
+
+   The task name is the language build, then the build type. `Intl` is all 48 languages and `En` is English alone. Add `-Pwmkb.enableFdroid=true` to build what F-Droid builds, without Google's SDKs.
+
+   For a release build, replace `Debug` with `Release`. A release build needs your own signing keystore. Without one the APK comes out unsigned, and Android refuses to install it. The debug builds above are signed with the local debug key and install fine on your own device.
+
+3. Find the APK under `app/build/outputs/apk/intl/debug/`, or the directory matching whichever task you ran.
+
+4. Copy the APK to your device and install it.
+
+</Steps>
+
+The build produces one APK per CPU architecture only when `wmkb.splitApks` is on, which is how the release APKs above are made. With the flag off, a release build packs all three architectures into one APK, and a debug build carries `arm64-v8a` alone. See [Building from source](/development/building/) for the full set of build flags.
+
+<PhoneFrame caption="First launch after install, before the setup wizard starts.">
+  <Shot id="start/first-launch" alt="First launch after install, before the setup wizard starts." />
+</PhoneFrame>
+
+## Choosing a build
+
+The GitHub builds and the Google Play copy have every feature. F-Droid's is the <Flavor edition="fdroid" />, which leaves out the parts that come from Google: ML Kit's handwriting and scanners, the LiteRT runtimes behind the original Whisper models and the local AI model, and the Whistle voice engine. See [Which build you have](/start/editions/) for the complete comparison and how to tell which build you're running.
+
+## Interface languages
+
+This is about the words the app shows you, not the ones you type. Every layout, every dictionary and every prediction model is in every build.
+
+The app's own text exists in 48 languages besides English. F-Droid, the Google Play copy and the offline all-languages build carry or fetch them on their own. The standard GitHub build carries English and, on Android 11 and later, downloads your phone's language by itself a few seconds after it first starts (about 2 MB). Pick another under About, then App language. The offline build takes the same language files, but [imported](/privacy/offline/#interface-languages) from the release page. You can also set it under Settings, then Apps, then WM Keyboard, then Language, on Android 13 and up.
+
+The translations are machine translations from Google Play, and nobody has read them line by line, so expect the occasional clumsy sentence. A string with no translation yet falls back to English. See [Languages overview](/languages/overview/) for the list and the caveats.
+
+## Installing from the APK
+
+Android blocks installs from outside the Play Store by default. The first time you open the APK, Android shows an "install unknown apps" prompt. Grant the permission to whichever app you opened the file with (Files, a browser download, and so on), then continue. This is standard Android behavior, not anything WM Keyboard adds.
+
+Opening the app for the first time drops you straight into a short setup wizard rather than a home screen. See [Enable the keyboard](/start/setup/) for what each step does. Once you finish the wizard, it won't run again on later launches.
+
+## Updating and what carries over
+
+Installing a new build over an existing install (same package, same signing key) works like any Android app update. Your settings, themes, learned words, snippets and everything else stay exactly as they were, automatically.
+
+F-Droid builds and the GitHub APKs share a key from 0.5.10 on, so you can move between them the same way. The copy from Google Play is signed with Play's own key, so it can't be swapped for either of them in place. Move across with a backup, the same way as below. F-Droid still compiles its copy from source, and it publishes one only after checking it is identical to the `-fdroid.apk` on the same GitHub release.
+
+From 0.6.2, F-Droid builds one APK per CPU architecture and installs the one that fits your phone, instead of one APK carrying all three. Each release's version code now ends in a digit for the architecture (1 for `armeabi-v7a`, 2 for `arm64-v8a`, 3 for `x86_64`, 0 for `universal`), and the GitHub APKs carry the same digits, so the `arm64-v8a` APK from GitHub and the one from F-Droid still install over each other. A `universal` APK of the same version can't go over an F-Droid install, because its version code is lower; the next release installs as usual.
+
+The exception is an install from F-Droid of 0.5.9 or older. Those were signed with F-Droid's own key, and Android will not update an app to a build signed with a different one, so F-Droid can't update it to 0.5.10. To move over once: export a backup (see below), uninstall, install WM Keyboard from F-Droid again, and import the backup. Every update after that is ordinary.
+
+Reinstalling from scratch or moving to a new phone is different. Nothing carries over on its own unless you set one of these up beforehand.
+
+<SettingsPath path="Data / Backup & restore" />
+
+Export your configuration to a file, keep the file or move it to another device, then import it after reinstalling. You choose what each export includes. The defaults are:
+
+| Included by default | Off by default |
+|---|---|
+| Settings, themes, snippets, custom word lists, addon repository list, emoji history, typing statistics | API keys inside settings, stickers, icons, learned dictionary, clipboard history |
+
+Import always shows a confirmation before it writes anything, so restoring isn't something you discover after the fact.
+
+<SettingsPath path="Privacy / Android backup / Back up with Android" />
+
+This separate toggle is off by default. It opts the keyboard into Android's own backup and phone-to-phone transfer system, which is independent of the manual export above. Leave it off and Android carries no WM Keyboard data across a device switch on its own. Turn it on and Android's platform-level backup includes this app the next time it runs.
+
+## System requirements
+
+- **Android 7.0 (API 24) or newer** is the floor the app is built against. It targets Android 16 (API 36).
+- **Supported CPU architectures:** `arm64-v8a`, `armeabi-v7a`, and `x86_64`. Generic 32-bit `x86` is not supported. Only the 64-bit `x86_64` is.
+- Camera, microphone and sensor access are all optional. Every hardware-backed tool (camera scanner, voice dictation, compass) declares the hardware feature it needs as non-required in the manifest. Missing hardware disables that one tool instead of blocking the install.
+
+## Details & edge cases
+
+- The release APKs, and a build you make yourself with the default flags, both carry a GitHub-releases updater. It checks this project's releases in the background and shows an "Update available" card on the Home screen. It downloads the APK itself and asks you to confirm before installing. With it comes a small `.dm` file, the keyboard's baseline profile, so Android compiles the keyboard while it installs the update and typing is at full speed straight away, rather than only after the phone's overnight maintenance has run. Only the Google Play build skips the updater, because Play handles its updates, and Play applies the same profile itself.
+- Installing over a release APK works only if both were signed with the same key. A release APK replaces an earlier release APK cleanly. It will not install over a build you made yourself, and vice versa. Uninstall first, and export a backup before you do.
+- Build release APKs on more than one machine without sharing a signing keystore and they carry different signatures. Android then refuses to install one over the other. You have to uninstall first, which loses your data unless you exported a backup.
+- The Backup & restore export has a separate "include API keys" switch, off by default. It covers the translate, GIF, search and AI tool keys you may have entered. An export made with it on is worth treating like a password, because anyone holding the file gets those keys.
+- Some data is cheap to fetch again: downloaded (not custom) dictionaries, emoji keyword packs, Whisper and LLM model weights, and cached camera captures. Both the manual backup and Android's own backup leave all of it out, because re-downloading beats restoring.

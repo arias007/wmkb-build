@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Privacy screen, plus three neighbours that live in the same slice of the
+  settings code:
+
+  * the handwriting model manager (one row per language ML Kit can recognise),
+  * the weather location picker (shared with the onboarding tool setup),
+  * the permissions screen (every permission the app can hold).
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ================================================================== -->
+    <!-- Handwriting models: download and delete one model per language.    -->
+    <!-- ================================================================== -->
+
+    <string name="privacy_handwriting_none_info">None of the languages you turned on has a handwriting model in this version of the app. Add a language on the Languages screen. The model of that language then shows here.</string>
+
+    <!-- Row subtitles. Each one says what the model of that language is doing. -->
+    <string name="privacy_handwriting_status_checking">Checking…</string>
+    <string name="privacy_handwriting_status_downloaded">Downloaded. It works without a network connection</string>
+    <string name="privacy_handwriting_status_missing">Not downloaded</string>
+    <!-- Same, with the size ML Kit lists for this particular language. -->
+    <string name="privacy_handwriting_status_missing_sized">Not downloaded — <xliff:g id="size" example="24.6 MB">%1$s</xliff:g></string>
+    <string name="privacy_handwriting_status_preparing">Preparing…</string>
+    <string name="privacy_handwriting_status_downloading"><xliff:g id="downloaded" example="8.4 MB">%1$s</xliff:g> downloaded</string>
+    <string name="privacy_handwriting_status_downloading_of_total"><xliff:g id="downloaded" example="8.4 MB">%1$s</xliff:g> of <xliff:g id="total" example="24.6 MB">%2$s</xliff:g></string>
+    <string name="privacy_handwriting_status_stalled"><xliff:g id="downloaded" example="8.4 MB">%1$s</xliff:g> downloaded, currently stalled</string>
+    <string name="privacy_handwriting_status_failed">The download did not work. Check your network connection</string>
+
+    <!-- Content description of the delete button. %1$s is the name of a language. -->
+    <string name="privacy_handwriting_delete_desc">Delete the model for %1$s</string>
+
+    <!-- %1$s is a list of language names, separated by commas. -->
+    <string name="privacy_handwriting_missing_info">No handwriting model exists for %1$s. Handwriting changes to the nearest language that has a model.</string>
+
+    <!-- ================================================================== -->
+    <!-- Weather location: the row, and the dialog that edits it.           -->
+    <!-- ================================================================== -->
+
+    <string name="privacy_weather_location_title">Location</string>
+    <!--
+      Subtitle of the Location row. %1$s is the name of the place, %2$.3f is the
+      latitude and %3$.3f is the longitude. Both numbers are decimal degrees.
+    -->
+    <string name="privacy_weather_location_summary">%1$s (%2$.3f, %3$.3f)</string>
+    <string name="privacy_weather_location_empty">Not set. Press to add the coordinates</string>
+    <!-- Stands in for the name of a place that the user saved without a name. -->
+    <string name="privacy_weather_place_unnamed">Location with no name</string>
+
+    <string name="privacy_weather_dialog_title">Weather location</string>
+    <string name="privacy_weather_search_hint">Search for a city or a place</string>
+    <!--
+      One search result. %1$s is the region of the place, %2$.3f is the latitude
+      and %3$.3f is the longitude. Both numbers are decimal degrees.
+    -->
+    <string name="privacy_weather_result_summary">%1$s (%2$.3f, %3$.3f)</string>
+    <!-- Stands in for the region when the search result carries none. -->
+    <string name="privacy_weather_region_unknown">Region not known</string>
+    <string name="privacy_weather_manual_info">You can also type the coordinates yourself. Use decimal degrees. South and west are negative.</string>
+    <string name="privacy_weather_name_hint">Name shown on the panel</string>
+    <string name="privacy_weather_latitude_hint">Latitude, for example 23.81</string>
+    <string name="privacy_weather_longitude_hint">Longitude, for example 90.41</string>
+    <string name="privacy_weather_no_matches_error">No matches. Try a different spelling.</string>
+    <string name="privacy_weather_search_error">The search did not work. Check your network connection.</string>
+
+    <!-- ================================================================== -->
+    <!-- Privacy screen: what the keyboard learns, and what it sends.       -->
+    <!-- ================================================================== -->
+
+    <string name="privacy_learning_group_title">Learning on this device</string>
+
+    <string name="privacy_learn_typing_title">Learn from typing</string>
+    <string name="privacy_learn_typing_subtitle">The keyboard adjusts the suggestions to your typing. Nothing leaves your device</string>
+    <string name="privacy_learn_typing_info">The keyboard keeps the words and the word pairs that you type in a private word list on this device. This makes the suggestions and glide typing better. The keyboard learns nothing in a password field, and nothing while incognito mode is on. You can delete the learned words below at any time.</string>
+
+    <string name="privacy_system_dictionary_title">Add words to the system dictionary</string>
+    <string name="privacy_system_dictionary_subtitle">Share the learned words with the Android personal dictionary</string>
+    <string name="privacy_system_dictionary_info">The keyboard also saves the words that you type in the Android personal dictionary. Other keyboards and the spell checker of the system then know these words too. It is the same list that you can edit in System settings → Languages &amp; input → Dictionary. This setting is off at the start: the keyboard has its own learning, and this setting writes outside the app. It obeys \"Learn from typing\" and incognito mode. When you turn it off, the words that are already in the list stay there.</string>
+
+    <string name="privacy_use_system_dictionary_title">Use the Android dictionary</string>
+    <string name="privacy_use_system_dictionary_subtitle">Treat the words in the Android personal dictionary as known words</string>
+    <string name="privacy_use_system_dictionary_info">The keyboard reads the Android personal dictionary. It is the same list in System settings → Languages &amp; input → Dictionary. Each word in that list is a known word: the keyboard suggests it, autocorrect does not change it, and the keyboard does not ask you to add it again when you type or glide it. This setting is on at the start. The keyboard reads the list again each time you change it, so a word that you add in System settings works at once. This setting only reads the list. \"Add words to the system dictionary\" is the setting that writes to it.</string>
+
+    <string name="privacy_dict_shortcuts_title">Expand Android dictionary shortcuts</string>
+    <string name="privacy_dict_shortcuts_subtitle">Type a shortcut from the Android personal dictionary to get its full phrase as a suggestion</string>
+    <string name="privacy_dict_shortcuts_info">Each entry in the Android personal dictionary can have a shortcut. It is the same list in System settings → Languages &amp; input → Dictionary. With this setting on, you type a shortcut, for example \"omw\", and its full phrase, \"on my way\", becomes the top suggestion. This setting is on at the start. The keyboard reads the list again each time you change it, so a shortcut that you add in System settings works at once. This setting is not the snippets of the keyboard. A snippet belongs to the Snippets tool, has its own screen under Features → Text Expander, and works whether this setting is on or off.</string>
+
+    <string name="privacy_incognito_title">Incognito mode</string>
+    <string name="privacy_incognito_subtitle">Pause learning and clipboard capture</string>
+    <string name="privacy_incognito_info">While this setting is on, the keyboard learns nothing from your typing and keeps no clipboard history. The words that it learned before stay as they are.</string>
+
+    <string name="privacy_incognito_apps_title">Incognito by app</string>
+    <string name="privacy_incognito_apps_info">Follow private browsing goes by what each text field asks for. Add an app here to decide for it instead: every field in an app set to always incognito is incognito, and no field in an app set to never is, whatever it asks. Tap an app to switch between the two.</string>
+    <string name="privacy_incognito_apps_always">Always incognito</string>
+    <string name="privacy_incognito_apps_never">Never incognito</string>
+    <string name="privacy_incognito_apps_add">Add an app</string>
+    <string name="privacy_incognito_apps_remove_desc">Remove</string>
+    <string name="privacy_auto_incognito_title">Follow private browsing</string>
+    <string name="privacy_auto_incognito_subtitle">Turn incognito mode on by itself in private tabs and fields</string>
+    <string name="privacy_auto_incognito_info">An app can mark a text field as a field that the keyboard must not learn from. Chrome does this for every field in an incognito tab. Other browsers and password managers do the same on their private screens. While such a field has the focus, the keyboard turns incognito mode on for it, and the incognito badge shows next to the toolbar. When you leave the field, typing goes back to normal. The keyboard cannot detect an app that never sends this mark. This setting does not work for a private mode of that kind.</string>
+
+    <string name="privacy_backup_group_title">Android backup</string>
+    <string name="privacy_backup_title">Back up with Android</string>
+    <string name="privacy_backup_subtitle">Include the keyboard in the Android backup and in the device-to-device transfer</string>
+    <string name="privacy_backup_info">This setting is off at the start. The keyboard copies nothing that it stores to Google Drive or to a new device. Turn it on, and the Android backup treats the keyboard like any other app. Your settings, themes, layouts, snippets, learned words, sticker packs, icon packs and plugins come back on a new device, or after you install the app again. The backup leaves out the voice models, the AI models, the downloaded word lists and the emoji keyword packs. The keyboard can download these again by itself, and the backup must stay inside the size limit of Android. The backup does include your saved API keys. Android makes a cloud backup only on a device that can encrypt it with your screen lock. Backup &amp; restore in Settings is the other way, and it never uses Google. It saves the same data in a file that you move yourself.</string>
+
+    <string name="privacy_downloads_group_title">Downloads</string>
+    <string name="privacy_native_downloads_title">Download feature libraries</string>
+    <string name="privacy_native_downloads_on_subtitle">On: a feature downloads its library from GitHub the first time you use it</string>
+    <string name="privacy_native_downloads_off_subtitle">Off: features that need a library say so instead of downloading it</string>
+    <string name="privacy_native_downloads_info">This F-Droid build leaves out the native libraries behind some features, such as offline voice typing and grammar checking. With this setting on, the keyboard downloads a library the first time its feature needs it, from the WM Keyboard data repository on GitHub. By turning this on, you choose to bypass F-Droid\'s checks: F-Droid did not build or review these files. Before the keyboard uses a file, it compares the file with a checksum that is built into this app. You can also import the files yourself from Settings › About › Storage.</string>
+    <string name="privacy_native_downloads_confirm_title">Download files that F-Droid has not checked?</string>
+    <string name="privacy_native_downloads_confirm_action">Turn on</string>
+    <string name="privacy_native_import_title">Feature libraries</string>
+    <!-- %1$d of %2$d: libraries on the phone, of all this build can use. -->
+    <string name="privacy_native_import_subtitle">%1$d of %2$d on this phone. This offline build cannot download them: get the files on another device and import them here</string>
+    <string name="privacy_qualcomm_licence_title">Qualcomm NPU runtime</string>
+    <string name="privacy_qualcomm_licence_accepted">Licence accepted. The NPU runtime downloads from Maven Central.</string>
+    <string name="privacy_qualcomm_licence_not_accepted">Not accepted. On-device AI can\'t use the NPU.</string>
+    <string name="privacy_qualcomm_licence_dialog_title">Qualcomm\'s licence</string>
+    <string name="privacy_qualcomm_licence_dialog_body">To run AI on the NPU, the keyboard needs Qualcomm\'s QNN runtime for your phone\'s chip (about <xliff:g id="size" example="29 MB">%1$s</xliff:g>). The keyboard downloads it from Qualcomm\'s own package on Maven Central, so Qualcomm gives you these files under its AI Stack License, not WM Keyboard. The licence says that you must be 18 or older and that you accept its terms.</string>
+    <string name="privacy_qualcomm_licence_accept">Accept and download</string>
+    <string name="privacy_qualcomm_licence_view">View licence</string>
+    <string name="privacy_verify_checksums_title">Verify downloaded files</string>
+    <string name="privacy_verify_checksums_subtitle">Check every download and import against its published checksum</string>
+    <string name="privacy_verify_checksums_off_subtitle">Off: the keyboard uses files that fail their checksum. Turn this back on when you can.</string>
+    <string name="privacy_verify_checksums_info">Each file that the keyboard downloads or imports has a published SHA-256 checksum: dictionary packs, voice models, fonts, add-ons, themes, Keyman layouts and app updates. The keyboard refuses a file whose checksum does not match, because the file is damaged or is not the file that was published. Keep this setting on. Turn it off only for a short time, when the developer tells you that a file changed on the server and your version of the app still expects the old file. Updates still need the developer\'s signature to install.</string>
+    <string name="privacy_verify_checksums_confirm_title">Turn off file verification?</string>
+    <string name="privacy_verify_checksums_confirm_body">The keyboard will use downloaded and imported files even when their checksum does not match. A damaged download, or a file that someone changed on its way to you, will then be installed and used. Do this only when the developer asks you to, and turn it back on after you update the app.</string>
+
+    <string name="privacy_data_group_title">Your data</string>
+    <string name="privacy_delete_learned_words_action">Delete the learned words</string>
+    <string name="privacy_delete_learned_words_title">Learned words</string>
+    <string name="privacy_delete_learned_words_subtitle">Everything the keyboard picked up from your typing</string>
+    <string name="privacy_delete_learned_words_confirm">This deletes every word that the keyboard learned from you, your emoji history, the corrections that you undid, and your Chinese, Japanese and Cantonese picks. The keyboard also deletes your personal dictionary. The words that you add by hand go into the same list. Your snippets and your imported word lists stay. This cannot be undone.</string>
+
+    <!-- Caption at the end of the Privacy screen. -->
+    <!--
+         Reads as a promise, so it has to be one the app keeps. It used to say
+         "no telemetry and no analytics" flat out, which is true of this
+         project's own code and not true of Google's ML Kit underneath
+         handwriting, OCR and scanning: that library reports device, app and
+         timing data to Google whenever one of those features runs, with no
+         switch to stop it. Play compares an in-app claim like this against
+         the Data safety form and against the SDKs in the bundle, so the
+         sentence names the exception rather than inviting the mismatch.
+    -->
+    <string name="privacy_on_device_info">Typing works fully on this device. The word lists, prediction, autocorrect, transliteration and emoji search are part of the app, and none of them needs a network connection. The app collects nothing about you and has no analytics of its own. Handwriting, text scanning and QR scanning are built on Google\'s ML Kit, which reports its own diagnostics to Google while you use them. Only a tool uses the network, and only at the moment that you press it: translate, weather, web search, image search, GIFs, stickers, dictionary lookup and the AI tools. You can turn off each one of them on the Tools screen.</string>
+
+    <!-- ================================================================== -->
+    <!-- App lock: a fingerprint in front of the settings the user picked.  -->
+    <!-- ================================================================== -->
+
+    <!--
+         Every one of these has to stay honest about what the lock is. It hides
+         screens inside this app. It does not encrypt anything, and it cannot:
+         the same data sits in a settings export, in the Android backup, and in
+         the app directory that adb or a rooted phone reads. Say that in the
+         subtitle, say it in full in the info dialog, and say it again in the
+         caption at the end of the screen, so nobody reads more into it than it
+         does. The escape hatch belongs in the same breath: remove every
+         fingerprint and the lock stands aside, because a settings screen that
+         can shut its owner out for good is a bug and not a feature.
+    -->
+
+    <string name="privacy_lock_group_title">Lock</string>
+    <string name="privacy_lock_title">App lock</string>
+    <string name="privacy_lock_subtitle">Ask for your fingerprint, a PIN, a password or a pattern before the screens and the delete buttons that you pick</string>
+
+    <string name="privacy_lock_state_on">On</string>
+    <string name="privacy_lock_state_off">Off</string>
+    <string name="privacy_lock_state_unavailable">Not available</string>
+
+    <string name="privacy_lock_enabled_title">Use the app lock</string>
+    <string name="privacy_lock_enabled_subtitle">Turning this on and off also asks for a check</string>
+    <string name="privacy_lock_enabled_info">The keyboard asks for your fingerprint, or the PIN, password or pattern set on this screen, before it opens the screens that you tick below, and before it runs the delete buttons that you tick. It asks again before you can turn this setting off, so somebody holding your unlocked phone cannot simply switch it off.\n\nThis is a lock on the screens, not encryption. It does not change how anything is stored. A settings export, the Android backup, a computer with USB debugging on, and a rooted phone all still reach the same data, and the keyboard itself keeps working as before. What the lock stops is the case it is for: somebody who picks up your unlocked phone for half a minute.\n\nIf the lock uses your fingerprint and you remove every fingerprint and the screen lock from this phone, the lock stands aside and the screens open normally. There is then nothing to check against, and you must never be shut out of your own settings. A PIN, password or pattern set here never stands aside. If you forget it, Forgot? on its sheet lets this phone\'s own fingerprint or screen lock in instead.</string>
+
+    <string name="privacy_lock_group_content">Screens</string>
+    <string name="privacy_lock_group_destructive">Delete and reset</string>
+    <string name="privacy_lock_group_export">Data that leaves the app</string>
+
+    <string name="privacy_lock_kind_screen">Ask before this screen opens</string>
+    <string name="privacy_lock_kind_action">Ask before this runs</string>
+
+    <!-- Three targets are dialogs or a plain button, so they have no row
+         title of their own to borrow. These name the thing being locked. -->
+    <string name="privacy_lock_storage_delete_title">Delete files from Storage</string>
+    <string name="privacy_lock_factory_reset_title">Delete every setting</string>
+    <string name="privacy_lock_export_title">Export a backup file</string>
+
+    <string name="privacy_lock_behaviour_group_title">How the lock behaves</string>
+
+    <string name="privacy_lock_relock_title">Ask again</string>
+    <string name="privacy_lock_relock_info">One check opens every locked screen until this time is up. A delete button always asks again, however recently you answered, because that check is the last step before something goes away for good.</string>
+    <string name="privacy_lock_relock_immediate">Every time</string>
+    <string name="privacy_lock_relock_1min">After 1 minute</string>
+    <string name="privacy_lock_relock_5min">After 5 minutes</string>
+    <string name="privacy_lock_relock_on_leave">When you leave the app</string>
+    <string name="privacy_lock_relock_session">When the app closes</string>
+
+    <string name="privacy_lock_credential_title">Allow the screen lock instead</string>
+    <string name="privacy_lock_credential_subtitle">Accept the PIN, pattern or password of this phone as well as a fingerprint</string>
+    <string name="privacy_lock_credential_info">Keep this on unless you have a reason not to. It is the way back in when the fingerprint reader locks itself out after too many tries, and it is the only way this works at all on a phone with no reader. Turn it off and a fingerprint is the only answer the lock accepts.</string>
+
+    <string name="privacy_lock_prompt_title">App lock</string>
+    <string name="privacy_lock_prompt_subtitle">Confirm that this is you</string>
+    <string name="privacy_lock_prompt_recover_subtitle">Forgot it? Confirm that this is you with this phone\'s own lock</string>
+
+    <string name="privacy_lock_gate_title">Locked</string>
+    <string name="privacy_lock_gate_body">You chose to lock this. Confirm that this is you to open it.</string>
+    <string name="privacy_lock_gate_action">Unlock</string>
+
+    <string name="privacy_lock_error_lockout">Too many tries. Wait about 30 seconds, then try again.</string>
+    <string name="privacy_lock_error_lockout_permanent">Too many tries. Unlock this phone with your PIN, pattern or password, then come back.</string>
+    <string name="privacy_lock_error_generic">The check did not work. Try again.</string>
+
+    <string name="privacy_lock_unavailable_none_enrolled">This phone has no fingerprint and no screen lock set up, so there is nothing to check against. The lock stands aside until you add one, or until you pick a PIN, password or pattern below.</string>
+    <string name="privacy_lock_unavailable_no_hardware">This phone has no fingerprint reader that the app can use, so the lock stands aside. Pick a PIN, password or pattern below to use it anyway.</string>
+    <string name="privacy_lock_unavailable_temporary">The fingerprint reader is busy. Try again in a moment.</string>
+
+    <string name="privacy_lock_enroll_title">Set up a fingerprint</string>
+    <string name="privacy_lock_enroll_subtitle">Open the system settings to add a fingerprint or a screen lock</string>
+
+    <string name="privacy_lock_method_group_title">Unlock with</string>
+    <string name="privacy_lock_method_title">Answer the lock with</string>
+    <string name="privacy_lock_method_info">Fingerprint uses this phone\'s own prompt, and its screen lock too if you allow it below. A PIN, password or pattern is set here, for this app only, and works on a phone with no fingerprint reader and no screen lock.\n\nOnly a scrambled copy of the PIN, password or pattern is kept, never the thing itself. It is left out of every backup unless you include passwords and keys, so on a new phone the lock asks for the fingerprint until you set one again. Five wrong answers in a row make the next one wait, from 30 seconds up to 15 minutes. A short PIN is still a short PIN: six digits or more is worth the extra second.</string>
+    <string name="privacy_lock_method_biometric">Fingerprint</string>
+    <string name="privacy_lock_method_pin">PIN</string>
+    <string name="privacy_lock_method_password">Password</string>
+    <string name="privacy_lock_method_pattern">Pattern</string>
+    <string name="privacy_lock_change_pin">Change the PIN</string>
+    <string name="privacy_lock_change_password">Change the password</string>
+    <string name="privacy_lock_change_pattern">Change the pattern</string>
+    <string name="privacy_lock_change_subtitle">Enter a new one twice. Only a scrambled copy is kept</string>
+    <string name="privacy_lock_shortcut_title">Offer the fingerprint first</string>
+    <string name="privacy_lock_shortcut_subtitle">Unlock with a finger, with the PIN, password or pattern one tap away</string>
+    <string name="privacy_lock_shortcut_unavailable">This phone has no fingerprint set up</string>
+    <string name="privacy_lock_use_pin">Use PIN</string>
+    <string name="privacy_lock_use_password">Use password</string>
+    <string name="privacy_lock_use_pattern">Use pattern</string>
+    <string name="privacy_lock_secret_title_pin">Enter your PIN</string>
+    <string name="privacy_lock_secret_title_password">Enter your password</string>
+    <string name="privacy_lock_secret_title_pattern">Draw your pattern</string>
+    <string name="privacy_lock_secret_wrong">That is not it. Try again.</string>
+    <string name="privacy_lock_secret_wait">Too many wrong tries. Try again in %1$s.</string>
+    <string name="privacy_lock_secret_use_fingerprint">Fingerprint</string>
+    <string name="privacy_lock_secret_forgot">Forgot?</string>
+    <string name="privacy_lock_setup_title_pin">Choose a PIN</string>
+    <string name="privacy_lock_setup_title_password">Choose a password</string>
+    <string name="privacy_lock_setup_title_pattern">Draw a pattern</string>
+    <string name="privacy_lock_setup_confirm_pin">Enter the PIN again</string>
+    <string name="privacy_lock_setup_confirm_password">Enter the password again</string>
+    <string name="privacy_lock_setup_confirm_pattern">Draw the pattern again</string>
+    <string name="privacy_lock_setup_hint_pin">4 to 16 digits</string>
+    <string name="privacy_lock_setup_hint_password">At least 4 characters</string>
+    <string name="privacy_lock_setup_hint_pattern">Join at least 4 dots</string>
+    <string name="privacy_lock_setup_mismatch">The two did not match. Start again.</string>
+    <string name="privacy_lock_pattern_description">Drag across the dots to join them</string>
+
+    <string name="privacy_lock_threat_info">The lock hides these screens inside this app. It does not encrypt them. A settings export, the Android backup, a computer with USB debugging on and a rooted phone all still read the same data.</string>
+
+    <!-- ================================================================== -->
+    <!-- Permissions: every permission the app can hold, in one place.      -->
+    <!-- ================================================================== -->
+
+    <string name="privacy_permissions_biometric_title">Fingerprint</string>
+    <string name="privacy_permissions_biometric_subtitle">Ask the system to check a fingerprint for the lock in Privacy. The app never sees the fingerprint itself</string>
+    <string name="privacy_permissions_clock_ring_title">Ring alarms</string>
+    <string name="privacy_permissions_clock_ring_subtitle">Keep an alarm or a timer sounding while it rings, and the phone awake for that time. Only after you set one in the clock tool</string>
+
+    <string name="privacy_permissions_title">Permissions</string>
+    <string name="privacy_permissions_subtitle">See what the keyboard can reach, and give or take back a permission</string>
+
+    <string name="privacy_permissions_intro_info">The keyboard works without all of these permissions. Each one unlocks one optional feature. Press a row to give the permission. Press a granted row to open the system settings, where you can take it back.</string>
+
+    <string name="privacy_permissions_runtime_group_title">Permissions</string>
+    <string name="privacy_permissions_special_group_title">Special access</string>
+    <string name="privacy_permissions_install_group_title">Included with the app</string>
+
+    <!-- State of one permission, shown at the right edge of its row. -->
+    <string name="privacy_permissions_status_granted">Granted</string>
+    <string name="privacy_permissions_status_not_granted">Not granted</string>
+    <!-- Android gives these permissions to the app when you install it. -->
+    <string name="privacy_permissions_status_install">Automatic</string>
+
+    <string name="privacy_permissions_mic_title">Microphone</string>
+    <string name="privacy_permissions_mic_subtitle">Dictate text with the voice input tool</string>
+
+    <string name="privacy_permissions_camera_title">Camera</string>
+    <string name="privacy_permissions_camera_subtitle">Take a photo with the camera tool and send it into the chat</string>
+
+    <string name="privacy_permissions_contacts_title">Contacts</string>
+    <string name="privacy_permissions_contacts_subtitle">Suggest the names and the email addresses of your contacts while you type</string>
+
+    <string name="privacy_permissions_location_title">Location</string>
+    <string name="privacy_permissions_location_subtitle">The location tool reads your position once when you tap, to share it or to set the weather location</string>
+    <string name="privacy_permissions_calendar_title">Calendar</string>
+    <string name="privacy_permissions_calendar_subtitle">The calendar tool lists the events of your day</string>
+    <string name="privacy_permissions_calendar_write_title">Change calendar events</string>
+    <string name="privacy_permissions_calendar_write_subtitle">The calendar tool saves, changes and deletes the events you edit, and the AI adds events when you set it to</string>
+
+    <string name="privacy_permissions_images_title">Photos and images</string>
+    <string name="privacy_permissions_images_subtitle">Show your new screenshots in the clipboard</string>
+
+    <string name="privacy_permissions_storage_title">Storage</string>
+    <string name="privacy_permissions_storage_subtitle">Save images from the keyboard to your gallery</string>
+
+    <string name="privacy_permissions_notifications_title">Notification access</string>
+    <string name="privacy_permissions_notifications_subtitle">Media controls on the keyboard, and one-time codes from your notifications</string>
+
+    <string name="privacy_permissions_usage_title">Usage access</string>
+    <string name="privacy_permissions_usage_subtitle">Show which app a clipboard entry was copied from</string>
+
+    <string name="privacy_permissions_all_files_title">All files access</string>
+    <string name="privacy_permissions_all_files_subtitle">The file manager tools open to pick a file inside the keyboard</string>
+    <string name="privacy_permissions_overlay_title">Display over other apps</string>
+    <string name="privacy_permissions_overlay_subtitle">The floating buttons that open the keyboard and the AI chat</string>
+    <string name="privacy_permissions_exact_alarms_title">Alarms and reminders</string>
+    <string name="privacy_permissions_exact_alarms_subtitle">Clock tool alarms and timers ring at the exact minute</string>
+    <string name="privacy_permissions_full_screen_title">Full-screen notifications</string>
+    <string name="privacy_permissions_full_screen_subtitle">A ringing clock alarm shows its screen over the lock screen</string>
+
+    <string name="privacy_permissions_accessibility_title">Accessibility service</string>
+    <string name="privacy_permissions_accessibility_subtitle">Keep the keyboard gestures while TalkBack is on</string>
+    <string name="privacy_permissions_screen_content_title">Accessibility service for the AI button</string>
+    <string name="privacy_permissions_screen_content_subtitle">Let the floating AI button read the screen when you press it</string>
+    <string name="privacy_permissions_split_screen_title">Accessibility service for split screen</string>
+    <string name="privacy_permissions_split_screen_subtitle">Let the app launcher press Android\'s split screen switch</string>
+
+    <!-- Direct-download builds only. The keyboard can install a new version of itself. -->
+    <string name="privacy_permissions_install_updates_title">Install updates</string>
+    <string name="privacy_permissions_install_updates_subtitle">Install a new version of this app that you downloaded from its release page</string>
+
+    <string name="privacy_permissions_internet_title">Internet</string>
+    <string name="privacy_permissions_internet_subtitle">Only the network tools use it: translate, weather, search, GIFs, stickers, dictionary and the AI tools</string>
+
+    <string name="privacy_permissions_network_state_title">Network state</string>
+    <string name="privacy_permissions_network_state_subtitle">The model downloads first check that the connection is not metered</string>
+
+    <string name="privacy_permissions_vibrate_title">Vibration</string>
+    <string name="privacy_permissions_vibrate_subtitle">Haptic feedback when you press a key</string>
+
+    <!-- Caption at the end of the Permissions screen. -->
+    <string name="privacy_permissions_footer_info">Android gives the permissions in the last group to every app at the install. An app cannot ask for them, and cannot give them back. You can take every other permission back at any time in the system settings. The feature that uses it then stops, and the rest of the keyboard keeps working.</string>
+
+</resources>

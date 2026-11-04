@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ==================================================================
+         Keyboard modes: the list of modes, with the switch that decides
+         where a drag on the keyboard is saved.
+         ================================================================== -->
+    <string name="modes_intro_body">A mode is a group of overrides: the emoji row, the pinned tools and the symbol sets. A mode turns on automatically for the apps or the field types you select, for example password boxes and email boxes. You can also turn a mode on by hand from the Modes tool on the keyboard.</string>
+    <string name="modes_group_title">Modes</string>
+    <string name="modes_enabled_title">Use modes</string>
+    <string name="modes_enabled_subtitle">Let apps and field types switch the keyboard setup</string>
+    <string name="modes_enabled_info">Modes are off by default. When they are on, the keyboard changes its emoji row, its pinned tools and its symbol sets to match the app or the field you are typing in. Turn this off to use one setup everywhere. Your modes are kept, so turning it back on restores all of them.</string>
+    <string name="modes_disabled_body">Modes are off. The keyboard uses the same setup in every app. The modes below are kept and take effect again when you turn modes back on.</string>
+    <string name="modes_new_title">New mode</string>
+    <string name="modes_rearrange_group_title">Rearrange tools</string>
+    <string name="modes_drag_edits_title">Drags edit the active mode</string>
+    <string name="modes_drag_edits_subtitle">The keyboard saves a drag into the mode that is on</string>
+    <string name="modes_drag_edits_info">A mode that has its own pinned tools or toolbox order wins over the global lists while the mode is active. With this setting on, the keyboard writes the new tool order back into that mode. The change stays where you made it, and the apps on a different mode keep their own arrangement. With this setting off, a drag always changes the global order, and the list of the mode continues to override it.</string>
+    <string name="modes_tool_order_body">The tool order can be different in each app. The mode that matches an app decides the order you see there.</string>
+    <!-- Content description of the button that deletes a mode, and the label
+         of the delete button at the end of the mode editor. -->
+    <string name="modes_delete_action">Delete mode</string>
+    <!-- Row at the foot of the mode list, shown only while one or more of the
+         shipped modes is missing from it. -->
+    <string name="modes_restore_defaults_title">Restore built-in modes</string>
+    <plurals name="modes_restore_defaults_subtitle">
+        <item quantity="one">Brings back %1$s. Your own modes stay as they are</item>
+        <item quantity="other">Brings back %1$s. Your own modes stay as they are</item>
+    </plurals>
+    <!-- The switch on a mode's row and at the top of its editor: the mode's
+         own on/off, kept apart from deleting it (#152). -->
+    <string name="modes_use_title">Use this mode</string>
+    <string name="modes_use_subtitle">Off, the mode never turns on and the Modes tool does not show it</string>
+    <string name="modes_use_info">Turn this off to stop a mode without deleting it. Its apps, field types, hints and overrides are kept, and the mode comes back as it was when you turn it on again.</string>
+    <!-- Content description of the switch on a mode's row. %1$s is the mode's name. -->
+    <string name="modes_use_action">Use %1$s</string>
+    <!-- Subtitle of a mode's row while its switch is off. -->
+    <string name="modes_row_off_subtitle">Off. Its setup is kept</string>
+
+    <!-- ==================================================================
+         Mode editor: the name and the icon of one mode.
+         ================================================================== -->
+    <!-- The name a mode gets when the user makes one. The user can change it. -->
+    <string name="modes_new_default_name">New mode</string>
+    <!-- The name a mode falls back to when the user clears the name field. -->
+    <string name="modes_unnamed_name">Mode</string>
+    <string name="modes_name_label">Name</string>
+    <string name="modes_name_hint">The Modes tool shows this name</string>
+    <string name="modes_icon_title">Icon</string>
+    <string name="modes_icon_subtitle">The Modes tool shows this icon beside the name</string>
+
+    <!-- ==================================================================
+         Mode editor: what one mode overrides while it is active.
+         ================================================================== -->
+    <string name="modes_changes_group_title">What this mode changes</string>
+    <!-- The option that keeps the global setting: the mode changes nothing here. -->
+    <string name="modes_inherit_label">Inherit</string>
+    <!-- What "Inherit" does: the mode does not change this setting. -->
+    <string name="modes_inherit_desc">Keeps the setting that applies outside this mode</string>
+    <!-- Subtitle shared by the settings that only apply while the mode runs. -->
+    <string name="modes_active_subtitle">While this mode is active</string>
+    <string name="modes_emoji_row_title">Emoji row</string>
+    <!-- One emoji button in place of the whole emoji row. -->
+    <string name="modes_emoji_row_button_label">Button</string>
+    <!-- The full emoji row. -->
+    <string name="modes_emoji_row_row_label">Row</string>
+    <!-- One line under each option in a mode's emoji row picker. -->
+    <string name="modes_emoji_row_inherit_desc">Follow the setting in Emoji</string>
+    <string name="modes_emoji_row_off_desc">No emoji row while this mode is active</string>
+    <string name="modes_emoji_row_button_desc">A button on the toolbar opens the row</string>
+    <string name="modes_emoji_row_row_desc">The row stays above the keys</string>
+    <string name="modes_symbol_row_title">Symbol row</string>
+    <string name="modes_theme_title">Theme</string>
+    <string name="modes_theme_inherit_subtitle">Inherit the theme that is set</string>
+    <string name="modes_theme_override_body">While this mode is active, the keyboard uses this theme. It replaces the theme you set elsewhere, and it also replaces an automatic light and dark pair for the time the mode runs. The mode does not change your own choice. Your theme comes back when the mode ends.</string>
+    <string name="modes_pinned_tools_title">Custom pinned tools</string>
+    <string name="modes_pinned_tools_subtitle">Change the pinned tools of the toolbar while this mode is active</string>
+    <string name="modes_pinned_behaviour_title">Pinned tools behaviour</string>
+    <string name="modes_pinned_behaviour_append_subtitle">The keyboard adds these tools after the tools you pinned yourself</string>
+    <string name="modes_pinned_behaviour_replace_subtitle">Only these tools are pinned while this mode is active</string>
+    <!-- Option: keep the tools the user pinned and add the tools of the mode. -->
+    <string name="modes_pinned_behaviour_append_label">Add to mine</string>
+    <!-- Option: the tools of the mode take the place of the tools the user pinned. -->
+    <string name="modes_pinned_behaviour_replace_label">Replace mine</string>
+    <!-- One line under each option in the pinned tools picker. -->
+    <string name="modes_pinned_behaviour_append_desc">The keyboard adds these tools after the tools you pinned yourself</string>
+    <string name="modes_pinned_behaviour_replace_desc">Only these tools are pinned while this mode is active</string>
+    <!-- Reorder dialog titles carry the mode's name so the user always sees
+         which mode's arrangement they are changing. %1$s is that name. -->
+    <string name="modes_toolbox_order_title">Custom toolbox order</string>
+    <string name="modes_toolbox_order_subtitle">Move the tools of this mode to the front of the toolbox panel</string>
+    <string name="modes_toolbox_order_body">The tools you select come first in the toolbox. The other tools keep their usual place behind them.</string>
+    <string name="modes_symbol_sets_title">Custom symbol sets</string>
+    <string name="modes_symbol_sets_subtitle">The symbol row shows only the sets of this mode while it is active</string>
+    <string name="modes_symbol_set_order_body">The row opens on the first set in the order.</string>
+
+    <!-- ==================================================================
+         Mode editor: when the mode turns on by itself.
+         ================================================================== -->
+    <string name="modes_auto_group_title">Turn on automatically for</string>
+    <string name="modes_field_types_title">Field types</string>
+    <string name="modes_auto_both_match_body">Both conditions must match. This mode turns on only for these field types in the apps in the list below.</string>
+    <string name="modes_auto_all_match_body">All the conditions you set must match: the field type, the hint text and the app.</string>
+    <string name="modes_exclude_app_title">Not in these apps</string>
+    <string name="modes_exclude_app_subtitle">This mode stays off in them, whatever else matches</string>
+    <string name="modes_group_browser">Any browser</string>
+    <string name="modes_group_terminal">Any terminal</string>
+    <string name="modes_group_messenger">Any messenger or social app</string>
+    <string name="modes_group_mail">Any mail app</string>
+    <string name="modes_group_subtitle">Counts like an app in the list, including apps installed later</string>
+    <string name="modes_condition_any">Any</string>
+    <string name="modes_orientation_title">Screen direction</string>
+    <string name="modes_orientation_portrait">Upright</string>
+    <string name="modes_orientation_landscape">Sideways</string>
+    <string name="modes_screen_size_title">Screen size</string>
+    <string name="modes_screen_size_info">A foldable counts as a tablet while it is open and as a phone while it is shut.</string>
+    <string name="modes_screen_size_phone">Phone</string>
+    <string name="modes_screen_size_tablet">Tablet</string>
+    <string name="modes_one_handed_title">One-handed mode</string>
+    <string name="modes_one_handed_on">On</string>
+    <string name="modes_one_handed_off">Off</string>
+    <string name="modes_bluetooth_title">Bluetooth audio</string>
+    <string name="modes_bluetooth_on">Connected</string>
+    <string name="modes_bluetooth_off">Not connected</string>
+    <string name="modes_bluetooth_names_title">Bluetooth device names</string>
+    <string name="modes_bluetooth_names_subtitle">Only with a device connected whose name holds one of these, separated by commas</string>
+    <string name="modes_field_names_title">Field names</string>
+    <string name="modes_field_names_subtitle">Only in a field whose name holds one of these, or whose id number is one. Few apps name their fields</string>
+    <string name="modes_field_languages_title">Field languages</string>
+    <string name="modes_field_languages_subtitle">Only in a field that asks for one of these language codes, such as ja or de</string>
+    <string name="modes_field_empty_title">Text in the field</string>
+    <string name="modes_field_empty_on">Empty</string>
+    <string name="modes_field_empty_off">Not empty</string>
+    <string name="modes_text_starts_title">Text starts with</string>
+    <string name="modes_text_starts_subtitle">Only while the field starts with one of these, such as /, $ or &gt;</string>
+    <string name="modes_one_handed_override_title">Use one-handed mode</string>
+    <string name="modes_one_handed_left">Left</string>
+    <string name="modes_one_handed_right">Right</string>
+    <string name="modes_snippets_title">Snippet triggers</string>
+    <string name="modes_snippets_info">Off, typing a trigger expands nothing in this mode. The Snippets tool still inserts them.</string>
+    <string name="modes_number_row_title">Number row</string>
+    <string name="modes_key_height_title">Key height</string>
+    <string name="modes_key_preview_title">Key preview</string>
+    <string name="modes_long_press_title">Long-press delay</string>
+    <string name="modes_clipboard_chip_title">Copied text chip</string>
+    <string name="modes_key_swipes_title">Key swipes</string>
+    <string name="modes_languages_title">Languages</string>
+    <string name="modes_languages_subtitle">Which of your languages count in this mode, by code, such as en or bn</string>
+    <string name="modes_voice_languages_title">Voice typing languages</string>
+    <string name="modes_voice_languages_subtitle">What dictation listens for in this mode, by code, such as en or bn</string>
+    <string name="modes_hardware_keyboard_title">Hardware keyboard</string>
+    <string name="modes_hardware_keyboard_on">Attached</string>
+    <string name="modes_hardware_keyboard_off">Not attached</string>
+    <string name="modes_time_title">Time of day</string>
+    <string name="modes_time_subtitle">Only between two times. Checked each time you tap a text box</string>
+    <string name="modes_time_from">From</string>
+    <string name="modes_time_to">To</string>
+    <string name="modes_priority_title">Priority</string>
+    <string name="modes_priority_info">When several modes match a field, the highest priority wins. Among equals, a mode with field hints beats one with field types, which beats one with only apps, and then the order in the list decides.</string>
+    <string name="modes_priority_low">Low</string>
+    <string name="modes_priority_normal">Normal</string>
+    <string name="modes_priority_high">High</string>
+    <string name="modes_field_hints_title">Field hints</string>
+    <!-- The "hint" is the grey placeholder text an empty field shows. -->
+    <string name="modes_field_hints_body">The grey placeholder text of the field must contain one of these words. Apps write this text in their own language, so a hint you add in one language does not match in another.</string>
+    <string name="modes_add_hint_title">Add hint</string>
+    <string name="modes_add_hint_subtitle">For example, \"Extension\" for the rename box of a file manager</string>
+    <string name="modes_hint_label">Hint text</string>
+    <string name="modes_hint_remove_desc">Remove this hint from the mode</string>
+    <string name="modes_add_app_title">Add app</string>
+    <string name="modes_add_app_subtitle_any">This mode turns on when you select a field in the app</string>
+    <string name="modes_add_app_subtitle_fields">One of the field types above must also match</string>
+    <!-- Content description of the button that takes one app off the list of
+         a mode. It does not uninstall the app. -->
+    <string name="modes_app_remove_desc">Remove this app from the mode</string>
+    <!-- "Text" here is the name of the Text field type in the list above. -->
+    <string name="modes_matching_body">If you set apps, field types and hints together, all of them must match. For example, bind a mode to your chat apps and to the Text field type. The mode then stays off the search boxes of those apps. If you set only one condition, the mode matches on that one alone. If you set none, you can turn the mode on only by hand. When more than one mode matches, a mode that names hints wins over a mode that names field types, which wins over a mode that names only apps. A password box in a code editor still gets the password mode. A mode that you select by hand from the Modes tool wins until you change apps.</string>
+
+    <!-- ==================================================================
+         Mode editor: reset a built-in mode.
+         ================================================================== -->
+    <string name="modes_reset_default_action">Reset to default</string>
+    <!-- %1$s is the name of the mode, for example "Passwords". -->
+    <string name="modes_reset_confirm_title">Reset <xliff:g id="mode_name" example="Passwords">%1$s</xliff:g> to default?</string>
+    <string name="modes_reset_confirm_body">The mode goes back to the pinned tools, the toolbox order, the symbol row, the apps and the field types that it ships with. The app deletes your changes to the mode.</string>
+
+    <!-- ==================================================================
+         The icon picker and the app picker of the mode editor.
+         ================================================================== -->
+    <string name="modes_icon_picker_title">Mode icon</string>
+    <string name="modes_app_picker_title">Select an app</string>
+
+    <!-- %1$s is the mode's name, for example "Coding". -->
+    <string name="modes_delete_confirm_title">Delete %1$s?</string>
+    <string name="modes_delete_confirm_body">The mode and everything set up inside it goes, including its apps, its pinned tools and any overrides. This cannot be undone.</string>
+
+    <string name="modes_manual_duration_title">A mode you pick by hand</string>
+    <string name="modes_manual_duration_subtitle">How long it stays on after you choose it</string>
+    <string name="modes_manual_duration_app_label">Until you change app</string>
+    <string name="modes_manual_duration_changed_label">Until you change it</string>
+    <!-- One line under each option in the picker for a mode you select by hand. -->
+    <string name="modes_manual_duration_each_app_label">Remembered for each app</string>
+    <string name="modes_manual_duration_each_app_desc">Comes back whenever you return to the app you picked it in</string>
+    <string name="modes_manual_duration_app_desc">Suits a mode that you reach for one time</string>
+    <string name="modes_manual_duration_changed_desc">Stays on until you select another mode or turn it off</string>
+    <string name="modes_manual_duration_info">This is about picking a mode yourself from the Modes tool, not about a mode that switches on for an app on its own. Until you change app is the keyboard\'s old behaviour and suits a mode you reach for once. Until you change it suits a mode you meant to stay in, and it stays on until you pick another mode or turn it off.</string>
+
+    <string name="modes_autocorrect_title">Autocorrect</string>
+    <string name="modes_autocapitalize_title">Automatic capitals</string>
+    <string name="modes_suggestions_title">Suggestions</string>
+    <string name="modes_autospace_title">Automatic spaces</string>
+    <string name="modes_autospace_subtitle">Spaces the keyboard types for you while this mode is active</string>
+    <string name="modes_autospace_info">One switch over every space the keyboard puts in without a press: after punctuation, after a suggestion you pick from the strip, and after a word you glide. Off means every space in the field is one you typed, which is what you want when you are renaming a file extension, typing a command, or filling any field where a stray space is a mistake. On turns all three on, including the space after punctuation, which is off by default everywhere else.</string>
+    <string name="modes_glide_title">Glide typing</string>
+    <string name="modes_glide_info">Off makes every tap type exactly its key: a tap that drifts across the keys can no longer start a swipe. With autocorrect, suggestions and automatic spaces off too, this is a peck mode for codes, handles, slang and anything else the keyboard would try to fix.</string>
+    <string name="modes_commit_as_typed_title">Commit every key</string>
+    <string name="modes_commit_as_typed_info">On sends each key to the field the moment you press it, with no word held back. For terminals and code editors that show a word late. There is then no word for the strip to complete or autocorrect to fix.</string>
+    <string name="modes_incognito_title">Incognito</string>
+    <string name="modes_incognito_info">On turns incognito on while this mode is active, with whatever you have set it to pause. It can\'t turn off incognito you switched on yourself.</string>
+    <string name="modes_key_sound_title">Key sound</string>
+    <string name="modes_key_sound_info">Key-press sound while this mode is active, whatever the global switch says.</string>
+    <string name="modes_key_haptics_title">Key vibration</string>
+    <string name="modes_key_haptics_info">Key-press vibration while this mode is active, whatever the global switch says.</string>
+    <string name="modes_enter_newline_title">Enter types a line break</string>
+    <string name="modes_enter_newline_info">On makes Enter a line break in every field this mode covers, even where the app labels it Done or Send. Hold the key for the app\'s own action.</string>
+    <string name="modes_two_thumb_title">Two-thumb typing</string>
+    <string name="modes_two_thumb_info">Off types each swipe as a word of its own, and a pause no longer ends a tapped word with a space you did not press. A word you are in the middle of is typed as it stands when the mode turns this off.</string>
+    <string name="modes_layout_title">Layout</string>
+    <string name="modes_layout_subtitle">Which layout this mode types on</string>
+    <string name="modes_layout_info">The mode wears this layout while it is on, whichever layout you were using before. Your own layout comes back when the mode ends, and the spacebar swipe order is not changed. Only layouts you have switched on are offered here; if you later switch one off, a mode that used it goes back to inheriting.</string>
+</resources>

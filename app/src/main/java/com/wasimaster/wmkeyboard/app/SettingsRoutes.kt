@@ -1,0 +1,294 @@
+package com.wasimaster.wmkeyboard.app
+
+/**
+ * Every settings screen a link may open, written exactly as the NavHost
+ * declares it.
+ *
+ * The nav graph is the only place that knows what a route means, and it is a
+ * list of `composable("…")` calls a hundred entries long inside a composable
+ * that nothing outside the file can call. A link arriving from another app —
+ * or from `adb`, or from a page on the documentation site — has to be checked
+ * against that list *before* it reaches `navigate()`, because an unmatched
+ * route is not a no-op there: `NavController.navigate` throws
+ * `IllegalArgumentException`, and the throw lands in the activity that has
+ * just been resumed. So this is the allowlist, and [SettingsDeepLinkTest]
+ * reads both this file and `MainActivity.kt` and fails when they drift.
+ *
+ * Patterns are the NavHost's own, `{arg}` segments included. A link fills
+ * those segments in: `language/{langId}` is addressed as
+ * `wmkeyboard://settings/language/en_US`, and the segment travels into the
+ * route untouched, still percent-encoded, because that is the form
+ * `navigate()` decodes from.
+ *
+ * ### What is deliberately not addressable
+ *
+ * [excluded] holds the handful of destinations a link must not open, each with
+ * the reason. They are listed rather than simply left out so that a screen
+ * added later cannot be forgotten: the test fails on a destination that is in
+ * neither table.
+ */
+internal object SettingsRoutes {
+
+    /**
+     * Destinations no link may open, and why.
+     *
+     * None of these are private — the fingerprint lock is what guards private
+     * screens, and it guards them by route, so it covers a deep link exactly
+     * as it covers a tap. These three simply have nowhere to land.
+     */
+    val excluded: Map<String, String> = mapOf(
+        // The activity already refuses every pending navigation until
+        // onboarding is done, so a link here could only ever restart a wizard
+        // the user has finished. Replaying it is a row on About.
+        "onboarding" to "the first-run wizard; replayed from About, never from a link",
+        // Draws from StickerEditHandoff, an in-memory handover set one line
+        // before the navigation that opens it. Reached cold it pops straight
+        // back out.
+        "sticker_editor" to "opens only on an in-memory handoff from the import flow",
+        // Same shape: PhotoSelection.current is set by the browse screen as it
+        // navigates, and the screen pops itself when it is null.
+        "photo_detail" to "opens only on the photo the browse screen just handed over",
+        // The route carries a pack key, and the screen asks Signal's servers
+        // for the pack as it opens. Both belong behind a link the user pasted
+        // or a row they pressed, where the link importer's confirm or the
+        // pack list stands in front of it.
+        "signal_pack/{packId}/{packKey}" to "opens on a pack the user picked or pasted; see AddonDeepLink",
+        // Same shape: asks Telegram, with the user's bot token, for the set as
+        // it opens.
+        "telegram_pack/{setName}" to "opens on a set the user picked or pasted; see AddonDeepLink",
+        // Asks GitHub for the Rboard list as it opens. A request to a third
+        // party belongs behind a button the user pressed on the Themes screen,
+        // not behind a link another app can fire.
+        "rboard_themes" to "fetches the Rboard list as it opens; reached from the Themes screen's Gboard button",
+    )
+
+    /**
+     * Every addressable destination, as the NavHost declares it.
+     *
+     * Order is the nav graph's, so the two files can be read side by side.
+     * Matching does not depend on it — [byDepth] sorts patterns so that a
+     * literal segment always beats an `{arg}` that would also accept it.
+     */
+    val all: List<String> = listOf(
+        "home",
+        "search",
+        "typing",
+        "typing/corrections",
+        "typing/writing",
+        "typing/suggestions",
+        "typing/autopilot",
+        "typing/octopus",
+        "typing/chips",
+        "typing/codes",
+        "typing/gestures",
+        "typing/gestures/glide",
+        "typing/gestures/glide/checkup",
+        "typing/gestures/spacebar",
+        "typing/gestures/flicks",
+        "typing/hardware",
+        "keypress",
+        "keypress/haptics",
+        "keypress/popup",
+        "keypress/shortcuts",
+        "dictionary",
+        "backup",
+        "backup/auto",
+        "backup/sync",
+        "backup/contents",
+        "customdictionaries",
+        "emojicategories",
+        "emojiorder/{category}",
+        "emojiadded",
+        "emojikeywords",
+        "blacklist",
+        "learnedcorrections",
+        "musicapps",
+        "launchercombos",
+        "kdeconnect/devices",
+        "send/instances",
+        "send/history",
+        "phoneformats",
+        "cliprules",
+        "hwshortcuts",
+        "appearance",
+        "appearance/toolbar",
+        "appearance/toolbox",
+        "layout",
+        "layout/size",
+        "layout/onehanded",
+        "fonts",
+        "fonts/{script}",
+        "icons",
+        "themes",
+        "theme_edit/{themeId}",
+        "theme_assets/{themeId}",
+        "photos",
+        "photo_browse",
+        "photo_library",
+        "photo_rotation",
+        "keymaps",
+        "sticker_packs",
+        "signal_stickers",
+        "whatsapp_stickers",
+        "telegram_stickers",
+        "sticker_generator",
+        "vocab/packs",
+        "vocab/lists",
+        "vocab/list/{packId}",
+        "vocab/review",
+        "vocab/browse",
+        "vocab/word/{packId}/{word}",
+        "clock",
+        "music/history",
+        "homeassistant/entities",
+        "notes",
+        "notes/edit/{noteId}",
+        "notes/tags",
+        "notes/trash",
+        "todo",
+        "plugins",
+        "plugin/{pluginId}",
+        "plugin_ide",
+        "plugin_ide/{draftId}",
+        "addons",
+        "addon_repo/{repoUrl}",
+        "addon/{repoUrl}/{addonId}",
+        "sticker_pack/{packId}",
+        "sticker_pack/{packId}/add",
+        "keymap_edit/{layoutId}",
+        "keymap_json/{layoutId}",
+        "panel_edit/{panel}",
+        "panel_json/{panel}",
+        "languages",
+        "add_language",
+        "language/{langId}",
+        "language/{langId}/more",
+        "double_pinyin_custom",
+        "emoji",
+        "emoji/panel",
+        "emoji/mixes",
+        "kaomoji",
+        "kaomoji/faces",
+        "kaomoji/tags",
+        "voice",
+        "clipboard",
+        "clipboard/history",
+        "clipboard/chips",
+        "clipboard/rules",
+        "expander",
+        "expander/folder/{folderId}",
+        "expander/folder/{folderId}/new",
+        "expander/edit/{snippetId}",
+        "ai",
+        "tools",
+        "tool/{toolName}",
+        "provider/{tool}/{key}",
+        "accessibility",
+        "privacy",
+        "permissions",
+        "automation",
+        "network_activity",
+        "applock",
+        "datasaver",
+        "servers",
+        "notifications",
+        "selection_macros",
+        "selection_macros/actions",
+        "selection_macros/icons",
+        "selection_macros/ai",
+        "selection_macros/zones",
+        "advanced",
+        "extensions",
+        "extension/{extension}",
+        "floating_button",
+        "share_sheet",
+        "rows",
+        "rows/symbol",
+        "ai_actions",
+        "ai_reply_tones",
+        "ai_history",
+        "ai_memory",
+        "ai_chat",
+        "ai_chat/{conversationId}",
+        "settings_assistant",
+        "ai_action_edit/{actionId}",
+        "ai_tools",
+        "ai_mcp",
+        "ai_mcp_edit/{serverId}",
+        "symbol_set_edit/{setId}",
+        "modes",
+        "mode_edit/{modeId}",
+        "about",
+        "egg_game",
+        "storage",
+        "storage/{category}",
+        "feature_libraries",
+        "import_hub",
+        "statistics",
+        "debug_log",
+        "licenses",
+        "supporters",
+        "license_text/{asset}",
+    )
+
+    /** The patterns that take no argument: the plain screens, in graph order. */
+    val plain: List<String> = all.filterNot { it.contains('{') }
+
+    /**
+     * Matching order: fewest `{arg}` segments first.
+     *
+     * Nothing in the graph is ambiguous today — no screen has both a literal
+     * and an argument at the same depth under the same parent — but a pattern
+     * added later could be, and swallowing `storage/photos` into
+     * `storage/{category}` when a literal `storage/photos` exists would be a
+     * bug nobody sees until a link goes to the wrong page.
+     */
+    private val byDepth: List<List<String>> =
+        all.sortedBy { pattern -> pattern.count { it == '{' } }
+            .map { it.split('/') }
+
+    /**
+     * The route a link path names, or null when it names no screen.
+     *
+     * [path] is the raw, still-encoded path of a `wmkeyboard://settings/…`
+     * link with its leading and trailing slashes trimmed. The returned route
+     * carries the graph's own spelling for every literal segment — so a link
+     * may shout `THEMES` and still land on `themes` — and the link's own text
+     * for every argument, whose case and encoding are the caller's to decide.
+     */
+    fun resolve(path: String?): String? = match(path)?.second
+
+    /**
+     * The pattern in [all] that [route] fills in, such as `mode_edit/{modeId}`
+     * for `mode_edit/mode_browser`, or null when it names no screen. A plain
+     * screen is its own pattern.
+     */
+    fun patternOf(route: String?): String? = match(route)?.first
+
+    /** The matching pattern and the route it resolves to, or null. */
+    private fun match(path: String?): Pair<String, String>? {
+        val segments = path.orEmpty().trim('/').split('/')
+        if (segments.isEmpty() || segments.any { it.isEmpty() }) return null
+        // "." and ".." mean something to a URI resolver and nothing to the nav
+        // graph, so a link carrying either is refused rather than flattened.
+        if (segments.any { it == "." || it == ".." }) return null
+        for (pattern in byDepth) {
+            if (pattern.size != segments.size) continue
+            val filled = ArrayList<String>(pattern.size)
+            var matched = true
+            for (i in pattern.indices) {
+                val part = pattern[i]
+                if (part.startsWith("{")) {
+                    filled += segments[i]
+                } else if (part.equals(segments[i], ignoreCase = true)) {
+                    filled += part
+                } else {
+                    matched = false
+                    break
+                }
+            }
+            if (matched) return pattern.joinToString("/") to filled.joinToString("/")
+        }
+        return null
+    }
+}

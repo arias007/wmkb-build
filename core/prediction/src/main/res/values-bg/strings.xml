@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">Сървърът не изпрати файла. Кодът на грешката е HTTP %1$s.</string>
+    <string name="core_pred_wordlist_malformed_error">Този списък с думи е празен или нечетлив.</string>
+    <string name="core_pred_wordlist_memory_error">Това устройство няма достатъчно памет за списък с думи с такъв размер. Изберете по-малък размер.</string>
+    <string name="core_pred_wordlist_no_space_error">Няма достатъчно място за съхранение на вашето устройство. Изтрийте някои файлове и опитайте отново.</string>
+    <string name="core_pred_wordlist_save_error">Приложението не може да запише списъка с думи. Опитайте отново.</string>
+    <string name="core_pred_wordlist_size_all_label">Всичко</string>
+    <string name="core_pred_wordlist_size_large_label">Голям</string>
+    <string name="core_pred_wordlist_size_medium_label">Средно</string>
+    <string name="core_pred_wordlist_size_small_label">Малък</string>
+    <string name="core_pred_wordlist_source_aosp_detail">Подбраният списък, който използва собствената клавиатура на Android. По-малко думи, с по-малко имена и печатни грешки сред тях.</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">Преброени от субтитри и уеб текст. Много повече думи, включително имена, жаргон и печатни грешки.</string>
+    <string name="core_pred_wordlist_source_frequency_label">Честота</string>
+    <string name="core_pred_wordlist_variant_australia_label">Австралия</string>
+    <string name="core_pred_wordlist_variant_brazil_label">Бразилия</string>
+    <string name="core_pred_wordlist_variant_canada_label">Канада</string>
+    <string name="core_pred_wordlist_variant_europe_label">Европа</string>
+    <string name="core_pred_wordlist_variant_uk_label">Обединено кралство</string>
+    <string name="core_pred_wordlist_variant_us_label">Съединени щати</string>
+</resources>

@@ -1,0 +1,100 @@
+---
+title: "Keyman layouts"
+description: "862 key grids converted from the Keyman keyboards repository, covering languages nothing else on Android has a layout for."
+sidebar:
+  order: 10
+---
+
+import SettingsPath from '@components/SettingsPath.astro';
+import KeyCap from '@components/KeyCap.astro';
+import LayoutExplorer from '@components/LayoutExplorer.astro';
+import khmer from '../../../../../app/src/main/assets/layouts/kmn_khmer_angkor.wmlayout.json';
+
+862 of the layouts in WM Keyboard started life as [Keyman](https://keyman.com/) keyboards. That's where most of the language catalogue's long tail comes from: Adyghe, Hatran, Osage, Cypro-Minoan, and several hundred more that no other Android keyboard ships a layout for.
+
+They behave like any other layout once enabled. Each appears under its language in <SettingsPath path="Languages & layouts" />, is editable in the layout editor, and exports as a file like any other. Before that, most sit behind a **More layouts** card at the end of the language's row of layout cards, so its own layouts stay up front.
+
+A Keyman keyboard for a language the keyboard already has, in the same script, sits with that language rather than as a second entry for it. The Indic romanization keyboard Keyman files under "Hindi (Latin)" is with Hinglish, the Brazilian Portuguese ones with Portuguese, the Canadian French ones with French, and so on for about forty of them. A language you had turned on under the old name is the same language now.
+
+<LayoutExplorer layout={khmer} />
+
+That's Khmer Angkor, rendered from the same layout data the app ships.
+
+## Where they come from
+
+[Keyman](https://github.com/keymanapp/keyboards) is an SIL Global project. Its repository holds around 930 keyboards, most of them for minority and historical languages, and the release-quality ones are MIT licensed. Every keyboard used here is credited by name and copyright holder in <SettingsPath path="About / Open-source licences / Keyman keyboard layouts" />.
+
+WM Keyboard isn't affiliated with SIL Global or the Keyman project. We converted the key grids with our own code; these aren't the upstream files.
+
+## What converts, and what doesn't
+
+A Keyman keyboard is two things: the visual key grid, and a set of rules that decide what each keypress actually types. **Only the grid is converted.** The rules are downloaded separately, which the next section covers.
+
+What comes across:
+
+- Every layer the keyboard defines. Besides letters, numbers and symbols that includes right-Alt pages, caps pages and the pages some keyboards keep for one consonant's vowel forms, which open from the keys that lead to them, just as in Keyman.
+- The shift and caps pages as their author drew them. Shift and caps lock work the way they do on every other layout here (one tap for one shifted key, a double tap to lock), and while shift is on you see and type the keyboard's own shift page, long presses and all.
+- Long-press alternates and flicks, each typing through the keyboard's rules the way it does in Keyman, not just the character on its label.
+- Keys that exist for the rules to act on, such as the vowel keys of the GFF Ethiopic keyboards, which turn the consonant before them into a syllable.
+- Multi-tap keys, where tapping a key again swaps what it just typed for the next character in its cycle. Each tap in the cycle goes through the keyboard's rules as if it were the first thing typed after the text before the cycle began, which is what Keyman does too. The GFF and GeezWord Ethiopic keyboards use this heavily. A tap continues the cycle when it's the same key within a second of the last one. Any other key, or a pause, starts over.
+
+What doesn't:
+
+- **Multi-tap on page keys.** A few keyboards let you tap the <KeyCap>123</KeyCap> key again to go on to a symbols or currency page. In Keyman the next tap counts as the same key even though the first tap already changed the page under your finger. Here it's whatever key is on the new page, so these keys only switch to their first page.
+- **Multi-tap on keys that switch pages as they type.** For the same reason, a cycle stops after the first tap when that tap changes the page, for example a key on the shift page, which drops shift again. Tapping again types that page's key.
+- **Flicks.** Keyman's eight flick directions all come across, the diagonals included, since WM Keyboard's [flick keys](/typing/gestures/#flick-keys) have eight directions too. A flick whose direction isn't one of the eight compass points is dropped and counted rather than guessed at, because typing the wrong character is worse than the gesture doing nothing. Keyboards converted before the diagonals existed were not re-run, so a few of the shipped ones still carry only their four edge flicks.
+- **Fonts.** Keyman packages ship their own. WM Keyboard uses [its own font system](/themes/fonts/) instead, which already covers these scripts.
+
+## Typing rules
+
+This is the part worth understanding before you enable one of these layouts.
+
+On a **positional** keyboard, each key types the character printed on it. Those work correctly with nothing extra, and that's most of the 862.
+
+On a **mnemonic** keyboard, the printed key caps and the typed output are deliberately different. A mnemonic Khmer keyboard has you press the key where `k` sits on a US layout to get ក, and a set of rules performs that mapping. Those rules aren't in the app.
+
+The rules are downloaded per keyboard, from keyman.com, when you ask for them.
+
+The grids are their own download on the GitHub and Google Play editions: about 2 MB, once, for all 862. It starts by itself when a Keyman layout is switched on. Before that, a Keyman layout's card shows a **Get Keyman layouts** button in place of its picture, and pressing it fetches them without switching anything on. Until they arrive a Keyman layout that is on draws QWERTY, and after an app update that changed the grids, the previous ones stay in use until the new ones are here. The F-Droid edition and the offline build carry the grids in the app and never make this request.
+
+<SettingsPath path="Languages & layouts / (a language)" />
+
+**When you switch a layout on, the app asks.** If that layout needs rules and doesn't have them yet, a prompt offers to fetch them there and then, which is the moment you're deciding to type in the language rather than the moment you notice the output looks wrong. Choose Not now and nothing is lost: the row is still there.
+
+The **More layouts** page shows every Keyman layout the language has as a card with a small preview of the keyboard, in your theme. Tap a card to turn that layout on or off. With more than six layouts a search box sits at the top, and once any of them is on, **All** and **On** filters show either the whole list or only the ones you use. Layouts drawn for a phone come first. Copies of a desktop keyboard, with the full number row and 13 or more keys across, come after them, since they squeeze a computer's keyboard onto a phone screen. The order never changes when you turn one on, so a card doesn't move out from under your finger.
+
+Under each card is that layout's typing rules: **Typing rules ready** once they are on the phone, or a **Get typing rules** button while they are not. The button turns red when the layout is already on without its rules, because that is the case where your typing comes out wrong. The delete button next to downloaded rules asks before it removes them. Once a Keyman layout is on, a **Typing rules for (layout name)** row also sits under the layout cards on the language's own screen, and does the same thing. Nothing is fetched until you ask.
+
+Until you do, the layout types its key caps. The grid is still right, the long-press alternates are still there, and nothing damages your text. It isn't doing the character mapping its author wrote. If you enable one of these and the output doesn't match the caps, that's this.
+
+Rules are only fetched for keyboards whose upstream licence permits it, and the downloaded file has to parse as a keyboard before it's kept.
+
+keyman.com is always asked first. If it doesn't answer, or no longer offers a keyboard, the rules come from a copy the project keeps in its [data repository](https://github.com/wasi-master/wmkeyboard-data/tree/HEAD/keyman) instead: the same files, unmodified, for the 812 bundled keyboards that have any. That copy is checked against the checksum listed beside it before it's used. It may be a version or two behind, and the next time keyman.com answers with something newer, pressing the row again replaces it.
+
+### How closely it matches Keyman
+
+On a phone, Keyman types through KeymanWeb, and that is what the rules here are checked against: random typing on each keyboard's own touch layout, keys, long presses, flicks and page changes, fed to KeymanWeb and to WM Keyboard, compared after every keystroke. Of the 811 bundled keyboards whose rules can be downloaded, 800 type exactly what KeymanWeb types. The other 11 contain rules their authors marked for Keyman on computers only, or for KeymanWeb only, and the downloadable rules are the computer version, so those keyboards type what Keyman on a computer would.
+
+One difference is on purpose. In Keyman a shift key stays down until something releases it; here shift lets go after one key, as on every other layout, unless the keyboard itself decides when shift ends.
+
+50 keyboards, most of them from the FirstVoices collection, are published without the file the rules come from, so there is nothing to download for them and they type their key caps.
+
+## Undetermined languages
+
+Five keyboards in the upstream repository declare no language at all. Rather than invent one, WM Keyboard skips them unless the script by itself identifies the language, which is how one of the IPA keyboards gets in. You can still add any of the five by importing its file, and you pick the language yourself when you do.
+
+## Importing one yourself
+
+<SettingsPath path="Layout & size / Key layouts / Import from another keyboard" />
+
+Pick a `.keyman-touch-layout` file. The app reads the grid, then shows you what the conversion did and asks which language the layout belongs to. See [Importing from other keyboards](/reference/importing-other-keyboards/) for how that dialog works.
+
+A touch layout file holds no rules, so a layout imported that way types its key caps.
+
+You can also open a **`.kmp` keyboard package** straight from a file manager. A package carries both the grid and the rules, so it's the one route that gives you a working keyboard in a single step, and it's how you'd install a keyboard that isn't in the bundled set at all. The app reads the grid out of the compiled keyboard inside the package, installs the rules alongside it, and tells you which of the two it found.
+
+A package built for desktop computers only has no on-screen keyboard in it, so there's nothing to add. The app says so rather than adding an empty layout.
+
+## Reporting a bad layout
+
+These were converted in bulk, and nobody on the project reads most of these languages. If a grid is wrong, a key is in the wrong place, or a character is missing, [open an issue](https://github.com/wasi-master/wmkeyboard/issues) and say which layout. Upstream fixes flow back in when the conversion is re-run.

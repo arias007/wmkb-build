@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">O servidor não enviou o arquivo. O código de erro é HTTP %1$s.</string>
+    <string name="core_pred_wordlist_malformed_error">Essa lista de palavras está vazia ou ilegível.</string>
+    <string name="core_pred_wordlist_memory_error">Este dispositivo não tem memória suficiente para uma lista de palavras deste tamanho. Escolha um tamanho menor.</string>
+    <string name="core_pred_wordlist_no_space_error">Não há armazenamento suficiente no seu dispositivo. Exclua alguns arquivos e tente novamente.</string>
+    <string name="core_pred_wordlist_save_error">O aplicativo não pode salvar a lista de palavras. Tente novamente.</string>
+    <string name="core_pred_wordlist_size_all_label">Tudo</string>
+    <string name="core_pred_wordlist_size_large_label">Grande</string>
+    <string name="core_pred_wordlist_size_medium_label">Médio</string>
+    <string name="core_pred_wordlist_size_small_label">Pequeno</string>
+    <string name="core_pred_wordlist_source_aosp_detail">A lista curada que o próprio teclado do Android usa. Menos palavras, com menos nomes e erros de digitação entre elas.</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">Contado a partir de legendas e textos da web. Muito mais palavras, com mais nomes, gírias e erros de digitação.</string>
+    <string name="core_pred_wordlist_source_frequency_label">Frequência</string>
+    <string name="core_pred_wordlist_variant_australia_label">Austrália</string>
+    <string name="core_pred_wordlist_variant_brazil_label">Brasil</string>
+    <string name="core_pred_wordlist_variant_canada_label">Canadá</string>
+    <string name="core_pred_wordlist_variant_europe_label">Europa</string>
+    <string name="core_pred_wordlist_variant_uk_label">Reino Unido</string>
+    <string name="core_pred_wordlist_variant_us_label">Estados Unidos</string>
+</resources>

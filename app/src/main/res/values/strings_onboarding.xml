@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- First-run onboarding wizard: the buttons that move between pages. -->
+    <string name="onboarding_finish_action">Finish</string>
+
+    <!-- Onboarding, welcome page. -->
+    <string name="onboarding_welcome_title">Welcome to WM Keyboard</string>
+    <string name="onboarding_welcome_subtitle">Two steps and you are typing.</string>
+    <!-- Shown under the setup card while the keyboard is not yet turned on and
+         selected. The Next button waits for both. -->
+    <string name="onboarding_welcome_required">Press Skip at the top to do this later.</string>
+    <!-- The welcome page's restore button, and the line under it. A restore
+         skips the rest of the wizard. -->
+    <string name="onboarding_restore_action">Restore a backup</string>
+    <string name="onboarding_restore_info">Moving from another phone or keyboard? A backup from WM Keyboard, HeliBoard, LeanType, FUTO Keyboard, FlorisBoard, CleverKeys or AnySoftKeyboard sets everything up, and the app skips the questions.</string>
+    <!-- Shown on the welcome page once a backup is restored and the keyboard
+         is still not turned on and selected. -->
+    <string name="onboarding_restored_info">Your backup is restored. Turn on the keyboard above, then press Finish.</string>
+
+    <!-- Onboarding, languages page. -->
+    <string name="onboarding_languages_title">Your languages</string>
+    <!-- %1$d is the number of languages the app has built in. -->
+    <plurals name="onboarding_languages_subtitle">
+        <item quantity="one">Add as many languages as you want. Swipe on the spacebar to change language, or press the 🌐 key. All %1$d language is built in, so add the one you need now or later in Settings, then Languages.</item>
+        <item quantity="other">Add as many languages as you want. Swipe on the spacebar to change language, or press the 🌐 key. All %1$d languages are built in, so add the ones you need now or later in Settings, then Languages.</item>
+    </plurals>
+    <string name="onboarding_language_suggested_title">Suggested for you</string>
+    <string name="onboarding_language_suggested_info">These come from the language settings and the region of your device. The app does not read what you type, and no data leaves your device.</string>
+    <!-- Says that adding a language here starts its download, because the
+         wizard adds languages without asking the download question. -->
+    <string name="onboarding_language_auto_download_info">The keyboard downloads the word list and the prediction data for each language you add here. The download runs in the background over your current connection. You can delete the data later in Settings, then Languages.</string>
+    <string name="onboarding_language_add_title">Add a language</string>
+    <string name="onboarding_language_search_hint">Search languages</string>
+    <!-- Screen reader label for the button that adds a language. %1$s is the English name of the language. -->
+    <string name="onboarding_language_add_desc">Add <xliff:g id="language" example="Bangla">%1$s</xliff:g></string>
+    <string name="onboarding_language_all_added">Every language is already in your list.</string>
+    <!-- Shown when the search finds nothing. %1$s is the text the user typed. -->
+    <string name="onboarding_language_no_match">No language matches “<xliff:g id="query" example="beng">%1$s</xliff:g>”.</string>
+    <!-- Dialog that asks which of a language's layouts to turn on, for a
+         language that has more than one. %1$s is the name of the language. -->
+    <string name="onboarding_layout_picker_title">Layouts for <xliff:g id="language" example="বাংলা · Bangla">%1$s</xliff:g></string>
+    <string name="onboarding_layout_picker_body">This language has more than one layout or input system, and most people use only one of them. Select the ones you want. You can change them later in Settings, then Languages.</string>
+    <!-- Shown when the list is cut off. %1$d is how many more languages match the search. -->
+    <plurals name="onboarding_language_more_count">
+        <item quantity="one">%1$d more language matches. Search to make the list shorter.</item>
+        <item quantity="other">%1$d more languages match. Search to make the list shorter.</item>
+    </plurals>
+
+    <!-- Onboarding, look and feel page. -->
+    <string name="onboarding_look_title">Look and feel</string>
+    <string name="onboarding_look_subtitle">Select how the keyboard looks. AMOLED is fully black for OLED screens.</string>
+    <!-- App theme choices. "Auto" follows the light or dark mode of the device. -->
+    <string name="onboarding_theme_mode_auto">Auto</string>
+    <string name="onboarding_theme_mode_light">Light</string>
+    <string name="onboarding_theme_mode_dark">Dark</string>
+    <string name="onboarding_theme_mode_amoled" translatable="false">AMOLED</string>
+    <string name="onboarding_keyboard_theme_title">Keyboard theme</string>
+    <!-- Shown under the Light/Dark tabs, which only appear for the Auto mode. -->
+    <string name="onboarding_keyboard_theme_auto_info">Select one theme for each. The keyboard changes with your device.</string>
+    <!-- Name of the Android colour system. It is a brand name. -->
+    <string name="onboarding_keyboard_theme_material_you_label" translatable="false">Material You</string>
+
+    <!-- Onboarding, typing feedback page. -->
+    <string name="onboarding_feedback_title">Typing feedback</string>
+    <string name="onboarding_feedback_subtitle">Some people want a signal for each key press. Other people want silence. The strength, the duration and the popups are in Typing settings.</string>
+    <string name="onboarding_haptics_title">Key press haptics</string>
+    <string name="onboarding_haptics_subtitle">The device vibrates on each key press</string>
+    <string name="onboarding_key_sound_title">Key press sound</string>
+    <string name="onboarding_key_sound_subtitle">The device makes a click sound on each key press</string>
+    <string name="onboarding_key_popup_title">Key popup</string>
+    <string name="onboarding_key_popup_subtitle">A bubble shows the character above the key you press</string>
+
+    <!-- Onboarding, spacebar and keys page. Each pair below is one choice for the two spacebar swipes. -->
+    <string name="onboarding_gestures_title">Spacebar and keys</string>
+    <string name="onboarding_gestures_subtitle">A sideways swipe on the spacebar is the fastest way to change language or move the text cursor. Select what it does.</string>
+    <string name="onboarding_spacebar_cursor_language_title">Cursor and language</string>
+    <string name="onboarding_spacebar_cursor_language_subtitle">A quick swipe moves the cursor. Press and hold, then swipe to change language</string>
+    <string name="onboarding_spacebar_language_cursor_title">Language and cursor</string>
+    <string name="onboarding_spacebar_language_cursor_subtitle">A quick swipe changes the language. Press and hold, then swipe to move the cursor</string>
+    <string name="onboarding_spacebar_language_only_title">Only change the language</string>
+    <string name="onboarding_spacebar_language_only_subtitle">Each swipe on the spacebar goes to your next language</string>
+    <string name="onboarding_spacebar_cursor_only_title">Only move the cursor</string>
+    <string name="onboarding_spacebar_cursor_only_subtitle">Each swipe on the spacebar moves the text cursor</string>
+    <string name="onboarding_spacebar_off_title">Nothing</string>
+    <string name="onboarding_spacebar_off_subtitle">The keyboard ignores swipes on the spacebar</string>
+    <string name="onboarding_emoji_key_title">Emoji key instead of 🌐</string>
+    <string name="onboarding_emoji_key_subtitle">The 🌐 key becomes an emoji key. This is useful when the spacebar changes the language</string>
+    <string name="onboarding_number_row_title">Number row</string>
+    <string name="onboarding_number_row_subtitle">A row of the numbers 1 to 0 above the letters</string>
+
+    <!-- Onboarding, tools page. -->
+    <string name="onboarding_tools_title">Your tools</string>
+    <string name="onboarding_tools_subtitle">The toolbox holds everything from GIFs to a calculator behind the grid button on the toolbar. Start with only the tools you use. You can turn each one on or off at any time in Tools settings.</string>
+    <!-- Button that selects the tools most people want. -->
+    <string name="onboarding_tools_recommended_action">Recommended</string>
+    <!-- Button that turns on every tool. -->
+    <string name="onboarding_tools_everything_action">Everything</string>
+
+    <!-- Onboarding, tool setup page: the first-run choices of the tools that need one. -->
+    <string name="onboarding_tool_setup_title">Set up your tools</string>
+    <string name="onboarding_tool_setup_subtitle">Some of the tools you turned on have their own choices. You can change all of them later in the settings of each tool.</string>
+    <!-- The row above the two extra-calendar rows. It has no control on it:
+         the Gregorian calendar is always there. -->
+    <string name="onboarding_calendar_gregorian_title">Gregorian calendar</string>
+    <string name="onboarding_calendar_gregorian_subtitle">The tool always shows the Gregorian date. The calendars below show next to it</string>
+    <!-- Label in place of a switch on the row above, because it cannot be turned off. -->
+    <string name="onboarding_calendar_gregorian_always">Always on</string>
+    <string name="onboarding_calendar_first_title">First extra calendar</string>
+    <string name="onboarding_calendar_first_subtitle">The month grid shows it next to the Gregorian month, and in each day cell</string>
+    <string name="onboarding_calendar_second_title">Second extra calendar</string>
+    <string name="onboarding_calendar_second_subtitle">One more calendar for the header and the day you select</string>
+    <string name="onboarding_weather_fahrenheit_title">Fahrenheit</string>
+    <string name="onboarding_weather_fahrenheit_subtitle">Turn this off to see the temperature in Celsius</string>
+    <string name="onboarding_compass_qibla_title">Show qibla</string>
+    <string name="onboarding_compass_qibla_subtitle">The compass rose marks the direction of the Kaaba</string>
+    <string name="onboarding_compass_qibla_info">The qibla direction uses the same saved place as the weather tool.</string>
+
+    <!-- Onboarding, persona quiz page. Each option's subtitle states exactly
+         what picking it changes, so nobody picks blind. -->
+    <string name="onboarding_persona_title">Make it yours</string>
+    <string name="onboarding_persona_subtitle">Three quick questions. All of them optional.</string>
+    <string name="onboarding_persona_q_languages">How many languages do you type in?</string>
+    <string name="onboarding_persona_lang_one_title">Just one</string>
+    <string name="onboarding_persona_lang_one_subtitle">Spacebar swipes move the cursor.</string>
+    <string name="onboarding_persona_lang_many_title">Two or more</string>
+    <string name="onboarding_persona_lang_many_subtitle">Spacebar swipes change the language.</string>
+    <!-- Shown under the question once "Two or more" is picked. -->
+    <string name="onboarding_persona_many_notice">Both spacebar swipes now change the language. You can give one back to the cursor on the next pages.</string>
+    <string name="onboarding_persona_q_depth">What kind of keyboard do you want?</string>
+    <string name="onboarding_persona_depth_minimal_title">Keep it simple</string>
+    <string name="onboarding_persona_depth_minimal_subtitle">A small set of tools, fewer setup pages, and the simple settings.</string>
+    <string name="onboarding_persona_depth_balanced_title">A good middle</string>
+    <string name="onboarding_persona_depth_balanced_subtitle">The tools most people use, and the standard settings.</string>
+    <string name="onboarding_persona_depth_power_title">Show me everything</string>
+    <string name="onboarding_persona_depth_power_subtitle">All pages, every tool to pick from, and every setting.</string>
+
+    <!-- Onboarding, discover page: the features people would not guess at. -->
+    <string name="onboarding_discover_title">Worth knowing about</string>
+    <string name="onboarding_discover_subtitle">A few things this keyboard does that most keyboards cannot. Flip on what sounds useful.</string>
+    <string name="onboarding_discover_chips_title">Smart chips</string>
+    <string name="onboarding_discover_chips_pitch">Type 12*8= or 20 usd in eur and the answer appears above the keys, ready to insert.</string>
+    <string name="onboarding_discover_hotwords_title">Tool hotwords</string>
+    <string name="onboarding_discover_hotwords_pitch">Type a tool’s name, like translate, and a chip appears that opens it.</string>
+    <string name="onboarding_discover_toolbox_title">The toolbox</string>
+    <string name="onboarding_discover_toolbox_pitch">Over 70 tools behind one key: translate, scan text, calculator, GIFs, QR codes, a password generator and more.</string>
+    <string name="onboarding_discover_toolbox_hint">Pick your tools in Settings, then Tools.</string>
+    <string name="onboarding_discover_photos_title">Themes and photo backgrounds</string>
+    <string name="onboarding_discover_photos_pitch">Put your own photo, or one searched online, behind the keys. Rotate them on a schedule.</string>
+    <string name="onboarding_discover_photos_hint">Find them in Appearance, then Themes.</string>
+    <string name="onboarding_discover_clipboard_title">Clipboard superpowers</string>
+    <string name="onboarding_discover_clipboard_pitch">A full copy history, plus chips that pull codes, phone numbers and links out of what you copy.</string>
+    <string name="onboarding_discover_snippets_title">Pattern snippets</string>
+    <string name="onboarding_discover_snippets_pitch">Short triggers that expand into full text, with fill-in patterns.</string>
+    <string name="onboarding_discover_snippets_hint">Set them up in the snippets tool.</string>
+    <string name="onboarding_discover_otp_title">Codes from notifications</string>
+    <string name="onboarding_discover_otp_pitch">One-time codes appear as a chip above the keys the moment they arrive.</string>
+    <string name="onboarding_discover_otp_hint">Needs notification access. The keyboard asks for it on first use.</string>
+    <string name="onboarding_discover_fancy_title">Fancy text</string>
+    <string name="onboarding_discover_fancy_pitch">Write in script, bubble, bold and more styles that work in any app.</string>
+    <string name="onboarding_discover_ai_title">AI writing tools</string>
+    <string name="onboarding_discover_ai_pitch">Rewrite, translate or chat with an AI, right from the keyboard.</string>
+    <string name="onboarding_discover_ai_hint">Bring your own API key. Finish setup later in Tools, then AI.</string>
+    <string name="onboarding_discover_whisper_title">Offline dictation</string>
+    <string name="onboarding_discover_whisper_pitch">Voice typing that runs fully on the phone. No internet needed.</string>
+    <string name="onboarding_discover_whisper_hint">Download a model in the voice tool’s settings.</string>
+    <string name="onboarding_discover_modes_title">Per-app keyboards</string>
+    <string name="onboarding_discover_modes_pitch">A different keyboard for each app: its own layout, theme and tools.</string>
+    <string name="onboarding_discover_modes_hint">Build them in Settings, then Modes.</string>
+
+    <!-- Onboarding, try page: a live field plus prompts for the tricks the
+         wizard just enabled. -->
+    <string name="onboarding_try_title">Try your keyboard</string>
+    <string name="onboarding_try_subtitle">Everything you chose is live. Type a little and see how it feels.</string>
+    <string name="onboarding_try_resize">Keyboard too big? Resize it</string>
+    <string name="onboarding_try_field_hint">Type something here</string>
+    <string name="onboarding_try_success">Looks good. You are set.</string>
+    <string name="onboarding_try_hints_title">Try one of these</string>
+    <string name="onboarding_try_hint_chips">Type 12*8= and watch the answer appear above the keys</string>
+    <string name="onboarding_try_hint_hotword">Type translate and tap the chip that appears</string>
+    <string name="onboarding_try_hint_toolbox">Tap the toolbox key on the toolbar to see your tools</string>
+    <string name="onboarding_try_hint_clipboard">Copy some text, then open the clipboard tool to see it saved</string>
+    <string name="onboarding_try_hint_spacebar">Swipe along the spacebar to switch language</string>
+    <!-- Shown instead of the field when the keyboard is not enabled and selected. -->
+    <string name="onboarding_try_not_ready_body">Turn the keyboard on first. The field on this page types with whatever keyboard is active.</string>
+
+    <!-- Small pill next to the spacebar choice the quiz answer points at. -->
+    <string name="onboarding_recommended_badge">Recommended</string>
+
+</resources>

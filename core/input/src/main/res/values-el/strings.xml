@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">Το ληφθέν αρχείο είναι κατεστραμμένο. Το άθροισμα ελέγχου (checksum) δεν ταιριάζει. Δοκιμάστε ξανά τη λήψη.</string>
+    <string name="core_input_cjk_download_error_http">Ο διακομιστής επέστρεψε κατάσταση HTTP %1$s.</string>
+    <string name="core_input_cjk_download_error_network">Η λήψη δεν λειτούργησε. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.</string>
+    <string name="core_input_cjk_download_error_network_detail">Η λήψη δεν λειτούργησε: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">Δεν υπάρχει αρκετός αποθηκευτικός χώρος στη συσκευή σας. Ελευθερώστε λίγο χώρο πρώτα.</string>
+    <string name="core_input_cjk_download_error_truncated">Η σύνδεση διακόπηκε κατά τη λήψη. Πατήστε Συνέχεια για να συνεχίσετε.</string>
+    <string name="core_input_cjk_download_error_unavailable">Αυτό το πακέτο δεν είναι ακόμα διαθέσιμο.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">Ένας πίνακας ριζικών κωδικών για χαρακτήρες Hanzi, 29.000 χαρακτήρες. Το πληκτρολόγιο χρειάζεται αυτό το πακέτο για τις διατάξεις Cangjie και Quick.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Λεξικό Cangjie (倉頡)</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Αναγνώσεις Kana από το mozc, 1,08 εκατομμύρια καταχωρήσεις, περίπου 42 MB. Το πληκτρολόγιο χρειάζεται αυτό το πακέτο για την ιαπωνική μετατροπή.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Λεξικό ιαπωνικών kana σε kanji</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Ένας πίνακας με αναγνώσεις Jyutping για χαρακτήρες Hanzi, με 163.000 καταχωρήσεις. Το πληκτρολόγιο χρειάζεται αυτό το πακέτο για τη μετατροπή στα Καντονέζικα.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Λεξικό Καντονέζικων Jyutping</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Ποιες λέξεις ακολουθούν ποιες, μετρημένες από κινεζικά κείμενα ιστού και ειδήσεων. Συνοδεύεται από το λεξικό Pinyin. Με αυτό, αρχικά όπως το wbxh δίνουν πρώτα το 我不喜欢 και όχι δύο άσχετες λέξεις.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Κινεζικά ζεύγη λέξεων</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Χαρακτήρες και φράσεις Hanzi από το CC-CEDICT, 120.000 καταχωρήσεις. Το πληκτρολόγιο χρειάζεται αυτό το πακέτο για την κινεζική μετατροπή.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Κινεζικό λεξικό Pinyin</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Φράσεις από το OpenCC, 50.000 καταχωρήσεις, περίπου 1 MB. Με τους παραδοσιακούς χαρακτήρες ενεργοποιημένους, το πληκτρολόγιο το χρησιμοποιεί για να γράψει τη σωστή μορφή για τη λέξη, όπως 頭髮 και όχι 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Πίνακας φράσεων παραδοσιακών χαρακτήρων</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">Ένας πίνακας σειράς γραμμών για χαρακτήρες Hanzi. Το πληκτρολόγιο χρειάζεται αυτό το πακέτο για τη διάταξη γραμμών.</string>
+    <string name="core_input_cjk_pack_stroke_title">Κινεζικό λεξικό με βάση τις γραμμές (笔画)</string>
+    <string name="core_input_double_pinyin_custom_label">Προσαρμοσμένο</string>
+    <string name="core_input_double_pinyin_off_label">Απενεργοποιημένο (πλήρες Pinyin)</string>
+    <string name="core_input_im_note_candidates">Για ορισμένα πλήκτρα αυτή η μέθοδος δίνει μια λίστα επιλογών. Το πληκτρολόγιο χρησιμοποιεί πάντα την πρώτη επιλογή.</string>
+    <string name="core_input_im_note_missing_files">Αυτά τα αρχεία δεν επιλέχθηκαν, επομένως το τμήμα τους λείπει: %1$s. Για να τα συμπεριλάβετε, εισαγάγετε ξανά και επιλέξτε τα μαζί.</string>
+    <string name="core_input_im_note_module">Αυτή η μέθοδος χρησιμοποιεί ένα πρόσθετο, όπως το Anthy, το οποίο το πληκτρολόγιο δεν μπορεί να εκτελέσει. Τα πλήκτρα που το χρησιμοποιούν δεν έχουν καμία λειτουργία εδώ.</string>
+    <string name="core_input_im_note_other_method">Αυτή η μέθοδος δίνει ορισμένα πλήκτρα σε άλλη μέθοδο εισαγωγής. Αυτό το μέρος δεν λειτουργεί εδώ.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">Η εφαρμογή δεν μπορεί να διαβάσει %1$d κανόνα ορθογραφίας, οπότε τον παρακάμπτει.</item>
+        <item quantity="other">Η εφαρμογή δεν μπορεί να διαβάσει %1$d κανόνες ορθογραφίας, οπότε τους παρακάμπτει.</item>
+    </plurals>
+    <string name="core_input_im_note_space">Αυτή η μέθοδος χρησιμοποιεί το πλήκτρο διαστήματος ως πλήκτρο, για παράδειγμα για έναν τόνο. Εδώ το πλήκτρο διαστήματος πληκτρολογεί πάντα ένα διάστημα.</string>
+    <string name="core_input_im_note_truncated">Ο πίνακας είναι πολύ μεγάλος, οπότε η εφαρμογή κράτησε μόνο το πρώτο του μέρος.</string>
+    <string name="core_input_im_note_unused_files">Η εφαρμογή δεν χρησιμοποίησε αυτά τα αρχεία: %1$s.</string>
+    <string name="core_input_im_refused_broken">Το αρχείο έχει σφάλμα, επομένως η εφαρμογή δεν μπορεί να το διαβάσει: %1$s</string>
+    <string name="core_input_im_refused_empty">Το αρχείο δεν περιέχει τίποτα για πληκτρολόγηση.</string>
+    <string name="core_input_im_refused_no_dictionary">Το σχήμα χρειάζεται το λεξικό του. Εισαγάγετε ξανά και επιλέξτε επίσης %1$s.</string>
+    <string name="core_input_im_refused_not_method">Η εφαρμογή δεν μπορεί να το διαβάσει ως μέθοδο εισαγωγής. Διαβάζει πίνακες .cin, σχήματα και λεξικά Rime (.schema.yaml, .dict.yaml) και αρχεία m17n .mim.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">Η εφαρμογή το διάβασε ως πίνακα .cin με %1$d καταχώρηση. Πληκτρολογήστε έναν κωδικό και μετά επιλέξτε τον χαρακτήρα από τη γραμμή προτάσεων.</item>
+        <item quantity="other">Η εφαρμογή το διάβασε ως πίνακα .cin με %1$d καταχωρήσεις. Πληκτρολογήστε έναν κωδικό και μετά επιλέξτε τον χαρακτήρα από τη γραμμή προτάσεων.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">Η εφαρμογή το διάβασε ως μέθοδο εισαγωγής m17n με %1$d κανόνα. Τα πλήκτρα γράφουν το κείμενο καθώς πληκτρολογείτε.</item>
+        <item quantity="other">Η εφαρμογή το διάβασε ως μέθοδο εισαγωγής m17n με %1$d κανόνες. Τα πλήκτρα γράφουν το κείμενο καθώς πληκτρολογείτε.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">Η εφαρμογή το διάβασε ως σχήμα Rime με %1$d καταχώρηση λεξικού. Πληκτρολογήστε τις συλλαβές και μετά επιλέξτε τις λέξεις από τη γραμμή προτάσεων.</item>
+        <item quantity="other">Η εφαρμογή το διάβασε ως σχήμα Rime με %1$d καταχωρήσεις λεξικού. Πληκτρολογήστε τις συλλαβές και μετά επιλέξτε τις λέξεις από τη γραμμή προτάσεων.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">Η εφαρμογή το διάβασε ως πίνακα κωδικών Rime με %1$d καταχώριση. Πληκτρολογήστε έναν κωδικό και, στη συνέχεια, επιλέξτε τον χαρακτήρα από τη γραμμή προτάσεων.</item>
+        <item quantity="other">Η εφαρμογή το διάβασε ως πίνακα κωδικών Rime με %1$d καταχωρίσεις. Πληκτρολογήστε έναν κωδικό και, στη συνέχεια, επιλέξτε τον χαρακτήρα από τη γραμμή προτάσεων.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Το σύστημα λεξικού του Mozc, με το κόστος σύνδεσης, το τμηματοποιητή και το φίλτρο προτάσεων. Η μηχανή Mozc πραγματοποιεί μετατροπές με αυτό· η ενσωματωμένη μηχανή δεν το χρησιμοποιεί.</string>
+    <string name="core_input_mozc_pack_title">Λεξικό Mozc</string>
+    <string name="core_input_rime_pack_base_subtitle">Στίξη, σύμβολα, ο πίνακας συχνότητας λέξεων και η μετατροπή Απλοποιημένων και Παραδοσιακών κινεζικών που χρησιμοποιεί κάθε σχήμα RIME. Λήψη με το πρώτο σχήμα.</string>
+    <string name="core_input_rime_pack_base_title">Βασικά στοιχεία RIME</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">Το σχήμα Zhuyin του RIME στον τυπικό χάρτη πληκτρολογίου Dachen, με το λεξικό του Terra Pinyin.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">Το σχήμα Cangjie πέμπτης γενιάς του RIME, χαρακτήρες και φράσεις.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Ένα μεγάλο σύγχρονο λεξιλόγιο Απλοποιημένων Κινεζικών για Pinyin, με παραλλαγές Double Pinyin και 9-key. Η μεταγλώττισή του διαρκεί ένα λεπτό ή περισσότερο.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">Το σχήμα rime-cantonese για τα Καντονέζικα, με τις λίστες λέξεων και φράσεών του.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">Το σχήμα Pinyin του RIME, μαζί με το σχήμα γραφής που χρησιμοποιεί για την εύρεση χαρακτήρων.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Μοντέλο ιαπωνικής χειρόγραφης γραφής</string>
+    <string name="core_input_zinnia_pack_subtitle">Το μοντέλο του έργου Tegaki για το zinnia, τον offline αναγνωριστή χειρογράφου που διαβάζει Κινεζικά και Ιαπωνικά όπου το ML Kit δεν το κάνει.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Μοντέλο χειρόγραφης γραφής Απλοποιημένων Κινεζικών</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Μοντέλο χειρόγραφης εισαγωγής παραδοσιακών κινεζικών</string>
+</resources>

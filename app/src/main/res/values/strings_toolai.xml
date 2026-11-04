@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ================================================================== -->
+    <!-- Typing test tool settings: the shape of a test run and the records. -->
+    <!-- ================================================================== -->
+
+    <string name="toolai_typing_default_test_title">Default test</string>
+    <!-- The test runs for a set number of seconds. -->
+    <string name="toolai_typing_mode_time_label">Timed</string>
+    <!-- The test runs until you type a set number of words. -->
+    <string name="toolai_typing_mode_words_label">Word count</string>
+    <!-- The test runs to the end of a quotation. -->
+    <string name="toolai_typing_mode_quote_label">Quote</string>
+
+    <string name="toolai_typing_length_title">Length</string>
+    <string name="toolai_typing_seconds_label">Seconds</string>
+    <string name="toolai_typing_words_label">Words</string>
+    <string name="toolai_typing_quote_info">Quote tests run to the end of the quotation.</string>
+
+    <string name="toolai_typing_difficulty_title">Difficulty</string>
+    <string name="toolai_typing_punctuation_title">Punctuation</string>
+    <string name="toolai_typing_punctuation_subtitle">Capital letters, commas and full stops in the test text</string>
+    <string name="toolai_typing_numbers_title">Numbers</string>
+    <string name="toolai_typing_numbers_subtitle">The keyboard mixes numbers into the test words</string>
+    <!-- Group for the two options that let the keyboard's own helpers take part in a run. -->
+    <string name="toolai_typing_assist_title">Typing aids</string>
+    <string name="toolai_typing_glide_title">Glide typing</string>
+    <string name="toolai_typing_glide_subtitle">Swipe words during a test, to see how much faster gestures make you</string>
+    <string name="toolai_typing_suggestions_title">Suggestions</string>
+    <string name="toolai_typing_suggestions_subtitle">Show the suggestion strip during a test, in its usual row above the keys. Tapping a word finishes it</string>
+    <string name="toolai_typing_language_info">The test runs in whichever language the keyboard is in. Switch languages from the panel or the spacebar. English and Bangla have their own word lists; any other language uses its downloaded or imported dictionary.</string>
+    <!-- A personal-best row's title with its language, e.g. "30 seconds · বাংলা". -->
+    <string name="toolai_typing_best_language_label">%1$s · %2$s</string>
+
+    <string name="toolai_typing_records_title">Records</string>
+    <string name="toolai_typing_tests_completed_title">Tests completed</string>
+    <string name="toolai_typing_recent_average_title">Recent average</string>
+    <!-- %1$d is how many past runs the average covers. -->
+    <plurals name="toolai_typing_recent_average_subtitle">
+        <item quantity="one">Across the last %1$d run</item>
+        <item quantity="other">Across the last %1$d runs</item>
+    </plurals>
+    <!-- %1$d is a typing speed. wpm is short for words per minute: a unit
+         abbreviation, not a countable noun, so it does not inflect. -->
+    <string name="toolai_typing_wpm_value" tools:ignore="PluralsCandidate">%1$d wpm</string>
+    <!-- Heading of one saved record. %1$s is how many seconds that test ran for. -->
+    <string name="toolai_typing_best_seconds_label">%1$s seconds</string>
+    <!-- Heading of one saved record. %1$s is how many words that test asked for. -->
+    <string name="toolai_typing_best_words_label">%1$s words</string>
+    <string name="toolai_typing_clear_records_title">Clear records</string>
+    <string name="toolai_typing_clear_records_subtitle">Deletes every best score, the run history and the badges</string>
+
+    <string name="toolai_typing_achievements_title">Achievements</string>
+    <!-- The four badges the test hands out, each with the way to earn it. -->
+    <string name="toolai_typing_achievement_wpm100_title">100 wpm club</string>
+    <string name="toolai_typing_achievement_wpm100_subtitle">Finish a run at 100 words per minute or faster</string>
+    <string name="toolai_typing_achievement_perfect_title">Flawless run</string>
+    <string name="toolai_typing_achievement_perfect_subtitle">No wrong, extra or missed characters in a full run</string>
+    <string name="toolai_typing_achievement_pangram_title">Quick brown fox</string>
+    <string name="toolai_typing_achievement_pangram_subtitle">Finish a quote that uses every letter of the alphabet</string>
+    <string name="toolai_typing_achievement_tests50_title">50 runs</string>
+    <string name="toolai_typing_achievement_tests50_subtitle">Finish fifty typing tests</string>
+    <!-- Screen reader state of one badge row. -->
+    <string name="toolai_typing_achievement_unlocked_desc">Unlocked</string>
+    <string name="toolai_typing_achievement_locked_desc">Locked</string>
+    <string name="toolai_typing_info">The test runs on the keyboard. It measures the layout, the key sizes and the gestures that you type with. The text that you type during a test does not go to the text field. The scores stay on your device.</string>
+
+    <!-- ================================================================== -->
+    <!-- AI tool settings: the provider, the credentials and the prompts.   -->
+    <!-- ================================================================== -->
+
+    <string name="toolai_ai_provider_title">Provider</string>
+    <string name="toolai_ai_providers_title">AI providers</string>
+    <string name="toolai_ai_providers_info">The services and models the AI tools, AI reply, the chat and the settings assistant can use. Add a service with its key, a server you run, or a model on your device. You can add the same service more than once, for a second key or a second server. One of them answers at a time: pick it under In use, or with the model picker on the AI panel.</string>
+    <string name="toolai_ai_in_use_title">In use</string>
+    <string name="toolai_ai_in_use_subtitle">The provider the AI tools ask. The model picker on the AI panel changes it too</string>
+
+    <!-- Group heading. Product names. -->
+    <string name="toolai_ai_anthropic_group_title" translatable="false">Claude (Anthropic)</string>
+    <string name="toolai_ai_openai_group_title" translatable="false">OpenAI</string>
+    <string name="toolai_ai_gemini_group_title" translatable="false">Gemini (Google)</string>
+    <!-- Group heading. Ollama is a product name. Keep it in English. -->
+    <string name="toolai_ai_ollama_group_title">Ollama server</string>
+    <!-- Group heading. LM Studio is a product name. Keep it in English. -->
+    <string name="toolai_ai_lm_studio_group_title">LM Studio server</string>
+    <!-- Group heading. Product names. -->
+    <string name="toolai_ai_xai_group_title" translatable="false">Grok (xAI)</string>
+    <string name="toolai_ai_deepseek_group_title" translatable="false">DeepSeek</string>
+    <string name="toolai_ai_brave_group_title" translatable="false">Brave Answers</string>
+    <!-- Group heading for any other service with the same request shape as OpenAI. -->
+    <string name="toolai_ai_compatible_group_title">Other service</string>
+
+    <!-- Field labels. Anthropic, OpenAI and Gemini are product names. -->
+    <string name="toolai_ai_anthropic_key_label">Anthropic API key</string>
+    <string name="toolai_ai_openai_key_label">OpenAI API key</string>
+    <string name="toolai_ai_gemini_key_label">Gemini API key</string>
+    <!-- Helper text under an empty key field. Do not translate the web address. -->
+    <string name="toolai_ai_anthropic_key_hint">Get the key from console.anthropic.com on the API keys page</string>
+    <!-- Helper text under an empty key field. Do not translate the web address. -->
+    <string name="toolai_ai_openai_key_hint">Get the key from platform.openai.com on the API keys page</string>
+    <!-- Helper text under an empty key field. Do not translate the web address. -->
+    <string name="toolai_ai_gemini_key_hint">Get a free key from aistudio.google.com</string>
+    <!-- Field label. xAI is a product name. -->
+    <string name="toolai_ai_xai_key_label">xAI API key</string>
+    <!-- Helper text under an empty key field. Do not translate the web address. -->
+    <string name="toolai_ai_xai_key_hint">Get the key from console.x.ai on the API keys page</string>
+    <!-- Field label. DeepSeek is a product name. -->
+    <string name="toolai_ai_deepseek_key_label">DeepSeek API key</string>
+    <!-- Helper text under an empty key field. Do not translate the web address. -->
+    <string name="toolai_ai_deepseek_key_hint">Get the key from platform.deepseek.com on the API keys page</string>
+    <!-- Field label. Brave is a product name. -->
+    <string name="toolai_ai_brave_key_label">Brave API key</string>
+    <!-- Helper text under an empty key field. Do not translate the web address. "Answers" is the name of a Brave plan. -->
+    <string name="toolai_ai_brave_key_hint">Get the key from api-dashboard.search.brave.com. The key needs the Answers plan</string>
+    <!-- Helper text under an empty key field when the web search tool already has a Brave key. -->
+    <string name="toolai_ai_brave_key_search_hint">Leave this blank to use the key of the web search tool</string>
+
+    <string name="toolai_ai_compatible_key_label">API key</string>
+    <string name="toolai_ai_compatible_key_hint">Leave this blank if the service does not need a key</string>
+    <string name="toolai_ai_compatible_url_label">Service address</string>
+    <!-- Helper text under the address field. Do not translate the web addresses. -->
+    <string name="toolai_ai_compatible_url_hint">For example https://openrouter.ai/api/v1. The app adds /chat/completions to the end.</string>
+    <string name="toolai_ai_compatible_model_hint">Give the model name that the service uses</string>
+    <!-- Caption below the fields of the other service. -->
+    <!-- "Answers" and "Search" are the names of Brave plans. -->
+    <string name="toolai_ai_brave_info">Brave searches the web before it writes each answer, so it is good for questions about facts and recent events. Your key needs the Answers plan. A key with only the Search plan does not work. Brave accepts one message only, so the app sends the instructions and the earlier chat together with your text.</string>
+    <string name="toolai_ai_compatible_info">Use this for a service that has the same request shape as OpenAI, for example OpenRouter, Groq, Together or Mistral. A plain HTTP address stays on your network, so keep the server on a network that you trust.</string>
+
+    <string name="toolai_ai_model_label">Model</string>
+    <string name="toolai_ai_model_list_action">Choose from the list</string>
+    <string name="toolai_ai_model_list_failed">Couldn\'t get the list. Check the key and the address.</string>
+    <!-- %1$s is the name of the model the app uses when the field is empty. Do not translate it. -->
+    <string name="toolai_ai_model_hint">Leave this blank to use %1$s</string>
+    <string name="toolai_ai_lm_studio_model_hint">Leave this blank to use the model that the server has loaded</string>
+
+    <string name="toolai_ai_server_address_label">Server address</string>
+    <!-- Helper text under the server address field. Do not translate the web address. -->
+    <string name="toolai_ai_ollama_url_hint">For example http://192.168.0.10:11434. Use the network address of your computer.</string>
+    <!-- Helper text under the server address field. Do not translate the web address or the name LM Studio. -->
+    <string name="toolai_ai_lm_studio_url_hint">For example http://192.168.0.10:1234. Turn on the local server in LM Studio.</string>
+    <!-- Caption below the self-hosted server fields. OLLAMA_HOST=0.0.0.0 is a
+         command setting and must stay as it is. The quoted text is the name of
+         a setting in LM Studio. -->
+    <string name="toolai_ai_local_server_info">Start Ollama with OLLAMA_HOST=0.0.0.0 so your device can reach it. In LM Studio, turn on \"serve on local network\". The plain HTTP traffic stays on your network.</string>
+
+    <string name="toolai_ai_output_title">Output</string>
+    <string name="toolai_ai_max_tokens_title">Maximum response length</string>
+    <string name="toolai_ai_max_tokens_subtitle">The limit in tokens. One token is about three quarters of a word. A reasoning model gets four times this limit, because its reasoning uses the same budget. Select the provider maximum for long text.</string>
+    <!-- Chip that sends no limit, so the service applies its own. -->
+    <string name="toolai_ai_max_tokens_provider_label">Provider maximum</string>
+    <string name="toolai_ai_local_context_title">Context size</string>
+    <string name="toolai_ai_local_context_subtitle">How much text the on-device model holds at one time, in tokens. This covers your text and the answer together. A larger size uses more memory and loads the model again.</string>
+    <!-- Chip that leaves the context size to the model. -->
+    <string name="toolai_ai_local_context_model_label">Model default</string>
+    <string name="toolai_ai_translate_to_label">Target language for the Translate action</string>
+    <!-- The three language names are examples. Keep them in English: the field takes an English language name. -->
+    <string name="toolai_ai_translate_to_hint">For example English, Bengali, Japanese</string>
+    <string name="toolai_ai_show_thinking_title">Show model reasoning</string>
+    <!-- &lt;think&gt; is a tag the model writes around its own reasoning. Keep it as it is. -->
+    <string name="toolai_ai_show_thinking_subtitle">The panel shows the &lt;think&gt; text of reasoning models instead of a progress bar</string>
+    <string name="toolai_ai_model_picker_title">Model picker on the panel</string>
+    <string name="toolai_ai_model_picker_subtitle">Change between the providers that you set up and the models that you download, on the keyboard</string>
+
+    <string name="toolai_ai_diff_title">Show a changes view</string>
+    <string name="toolai_ai_diff_subtitle">The panel gets a Changes button that marks what the model added and what it deleted</string>
+    <string name="toolai_ai_diff_first_title">Open a result on the changes</string>
+    <string name="toolai_ai_diff_first_subtitle">The panel starts on the changes instead of the plain result</string>
+
+    <!-- The AI continuation chip in the suggestion strip (#944). -->
+    <string name="toolai_strip_suggest_group_title">Suggestion strip</string>
+    <string name="toolai_strip_suggest_title">AI suggestions</string>
+    <!-- %1$s is a number of characters. -->
+    <string name="toolai_strip_suggest_subtitle_cloud">Suggests how to continue your text, beside the word suggestions. When you pause after a word, the app sends the last %1$s characters before the cursor to the selected provider.</string>
+    <string name="toolai_strip_suggest_subtitle_word">Suggests how to continue your text, beside the word suggestions. When you pause after a word, the app sends only that word to the selected provider.</string>
+    <string name="toolai_strip_suggest_subtitle_on_device">Suggests how to continue your text, beside the word suggestions. The on-device model makes the suggestion, so your text stays on your device.</string>
+    <string name="toolai_strip_suggest_info">The app never asks in a password field, in a field that turns off suggestions, or in incognito. Each pause after a word is one request, and a new key press cancels it. Tap the suggestion to insert it. Hold it to hide AI suggestions until you go to a different field.</string>
+    <string name="toolai_strip_suggest_word_only_title">Send only the last word</string>
+    <string name="toolai_strip_suggest_word_only_subtitle">Sends less of your text. The suggestions are less accurate.</string>
+    <string name="toolai_strip_suggest_composing_title">Ask while typing a word</string>
+    <string name="toolai_strip_suggest_composing_subtitle">Also asks mid-word, and for the conversion of a Chinese or Japanese reading. This sends many more requests. A model that thinks first is skipped mid-word.</string>
+    <string name="toolai_strip_suggest_after_words_title">Show after the words</string>
+    <string name="toolai_strip_suggest_after_words_subtitle">The chip stays at the end of the strip, so it never moves a word you are about to tap</string>
+    <string name="toolai_strip_suggest_after_word_title">Ask after a word ends</string>
+    <string name="toolai_strip_suggest_after_word_subtitle">Also asks when you stop after a whole word</string>
+    <string name="toolai_strip_suggest_idle_title">Wait before asking</string>
+    <string name="toolai_strip_suggest_timeout_title">Give up after</string>
+    <string name="toolai_strip_suggest_composing_delay_title">Wait before asking mid-word</string>
+    <string name="toolai_strip_suggest_composing_timeout_title">Give up mid-word after</string>
+    <string name="toolai_strip_suggest_ms_value">%1$d ms</string>
+    <string name="toolai_strip_suggest_chars_title">Text to send</string>
+    <string name="toolai_strip_suggest_chars_subtitle">How many characters before the cursor each request sends</string>
+
+    <!--
+      Tool calling (#470): letting the model search the web, or read one page,
+      before it answers.
+    -->
+    <string name="toolai_ai_tools_group_title">What the model can do</string>
+    <string name="toolai_ai_tools_info">The model can ask the keyboard to look something up before it answers. It only ever does so when it needs to, and you see each request in the network activity log under "AI tool use".</string>
+    <string name="toolai_ai_tools_info_fallback">This provider has no built-in support for tools, so the keyboard explains them to the model in words instead. It works, but a small model often ignores them or gets the format wrong. A provider with real tool support is far more reliable.</string>
+    <string name="toolai_ai_tool_search_title">Let the model search the web</string>
+    <string name="toolai_ai_tool_search_subtitle">It writes its own search and reads the results. Searches go to whichever service the search tool uses, and count against that service\'s quota.</string>
+    <string name="toolai_ai_tool_search_needs_setup_title">Let the model search the web</string>
+    <string name="toolai_ai_tool_search_needs_setup_subtitle">Set up a search service first — the model has nothing to search with</string>
+    <string name="toolai_ai_tool_fetch_title">Let the model read a web page</string>
+    <string name="toolai_ai_tool_fetch_subtitle">It opens one address and reads the text on it. Needs no search service.</string>
+    <string name="toolai_ai_tool_fetch_info">This is the one tool that will open an address it found in your own text, so it is off until you ask for it. The page is read as plain text and cut short; no scripts run, and nothing is sent to the page.</string>
+    <string name="toolai_ai_tool_rounds_title">Lookups per answer</string>
+    <string name="toolai_ai_tool_rounds_subtitle">How many times the model may look something up before it has to answer</string>
+    <string name="toolai_ai_tool_rounds_info">Each round is another request to the model, carrying everything it has found so far. Higher digs deeper into a question and costs more; lower keeps one answer cheap and quick.</string>
+
+    <!--
+      The keyboard's own tools the model can use (#698): the weather, the
+      dictionary, the converters and so on. Each has Run / Ask / Off.
+    -->
+    <string name="toolai_ai_builtin_title">Keyboard tools</string>
+    <string name="toolai_ai_builtin_subtitle">Let the model use the keyboard\'s own tools, such as the weather, the calculator and the translator</string>
+    <!-- Title of the screen that lists them. -->
+    <string name="toolai_ai_builtin_screen_title">Keyboard tools</string>
+    <string name="toolai_ai_builtin_info">Run lets the model use a tool whenever it needs to. Ask shows you each request first, with what it will send, and you allow it or not. Off keeps the tool out of the model\'s reach. Each tool that is on is described to the model in every request, which costs a little each time, and a small model on your device copes best with only a few.</string>
+    <string name="toolai_ai_builtin_info_group_title">Look things up</string>
+    <string name="toolai_ai_builtin_info_group_info">These read the outside world, the way the tools on the toolbar do, through the same services and settings.</string>
+    <string name="toolai_ai_builtin_data_group_title">Your things</string>
+    <string name="toolai_ai_builtin_data_group_info">These read what is on your phone: your calendar, your notes, where you are. They ask first until you say otherwise, so text the model read on a web page cannot reach them without you seeing it.</string>
+    <string name="toolai_ai_builtin_picture_group_title">Pictures you send</string>
+    <string name="toolai_ai_builtin_picture_group_info">These work on a picture you attached in the chat.</string>
+    <string name="toolai_ai_builtin_action_group_title">Do things</string>
+    <string name="toolai_ai_builtin_action_group_info">These change something on your phone. None of them can delete anything. They ask first until you say otherwise.</string>
+    <string name="toolai_ai_builtin_image_search_title">Image search</string>
+    <string name="toolai_ai_builtin_image_search_subtitle">Finds pictures through the search tool\'s service</string>
+    <string name="toolai_ai_builtin_weather_title">Weather</string>
+    <string name="toolai_ai_builtin_weather_subtitle">Today\'s and tomorrow\'s weather for any place, or for the place saved in the weather tool</string>
+    <string name="toolai_ai_builtin_wm_docs_title">WM Keyboard docs</string>
+    <string name="toolai_ai_builtin_wm_docs_subtitle">Searches this keyboard\'s documentation to answer questions about the keyboard itself. Sends only the search words, to the docs site.</string>
+    <string name="toolai_ai_builtin_wikipedia_title">Wikipedia</string>
+    <string name="toolai_ai_builtin_wikipedia_subtitle">Reads the summary of an article, in the Wikipedia language that the encyclopedia tool uses</string>
+    <string name="toolai_ai_builtin_define_word_title">Dictionary</string>
+    <string name="toolai_ai_builtin_define_word_subtitle">Looks a word up in the dictionary tool\'s sources</string>
+    <string name="toolai_ai_builtin_translate_title">Translate</string>
+    <string name="toolai_ai_builtin_translate_subtitle">Translates with the translate tool\'s engine, on your device or online as you set it there</string>
+    <string name="toolai_ai_builtin_convert_currency_title">Currency converter</string>
+    <string name="toolai_ai_builtin_convert_currency_subtitle">Converts money at live exchange rates from the currency tool\'s sources</string>
+    <string name="toolai_ai_builtin_convert_units_title">Unit converter</string>
+    <string name="toolai_ai_builtin_convert_units_subtitle">Converts lengths, weights, temperatures and other measurements</string>
+    <string name="toolai_ai_builtin_calculate_title">Calculator</string>
+    <string name="toolai_ai_builtin_calculate_subtitle">Works sums out exactly, on your device, instead of guessing</string>
+    <string name="toolai_ai_builtin_calendar_events_title">Read your calendar</string>
+    <string name="toolai_ai_builtin_calendar_events_subtitle">Lists your events for the days the model asks about. Needs the calendar tool\'s access.</string>
+    <string name="toolai_ai_builtin_search_notes_title">Read your notes</string>
+    <string name="toolai_ai_builtin_search_notes_subtitle">Searches your notes and reads the ones that match. With Search by meaning on, it also finds notes that say the same thing in other words. A locked note\'s text stays hidden.</string>
+    <string name="toolai_ai_builtin_search_snippets_title">Read your snippets</string>
+    <string name="toolai_ai_builtin_search_snippets_subtitle">Searches your snippets and reads the ones that match: their name, trigger and text, as written. With Search by meaning on, it also finds snippets that say the same thing in other words.</string>
+    <string name="toolai_ai_builtin_search_clipboard_title">Search your clipboard</string>
+    <string name="toolai_ai_builtin_search_clipboard_subtitle">Finds the clips in your clipboard history that mean what the model asks about. Passwords and codes stay out. Needs Search by meaning.</string>
+    <string name="toolai_ai_builtin_current_location_title">Your location</string>
+    <string name="toolai_ai_builtin_current_location_subtitle">Reads where your phone is, at the precision the location tool shares, with the address if you have that on</string>
+    <string name="toolai_ai_builtin_add_calendar_event_title">Add to your calendar</string>
+    <string name="toolai_ai_builtin_add_calendar_event_subtitle">Adds an event. It can\'t change or delete one.</string>
+    <string name="toolai_ai_builtin_add_note_title">Save a note</string>
+    <string name="toolai_ai_builtin_add_note_subtitle">Adds a new note to your notes. It can\'t change or delete one.</string>
+    <string name="toolai_ai_builtin_set_alarm_title">Set an alarm</string>
+    <string name="toolai_ai_builtin_set_alarm_subtitle">Sets an alarm in the clock tool, once or on repeat days</string>
+    <string name="toolai_ai_builtin_start_timer_title">Start a timer</string>
+    <string name="toolai_ai_builtin_start_timer_subtitle">Starts a countdown in the clock tool</string>
+    <string name="toolai_ai_builtin_open_app_title">Open an app</string>
+    <string name="toolai_ai_builtin_open_app_subtitle">Opens an app you have installed, by its name</string>
+    <string name="toolai_ai_builtin_media_control_title">Control media</string>
+    <string name="toolai_ai_builtin_media_control_subtitle">Plays, pauses or skips what is playing, or says what it is. Needs the media tool\'s notification access.</string>
+    <string name="toolai_ai_builtin_send_to_pc_title">Send to your computer</string>
+    <string name="toolai_ai_builtin_send_to_pc_subtitle">Sends text or a link to a computer paired through KDE Connect</string>
+    <string name="toolai_ai_builtin_calendar_mode_title">How events are added</string>
+    <string name="toolai_ai_builtin_calendar_mode_subtitle">Open the calendar app with the event filled in, for you to save. Or add it directly, which needs calendar access.</string>
+    <string name="toolai_ai_builtin_calendar_mode_open_label">Open the app</string>
+    <string name="toolai_ai_builtin_calendar_mode_direct_label">Add directly</string>
+    <string name="toolai_ai_builtin_calendar_allow_action">Allow adding events</string>
+    <string name="toolai_ai_builtin_calendar_none">No calendar on this phone can take new events.</string>
+    <string name="toolai_ai_builtin_read_image_text_title">Read text in a picture</string>
+    <string name="toolai_ai_builtin_read_image_text_subtitle">For a model that can\'t see pictures: reads the text in one you sent, on your device, or with the scan text tool\'s online engine if you picked that</string>
+    <string name="toolai_ai_builtin_reverse_image_search_title">Search by picture</string>
+    <string name="toolai_ai_builtin_reverse_image_search_subtitle">Uploads a picture you sent to the camera tool\'s search site and gives you the link to the results</string>
+
+    <!-- Pictures in the AI chat (#698). -->
+    <string name="ai_chat_picture_desc">Picture</string>
+    <string name="ai_chat_picture_remove_desc">Remove the picture</string>
+
+    <!--
+      MCP servers (#573): tools that run on a server the user adds. MCP is
+      short for Model Context Protocol, a product name. Keep "MCP" in English.
+    -->
+    <string name="toolai_ai_mcp_title">MCP servers</string>
+    <string name="toolai_ai_mcp_subtitle">Let the model use tools from servers that you add</string>
+    <!-- Title of the screen that lists the MCP servers. -->
+    <string name="toolai_ai_mcp_screen_title">MCP servers</string>
+    <!-- Title of the screen that edits one MCP server. -->
+    <string name="toolai_ai_mcp_edit_screen_title">MCP server</string>
+    <string name="toolai_ai_mcp_servers_group_title">Servers</string>
+    <!-- "OAuth" is the name of a sign-in standard. Keep it in English. -->
+    <string name="toolai_ai_mcp_info">An MCP server gives the model more tools, for example to read your notes or to add an event to a calendar. The tools run on the server that you add, not on your device. When the model uses a tool, the keyboard sends the input that the model wrote to that server. Only servers with an http or https address work. A server that starts as a program on a computer does not work on a phone. Sign-in with OAuth is not available yet. If the server gives you a token, add it as a header.</string>
+    <string name="toolai_ai_mcp_empty">No servers yet. Press Add to add a server, or paste a JSON config from another app.</string>
+    <!-- Status under a server that has no list of tools yet. -->
+    <string name="toolai_ai_mcp_not_connected">Not connected</string>
+    <string name="toolai_ai_mcp_connecting_progress">Connecting…</string>
+    <!-- %1$d is the number of tools that a server has. -->
+    <plurals name="toolai_ai_mcp_tool_count">
+        <item quantity="one">%1$d tool</item>
+        <item quantity="other">%1$d tools</item>
+    </plurals>
+    <!-- Status under a server. %1$s is the number of tools, for example
+         "12 tools". %2$d, %3$d and %4$d are how many of them are set to Run,
+         Ask and Off. Run, ask and off are the names of the three choices, not
+         countable nouns. -->
+    <string name="toolai_ai_mcp_status_counts" tools:ignore="PluralsCandidate">%1$s: %2$d run, %3$d ask, %4$d off</string>
+    <!-- Warning above the server list. %1$d is the number of tools that the
+         model can use. It is always more than 20. -->
+    <plurals name="toolai_ai_mcp_many_tools_body">
+        <item quantity="one">%1$d tool is on. The keyboard sends the description of each tool with every request, so each request gets longer and costs more. Set the tools that you do not need to Off.</item>
+        <item quantity="other">%1$d tools are on. The keyboard sends the description of each tool with every request, so each request gets longer and costs more. Set the tools that you do not need to Off.</item>
+    </plurals>
+    <!-- Screen reader name of the add button on the server list. -->
+    <string name="toolai_ai_mcp_add_desc">Add a server</string>
+
+    <string name="toolai_ai_mcp_import_group_title">Import</string>
+    <string name="toolai_ai_mcp_import_title">Paste a JSON config</string>
+    <!-- Claude Desktop, Cursor and VS Code are product names. -->
+    <string name="toolai_ai_mcp_import_subtitle">Add servers from the MCP settings of another app, for example Claude Desktop, Cursor or VS Code</string>
+    <string name="toolai_ai_mcp_import_label">JSON config</string>
+    <!-- "mcpServers" and "servers" are names in the file. Do not translate them. -->
+    <string name="toolai_ai_mcp_import_hint">Paste the whole text, with the "mcpServers" or "servers" part</string>
+    <!-- Button that reads the pasted text. -->
+    <string name="toolai_ai_mcp_import_read_action">Read</string>
+    <string name="toolai_ai_mcp_import_error">This is not a JSON config. Copy all of the text, from the first brace to the last.</string>
+    <string name="toolai_ai_mcp_import_none_empty">The config has no servers.</string>
+    <string name="toolai_ai_mcp_import_found_title">Servers to add</string>
+    <string name="toolai_ai_mcp_import_skipped_title">Servers that the keyboard skips</string>
+    <!-- One skipped server. %1$s is its name, %2$s the reason. -->
+    <string name="toolai_ai_mcp_import_skipped_line">%1$s: %2$s</string>
+    <string name="toolai_ai_mcp_skip_command">it starts a program on a computer, which a phone cannot run</string>
+    <string name="toolai_ai_mcp_skip_no_url">it has no address</string>
+    <string name="toolai_ai_mcp_skip_bad_url">its address does not start with http or https</string>
+    <!-- Confirm button. %1$d is the number of servers that the button adds. -->
+    <plurals name="toolai_ai_mcp_import_add_action">
+        <item quantity="one">Add %1$d server</item>
+        <item quantity="other">Add %1$d servers</item>
+    </plurals>
+
+    <string name="toolai_ai_mcp_name_label">Name</string>
+    <string name="toolai_ai_mcp_name_hint">Leave this blank to use the name of the host</string>
+    <string name="toolai_ai_mcp_url_label">Address</string>
+    <!-- Helper text under the address field. Do not translate the web address. -->
+    <string name="toolai_ai_mcp_url_hint">For example https://example.com/mcp</string>
+    <string name="toolai_ai_mcp_url_error">Use an address that starts with https:// or http://</string>
+    <!-- Warning under an http:// address that is not on the local network. -->
+    <string name="toolai_ai_mcp_url_plain_warning">Plain http sends your token and the input of the model without encryption. Use https for a server outside your network.</string>
+    <!-- How the keyboard talks to the server. -->
+    <string name="toolai_ai_mcp_transport_title">Type</string>
+    <string name="toolai_ai_mcp_transport_auto_label">Auto</string>
+    <!-- Names of two transports in the MCP standard. -->
+    <string name="toolai_ai_mcp_transport_http_label" translatable="false">Streamable HTTP</string>
+    <string name="toolai_ai_mcp_transport_sse_label" translatable="false">SSE</string>
+    <!-- Streamable HTTP and SSE are names in the MCP standard. -->
+    <string name="toolai_ai_mcp_transport_info">Auto works for almost every server. It tries Streamable HTTP first, then the older SSE type. Select SSE for an old server if Auto does not connect. Its address often ends in /sse.</string>
+
+    <string name="toolai_ai_mcp_headers_title">Headers</string>
+    <!-- "Authorization" and "Bearer" are fixed words in a web request. Keep them in English. -->
+    <string name="toolai_ai_mcp_headers_info">The keyboard sends these headers with every request to this server. Use them for a token or an API key. For example, the name is Authorization and the value is Bearer, a space and your token. A backup without secrets does not include the headers.</string>
+    <string name="toolai_ai_mcp_header_name_label">Header name</string>
+    <string name="toolai_ai_mcp_header_value_label">Value</string>
+    <!-- Example text in an empty header field. A fixed word in a web request. -->
+    <string name="toolai_ai_mcp_header_name_hint" translatable="false">Authorization</string>
+    <!-- Example text in an empty header value field. A fixed word in a web request. -->
+    <string name="toolai_ai_mcp_header_value_hint" translatable="false">Bearer …</string>
+    <string name="toolai_ai_mcp_header_add_action">Add header</string>
+    <string name="toolai_ai_mcp_header_delete_desc">Delete this header</string>
+    <string name="toolai_ai_mcp_header_show_desc">Show the value</string>
+    <string name="toolai_ai_mcp_header_hide_desc">Hide the value</string>
+
+    <string name="toolai_ai_provider_headers_title">Extra headers</string>
+    <!-- "{session}" and "User-Agent" are fixed words in a web request. Keep them as they are. -->
+    <string name="toolai_ai_provider_headers_info">The keyboard sends these headers with every request to this provider, after its own, so a header here replaces one of the same name. Some services need them, for example a session header and a User-Agent. Type {session} in a value to send an id that stays the same for one action or one chat. A backup without secrets does not include the headers.</string>
+
+    <!-- Button that saves the server and asks it for its tools. -->
+    <string name="toolai_ai_mcp_connect_action">Connect</string>
+    <!-- Result of Connect. %1$s is the name and version that the server gave,
+         %2$d the number of tools that it has. -->
+    <plurals name="toolai_ai_mcp_connected_body">
+        <item quantity="one">Connected to %1$s: %2$d tool</item>
+        <item quantity="other">Connected to %1$s: %2$d tools</item>
+    </plurals>
+    <string name="toolai_ai_mcp_stale_body">The address changed. Connect again to get the tools at the new address.</string>
+
+    <string name="toolai_ai_mcp_tools_title">Tools</string>
+    <!-- Run, Ask and Off are the three choices on each tool. -->
+    <string name="toolai_ai_mcp_tools_info">Run: the tool runs and the keyboard does not ask you. Ask: the model waits until you allow the call. Off: the model does not see the tool. At the start, a tool that the server marks as read only runs, and all other tools ask.</string>
+    <string name="toolai_ai_mcp_tools_empty">The server has no tools.</string>
+    <!-- The tool runs without a question. -->
+    <string name="toolai_ai_mcp_policy_allow_label">Run</string>
+    <!-- The keyboard asks you before the tool runs. -->
+    <string name="toolai_ai_mcp_policy_ask_label">Ask</string>
+    <!-- The model does not see the tool. -->
+    <string name="toolai_ai_mcp_policy_off_label">Off</string>
+    <!-- Badge on a tool that the server says only reads data. -->
+    <string name="toolai_ai_mcp_read_only_label">Read only</string>
+    <!-- Badge on a tool that the server says can change or delete data. -->
+    <string name="toolai_ai_mcp_destructive_label">Can change or delete data</string>
+
+    <!--
+      The chat screen in the settings app. The words it shares with the chat on
+      the keyboard's AI panel are in :feature:ime (ime_ai_chat_*); these are the
+      ones only this screen draws.
+    -->
+    <string name="toolai_ai_chat_group_title">Chat</string>
+    <string name="toolai_ai_chat_nav_title">Chat with the model</string>
+    <string name="toolai_ai_chat_nav_subtitle">Have a conversation with a model that you downloaded or set up</string>
+    <string name="toolai_ai_chat_delete_title">Delete this chat?</string>
+    <!-- %1$s is the name of the conversation. -->
+    <string name="toolai_ai_chat_delete_body">This deletes "%1$s". You cannot undo this.</string>
+    <!-- The chat list's bulk delete (#882), after picking chats with a long press. -->
+    <plurals name="toolai_ai_chat_delete_many_title">
+        <item quantity="one">Delete %1$d chat?</item>
+        <item quantity="other">Delete %1$d chats?</item>
+    </plurals>
+    <string name="toolai_ai_chat_delete_many_body">The chats you picked are deleted for good. You cannot undo this.</string>
+
+    <string name="toolai_ai_history_group_title">History</string>
+    <string name="toolai_ai_history_title">Keep a history of the results</string>
+    <string name="toolai_ai_history_subtitle">The keyboard keeps what you send and what the model answers. The records stay on your device. Nothing is kept from a password field or in incognito.</string>
+    <string name="toolai_ai_history_nav_title">History</string>
+    <string name="toolai_ai_history_nav_subtitle">Read, copy and delete what the AI tool did</string>
+    <string name="toolai_ai_history_max_title">Number of records to keep</string>
+    <string name="toolai_ai_history_max_subtitle">The oldest record goes when the history is full</string>
+    <string name="toolai_ai_history_search_label">Search the history</string>
+    <string name="toolai_ai_history_all_actions">All</string>
+    <string name="toolai_ai_history_empty">The history is empty. Run an AI action and it appears here.</string>
+    <string name="toolai_ai_history_filter_empty">No record matches your search.</string>
+    <string name="toolai_ai_history_off_body">The history is off. Turn it on to keep a record of what you send to the AI tool and what it answers. The records stay on your device, and you can delete them at any time.</string>
+    <string name="toolai_ai_history_copy_input">Copy the input</string>
+    <string name="toolai_ai_history_copy_output">Copy the answer</string>
+    <string name="toolai_ai_history_clear_action">Delete all history</string>
+    <!-- Dialog body. %1$d is the number of records that the app deletes. -->
+    <plurals name="toolai_ai_history_clear_body">
+        <item quantity="one">This deletes %1$d record. You cannot undo this.</item>
+        <item quantity="other">This deletes %1$d records. You cannot undo this.</item>
+    </plurals>
+
+    <string name="toolai_ai_actions_group_title">Actions</string>
+    <string name="toolai_ai_actions_title">Actions on the panel</string>
+    <string name="toolai_ai_actions_subtitle">Add your own actions, change the prompts, and turn off the ones that you do not use</string>
+    <string name="toolai_ai_actions_caption">These are the buttons on the AI panel. You can rename an action that comes with the keyboard, change its prompt, or turn it off. Turning an action off keeps it here, so you can turn it on again. Press Reset in an action to bring back the one that comes with the keyboard.</string>
+    <string name="toolai_ai_actions_reorder_title">Order of the actions</string>
+    <string name="toolai_ai_action_edit_desc">Edit this action</string>
+    <string name="toolai_ai_action_new_title">New action</string>
+    <!-- Summary of an action that asks the user for its prompt at every run. -->
+    <string name="toolai_ai_action_ask_summary">You type the prompt at every run</string>
+    <string name="toolai_ai_action_no_prompt_summary">No prompt yet</string>
+    <!-- Name given to an action that the user saved without one. -->
+    <string name="toolai_ai_action_default_name">New action</string>
+    <!-- Caption at the top of an action that comes with the keyboard. %1$s is
+         its name, for example Rewrite. -->
+    <string name="toolai_ai_action_builtin_caption">This action comes with the keyboard. Your changes are kept separately, so Reset brings back %1$s.</string>
+    <string name="toolai_ai_action_name_label">Name</string>
+    <string name="toolai_ai_action_task_label">Prompt</string>
+    <!-- Helper text under the prompt field. %1$s is the text {target}, which
+         the app replaces with the target language. Do not translate it. -->
+    <string name="toolai_ai_action_task_hint">Give the model the task only. The app adds the safety text and the output rules. Write %1$s where you want the target language.</string>
+    <!-- Helper text under the prompt field when the user writes the whole prompt. -->
+    <string name="toolai_ai_action_task_raw_hint">The app sends this text as it is. You write the safety text yourself.</string>
+
+    <string name="toolai_ai_action_behaviour_title">Behaviour</string>
+    <string name="toolai_ai_action_ask_title">Type the prompt at every run</string>
+    <string name="toolai_ai_action_ask_subtitle">The keyboard asks you for the prompt instead of using a saved one</string>
+    <string name="toolai_ai_action_prefill_title">Start from the saved prompt</string>
+    <string name="toolai_ai_action_prefill_subtitle">The box opens with the prompt below already in it, so you change it instead of typing it again</string>
+    <!-- Label of the prompt field for an action that asks at every run. -->
+    <string name="toolai_ai_action_prefill_label">Prompt to start from</string>
+    <!-- Helper text under that field. %1$s is the text {target}, which the app
+         replaces with the target language. Do not translate it. -->
+    <string name="toolai_ai_action_prefill_hint">The instruction box opens with this text. You can change it before each run. Write %1$s where you want the target language.</string>
+    <string name="toolai_ai_action_empty_field_title">Works with an empty field</string>
+    <string name="toolai_ai_action_empty_field_subtitle">With no text in the field, the action writes new text instead of changing text</string>
+    <string name="toolai_ai_action_before_cursor_title">Read the text before the cursor</string>
+    <string name="toolai_ai_action_before_cursor_subtitle">The action reads only the text in front of the cursor, not the whole field. Selected text always wins.</string>
+    <string name="toolai_ai_action_append_title">Add the result to the end</string>
+    <string name="toolai_ai_action_append_subtitle">Replace adds the result after your text instead of in place of it</string>
+    <string name="toolai_ai_action_output_only_title">Answer with the text only</string>
+    <string name="toolai_ai_action_output_only_subtitle">The model gives the result and nothing else. Turn this off for an action that explains something.</string>
+    <string name="toolai_ai_action_raw_title">Write the whole prompt</string>
+    <string name="toolai_ai_action_raw_subtitle">The app sends your text as it is. The safety text stops the model from reading the text of the field as commands, so turn this on only if you write that part yourself.</string>
+    <string name="toolai_ai_action_preview_title">The prompt that the app sends</string>
+    <string name="toolai_ai_action_reset_action">Reset</string>
+    <string name="toolai_ai_action_delete_action">Delete</string>
+    <!-- Caption at the foot of the AI screen when the model runs on the device. -->
+    <string name="toolai_ai_on_device_info">On-device models run on your device. The text that you run an action on stays on your device. The context window of the model limits the response length.</string>
+    <!-- Caption at the foot of the AI screen when the model runs on a server. -->
+    <string name="toolai_ai_cloud_info">The app sends the text that you run an action on to the selected provider. This happens only when you press the action. The app keeps your keys on your device.</string>
+
+    <!-- ================================================================== -->
+    <!-- Keyword shortcut: the words that make a tool offer itself on the   -->
+    <!-- suggestion strip.                                                  -->
+    <!-- ================================================================== -->
+
+    <string name="toolai_keyword_group_title">Keyword shortcut</string>
+    <string name="toolai_keyword_field_label">Trigger words</string>
+    <string name="toolai_keyword_empty_hint">This tool has no trigger words. It never offers itself.</string>
+    <!-- %1$s is the name of the tool, for example Calculator. -->
+    <string name="toolai_keyword_hint">Type one of these words alone. The suggestion strip then offers to open %1$s and deletes the word. Use commas to separate more than one word.</string>
+    <!-- Typing and Smart chips are the names of two settings screens. -->
+    <string name="toolai_keyword_off_info">The tool keywords are off. To turn them on, go to Typing, then Smart chips.</string>
+    <string name="toolai_keyword_case_title">Match capitals</string>
+    <string name="toolai_keyword_case_on_subtitle">The word must be typed with the same capitals</string>
+    <string name="toolai_keyword_case_off_subtitle">Capitals are ignored</string>
+    <string name="toolai_keyword_case_info">Off, a trigger word matches however you type it, so "wiki", "Wiki" and "WIKI" all offer the tool. On, only the spelling above matches. Use this for a short word that is also ordinary text, such as "AI", so the chip appears for the capitals and not for the letters inside a sentence.</string>
+
+    <!-- ================================================================== -->
+    <!-- Shared text field rows: prompts and API keys.                      -->
+    <!-- ================================================================== -->
+
+    <string name="toolai_api_key_yours_hint">The app uses your key</string>
+    <string name="toolai_api_key_builtin_hint">This field is blank. The app uses the key that is built into the app.</string>
+
+    <!-- ================================================================== -->
+    <!-- Calendar and translate tool rows with a picker dialog.             -->
+    <!-- ================================================================== -->
+
+    <!-- Marks the row that is selected now. A screen reader reads it. -->
+    <string name="toolai_selected_desc">Selected</string>
+    <string name="toolai_weekend_title">Weekend</string>
+    <string name="toolai_weekend_subtitle">The weekday initials that the month grid tints</string>
+    <string name="toolai_translate_into_title">Translate into</string>
+    <string name="toolai_translate_into_subtitle">The keyboard detects the source language. You can also change this on the panel.</string>
+
+
+    <string name="toolai_chats_group_title">Chats</string>
+    <string name="toolai_chat_enter_sends_title">Enter sends the message</string>
+    <string name="toolai_chat_follow_ups_title">Suggest follow-up questions</string>
+    <string name="toolai_chat_follow_ups_subtitle">A chat answer from a cloud or server model ends with up to three questions you might ask next, as chips a tap puts in the message box. On-device models are never asked.</string>
+    <string name="toolai_research_depth_title">Deep research depth</string>
+    <string name="toolai_research_depth_subtitle">How far a Deep research report goes. Quick plans 3 sub-questions and reads 4 pages; Standard plans 4, looks again once for what is missing, and reads 8; Deep plans 6, looks again twice, and reads 14. Deeper takes longer and sends more text to the model.</string>
+    <string name="toolai_research_depth_quick">Quick</string>
+    <string name="toolai_research_depth_standard">Standard</string>
+    <string name="toolai_research_depth_deep">Deep</string>
+    <string name="toolai_research_review_plan_title">Review the research plan first</string>
+    <string name="toolai_research_review_plan_subtitle">Deep research shows its sub-questions and waits for Start before it searches anything. Off, the plan is shown as it runs, and Stop ends it.</string>
+    <string name="toolai_chat_auto_rename_title">Auto-rename chats</string>
+    <string name="toolai_ai_selection_menu_title">Ask AI in the selection menu</string>
+    <string name="toolai_ai_selection_menu_subtitle">Ask AI shows in other apps\' menu for selected text. Turning the AI tool off takes it out too.</string>
+    <string name="toolai_chat_auto_rename_subtitle">The model that answers names each chat from your first message and its reply, in your language, and can rename it later when you ask and agree. Off, a chat is named after the first line of your first message.</string>
+    <string name="toolai_chat_enter_sends_subtitle">In the chat on the keyboard, the Enter key sends. When this is off, Enter starts a new line and the Send button sends.</string>
+    <string name="toolai_keep_chats_title">Keep your conversations</string>
+    <string name="toolai_keep_chats_subtitle">Save chats on this device so you can come back to them</string>
+    <string name="toolai_keep_chats_info">A chat is a back and forth, so it holds more of what you wrote than a single AI action does. Turn this off and your conversations live only until you close the app, and what is already saved is deleted. Nothing is sent anywhere either way that you did not send by chatting.</string>
+    <string name="toolai_delete_chats_title">Delete all chats</string>
+    <string name="toolai_delete_chats_subtitle">Remove every saved conversation from this device</string>
+    <string name="toolai_delete_chats_confirm">Every saved conversation is deleted from this device. This cannot be undone.</string>
+
+    <string name="toolai_continue_group_title">Carry-on actions</string>
+    <string name="toolai_continue_context_title">How much the AI reads back</string>
+    <string name="toolai_continue_context_subtitle">Characters before the cursor sent by a carry-on action</string>
+    <string name="toolai_continue_context_info">Actions that carry on from what you wrote send the text before your cursor. More characters give the model more of your writing to follow, which helps in a long piece. It also costs more of your tokens and takes longer on every run. This only applies when you have not selected anything: a selection is always sent as it is.</string>
+
+    <!-- ==================================================================== -->
+    <!-- AI reply tool (#234). The provider, key and model are the AI tool's;  -->
+    <!-- only what a drafted reply needs lives on this page.                  -->
+    <!-- ==================================================================== -->
+
+    <string name="toolai_reply_drafts_title">Drafts</string>
+    <!-- How many alternative replies one run writes. -->
+    <string name="toolai_reply_count_title">Replies per run</string>
+    <string name="toolai_reply_length_title">Length</string>
+    <string name="toolai_reply_length_subtitle">How long a drafted reply runs</string>
+    <string name="toolai_reply_length_short">Short</string>
+    <string name="toolai_reply_length_medium">Medium</string>
+    <string name="toolai_reply_length_long">Long</string>
+    <string name="toolai_reply_emoji_title">Emoji</string>
+    <string name="toolai_reply_emoji_subtitle">Whether drafted replies use emoji</string>
+    <!-- Use emoji as freely as the other person does, and no more. -->
+    <string name="toolai_reply_emoji_match">Match theirs</string>
+    <string name="toolai_reply_emoji_allow">Allow</string>
+    <string name="toolai_reply_emoji_avoid">Avoid</string>
+
+    <string name="toolai_reply_voice_title">Your voice</string>
+    <!-- Free text the user writes about themselves, sent with every draft. -->
+    <string name="toolai_reply_persona_label">About you</string>
+    <string name="toolai_reply_persona_hint">How you write, what you sound like, anything the replies should know</string>
+    <string name="toolai_reply_language_label">Reply language</string>
+    <string name="toolai_reply_language_hint">Blank follows the conversation</string>
+    <!-- How much of the gathered conversation one run sends. -->
+    <string name="toolai_reply_context_title">Conversation sent</string>
+
+    <string name="toolai_reply_shots_title">Screenshots</string>
+    <string name="toolai_reply_image_mode_title">How screenshots are read</string>
+    <string name="toolai_reply_image_mode_subtitle">Sent to the AI as a picture, or read on this device first</string>
+    <!-- Send the picture where the provider can take one, read it here otherwise. -->
+    <string name="toolai_reply_image_mode_auto">Automatic</string>
+    <string name="toolai_reply_image_mode_image">Send the picture</string>
+    <string name="toolai_reply_image_mode_ocr">Read on this device</string>
+
+    <string name="toolai_reply_after_title">After a reply</string>
+    <string name="toolai_reply_tidy_title">Clear what it used</string>
+    <string name="toolai_reply_tidy_subtitle">Take the copied messages and screenshots back out once a reply is used. You can turn this off for one reply in the panel</string>
+    <string name="toolai_reply_history_title">Keep drafted replies in the AI history</string>
+    <string name="toolai_reply_history_subtitle">Off: a record of a reply holds somebody else\'s message, not your own writing</string>
+
+    <string name="toolai_reply_provider_title">AI provider</string>
+    <string name="toolai_reply_provider_nav_title">AI settings</string>
+    <string name="toolai_reply_tones_title">Tones</string>
+    <string name="toolai_reply_tones_caption">The tones on the AI reply panel. Reorder them, turn them off, edit one, or write your own. Custom… asks for an instruction each time.</string>
+    <string name="toolai_reply_tones_nav_title">Tones</string>
+    <string name="toolai_reply_tones_nav_subtitle">Edit, reorder or turn off the tones, or write your own</string>
+    <string name="toolai_reply_tone_new">New tone</string>
+    <string name="toolai_reply_catch_shots_title">Add screenshots automatically</string>
+    <string name="toolai_reply_catch_shots_subtitle">One taken while the panel is open, and the newest from the last two minutes when it opens. Needs permission to read your images</string>
+    <string name="toolai_reply_provider_nav_subtitle">Replies use the provider, key and model set up for the AI tool</string>
+    <!-- AI screen, opened from the settings home screen. It collects the AI tools, the chat and the history. -->
+    <string name="toolai_hub_tools_title">On the keyboard</string>
+    <string name="toolai_hub_tools_info">The AI writing tools screen sets the provider, the key and the model. AI reply, the chat and the settings assistant use the same ones.</string>
+    <string name="toolai_hub_button_group_title">Chat button</string>
+    <string name="toolai_hub_chat_button_everywhere_title">Chat button on every screen</string>
+    <string name="toolai_hub_chat_button_everywhere_subtitle">Show the button that opens the AI chat on every settings screen, not only this one</string>
+    <string name="toolai_hub_settings_assistant_title">Offer the Settings assistant</string>
+    <string name="toolai_hub_settings_assistant_subtitle">Off hides it from search and the AI screens, and it sends nothing</string>
+    <string name="toolai_ai_chat_fab_desc">Chat with the AI</string>
+
+    <!-- ================================================================== -->
+    <!-- AI memory: Settings › AI › Memory.                                 -->
+    <!-- ================================================================== -->
+    <string name="toolai_memory_screen_title">Memory</string>
+    <string name="toolai_memory_group_title">Memory</string>
+    <string name="toolai_memory_nav_subtitle">What the AI remembers about you, kept on this phone</string>
+    <string name="toolai_memory_enabled_title">Remember things about me</string>
+    <string name="toolai_memory_enabled_subtitle">Chats save short facts about you, and later chats and AI actions use them</string>
+    <string name="toolai_memory_enabled_info">The AI saves a fact when you tell it something that will still be true later, or when you ask it to remember something. Each save shows under the answer with Undo. The facts stay on this phone. Incognito fields and private chats never read or save memory, and facts that look like passwords, codes, card numbers or keys are refused. Turning this off stops reading and saving. The saved facts stay until you delete them.</string>
+    <string name="toolai_memory_cloud_title">Use with cloud models</string>
+    <string name="toolai_memory_cloud_subtitle">Send the saved facts with requests to the AI service in use, and let its chats save new ones</string>
+    <string name="toolai_memory_cloud_info">Off, only a model on this phone reads or saves memory. On, the facts picked for a request travel with it to the service you use, and that service\'s own privacy terms apply to them.</string>
+    <string name="toolai_memory_list_title">Saved memories</string>
+    <string name="toolai_memory_add_title">Add memory</string>
+    <string name="toolai_memory_add_subtitle">Write a fact for the AI to know</string>
+    <string name="toolai_memory_empty">Nothing saved yet. Tell the AI something about yourself in a chat, or add a fact here.</string>
+    <string name="toolai_memory_source_manual">Added by you</string>
+    <string name="toolai_memory_source_chat">From a chat</string>
+    <!-- %1$s is where the memory came from, %2$s when it last changed. -->
+    <string name="toolai_memory_row_subtitle">%1$s · %2$s</string>
+    <string name="toolai_memory_delete_all_title">Delete all memories</string>
+    <string name="toolai_memory_delete_all_subtitle">Removes every saved fact from this phone</string>
+    <string name="toolai_memory_delete_all_confirm">Delete every saved memory? This cannot be undone.</string>
+    <string name="toolai_memory_dialog_add_title">Add memory</string>
+    <string name="toolai_memory_dialog_edit_title">Edit memory</string>
+    <string name="toolai_memory_fact_label">Fact</string>
+    <string name="toolai_memory_fact_hint">Such as: Lives in Dhaka</string>
+    <string name="toolai_memory_category_label">Category (optional)</string>
+    <string name="toolai_memory_error_secret">This looks like a password, code, card number or key. The AI memory does not keep those.</string>
+    <!-- %1$d is the longest a memory may be, in characters. -->
+    <string name="toolai_memory_error_too_long">A memory is one short fact, at most %1$d characters.</string>
+    <string name="toolai_memory_error_duplicate">That fact is already saved.</string>
+    <string name="toolai_memory_error_unreadable">The memory cannot be read until the phone is unlocked.</string>
+    <string name="toolai_memory_error_full">The memory is full. Delete some facts first.</string>
+    <plurals name="toolai_memory_count">
+        <item quantity="one">%1$d memory saved</item>
+        <item quantity="other">%1$d memories saved</item>
+    </plurals>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">ڈاؤن لوڈ کردہ فائل خراب ہے۔ اس کا چیک سم مماثل نہیں ہے۔ دوبارہ ڈاؤن لوڈ کرنے کی کوشش کریں۔</string>
+    <string name="core_input_cjk_download_error_http">سرور نے HTTP اسٹیٹس %1$s واپس کیا۔</string>
+    <string name="core_input_cjk_download_error_network">ڈاؤن لوڈ کام نہیں کر سکا۔ اپنے کنکشن کو چیک کریں اور دوبارہ کوشش کریں۔</string>
+    <string name="core_input_cjk_download_error_network_detail">ڈاؤن لوڈ کام نہیں کر سکا: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">آپ کے آلے پر کافی اسٹوریج نہیں ہے۔ پہلے کچھ جگہ خالی کریں۔</string>
+    <string name="core_input_cjk_download_error_truncated">ڈاؤن لوڈ کے دوران کنکشن منقطع ہو گیا۔ جاری رکھنے کے لیے \'Resume\' دبائیں۔</string>
+    <string name="core_input_cjk_download_error_unavailable">یہ پیک ابھی دستیاب نہیں ہے۔</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">ہانزی حروف کے لیے ریڈیکل کوڈز کی ایک جدول، 29,000 حروف۔ کی بورڈ کو Cangjie اور Quick لے آؤٹس کے لیے اس پیک کی ضرورت ہے۔</string>
+    <string name="core_input_cjk_pack_cangjie_title">Cangjie (倉頡) لغت</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">mozc سے کانا ریڈنگز، 1.08 ملین اندراجات، تقریباً 42 MB۔ جاپانی کنورژن کے لیے کی بورڈ کو اس پیک کی ضرورت ہے۔</string>
+    <string name="core_input_cjk_pack_ja_kana_title">جاپانی کانا سے کانجی لغت</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Jyutping ریڈنگز سے ہانزی حروف کی ایک جدول، 163,000 اندراجات۔ کی بورڈ کو کینٹونیز کنورژن کے لیے اس پیک کی ضرورت ہے۔</string>
+    <string name="core_input_cjk_pack_jyutping_title">کینٹونیز جیوتپنگ لغت</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">کون سے الفاظ کس کے بعد آتے ہیں، چینی ویب اور نیوز ٹیکسٹ سے شمار کیے گئے۔ پینین ڈکشنری کے ساتھ آتا ہے۔ اس کے ساتھ، wbxh جیسے ابتدائی حروف پہلے 我不喜欢 دیتے ہیں نہ کہ دو غیر متعلقہ الفاظ۔</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">چینی الفاظ کے جوڑے</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">CC-CEDICT سے ہانزی حروف اور جملے، 120,000 اندراجات۔ کی بورڈ کو چینی کنورژن کے لیے اس پیک کی ضرورت ہے۔</string>
+    <string name="core_input_cjk_pack_pinyin_title">چینی پینین لغت</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">OpenCC سے جملے، 50,000 اندراجات، تقریباً 1 MB۔ روایتی حروف آن ہونے کے ساتھ، کی بورڈ اسے لفظ کی درست شکل لکھنے کے لیے استعمال کرتا ہے، جیسے 頭髮 اور نہ کہ 頭發۔</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">روایتی حروف کا فقرہ ٹیبل</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">ہانزی حروف کے لیے اسٹروک آرڈر کی ایک میز۔ کی بورڈ کو اسٹروک لے آؤٹ کے لیے اس پیک کی ضرورت ہے۔</string>
+    <string name="core_input_cjk_pack_stroke_title">چینی اسٹروک (笔画) لغت</string>
+    <string name="core_input_double_pinyin_custom_label">کسٹم</string>
+    <string name="core_input_double_pinyin_off_label">آف (مکمل پینین)</string>
+    <string name="core_input_im_note_candidates">کچھ کلیدوں کے لیے یہ طریقہ انتخاب کی فہرست دیتا ہے۔ کی بورڈ ہمیشہ پہلا انتخاب استعمال کرتا ہے۔</string>
+    <string name="core_input_im_note_missing_files">یہ فائلیں منتخب نہیں کی گئی تھیں، اس لیے ان کا حصہ غائب ہے: %1$s۔ انہیں شامل کرنے کے لیے، دوبارہ درآمد کریں اور انہیں ایک ساتھ منتخب کریں۔</string>
+    <string name="core_input_im_note_module">یہ طریقہ ایک پلگ ان استعمال کرتا ہے، جیسے کہ Anthy، جسے کی بورڈ نہیں چلا سکتا۔ جو کلیدیں اسے استعمال کرتی ہیں وہ یہاں کچھ نہیں کرتیں۔</string>
+    <string name="core_input_im_note_other_method">یہ طریقہ کچھ کلیدیں کسی دوسرے ان پٹ طریقہ کو دیتا ہے۔ وہ حصہ یہاں کام نہیں کرتا۔</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">ایپ %1$d ہجے کا اصول نہیں پڑھ سکتی، اس لیے یہ اسے چھوڑ دیتی ہے۔</item>
+        <item quantity="other">ایپ %1$d ہجے کے اصول نہیں پڑھ سکتی، اس لیے یہ انہیں چھوڑ دیتی ہے۔</item>
+    </plurals>
+    <string name="core_input_im_note_space">یہ طریقہ اسپیس بار کو ایک کلید کے طور پر استعمال کرتا ہے، مثال کے طور پر لہجے کے لیے۔ یہاں اسپیس بار ہمیشہ ایک اسپیس ٹائپ کرتا ہے۔</string>
+    <string name="core_input_im_note_truncated">ٹیبل بہت بڑا ہے، اس لیے ایپ نے صرف اس کا پہلا حصہ رکھا ہے۔</string>
+    <string name="core_input_im_note_unused_files">ایپ نے ان فائلوں کا استعمال نہیں کیا: %1$s۔</string>
+    <string name="core_input_im_refused_broken">فائل میں ایک خرابی ہے، اس لیے ایپ اسے پڑھ نہیں سکتی: %1$s</string>
+    <string name="core_input_im_refused_empty">فائل میں ٹائپ کرنے کے لیے کچھ نہیں ہے۔</string>
+    <string name="core_input_im_refused_no_dictionary">اسکیما کو اپنی لغت کی ضرورت ہے۔ دوبارہ درآمد کریں اور %1$s بھی منتخب کریں۔</string>
+    <string name="core_input_im_refused_not_method">ایپ اسے ان پٹ طریقہ کے طور پر نہیں پڑھ سکتی۔ یہ .cin ٹیبلز، Rime اسکیمز اور ڈکشنریز (.schema.yaml, .dict.yaml)، اور m17n .mim فائلیں پڑھتی ہے۔</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">ایپ نے اسے %1$d اندراج کے ساتھ .cin ٹیبل کے طور پر پڑھا۔ ایک کوڈ ٹائپ کریں، پھر تجویز کی پٹی سے کریکٹر منتخب کریں۔</item>
+        <item quantity="other">ایپ نے اسے %1$d اندراجات کے ساتھ .cin ٹیبل کے طور پر پڑھا۔ ایک کوڈ ٹائپ کریں، پھر تجویز کی پٹی سے کریکٹر منتخب کریں۔</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">ایپ نے اسے %1$d اصول کے ساتھ m17n ان پٹ طریقہ کے طور پر پڑھا۔ آپ کے ٹائپ کرتے ہی کلیدیں متن لکھ دیتی ہیں۔</item>
+        <item quantity="other">ایپ نے اسے %1$d اصولوں کے ساتھ m17n ان پٹ طریقہ کے طور پر پڑھا۔ آپ کے ٹائپ کرتے ہی کلیدیں متن لکھ دیتی ہیں۔</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">ایپ نے اسے %1$d لغت اندراج کے ساتھ Rime اسکیم کے طور پر پڑھا۔ سلیبلز ٹائپ کریں، پھر تجویز کی پٹی سے الفاظ منتخب کریں۔</item>
+        <item quantity="other">ایپ نے اسے %1$d لغت اندراجات کے ساتھ Rime اسکیم کے طور پر پڑھا۔ سلیبلز ٹائپ کریں، پھر تجویز کی پٹی سے الفاظ منتخب کریں۔</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">ایپ نے اسے %1$d اندراج کے ساتھ Rime کوڈ ٹیبل کے طور پر پڑھا ہے۔ ایک کوڈ ٹائپ کریں، پھر تجویز کی پٹی سے حرف منتخب کریں۔</item>
+        <item quantity="other">ایپ نے اسے %1$d اندراجات کے ساتھ Rime کوڈ ٹیبل کے طور پر پڑھا ہے۔ ایک کوڈ ٹائپ کریں، پھر تجویز کی پٹی سے حرف منتخب کریں۔</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Mozc کی اپنی سسٹم ڈکشنری، اس کے کنکشن کے اخراجات، سیگمنٹر اور تجویز فلٹر کے ساتھ۔ Mozc انجن اس کے ساتھ کنورٹ کرتا ہے؛ بلٹ ان انجن اسے استعمال نہیں کرتا۔</string>
+    <string name="core_input_mozc_pack_title">Mozc لغت</string>
+    <string name="core_input_rime_pack_base_subtitle">اوقاف، علامات، الفاظ کے تعدد کا جدول اور سادہ اور روایتی تبادلوں کا نظام جو ہر RIME اسکیم استعمال کرتی ہے۔ پہلی اسکیم کے ساتھ ڈاؤن لوڈ کیا گیا۔</string>
+    <string name="core_input_rime_pack_base_title">RIME ضروریات</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">معیاری Dachen کی میپ پر RIME کا Zhuyin اسکیما، Terra Pinyin کی لغت کے ساتھ۔</string>
+    <string name="core_input_rime_pack_bopomofo_title">بوپوموفو (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">RIME کا پانچویں نسل کا کینجی (Cangjie) خاکہ، حروف اور جملے ہیں۔</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">پینین کے لیے ایک بڑی جدید آسان چینی لغت، ڈبل پینین اور 9-کلیدی تغیرات کے ساتھ۔ اسے مرتب کرنے میں ایک منٹ یا اس سے زیادہ وقت لگتا ہے۔</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">کینٹونیز کے لیے rime-cantonese اسکیم، اس کی لفظ اور جملوں کی فہرستوں کے ساتھ۔</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">RIME کا اپنا پینین اسکیما، اسٹروک اسکیما کے ساتھ جس سے یہ حروف تلاش کرتا ہے۔</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">لونا پنین (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">جاپانی ہینڈ رائٹنگ ماڈل</string>
+    <string name="core_input_zinnia_pack_subtitle">Zinnia کے لیے Tegaki پروجیکٹ کا ماڈل، جو ایک آف لائن لکھائی پہچاننے والا (handwriting recogniser) سسٹم ہے اور یہ ان چینی اور جاپانی الفاظ کو پڑھ سکتا ہے جنہیں ML Kit نہیں پڑھ سکتا۔</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">آسان چینی ہینڈ رائٹنگ ماڈل</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">روایتی چینی ہینڈ رائٹنگ ماڈل</string>
+</resources>

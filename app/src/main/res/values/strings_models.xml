@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  On-device model management in :app: the offline voice typing (Whisper) model
+  screen and the on-device AI (local LLM) model screen.
+
+  Model names ("Whisper Small", "Gemma 4 E2B"), Hugging Face repository names,
+  file names and file extensions are identifiers. They are never translated and
+  they are not in this file. What each model is good for lives in :core:voice
+  and :core:intelligence, and the screens here resolve it from there.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ===== Shared by both model screens ===== -->
+
+    <!-- First sentence of the dialog asking before a large download starts on a
+         metered connection. The datasaver_metered_* strings give the rest.
+         %1$s is the name of the model. %2$s is the size of the download. -->
+    <string name="models_metered_body"><xliff:g id="model" example="Whisper Small">%1$s</xliff:g> is a download of <xliff:g id="size" example="248 MB">%2$s</xliff:g>.</string>
+
+    <!-- Button that deletes files of models that left the catalogue.
+         %1$s is how much space that frees, for example "1.2 GB". -->
+    <string name="models_free_up_action">Free up <xliff:g id="size" example="1.2 GB">%1$s</xliff:g></string>
+
+    <!-- Progress under a row while a model downloads. %1$s is how much has
+         arrived, %2$s is the full size, %3$d is the percent complete. -->
+    <string name="models_download_progress"><xliff:g id="done" example="12 MB">%1$s</xliff:g> of <xliff:g id="total" example="248 MB">%2$s</xliff:g>, %3$d%%</string>
+    <!-- A download that stopped and can continue. %1$s is what is on disk. -->
+    <string name="models_paused_progress">Paused at <xliff:g id="size" example="12 MB">%1$s</xliff:g></string>
+    <!-- Button that continues a stopped download. -->
+    <string name="models_resume_action">Resume</string>
+
+    <!-- Screen reader text for the delete button. %1$s is the model name. -->
+    <string name="models_delete_model_desc">Delete <xliff:g id="model" example="Whisper Small">%1$s</xliff:g></string>
+    <!-- Screen reader text for the button that stops a download. -->
+    <string name="models_cancel_download_desc">Cancel the download</string>
+
+    <!-- Screen reader text for the chevron on the model catalogue. -->
+    <string name="models_catalog_show_desc">Show the list of models</string>
+    <string name="models_catalog_hide_desc">Hide the list of models</string>
+
+    <!-- ===== Offline voice typing: the Whisper model screen ===== -->
+
+    <string name="models_whisper_yours_title">Your voice models</string>
+    <!-- Play builds only: the interpreter that runs the models is an on-demand
+         part of the app. Same wording family as the translate tool's module
+         banner in strings_tooldetail.xml. -->
+    <string name="models_whisper_module_missing_info">Offline voice typing is an extra part of the keyboard that downloads when you first need it. Download it, then select a model.</string>
+    <string name="models_whisper_module_installing_info">Downloading the offline voice typing part…</string>
+    <string name="models_whisper_module_installing_sized_info">Downloading the offline voice typing part: <xliff:g id="done" example="1.2 MB">%1$s</xliff:g> of <xliff:g id="total" example="1.8 MB">%2$s</xliff:g></string>
+    <string name="models_native_import_needed_info">This offline build cannot download the library this feature needs. Get its file on another device, then import it.</string>
+    <string name="models_native_import_where_info">This offline build cannot download the library this feature needs. Get its file and import it in Settings › Privacy › Feature libraries.</string>
+    <string name="models_native_consent_needed_info">Feature library downloads are off. Turn them on in Settings › Privacy › Download feature libraries, then try again.</string>
+    <string name="models_whisper_module_failed_info">The download did not finish. Check the connection, then try again.</string>
+    <string name="models_whisper_module_metered_body">The offline voice typing part is a separate download.</string>
+    <string name="models_whisper_empty">No model is downloaded yet. Select one below to use voice typing fully offline.</string>
+    <string name="models_whisper_suggested_title">Suggested for your languages</string>
+
+    <!-- Model storage. %1$s is how much space the voice models use. -->
+    <string name="models_whisper_storage_info">Voice models use <xliff:g id="size" example="1.2 GB">%1$s</xliff:g> of storage on your device. The app keeps them in private app storage. A download continues from where it stopped if you cancel it or lose the connection.</string>
+    <!-- %1$s is how much space files of old models still use. -->
+    <string name="models_whisper_orphan_info"><xliff:g id="size" example="248 MB">%1$s</xliff:g> belongs to models that are no longer in the catalogue.</string>
+
+    <!-- The card that shows which model transcribes each language. -->
+    <string name="models_whisper_per_language_title">Model per language</string>
+    <string name="models_whisper_language_none">Whisper has no model for this language. Voice typing uses the system recognizer.</string>
+    <string name="models_whisper_no_model_yet">No model is downloaded yet</string>
+    <!-- Warning under a language. %1$s is the name of the model. -->
+    <string name="models_whisper_language_not_covered"><xliff:g id="model" example="Whisper Small">%1$s</xliff:g> cannot transcribe this language. It produces wrong words. Download a model that covers this language.</string>
+    <!-- Under a language whose model the user selected. %1$s is the model name. -->
+    <string name="models_whisper_language_pinned"><xliff:g id="model" example="Whisper Small">%1$s</xliff:g>, your selection</string>
+    <!-- Under a language whose model the app selected. %1$s is the model name. -->
+    <string name="models_whisper_language_auto"><xliff:g id="model" example="Whisper Small">%1$s</xliff:g>, automatic selection</string>
+    <!-- Under a language that no model can be told to expect, so every model must
+         recognise it from the speech. %1$s is the name of that language. -->
+    <string name="models_whisper_language_detect_only">No model accepts <xliff:g id="language" example="Bangla">%1$s</xliff:g> as an input, so every model must recognise it from your speech. A model can select a similar language instead and write correct sentences in the wrong language. The Turbo and the Large v3 models make this mistake least often.</string>
+    <!-- Opens the dialog that selects the model for one language. -->
+    <string name="models_whisper_change_action">Change</string>
+    <string name="models_whisper_routing_info">Voice typing uses the language of the layout that you type on. The app tells the model which language to expect. This applies to a model that is built for one language, and to a multilingual model that accepts a language input. The model does not guess the language from a short clip.</string>
+
+    <!-- Dialog that selects the model for one language. %1$s is the name of
+         that language, for example "German". Language names are not translated. -->
+    <string name="models_whisper_routing_dialog_title">Model for <xliff:g id="language" example="German">%1$s</xliff:g></string>
+    <!-- Under the "Automatic" option. %1$s is the model the app uses now. -->
+    <string name="models_whisper_routing_current">Currently <xliff:g id="model" example="Whisper Small">%1$s</xliff:g></string>
+    <!-- The four states of one model in that dialog. %1$s is the language name. -->
+    <string name="models_whisper_option_not_covered">This model does not cover <xliff:g id="language" example="German">%1$s</xliff:g></string>
+    <string name="models_whisper_option_single">This model handles <xliff:g id="language" example="German">%1$s</xliff:g> only</string>
+    <string name="models_whisper_option_forced">The app tells this model to expect <xliff:g id="language" example="German">%1$s</xliff:g></string>
+    <string name="models_whisper_option_auto_detect">This model detects the language itself</string>
+
+    <!-- Header of the full catalogue while it is open. %1$d is how many models
+         the catalogue shows. -->
+    <plurals name="models_whisper_catalog_open">
+        <item quantity="one">All %1$d model</item>
+        <item quantity="other">All %1$d models</item>
+    </plurals>
+    <!-- The same header while the catalogue is closed. %1$d is the same number. -->
+    <plurals name="models_whisper_catalog_closed">
+        <item quantity="one">Show all %1$d model</item>
+        <item quantity="other">Show all %1$d models</item>
+    </plurals>
+
+    <string name="models_whisper_no_size_match">No model has that size.</string>
+    <string name="models_whisper_group_any_language_title">Any language</string>
+    <string name="models_whisper_group_one_language_title">Built for one language</string>
+    <!-- "Tiny", "Medium" and "Large" name the model size classes. They come
+         from :core:voice. Translate them the same way here. -->
+    <string name="models_whisper_sizes_info">The sizes go from Tiny to Large. A larger model is more accurate, but it downloads slower and transcribes slower. The Medium and Large models use almost one gigabyte of memory while they run. A model that is built for one language is better at that language than a multilingual model of the same size. A single language model appears here after you turn on its language on the Languages screen.</string>
+
+    <!-- Chips beside a model name. %1$s is a list of language names, already
+         joined with commas. Language names are not translated. -->
+    <string name="models_whisper_chip_used_for">Used for <xliff:g id="languages" example="English, German">%1$s</xliff:g></string>
+    <!-- Chip on a model that the app can tell which language to expect. -->
+    <string name="models_whisper_chip_language_forced">Language set by the app</string>
+
+    <!-- The lines under an open model row. They join into one paragraph.
+         %1$s in each one is a list of language names, joined with commas. -->
+    <string name="models_whisper_detail_covers">This model covers <xliff:g id="languages" example="English, German">%1$s</xliff:g>.</string>
+    <string name="models_whisper_detail_all_yours">This model handles all of your languages.</string>
+    <string name="models_whisper_detail_missing">This model does not cover your <xliff:g id="languages" example="German">%1$s</xliff:g>.</string>
+    <string name="models_whisper_detail_translate">This model can translate speech to English.</string>
+    <!-- Shown on a whisper.cpp model's expanded row. "Your own words" are the
+         words the user listed for dictation to listen for and their dictionary. -->
+    <string name="models_whisper_detail_cpp">It listens for your own words, keeps to the languages you dictate in, shows the words while it works on them, and takes up to two minutes at a time.</string>
+    <string name="models_whisper_detail_fallback">The app uses this model for the languages that you did not select a model for.</string>
+
+    <!-- ===== On-device AI: the local model screen ===== -->
+
+    <string name="models_llm_account_title">Hugging Face account</string>
+    <string name="models_llm_token_label">Access token</string>
+    <!-- Hint in the empty token field. Gemma is the name of a model family. -->
+    <string name="models_llm_token_hint">Only the gated models need this token, for example some Gemma models</string>
+    <string name="models_llm_get_token_action">Get a token</string>
+
+    <string name="models_llm_yours_title">Your models</string>
+    <string name="models_llm_empty">No model is on your device yet. Download one below to use AI offline.</string>
+
+    <string name="models_llm_available_title">Available to download</string>
+    <string name="models_llm_catalog_info">The best models are at the top, not the smallest ones. A model at the top writes better, but the download is bigger, the answer is slower, and it needs more memory. A gated model needs a Hugging Face account. Add your token above, then accept the licence on the model page one time.</string>
+
+    <!-- The second list of models, run by llama.cpp. GGUF is the file format
+         and llama.cpp the engine; both stay in Latin letters. -->
+    <string name="models_llm_gguf_title">GGUF models (llama.cpp)</string>
+    <string name="models_llm_gguf_info">These models run on llama.cpp, a second engine that runs any GGUF file. With Compute set to GPU, they use the GPU on a phone with a Snapdragon chip (an Adreno GPU), and the CPU on other phones. The models that read pictures download a second file, the projector, with them. The models above, which run on LiteRT-LM, stay the default. Each file is checked against the one the catalogue names before you can use it.</string>
+    <!-- Under a model row. %1$s is the engine name, llama.cpp. -->
+    <string name="models_llm_runtime_label">Runs on <xliff:g id="runtime" example="llama.cpp">%1$s</xliff:g></string>
+    <string name="models_llm_llama_module_missing_info">llama.cpp is an extra part of the keyboard that downloads when you first need it. Download it to use GGUF models.</string>
+    <string name="models_llm_llama_module_installing_info">Downloading llama.cpp…</string>
+    <string name="models_llm_llama_module_metered_body">llama.cpp is a separate download of a few megabytes.</string>
+
+    <string name="models_llm_import_title">Import your own</string>
+    <string name="models_llm_import_info">You can import any LiteRT-LM model in a .litertlm file or a .task file, and any GGUF model, which llama.cpp runs. For example, a model that you converted yourself or downloaded in a browser. For a GGUF model that reads pictures, also select its mmproj file. You can select both files at the same time.</string>
+    <string name="models_llm_import_action">Import model file</string>
+    <string name="models_llm_importing_label">Importing…</string>
+
+    <string name="models_llm_compute_title">Compute</string>
+    <!-- CPU and GPU name the two compute backends. They stay in English. -->
+    <string name="models_llm_compute_info">The GPU option is experimental. The app changes to the CPU automatically if the GPU does not start, or if a model stops during an answer. The GPU memory is much smaller than the system memory, so a large model frequently needs the CPU. Select CPU here if the GPU continues to fail. GGUF models use only an Adreno GPU, the GPU in Snapdragon chips. If a GGUF model already ran on the CPU, the GPU starts to work for it after the keyboard restarts.</string>
+
+    <!-- Below the Compute choices, only on a phone whose chip has an NPU
+         build. NPU, GPU and CPU stay in English. %1$s lists the model names,
+         for example "Gemma 3 1B, Gemma 3 270M". -->
+    <string name="models_llm_compute_npu_info">NPU runs a model on the AI accelerator of your phone. It needs a build of the model for the chip of your phone, and only some models have one: <xliff:g id="models" example="Gemma 3 1B, Gemma 3 270M">%1$s</xliff:g>. When Compute is NPU, Download gets that build. Other models, and a model that fails on the NPU, run as they do with GPU. The NPU build only runs on the NPU.</string>
+    <!-- Buttons on a model row that get the other file of a model. %1$s is the download size. -->
+    <string name="models_llm_get_npu_build_action">Get the NPU build, <xliff:g id="size" example="689 MB">%1$s</xliff:g></string>
+    <string name="models_llm_get_standard_build_action">Get the standard build, <xliff:g id="size" example="584 MB">%1$s</xliff:g></string>
+    <!-- Under a model row when its NPU build is on the phone. -->
+    <string name="models_llm_npu_build_label">NPU build on this phone</string>
+
+    <!-- Model storage. %1$s is how much space the models use. -->
+    <string name="models_llm_storage_info">Models use <xliff:g id="size" example="2.6 GB">%1$s</xliff:g> of storage on your device. The app keeps them in private app storage. A download continues from where it stopped if you cancel it or lose the connection.</string>
+    <!-- %1$s is how much space files of old models still use. -->
+    <string name="models_llm_orphan_info"><xliff:g id="size" example="584 MB">%1$s</xliff:g> belongs to models that are no longer in the catalogue. You cannot select them.</string>
+
+    <!-- Subtitle of one model row. %1$s is the parameter count, for example
+         "2B". %2$s is the download size. %3$s is what the model is good for,
+         and it comes from :core:intelligence. -->
+    <string name="models_llm_row_subtitle"><xliff:g id="parameters" example="2B">%1$s</xliff:g>, <xliff:g id="size" example="2.6 GB">%2$s</xliff:g>. <xliff:g id="about">%3$s</xliff:g></string>
+    <!-- Added to that subtitle when the device has less memory than the model asks for. -->
+    <string name="models_llm_row_too_big">This model can be too large for your device.</string>
+
+    <!-- Screen reader text for the lock beside a gated model. -->
+    <string name="models_llm_gated_desc">This model needs a Hugging Face token</string>
+    <!-- The model the app answers with now. -->
+    <string name="models_in_use_label">In use</string>
+    <!-- Screen reader text for the tick beside that model. -->
+    <string name="models_selected_desc">Selected</string>
+    <!-- Button that makes a downloaded model the one the app answers with. -->
+    <string name="models_use_action">Use this model</string>
+    <string name="models_llm_needs_token">Add your Hugging Face token above to download this model.</string>
+    <!-- Opens the Hugging Face page of the model, where the licence is. -->
+    <string name="models_llm_open_model_page_action">Open the model page</string>
+    <!-- The licence identifier is inserted as is (Apache-2.0, Gemma Terms of Use). -->
+    <string name="models_llm_row_license">Licence: <xliff:g id="license" example="Apache-2.0">%1$s</xliff:g></string>
+    <string name="models_llm_license_action">Licence and model page</string>
+
+    <!-- Errors while the app imports a model file that the user selected. -->
+    <string name="models_llm_import_error_no_name">The app cannot read the name of the file.</string>
+    <string name="models_llm_import_error_gguf_only">This build runs GGUF models only. LiteRT-LM files (.litertlm, .task) need the Google Play or GitHub build.</string>
+    <string name="models_llm_import_error_not_a_model">This is not a model file. The app needs a .litertlm file, a .task file or a GGUF file.</string>
+    <!-- %1$s is the size of the file the user selected. -->
+    <string name="models_llm_import_error_no_space">There is not enough storage for this file of <xliff:g id="size" example="2.6 GB">%1$s</xliff:g>.</string>
+    <string name="models_llm_import_error_open">The app cannot open the selected file.</string>
+    <string name="models_llm_import_error_move">The app cannot move the imported file into place.</string>
+
+
+    <string name="models_whisper_fallback_title">Model for other languages</string>
+    <string name="models_whisper_fallback_subtitle">Used when a language has no model of its own</string>
+    <string name="models_whisper_fallback_info">You can pin a model to each language in the list below. This is the one used for every language you have not pinned. Automatic picks the best downloaded model that covers the language you are typing in, which is usually what you want; choose a model here if you would rather always use the same one.</string>
+    <string name="models_whisper_fallback_auto">Automatic</string>
+    <!-- Compute on the Offline Whisper engine screen: where the GGML (whisper.cpp) models run. -->
+    <string name="models_whisper_compute_title">Compute</string>
+    <string name="models_whisper_compute_auto">Automatic</string>
+    <string name="models_whisper_compute_cpu" translatable="false">CPU</string>
+    <string name="models_whisper_compute_gpu" translatable="false">GPU</string>
+    <string name="models_whisper_compute_subtitle">Where the GGML models run. Automatic uses the GPU for Base and larger models</string>
+    <!-- %1$s is the name the GPU driver gives, e.g. "QUALCOMM Adreno(TM) 740". -->
+    <string name="models_whisper_compute_subtitle_named">Automatic uses the <xliff:g id="gpu" example="QUALCOMM Adreno(TM) 740">%1$s</xliff:g> for Base and larger models</string>
+    <string name="models_whisper_compute_no_gpu">This phone has no GPU that whisper.cpp can use, so the models run on the CPU</string>
+    <string name="models_whisper_compute_failed">The GPU did not run Whisper on this phone, so the models run on the CPU. Select GPU to try again</string>
+    <string name="models_whisper_compute_info">This applies to the GGML models only. The LiteRT models always run on the CPU. The GPU reads speech faster on phones with a Qualcomm Snapdragon chip (an Adreno GPU), mostly with the larger models, where reading a phrase takes the most time. Other GPUs are not used. The first use of the GPU after an install or update can take some seconds while the GPU prepares. If the GPU does not start, has not enough memory for the model, or stops during a phrase, the app gives that phrase to the CPU, and from then on the CPU runs the model on this phone. Select GPU again to try it again. Automatic keeps the Tiny models on the CPU, which is about as fast for them.</string>
+</resources>

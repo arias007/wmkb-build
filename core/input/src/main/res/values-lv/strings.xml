@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">Lejupielādētais fails ir bojāts. Tā kontrolsumma nesakrīt. Mēģiniet lejupielādēt vēlreiz.</string>
+    <string name="core_input_cjk_download_error_http">Serveris atgrieza HTTP statusu %1$s.</string>
+    <string name="core_input_cjk_download_error_network">Lejupielāde neizdevās. Pārbaudiet savienojumu un mēģiniet vēlreiz.</string>
+    <string name="core_input_cjk_download_error_network_detail">Lejupielāde neizdevās: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">Jūsu ierīcē nav pietiekami daudz vietas. Vispirms atbrīvojiet nedaudz vietas.</string>
+    <string name="core_input_cjk_download_error_truncated">Savienojums tika pārtraukts lejupielādes laikā. Nospiediet Atsākt, lai turpinātu.</string>
+    <string name="core_input_cjk_download_error_unavailable">Šī pakotne vēl nav pieejama.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">Radikālo kodu tabula Hanzi rakstzīmēm, 29 000 rakstzīmju. Tastatūrai ir nepieciešama šī pakotne Cangjie un Quick izkārtojumiem.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Cangjie (倉頡) vārdnīca</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Kana lasījumi no mozc, 1,08 miljoni ierakstu, aptuveni 42 MB. Tastatūrai šī pakotne ir nepieciešama japāņu valodas konvertēšanai.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Japāņu kana uz kanji vārdnīca</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Džutpina lasījumu tabula hanzi rakstzīmēm, 163 000 ierakstu. Tastatūrai šī pakotne ir nepieciešama kantoniešu valodas konvertēšanai.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Kantoniešu valodas Jyutping vārdnīca</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Kuri vārdi seko kuriem, skaitīti no ķīniešu tīmekļa un ziņu tekstiem. Nāk komplektā ar Piņjiņa vārdnīcu. Ar to iniciāļi, piemēram, wbxh, vispirms dod 我不喜欢, nevis divus nesaistītus vārdus.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Ķīniešu vārdu pāri</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Hanu hieroglifu zīmes un frāzes no CC-CEDICT, 120 000 ierakstu. Tastatūrai ir nepieciešama šī pakotne ķīniešu valodas konvertēšanai.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Ķīniešu piņjiņa vārdnīca</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Frāzes no OpenCC, 50 000 ierakstu, aptuveni 1 MB. Kad ir ieslēgtas tradicionālās rakstzīmes, tastatūra to izmanto, lai uzrakstītu vārda pareizo formu, piemēram, 頭髮, nevis 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Tradicionālo rakstzīmju frāžu tabula</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">Hanzi rakstzīmju vilkumu secības tabula. Tastatūrai šī pakotne ir nepieciešama vilkumu izkārtojumam.</string>
+    <string name="core_input_cjk_pack_stroke_title">Ķīniešu vilcienu (笔画) vārdnīca</string>
+    <string name="core_input_double_pinyin_custom_label">Pielāgots</string>
+    <string name="core_input_double_pinyin_off_label">Izslēgts (pilns Piņjiņs)</string>
+    <string name="core_input_im_note_candidates">Dažiem taustiņiem šī metode sniedz izvēles iespēju sarakstu. Tastatūra vienmēr izmanto pirmo izvēli.</string>
+    <string name="core_input_im_note_missing_files">Šie faili netika atlasīti, tāpēc to daļa trūkst: %1$s. Lai tos iekļautu, importējiet vēlreiz un atlasiet tos kopā.</string>
+    <string name="core_input_im_note_module">Šī metode izmanto spraudni, piemēram, Anthy, ko tastatūra nevar palaist. Taustiņi, kas to izmanto, šeit neko nedara.</string>
+    <string name="core_input_im_note_other_method">Šī metode piešķir dažus taustiņus citai ievades metodei. Šī daļa šeit nedarbojas.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">Lietotne nevar nolasīt %1$d pareizrakstības noteikumu, tāpēc tā to izlaiž.</item>
+        <item quantity="other">Lietotne nevar nolasīt %1$d pareizrakstības noteikumus, tāpēc tā tos izlaiž.</item>
+    </plurals>
+    <string name="core_input_im_note_space">Šī metode izmanto atstarpes taustiņu kā taustiņu, piemēram, tonim. Šeit atstarpes taustiņš vienmēr ievada atstarpi.</string>
+    <string name="core_input_im_note_truncated">Tabula ir ļoti liela, tāpēc lietotne saglabāja tikai tās pirmo daļu.</string>
+    <string name="core_input_im_note_unused_files">Lietotne neizmantoja šos failus: %1$s.</string>
+    <string name="core_input_im_refused_broken">Failā ir kļūda, tāpēc lietotne to nevar nolasīt: %1$s</string>
+    <string name="core_input_im_refused_empty">Failā nav nekā, ar ko rakstīt.</string>
+    <string name="core_input_im_refused_no_dictionary">Shēmai ir nepieciešama tās vārdnīca. Importējiet vēlreiz un atlasiet arī %1$s.</string>
+    <string name="core_input_im_refused_not_method">Lietotne to nevar nolasīt kā ievades metodi. Tā nolasa .cin tabulas, Rime shēmas un vārdnīcas (.schema.yaml, .dict.yaml), kā arī m17n .mim failus.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">Lietotne nolasīja šo kā .cin tabulu ar %1$d ierakstu. Ievadiet kodu, pēc tam izvēlieties rakstzīmi no ieteikumu joslas.</item>
+        <item quantity="other">Lietotne nolasīja šo kā .cin tabulu ar %1$d ierakstiem. Ievadiet kodu, pēc tam izvēlieties rakstzīmi no ieteikumu joslas.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">Lietotne to nolasīja kā m17n ievades metodi ar %1$d kārtulu. Taustiņi raksta tekstu, kamēr jūs rakstāt.</item>
+        <item quantity="other">Lietotne to nolasīja kā m17n ievades metodi ar %1$d kārtulām. Taustiņi raksta tekstu, kamēr jūs rakstāt.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">Lietotne to nolasīja kā Rime shēmu ar %1$d vārdnīcas ierakstu. Ievadiet zilbes, pēc tam izvēlieties vārdus no ieteikumu joslas.</item>
+        <item quantity="other">Lietotne to nolasīja kā Rime shēmu ar %1$d vārdnīcas ierakstiem. Ievadiet zilbes, pēc tam izvēlieties vārdus no ieteikumu joslas.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">Lietotne to nolasīja kā Rime kodu tabulu ar %1$d ierakstu. Ievadiet kodu, pēc tam izvēlieties rakstzīmi no ieteikumu joslas.</item>
+        <item quantity="other">Lietotne to nolasīja kā Rime kodu tabulu ar %1$d ierakstiem. Ievadiet kodu, pēc tam izvēlieties rakstzīmi no ieteikumu joslas.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Mozc sistēmas vārdnīca ar tās savienojuma izmaksām, segmentētāju un ieteikumu filtru. Mozc dzinis konvertē ar šo; iebūvētais dzinis to neizmanto.</string>
+    <string name="core_input_mozc_pack_title">Mozc vārdnīca</string>
+    <string name="core_input_rime_pack_base_subtitle">Pieturzīmes, simboli, vārdu biežuma tabula un vienkāršotā un tradicionālā konvertācija, ko izmanto katra RIME shēma. Lejupielādēts ar pirmo shēmu.</string>
+    <string name="core_input_rime_pack_base_title">RIME pamati</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">RIME Zhuyin shēma uz standarta Dachen taustiņu izkārtojuma ar Terra Pinyin vārdnīcu.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">RIME piektās paaudzes Cangjie shēma, rakstzīmes un frāzes.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Liels, mūsdienīgs vienkāršotās ķīniešu valodas vārdu krājums Pinyin, ar Double Pinyin un 9 taustiņu variantiem. Tā kompilēšana aizņem minūti vai vairāk.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">Rime-cantonese shēma kantoniešu valodai ar tās vārdu un frāžu sarakstiem.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">RIME paša Piņjiņa shēma ar vilcienu shēmu, pēc kuras tas meklē rakstzīmes.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Japāņu rokraksta modelis</string>
+    <string name="core_input_zinnia_pack_subtitle">Tegaki projekta modelis zinnia — bezsaistes rokraksta atpazīšanas rīks, kas nolasa ķīniešu un japāņu valodu tur, kur ML Kit to nespēj.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Vienkāršotās ķīniešu valodas rokraksta modelis</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Tradicionālās ķīniešu valodas rokraksta modelis</string>
+</resources>

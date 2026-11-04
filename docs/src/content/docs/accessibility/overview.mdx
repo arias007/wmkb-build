@@ -1,0 +1,159 @@
+---
+title: "Accessibility"
+description: "TalkBack support, gesture pass-through, and options that make typing easier."
+sidebar:
+  label: "Overview"
+  order: 1
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import KeyCap from '@components/KeyCap.astro';
+import Shot from '@components/Shot.astro';
+
+The Accessibility screen gathers the options into four groups: vision, motion, screen reader and touch. Turn on only what you need, whether that's a colour filter, a screen-reader mode or a slower press-and-hold delay. Two related settings live on their own screens, key size on **Layout & size** and feedback on **Key press**, and this screen has a link straight to each.
+
+<PhoneFrame caption="The Vision group at the top of the Accessibility screen.">
+  <Shot id="accessibility/vision-group" alt="The Vision group at the top of the Accessibility screen." />
+</PhoneFrame>
+
+## Typing with a screen reader
+
+<SettingsPath path="Accessibility / Screen reader / TalkBack support" />
+
+**TalkBack support** has four modes. Each one changes how a key responds to your touch, as well as what gets spoken:
+
+<PhoneFrame side caption="TalkBack support set to Gestures, with the four modes shown in the picker.">
+  <Shot id="accessibility/screen-reader-modes" alt="TalkBack support set to Gestures, with the four modes shown in the picker." />
+</PhoneFrame>
+
+- **Off.** Keys carry no spoken label at all. As far as a screen reader is concerned, the keyboard is invisible.
+- **Labels.** Every key gets a spoken name, punctuation included (`.` reads as "period", `@` as "at sign", and so on through the symbol set). Typing still happens by direct touch. Use this mode if you turn a screen reader on only occasionally, or if you drive the keyboard with switch access instead of touch.
+- **Explore.** The standard screen-reader keyboard pattern. Slide your finger across the keys to hear each one, then double-tap to type it (or lift, depending on your screen reader). This changes behavior only while a screen reader is running touch exploration. With none running, the keyboard types normally either way.
+- **Gestures.** Keeps the keyboard's own touch handling active even while a screen reader runs, so the <KeyCap>Space</KeyCap> cursor slide, the <KeyCap>⌫</KeyCap> word-swipe, glide typing and handwriting all keep working. Each key still announces itself when you touch it, and types only when you lift your finger. This mode needs the pass-through service described below. Without that service it behaves exactly like Explore. The Play Store build doesn't offer this mode: it carries no accessibility service, so the choice would only ever be Explore. Install from GitHub or F-Droid if you rely on it.
+
+In every mode, a screen reader says each key once, by its own name. A letter is said as itself, "b" rather than "b, button"; the keys that do something other than type (<KeyCap>Space</KeyCap>, <KeyCap>⌫</KeyCap>, <KeyCap>Shift</KeyCap>, <KeyCap>Enter</KeyCap>) are still called buttons. The small long-press hint drawn in a key's corner is never spoken, so moving across the letters doesn't read out the symbols they hold (`@`, `$`, `(` and so on) in between.
+
+### Holding a key with a screen reader
+
+In Labels, Explore and Gestures, holding a key does what it does without a screen reader. With TalkBack, find the key, then double-tap and hold it. Holding a letter opens its popup of accents and symbols, and holding <KeyCap>⌫</KeyCap> deletes one character after another until you let go. The popup is read out: the first alternate is said as it opens, and each one after it as you slide your finger onto it. Lift to type the one you last heard. In Gestures mode an ordinary touch and hold works the same way.
+
+A screen-reader hold is slower than a sighted one, so the [press and hold delay](#touch-accommodations) and the key repeat delay both go up to 3 seconds.
+
+:::note
+A fresh install already has **Explore** turned on, not Off: every key speaks its name from the first launch, and the drag-to-hear, lift-to-type gesture is there the moment a screen reader is.
+:::
+
+### The gesture pass-through service
+
+Setting TalkBack support to **Gestures** reveals an extra row asking you to turn on the "WM Keyboard gestures" accessibility service, and the mode falls back to Explore-by-touch behavior until you do.
+
+This service is deliberately narrow. It requests no accessibility events and can't read anything on screen. Its only job is to tell Android to route touches on the key grid straight to the keyboard, instead of through the screen reader's touch exploration. The carve-out covers the key grid alone, and only while it is on screen. The suggestion strip, the toolbar and every panel stay explorable by your screen reader as usual, as does the rest of the device. When the keyboard goes away the carve-out goes with it, and it stands aside while you dictate, so your screen reader's own swipes work over the voice controls and the keys under them. The service never turns touch exploration on by itself, and it takes effect only while a screen reader you already enabled is exploring by touch.
+
+<PhoneFrame caption="The extra row that appears when TalkBack support is set to Gestures, before the service is granted.">
+  <Shot id="accessibility/gestures-service-required" alt="The extra row that appears when TalkBack support is set to Gestures, before the service is granted." />
+</PhoneFrame>
+
+Tap that row. A disclosure sheet explains what the service does and what it can't do. Tap **Open system settings** on it to reach Android's own Accessibility screen, then turn the service on there like any other. Turning it back off is safe at any time, as is leaving it off. The keyboard falls back to Explore-by-touch for as long as TalkBack support is set to Gestures.
+
+## Seeing the keys clearly
+
+<SettingsPath path="Accessibility / Vision" />
+
+**Colour vision** applies a real-time correction, not a simulation, for red-green and blue-yellow colour blindness. **Deutan** and **Protan** cover the two red-green types, and deuteranopia is by far the more common of them. **Tritan** covers the blue-yellow type. **Grey** removes colour from the keyboard entirely. The filter reshuffles the keyboard's palette so hues that would otherwise collapse into each other stay distinguishable. It runs after your theme resolves, so it works the same way over a built-in theme, a custom theme, or dynamic colour.
+
+**High contrast keys** replaces your theme's key and board colors with a flat black-or-white pair, and forces every label to the opposite extreme, the small long-press hint in each key's corner included. Any gradient, background image or animation is dropped while it's active, and so are a theme's own suggestion strip and navigation bar fills, since those two bars have to take the flat board for the label contrast to hold. Your theme's accent color is kept, so <KeyCap>Shift</KeyCap> and an active toolbar tool still stand out against the flat board. If your theme's key shape is **None**, the keys come back as plain rounded ones while this is on. Because it overrides your theme's colors, the theme gallery and the theme editor show a note while it's on, with a button that turns it off. Turn it off if you'd rather set your own key and hint colors in a custom theme.
+
+**Key outlines** draws a border around every key, and around the background behind every toolbar tool. It helps when a key's fill and the board sit close in brightness, as on a translucent theme or one carrying a background image. A theme that already defines its own key border or tool outline keeps what it has. If the key shape is **None**, the keys come back as rounded ones while this is on, so there's an edge to outline. Tools are skipped when their background is switched off (tool circle radius at 0), because there's nothing there to outline.
+
+**Bold key labels** thickens the letters drawn on each key, and the long-press hint in its corner. To make the hints bigger as well, raise **Key hint font size** in [Appearance](/reference/settings/appearance/).
+
+**Readable font** is a one-tap shortcut to Atkinson Hyperlegible, a typeface the Braille Institute designed to keep easily-confused characters visually distinct: capital I, lowercase l and the digit 1, or capital O and zero. Turning it off restores the keyboard's default font. To pick a different face entirely, or import your own, use the **Keyboard font** row below it. That row opens the same font browser covered in [Fonts](/themes/fonts/).
+
+**Text size** scales the labels on the keys from 70% to 200% of normal, defaulting to 100%. It affects the glyphs only. To make the keys themselves bigger, use [Size, position & one-handed use](/typing/size-position/) instead.
+
+<PhoneFrame caption="High contrast keys turned on: a flat board with maximum-contrast labels.">
+  <Shot id="accessibility/high-contrast-live" alt="High contrast keys turned on: a flat board with maximum-contrast labels." />
+</PhoneFrame>
+
+<PhoneFrame caption="The Deutan colour vision filter applied to a keyboard theme.">
+  <Shot id="accessibility/color-vision-live" alt="The Deutan colour vision filter applied to a keyboard theme." />
+</PhoneFrame>
+
+:::note
+High contrast keys strips background images, gradients and animation from whatever theme is active while it's on. See [Image backgrounds](/themes/backgrounds/) for what that means for a photo background specifically.
+:::
+
+## Reducing motion
+
+<SettingsPath path="Accessibility / Motion / Reduce motion" />
+
+**Reduce motion** turns off the toolbar's sliding and scaling transitions, animated theme backgrounds, the blinking text cursor, the microphone's pulse ring while dictating, and the transitions inside the settings app itself, including the way a row, a theme card or a photo tile grows into the screen it opens. With it on, the screen appears. On the keyboard it also stills the smaller motions: a panel (emoji, clipboard, a tool) growing out of the button or tool name that opened it, words on the keys blooming out of their key, the word card and synonyms sheet growing in, the caret magnifier, recognised handwriting dissolving, offered stickers peeking up, hotkey hint badges, a new password scrambling into place, the find-and-replace count ticking, apps in the launcher arriving one by one, media artwork and titles crossfading, the camera's flash, the KDE Connect touchpad ripple, typing test results counting up with confetti for a new best, the emoji tab bar sliding to the tab you tap, the long-press popup growing out of its key, the board sliding into and out of one-handed mode, the floating keyboard fading up, and clips and snippets gliding into place as you pin or delete them. The same goes for the settings app's smaller motions: rows fading and sliding into place as you add or delete them (words, snippets, plugins, sticker packs, notes and the other lists), a dragged key in the layout editor lifting and settling into its seat, the sticker editor's tools and cut-outs fading over, the backup button's tick, a spinner fading into the button it was waiting on, the ring and tick moving to the theme card you pick, and the statistics, storage and network activity charts growing in, their numbers counting up and sliding to new values when you change period or clear something. With Reduce motion on, each of these happens at once.
+
+It deliberately leaves in place any feedback that tells you something: the key-preview bubble, the pressed-key color, the glide-typing trail. Removing those would make the keyboard harder to use, not easier. The cursor and microphone ring stay visible. They hold still instead of animating.
+
+[Power saving mode](/typing/power-saving/) can turn this same behavior on as a side effect of its own "Animations" toggle, in its "Effects to drop" group. Motion can therefore end up reduced even if you never touched this toggle yourself. Check there too if you're expecting animation and not seeing it.
+
+The keyboard also follows the device's own **Remove animations** (Android's Accessibility screen, or `Animator duration scale` in developer options). While that is on, the keyboard behaves as if Reduce motion were on, and it writes nothing to this switch. Turn the system setting back off and your own choice returns untouched.
+
+Four switches below it let you keep motion in general but drop or add one kind of it. **Animate panels** (on by default) is the panel growing out of the button or tool name that opened it. **Animate text selection** (on by default) is the highlight sliding while you select and the selection bar's buttons coming in one by one. **Animate language switch** (off by default) flips the keys that change when you switch language. **Animate grammar and translate results** (off by default) slides an applied grammar fix into place and fades in the part of a translation that changed. Reduce motion overrides all four.
+
+<SettingsPath path="Accessibility / Motion / Classic press-and-hold popup" />
+
+**Classic press-and-hold popup** (off by default) brings back the alternates popup as it used to be. It opens where the key is rather than with its first alternate over the key, the alternates run in reading order instead of spreading out on both sides of the first, the highlight sits on whatever alternate is under your finger rather than a row above it, nothing grows as you aim, and the highlight jumps from one alternate to the next instead of sliding. Choosing works the same: slide to an alternate and lift.
+
+## Plain settings rows
+
+<SettingsPath path="Accessibility / Settings app / Icons in settings" />
+
+Every setting in the settings app has a coloured icon beside its name, down to the colours and sliders in the theme editor and the rows of the layout editor, and every screen heading has one too. Lists of your own things, such as languages, layouts, words and packs, go without, since one icon repeated down a list would say nothing its names do not. Turn off **Icons in settings** for plain rows that show only words, as in earlier versions of the app. Some people find a list of words easier to scan than a column of coloured icons.
+
+When you flip the switch, the icons on the Accessibility screen shrink away (or grow back) and the words slide over to fill the space. Every other screen opens in the new style. With **Reduce motion** on, the change happens at once.
+
+This changes only the settings app. The keyboard, its toolbar and the Tools list keep their icons, because there an icon is how you tell one tool from another.
+
+## Faster settings screens
+
+<SettingsPath path="Accessibility / Settings app / Screen transitions" />
+
+When you open a setting, its icon and name move up into the heading of the screen it opens. That motion costs more than it looks: while it's on, every settings screen is laid out twice each time anything on it changes, and a slower phone can show that as a stutter when a screen opens or scrolls. Turn off **Screen transitions** and screens open with the plain sideways slide instead, laid out once.
+
+It's on by default, and a phone that runs the settings smoothly has no reason to turn it off. **Reduce motion** already turns these transitions off, so with that on this switch changes nothing. The keyboard itself isn't affected either way.
+
+## Keyboard test button
+
+<SettingsPath path="Accessibility / Settings app / Keyboard test button" />
+
+Every settings screen has a small keyboard button in its bottom corner, above the screen's own button if it has one. It opens a text field with the real keyboard under it, so you can try a change without leaving the screen. If the button gets in your way, turn off **Keyboard test button** and it's gone from every screen. See [Trying a change](/reference/settings/#trying-a-change) for how the field behaves.
+
+## Touch accommodations
+
+<SettingsPath path="Accessibility / Touch" />
+
+**Ignore repeated presses** discards a second press of the *same* key when it lands inside a window after the first. The window runs from 0 ms (off, so every press registers) up to 500 ms, and defaults to off. It's aimed at hand tremor or spasticity, where one intended tap shouldn't turn into two characters. Only a repeat of the same key is filtered, so typing two different keys quickly is never blocked. Set the window too high and it starts eating deliberate double letters like "ll" or "ee".
+
+**Press and hold delay** controls how long you hold a key before its alternate-character popup opens, from 100 ms up to 3000 ms, defaulting to 300 ms. Raise it if you trigger the popups by accident, or if you hold keys with a screen reader and need time to hear the key first. Lower it if holding a key feels sluggish.
+
+Two links round out the group. **Key size and spacing** opens [Size, position & one-handed use](/typing/size-position/) for taller keys and wider gaps. **Haptics and sound** opens the Key press screen, covered on [Sound & vibration](/typing/feedback/), for feedback on every press.
+
+<PhoneFrame caption="The Touch group: ignore repeated presses and press and hold delay.">
+  <Shot id="accessibility/touch-group" alt="The Touch group: ignore repeated presses and long-press delay." />
+</PhoneFrame>
+
+## One-handed and floating keyboards
+
+<SettingsPath path="Layout & size / One-handed, split and floating" />
+
+Shrinking or repositioning the keyboard is also a motor-accessibility tool, even though the controls live on the **Layout & size** screen rather than here. One-handed mode shrinks the whole keyboard toward the left or right edge, and it's off by default. Portrait and landscape each keep their own width and height. Portrait defaults to 78% width and landscape to 55%, both at 100% height, docked to the right. Landscape starts narrower because a landscape keyboard is wide enough that 78% would barely help. A floating keyboard detaches into a resizable, draggable panel instead, starting at 320dp wide. Split keyboard pushes the two halves apart with a gap between them, for two-thumb reach on a wide screen.
+
+Full detail on all three, plus their sliders, lives on [Size, position & one-handed use](/typing/size-position/).
+
+## Details and edge cases
+
+- **Explore and Gestures only change anything while a screen reader is actually running.** With TalkBack (or another screen reader) off, all four TalkBack support modes type the same way, by direct touch. Leaving it on Gestures costs you nothing day to day.
+- **The pass-through service reads nothing.** It requests zero accessibility event types and never inspects screen content. Its one capability is redirecting touches on the key grid, and only while another accessibility service is already exploring by touch.
+- **Colour vision correction, not simulation.** It doesn't show you what a colour-blind person sees. It adjusts the keyboard's own colours so a colour-blind person can tell them apart.
+- **High contrast keys overrides the active theme's colours while it's on**, including gradients, background images and animation. Turning it off restores the theme exactly as it was.
+- **Text size here is separate from the key-preview popup's font scale.** Scaling one doesn't scale the other.
+- **Ignore repeated presses only ever blocks a repeat of the same key.** It can't slow down typing by blocking different keys pressed close together.
+- **Reduced motion can be on even if you never touched the toggle.** Two things switch it on from outside: [Power saving mode](/typing/power-saving/) dropping animations, and the device's own **Remove animations** setting. Neither one writes to the Reduce motion switch, so turning either off gives you your own choice back.

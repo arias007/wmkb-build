@@ -1,0 +1,383 @@
+---
+title: "Sound packs"
+description: "The .wmsoundpack format: many recordings of one keyboard, one played per key press and one when you lift, with optional per-role and per-key sounds."
+sidebar:
+  order: 3
+---
+
+import SettingsPath from '@components/SettingsPath.astro';
+import KeyCap from '@components/KeyCap.astro';
+
+A **sound pack** is a key-press sound with more than one recording in it.
+
+A plain key sound addon (`type: "sound"`) is one audio file, and for a
+synthesized blip that's exactly right. It can't express what a recording of a
+real keyboard sounds like, though. A real board never makes the same noise
+twice, a <KeyCap>Space</KeyCap> bar with stabilizers under it doesn't sound like
+a letter key, and a mechanical switch makes a second, quieter noise when your
+finger comes off it. A pack carries all three.
+
+If you want to install one, see
+[Sound &amp; vibration](/typing/feedback/#sound-packs). This page is for
+publishing them.
+
+## The file
+
+A pack is a ZIP archive named `*.wmsoundpack`:
+
+```
+cherrymx-blue-abs.wmsoundpack
+├── pack.json
+└── sounds/
+    ├── 1.wav
+    ├── 2.wav
+    └── …
+```
+
+One rule is enforced: `pack.json` sits at the archive root. The importer looks
+for the entry named exactly `pack.json` and reads nothing else as a manifest.
+
+Putting the audio under `sounds/` is convention, not a rule. A manifest path is
+matched against the exact entry name first and then against the bare file name,
+so `sounds/1.wav` and a flat `1.wav` both resolve.
+
+Nothing in the archive is ever treated as a path. The importer reads each entry
+into memory under its name as a *map key*, then writes the bytes to a file it
+names itself (`s000.snd`, `s001.snd`, …), rewriting `pack.json` to match. So a
+`../` in an entry name or in the manifest resolves to bytes already in memory or
+to nothing at all, and has nowhere to go either way.
+
+## `pack.json`
+
+```json
+{
+  "format": "wmkeyboard-sound-pack",
+  "version": 1,
+
+  "id": "cherrymx-blue-abs",
+  "name": "CherryMX Blue ABS",
+  "author": "Monkeytype contributors",
+  "packVersion": "1.0.0",
+  "description": "Cherry MX Blue clickies under ABS keycaps.",
+
+  "gain": 1.0,
+
+  "press": ["sounds/1.wav", "sounds/2.wav", "sounds/3.wav"],
+  "release": ["sounds/1-up.wav", "sounds/2-up.wav", "sounds/3-up.wav"],
+
+  "roles": {
+    "space":    { "press": ["sounds/space-1.wav"] },
+    "enter":    { "press": ["sounds/enter-1.wav"] },
+    "delete":   { "press": ["sounds/delete-1.wav"] },
+    "modifier": { "press": ["sounds/mod-1.wav"], "gain": 0.8 }
+  },
+
+  "keys": {
+    "a": { "press": ["sounds/a-1.wav", "sounds/a-2.wav"] },
+    "b": { "press": ["sounds/b-1.wav"] }
+  }
+}
+```
+
+| Field | Required | What it does |
+| --- | :-: | --- |
+| `format` | ✔ | Must be exactly `wmkeyboard-sound-pack`. Anything else is refused. |
+| `version` | ✔ | Format version, currently `1`. A higher number is refused rather than guessed at. |
+| `id` | ✔ | `[A-Za-z0-9._-]+`, at most 64 characters. Informational on the device: the store mints its own `pack_<timestamp>` id and keys the install on that. Keep it stable anyway, because your own tooling and the repository manifest both read it. |
+| `name` | ✔ | What the user sees in the picker. |
+| `press` | ✔ | At least one path. The default key-down recordings. A pack that fills [`keys`](#per-key-sounds) instead may leave this out, but then keys it didn't name make the system click. |
+| `author` | | Shown on the row. |
+| `packVersion` | | Semver, informational. The addon entry's `version` is what drives updates. |
+| `description` | | |
+| `gain` | | `0.0`–`1.0`, default `1.0`. See [Gain is a cut](#gain-is-a-cut). |
+| `release` | | Key-**up** recordings, played when the finger lifts. See [Key-down and key-up](#key-down-and-key-up). |
+| `roles` | | Per-key-role overrides, below. |
+| `keys` | | Per-**key** overrides, keyed by the text the key types. See [Per-key sounds](#per-key-sounds). |
+
+Unknown top-level fields are ignored, so a later version can add one without
+breaking today's app.
+
+## Key-down and key-up
+
+A keystroke has two halves, and a mechanical keyboard makes a noise at both: the
+switch actuating under the finger, and the stem returning when it comes off.
+`press` is the first, `release` is the second, and the keyboard plays each at the
+moment it happens. Hold a key down and the second sound waits for you.
+
+An empty `release` means silence on key-up, not a fallback to `press`. Most
+sounds worth typing on are one event (a beep, a pop, an interface click), and
+inventing a second one for them would double every keystroke. So a pack with no
+`release` behaves exactly as packs did before the field existed.
+
+Roles and the split are independent. A role can fill `press`, `release`, both or
+neither, and each field falls back to the pack's top-level list on its own,
+so a `space` role that names only `press` still plays the pack's default key-up.
+
+The two lists are drawn from independently: `press[3]` and `release[3]` are not
+a pair and are never treated as one, so the lists can be different lengths.
+
+The user can turn key-up sounds off in
+<SettingsPath path="Key press / Key press sound / Key release sound" />, which appears only
+once a pack that has them is selected. A switch that does nothing visible is
+worse than no switch. It reads as the feature being broken rather than as the
+pack not having it.
+
+### Recording them
+
+Record the two halves as separate files. Some source recordings hold both halves
+in one file, which is what [the monkeytype packs](#a-worked-example) had. To
+split one, cut at the quietest point between the two events. Do not cut at a
+fixed delay: the gap varies by tens of milliseconds between recordings of the
+same switch, and a fixed cut clips the key-up's attack on the fast ones.
+
+Do not normalize the halves separately. A key-up is quieter than its
+key-down, a tenth to a half the level on real switches. Level the two to match
+and typing sounds like two keyboards.
+
+## Roles
+
+A role is *which kind of key was pressed*. There are five:
+
+| Role | Which keys |
+| --- | --- |
+| `default` | Everything not listed below: letters, digits, punctuation, emoji. Not written under `roles`; it's the top-level `press` and `release`. |
+| `space` | The <KeyCap>Space</KeyCap> bar. |
+| `enter` | <KeyCap>Enter</KeyCap> and the action key. |
+| `delete` | <KeyCap>⌫</KeyCap>, including its held repeat and the delete-swipe, plus forward delete. |
+| `modifier` | <KeyCap>Shift</KeyCap>, <KeyCap>?123</KeyCap>, <KeyCap>ABC</KeyCap>, the globe, emoji and the rest of the non-typing furniture. |
+
+**A role that's absent falls back to the default, per field.** A pack that
+defines only `roles.space.press` still plays its top-level `press` everywhere
+else, and its top-level `gain` for the spacebar. A pack with no `roles` at all
+behaves exactly like a one-sound addon that happens to have variants.
+
+Unknown role names are ignored rather than refused, so a pack written against a
+future version that adds one still installs and still works.
+
+The grouping is by *what a key sounds like under a finger*, not by what it does.
+Emoji, language switch and the layer keys are all `modifier` because they sit in
+the same bottom-row furniture as shift, and anyone who recorded that row
+recorded them together.
+
+## Per-key sounds
+
+`keys` addresses individual keys, keyed by the text the key types:
+
+```json
+"keys": {
+  "a":  { "press": ["sounds/ah.wav", "sounds/ah2.wav"] },
+  "b":  { "press": ["sounds/buh.wav"] },
+  "1":  { "press": ["sounds/one.wav"] },
+  ".":  { "press": ["sounds/dot.wav"], "gain": 0.7 },
+  "th": { "press": ["sounds/thuh.wav"] }
+}
+```
+
+This is what an [Animalese](https://github.com/joshxviii/animalese-typing-desktop)-style
+voice pack needs: a syllable per letter rather than one click for the whole
+board.
+
+The key is the committed text, lowercased. `"a"` covers both `a` and a
+shifted `A`. That is one recording, because the keyboard has no way to say which of two
+it meant and nobody has asked for two. Multi-character keys work too, which is
+the point of keying on text rather than on a key code: a key that commits `th`,
+or a Bengali conjunct, is one entry.
+
+Only keys that type something can be addressed this way. Shift, the layer
+switches, the globe and the tools commit no text, and all of them are
+already reachable through `roles`, which is the grouping anyone can realistically
+record.
+
+Resolution is three deep and per field:
+
+```
+keys[<what the key types>]  →  roles[<the key's role>]  →  the top-level set
+```
+
+So `keys.a.press` with no `keys.a.release` plays the pack's default key-up under
+<KeyCap>a</KeyCap>, and a key no `keys` entry names is untouched. A pack that
+names three letters and nothing else is legal: those three sound like themselves
+and the rest of the board sounds like the default set.
+
+`gain` resolves the same way: a key's own, then its role's, then the pack's.
+
+**Ship a top-level `press` anyway.** A pack may be per-key only, and one is
+accepted, but a key it never named then falls back past the roles to nothing and
+the keyboard plays the system click instead. For a voice pack that means every
+punctuation mark your `keys` map missed. One generic recording under `press`
+covers them.
+
+Per-key sets get their own [variant](#variants) cursor, one per key, so
+alternating between two letters never makes either repeat itself.
+
+<KeyCap>Space</KeyCap>, <KeyCap>Enter</KeyCap> and <KeyCap>⌫</KeyCap> have roles
+*and* commit text (a space, a newline). The role is the right way to reach them
+and what every existing pack uses; a `keys` entry for `" "` would win over
+`roles.space`, which is almost never what you meant.
+
+## Variants
+
+Every `press` and `release` is a list, and one entry is picked per keystroke.
+
+The pick is uniform random with one rule on top: **the same variant never plays
+twice in a row** while the list has more than one entry. Each role tracks its own
+last-played index, per half, so alternating between the spacebar and letters
+never makes either repeat, and a run of key-ups doesn't depend on how many
+letters were typed between them.
+
+That rule is a deliberate difference from
+[monkeytype](https://monkeytype.com), whose own player picks uniformly across
+the whole list. On a three-variant set that repeats the previous sample about a
+third of the time, and a repeat is the exact thing variants exist to prevent.
+
+### Limits
+
+| Limit | Value | Why |
+| --- | --: | --- |
+| Audio files per pack | 512 | Every file is decoded into the `SoundPool` when the pack is selected. Key-up recordings count toward it. |
+| Keys named under `keys` | 256 | Enough for a cased alphabet with digits and punctuation, or an Indic script with its conjuncts. |
+| Variants per list | 32 | Per list, so one key or role can't eat the whole file budget. |
+| Bytes per audio file | 4 MB | Same ceiling a single-sound addon gets. |
+| Archive entries | 1024 | Counted while reading, so a directory of junk stops the import. |
+| Unzipped bytes per pack | 16 MB | Counted while extracting, not read from the ZIP header, so a zip bomb stops mid-stream. |
+| Installed packs | 20 | |
+
+**The byte cap is the one that binds.** 16 MB is the real memory ceiling,
+because the selected pack is decoded whole, and it's what the file count is
+sized against rather than the other way round: 16 MB holds several hundred
+keystroke-length recordings with room to spare. A pack that wants 512
+four-megabyte files is refused on bytes, as it always was.
+
+Going over the entry count, the unzipped size or the installed-pack count fails
+the install with a message naming the limit.
+
+The file, key and variant counts don't. A list longer than 32 keeps its first 32
+entries, a sample past the 512th file is dropped, a `keys` map past its 256th
+entry is truncated, and a single recording over 4 MB is dropped on its own. The
+pack still installs with what fits, so check the counts on the detail page after
+publishing a large pack.
+
+Per-key sets are resolved last, after the board-wide set and the roles, so a
+pack that runs out of file budget loses the keys it named rather than the set
+every other key falls back to.
+
+One thing that *isn't* fatal is a `press` entry naming a file that isn't in the
+archive. That variant is dropped and the rest of the pack is kept, because
+losing one of ten switch recordings isn't worth refusing the other nine. A pack
+with nothing left after that is refused.
+
+## Audio files
+
+WAV, OGG and MP3, checked by header rather than by extension.
+
+**Ship WAV** unless the pack is big enough for that to hurt. These are 20–150 ms
+recordings, so compression saves a few hundred kilobytes and costs the thing
+that matters: MP3 carries encoder delay, and the decoder emits a block of
+silence before the first real sample. On a 30 ms click that's a tenth of the
+sound arriving late on every keystroke. WAV decodes to PCM with nothing in front
+of it.
+
+Mono is enough. `SoundPool` plays both channels of a stereo file at the same
+volume anyway, so stereo doubles the size for a difference nobody hears through
+a phone speaker.
+
+### Gain is a cut
+
+`SoundPool.play` takes a volume of `0.0`–`1.0` and cannot amplify. `gain` is
+therefore an attenuation, never a boost, and is clamped into that range on load.
+A pack that ships quiet samples and asks for `"gain": 2.0` gets `1.0` and stays
+quiet.
+
+Normalize loud at build time and use `gain` to pull a role back down: a spacebar
+that recorded hotter than the letters, say. The user's own key-sound volume
+multiplies with it, so it's for balance *within* a pack, not for setting the
+pack's overall level.
+
+## Publishing one
+
+In a repository manifest, a pack is `type: "sound_pack"`:
+
+```json
+{
+  "id": "cherrymx-blue-abs",
+  "type": "sound_pack",
+  "name": "CherryMX Blue ABS",
+  "version": "1.0.0",
+  "author": "Monkeytype contributors",
+  "description": "Cherry MX Blue clickies under ABS keycaps. Ten recordings.",
+  "tags": ["switch", "cherry", "clicky"],
+  "path": "packs/cherrymx-blue-abs.wmsoundpack",
+  "sha256": "…",
+  "sizeBytes": 262144,
+  "previews": ["previews/cherrymx-blue-abs.png"],
+  "minAppVersion": 4,
+  "license": "GPL-3.0-or-later",
+  "licenseFile": "LICENSE"
+}
+```
+
+Notes:
+
+- **`minAppVersion` won't rescue the oldest builds.** An app that has never
+  heard of `sound_pack` reads the type as unknown and drops the whole entry
+  while decoding the manifest, before any version check runs, so the pack
+  doesn't appear for those users. Set the floor anyway: a build that does know
+  the type shows the addon and refuses the install with a note saying to update
+  the app.
+- The manifest `id` and the `pack.json` `id` don't have to match, and the app
+  keys the install on the manifest's. Making them the same is still sensible.
+- The addon entry's `version` drives update detection.
+
+Installing from a repository does not select the pack. It lands on the device
+and a one-question dialog offers to switch to it, the same as a theme or a
+single sound. Opening a `.wmsoundpack` file from the sound-pack screen does
+select it right away and plays it once, because there the user picked that one
+file and nothing else.
+
+The detail page offers a **Preview** before installing, which extracts up to
+eight variants of each half and gives every one its own Play row. One button that
+played a random variant would turn "how much does this vary?" into a guessing
+game, and that question is the whole reason to pick a pack over a single sound.
+
+## A worked example
+
+[wasi-master/wmkeyboard-monkeytype-sounds](https://github.com/wasi-master/wmkeyboard-monkeytype-sounds)
+is a complete repository of 26 packs built from monkeytype's sound files, with
+the importer, validator and preview generator that produced them. It's a
+reasonable thing to fork.
+
+It's also a worked example of the key-up cut: monkeytype plays one file per key
+press, so its switch recordings hold the return in the same file 100–200 ms
+behind the press, and the importer finds that boundary and cuts there. Which
+sets get cut is written down by hand, because a detector can't tell a key coming
+back up from the second half of a punch. *Fist Fight* trips it on all eight
+recordings, so that pack is deliberately left whole.
+
+## LeanType packs
+
+The importer also reads the `.zip` packs LeanType publishes, so a pack made for
+that keyboard needs no conversion. It's for importing, not publishing: a
+repository entry should still be a `.wmsoundpack`. The manifest is translated
+like this:
+
+| LeanType | WM Keyboard |
+|---|---|
+| `keypress.default` | top-level `press` |
+| `keypress.space`, `keypress.delete`, `keypress.return` | the `space`, `delete` and `enter` roles |
+| `keypress.shift`, `keypress.symbol` | both into the `modifier` role, at shift's volume |
+| `defaultMasterVolume` multiplied by an event's `volume` | `gain` |
+| `mode: "single"` | the first file only |
+| `mode: "random"`, `mode: "cycle"` | every file, played by the rule under [Variants](#variants) |
+
+A `schemaVersion` above 1 is refused as a newer format.
+
+## Known gaps
+
+- **Keys are addressed by text, not by key code.** Mechvibes-style packs name
+  scan codes. A phone keyboard has no stable ones, because the same cell types a
+  different letter on the next layout, so `keys` names what a key *types*
+  instead. The upshot is that one entry covers that character on every layout
+  that can type it, which is usually what you want and occasionally not.
+- **One recording per key, not per case.** `"a"` and `"A"` are the same entry.
+- **Key-up is a sound-pack feature only.** The single-file `sound` addon type and
+  the built-in styles have one sound each, and there's no second file to play.

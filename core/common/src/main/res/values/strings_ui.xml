@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Screen text owned by :core:common.
+
+  The shared single-word vocabulary lives in strings.xml next to this file. This
+  file holds the sentences: the prominent-disclosure dialogs that run before a
+  permission request, and the crash report screen.
+
+  The disclosure copy is also what Google Play's Data safety form has to agree
+  with, so keep every translation as truthful as the English. Do not soften a
+  sentence that says what the app reads.
+-->
+<resources>
+
+    <!-- ================================================================== -->
+    <!-- Disclosure dialog chrome. Shown around every disclosure below.     -->
+    <!-- ================================================================== -->
+
+    <!-- Dismiss button of the disclosure dialog. Leaves without asking for anything. -->
+    <string name="common_disclosure_not_now">Not now</string>
+
+    <!-- Added under the disclosure text when Android will no longer show the
+         system permission dialog, so the only route left is the settings screen. -->
+    <string name="common_disclosure_blocked_body">Android does not show this request any more, because you refused the permission before. You can still turn it on from the app settings screen.</string>
+
+    <!-- ================================================================== -->
+    <!-- Permission disclosures. One title and one body per permission.     -->
+    <!-- ================================================================== -->
+
+    <string name="common_permission_microphone_title">Microphone access for voice typing</string>
+    <string name="common_permission_microphone_body">WM Keyboard records audio only after you press the microphone button, and only while you speak. The recording goes to the speech recognition service that your Android settings select. That service turns the recording into text. On most phones that service is Google\'s, and Google can process the audio on its servers. An offline model keeps the audio on your device. The keyboard does not store the audio. Only the speech recognition service receives it. Voice typing is optional. Everything else on the keyboard works without it.</string>
+
+    <string name="common_permission_camera_title">Camera access for the camera tool</string>
+    <string name="common_permission_camera_body">WM Keyboard opens the camera only while the camera tool is on screen. You can take a photo and put it into the app that you type in. The keyboard writes the photo to its own private storage. The keyboard gives the photo to that app when you insert it. The keyboard uploads no photo, and sends no photo to the developer. The tool is optional.</string>
+
+    <string name="common_permission_location_title">Location access for the location tool</string>
+    <string name="common_permission_location_body">WM Keyboard reads where your phone is only when you tap Locate me in the location tool, or Use my location for the weather and compass tools. It reads one position and then stops. The keyboard does not track you and does not read your location in the background. It keeps the position in memory for a short time, and saves it only if you save a place. To show an address, the keyboard sends the position to the address server that you selected. You can turn the address off. Nothing goes to the developer. On the next screen, Only this time works: the keyboard asks again next time. The tool is optional.</string>
+
+    <string name="common_permission_calendar_title">Calendar access for the calendar tool</string>
+    <string name="common_permission_calendar_body">WM Keyboard reads your events. The calendar tool lists them, and you can insert one as text. If you let the AI read your calendar, it reads the days the model asks for, and those events go to the AI provider you chose. Otherwise the keyboard reads your calendar only while the calendar tool is open, and your events stay on your device. This permission does not let the keyboard change your calendar. The tool is optional.</string>
+
+    <string name="common_permission_calendar_write_title">Add and change calendar events</string>
+    <string name="common_permission_calendar_write_body">WM Keyboard adds, changes and deletes events in your calendar when you save or delete one in the Calendar tool, and when the AI asks to add one and you have set it to add events directly. It writes nothing on its own: every change is one you made or approved. The events stay in your calendar on your device, and your calendar account syncs them as it always does. This is optional; without it, the tool opens your calendar app with the event filled in for you to save.</string>
+
+    <string name="common_permission_contact_names_title">Contacts access for name suggestions</string>
+    <string name="common_permission_contact_names_body">WM Keyboard reads the names in your contacts. The names then complete as you type, and autocorrect does not change them. The keyboard keeps the names in memory while it runs, and writes them to no file. The names never leave your device. The setting is optional. It stays off until you turn it on.</string>
+
+    <string name="common_permission_contact_emails_title">Contacts access for email suggestions</string>
+    <string name="common_permission_contact_phones_title">Contacts access for call and message chips</string>
+    <string name="common_permission_contact_phones_body">WM Keyboard reads the names and phone numbers in your contacts. When you type the name of a contact, the keyboard offers to call or text that person. A tap opens your phone app or your messages app with the number filled in. The keyboard does not make the call or send the message. The keyboard keeps the names and numbers in memory while it runs, and writes them to no file. They never leave your device. The setting is optional. It stays off until you turn it on.</string>
+    <string name="common_permission_contact_emails_body">WM Keyboard reads the email addresses in your contacts. When you type the start of an address, the keyboard offers the full address. The keyboard keeps the addresses in memory while it runs, and writes them to no file. The addresses never leave your device. The setting is optional. It stays off until you turn it on.</string>
+    <string name="common_permission_contact_guests_title">Guest suggestions from contacts</string>
+    <string name="common_permission_contact_guests_body">WM Keyboard reads the names and email addresses in your contacts while you add guests to a calendar event, so typing a name offers that person\'s address. It reads them only while the guest box is open, keeps nothing afterwards, and the addresses never leave your device. This is optional; without it, type each guest\'s full address.</string>
+
+    <!-- Android has no screenshots-only permission, so this asks for the whole
+         photo library. The body has to say so. Do not narrow it in translation. -->
+    <string name="common_permission_images_title">Photo access for screenshots in the clipboard</string>
+    <string name="common_permission_images_body">WM Keyboard watches for new screenshots and puts them in the clipboard. You can insert one without leaving the app you are in. Android has no permission for screenshots alone, so it gives access to all of your photos. The keyboard looks only at new screenshots. The images stay on your device. The keyboard inserts an image only when you press it. The setting is optional. It stays off until you turn it on.</string>
+    <string name="common_permission_gallery_title">Photos and videos for the gallery tool</string>
+    <string name="common_permission_gallery_body">The gallery tool shows your photos and videos inside the keyboard, so you can send them without leaving the app you are in. The keyboard reads the library only while the tool is open. Nothing leaves your device until you press Send. Then the app you are typing in gets a copy of what you picked and nothing else, with the location removed by default. You can also choose only some photos, or refuse and pick each time with the system picker.</string>
+    <!-- The grant covers everything on shared storage. The body has to say so. Do not narrow it in translation. -->
+    <string name="common_special_access_all_files_title">All files access, for the file manager</string>
+    <string name="common_special_access_all_files_body">This grant lets the keyboard read and change every file in your phone\'s shared storage, because Android has no narrower one for browsing files. The keyboard uses it only for its file manager, which lets you pick a file for a tool without leaving the app you are in. It looks only at the folders you open and the names you search for, and changes a file only when you rename, move, copy or delete it there. No file leaves your device unless you send it with a tool. You can refuse, or switch this off later in Android\'s settings. Without it, picking a file opens Android\'s own picker.</string>
+    <string name="common_permission_nearby_title">Nearby devices, for a direct link</string>
+    <string name="common_permission_nearby_body">The Send files tool can move a file to a phone next to you with no Wi-Fi network between you: one phone opens a Wi-Fi, the other joins it. Android asks for the Nearby devices permission before an app can open or join a Wi-Fi this way. The keyboard uses it only while you press Receive here or Scan a code, and only for that link. It reads no position and keeps nothing. The link is optional: devices on the same Wi-Fi need no permission at all.</string>
+    <string name="common_permission_nearby_body_location">The Send files tool can move a file to a phone next to you with no Wi-Fi network between you: one phone opens a Wi-Fi, the other joins it. On this Android version, opening or joining a Wi-Fi this way sits behind the location permission, because a Wi-Fi name can hint at where you are. The keyboard asks for it only for that link, reads no position and keeps nothing. The link is optional: devices on the same Wi-Fi need no permission at all.</string>
+
+    <!-- Only asked for on Android 9 and older, where saving to the gallery needs it. -->
+    <string name="common_permission_storage_title">Storage access to save to your gallery</string>
+    <string name="common_permission_ankidroid_title">AnkiDroid access for Look up</string>
+    <string name="common_permission_tasks_opentasks_title">OpenTasks access for the to-do list</string>
+    <string name="common_permission_tasks_tasks_org_title">Tasks.org access for the to-do list</string>
+    <string name="common_permission_tasks_body">WM Keyboard keeps its to-do list and one task list in the task app the same: the tasks, their steps, their ticks and their due dates, both ways. The permission covers every task list in the app. The keyboard reads the app\'s lists only so you can pick one, and it reads and writes only the list you picked. The keyboard sends nothing anywhere. DAVx5, if you use it, syncs that list with your own CalDAV server. Without this permission, the to-do list stays on this phone.</string>
+    <string name="common_permission_ankidroid_body">WM Keyboard adds the words you send from the Look up card to a deck in AnkiDroid: the word, its reading, its meaning and the sentence it was in. AnkiDroid\'s permission covers your whole AnkiDroid collection. The keyboard uses it only to make its own deck and note type, to check whether a word is already there, and to add the word you asked for. Nothing leaves your device. Without this permission, the card opens AnkiDroid\'s note editor for you to save the note there.</string>
+    <string name="common_permission_storage_body">On Android 9 and older, the keyboard needs storage permission to save an image to your gallery. The old Android permission also covers reading your storage. The keyboard writes only the image that you ask it to save. The keyboard reads nothing and uploads nothing. Newer Android versions do not need this permission.</string>
+
+    <!-- ================================================================== -->
+    <!-- Special access. The three grants that only a system Settings       -->
+    <!-- screen can give: notification access, usage access, and the        -->
+    <!-- accessibility service.                                             -->
+    <!-- ================================================================== -->
+
+    <string name="common_special_access_notifications_title">Notification access for media controls</string>
+    <string name="common_special_access_notifications_body">Android gives the play, pause and skip controls only to apps with notification access. The media tool needs that access. For this tool the keyboard\'s notification listener reads no notification, no title, no sender and no content. It exists only so that Android lets the tool see the current media session. The same access also powers the optional one-time code chip in Typing settings. Only while that is turned on does the listener read notification text, on your device, to find a verification code. The keyboard stores nothing, and nothing leaves your device. The system screen you are about to open describes the full access that this permission can give. This app uses it for these two features and nothing else. Both are optional.</string>
+    <string name="common_special_access_notification_codes_title">Notification access for one-time codes</string>
+    <string name="common_special_access_notification_codes_body">When a verification code arrives in a notification, the keyboard can offer it as a chip above the keys, one tap from typed. To see the code arrive, the keyboard needs notification access. While the feature is on, the keyboard reads the text of incoming notifications on your device to find a code. The code is kept only in memory, only for a few minutes, and is never sent anywhere. The same access also powers the optional media tool, which reads no notification content. The system screen you are about to open describes the full access that this permission can give. This app uses it for these two features and nothing else. Turn the feature off and the keyboard stops reading notifications at once.</string>
+
+    <string name="common_special_access_usage_title">Usage access for clipboard source apps</string>
+    <string name="common_special_access_usage_body">With usage access, the keyboard records which app was in front when you copied something. It shows that app when you press and hold the clip. The keyboard reads the front app only at the moment of a copy. It does not read your history or your time in an app. The keyboard keeps the answer with the clip, on your device only. Nothing about your app usage leaves your device. The setting is optional. It stays off until you turn it on.</string>
+
+    <!-- The install permission, on builds that update themselves from GitHub. -->
+    <string name="common_special_access_install_updates_title">Permission to install updates</string>
+    <string name="common_special_access_install_updates_body">To install a new version, Android must let this app install apps. The app uses that permission for one thing: a new version of itself that you downloaded from the project releases page and pressed Install on. Before it asks, the app compares the file against the checksum in the release and against the key this install is signed with. Android shows its own confirmation for the first update. The app never installs another app, and it never installs anything you did not press Install on.</string>
+
+    <!-- "Display over other apps", for the floating keyboard button (issue #374). -->
+    <string name="common_special_access_overlay_title">Display over other apps, for the keyboard button</string>
+    <string name="common_special_access_overlay_body">With this permission the keyboard can draw one small round button over other apps while the keyboard is closed. Tap the button and the keyboard opens, even on a screen with no text field, so you can send keys and shortcuts to that app. The button is the only thing the keyboard draws with this permission. It cannot see or read what is on screen, and it collects no data. Android\'s settings screen describes everything this permission allows. The keyboard uses it for this button and nothing else. The button is optional and stays off until you turn it on.</string>
+    <string name="common_special_access_exact_alarms_title">Exact alarms for the clock tool</string>
+    <string name="common_special_access_exact_alarms_body">With this permission, an alarm or a timer you set in the clock tool rings at the exact minute. Without it, the alarm still rings, but Android can delay it by some minutes while the phone sleeps. The keyboard uses it only for the alarms and timers you set. It reads nothing and collects no data. You can turn it off again at any time.</string>
+    <string name="common_special_access_full_screen_title">Ring screen for the clock tool</string>
+    <string name="common_special_access_full_screen_body">With this permission, a ringing alarm or timer shows its full screen, with Snooze and Dismiss, on top of the lock screen. Without it, the alarm still rings, and shows as a notification instead. The keyboard uses it only while one of your alarms or timers rings.</string>
+
+    <string name="common_special_access_accessibility_title">Accessibility service for keyboard gestures</string>
+    <string name="common_special_access_accessibility_body">This service keeps the keyboard gestures available while a screen reader runs. The gestures are the spacebar cursor slide, the backspace word swipe, glide typing and handwriting. Only an accessibility service can arrange this. The service subscribes to no accessibility events. It cannot read window content. It marks nothing but the keyboard\'s own key grid. It collects no data. Android\'s accessibility screen warns about the full power of this category. This service declares none of that power.</string>
+    <string name="common_special_access_split_screen_title">Accessibility service for split screen</string>
+    <string name="common_special_access_split_screen_body">Some phones open an app full screen when the keyboard asks for split screen. With this service on, opening an app in split screen from the app launcher, or opening a split screen pair, presses Android\'s own split screen switch first, the same one the Recents menu has, and the app then opens in the free half. Before pressing it, the service checks where the app windows are, to see whether split screen is already up. It never reads what is in them. It does nothing at any other time, does not watch what you type and keeps nothing. Android\'s accessibility screen warns about everything a service like this could do. This one only presses that switch when you ask for split screen.</string>
+    <string name="common_special_access_screen_content_title">Accessibility service for the floating button</string>
+    <string name="common_special_access_screen_content_body">With this service on, pressing Ask AI on the floating button reads the text of the app on screen once and opens an AI chat with that text attached. You see it before anything is sent, and you can remove it. Using Look up on the floating button and tapping a word reads the text under your finger once, to look the word up in your dictionaries. The service reads nothing at any other time. It skips password fields, performs no actions, does not watch what you type and keeps no copy. The chat goes to the AI provider you picked in the AI settings, or stays on the phone with an on-device model. Android\'s accessibility screen warns about everything a service like this could do. This one only reads the screen when you press the button. Without it, the AI button still opens a chat, just without the screen\'s text.</string>
+
+    <!-- ================================================================== -->
+    <!-- Crash report screen. Diagnostic builds only. It replaces the        -->
+    <!-- platform crash dialog and shows the stack trace instead.            -->
+    <!-- ================================================================== -->
+
+    <string name="common_crash_title">WM Keyboard stopped</string>
+    <string name="common_crash_body">This build shows crashes instead of hiding them. Copy or share the report below, and send it to the developer. The report says what failed, on which build and on which device. It contains nothing that you have typed.</string>
+
+    <!-- Opens the system keyboard picker. The keyboard is what crashed, so the
+         user may have no way to type until they change to another one. -->
+    <string name="common_crash_switch_action">Change keyboard</string>
+    <string name="common_crash_switch_error">This device cannot open the keyboard picker. Change the keyboard in the system settings.</string>
+
+    <string name="common_crash_email_action">Email the developer</string>
+
+    <!-- Title of the Android share sheet that this screen opens. -->
+    <string name="common_crash_share_chooser_title">Share crash report</string>
+
+    <string name="common_crash_copied">The report is on the clipboard.</string>
+    <string name="common_crash_clipboard_error">The app cannot reach the clipboard.</string>
+
+    <!-- "Copy" names the button on this screen: keep it the same as common_copy. -->
+    <string name="common_crash_share_error">No app on this device can share the report. Use Copy instead.</string>
+
+    <!-- "Copy" and "Share" name the buttons on this screen: keep them the same
+         as common_copy and common_share. -->
+    <string name="common_crash_email_error">This device has no mail app. Use Copy or Share instead.</string>
+
+    <!-- ================================================================== -->
+    <!-- Resize grips on the keyboard preview in the theme and layout       -->
+    <!-- editors. Dragging a corner makes the whole preview smaller.        -->
+    <!-- ================================================================== -->
+
+    <!-- Read by TalkBack for each of the two corner grips. -->
+    <string name="common_preview_scale_desc">Preview size</string>
+    <!-- How big the preview is now, as a share of its full size. Shown while dragging. -->
+    <string name="common_preview_scale_value">%1$d%%</string>
+    <!-- Accessibility actions on the grips. -->
+    <string name="common_preview_scale_smaller">Make preview smaller</string>
+    <string name="common_preview_scale_larger">Make preview larger</string>
+
+</resources>

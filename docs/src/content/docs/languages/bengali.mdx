@@ -1,0 +1,342 @@
+---
+title: "Bangla"
+description: "First-class Bangla: Avro-style phonetic typing, Khipro Classic and Dark, eight fixed layouts, and the spellings phonetic rules can't reach."
+sidebar:
+  order: 3
+---
+
+import KeyCap from '@components/KeyCap.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import PhoneFrame from '@components/PhoneFrame.astro';
+import Shot from '@components/Shot.astro';
+
+Bangla is one of only two languages that ship a dictionary and emoji keywords inside the app itself. English is the other, and Bangla is the only one of the two with a purpose-built phonetic engine on top. It ships eleven layouts: the phonetic Avro, the compositional Khipro Classic and Khipro Dark, and eight fixed ones, Probhat, Jatiya, BSTI, Baishakhi, Bornona, InScript, Mayabi, and Samsung. Adding Bangla turns on Avro, and the rest are a tap away on its own screen. A phone whose Android language list already includes Bangla gets it enabled from the first run. Type romanized Bangla and the keyboard converts it to script as you go, or pick one of the fixed keyboards if you'd rather type the script directly.
+
+<PhoneFrame caption={`Avro phonetic typing: "ami valo achi" commits as আমি ভালো আছি.`}>
+  <Shot id="languages/avro-lenient-spelling" alt="Avro phonetic typing: &quot;ami valo asi&quot; commits as আমি ভালো আছি." />
+</PhoneFrame>
+
+## Typing phonetically with Avro
+
+**Avro phonetic** is a fixed QWERTY grid underneath (every key is exactly where it is on the English layout) with a rule-based transliteration engine layered on top. Type a romanized syllable and it renders in Bengali script directly in the composing text, no separate conversion step: "ami" becomes আমি, "kolokata" becomes কলকাতা, "dhorrmo" becomes ধর্ম. The engine handles conjuncts, reph, khanda-ta, and the vowel/consonant context that decides whether a vowel is a standalone letter or a kar sign. All of that is automatic, so you type the sounds and leave the script mechanics alone.
+
+Where it goes further than a plain transliterator is lenient spelling. Bangla speakers write the same word several different ways in Latin letters (আছি gets typed "achi", "achhi" or "asi" depending on the person), and Avro takes them all. Two layers do that, in this order.
+
+First a list of about 14,000 romanized spellings, described under [Spellings the rules can't reach](#spellings-the-rules-cant-reach) below. It covers most of the everyday vocabulary, and a spelling it names is settled there and nowhere else, because the list outranks both the dictionary and the literal transliteration. Both `achi` and `asi` are on it, and they're listed separately: `achi` commits আছি, `asi` commits আসি.
+
+Anything the list has never heard of falls to a phonetic fold. Both your romanized input and every word in the Bangla dictionary are reduced to a lenient key where confusable sounds collapse (স/শ/ষ/ছ/চ all fold to the same sound, aspiration like "kh" or "bh" drops to "k"/"b", and so on), so an unlisted spelling still finds the dictionary word it sounds like. The dictionary lists the verb forms of chat Bangla too (বানাইছি, করতিছে, নিছিলাম, আসবিনি, দেখেনাই), so `ashbini` finds আসবিনি and `khujtese` finds খুঁজতেছে. The `s` people type for the ছ sound still gives ছ. Words sharing a key are phonetic siblings, and the most frequent sibling leads. Two things you wrote down are weighed before frequency, because the fold throws them away: a sibling that contradicts an "h" you actually typed is pushed down, and so is one that ends in ও when you typed no final o. The "ch" of চ and the "ph" of ফ are exempt, since those are ordinary English-influenced spellings rather than claims about aspiration.
+
+A sibling only takes the commit from the literal transliteration when it is at least twice as frequent. A near-tie leaves what the composing text already showed you, because a silent swap between two words of roughly equal currency reads as a bug rather than a correction. The exception is a literal that isn't a dictionary word at all: with nothing to protect, the siblings lead, and the composing text changes to the word that will go in as soon as the strip has ranked it, so what you see underlined is what Space writes. The literal transliteration is always in the suggestion strip as a fallback either way, so you can pick it if the substitution guesses wrong. To stop the substitution altogether, turn off **Correct to dictionary words** (see [Options](#options)).
+
+A word made of a known stem and a common ending is recognised as that word even when the list has never seen the whole. The ending comes off, the stem is read on its own, and the ending goes back onto that reading, so `chelegulo` is ছেলেগুলো from the stem ছেলে and `bondhuder` is বন্ধুদের. The endings are গুলো, গুলা, গুলি, গুলোর, গুলোকে, দের, দেরকে, খানা and খানি. The stem goes through the same fold and known spellings as any other word, and the whole then counts as a dictionary word for ranking and autocorrect rather than a bare letter-for-letter reading. It works on Avro and Borno alike.
+
+A mistyped spelling gets one more chance, and this one is autocorrect. `vako` has no reading of its own, but `valo` is one key away, and `valo` is ভালো. The keys you pressed are checked against the romanized spellings people write (the list above, plus the romanized word list if you've downloaded it), the way an English typo is checked against English words, and the nearby spellings are weighed by how often they're written and by the one or two words before them. The closest word goes on the strip, and a space writes it when the slip is small (the key next door, two letters swapped, one letter too many) and nothing else comes close. The composing text keeps showing what you typed until then, so words don't jump around as you spell them. Backspace right after the space puts the reading back. A word of under four letters, one that's already a known spelling, an English word and a word you've taught the keyboard are all left alone.
+
+:::note
+Neither layer is part of autocorrect, and neither is controlled by the autocorrect toggle. Avro's phonetic commit runs regardless of whether [Autocorrect](/smart/autocorrect/) is on or off. The fixed-spelling list has its own switch (see **Spellings** under [Options](#options) below). The phonetic fold has none.
+:::
+
+A few more of the rules worth knowing:
+
+| You type | You get | Why |
+|---|---|---|
+| `valo` or `bhalo` | ভাল | "bh" and "v" both fold to the "b" sound |
+| `valO` | ভালো | lowercase "o" is the inherent vowel and writes nothing; only capital "O" is ও/ো |
+| `kolokata` | কলকাতা | the explicit "o" between l and k breaks the conjunct that `kolkata` (no vowel between them) would form |
+| `korbo`, `bolchi` | করব, বলছি | two consonants only join where Bangla writes them as one letter, the same list desktop Avro uses; `kt` is ক্ত, but `rb` and `lch` stay apart |
+| `dhorrmo` | ধর্ম | reph is a double r, as on desktop Avro; the common words people spell with one r, like `dhormo`, are on the known-spellings list |
+| `onko` / `oncol` | অঙ্ক / অঞ্চল | "n" before k or c takes that letter's own nasal |
+| `amio` / `khaoa` | আমিও / খাওয়া | "o" straight after a written vowel is ও |
+| `bangla` / `songe` / `baNgali` | বাংলা / সঙ্গে / বাঙালি | ং joins nothing; before a vowel it is ঙ্গ, as on desktop Avro, and capital `Ng` is the bare ঙ |
+| `swasthyo` | স্বাস্থ্য | "w" after a consonant is a ব-ফলা join |
+| `wasi` | ওয়াসি | "w" anywhere else is ও |
+| `panjabi` | পাঞ্জাবি | "n" before "j" is ঞ |
+| `hoThaTH`, `hoThat` + a trailing backquote, or `hoThat,,` | হঠাৎ | `TH`, a backquote or a trailing hasant all spell khanda-ta (ৎ) |
+| `shyam` | শ্যাম | "y" after a consonant is a য-ফলা join |
+| `meye` | মেয়ে | "y" elsewhere is য়, not a join |
+| `yes` | ইয়েস | "y" at the start of a word is ইয় |
+| `kee` | কী | "ee" is ঈ, or ী after a consonant |
+| `aZp` | অ্যাপ | `aZ` is the অ্যা of English loanwords |
+| `rZab` | র‍্যাব | after a plain র, য-ফলা keeps the র whole; `karryo` still gives the reph of কার্য |
+| `ggan` | জ্ঞান | `gg` is the জ্ঞ conjunct |
+| `Bangla` | বাংলা | a capital that spells nothing of its own reads as its lowercase self |
+| `$` / `123` | ৳ / ১২৩ | currency and digits convert too |
+| `.` / `..` / `...` | । / `.` / `...` | a single dot is দাঁড়ি; two dots is a literal period, and three stay an ellipsis |
+
+Both of Avro's spellings for the marks work, and so do the ones Ridmik uses: ঁ is `^` or `qq`/`cb`, ঃ is `:` or `HH`, ৎ is `t` plus a backquote or `TH`, and the hasant is `,,` or `hs`. The `hs` form only fires after a consonant, where a hasant can actually go, so it never eats the h and s of a name like `ahsan`.
+
+### Avro key map
+
+Every key the engine reads, in one place. The same tables are in the app, under **Key map** on Bangla's own screen (see [Options](#options)).
+
+**Vowels.** The first form is the letter on its own (at the start of a word, or after another vowel). The second is the sign it becomes after a consonant.
+
+| Key | Letter | After a consonant |
+|---|---|---|
+| `o` | অ | nothing: the inherent vowel |
+| `a`, `A` | আ | া |
+| `i` | ই | ি |
+| `I`, `ee` | ঈ | ী |
+| `u`, `oo` | উ | ু |
+| `U` | ঊ | ূ |
+| `rri` | ঋ | ৃ |
+| `e`, `E` | এ | ে |
+| `OI` | ঐ | ৈ |
+| `O` | ও | ো |
+| `OU` | ঔ | ৌ |
+
+An `o` straight after another written vowel is ও, so `amio` is আমিও. An `a` straight after another written vowel glides with য়, so `kiamot` is কিয়ামত. A capital `A` is always a plain আ.
+
+**Consonants.** Two consonants in a row join into a conjunct with no extra key, but only where Bangla writes that pair as one letter: `kt` is ক্ত, `ndh` is ন্ধ, `st` is স্ত, while `rb`, `lch` and `kd` stay apart, so `korbo` is করব and `bolchi` is বলছি. It is the same list of joins desktop Avro uses. An `r`, `y` or `w` after a consonant always joins as a ফলা, and "n" before k, kh, c, ch or j becomes ঙ or ঞ. Type `o` between two consonants to keep them apart whatever the pair.
+
+| | | | | |
+|---|---|---|---|---|
+| `k`, `q` ক | `kh` খ | `g` গ | `gh` ঘ | `Ng` ঙ |
+| `c` চ | `ch` ছ | `j` জ | `jh` ঝ | `NG` ঞ |
+| `T` ট | `Th` ঠ | `D` ড | `Dh` ঢ | `N` ণ |
+| `t` ত | `th` থ | `d` দ | `dh` ধ | `n` ন |
+| `p` প | `ph`, `f` ফ | `b` ব | `bh`, `v` ভ | `m` ম |
+| `z` য | `r` র | `l` ল | `sh`, `S` শ | `Sh` ষ |
+| `s` স | `h` হ | `R` ড় | `Rh` ঢ় | `Y` য় |
+| `J` জ় | `kkh`, `kx` ক্ষ | `gg` জ্ঞ | `nj` ঞ্জ | |
+
+**Joins and signs.**
+
+| Key | Gives | Example |
+|---|---|---|
+| `y` after a consonant | ্য (য-ফলা) | `shyam` শ্যাম |
+| `y` at the start of a word | ইয় | `yes` ইয়েস |
+| `y` after a vowel | য় | `meye` মেয়ে |
+| `Z` | ্য, wherever it is | |
+| `w` after a consonant | ্ব (ব-ফলা) | `swasthyo` স্বাস্থ্য |
+| `w` anywhere else | ও, or ওয় before a vowel | `wasi` ওয়াসি, `we` ওয়ে |
+| `rr` before a consonant | র্ (reph) | `dhorrmo` ধর্ম |
+| `x` at the start of a word | এক্স | `xre` এক্সরে |
+| `x` anywhere else | ক্স | `bax` বাক্স |
+| `aZ`, `AZ` | অ্যা | `aZp` অ্যাপ |
+| `ng` | ং, or ঙ্গ before a vowel | `bangla` বাংলা, `songe` সঙ্গে; `Ng` for a bare ঙ, `baNgali` বাঙালি |
+| `^`, `qq`, `cb` | ঁ (চন্দ্রবিন্দু) | `ca^d` চাঁদ |
+| `:`, `HH` | ঃ (বিসর্গ) | `du:kho` দুঃখ |
+| `,,`, `hs` | ্ (hasant) | |
+| `TH`, or `t` then a backquote | ৎ | `hoThaTH` হঠাৎ |
+| a backquote between consonants | keeps them apart | `` k`s `` কস, where `ks` is ক্স |
+| `.` / `..` / `...` | । / `.` / `...` | |
+| `$`, `0` to `9` | ৳, ০ to ৯ | |
+
+A capital that isn't in these tables reads as its lowercase letter, so `B` is ব. Bangla has no q, so `q` and `Q` both type ক, the same as on Ridmik.
+
+### Spellings the rules can't reach
+
+Some words aren't spelled the way they sound, so a list of them is checked before the phonetic engine runs. A match there always wins over whatever the transliterator would have produced. Two kinds of word need this:
+
+- **English loanwords.** "Keyboard" is written কিবোর্ড and "chair" চেয়ার by convention, not by sound. Left to the rules, "table" would come out তাব্লে instead of টেবিল. About 2,400 of these are listed by hand.
+- **Banglish as people actually type it.** Chat spelling drops vowels wholesale, and no phonetic rule can put back a vowel that was never typed. `tmr` is তোমার, `amk` is আমাকে, `trpr` is তারপর. Colloquial and regional inflections like `boltiso` (বলতিছো) are in the same list, which covers about 12,000 spellings drawn from a corpus of real Bangla chat. So are about 950 words with a reph spelled with a single r, like `dhormo` (ধর্ম) and `porjonto` (পর্যন্ত), since the rules keep a single r apart the way desktop Avro does. Some of them come from people's comments on a Bangla tech forum ([BanglaTLit](https://github.com/farhanishmam/BanglaTLit)): common shorthand and misspellings like `plz` (প্লিজ), `tk` (টাকা) and `akon` (এখন).
+
+The list stays out of the way where the rules already spell a common Bangla word. `fire` is ফিরে, `nice` is নিচে and `make` is মাকে, as they are in Avro on a computer, and not the English word that happens to share the letters.
+
+| you type | you get | without the list |
+| --- | --- | --- |
+| `tmr` | তোমার | ত্ম্র |
+| `amk` | আমাকে | আম্ক |
+| `tmi` | তুমি | ত্মি |
+| `table` | টেবিল | তাব্লে |
+
+A listed spelling shows up in the composing text as soon as you finish typing it, not when you hit space: `tmr` reads তোমার at the r. That's the same answer the space would have committed, so nothing changes under you at the last moment.
+
+The list doesn't take a spelling away from a word the rules already write. Where the rules spell a word people use, that word comes first and the listed one sits next to it on the strip: `ta` is তা and then টা, `kot` is কত and then কোট, `dosh` is দশ and then দোষ. The exceptions are chat spellings that mean one word far more often than the other, such as `ase`, which stays আছে with আসে second.
+
+A capital that changes the letter also goes around the list and the dictionary, because you picked that letter on purpose: `moN` writes মণ whatever the list says about `mon`. A capital that spells nothing of its own, like the `M` in `Mon`, doesn't count.
+
+You can switch this off per language if you'd rather have the letter-for-letter reading (see **Spellings** under [Options](#options) below). See [Downloadable dictionaries](/languages/dictionaries/) for how Bangla's dictionary and these lists fit into suggestions generally.
+
+## Typing with Khipro
+
+**Borno phonetic** is the keymap of Codepotro's Borno keyboard, read by rules of WM Keyboard's own and ranked against the same word list as Avro, so the strip and Space behave as they do on Avro. It wears the same QWERTY grid, and turning it on next to Avro lets the globe key flip between them. The keys that differ from Avro are `c` for চ and `ch` for ছ, `z` for য, `y` after a consonant for য-ফলা and `w` for ব-ফলা, `kkh` for ক্ষ, `gg` for জ্ঞ, and `A` or `xx` for চন্দ্রবিন্দু. The reph takes `rr`, so `korrm` is কর্ম and `korm` is করম. `ng` is ং, and ঙ্গ before a vowel, so `bangla` is বাংলা and `ranga` is রাঙ্গা. Consonants join only where Bangla usually writes them together, and `n` becomes the nasal of the row it joins: `onk` is অঙ্ক, `onj` is অঞ্জ. Digits come out in Bangla and `$` is ৳.
+
+Holding `t` types ৎ, `l` types ঃ, `a` types ঁ and `g` types the hasant. `,,` types the hasant too, and `,.` and `,..` add a joiner after it. `/` after a consonant types the nukta, where Borno itself uses `./`. Two backslashes keep what's before them in English, so `facebook\\-er` is facebook-এর. Glide typing works as it does on Avro, against the Banglish word list. Borno's own language model isn't included: the suggestions, the context model and the optional neural readings are WM Keyboard's. A known stem keeps a common ending the way Borno's does, so `chelegulo` is ছেলেগুলো.
+
+**Khipro Classic** (ক্ষিপ্র), listed under the name the Khipro team gave it once Khipro Dark came out, is a compositional layout made by the [Khipro team](https://khipro.khiproteam.com/). It is not phonetic. Every key sequence has exactly one meaning, so the keyboard never guesses which word you meant: what you type is what you get, and the space bar commits it exactly as the composing text shows it. There is no known-spellings list and no dictionary substitution on this layout, and autocorrect never touches it. The suggestion strip still helps you finish a word. Its first word is the one you typed, and after it come Bangla words that start with it, from the Bangla dictionary and from words you have typed before.
+
+The grid is QWERTY, with the two changes the Khipro team asks for on a touchscreen. Khipro never uses shift, so the key where shift would be is <KeyCap>/</KeyCap>. The <KeyCap>;</KeyCap> key sits between the spacebar and the দাঁড়ি key. You type everything in lowercase.
+
+Two keys change the letter before them:
+
+- `f` gives a letter's partner: `t` is ত and `tf` is ট, `tff` is ঠ, `df` is ড, `sf` is ষ, `rf` is ড়, and `kf` is ক্ষ.
+- `/` is the slicer. It breaks a conjunct back apart (`ks` is ক্স, `ks/` is কস), makes খণ্ড-ত after `t` (`t/` is ৎ), and puts চন্দ্রবিন্দু on the vowel before it (`ca/d` is চাঁদ). Press it twice for a real slash after a vowel.
+
+Two more keys control how letters join:
+
+- `;` separates two parts that would otherwise join or combine: `budh;bar` is বুধবার, where `budhbar` would make a conjunct, and `amar;i` is আমারই. Press it twice for a real semicolon.
+- `?` is the blinder. The text after it stays in Latin letters, so `?hello` is hello, until `;` switches back to Bangla. A `?` at the end of a word stays a question mark (`ami?` is আমি?); press it twice to put one in front of more text, which then stays Latin too. Hold <KeyCap>/</KeyCap> for the backslash, which does the same.
+
+The দাঁড়ি key takes `f` too: <KeyCap>।</KeyCap> then `f` is ॥, and `ff` is ৺. Hold the দাঁড়ি key for ॥ directly, and for ZWJ and ZWNJ, the invisible joiners that control how two letters connect.
+
+| You type | You get |
+|---|---|
+| `ami` | আমি |
+| `kobita` | কবিতা |
+| `valw` | ভালো |
+| `baxladesh` | বাংলাদেশ |
+| `kkhipr` | ক্ষিপ্র |
+| `dhrrm` | ধর্ম |
+| `mae` | ম্যা |
+| `du;oo;kh` | দুঃখ |
+| `j,,` | জ় |
+
+The complete mapping, with every conjunct, is in the [Khipro documentation](https://khipro.khiproteam.com/documentation/). The keyboard runs the Khipro team's own published definition of the layout, so it types the same as Khipro on Linux, Windows and HeliBoard.
+
+### Khipro updates
+
+The Khipro team keeps fixing the layout between app releases, so the keyboard doesn't wait for a release to pick up their fixes. The app ships with the definition as it stood when that version was built. The [data repository](https://github.com/wasi-master/wmkeyboard-data/tree/main/data/bn/khipro) publishes the Khipro team's current one, covering Classic and Dark for both the screen keys and a hardware keyboard. While you type with Khipro, the keyboard looks for a newer set once a day and installs it without asking. A check is a 2 KB file, and a new set is about 230 KB. When data saving is on and its **Downloads** row isn't on Allow, the check waits for a connection data saving leaves alone.
+
+A set goes in only if all of it holds up. Every file has to match the size and SHA-256 the set's manifest gives. Each layout definition also has to type every case of the Khipro team's own test table for it the way they say it should. If anything fails, nothing changes and the layout keeps typing as before. The new rules apply from the next word, and they keep working before you unlock the phone after a restart. Glide typing works out the spellings it reads again under the new rules. When an app update brings a definition as new as the downloaded one, or newer, the bundled one takes over again.
+
+**Layout rules** on Bangla's own screen (see [Options](#options)) shows which rules you're typing with and their date. Tap it to check right away. **Use the bundled rules** goes back to the ones the app came with. The daily check then leaves that set alone until a newer one is published, though **Layout rules** still fetches it if you tap it.
+
+Without a connection, or on the build with no internet, download the folder's files elsewhere and import them together with **Import from a file** on Bangla's own screen: the four `.mim` files, the four `.tsv` tables and `bn_khipro_specs.json`. Loose or in one zip, they go through the same checks. On the build with no internet, **Layout rules** says so and doesn't check, and the daily check never runs.
+
+On a hardware keyboard, a word you start from the physical keys uses Khipro's desktop version instead, because a physical keyboard has no Bangla digits or দাঁড়ি key: `123` gives ১২৩, `.` gives ।, `..` gives a full stop, and `$` gives ৳. Words you type on the screen keys are not affected.
+
+**Glide typing** works on Khipro too. A stroke over the grid is read as a Khipro spelling and comes out as the Bangla word it spells: swipe `ami` for আমি, `kwthay` for কোথায়. The keyboard works out the Khipro spelling of every word in your Bangla word lists (the bundled one, a downloaded one and any you imported) by running Khipro's own rules backwards and keeping only the spellings Khipro turns back into the word, with the inherent `o` written or left out, so `ekhn` and `ekhon` both reach এখন. Words you have taught the keyboard are included too. Working that out for a 450,000-word list takes minutes of every core, so it is done ahead of time: the first swipe fetches the spellings of the downloadable list from the [data repository](https://github.com/wasi-master/wmkeyboard-data) (about 4 MB, `bn_khipro_glide.txt.gz`), and the phone only spells the few words that file doesn't list, which takes seconds. Swiping starts once that is done; afterwards it is saved and only redone when a list changes. Without a connection, or on the build with no internet, the phone works every spelling out itself, which takes a few minutes in the background with a notification counting the words, unless you import the file (it is in the Bangla language pack). The slicer <KeyCap>/</KeyCap> is part of the swipe: draw through it where চন্দ্রবিন্দু or খণ্ড-ত goes, so `ca/d`-style strokes reach চাঁদ and a stroke ending on <KeyCap>/</KeyCap> after `t` reaches হঠাৎ. Words that need another non-letter key, like the separator <KeyCap>;</KeyCap>, are typed as usual.
+
+### Khipro Dark
+
+**Khipro Dark** is the Khipro team's newer edition, made for touchscreens, and ships as its own layout beside Khipro Classic. It has the same keys and the same grid. The difference is conjuncts: Classic joins consonants as you type them and you break a conjunct with `/`, while Dark leaves consonants apart and joins them only when you press `/` after them. Most everyday words have no conjunct, so on Dark they need no separator at all: `lagbe` is লাগবে, where Classic would join গ্‌ব.
+
+Press `/` once to join the last two consonants, twice for the last three, three times for the last four:
+
+| You type | You get |
+|---|---|
+| `ntrz/` | নতর‍্য |
+| `ntrz//` | নত্র্য |
+| `ntrz///` | ন্ত্র্য |
+| `cndr//bind/u` | চন্দ্রবিন্দু |
+| `kks/` | কক্স |
+
+`kf` is still ক্ষ and `gg` is still জ্ঞ with no slash, and Classic's shortcut pairs stay when you join them: `nc/` is ঞ্চ and `ttf/` is ট্ট. The slash keeps its other jobs where there is nothing to join: after a vowel it is চন্দ্রবিন্দু (`ma/` is মাঁ), and after a `t` that follows a vowel it is খণ্ড-ত (`t/` is ৎ). Where `t` follows a consonant, `/` joins the two instead, so add `f` after it for খণ্ড-ত: `pott/f` is পতৎ.
+
+Turn it on from Bangla's own screen, as a card beside Khipro Classic; with both on, the <KeyCap>🌐</KeyCap> key or a spacebar swipe flips between them. A hardware keyboard reads a word against Dark's desktop version, the same way it does for Classic. Glide typing works on Dark too and reads the same Classic spellings, so a stroke never needs a `/`: swiping `lagbe` still gives লাগবে, and a conjunct like ন্ত্র comes out joined, as Classic would write it.
+
+Key hints work on Khipro too (see [Options](#options)): with them on, each key shows the Bangla it will add, including the letter that `h` or `f` changes the previous one into.
+
+The second word on the strip is the keys exactly as you pressed them, modifiers included: `prshn/` beside প্রশ্ন. Khipro's `f` and `/` change the letters before them, so this is where you check whether a modifier went in. Tap it to write the keys as they are, in English letters; the space bar still writes the Bangla word. Turn it off with **Show the keys you pressed** on Bangla's own screen (see [Options](#options)).
+
+Khipro has its own **Type English words as English on Khipro** switch, separate from Avro's and off by default, so turning English words on for Avro leaves Khipro writing Bangla. With it off, the space bar always writes the Bangla the keys spell, and an English word only goes in when you tap its chip on the strip. With English picked under **Also suggest from** and the switch on, keys that spell an English word commit as that word when what they spell in Bangla is not a word the list or your dictionary knows: `hello` stays hello, and `ami` is still আমি. The English word leads the strip, with the Bangla reading right behind it for the times you meant that. With **Show the keys you pressed** off, a word typed in letters alone still gets a chip of those letters right behind the Bangla reading, so a name or a word no dictionary has can still go in as English with a tap. Khipro has no reading to weigh, so the rule is that plain; it does not use the context scoring the phonetic layout does. Keys typed into the middle of a word are never taken as English: put the cursor between চ and ত in কিঞ্চত and type `if`, and you get the ি kar, not *if*, with English left on the strip as a chip. Picking from the strip there adds no space either, so the word stays whole as কিঞ্চিত.
+
+## Choosing a layout
+
+Bangla ships thirteen layouts. A fresh install turns on one of them, Avro, and only if your phone's own language list has Bangla in it. What starts enabled is read off the phone rather than fixed (see [What ships](/languages/overview/#what-ships)). Turn the rest on whenever you want them, from Bangla's own screen under **Languages**. There's one exception: a keyboard you enabled from Android's settings and then typed on without ever opening the app. The setup wizard never ran, so the built-in fallback stands, which is Avro alongside English QWERTY.
+
+- **Avro phonetic**: the QWERTY grid described above, and the default layout when you add Bangla by searching for it.
+- **Khipro Classic**: the compositional layout described above, on QWERTY letters with <KeyCap>/</KeyCap> in place of shift.
+- **Khipro Dark**: the same grid with Khipro's newer edition, where consonants join only when you press <KeyCap>/</KeyCap> (see [Khipro Dark](#khipro-dark)).
+- **Avro flick (3×3)** and **Khipro flick (3×3)**: the [English flick board](/typing/gestures/#flick-keys), nine keys with the letters on flick arms, typing through Avro or Khipro Classic instead of English. Every letter Avro and Khipro read is on it, the same as on QWERTY, so nothing is lost but the key count.
+- **প্রভাত (Probhat)**: the fixed Bangla layout popular on Linux, following the standard desktop keymap as shipped by Avro Keyboard and OpenBangla. You type Bengali letters directly, with nothing transliterated. Every layout that types letters directly completes and corrects them from the Bangla word list, the same list Avro reads.
+- **জাতীয় (National / Jatiya)**: the Bangladesh national standard fixed layout, also following its desktop keymap.
+- **বিএসটিআই (BSTI)**: the revised national standard, BDS 1738:2018, in the touch arrangement of Ekushey's [Bangla BSTI Mobile](https://github.com/ekushey-org/bangla-bsti-mobile). It looks like Jatiya but is its own grid.
+- **বৈশাখী (Baishakhi)**: another fixed Bangla layout, typed directly with nothing transliterated.
+- **বর্ণনা (Bornona)**: another fixed Bangla layout, typed directly with nothing transliterated.
+- **ইনস্ক্রিপ্ট (InScript)**: the Bengali InScript layout, the same Indic-script keyboard standard the app ships for many other Indian languages.
+- **মায়াবী (Mayabi)**: a fixed layout on a 12-key-wide grid, with the kar signs down the left of the top two rows and shift giving each key's partner letter.
+- **স্যামসাং বর্ণমালা (Samsung)**: the alphabet grid from Samsung Keyboard. The letters run in alphabet order across ten columns: the vowels in a block on the left and the consonants on the right, from ক down to হ, with no shift key. A vowel key types its kar after a consonant (ক then আ gives কা) and the full vowel at the start of a word. ড়, ঢ়, য় and ৎ are on the hold of ড, ঢ, য and ত. Like Samsung's, it has no <KeyCap>🌐</KeyCap> key, so switch away from it with a spacebar swipe.
+
+<PhoneFrame side caption="প্রভাত (Probhat) active: Bengali letters typed directly, no phonetic conversion.">
+  <Shot id="languages/probhat-key-grid" alt="প্রভাত (Probhat) active: Bengali letters typed directly, no phonetic conversion." />
+</PhoneFrame>
+
+On Probhat, shift mostly gives you the aspirated partner of a consonant (দ→ধ, ট→ঠ, গ→ঘ, ক→খ) but not uniformly. Some shift pairs are vowel-length pairs (ি→ই, ু→উ, ী→ঈ) and a few are unrelated letters that share a key for space reasons (র→ড়, ন→ণ, স→ষ). The 10th key on the home row carries ে with ো on shift and ৈ/ৌ/এ on long-press, and the া key holds আ. A handful of less common marks (ৎ, ঞ, ঁ, ৃ, ৗ, ঽ) live as long-press alternates on a phonetically related key rather than getting a dedicated slot.
+
+Jatiya's letter keys also match its desktop layout. Independent vowels that sit on a desktop AltGr key are reached here as a long-press on their matching kar sign: long-press ু for উ or ঊ, long-press ি for ই or ঈ, and so on.
+
+BSTI keeps most of Jatiya's letters where they are. On the home row া and ব swap places, and shift there gives the reph (র্) on the ৃ key, অ on the া key and চন্দ্রবিন্দু (ঁ) on the হসন্ত. The bottom row opens with a র-ফলা key (্র, with ্য on shift), then ো and ে with ৌ and ৈ on shift. A held key offers its own alternate first and then its shift partner's, which is where the standard's common conjuncts live: ঙ্ক on ঙ, ক্ষ on ক, জ্ঞ on জ, ঞ্জ on হ, ঙ্গ on গ, ষ্ণ on স, হ্ম and ঃ on ম, ব়্য on র, and ৎ on ত. Desktop BSTI also turns হসন্ত followed by a kar into the full vowel. Here the full vowels are on the kar keys' holds instead, so a হসন্ত always stays a হসন্ত.
+
+On the fixed layouts a kar key reads what comes before it. After a consonant it types the kar (ক then া gives কা), at the start of a word the vowel itself (আ), and after another vowel the আ-কার and এ-কার keys type the য়-glide instead, because a bare া or ে can't follow a vowel: কা then া gives কায়া, দি then ে gives দিয়ে. For a real আ or এ there, hold the key and pick it, or turn on **Tap twice for আ or এ** (<SettingsPath path="Languages & layouts / Bangla / Clusters / Tap twice for আ or এ" />, off by default): then pressing the key again straight away turns য়া into আ and য়ে into এ.
+
+All thirteen layouts type দাঁড়ি (।) from the full stop key beside the spacebar rather than a full stop (on Khipro, it comes after the <KeyCap>;</KeyCap> key), with the ASCII `.` moved to that key's long-press for numbers, file names and web addresses. Every layer but the letters is where numbers are typed, so on the <KeyCap>?123</KeyCap> pages and on an Fn, Number or secondary layer the same key stays a plain `.` for decimals and দাঁড়ি moves to its long-press instead. On the eight fixed layouts, `?` comes first in that popup and `.` right after it, so a plain hold on the key types a question mark; Avro and Khipro already have one on the hold of <KeyCap>m</KeyCap>.
+
+The two invisible joiners are on the fixed layouts too. Hold হসন্ত (্) or the দাঁড়ি key and the popup ends with **ZWNJ** and **ZWJ**, drawn by name because neither character has a shape of its own. ZWNJ after a হসন্ত keeps two consonants from joining, so ক ্ ZWNJ ষ shows ক্‌ষ rather than ক্ষ, and উদ্‌যাপন keeps its দ apart from the য. ZWJ asks for the half form instead, as in র‍্যাব. Desktop Jatiya and Probhat keep these on AltGr and shift keys a phone doesn't have, so the hold is where they go here. Every other fixed Bengali-script layout, the Assamese, Sylheti and Bishnupriya Manipuri ones included, has them in the same two places. Khipro has them on its দাঁড়ি key.
+
+বিসর্গ (ঃ) sits on the long-press of the colon key on the symbols layer, on all thirteen. It's drawn as a colon and does a different job, and the symbol layers are one grid shared by every language, so the colon's popup is where it goes.
+
+All eight fixed layouts share the same cluster-editing behavior as Avro and Khipro (see [Editing conjuncts and clusters](#editing-conjuncts-and-clusters) below), and the same font choice applies across all thirteen (see [Options](#options)). Switching between them works exactly like switching between any other enabled layouts: spacebar swipe, hold-drag picker, or the <KeyCap>🌐</KeyCap> key. See [Switching languages](/languages/switching/) for the full mechanics.
+
+### Shörolipi
+
+Banglish, Bangla's romanized entry, has a second layout besides its plain QWERTY: **Shörolipi (সরলিপি)**, the Khipro team's [romanization of Bangla](https://github.com/KhiproTeam/shorolipi). It writes Bangla in Latin letters, one letter per sound, and fits the whole alphabet on 26 keys by putting six letters with marks where English has letters Bangla doesn't need: <KeyCap>ṛ</KeyCap> and <KeyCap>ḍ</KeyCap> in place of q and w, <KeyCap>ö</KeyCap> (অ) in place of f, <KeyCap>ŋ</KeyCap> (ঙ, ং) in place of z, <KeyCap>ë</KeyCap> (অ্যা) in place of x and <KeyCap>ṭ</KeyCap> in place of v. Hold any of those six for the plain English letter, so English words still go in without switching. The vowels a, e, i, o, u, ö and ë have their nasal form (ã, ẽ and so on) on the hold too, and the full stop's hold ends with the combining tilde for any other letter. What you type stays in Latin letters: `pöṛa` is পড়া and `kãca` is কাঁচা, written the way Shörolipi spells them, not converted to Bengali script.
+
+## Editing conjuncts and clusters
+
+Bengali script builds conjuncts (যুক্তবর্ণ) by joining consonants with a hasant (্): ক্ষ, স্ত্রী, জ্ঞ. By default, backspace over already-typed Bengali text removes one character at a time, which can leave a half-formed cluster on screen: জ্ঞ with one backspace becomes জ্, not জ.
+
+<SettingsPath path="Languages & layouts / Bangla / Clusters / Conjunct-aware backspace" />
+
+Turning on **Conjunct-aware backspace** changes this: a whole conjunct cluster is deleted in a single press instead. স্ত্রী (a triple conjunct) disappears as one unit, ক্ষ as one unit, and a bare trailing hasant with nothing joined to it yet still deletes alone. The setting is off by default, and it applies to committed Bengali-script text across all ten Bangla layouts alike, which share the same cluster logic. It only affects text already committed to the field. Deleting through a word you are still composing on Avro or Khipro always removes one Latin character per press.
+
+This toggle isn't unique to Bangla. Every language on a cluster-forming script gets its own copy of it, and Devanagari, Tamil, Khmer and others work the same way. It's set per language, so Bangla deleting whole conjuncts doesn't commit you to Hindi doing the same.
+
+<PhoneFrame caption="Conjunct-aware backspace, under the Bangla language's own Clusters group. Off by default.">
+  <Shot id="languages/conjunct-backspace-toggle" alt="Conjunct-aware backspace, under Languages → Complex scripts. Off by default." />
+</PhoneFrame>
+
+## Emoji search in Bangla
+
+Bangla is one of the two languages (with English) whose search keywords are baked directly into the bundled emoji catalog, so searching emoji by their Bangla name works with nothing to download. A larger keyword pack for Bangla is downloadable too, and it stacks on top of the bundled set rather than replacing it. See [Emoji search in your language](/emoji/customization/#emoji-search-in-your-language) and [Emoji picker](/emoji/picker/) for how the ranking and language-merging work.
+
+## Writing ANSI (Bijoy) text
+
+Before Unicode, Bangla was typed with Bijoy into fonts like SutonnyMJ, and a lot of design software, print shops and older documents still expect it. That encoding, usually called ANSI, stores each Bangla glyph as a Latin character and leaves the font to draw it as Bangla. আ is stored as `Av`, and আমার সোনার বাংলা as `Avgvi †mvbvi evsjv`.
+
+Turn on **Allow ANSI output** on Bangla's own screen (see [Options](#options)) and every Bangla layout gets an **ANSI** button beside the suggestions: Avro, Khipro and all the fixed layouts. Tap it and everything the keyboard writes in Bangla goes into the text box as ANSI instead of Unicode, whether you typed it, picked it from the strip, swiped it or dictated it. The button stays lit while it's on. Tap it again to go back to Unicode.
+
+- The word you're typing stays in Unicode while it's still being composed, and turns into ANSI when you finish it with a space, a punctuation mark or a pick from the strip. ANSI puts some vowel signs in front of their consonant (কি is `wK`), so a word only converts right once it's whole.
+- On a layout that types letter by letter without composing, each letter rewrites the word as you go, so the vowel signs still land in the right place.
+- **ANSI version** picks the encoding. Version 2 is the usual one, matching SutonnyMJ and most Bijoy fonts. The fonts don't all put every letter in the same place, so if a conjunct comes out wrong in yours, try version 1 or 3.
+- ANSI text is Latin letters as far as the keyboard is concerned. Next-word predictions and taking a correction back with backspace don't work across it, and the keyboard doesn't pick an ANSI word back up for editing when you backspace into it. Backspace removes one ANSI character at a time, the way Bijoy always did.
+- ANSI only reads as Bangla in an ANSI font. Everywhere else it's gibberish, so switch the button off when you leave that app.
+
+## Options
+
+<SettingsPath path="Languages & layouts / বাংলা · Bangla" />
+
+Open Bangla's own screen from **Languages** in the app, or search for it from **Add language**:
+
+<PhoneFrame side caption="Bangla's language screen: layout cards, numeral system, and dictionary/emoji status.">
+  <Shot id="languages/bengali-language-screen" alt="Bengali's language screen: layout cards, numeral system, and dictionary/emoji status." />
+</PhoneFrame>
+
+- **Layouts**: one card each for Avro, Khipro Classic, Khipro Dark, Probhat, Jatiya, BSTI, Baishakhi, Bornona, InScript, Mayabi, and Samsung, each a small preview of that keyboard. Tap a card to turn it on or off; all eleven are independent. At least one layout has to stay enabled somewhere across your whole keyboard, so you can't switch off the last one from here.
+- **Key hints**: <SettingsPath path="Languages & layouts / Bangla / Key hints / Show the letter each key types" />, a three-way choice (Off, Added, or Whole letter), off by default. It puts the Bengali letter a key is about to write in its corner. Unlike the settings around it, this one is shared. It's one setting for every language with a transliterating layout enabled, not only Bangla, and it shows only while such a layout, Avro or Khipro, is active.
+- **Key map**: a folded group just below the hints while Avro is on. Open it for the vowels, consonants, joins and signs, the same tables as the [Avro key map](#avro-key-map) above, so they work offline. **Full guide** at the bottom, <SettingsPath path="Languages & layouts / Bangla / Key map / Full guide" />, opens this page in your browser.
+- **Suggestion strip**: <SettingsPath path="Languages & layouts / Bangla / Suggestion strip / Keep the first two words in place" />, off by default, shown while Avro is on. Normally the first word on the strip is the one the space bar will write, so the words move as you type. Turn this on and the first two never move: on the left is what you typed, in English letters, and next to it is the Avro reading of it, letter for letter (`ami` → আমি, `tmr` → ত্ম্র). The suggestions come after them. The space bar still writes the same word as before, and that word is the bold one wherever it sits. A second row, **Suggestions after them**, picks what fills the rest of the strip: **Smart** (both languages, the one the word reads as first, with the other language's best word on the last chip when there is room), **Bengali only**, or **English only**. English only works without English under Also suggest from too, from the bundled English list. While this is on, the strip does not move its top word to the middle.
+- **Type English words as English on Khipro**: <SettingsPath path="Languages & layouts / Bangla / English words / Type English words as English on Khipro" />, off by default, shown while Khipro Classic or Khipro Dark is on and English is picked under Also suggest from. The space bar writes keys that spell an English word, and no Bangla one, in English. Separate from Avro's switch (see [Typing with Khipro](#typing-with-khipro)).
+- **Show the keys you pressed**: <SettingsPath path="Languages & layouts / Bangla / Suggestion strip / Show the keys you pressed" />, on by default, shown while Khipro Classic or Khipro Dark is on. Puts the keys you pressed, `/`, `;` and `f` included, second on the strip, right after the Bangla word. A tap writes them as typed. Turn it off and only a word of plain letters gets that chip, and only with English mixed in.
+- **Layout rules**: <SettingsPath path="Languages & layouts / Bangla / Khipro's rules / Layout rules" />, shown while Khipro Classic or Khipro Dark is on. Says whether Khipro types with the rules the app came with or with a newer downloaded set, and from what date. Tap it to check for a newer set now. **Use the bundled rules** under it, shown while a downloaded set is in use, goes back to the app's own. See [Khipro updates](#khipro-updates).
+- **Avro candidate list**: <SettingsPath path="Languages & layouts / Bangla / Suggestion strip / Avro candidate list" />, off by default, shown while Avro is on. Desktop Avro shows a list of words under the word you type, and this is that list, built from desktop Avro's own data (its search rules, its 737 endings and its autocorrect list, which ship with the keyboard, and its dictionary, which the keyboard downloads, about 580 KB, the moment you turn the list on) the way desktop Avro builds it. Until the dictionary is there, the list searches the keyboard's own Bangla words; the row under the setting shows the download and retries it if it failed. Every word desktop Avro would offer is in it, in Avro's order: first Avro's autocorrect spelling for what you typed, then every dictionary word the spelling could be (Avro's search is loose: an `o` can be ো, য় or nothing, so `vodor` finds ভোঁদড় and `dokan` finds দোকান), together with the words made by reading an ending off the end (`bondhuder` → বন্ধু + দের, with Avro's joins: মা + ের is মায়ের), ordered by how close each is to Avro's letter-for-letter reading, and last that reading itself. The keyboard's own Bangla word list is searched the same way, and the keyboard's fixed spellings and own reading are added, so the list can hold words desktop Avro lacks, never fewer than it has. Like desktop Avro, the keyboard remembers the word you picked for a spelling: pick কথা from the list once for `kotha`, and from then on কথা comes first and is what the space bar writes for `kotha`, until you pick something else. This works whether or not the candidate list is on, on any phonetic layout, and it is kept with your other learned data, so it pauses with learning and goes when you delete what the keyboard learned. **In the strip** keeps the word the space bar will write on the first chip and puts the list after it. **Bar above** puts the whole list in a row of its own over the strip, which you scroll sideways; the word the space bar will write is in bold there. The row stays up between words, so the keyboard does not change height as you type. The space bar writes the same word with every choice.
+- **Neural suggestions**: <SettingsPath path="Languages & layouts / Bangla / Suggestion strip / Neural suggestions" />, off by default, shown while Avro is on. Adds up to three readings from IndicXlit, a small model that knows loose spellings such as `valobashi`, right after the word the space bar writes, which stays as it is unless the next switch is on. A 13&nbsp;MB download shared by every language that has it, plus ONNX Runtime. On chat spellings the known-spellings list doesn't cover, it puts the right word in the strip's first four places 80% of the time instead of 52%. See [Neural suggestions](/languages/phonetic/#neural-suggestions).
+- **Let it choose the word**: <SettingsPath path="Languages & layouts / Bangla / Suggestion strip / Let it choose the word" />, off by default, shown while Neural suggestions is on. When Avro's spelling is not a known word and the known-spellings list has nothing for it, the space bar writes the model's best listed reading instead (`ahongkari` অহংকারী rather than আহংকারি), with Avro's spelling second in the strip. Right first word on chat spellings the list lacks: 53% instead of 42%. It can turn a name spelled exactly to Avro into a listed lookalike. See [Let it choose the word](/languages/phonetic/#let-it-choose-the-word).
+- **Numerals**: two buttons, **০-৯** and **0-9**, and Bengali digits win by default. Switch to `0-9` if you'd rather see Latin digits on the number row while typing Bangla. Where the digits you pick actually get typed is a separate, global setting under Layout & size → Numerals. It defaults to native digits in text fields only, and plain ASCII in number, phone, date and time fields.
+- **Also suggest from**: pick other enabled languages to draw secondary suggestions from alongside Bangla. With English picked, Avro's strip also carries the word as you typed it in Latin letters, and an **English words** group appears right below: **Type English words as English** makes the space bar write `hello` as hello, and **Switch on the suggestion strip** shows or hides the small button that turns that on and off while you type. See [English on Avro and Hindi phonetic](/smart/mixed-language/#english-on-avro-and-hindi-phonetic).
+- **Dictionary**: Bangla ships with a bundled dictionary, and a downloadable wordlist of about 451,000 words gives better suggestions. You can import your own list too. The downloaded list's frequencies are counted over 4.8 million sentences of Bangla news, web and Wikipedia text from the [Leipzig Corpora Collection](https://wortschatz.uni-leipzig.de/en), so words the known-spellings list doesn't cover rank by how common they are: `hoyechilo` commits হয়েছিল and `puroshkar` পুরস্কার. The bundled list's frequencies are added on top, which lifts the chat Bangla that news rarely writes. The phonetic index Avro and Banglish look words up in comes ready-made for the downloaded list, ranking included, from the data repository (`bn_phonetic_v1r2.wmpi.gz`, about 9&nbsp;MB, fetched right after the list) and is read in place from storage, so the keyboard no longer folds all 451,000 words in memory each time it starts. Only the bundled list and your imported words are still folded on the phone, and until the file is there (no connection, or the build with no internet) the downloaded list is folded on the phone as before. The file is in the Bangla language pack, so [Offline imports](/privacy/offline/) can install it too. See [Downloadable dictionaries](/languages/dictionaries/) for how sizes compare across languages.
+- **Emoji**: download the larger Bangla emoji-keyword pack here, which names about 3,900 emoji. The bundled catalog's Bangla keywords already work without it. The pack arrives on its own if [Download automatically](/emoji/customization/) is on.
+
+- **ANSI output**: <SettingsPath path="Languages & layouts / Bangla / ANSI output / Allow ANSI output" />, off by default. Puts the ANSI button on every Bangla layout, see [Writing ANSI (Bijoy) text](#writing-ansi-bijoy-text). **ANSI version** appears below it once it's on, with three choices and version 2 as the default.
+- **Spellings**: <SettingsPath path="Languages & layouts / Bangla / Spellings / Use known spellings" />, on by default. This is the list described above, and it's what makes `table` commit টেবিল rather than তাব্লে, and `tmr` commit তোমার rather than ত্ম্র. Switch it off if you want the letter-for-letter reading for every word. With it on, Avro's capitals still get you the exact letters you type. The setting is per language, so turning it off for Bangla says nothing about any other script.
+- **Dictionary words**: <SettingsPath path="Languages & layouts / Bangla / Spellings / Correct to dictionary words" />, on by default. This is the phonetic fold described above, the step that turns `asi` into আছি when you press space. It runs whether or not autocorrect is on, because it's part of how Avro typing reaches real words. Switch it off and space always commits exactly what the Avro rules spell (`asi` is আসি); the dictionary words stay in the suggestion strip for you to tap. Known spellings are separate, so `tmr` still gives তোমার unless you turn that off too.
+- **The words before**: <SettingsPath path="Languages & layouts / Bangla / Spellings / Use the words before" />, on by default. One spelling can stand for several words, and the one or two words you typed just before pick between them, on the strip and for what space writes: "ki pora" decides between পড়া and পরা by what came before. The evidence is your own typing and, where the language has one, the downloaded word-pair data. A known spelling only trades places with another known spelling of the same buffer, so the composing text is still what space writes. Turn it off if a word comes out differently after certain words than you expect.
+- **Clusters**: <SettingsPath path="Languages & layouts / Bangla / Clusters / Conjunct-aware backspace" />, covered above, off by default.
+
+One more setting for Bangla lives outside this screen:
+
+- The **Bengali font** row, at <SettingsPath path="Appearance / Keyboard font / Bengali font" />, is one of the per-script font sections. It shows only while a Bengali-script language is enabled, and it's separate from the general keyboard font. Your choice applies to all ten Bangla layouts at once. The section offers the automatic Noto face, eight Bengali-focused Google Fonts, anything in your font library that covers Bengali, and an import button for a `.ttf` or `.otf` of your own. Every script section takes an import, so this isn't Bengali's alone.
+
+## Details & edge cases
+
+**"Banglish" is a different language, not a mode of this one.** Selecting Banglish · Bangla (Romanized) from the language catalogue gives you a plain Latin QWERTY that stays in Latin script (it never converts to Bengali script) and pulls suggestions from its own romanized word list. It has its own emoji keyword pack too: the Bangla keywords in the Latin spellings people chat in (`hasi` and `hashi` both find 😀, `biral` finds the cats, `bhat` and `vat` find 🍚), with the English keywords alongside. That's for people who want to text in Bangla using Latin letters and keep it that way. Avro, covered on this page, is the opposite: it converts what you type into Bengali script. Don't confuse the two if you're looking for one and land on the other in search results.
+
+**A few other languages share the Bengali script** but aren't the same language entry: Assamese, Bishnupriya Manipuri, and Sylheti all use Bengali-script layouts and Bengali-style numerals, but none of them bundle a dictionary the way Bangla does. If you're typing one of those, look for it by its own name in the language catalogue rather than under Bangla.
+
+**The near-tie protection can feel inconsistent if you don't know it's there.** Because a phonetic sibling only overrides the literal transliteration when it's at least twice as frequent, two words that are close in frequency won't always resolve the way you expect. This is deliberate, so the keyboard never silently swaps in a different word than what the composing preview showed you a moment before you hit space. It only applies to spellings the fixed list doesn't already name, since a listed spelling settles the commit before frequency is consulted at all.
+
+**The layout editor shows both shift labels at once for Probhat and Jatiya keys**, even though the real keyboard only shows one label per key state. Many fonts render a bare vowel sign (া, ি) as an orphaned, hard-to-read mark on its own, so the editor shows the base and shift labels side by side purely so you can tell keys apart while editing. This doesn't change what's drawn on the actual keyboard.
+
+**A rearranged Bangla layout still types Bangla.** If you open Probhat, Jatiya, or Avro in the [layout editor](/languages/custom-layouts/) and move keys around, the result still draws suggestions from the Bangla dictionary and still composes Bengali script. A layout's language comes from what it's based on, not from its key arrangement.

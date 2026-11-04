@@ -1,0 +1,198 @@
+---
+title: "Emoji customization"
+description: "Emoji fonts, keyword language packs, predictions and the emoji row."
+sidebar:
+  order: 2
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import Shot from '@components/Shot.astro';
+
+The emoji panel itself (search, skin tones, favourites) is covered in [Emoji picker & search](/emoji/picker/). This page is about the settings that shape it: which font draws the emoji, which languages emoji search understands, when emoji get suggested while you type, and whether a dedicated row of them sits above the keys.
+
+<PhoneFrame caption="The Emoji settings screen, with the live font preview row.">
+  <Shot id="emoji/settings-overview" alt="The Emoji settings screen, with the live font preview row." />
+</PhoneFrame>
+
+## Choosing an emoji font
+
+<SettingsPath path="Emoji / Emoji style / Emoji font" />
+
+WM Keyboard ships no emoji font of its own. It draws emoji with whichever one you pick here. A preview row on the settings screen renders 😀😂🥰😎🤔👍❤️🎉 through the real rendering pipeline, so what you see there is what the keyboard shows, not a mockup.
+
+- **System** (default): your phone's own emoji pack. On Samsung phones that's Samsung's set, not Google's.
+- **Google**: fetches Noto Color Emoji, the stock-Android look, once through the system font provider and caches it on the device.
+- **Installed**: a list of every emoji font you've installed, picked with one tap. Fonts arrive there from [Addons](/addons/installing/), such as Twemoji or OpenMoji, or from your own storage: **Add emoji font file** under the list takes a `.ttf` or `.otf`, keeps it, and selects it. That's the route on an offline build, and once a few are in the list you can move between them without picking a file again. Deleting the font you currently have selected falls back to System automatically.
+- **Custom**: a single font file you import yourself, kept separate from the library. Each import replaces the last one, so use Installed if you want to keep more than one.
+
+Text you send is always plain Unicode, whichever font you pick. The app or phone on the other end draws it with its own emoji font. This setting only changes how emoji look while you're composing them.
+
+:::note
+An emoji font converted from a color format usually has no variation-selector table, so ❤️ (U+2764 + the invisible U+FE0F that makes it draw as color) can't resolve in it. WM Keyboard strips that invisible selector before handing the glyph to your chosen font, rather than let it fall back to the system font and look inconsistent with the rest of the row.
+:::
+
+## Fixing emoji that won't display
+
+Older phones and some OEM skins ship an emoji font that predates the newest emoji, and those show up as an empty "tofu" box. There's a one-tap fix for that, plus a toggle for tidying away whatever it can't reach.
+
+### Getting a font that has them
+
+<SettingsPath path="Emoji / Emoji style / Get the newest emoji" />
+
+A card sits under the font picker offering the current Noto Color Emoji, around 10 MB, from WM Keyboard's own addon repository. Tap **Download**. The font installs into the font library and selects itself, so the panel and the keys redraw with a face that actually has the new emoji in it. It selects itself once, as the download lands; a choice you make afterwards, Custom or System, stays put when you come back to this screen. The card then disappears. It comes back as **New emoji are available**, with an **Update** button, when the repository publishes a newer build.
+
+Under the card, **Add emoji font file** takes a `.ttf` or `.otf` from your phone, adds it to the font library and switches **Emoji font** to it, without having to pick **Installed** first.
+
+Switching **Emoji font** to Google is not the same thing, and that's the part that catches people out. A downloadable font is requested by family name with no version attached. The system font provider answers with whichever build of Noto it already has, which on a phone with a recent system emoji font is usually the older of the two, so the boxes stay. Installing a complete addon font like Twemoji or OpenMoji from [Addons](/addons/installing/) works as well, and a **Download more** row right below the picker opens the catalogue filtered to emoji fonts. The download card is the shortcut to the font most people are after.
+
+### Hiding the ones that are left
+
+<SettingsPath path="Emoji / Emoji style / Hide emoji that your device cannot show" />
+
+This toggle (on by default) checks both your chosen font and the phone's own system font. It only hides an emoji from the panel, search, and suggestions when neither can draw it. An emoji your chosen font is missing but the phone's system font can still draw isn't hidden. It's quietly drawn in the system font instead, in a different style from the rest of the row, so it still gets through. An emoji you [added by hand](#adding-emoji-the-keyboard-doesnt-have-yet) is never hidden.
+
+## Adding emoji the keyboard doesn't have yet
+
+<SettingsPath path="Emoji / Emoji panel / Added emoji" />
+
+The emoji panel lists the emoji of the Unicode release the app was built with, Emoji 17.0 today. When Unicode publishes a newer one, its emoji can be typed on other phones before an update of WM Keyboard carries them. This screen is the way round that wait. Whatever you add here joins the panel at the end of the tab you pick. Panel search and inline `:word` search find it by its name and keywords, and it can be a favourite and shows up in Recent like any built-in emoji.
+
+There are two ways to add them:
+
+- **Add an emoji** opens a form. Paste the emoji (copy it from a message, a website or Emojipedia), give it a name and a few comma-separated keywords, and pick its tab. ZWJ sequences such as a new family or profession emoji paste the same way as a single character. The form refuses an emoji the keyboard already has and says which tab it is in.
+- **Import emoji-test.txt** adds a whole release at once. Download [emoji-test.txt](https://unicode.org/Public/emoji/latest/emoji-test.txt) from unicode.org in a browser, then pick it here. The keyboard adds every emoji in the file that it doesn't have yet, named and sorted into tabs by the file's own groups. Skin tone versions are left out: the panel shows one face per emoji, and the tone picker on a long press only knows the tones of built-in emoji.
+
+Press a row in **Your added emoji** to change it or delete it, or swipe it to delete. When an app update includes an emoji you added, the row says so. Nothing breaks in the meantime: the built-in entry takes over the slot and picks up your keywords, so you can delete yours whenever you like.
+
+Your phone's emoji font has to be able to draw a new emoji for it to look right. If it can't, the form and the row both tell you, and the emoji shows as a box or as its separate parts while you compose. It still goes into your message exactly as typed, so the person you send it to sees it if their phone is newer. [Getting a font that has them](#getting-a-font-that-has-them) fixes the look on your side.
+
+Added emoji are stored with your settings, so a [backup](/reference/settings/backup/) carries them and sync copies them to your other devices. A list holds up to 500 emoji.
+
+## Emoji search in your language
+
+<SettingsPath path="Emoji / Emoji panel / Emoji keywords" />
+
+<PhoneFrame side caption="The Emoji keywords screen, with per-language download and delete controls.">
+  <Shot id="emoji/keyword-packs" alt="The Emoji keywords screen, with per-language download and delete controls." />
+</PhoneFrame>
+
+Emoji search ships with English and Bangla keywords built in, so it works out of the box in both languages. For anything else, download a keyword pack. WM Keyboard's data repository carries packs for 126 languages, each a small gzipped file of `{emoji, name, keywords, category}` entries sourced from Unicode CLDR.
+
+Packs stack on top of the bundled English and Bangla keywords rather than replacing them, so downloading, say, Spanish adds Spanish search terms without losing the two you already had.
+
+The examples in this screen's own copy follow the languages you type in. The line ends "…all find 💰", and the words in front of it are up to three of your own: dinero and お金 for a Spanish and Japanese typist, पैसा and деньги for a Hindi and Russian one. It's the same feature either way. Showing you a script you don't read is a poor way to demonstrate it.
+
+Keywords stack, but names don't. Only one name fits in an emoji's long-press popup. A pack's display names are used while you're typing that pack's language, and the emoji's standard Unicode name is used otherwise, so a Spanish pack never renames your emoji while you're typing Bangla.
+
+**Download automatically** (on by default) fetches a keyword pack the first time you enable a language you type in, and skips anything already downloaded. Turn it off and packs only arrive when you tap Download next to a language yourself. A wider switch sits above it: **Download data automatically** under <SettingsPath path="Languages & layouts / Language data" />, also on by default, covering every automatic download the keyboard makes. With that one off, packs stay put, and this toggle is hidden until it comes back on.
+
+Deleting a downloaded pack leaves a marker behind so automatic download won't quietly re-fetch it. If you want it back, download it again yourself.
+
+You can also import a pack by hand. Two formats work: a plain tab-separated file (`emoji`, comma-separated keywords, optional display name), or the data repository's own JSON file directly. WM Keyboard sniffs the format, so you don't have to convert anything first. Imported packs are kept separate from downloaded ones on disk, but merge into the same search index.
+
+## Emoji suggestions while typing
+
+<SettingsPath path="Emoji / Suggestions / Emoji suggestions" />
+
+<PhoneFrame side caption="Emoji suggestions appended to the strip after typing a whole word.">
+  <Shot id="emoji/word-suggestions" alt="Emoji suggestions appended to the strip after typing a whole word." />
+</PhoneFrame>
+
+Turn this on (it's on by default) and matching emoji append to the end of the suggestion strip as you finish typing a whole word. "Birthday" offers 🎂🎉🥳🎁, and it works the same way for Bangla words. It also fires on an empty buffer from words you've just typed, learned over time, so a word like "you" can suggest ❤️ without you typing anything new.
+
+The chip doesn't vanish at the space, which is exactly when you'd reach for it. Type "happy birthday" and 🎂 is still there after the space, until the next word replaces it. Four sources feed the match, stacked so a hit from any one of them counts:
+
+- a small curated table, which is where the ordering judgements ("birthday" leads with 🎂, not 🥳) and the Bangla triggers live;
+- GitHub's own word-to-emoji data, which covers far more English than a hand-written table can: "hooray", "espresso", "workout";
+- the `:shortcode:` names, which mostly earn their place on two-word matches nothing else can reach. "Alarm clock" offers ⏰, "crossed fingers" offers 🤞. Two-letter codes are left out on purpose, because `:it:` and `:us:` are flags, and firing them at anyone typing "it" or "us" is the wrong-emoji case this whole feature avoids;
+- exact keyword hits from the emoji catalog, in whatever languages you have keyword packs for.
+
+**Press an emoji suggestion**, the row under the switch, decides what happens when you tap one:
+
+- **Replace word** (default, Gboard-style): swaps the word you typed for the emoji. Typing "birthday" and tapping 🎂 leaves only 🎂.
+- **Keep word**: adds the emoji after the word instead, giving "birthday 🎂".
+
+**Long-press a suggestion to get the other one for that insert.** With Replace word set, holding 🎂 keeps the word and gives you "birthday 🎂"; with Keep word set, holding it replaces the word. The setting decides which of the two a tap does, and the hold is the one-off for the other, so neither costs a trip to settings. Under TalkBack the long-press is announced by what it will actually do, not as "long press".
+
+Both of those describe tapping while the word is still being typed. Tap the chip after the space and there's no word left to replace, so the emoji lands at the cursor under either setting: "happy birthday " becomes "happy birthday 🎂". A hold there does the same thing as a tap, since there's no word left for the two modes to disagree about.
+
+## Inline emoji search and shortcodes
+
+Typing a `:` isn't part of the suggestions setting above. It has its own toggle, and that toggle lives on the Typing settings screen rather than the Emoji screen:
+
+<SettingsPath path="Typing / Suggestions / Inline emoji search" />
+
+With this on (the default), typing a colon at a word boundary turns the whole suggestion strip into an emoji search: `:cat` offers 🐱 and friends, replacing ordinary word suggestions entirely while the search is active. Backspacing over the colon returns to normal suggestions.
+
+<PhoneFrame caption="Typing a colon turns the suggestion strip into emoji search results.">
+  <Shot id="emoji/inline-colon-search" alt="Typing a colon turns the suggestion strip into emoji search results." />
+</PhoneFrame>
+
+The same toggle also covers exact shortcode names. If you type the *closing* colon and the text between the two colons is an exact match (`:tada:`, `:thumbsup:`), the whole thing is replaced with the emoji immediately, with no tap needed. A name that's only a partial or unknown match is left as ordinary typed text. An unrecognized shortcode is never quietly eaten.
+
+An emoji you pick from the search, by tapping it or by closing the colon, counts as used the same as one tapped in the panel: it moves to the front of the Recent tab and the emoji row.
+
+## The dedicated emoji row
+
+<SettingsPath path="Emoji / Emoji row / Emoji row" />
+
+A row of your own emoji, similar to Gboard's, that sits between the toolbar and the keys.
+
+<PhoneFrame side caption="The emoji row in Own row mode, above the key rows.">
+  <Shot id="emoji/emoji-row-own" alt="The emoji row in Own row mode, above the key rows." />
+</PhoneFrame>
+
+- **Off** (default): no emoji row.
+- **Button**: adds a toggle to the toolbar strip that swaps it for the emoji row on tap.
+- **Own row**: keeps the emoji row permanently visible above the keys.
+
+A [keyboard mode](/typing/modes/#keyboard-modes) can set the emoji row its own way: the Chat mode shows it as its own row, and Passwords turns it off. Every mode that sets a different value from yours is listed under the setting as a chip, like "Chat: Own row". Tap the chip to open that mode's editor.
+
+Once the row is showing (anything other than Off), three more settings appear:
+
+- **Emoji row content**: Most used (default), Recent, or Favourites. Whichever you pick, your favourited emoji always sort to the front.
+- **Emoji in the row**: a slider from 3 to 16, defaulting to 8. The row splits its width into that many slots and shrinks the emoji to fit, so a higher number packs more emoji in at a smaller size.
+- **Scroll the emoji row**: on by default. Swipe the row sideways for the emoji past the visible slots. Turn it off and the row never moves: it shows exactly that many slots and nothing past the last one, so a sideways swipe can't slide the whole thing out from under your finger.
+
+Before you've used any emoji there's nothing of your own to fill the row with, so it starts on a set of 24 common ones. That's deliberately more than fits across a phone, which is what scrolling is on by default for. They're the only entries the **Default skin tone** setting applies to; everything the row picks up from your own history is already an exact emoji, tone included.
+
+Where the row sits relative to the toolbar and the symbol row (above them, below them, in between) is a separate setting under Rows & bars on the settings home screen, not on this screen.
+
+## Arranging the panel like your old keyboard
+
+<SettingsPath path="Emoji / Emoji panel / Emoji categories / Arrange like" />
+
+Years on one keyboard teach your thumb where the emoji are. **Arrange like** copies that layout: pick Gboard, SwiftKey or HeliBoard and the panel takes that keyboard's tabs, in its order, with every emoji in the place it had there. **Unicode** (the default) is WM Keyboard's own order, straight from the Unicode release.
+
+Each keyboard groups emoji a little differently from WM Keyboard's catalogue, whose Nature tab holds both the plants and the sky and weather. Picking a preset moves emoji to the tab that keyboard keeps them on, and hides any tab left empty:
+
+| Preset | Tabs | What moves |
+|---|---|---|
+| Gboard | 9 | Hands and body parts join the faces on Smileys, and so do the moon faces and stars. Plants, weather and landscapes join Animals. Clocks join Objects, and instruments and cameras join Activities. Nature is hidden. |
+| SwiftKey | 8 | Faces and people share one Smileys tab. Plants join Animals, and the sky and weather join Travel. Nature and People are hidden. |
+| HeliBoard | 9 | Unicode's own groups: plants join Animals, and the sky and weather join Travel. Nature is hidden. |
+
+The grid changes with the order, so the same swipe scrolls to the same emoji you'd reach on that keyboard:
+
+| Preset | Columns | Row height | Emoji size | Scrolling |
+|---|---|---|---|---|
+| Gboard | 8 | 51 dp | 34 | One long list |
+| SwiftKey | As many as fit at 44 dp | 44 dp | 30 | A page per tab |
+| HeliBoard | 8 | 45 dp | 35 | A page per tab |
+
+These are each keyboard's values on a phone held upright at its default keyboard height, read from its own resources and code. Gboard's column count is a server setting that defaults to 8, and its rows grow when it shows fewer columns. All of them can be changed afterwards under [Emoji panel](/reference/settings/emoji/) (**Columns**, **Row height**, **Emoji size**, **One long list**).
+
+The orders were read from Gboard 18.4, SwiftKey 9.13 and HeliBoard 4.1.
+
+A preset is a starting point, not a mode. It fills in the same tab order, hidden tabs and per-tab emoji order that you can [drag by hand](/reference/settings/emoji/#emoji-categories), so you can keep rearranging afterwards. Once you've moved something or resized the grid the setting shows **Your own**, and picking a preset again asks before it replaces your changes. An emoji the other keyboard doesn't have, such as one from a newer Unicode release, goes next to the emoji it follows in the catalogue, on whatever tab that one sits on.
+
+## Details & edge cases
+
+- **The font preview is exact, not illustrative.** The eight-emoji preview row on the Emoji font setting runs through the same shaping code the keyboard itself uses, including the ❤️ variation-selector workaround, so what you see there is what you'll get on the keys.
+- **Installed emoji fonts share storage with text fonts**, but are listed separately in the picker. A colour emoji font would make an odd choice for key labels, so the two lists never cross over.
+- **Added emoji have no tone or gender variants.** Each emoji you add, or that an emoji-test.txt import adds, is its own cell in the grid with no long-press variants. An import adds the man, woman and person forms of a new profession emoji as three separate cells.
+- **Bundled Unicode data, not user data.** Keyword packs, shortcode names, and the trigger words behind emoji suggestions are all static files. They ship with the app or download from WM Keyboard's own data repository, and none of it depends on what you type.
+- **Emoji predictions can drop under battery pressure.** Power Saving mode has its own setting that can suppress emoji predictions to save cycles. See [Power saving](/typing/power-saving/) for that behavior.
+- **Kaomoji and ASCII emoticons are a separate system.** They live in their own library behind the Kaomoji tab, ignore the emoji font setting entirely (they're plain text), and keep their own favourites and recents. See [Kaomoji & text art](/emoji/kaomoji/).
+- **Two other keys can open the emoji panel directly.** The language-switch key can be replaced with an emoji key (on by default, under Layout & size), and the comma key can be too (off by default). Both are separate from the emoji row and the toolbar button described above.

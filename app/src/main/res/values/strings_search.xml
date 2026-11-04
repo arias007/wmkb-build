@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Settings search. The index in SettingsSearch.kt reads the row titles and
+        subtitles straight from the screens that draw them, so almost nothing
+        belongs here. A key lands in this file only when the screen has no
+        resource of its own to point at, or when it is a word the search matches
+        on but no screen draws.
+    -->
+
+    <!--
+        The Languages row on the settings home names the languages that are
+        turned on, so it has no fixed subtitle for the index to reuse. This is
+        what a search result says about that screen instead.
+    -->
+    <string name="search_languages_subtitle">Add, delete and reorder your typing languages</string>
+
+    <!--
+        Words that a search ignores, because they are in too many settings to
+        narrow anything down. Space separated. A query made only of these words
+        keeps them, so that a search for "the" still answers.
+        Translators: give the equivalent short function words of your language,
+        not a translation of these ones.
+    -->
+    <string name="search_stop_words">a an and are as at be by for from in is it me my of on or the to with you your</string>
+
+    <!--
+        Groups of words that mean the same thing when you look for a setting.
+        Type any word of a group and the search also looks for the others, at a
+        lower score than the word you typed.
+
+        The settings screens follow one glossary (config/i18n/STRINGS.md): they
+        say "press and hold", never "long press", and "glide typing", never
+        "swipe typing". These groups are the other side of that: the words the
+        screens never use, joined to the word they do.
+
+        Each item is one group, and the words in it are separated by spaces.
+        Order does not matter and a word can be in more than one group.
+
+        Translators: these are search words, not sentences. Give the words a
+        person types in your language to look for the same setting, including
+        the common misspellings and the alternative spellings. The list does not
+        have to be the same length as the English one, and a group with no
+        equivalent in your language can hold a single word.
+    -->
+    <!-- Hidden search keywords. Never drawn; see SettingsSearchKeywords.kt. -->
+    <string name="search_kw_octopus">octopus blackberry z10 bb10 inletter</string>
+    <string name="search_kw_semantic">semantic smart embedding embeddinggemma vector similar clipboard notes snippets emoji stickers offline</string>
+    <string name="search_kw_octopus_glide">octopus glide gesture next word during</string>
+    <string name="search_kw_about_diagnostics">log logcat debug troubleshoot</string>
+    <string name="search_kw_about_app_language">interface translation translated locale display ui</string>
+    <string name="search_kw_about_launcher_name">launcher label rename drawer</string>
+    <string name="search_kw_about_launcher_shown">hide launcher</string>
+    <string name="search_kw_about_licences">credits attribution third party</string>
+    <string name="search_kw_about_replay_onboarding">onboarding wizard welcome tour</string>
+    <string name="search_kw_about_report_bug">crash freeze feedback problem</string>
+    <string name="search_kw_about_telegram">community chat help support discord forum</string>
+    <string name="search_kw_about_follow">social media x twitter reddit instagram tiktok news</string>
+    <string name="search_kw_about_source">github repository contribute</string>
+    <string name="search_kw_about_storage">cache disk space free up</string>
+    <string name="search_kw_about_user_guide">help documentation manual faq tutorial</string>
+    <string name="search_kw_accessibility_color_vision">deuteranopia protanopia tritanopia daltonism</string>
+    <string name="search_kw_accessibility_debounce">tremor shaky bounce accidental</string>
+    <string name="search_kw_accessibility_readable_font">dyslexia dyslexic legible</string>
+    <string name="search_kw_accessibility_row_icons">plain classic old simple minimal clutter</string>
+    <string name="search_kw_accessibility_screen_transitions">animation slow lag stutter performance smooth fast</string>
+    <string name="search_kw_accessibility_keyboard_preview">preview try floating fab</string>
+    <string name="search_kw_favourites_button">favorites bookmark pin shortcut</string>
+    <string name="search_kw_accessibility_talkback">blind voiceover</string>
+    <string name="search_kw_appearance_key_corner_radius">rounded square rectangular pill</string>
+    <string name="search_kw_appearance_themes">material monet dynamic skin</string>
+    <string name="search_kw_appearance_toolbar_hardware_only">bluetooth physical external</string>
+    <string name="search_kw_backup_auto_enabled">cloud sync scheduled</string>
+    <string name="search_kw_fonts_tool_app_launcher">drawer quick launch icons</string>
+    <string name="search_kw_fonts_tool_currency">forex dollar euro taka</string>
+    <string name="search_kw_fonts_tool_floating">undocked movable draggable mini</string>
+    <string name="search_kw_fonts_tool_grammar">grammarly languagetool</string>
+    <string name="search_kw_fonts_tool_level">spirit horizontal tilt</string>
+    <string name="search_kw_fonts_tool_media_control">music spotify player podcast</string>
+    <string name="search_kw_fonts_tool_ocr">google lens recognition extract</string>
+    <string name="search_kw_fonts_tool_one_handed">thumb reachability compact narrow</string>
+    <string name="search_kw_fonts_tool_split">thumbs ergonomic tablet</string>
+    <string name="search_kw_fonts_tool_symbols">unicode character map dingbats</string>
+    <string name="search_kw_fonts_tool_typing_test">wpm per minute monkeytype</string>
+    <string name="search_kw_fonts_tool_unit_convert">metric imperial miles pounds inches</string>
+    <string name="search_kw_fonts_tool_web_search">google bing duckduckgo</string>
+    <string name="search_kw_home_addons">store marketplace repository downloads</string>
+    <string name="search_kw_home_datasaver">bandwidth cellular roaming metered</string>
+    <string name="search_kw_home_modes">profiles switching contexts</string>
+    <string name="search_kw_home_privacy">personalisation personalization</string>
+    <string name="search_kw_ime_tool_dictionary">define meaning thesaurus lookup</string>
+    <string name="search_kw_ime_tool_fancy">bold italic stylish unicode cursive</string>
+    <string name="search_kw_ime_tool_gif">tenor animated meme reaction</string>
+    <string name="search_kw_ime_tool_numpad">keypad tenkey dialer</string>
+    <string name="search_kw_ime_tool_persistent">pin always visible dock</string>
+    <string name="search_kw_ime_tool_selection_actions">macros highlight toggle</string>
+    <string name="search_kw_ime_tool_resize">taller shorter bigger</string>
+    <string name="search_kw_ime_tool_snippets">replacement autotext auto replace canned responses</string>
+    <string name="search_kw_ime_tool_sticker">whatsapp telegram bitmoji memoji</string>
+    <string name="search_kw_ime_tool_text_edit">arrow keys navigation pad</string>
+    <string name="search_kw_ime_tool_trackpad">touchpad mouse pad joystick</string>
+    <string name="search_kw_ime_tool_translate">translator interpreter deepl</string>
+    <string name="search_kw_ime_tool_vocabulary">spaced repetition anki srs</string>
+    <string name="search_kw_ime_tool_notes">notebook memo jot scratchpad diary</string>
+    <string name="search_kw_ime_tool_wm_pass">password manager login autofill wmpass code</string>
+    <string name="search_kw_ime_tool_todo">todo tasks checklist chores opentasks</string>
+    <string name="search_kw_ime_tool_weather">forecast temperature rain</string>
+    <string name="search_kw_ime_tool_home_assistant">hass googlehome tuya smartlife switch thermostat scene assist iot</string>
+    <string name="search_kw_ime_tool_clock">alarm timer zone pomodoro countdown</string>
+    <string name="search_kw_ime_tool_location">gps pin share whereabouts navigation</string>
+    <string name="search_kw_ime_tool_wikipedia">encyclopedia wiki article</string>
+    <string name="search_kw_keypress_all_accents">diacritics umlaut tilde cedilla circumflex</string>
+    <string name="search_kw_keypress_native_letters">umlaut accent diacritics order long press german</string>
+    <string name="search_kw_keypress_top_row_holds">digits numbers symbols long qwerty number shortcuts hint</string>
+    <string name="search_kw_keypress_ctrl_raw">termux ssh vim emacs</string>
+    <string name="search_kw_keypress_currency_keys">dollar euro pound rupee yen</string>
+    <string name="search_kw_keypress_dnd_mute">dnd silent focus</string>
+    <string name="search_kw_keypress_haptics_hardware">vibration silent bypass</string>
+    <string name="search_kw_keypress_shifted_popup">uppercase majuscule case layer page second</string>
+    <string name="search_kw_keypress_long_press_delay">timeout duration</string>
+    <string name="search_kw_keypress_long_press_hints">secondary labels marks</string>
+    <string name="search_kw_keypress_popup">preview flyout magnifier</string>
+    <string name="search_kw_keypress_symbols_numpad">numpad keypad dialpad</string>
+    <string name="search_kw_layout_symbols_numpad_key">numpad keypad dialpad gboard</string>
+    <string name="search_kw_keypress_enter_emoji">return smiley emoticon longpress</string>
+    <string name="search_kw_langemoji_emoji_animated">gif live</string>
+    <string name="search_kw_langemoji_emoji_font">noto twemoji blob style</string>
+    <string name="search_kw_langemoji_emoji_hide_unrenderable">tofu missing broken glyph</string>
+    <string name="search_kw_langemoji_emoji_kaomoji">ascii shrug japanese</string>
+    <string name="search_kw_kaomoji">kaomoji, emoticons, text faces, tags, emotic, import kaomoji, custom kaomoji, edit buttons</string>
+    <string name="search_kw_kaomoji_faces">add kaomoji, my kaomoji, reorder kaomoji, delete kaomoji, favourite kaomoji</string>
+    <string name="search_kw_langemoji_media_switcher">tabs jump unified media</string>
+    <string name="search_kw_langemoji_media_remember">tab remember reopen unified</string>
+    <string name="search_kw_langemoji_emoji_continuous">continuous vertical sections pages headers</string>
+    <string name="search_kw_langemoji_panel_height">size expand bigger grow</string>
+    <string name="search_kw_langemoji_emoji_skin_tone">fitzpatrick diversity complexion</string>
+    <string name="search_kw_langemoji_emoji_sticker">sticker png</string>
+    <string name="search_kw_langemoji_lang_os_switcher">ime subtype</string>
+    <string name="search_kw_languages_cjk_jianpin">mandarin abbreviated pinyin initials shorthand</string>
+    <string name="search_kw_languages_cjk_prediction">mandarin association predict commit</string>
+    <string name="search_kw_languages_cjk_reading_in_field">mandarin cantonese zhuyin preedit composing underline inline fcitx</string>
+    <string name="search_kw_languages_cjk_reading_on_switch">mandarin cantonese pinyin zhuyin preedit commit discard raw fcitx</string>
+    <string name="search_kw_languages_cjk_shortcuts">mandarin 日期 时间 星期 大写 数字</string>
+    <string name="search_kw_languages_cjk_double_pinyin_custom">shuangpin 双拼 mandarin chinese key table sp dat</string>
+    <string name="search_kw_languages_cjk_fuzzy">mandarin putonghua</string>
+    <string name="search_kw_languages_cjk_lazy">cantonese jyutping</string>
+    <string name="search_kw_languages_cjk_space_steps">japanese chinese select highlight arrow keys convert henkan fcitx mozc hardware physical keyboard</string>
+    <string name="search_kw_languages_cjk_full_width_space">japanese chinese zenkaku ideographic double wide u3000</string>
+    <string name="search_kw_languages_cjk_loose_marks">japanese flick dakuten handakuten sokuon modifier insensitive</string>
+    <string name="search_kw_languages_cjk_traditional">taiwan hong kong hanzi</string>
+    <string name="search_kw_languages_rime_engine">librime trime weasel squirrel 中州韻 deploy</string>
+    <string name="search_kw_languages_mozc_engine">google input 日本語入力 変換 文節 bunsetsu segment kanji</string>
+    <string name="search_kw_languages_conjunct_backspace">hindi devanagari indic akshara cluster</string>
+    <string name="search_kw_languages_fancy_style_row">unicode aesthetic cursive strikethrough</string>
+    <string name="search_kw_languages_fancy_fonts_add">custom own style make create</string>
+    <string name="search_kw_languages_translit_hints_row">transliteration phonetic romanized</string>
+    <string name="search_kw_languages_phonetic_strip_fixed">avro ridmik suggestion strip order fixed pinned english typed word</string>
+    <string name="search_kw_languages_raw_keys_chip">khipro raw input typed roman latin modifier suggestion</string>
+    <string name="search_kw_languages_phonetic_candidates">candidates dropdown suffix bar row suggestions bangla</string>
+    <string name="search_kw_languages_neural_phonetic">ai model network indicxlit ai4bharat transliteration machine learning onnx banglish hinglish</string>
+    <string name="search_kw_languages_romanized_dictation">voice speech hinglish banglish tanglish latin letters indicxlit ai4bharat</string>
+    <string name="search_kw_languages_phonetic_guide">key map keymap avro hinglish help cheat sheet chandrabindu hasant</string>
+    <string name="search_kw_languages_ansi">bayanno sutonnymj unicode converter legacy bangla</string>
+    <string name="search_kw_languages_zawgyi_allowed">zg unicode myanmar font converter legacy padauk noto</string>
+    <string name="search_kw_languages_zawgyi_key_font">zg converter legacy padauk</string>
+    <string name="search_kw_layout_floating">undock detached unpinned draggable</string>
+    <string name="search_kw_layout_globe_emoji">globe world</string>
+    <string name="search_kw_layout_hide_system_keyboard_bar">navbar navigation gesture chevron switcher</string>
+    <string name="search_kw_layout_key_height">taller shorter bigger smaller</string>
+    <string name="search_kw_layout_resize_drag">pinch size taller shorter bottom padding</string>
+    <string name="search_kw_layout_keyboard_scale">zoom shrink enlarge magnify</string>
+    <string name="search_kw_layout_number_row_on_keypad">numpad dialpad pin code authenticator</string>
+    <string name="search_kw_layout_one_handed">single hand compact reachable</string>
+    <string name="search_kw_layout_persistent">pin persistent sticky always</string>
+    <string name="search_kw_share_sheet">chooser sendto intent firefox</string>
+    <string name="search_kw_floating_button">bubble overlay summon fieldless hackers assistive touch chat head quick ball ask ai gemini circle voice dictation shortcut</string>
+    <string name="search_kw_layout_show_globe">hide remove globe language</string>
+    <string name="search_kw_layout_globe_recent">recent previous toggle alt tab switch</string>
+    <string name="search_kw_layout_size_position">resize shrink compact grow</string>
+    <string name="search_kw_layout_split">thumb ergonomic tablet</string>
+    <string name="search_kw_privacy_backup">phone migrate</string>
+    <string name="search_kw_privacy_verify_checksums">hash sha256 integrity signature mismatch corrupt</string>
+    <string name="search_kw_privacy_learn_typing">personalization adapt remember habits</string>
+    <string name="search_kw_privacy_lock">biometric face unlock applock passcode</string>
+    <string name="search_kw_selection_macros">highlight context menu share</string>
+    <string name="search_kw_selection_macros_actions">cut paste sort json base64 camelcase markdown undo</string>
+    <string name="search_kw_netlog">network, traffic, requests, connections, servers, data, privacy log</string>
+    <string name="search_kw_statistics">heatmap keystrokes streak counter</string>
+    <string name="search_kw_theme_auto">automatic schedule sunset system</string>
+    <string name="search_kw_theme_shuffle_interval">shuffle rotate cycle</string>
+    <string name="search_kw_tooldetail_crypto_enable">bitcoin crypto ethereum</string>
+    <string name="search_kw_tooldetail_currency_auto_fetch">offline automatic download exchange</string>
+    <string name="search_kw_tooldetail_weather_auto_fetch">offline automatic download</string>
+    <string name="search_kw_tooldetail_camera_search_button">reverse image lens visual identify plant insect tineye yandex bing</string>
+    <string name="search_kw_typing_auto_capitalize">autocaps autocapitalize autocapitalisation</string>
+    <string name="search_kw_typing_fix_several_slips">sloppy typos wrong fat fingers fast blind eager careful</string>
+    <string name="search_kw_typing_autocorrect_confidence">threshold aggressive aggressiveness modest</string>
+    <string name="search_kw_typing_autocorrect">auto replace changing</string>
+    <string name="search_kw_typing_blacklist">banned ignore blocklist forbidden</string>
+    <string name="search_kw_typing_block_offensive">swear curse cuss censor nsfw</string>
+    <string name="search_kw_typing_contact_names">address book phonebook people</string>
+    <string name="search_kw_typing_double_space">period full</string>
+    <string name="search_kw_typing_glide_dwell">dwell hesitate linger wait repeat</string>
+    <string name="search_kw_typing_glide_end_radius">tolerance accuracy sloppy precision anchor lift</string>
+    <string name="search_kw_typing_glide_loop">ring round doubling</string>
+    <string name="search_kw_typing_glide_near_radius">tolerance accuracy sloppy precision corner cutting pathway</string>
+    <string name="search_kw_typing_glide_start_radius">tolerance accuracy sloppy precision anchor touchdown</string>
+    <string name="search_kw_typing_glide_typing">flow swype shapewriter slide continuous</string>
+    <string name="search_kw_typing_glide_wiggle">scrub zigzag shake squiggle</string>
+    <string name="search_kw_typing_group_autopilot">hit detection hitbox proximity targeting</string>
+    <string name="search_kw_typing_group_hardware">bluetooth external usb dock hardware</string>
+    <string name="search_kw_typing_group_otp">otp verification sms authenticator</string>
+    <string name="search_kw_typing_hw_mac">apple cmd alt meta</string>
+    <string name="search_kw_typing_inline_autofill">bitwarden 1password lastpass keepass credentials</string>
+    <string name="search_kw_typing_inline_emoji_search">colon shortcode slack discord</string>
+    <string name="search_kw_typing_language_detection">multilingual bilingual mixed</string>
+    <string name="search_kw_typing_letter_swipe_action">graffiti unistroke scribble slide select lift release wrong key precise</string>
+    <string name="search_kw_typing_personal_dictionary">user saved remembered</string>
+    <string name="search_kw_typing_shift_enter">newline linebreak carriage return</string>
+    <string name="search_kw_typing_capital_flick">uppercase caps shift flick gesture gboard</string>
+    <string name="search_kw_layout_globe_guard">accidental mistake language switch delay interval gboard</string>
+    <string name="search_kw_keypress_globe_drag">cut undo redo select clipboard gesture gboard</string>
+    <string name="search_kw_typing_hint_flick">flick gesture alternate long press number symbol gboard</string>
+    <string name="search_kw_typing_flick_hints">swipe directions corner messagease flickboard multiling kana pad labels</string>
+    <string name="search_kw_typing_flick_popup">swipe preview bubble kana pad messagease</string>
+    <string name="search_kw_typing_swipe_only_tap">tapless center unexpected keyboard</string>
+    <string name="search_kw_typing_flick_distance">swipe threshold slop sensitivity kana pad messagease</string>
+    <string name="search_kw_typing_flick_reach">boundary long short corner unexpected keyboard</string>
+    <string name="search_kw_typing_flick_onto_letter">glide typing overshoot two neighbour corner</string>
+    <string name="search_kw_typing_possessive_swipe">possessive apostrophe contraction gesture flick comma full stop dont ill were youve</string>
+    <string name="search_kw_typing_smart_currency">exchange rate forex dollar euro</string>
+    <string name="search_kw_layout_extend_edge_keys">hitbox hit box touch area target gap margin</string>
+    <string name="search_kw_typing_smart_hit_detection">hit detection hitbox proximity targeting</string>
+    <string name="search_kw_typing_smart_contacts">phone dial sms message</string>
+    <string name="search_kw_typing_smart_repeats">repeating spam duplicate again hahaha</string>
+    <string name="search_kw_typing_smart_numbers">thousands separator comma</string>
+    <string name="search_kw_typing_smart_replies">canned responses</string>
+    <string name="search_kw_typing_typed_numbers">phone recent history</string>
+    <string name="search_kw_typing_number_prediction">digits hints swype predict</string>
+    <string name="search_kw_typing_smart_units">metric imperial celsius fahrenheit inches</string>
+    <string name="search_kw_typing_space_swipe_down_hide">dismiss minimise collapse</string>
+    <string name="search_kw_typing_suggestions">candidates wordbar</string>
+    <string name="search_kw_typing_swipe_start_distance">accidental unwanted stray</string>
+    <string name="search_kw_typing_undo_autocorrect">revert original</string>
+    <string name="search_kw_typing_continue_lists">markdown bullet numbered list auto number dash newline</string>
+    <string name="search_kw_typing_auto_close_brackets">autoclose pair parentheses braces parenthesis matching complete</string>
+    <string name="search_kw_typing_wrap_selection">surround parentheses quotes auto braces</string>
+    <string name="search_kw_update_row_check">upgrade latest release</string>
+    <string name="search_kw_ai_provider">anthropic claude openai chatgpt gpt gemini grok xai deepseek brave ollama studio openrouter groq mistral compatible key model server provider</string>
+    <string name="search_kw_voice_engine">offline whisper device model transcription selfhosted hosted speaches remote</string>
+    <string name="search_kw_photo_translate">rens google lens translate photo picture image camera sign menu text</string>
+    <string name="search_kw_translate_server">openai compatible selfhosted hosted local llm ai model ollama llama studio vllm localai chat completions mozhi simplytranslate simply lingva translite libretranslate front end frontend privacy</string>
+    <string name="search_kw_deepl">rephrase rewrite improve polish style tone translation</string>
+    <string name="search_kw_sticker_suggest">suggestions suggest tray prediction autocomplete</string>
+    <string name="search_kw_sticker_suggest_magnify">magnify zoom enlarge preview peek long press</string>
+    <string name="search_kw_translate_engine">offline private internet airplane local device ml kit google model download cloud</string>
+    <string name="search_kw_translate_models">offline translation model download delete storage ml kit google</string>
+    <string name="search_kw_translate_nllb">offline translation model download delete storage nllb meta facebook ctranslate2 200 languages swahili amharic yoruba non commercial</string>
+    <string name="search_kw_translate_bergamot">offline translation model download delete storage firefox mozilla bergamot free fdroid degoogled</string>
+    <string name="search_kw_translate_downloaded_first">order sort top offline model picker menu list</string>
+    <string name="search_kw_translate_only_downloaded">hide filter offline model picker menu short</string>
+
+    <string-array name="search_word_groups">
+        <item>haptics haptic vibration vibrate vibrations vibrator buzz rumble</item>
+        <item>sound sounds audio volume beep loud mute silent</item>
+        <item>press tap taps tapping click clicks touch hit</item>
+        <item>colour color colours colors coloured colored</item>
+        <item>dark night amoled oled</item>
+        <item>light day bright</item>
+        <item>background wallpaper backdrop</item>
+        <item>photo photos picture pictures image images</item>
+        <item>font fonts typeface typefaces typography lettering</item>
+        <item>glide swipe swiping gesture gestures trace</item>
+        <item>autocorrect autocorrection correction corrections spellcheck spelling spell typo typos mistake mistakes</item>
+        <item>suggestion suggestions prediction predictions predictive autocomplete autocompletion candidates</item>
+        <item>emoji emojis emoticon emoticons smiley smileys</item>
+        <item>clipboard clip clips copy paste</item>
+        <item>snippet snippets shortcut shortcuts abbreviation abbreviations macro macros expansion phrase phrases</item>
+        <item>dictionary dictionaries wordlist wordlists lexicon vocabulary</item>
+        <item>language languages locale locales</item>
+        <item>layout layouts keymap keymaps qwerty azerty dvorak colemak</item>
+        <item>number numbers numeric numeral numerals digit digits</item>
+        <item>symbol symbols punctuation</item>
+        <item>incognito private privacy anonymous</item>
+        <item>backup backups restore export exports import imports migrate transfer</item>
+        <item>voice speech dictation dictate microphone mic speak spoken transcription</item>
+        <item>accessibility talkback screenreader</item>
+        <item>cursor caret</item>
+        <item>delete backspace erase remove</item>
+        <item>spacebar space</item>
+        <item>capitals capital capitalise capitalize uppercase caps</item>
+        <item>popup popups bubble</item>
+        <item>ai llm gpt chatgpt claude gemini chatbot assistant</item>
+        <item>otp 2fa verification</item>
+        <item>power battery energy</item>
+        <item>handwriting handwrite stylus pen ink scribble</item>
+        <item>calculator calc math maths arithmetic</item>
+        <item>currency money exchange</item>
+        <item>password passwords passphrase</item>
+        <item>qr barcode</item>
+        <item>plugin plugins addon addons extension extensions</item>
+        <item>grammar proofread proofreading</item>
+        <item>animation animations motion transition transitions</item>
+        <item>radius corner corners rounded round</item>
+        <item>gap gaps spacing padding margin</item>
+        <item>opacity transparency alpha translucent</item>
+        <item>size sizes scale zoom</item>
+        <item>toolbar toolbox</item>
+        <item>sticker stickers</item>
+        <item>gif gifs</item>
+        <item>enable disable turn activate deactivate</item>
+        <item>hide show display visibility</item>
+        <item>keyboard ime</item>
+        <item>update updates upgrade version</item>
+        <item>search find lookup</item>
+        <item>translate translation translator</item>
+        <item>notification notifications</item>
+        <item>contact contacts addressbook</item>
+        <item>trail trace tail</item>
+        <item>sensitive password secret</item>
+        <item>offensive swear swearing swearwords curse cursing profanity profane rude vulgar</item>
+        <item>hold long</item>
+    </string-array>
+
+    <!--
+        Extra words for the screens on the settings home, so that a search finds
+        a screen by what it holds and not only by its name. The screen draws none
+        of these: they are search words only. Separate them with commas.
+        Translators: same as above. Give the words a person types, and drop the
+        ones your language has no equivalent for.
+    -->
+    <string name="search_kw_typing">spell check, autocomplete, predictive text, glide, swipe typing, gestures, contacts, undo</string>
+    <string name="search_kw_keypress">vibration, sound, volume, feedback, popup, long press, key repeat</string>
+    <!-- Themes, wallpapers and colours are the Keyboard themes screen's words: it sits under this one and is the better answer. -->
+    <string name="search_kw_appearance">icon pack, toolbar, toolbox, style, look, key shape, corner radius, label size</string>
+    <!--
+        The theme editor opens on one theme, so its own rows have nothing for a
+        search result to land on. Their words are here instead, and they lead to
+        the theme list, which is one press from every one of them.
+    -->
+    <string name="search_kw_themes">dark mode, light mode, amoled, colours, wallpaper, background image, custom theme, image blur, opacity, border width, key gap, gradient</string>
+    <string name="search_kw_layout">keyboard size, height, resize, one handed, floating, split, number row, padding, position</string>
+    <string name="search_kw_languages">keyboard layout, qwerty, locale, script, alphabet, transliteration, add language</string>
+    <!--
+        The More layouts page opens on one language, so like the theme editor its
+        result lands on the list above it. "Keyman" is the word someone who came
+        looking for these will type, and it is not in the row's own title.
+    -->
+    <string name="search_kw_more_layouts">keyman, community layouts, extra layouts, more keyboards, minority language</string>
+    <string name="search_kw_emoji">emoticons, smileys, kaomoji, skin tone, stickers, gifs, recent</string>
+    <string name="search_kw_expander">snippet, snippets, abbreviation, macro, autotext, text replacement, canned reply, boilerplate, signature, template</string>
+    <string name="search_kw_clipboard">copy, paste, cut, clip, clipboard history, pin, pinned, otp, screenshot, sensitive</string>
+    <string name="search_kw_voice">dictation, speech, speak, microphone, mic, talk, transcribe, whisper, offline speech</string>
+    <string name="search_kw_ai">assistant, llm, chatgpt, claude, gemini, ollama, language model, api key, rewrite, summarize</string>
+    <string name="search_kw_tools">toolbar, toolbox, shortcuts, widgets, buttons</string>
+    <string name="search_kw_privacy">incognito, permissions, tracking, learning, data</string>
+    <string name="search_kw_permissions">grant, allow, revoke, access, microphone, camera, contacts, calendar, notification access, usage access</string>
+    <string name="search_kw_automation">automation, tasker, macrodroid, automate, adb, intent, broadcast, command, script, remote control</string>
+    <string name="search_kw_applock">fingerprint, biometric, touch id, face unlock, app lock, lock, unlock, padlock, pin, password, pattern, passcode, protect, secure, privacy lock</string>
+    <string name="search_kw_notifications">notification, notifications, shade, status bar, alerts, download finished, update installed, backup failed, keyboard controls, pin keyboard</string>
+    <string name="search_kw_datasaver">mobile data, cellular, metered, roaming, wifi only, data usage, bandwidth, offline, save data</string>
+    <string name="search_kw_extensions">features, bundles, switch off, remove, hide, less, simpler, turn off, disable, plugins, ai, voice, clipboard, notes</string>
+    <string name="search_kw_advanced">power user, expert, hidden, extra, modes, add-ons, data saver</string>
+    <string name="search_kw_backup">export, import, transfer, migrate, restore, copy settings, new phone</string>
+    <string name="search_kw_accessibility">talkback, screen reader, contrast, colour blind, large text, motion</string>
+    <string name="search_kw_about">version, update, licence, source code, privacy policy, help, support, bug report, contact</string>
+    <string name="search_kw_rows">snippets, text expansion, abbreviations, macros, symbol row</string>
+    <string name="search_kw_modes">profiles, presets, per app</string>
+    <string name="search_kw_keymaps">layout editor, custom layout, qwerty, azerty, dvorak, colemak</string>
+    <string name="search_kw_fonts">typeface, custom font, ttf</string>
+    <string name="search_kw_icons">icon pack, glyphs, svg</string>
+    <string name="search_kw_dictionary">learned words, user dictionary, my words, add word</string>
+    <string name="search_kw_blacklist">banned words, never suggest, block words, ban</string>
+    <string name="search_kw_learnedcorrections">learned corrections, my fixes, typo pairs, taught fixes, autocorrect learning, slips, habits, add fix, edit fix, undone corrections, forgive, stop a correction</string>
+    <string name="search_kw_cliprules">regex, pattern, tidy, strip, remove, replace, https, links, copy, clipboard, trackers, tracking, clean</string>
+    <!-- Search words for removing tracking parameters from copied links. -->
+    <string name="search_kw_clean_links">tracker, trackers, tracking, utm, fbclid, clean, url, link, privacy, remove, delete</string>
+    <string name="search_kw_phoneformats">phone number, dial code, country code, mobile number, clipboard chips</string>
+    <string name="search_kw_codes">otp, one time password, 2fa, two factor, verification code, sms code, login code</string>
+    <string name="search_kw_musicapps">music apps, spotify, player apps, now playing, podcast apps</string>
+    <string name="search_kw_launchercombos">split screen, multi window, two apps, side by side, app pairs</string>
+    <string name="search_kw_kdeconnect_devices">pair computer, paired devices, pc, laptop, desktop, gsconnect, valent, unpair, add by ip address</string>
+    <string name="search_kw_send_instances">server, host, self hosted, mirror, upload limit</string>
+    <string name="search_kw_send_history">uploads, downloads used, expiry, received files</string>
+    <string name="search_kw_ime_tool_send_files">upload expire transfer wifi direct hotspot shareit wetransfer firefox</string>
+    <string name="search_kw_ime_tool_kde_connect">gsconnect valent pc laptop desktop linux remote touchpad sync share presentation slides</string>
+    <string name="search_kw_customdictionaries">word lists, import words, wordlist</string>
+    <string name="search_kw_emojikeywords">shortcodes, emoji names, emoji search</string>
+    <string name="search_kw_emojicategories">emoji order, category order, reorder emoji, hide emoji tabs, rearrange emoji</string>
+    <string name="search_kw_emojiadded">add emoji, new emoji, custom emoji, missing emoji, unicode, emoji-test.txt, import emoji</string>
+    <string name="search_kw_import_hub">import restore set up setup migrate move files</string>
+    <string name="search_kw_storage">space, cache, clear data, downloads, free up</string>
+    <string name="search_kw_feature_libraries">so files, native libraries, missing files, download all, modules, parts, engines</string>
+    <string name="search_kw_addons">repository, community, downloads, packs, install</string>
+    <string name="search_kw_licenses">open source, attribution, credits</string>
+    <string name="search_kw_diagnostics">logs, logcat, troubleshooting, crash, report</string>
+    <!-- The About row that replays the first-run wizard. -->
+    <string name="search_kw_replay_onboarding">onboarding, wizard, first run, setup, tour, welcome, tutorial</string>
+    <string name="search_kw_hwshortcuts">physical keyboard, leader key, hotkeys</string>
+    <!-- The Write a plugin row, for people who call it an editor or an IDE. -->
+    <string name="search_kw_plugin_ide">script editor ide develop program</string>
+    <string name="search_kw_supporters">donate, tip, tip jar, sponsor, support, thanks, credits, supportkori, google play</string>
+</resources>

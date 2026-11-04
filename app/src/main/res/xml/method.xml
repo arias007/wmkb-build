@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input-method xmlns:android="http://schemas.android.com/apk/res/android"
+    android:settingsActivity="com.wasimaster.wmkeyboard.app.MainActivity"
+    android:supportsInlineSuggestions="true"
+    android:supportsStylusHandwriting="@bool/ime_supports_stylus_handwriting"
+    android:supportsSwitchingToNextInputMethod="true">
+    <!--
+      supportsInlineSuggestions is what makes the autofill framework offer the
+      inline path at all. Without it InputMethodInfo reports
+      mInlineSuggestionsEnabled=false, onCreateInlineSuggestionsRequest is never
+      called however complete the rest of the implementation is, and the
+      password manager falls back to drawing its own dropdown over the keyboard
+      (#250). The chips themselves are built in InlineAutofill and hosted by the
+      suggestion strip.
+    -->
+    <!--
+      supportsStylusHandwriting lets Android hand the keyboard a stylus
+      handwriting session when a pen starts writing over a text field: an ink
+      window over the whole screen that takes the stylus and lets fingers
+      through (the "Stylus" full-screen writing mode, issue #386). The service
+      still refuses the session unless that mode is picked. Off in F-Droid's
+      build, through the bool; see resValue in feature/ime/build.gradle.kts.
+    -->
+    <!--
+      No static subtypes on purpose. Every subtype we expose is registered at
+      runtime, one per enabled layout (WMKeyboardService.registerSubtypes), and
+      only while the "list languages in the Android switcher" setting is on.
+
+      A static one used to sit here as a bootstrap entry. The system implicitly
+      enables it whenever nothing else is enabled, and the input-method picker
+      draws the subtype label where the other keyboards show their own name — so
+      with the setting off the keyboard was listed as "English" while everything
+      else was listed by name. With no static subtype the picker has no label to
+      draw and falls back to the IME label, @string/ime_name.
+    -->
+</input-method>

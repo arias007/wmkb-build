@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  :core:content holds the clipboard, snippets, stickers, fonts and saved media.
+
+  Other modules refer to these as
+  com.wasimaster.wmkeyboard.content.R.string.core_content_… because the R
+  classes are non-transitive, so the import has to name this module.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- ================================================================== -->
+    <!-- Clipboard chips.                                                   -->
+    <!--                                                                    -->
+    <!-- The panel pulls a one-time code, a phone number or a link out of a -->
+    <!-- copied clip and offers it as a chip of its own. Each chip carries  -->
+    <!-- a short tag above the fragment, and the same kind name is read out -->
+    <!-- by a screen reader and shown in the press-and-hold popup.          -->
+    <!-- ================================================================== -->
+
+    <string name="core_content_clip_entity_otp_label">One-time code</string>
+    <!-- Tag drawn on the chip. The app prints it in capital letters. -->
+    <string name="core_content_clip_entity_otp_tag">CODE</string>
+
+    <string name="core_content_clip_entity_phone_label">Phone number</string>
+    <!-- Tag drawn on the chip. The app prints it in capital letters. -->
+    <string name="core_content_clip_entity_phone_tag">PHONE</string>
+
+    <string name="core_content_clip_entity_url_label">Link</string>
+    <!-- Tag drawn on the chip. The app prints it in capital letters. -->
+    <string name="core_content_clip_entity_url_tag">LINK</string>
+
+    <string name="core_content_clip_entity_place_label">Place</string>
+    <!-- Tag drawn on the chip. The app prints it in capital letters. -->
+    <string name="core_content_clip_entity_place_tag">PLACE</string>
+
+    <!-- ================================================================== -->
+    <!-- Snippet variables.                                                 -->
+    <!--                                                                    -->
+    <!-- The snippet screen lists every variable a snippet can contain. The -->
+    <!-- token itself ({date}, {clip}) is code and is never translated. The -->
+    <!-- lines below are what the screen shows next to each token.          -->
+    <!-- ================================================================== -->
+
+    <string name="core_content_snippet_var_date_info">Today\'s date</string>
+    <string name="core_content_snippet_var_time_info">The time now in 24-hour form</string>
+    <string name="core_content_snippet_var_time12_info">The time now in 12-hour form</string>
+    <string name="core_content_snippet_var_datetime_info">The date and the time</string>
+    <string name="core_content_snippet_var_isodate_info">The date in ISO form, for example 2026-07-19</string>
+    <string name="core_content_snippet_var_isotime_info">The date and the time in ISO form</string>
+    <string name="core_content_snippet_var_weekday_info">The name of the day, for example Sunday</string>
+    <string name="core_content_snippet_var_day_info">The day of the month</string>
+    <string name="core_content_snippet_var_month_info">The name of the month</string>
+    <string name="core_content_snippet_var_year_info">The year, with four digits</string>
+    <string name="core_content_snippet_var_timezone_info">The time zone, for example GMT+06:00</string>
+    <string name="core_content_snippet_var_timestamp_info">The time in Unix seconds</string>
+    <string name="core_content_snippet_var_clip_info">The newest clipboard entry</string>
+    <string name="core_content_snippet_var_selection_info">The text you select in the field</string>
+    <string name="core_content_snippet_var_app_info">The name of the app you type in</string>
+    <string name="core_content_snippet_var_package_info">The package name of that app</string>
+    <string name="core_content_snippet_var_uuid_info">A new random UUID</string>
+    <string name="core_content_snippet_var_cursor_info">The place where the cursor lands</string>
+
+    <!-- ================================================================== -->
+    <!-- Font import errors.                                                -->
+    <!--                                                                    -->
+    <!-- Shown when the user picks a file for the font library and the app  -->
+    <!-- cannot use it. Each one says which mistake it was, because the     -->
+    <!-- usual mistake is a web font or a zip that was renamed by hand.     -->
+    <!-- ================================================================== -->
+
+    <string name="core_content_font_error_empty">The file is empty.</string>
+    <string name="core_content_font_error_too_short">The file is too short to be a font.</string>
+    <string name="core_content_font_error_woff">The app cannot read WOFF web fonts. Use the .ttf or .otf version of the font.</string>
+    <string name="core_content_font_error_woff2">The app cannot read WOFF2 web fonts. Use the .ttf or .otf version of the font.</string>
+    <string name="core_content_font_error_zip">This file is a zip archive, not a font.</string>
+    <string name="core_content_font_error_markup">This file is an HTML or XML file, not a font.</string>
+    <string name="core_content_font_error_not_a_font">This file does not look like a .ttf or .otf font.</string>
+    <string name="core_content_font_error_load">The app cannot load this font file.</string>
+    <string name="core_content_font_error_no_storage">No storage is available for the font.</string>
+    <!-- %1$d is the size limit for one font file, in megabytes.
+         Not a plural: "MB" is a unit symbol, not a countable noun, and it does
+         not inflect. -->
+    <string name="core_content_font_error_too_large" tools:ignore="PluralsCandidate">A font must be smaller than <xliff:g id="limit" example="32">%1$d</xliff:g> MB.</string>
+    <string name="core_content_font_error_save">The app cannot save the font.</string>
+    <string name="core_content_font_error_read">The app cannot read the font.</string>
+    <!-- The download of the emoji font failed: no network, or the file is not
+         where the app expected it. -->
+    <string name="core_content_font_error_download">The app cannot download the font. Check your connection and try again.</string>
+    <string name="core_content_font_error_too_many">The font library is full. Delete a font and try again.</string>
+
+    <!-- ================================================================== -->
+    <!-- Sticker pack import.                                               -->
+    <!--                                                                    -->
+    <!-- One line for each thing the app had to drop out of a .wmstickers   -->
+    <!-- file, so the import dialog can say what it changed instead of      -->
+    <!-- losing the images without a word. The name in quotation marks is   -->
+    <!-- the name the pack file gives the sticker, so it is not translated. -->
+    <!-- ================================================================== -->
+
+    <!-- The name for an imported pack whose own file gives no name. -->
+    <string name="core_content_sticker_pack_imported_label">Imported stickers</string>
+
+    <!-- %1$d is the number of stickers the pack file lists. %2$d is the
+         number the app keeps, which is the limit for one pack. -->
+    <plurals name="core_content_sticker_repair_kept_first">
+        <item quantity="one">The pack has %1$d sticker. The app keeps the first %2$d.</item>
+        <item quantity="other">The pack has %1$d stickers. The app keeps the first %2$d.</item>
+    </plurals>
+
+    <string name="core_content_sticker_repair_no_image_named">The app dropped a sticker. The sticker names no image file.</string>
+
+    <!-- %1$s is the name of the sticker, as the pack file spells it. -->
+    <string name="core_content_sticker_repair_image_missing">The app dropped \"<xliff:g id="sticker" example="happy">%1$s</xliff:g>\". Its image is missing.</string>
+
+    <!-- %1$s is the name of the sticker, as the pack file spells it. -->
+    <string name="core_content_sticker_repair_image_unreadable">The app dropped \"<xliff:g id="sticker" example="happy">%1$s</xliff:g>\". The app cannot read its image.</string>
+
+    <!-- %1$s is the name of the sticker, as the pack file spells it. -->
+    <string name="core_content_sticker_repair_not_saved">The app dropped \"<xliff:g id="sticker" example="happy">%1$s</xliff:g>\". The app cannot save it.</string>
+
+    <string name="core_content_sticker_repair_none_listed">The pack file lists no stickers.</string>
+
+    <!-- %1$d is how many animated stickers the app could keep only as a
+         picture that does not move. -->
+    <plurals name="core_content_sticker_repair_flattened">
+        <item quantity="one">The app kept %1$d animated sticker as a still image.</item>
+        <item quantity="other">The app kept %1$d animated stickers as still images.</item>
+    </plurals>
+
+    <!-- ================================================================== -->
+    <!-- Snippet import. The same repair notes, for a .wmsnippets.json file. -->
+    <!-- ================================================================== -->
+
+    <!-- %1$d is the largest number of snippets the app keeps from one file. -->
+    <plurals name="core_content_snippet_repair_kept_first">
+        <item quantity="one">The file has more snippets than the app keeps. The app imported the first %1$d.</item>
+        <item quantity="other">The file has more snippets than the app keeps. The app imported the first %1$d.</item>
+    </plurals>
+
+    <!-- %1$s is the name of the snippet, as the file spells it. -->
+    <string name="core_content_snippet_repair_no_text">The app dropped \"<xliff:g id="snippet" example="Address">%1$s</xliff:g>\". It has no text.</string>
+
+    <!-- %1$s is the name of the snippet. %2$d is the largest number of
+         characters a snippet can hold, and is also what picks the form. -->
+    <plurals name="core_content_snippet_repair_shortened">
+        <item quantity="one">The app shortened \"<xliff:g id="snippet" example="Address">%1$s</xliff:g>\". It was longer than %2$d character.</item>
+        <item quantity="other">The app shortened \"<xliff:g id="snippet" example="Address">%1$s</xliff:g>\". It was longer than %2$d characters.</item>
+    </plurals>
+
+    <string name="core_content_snippet_repair_named_after_text">A snippet has no name, so the app named it after its first line.</string>
+
+    <!-- %1$s is the name of the snippet, as the file spells it. A pattern is
+         the rule that makes a snippet expand as the user types. -->
+    <string name="core_content_snippet_repair_bad_pattern">The app removed the pattern from \"<xliff:g id="snippet" example="Greeting">%1$s</xliff:g>\". The pattern is not correct. The snippet stays in the list.</string>
+
+    <!-- %1$s is the name of the snippet. %2$d is the largest number of
+         characters a pattern can hold, and is also what picks the form. -->
+    <plurals name="core_content_snippet_repair_pattern_too_long">
+        <item quantity="one">The app removed the pattern from \"<xliff:g id="snippet" example="Greeting">%1$s</xliff:g>\". It was longer than %2$d character.</item>
+        <item quantity="other">The app removed the pattern from \"<xliff:g id="snippet" example="Greeting">%1$s</xliff:g>\". It was longer than %2$d characters.</item>
+    </plurals>
+
+    <!-- A snippet can hold several expansions and the app keeps only so many.
+         %1$s is the name of the snippet. %2$d is how many expansions were left
+         out, and is also what picks the form. -->
+    <plurals name="core_content_snippet_repair_alternates_dropped">
+        <item quantity="one">The app left %2$d expansion out of \"<xliff:g id="snippet" example="Greeting">%1$s</xliff:g>\".</item>
+        <item quantity="other">The app left %2$d expansions out of \"<xliff:g id="snippet" example="Greeting">%1$s</xliff:g>\".</item>
+    </plurals>
+
+    <!-- A folder is a named group of snippets. %1$d is how many groups the app
+         could not use, and is also what picks the form. -->
+    <plurals name="core_content_snippet_repair_folders_dropped">
+        <item quantity="one">The app dropped %1$d folder that has no name or that repeats another one. Its snippets came in without a folder.</item>
+        <item quantity="other">The app dropped %1$d folders that have no name or that repeat another one. Their snippets came in without a folder.</item>
+    </plurals>
+
+    <!-- A row is one line of a table (a CSV file). %1$d is how many rows had
+         nothing in the column for the snippet text, and picks the form. -->
+    <plurals name="core_content_snippet_repair_rows_no_text">
+        <item quantity="one">The app dropped %1$d row that has no text.</item>
+        <item quantity="other">The app dropped %1$d rows that have no text.</item>
+    </plurals>
+
+    <!-- A trigger is the short word that makes a snippet expand. %1$d is how
+         many triggers the keyboard cannot watch for, and picks the form. -->
+    <plurals name="core_content_snippet_repair_triggers_removed">
+        <item quantity="one">The app removed %1$d trigger that the keyboard cannot watch for. Its snippet stays in the list.</item>
+        <item quantity="other">The app removed %1$d triggers that the keyboard cannot watch for. Their snippets stay in the list.</item>
+    </plurals>
+
+    <!-- Gboard is Google's keyboard; do not translate the name. "Personal
+         dictionary" names a settings screen of this app. %1$d is how many words
+         in the file have no shortcut, and picks the form. -->
+    <plurals name="core_content_snippet_gboard_words_skipped">
+        <item quantity="one">The file also has %1$d word with no shortcut. To add it to your words, open the file from Personal dictionary.</item>
+        <item quantity="other">The file also has %1$d words with no shortcut. To add them to your words, open the file from Personal dictionary.</item>
+    </plurals>
+
+    <!-- Espanso is a text expander for computers, and the name of its app. Do
+         not translate it. Each of these lines says what an imported file lost,
+         and %1$d is how many of its snippets were affected, which also picks
+         the form. They are shown as a list before the user accepts the import,
+         so each one has to make sense on its own. -->
+    <plurals name="core_content_espanso_note_shell">
+        <item quantity="one">%1$d snippet runs a command on your computer. The app left the command out and never runs it.</item>
+        <item quantity="other">%1$d snippets run commands on your computer. The app left the commands out and never runs them.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_form">
+        <item quantity="one">%1$d snippet asks you to fill in a form. The app inserts the form as text, with the cursor in the first blank.</item>
+        <item quantity="other">%1$d snippets ask you to fill in a form. The app inserts each form as text, with the cursor in the first blank.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_rich_text">
+        <item quantity="one">%1$d snippet uses formatted text. The app keeps the words and drops the formatting.</item>
+        <item quantity="other">%1$d snippets use formatted text. The app keeps the words and drops the formatting.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_image">
+        <item quantity="one">The app skipped %1$d snippet that inserts a picture.</item>
+        <item quantity="other">The app skipped %1$d snippets that insert pictures.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_apps">
+        <item quantity="one">%1$d snippet is limited to certain computer programs. On your phone it works everywhere.</item>
+        <item quantity="other">%1$d snippets are limited to certain computer programs. On your phone they work everywhere.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_choice">
+        <item quantity="one">%1$d snippet asks you to pick from a list. The app picks one at random instead.</item>
+        <item quantity="other">%1$d snippets ask you to pick from a list. The app picks one at random instead.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_variable">
+        <item quantity="one">%1$d snippet uses a value the app has no equivalent for. That part comes in empty.</item>
+        <item quantity="other">%1$d snippets use values the app has no equivalent for. Those parts come in empty.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_date">
+        <item quantity="one">%1$d snippet uses a date format the app cannot write in full. The app left out the part it cannot do.</item>
+        <item quantity="other">%1$d snippets use date formats the app cannot write in full. The app left out the parts it cannot do.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_regex">
+        <item quantity="one">The app removed the pattern from %1$d snippet. The app does not run patterns of that shape. The snippet stays in the list.</item>
+        <item quantity="other">The app removed the pattern from %1$d snippets. The app does not run patterns of that shape. The snippets stay in the list.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_symbol_trigger">
+        <item quantity="one">%1$d trigger does not end in a word, so the app cannot watch for it. Its snippet stays in the list.</item>
+        <item quantity="other">%1$d triggers do not end in a word, so the app cannot watch for them. Their snippets stay in the list.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_mid_word">
+        <item quantity="one">%1$d trigger is meant to work inside a word. On your phone it works only as a whole word.</item>
+        <item quantity="other">%1$d triggers are meant to work inside a word. On your phone they work only as whole words.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_empty">
+        <item quantity="one">The app skipped %1$d snippet that has nothing to insert.</item>
+        <item quantity="other">The app skipped %1$d snippets that have nothing to insert.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_imports">
+        <item quantity="one">The file reads %1$d other file. One file cannot bring the others with it.</item>
+        <item quantity="other">The file reads %1$d other files. One file cannot bring the others with it.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_token">
+        <item quantity="one">%1$d snippet contains text in braces that this app fills in, such as {date}. It will expand instead of appearing as written.</item>
+        <item quantity="other">%1$d snippets contain text in braces that this app fills in, such as {date}. It will expand instead of appearing as written.</item>
+    </plurals>
+    <!-- A snippet can insert several different texts and the Espanso format
+         keeps only the first for some of them. %1$d is how many snippets that
+         happened to, and is also what picks the form. -->
+    <plurals name="core_content_espanso_note_alternates">
+        <item quantity="one">%1$d snippet has other expansions that Espanso cannot hold. Only the first one was written.</item>
+        <item quantity="other">%1$d snippets have other expansions that Espanso cannot hold. Only the first one of each was written.</item>
+    </plurals>
+    <!-- Snippets in this app can point at other snippets; Espanso has nothing
+         like it. %1$d is how many snippets pointed somewhere, and is also what
+         picks the form. -->
+    <plurals name="core_content_espanso_note_links">
+        <item quantity="one">%1$d snippet points at other snippets. Espanso has no way to say that, so the links were left out.</item>
+        <item quantity="other">%1$d snippets point at other snippets. Espanso has no way to say that, so the links were left out.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_confirm">
+        <item quantity="one">%1$d snippet asks before it expands. Espanso has no such setting, so it will expand on its own there.</item>
+        <item quantity="other">%1$d snippets ask before they expand. Espanso has no such setting, so they will expand on their own there.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_no_variable">
+        <item quantity="one">%1$d snippet uses a value Espanso has no equivalent for. It is written out as it stands.</item>
+        <item quantity="other">%1$d snippets use values Espanso has no equivalent for. They are written out as they stand.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_transform">
+        <item quantity="one">%1$d snippet changes the capitals of what its pattern captured. Espanso cannot do that, so the captured text goes in unchanged.</item>
+        <item quantity="other">%1$d snippets change the capitals of what their patterns captured. Espanso cannot do that, so the captured text goes in unchanged.</item>
+    </plurals>
+    <plurals name="core_content_espanso_note_disabled_folder">
+        <item quantity="one">%1$d snippet is in a folder that is switched off. Espanso has no folder switch, so it will expand there.</item>
+        <item quantity="other">%1$d snippets are in folders that are switched off. Espanso has no folder switch, so they will expand there.</item>
+    </plurals>
+
+    <!-- ================================================================== -->
+    <!-- Selection macros.                                                  -->
+    <!--                                                                    -->
+    <!-- One-tap actions for whatever text is selected. The keyboard reads  -->
+    <!-- the selection as a phone number, an address, a link or plain text, -->
+    <!-- and offers the two or three things people do with that shape. Each -->
+    <!-- name is a chip face, so keep them to one short word.               -->
+    <!-- ================================================================== -->
+
+    <string name="core_content_selection_macro_copy">Copy</string>
+    <string name="core_content_selection_macro_share">Share</string>
+    <!-- Keeps the selected text as a note in the Notes tool. -->
+    <string name="core_content_selection_macro_save_note">Save as note</string>
+    <string name="core_content_selection_macro_repeat">Repeat</string>
+    <string name="core_content_selection_macro_snippet">Snippet</string>
+    <string name="core_content_selection_macro_format">Format</string>
+    <string name="core_content_selection_macro_search">Search</string>
+    <string name="core_content_selection_macro_translate">Translate</string>
+    <string name="core_content_selection_macro_call">Call</string>
+    <string name="core_content_selection_macro_sms">Message</string>
+    <string name="core_content_selection_macro_whatsapp">WhatsApp</string>
+    <string name="core_content_selection_macro_email">Email</string>
+    <string name="core_content_selection_macro_open">Open</string>
+    <string name="core_content_selection_macro_qr">QR</string>
+    <string name="core_content_selection_macro_fancy">Fancy</string>
+    <!-- The four case options behind Format on a plain text selection. Each
+         one is written in the case it applies, so the chip shows its effect. -->
+    <string name="core_content_selection_macro_case_lower">lower case</string>
+    <string name="core_content_selection_macro_case_title">Title Case</string>
+    <string name="core_content_selection_macro_case_upper">UPPER CASE</string>
+    <string name="core_content_selection_macro_case_sentence">Sentence case</string>
+    <!-- The programmer's cases, off by default, each written in itself. -->
+    <string name="core_content_selection_macro_case_camel" translatable="false">camelCase</string>
+    <string name="core_content_selection_macro_case_snake" translatable="false">snake_case</string>
+    <string name="core_content_selection_macro_case_kebab" translatable="false">kebab-case</string>
+    <string name="core_content_selection_macro_case_constant" translatable="false">CONSTANT_CASE</string>
+    <string name="core_content_selection_macro_find">Find</string>
+    <string name="core_content_selection_macro_replace">Replace</string>
+    <string name="core_content_selection_macro_lines_sort">Sort</string>
+    <string name="core_content_selection_macro_lines_dedupe">Unique</string>
+    <string name="core_content_selection_macro_lines_number">Number</string>
+    <string name="core_content_selection_macro_lines_bullet">Bullets</string>
+    <string name="core_content_selection_macro_lines_checkbox">Check boxes</string>
+    <string name="core_content_selection_macro_lines_up">Move up</string>
+    <string name="core_content_selection_macro_lines_down">Move down</string>
+    <string name="core_content_selection_macro_grammar">Grammar</string>
+    <string name="core_content_selection_macro_deepl_write">DeepL Write</string>
+    <string name="core_content_selection_macro_ai" translatable="false">AI</string>
+    <string name="core_content_selection_macro_to_bangla">Bangla</string>
+    <string name="core_content_selection_macro_to_banglish">Banglish</string>
+    <string name="core_content_selection_macro_to_hindi">Hindi</string>
+    <string name="core_content_selection_macro_to_hinglish">Hinglish</string>
+    <!-- Selection action chip: converts Burmese between Zawgyi (the old font encoding) and Unicode. Zawgyi and Unicode are names. -->
+    <string name="core_content_selection_macro_korean_spacing">Fix spacing</string>
+    <string name="core_content_selection_macro_add_nikud">Add niqqud</string>
+    <string name="core_content_selection_macro_add_tashkeel">Add tashkeel</string>
+    <string name="core_content_selection_macro_add_furigana">Add furigana</string>
+    <string name="core_content_selection_macro_switch_script">Switch script</string>
+    <string name="core_content_selection_macro_restore_yo">Restore ё</string>
+    <string name="core_content_selection_macro_persian_spacing">Fix half-spaces</string>
+    <string name="core_content_selection_macro_zawgyi">Zawgyi ⇄ Unicode</string>
+    <string name="core_content_selection_macro_digits_latin">Digits</string>
+    <string name="core_content_selection_macro_colour">Colour</string>
+    <string name="core_content_selection_macro_json" translatable="false">JSON</string>
+    <string name="core_content_selection_macro_base64" translatable="false">Base64</string>
+    <string name="core_content_selection_macro_url_decode">Decode</string>
+    <string name="core_content_selection_macro_strip_trackers">Remove trackers</string>
+    <string name="core_content_selection_macro_chat_bold">Bold</string>
+    <string name="core_content_selection_macro_chat_italic">Italic</string>
+    <string name="core_content_selection_macro_chat_strike">Strike</string>
+    <string name="core_content_selection_macro_chat_mono">Mono</string>
+    <string name="core_content_selection_macro_read_aloud">Speak</string>
+    <string name="core_content_selection_macro_edit_word">Edit word</string>
+    <string name="core_content_selection_macro_time_zones">Zones</string>
+    <string name="core_content_selection_macro_add_contact">Contact</string>
+    <string name="core_content_selection_macro_map">Map</string>
+    <string name="core_content_selection_macro_calendar">Calendar</string>
+
+    <!-- The tags the Notes tool suggests before the user has made any of their own. -->
+    <string name="core_content_note_tag_important">Important</string>
+    <string name="core_content_note_tag_work">Work</string>
+    <string name="core_content_note_tag_school">School</string>
+    <string name="core_content_note_tag_study">Study</string>
+    <string name="core_content_note_tag_personal">Personal</string>
+    <string name="core_content_note_tag_ideas">Ideas</string>
+
+
+    <!-- To-do reminders (#995): a task's notification when it falls due. -->
+    <string name="core_content_todo_reminder_title">To-do</string>
+    <string name="core_content_todo_reminder_done">Done</string>
+    <string name="core_content_todo_reminders_channel_title">To-do reminders</string>
+    <string name="core_content_todo_reminders_channel_body">A task from the keyboard\'s to-do list, when it falls due</string>
+</resources>

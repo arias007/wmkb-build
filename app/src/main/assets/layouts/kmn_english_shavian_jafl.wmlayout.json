@@ -1,0 +1,4202 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_kmn_english_shavian_jafl",
+    "name": "Shaw JAFL",
+    "langId": "en-Shaw",
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.6
+            },
+            {
+              "label": "𐑱",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 81,
+                "longPress": [
+                  {
+                    "vkey": 81,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 81,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑬"
+              ],
+              "flick": {
+                "down": "𐑬"
+              }
+            },
+            {
+              "label": "𐑧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 87,
+                "longPress": [
+                  {
+                    "vkey": 87,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 87,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑹"
+              ],
+              "flick": {
+                "down": "𐑹"
+              }
+            },
+            {
+              "label": "𐑰",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 69,
+                "longPress": [
+                  {
+                    "vkey": 69,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 69,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑸"
+              ],
+              "flick": {
+                "down": "𐑸"
+              }
+            },
+            {
+              "label": "𐑥",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 82,
+                "longPress": [
+                  {
+                    "vkey": 82,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 82,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑿"
+              ],
+              "flick": {
+                "down": "𐑿"
+              }
+            },
+            {
+              "label": "𐑒",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 84,
+                "longPress": [
+                  {
+                    "vkey": 84,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 84,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑜"
+              ],
+              "flick": {
+                "down": "𐑜"
+              }
+            },
+            {
+              "label": "𐑐",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 89,
+                "longPress": [
+                  {
+                    "vkey": 89,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 89,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "⸰"
+              ],
+              "flick": {
+                "down": "⸰"
+              }
+            },
+            {
+              "label": "𐑑",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 85,
+                "longPress": [
+                  {
+                    "vkey": 85,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 85,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑗"
+              ],
+              "flick": {
+                "down": "𐑗"
+              }
+            },
+            {
+              "label": "𐑛",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 73,
+                "longPress": [
+                  {
+                    "vkey": 73,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 73,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑡"
+              ],
+              "flick": {
+                "down": "𐑡"
+              }
+            },
+            {
+              "label": "𐑓",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 79,
+                "longPress": [
+                  {
+                    "vkey": 79,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 79,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "–"
+              ],
+              "flick": {
+                "down": "–"
+              }
+            },
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            }
+          ],
+          [
+            {
+              "label": "𐑪",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 65,
+                "longPress": [
+                  {
+                    "vkey": 65,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 65,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑷"
+              ],
+              "flick": {
+                "down": "𐑷"
+              }
+            },
+            {
+              "label": "𐑨",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 83,
+                "longPress": [
+                  {
+                    "vkey": 83,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 83,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑭"
+              ],
+              "flick": {
+                "down": "𐑭"
+              }
+            },
+            {
+              "label": "𐑩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 68,
+                "longPress": [
+                  {
+                    "vkey": 68,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 68,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "⁞𐑩"
+              ],
+              "flick": {
+                "down": "⁞𐑩"
+              }
+            },
+            {
+              "label": "𐑦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 70,
+                "longPress": [
+                  {
+                    "vkey": 70,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 70,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑵"
+              ],
+              "flick": {
+                "down": "𐑵"
+              }
+            },
+            {
+              "label": "𐑳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 71,
+                "longPress": [
+                  {
+                    "vkey": 71,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 71,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑫"
+              ],
+              "flick": {
+                "down": "𐑫"
+              }
+            },
+            {
+              "label": "𐑤",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 72,
+                "longPress": [
+                  {
+                    "vkey": 72,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 72,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "·"
+              ],
+              "flick": {
+                "down": "·"
+              }
+            },
+            {
+              "label": "𐑮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 74,
+                "longPress": [
+                  {
+                    "vkey": 74,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 74,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "⁞𐑮"
+              ],
+              "flick": {
+                "down": "⁞𐑮"
+              }
+            },
+            {
+              "label": "𐑕",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 75,
+                "longPress": [
+                  {
+                    "vkey": 75,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 75,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑖"
+              ],
+              "flick": {
+                "down": "𐑖"
+              }
+            },
+            {
+              "label": "𐑯",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 76,
+                "longPress": [
+                  {
+                    "vkey": 76,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 76,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑙"
+              ],
+              "flick": {
+                "down": "𐑙"
+              }
+            },
+            {
+              "label": "𐑢",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 186,
+                "longPress": [
+                  {
+                    "vkey": 186,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 186,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑘"
+              ],
+              "flick": {
+                "down": "𐑘"
+              }
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:shavian_shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "𐑲",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 90,
+                "longPress": [
+                  {
+                    "vkey": 90,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 90,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑶"
+              ],
+              "flick": {
+                "down": "𐑶"
+              }
+            },
+            {
+              "label": "𐑴",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 88,
+                "longPress": [
+                  {
+                    "vkey": 88,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 88,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "☆"
+              ],
+              "flick": {
+                "down": "☆"
+              }
+            },
+            {
+              "label": "𐑞",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 67,
+                "longPress": [
+                  {
+                    "vkey": 67,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 67,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑔"
+              ],
+              "flick": {
+                "down": "𐑔"
+              }
+            },
+            {
+              "label": "𐑟",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 86,
+                "longPress": [
+                  {
+                    "vkey": 86,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 86,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "𐑠"
+              ],
+              "flick": {
+                "down": "𐑠"
+              }
+            },
+            {
+              "label": "𐑣",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 66,
+                "longPress": [
+                  {
+                    "vkey": 66,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 66,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "‹"
+              ],
+              "flick": {
+                "down": "‹"
+              }
+            },
+            {
+              "label": "𐑝",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 78,
+                "longPress": [
+                  {
+                    "vkey": 78,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 78,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "›"
+              ],
+              "flick": {
+                "down": "›"
+              }
+            },
+            {
+              "label": "𐑚",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 77,
+                "longPress": [
+                  {
+                    "vkey": 77,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 77,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "—"
+              ],
+              "flick": {
+                "down": "—"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.65
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:numbers",
+                "id": "T_NEW_3065"
+              }
+            },
+            {
+              "label": "abc",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:latin_default",
+                "id": "T_NEW_3250"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.95
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 188
+                  }
+                }
+              },
+              "longPress": [
+                ","
+              ],
+              "flick": {
+                "down": ","
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.65
+            }
+          ]
+        ]
+      },
+      "k:shavian_shift": {
+        "rows": [
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.6
+            },
+            {
+              "label": "𐑬",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 81,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 87,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑸",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 69,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑿",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 82,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑜",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 84,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "⸰",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 89,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 85,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑡",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 73,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "–",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 79,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            }
+          ],
+          [
+            {
+              "label": "𐑷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 65,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑭",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 83,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "⁞𐑩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 68,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑵",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 70,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑫",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 71,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "·",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 72,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "⁞𐑮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 74,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑖",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 75,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑙",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 76,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑘",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 186,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "letters"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "𐑶",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 90,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "☆",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 88,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑔",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 67,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "𐑠",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 86,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "‹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 66,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00AB"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00AB"
+                  }
+                }
+              },
+              "longPress": [
+                "«"
+              ],
+              "flick": {
+                "down": "«"
+              }
+            },
+            {
+              "label": "›",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 78,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00BB"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00BB"
+                  }
+                }
+              },
+              "longPress": [
+                "»"
+              ],
+              "flick": {
+                "down": "»"
+              }
+            },
+            {
+              "label": "—",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 77,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_2013"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_2013"
+                  }
+                }
+              },
+              "longPress": [
+                "–"
+              ],
+              "flick": {
+                "down": "–"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.65
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:numbers",
+                "id": "T_NEW_8656"
+              }
+            },
+            {
+              "label": "ABC",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_shift",
+                "id": "T_NEW_8623"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.95
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 188
+                  }
+                }
+              },
+              "longPress": [
+                ","
+              ],
+              "flick": {
+                "down": "'"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.65
+            }
+          ]
+        ]
+      },
+      "k:numbers": {
+        "rows": [
+          [
+            {
+              "label": "1",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 49
+              }
+            },
+            {
+              "label": "2",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 50
+              }
+            },
+            {
+              "label": "3",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 51
+              }
+            },
+            {
+              "label": "4",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 52
+              }
+            },
+            {
+              "label": "5",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 53
+              }
+            },
+            {
+              "label": "6",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 54
+              }
+            },
+            {
+              "label": "7",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 55
+              }
+            },
+            {
+              "label": "8",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 56
+              }
+            },
+            {
+              "label": "9",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 57
+              }
+            },
+            {
+              "label": "0",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 48
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.6
+            },
+            {
+              "label": "-",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 189,
+                "longPress": [
+                  {
+                    "vkey": 77,
+                    "modifiers": 16
+                  },
+                  {
+                    "id": "U_2013"
+                  },
+                  {
+                    "id": "U_301C"
+                  }
+                ]
+              },
+              "longPress": [
+                "—",
+                "–",
+                "〜"
+              ]
+            },
+            {
+              "label": "/",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 191
+              }
+            },
+            {
+              "label": ":",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 80,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_02D0"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_02D0"
+                  }
+                }
+              },
+              "longPress": [
+                "ː"
+              ],
+              "flick": {
+                "down": "ː"
+              }
+            },
+            {
+              "label": ";",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 80
+              }
+            },
+            {
+              "label": "(",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 57,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": ")",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 48,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "$",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 52,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_00A3"
+                  },
+                  {
+                    "id": "U_20AC"
+                  },
+                  {
+                    "id": "U_20B9"
+                  },
+                  {
+                    "id": "U_00A5"
+                  },
+                  {
+                    "id": "U_20A9"
+                  },
+                  {
+                    "id": "U_20B7"
+                  },
+                  {
+                    "id": "U_20BF"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 87,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "£",
+                "€",
+                "₹",
+                "¥",
+                "₩",
+                "₷",
+                "₿"
+              ],
+              "flick": {
+                "down": "£"
+              }
+            },
+            {
+              "label": "&",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 55,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "@",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 50,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            }
+          ],
+          [
+            {
+              "label": "=\\<",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:symbols",
+                "id": "T_NEW_1276"
+              }
+            },
+            {
+              "label": "·",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 72,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "vkey": 79,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 79,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "⸰"
+              ],
+              "flick": {
+                "down": "⸰"
+              }
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "id": "U_2026"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_2026"
+                  }
+                }
+              },
+              "longPress": [
+                "…"
+              ],
+              "flick": {
+                "down": "…"
+              }
+            },
+            {
+              "label": ",",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 188,
+                "longPress": [
+                  {
+                    "id": "U_02CC"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_02CC"
+                  }
+                }
+              },
+              "longPress": [
+                "ˌ"
+              ],
+              "flick": {
+                "down": "ˌ"
+              }
+            },
+            {
+              "label": "?",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 191,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_203D"
+                  },
+                  {
+                    "id": "U_00BF"
+                  },
+                  {
+                    "id": "U_2E18"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_203D"
+                  }
+                }
+              },
+              "longPress": [
+                "‽",
+                "¿",
+                "⸘"
+              ],
+              "flick": {
+                "down": "‽"
+              }
+            },
+            {
+              "label": "!",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 49,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_00A1"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_00A1"
+                  }
+                }
+              },
+              "longPress": [
+                "¡"
+              ],
+              "flick": {
+                "down": "¡"
+              }
+            },
+            {
+              "label": "‹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 66,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_00AB"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_00AB"
+                  }
+                }
+              },
+              "longPress": [
+                "«"
+              ],
+              "flick": {
+                "down": "«"
+              }
+            },
+            {
+              "label": "›",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 78,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_00BB"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_00BB"
+                  }
+                }
+              },
+              "longPress": [
+                "»"
+              ],
+              "flick": {
+                "down": "»"
+              }
+            },
+            {
+              "label": "'",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 222,
+                "longPress": [
+                  {
+                    "vkey": 222,
+                    "modifiers": 16
+                  },
+                  {
+                    "id": "U_02C8"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 222,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "\"",
+                "ˈ"
+              ],
+              "flick": {
+                "down": "\""
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "𐑖𐑷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "T_NEW_5914"
+              }
+            },
+            {
+              "label": "abc",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:latin_default",
+                "id": "T_NEW_8759"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.95
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 188
+                  }
+                }
+              },
+              "longPress": [
+                ","
+              ],
+              "flick": {
+                "down": ","
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.65
+            }
+          ]
+        ]
+      },
+      "k:symbols": {
+        "rows": [
+          [
+            {
+              "label": "[",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 219
+              }
+            },
+            {
+              "label": "]",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 221
+              }
+            },
+            {
+              "label": "{",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 219,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "}",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 221,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 51,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "%",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 53,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "^",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 54,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_2191"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_2191"
+                  }
+                }
+              },
+              "longPress": [
+                "↑"
+              ],
+              "flick": {
+                "down": "↑"
+              }
+            },
+            {
+              "label": "*",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 56,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "+",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 187,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "vkey": 189
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 189
+                  }
+                }
+              },
+              "longPress": [
+                "-"
+              ],
+              "flick": {
+                "down": "-"
+              }
+            },
+            {
+              "label": "=",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 187
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.6
+            },
+            {
+              "label": "_",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 189,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "\\",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 220
+              }
+            },
+            {
+              "label": "|",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 220,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_2193"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_2193"
+                  }
+                }
+              },
+              "longPress": [
+                "↓"
+              ],
+              "flick": {
+                "down": "↓"
+              }
+            },
+            {
+              "label": "~",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 192,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_301C"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_301C"
+                  }
+                }
+              },
+              "longPress": [
+                "〜"
+              ],
+              "flick": {
+                "down": "〜"
+              }
+            },
+            {
+              "label": "<",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 188,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_2190"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_2190"
+                  }
+                }
+              },
+              "longPress": [
+                "←"
+              ],
+              "flick": {
+                "down": "←"
+              }
+            },
+            {
+              "label": ">",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_2192"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_2192"
+                  }
+                }
+              },
+              "longPress": [
+                "→"
+              ],
+              "flick": {
+                "down": "→"
+              }
+            },
+            {
+              "label": "°",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00B0",
+                "longPress": [
+                  {
+                    "id": "U_2032"
+                  },
+                  {
+                    "id": "U_2033"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_2032"
+                  }
+                }
+              },
+              "longPress": [
+                "′",
+                "″"
+              ],
+              "flick": {
+                "down": "′"
+              }
+            },
+            {
+              "label": "µ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00B5"
+              }
+            },
+            {
+              "label": "×",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00D7",
+                "longPress": [
+                  {
+                    "id": "U_00F7"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_00F7"
+                  }
+                }
+              },
+              "longPress": [
+                "÷"
+              ],
+              "flick": {
+                "down": "÷"
+              }
+            },
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:latin_default",
+                "id": "T_NEW_8759"
+              }
+            },
+            {
+              "label": "·",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 72,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "vkey": 79,
+                    "modifiers": 16
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 79,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "⸰"
+              ],
+              "flick": {
+                "down": "⸰"
+              }
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "id": "U_2026"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_2026"
+                  }
+                }
+              },
+              "longPress": [
+                "…"
+              ],
+              "flick": {
+                "down": "…"
+              }
+            },
+            {
+              "label": ",",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 188,
+                "longPress": [
+                  {
+                    "id": "U_02CC"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_02CC"
+                  }
+                }
+              },
+              "longPress": [
+                "ˌ"
+              ],
+              "flick": {
+                "down": "ˌ"
+              }
+            },
+            {
+              "label": "?",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 191,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_203D"
+                  },
+                  {
+                    "id": "U_00BF"
+                  },
+                  {
+                    "id": "U_2E18"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_203D"
+                  }
+                }
+              },
+              "longPress": [
+                "‽",
+                "¿",
+                "⸘"
+              ],
+              "flick": {
+                "down": "‽"
+              }
+            },
+            {
+              "label": "!",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 49,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_00A1"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_00A1"
+                  }
+                }
+              },
+              "longPress": [
+                "¡"
+              ],
+              "flick": {
+                "down": "¡"
+              }
+            },
+            {
+              "label": "‹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 66,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_00AB"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_00AB"
+                  }
+                }
+              },
+              "longPress": [
+                "«"
+              ],
+              "flick": {
+                "down": "«"
+              }
+            },
+            {
+              "label": "›",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 78,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_00BB"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_00BB"
+                  }
+                }
+              },
+              "longPress": [
+                "»"
+              ],
+              "flick": {
+                "down": "»"
+              }
+            },
+            {
+              "label": "'",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 222,
+                "longPress": [
+                  {
+                    "vkey": 222,
+                    "modifiers": 16
+                  },
+                  {
+                    "id": "U_02C8"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 222,
+                    "modifiers": 16
+                  }
+                }
+              },
+              "longPress": [
+                "\"",
+                "ˈ"
+              ],
+              "flick": {
+                "down": "\""
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:numbers",
+                "id": "T_NEW_1276"
+              }
+            },
+            {
+              "label": "𐑖𐑷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "T_NEW_5914"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.95
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 188
+                  }
+                }
+              },
+              "longPress": [
+                ","
+              ],
+              "flick": {
+                "down": ","
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.65
+            }
+          ]
+        ]
+      },
+      "k:latin_default": {
+        "rows": [
+          [
+            {
+              "label": "q",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0071",
+                "flick": {
+                  "down": {
+                    "id": "U_0051"
+                  }
+                }
+              },
+              "flick": {
+                "down": "Q"
+              }
+            },
+            {
+              "label": "w",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0077",
+                "longPress": [
+                  {
+                    "id": "U_028D"
+                  },
+                  {
+                    "id": "U_01BF"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0057"
+                  }
+                }
+              },
+              "longPress": [
+                "ʍ",
+                "ƿ"
+              ],
+              "flick": {
+                "down": "W"
+              }
+            },
+            {
+              "label": "e",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0065",
+                "longPress": [
+                  {
+                    "id": "U_0259"
+                  },
+                  {
+                    "id": "U_025C"
+                  },
+                  {
+                    "id": "U_0275"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0045"
+                  }
+                }
+              },
+              "longPress": [
+                "ə",
+                "ɜ",
+                "ɵ"
+              ],
+              "flick": {
+                "down": "E"
+              }
+            },
+            {
+              "label": "r",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0072",
+                "longPress": [
+                  {
+                    "id": "U_02DE"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0052"
+                  }
+                }
+              },
+              "longPress": [
+                "˞"
+              ],
+              "flick": {
+                "down": "R"
+              }
+            },
+            {
+              "label": "t",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0074",
+                "longPress": [
+                  {
+                    "id": "U_03B8"
+                  },
+                  {
+                    "id": "U_00FE"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0054"
+                  }
+                }
+              },
+              "longPress": [
+                "θ",
+                "þ"
+              ],
+              "flick": {
+                "down": "T"
+              }
+            },
+            {
+              "label": "y",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0079",
+                "flick": {
+                  "down": {
+                    "id": "U_0059"
+                  }
+                }
+              },
+              "flick": {
+                "down": "Y"
+              }
+            },
+            {
+              "label": "u",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0075",
+                "longPress": [
+                  {
+                    "id": "U_028C"
+                  },
+                  {
+                    "id": "U_028A"
+                  },
+                  {
+                    "id": "U_0289"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0055"
+                  }
+                }
+              },
+              "longPress": [
+                "ʌ",
+                "ʊ",
+                "ʉ"
+              ],
+              "flick": {
+                "down": "U"
+              }
+            },
+            {
+              "label": "i",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0069",
+                "longPress": [
+                  {
+                    "id": "U_026A"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0049"
+                  }
+                }
+              },
+              "longPress": [
+                "ɪ"
+              ],
+              "flick": {
+                "down": "I"
+              }
+            },
+            {
+              "label": "o",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_006F",
+                "longPress": [
+                  {
+                    "id": "U_0252"
+                  },
+                  {
+                    "id": "T_NEW_2784"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_004F"
+                  }
+                }
+              },
+              "longPress": [
+                "ɒ",
+                "ɔ"
+              ],
+              "flick": {
+                "down": "O"
+              }
+            },
+            {
+              "label": "p",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0070",
+                "flick": {
+                  "down": {
+                    "id": "U_0050"
+                  }
+                }
+              },
+              "flick": {
+                "down": "P"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.6
+            },
+            {
+              "label": "a",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0061",
+                "longPress": [
+                  {
+                    "id": "U_00E6"
+                  },
+                  {
+                    "id": "U_0251"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0041"
+                  }
+                }
+              },
+              "longPress": [
+                "æ",
+                "ɑ"
+              ],
+              "flick": {
+                "down": "A"
+              }
+            },
+            {
+              "label": "s",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0073",
+                "longPress": [
+                  {
+                    "id": "U_0283"
+                  },
+                  {
+                    "id": "U_017F"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0053"
+                  }
+                }
+              },
+              "longPress": [
+                "ʃ",
+                "ſ"
+              ],
+              "flick": {
+                "down": "S"
+              }
+            },
+            {
+              "label": "d",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0064",
+                "longPress": [
+                  {
+                    "id": "U_00F0"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0044"
+                  }
+                }
+              },
+              "longPress": [
+                "ð"
+              ],
+              "flick": {
+                "down": "D"
+              }
+            },
+            {
+              "label": "f",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0066",
+                "flick": {
+                  "down": {
+                    "id": "U_0046"
+                  }
+                }
+              },
+              "flick": {
+                "down": "F"
+              }
+            },
+            {
+              "label": "g",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0067",
+                "longPress": [
+                  {
+                    "id": "U_0261"
+                  },
+                  {
+                    "id": "U_0263"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0047"
+                  }
+                }
+              },
+              "longPress": [
+                "ɡ",
+                "ɣ"
+              ],
+              "flick": {
+                "down": "G"
+              }
+            },
+            {
+              "label": "h",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0068",
+                "flick": {
+                  "down": {
+                    "id": "U_0048"
+                  }
+                }
+              },
+              "flick": {
+                "down": "H"
+              }
+            },
+            {
+              "label": "j",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_006A",
+                "flick": {
+                  "down": {
+                    "id": "U_004A"
+                  }
+                }
+              },
+              "flick": {
+                "down": "J"
+              }
+            },
+            {
+              "label": "k",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_006B",
+                "flick": {
+                  "down": {
+                    "id": "U_004B"
+                  }
+                }
+              },
+              "flick": {
+                "down": "K"
+              }
+            },
+            {
+              "label": "l",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_006C",
+                "longPress": [
+                  {
+                    "id": "U_026C"
+                  },
+                  {
+                    "id": "U_026B"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_004C"
+                  }
+                }
+              },
+              "longPress": [
+                "ɬ",
+                "ɫ"
+              ],
+              "flick": {
+                "down": "L"
+              }
+            },
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:latin_shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "z",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_007A",
+                "longPress": [
+                  {
+                    "id": "U_0292"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_005A"
+                  }
+                }
+              },
+              "longPress": [
+                "ʒ"
+              ],
+              "flick": {
+                "down": "Z"
+              }
+            },
+            {
+              "label": "x",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0078",
+                "longPress": [
+                  {
+                    "id": "U_03C7"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0058"
+                  }
+                }
+              },
+              "longPress": [
+                "χ"
+              ],
+              "flick": {
+                "down": "X"
+              }
+            },
+            {
+              "label": "c",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0063",
+                "flick": {
+                  "down": {
+                    "id": "U_0043"
+                  }
+                }
+              },
+              "flick": {
+                "down": "C"
+              }
+            },
+            {
+              "label": "v",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0076",
+                "flick": {
+                  "down": {
+                    "id": "U_0056"
+                  }
+                }
+              },
+              "flick": {
+                "down": "V"
+              }
+            },
+            {
+              "label": "b",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0062",
+                "flick": {
+                  "down": {
+                    "id": "U_0042"
+                  }
+                }
+              },
+              "flick": {
+                "down": "B"
+              }
+            },
+            {
+              "label": "n",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_006E",
+                "longPress": [
+                  {
+                    "id": "U_014B"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_004E"
+                  }
+                }
+              },
+              "longPress": [
+                "ŋ"
+              ],
+              "flick": {
+                "down": "N"
+              }
+            },
+            {
+              "label": "m",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_006D",
+                "flick": {
+                  "down": {
+                    "id": "U_004D"
+                  }
+                }
+              },
+              "flick": {
+                "down": "M"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.65
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:numbers",
+                "id": "T_NEW_8759"
+              }
+            },
+            {
+              "label": "𐑖𐑷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "T_NEW_5914"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.95
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 188
+                  }
+                }
+              },
+              "longPress": [
+                ","
+              ],
+              "flick": {
+                "down": ","
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.65
+            }
+          ]
+        ]
+      },
+      "k:latin_shift": {
+        "rows": [
+          [
+            {
+              "label": "Q",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0051"
+              }
+            },
+            {
+              "label": "W",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0057",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_01F7"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ƿ"
+              ]
+            },
+            {
+              "label": "E",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0045",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_018F"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ə"
+              ]
+            },
+            {
+              "label": "R",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0052"
+              }
+            },
+            {
+              "label": "T",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0054",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_03F4"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_00DE"
+                  }
+                ]
+              },
+              "longPress": [
+                "ϴ",
+                "Þ"
+              ]
+            },
+            {
+              "label": "Y",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_shift",
+                "id": "U_0059"
+              }
+            },
+            {
+              "label": "U",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0055"
+              }
+            },
+            {
+              "label": "I",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0049"
+              }
+            },
+            {
+              "label": "O",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_004F"
+              }
+            },
+            {
+              "label": "P",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0050"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.6
+            },
+            {
+              "label": "A",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0041",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_00C6"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_2C6D"
+                  }
+                ]
+              },
+              "longPress": [
+                "Æ",
+                "Ɑ"
+              ]
+            },
+            {
+              "label": "S",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0053",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_01A9"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ʃ"
+              ]
+            },
+            {
+              "label": "D",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0044",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_00D0"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ð"
+              ]
+            },
+            {
+              "label": "F",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0046"
+              }
+            },
+            {
+              "label": "G",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0047"
+              }
+            },
+            {
+              "label": "H",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0048"
+              }
+            },
+            {
+              "label": "J",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_004A"
+              }
+            },
+            {
+              "label": "K",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_004B"
+              }
+            },
+            {
+              "label": "L",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_004C"
+              }
+            },
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:latin_default"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "Z",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_005A",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_01B7"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ʒ"
+              ]
+            },
+            {
+              "label": "X",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0058"
+              }
+            },
+            {
+              "label": "C",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0043"
+              }
+            },
+            {
+              "label": "V",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0056"
+              }
+            },
+            {
+              "label": "B",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_0042"
+              }
+            },
+            {
+              "label": "N",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_004E",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "k:latin_default",
+                    "id": "U_014A"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ŋ"
+              ]
+            },
+            {
+              "label": "M",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_default",
+                "id": "U_004D"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.65
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:numbers",
+                "id": "T_NEW_8759"
+              }
+            },
+            {
+              "label": "𐑖𐑷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "id": "T_NEW_5914"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.95
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 188
+                  }
+                }
+              },
+              "longPress": [
+                ","
+              ],
+              "flick": {
+                "down": ","
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.65
+            }
+          ]
+        ]
+      },
+      "k:shavian_shiftlock": {
+        "rows": [
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.6
+            },
+            {
+              "label": "𐑬",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 81,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 87,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑸",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 69,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑿",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 82,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑜",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 84,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "⸰",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 89,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 85,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑡",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 73,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "–",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 79,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            }
+          ],
+          [
+            {
+              "label": "𐑷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 65,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑭",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 83,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "⁞𐑩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 68,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑵",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 70,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑫",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 71,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "·",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 72,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "⁞𐑮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 74,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑖",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 75,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑙",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 76,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑘",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 186,
+                "modifiers": 16
+              }
+            }
+          ],
+          [
+            {
+              "label": "⇪",
+              "action": {
+                "type": "letters"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "𐑶",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 90,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "☆",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 88,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑔",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 67,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "𐑠",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 86,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "‹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 66,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_00AB"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 16,
+                    "id": "U_00AB"
+                  }
+                }
+              },
+              "longPress": [
+                "«"
+              ],
+              "flick": {
+                "down": "«"
+              }
+            },
+            {
+              "label": "›",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 78,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_00BB"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 16,
+                    "id": "U_00BB"
+                  }
+                }
+              },
+              "longPress": [
+                "»"
+              ],
+              "flick": {
+                "down": "»"
+              }
+            },
+            {
+              "label": "—",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 77,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_2013"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 16,
+                    "id": "U_2013"
+                  }
+                }
+              },
+              "longPress": [
+                "–"
+              ],
+              "flick": {
+                "down": "–"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.65
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:numbers",
+                "id": "T_NEW_8656"
+              }
+            },
+            {
+              "label": "ABC",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:latin_shift",
+                "id": "T_NEW_8623"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.95
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "vkey": 188
+                  }
+                }
+              },
+              "longPress": [
+                ","
+              ],
+              "flick": {
+                "down": ","
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.65
+            }
+          ]
+        ]
+      },
+      "k:latin_shiftlock": {
+        "rows": [
+          [
+            {
+              "label": "Q",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0051"
+              }
+            },
+            {
+              "label": "W",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0057",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_01F7"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ƿ"
+              ]
+            },
+            {
+              "label": "E",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0045",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_018F"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ə"
+              ]
+            },
+            {
+              "label": "R",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0052"
+              }
+            },
+            {
+              "label": "T",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0054",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_03F4"
+                  },
+                  {
+                    "modifiers": 16,
+                    "id": "U_00DE"
+                  }
+                ]
+              },
+              "longPress": [
+                "ϴ",
+                "Þ"
+              ]
+            },
+            {
+              "label": "Y",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0059"
+              }
+            },
+            {
+              "label": "U",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0055"
+              }
+            },
+            {
+              "label": "I",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0049"
+              }
+            },
+            {
+              "label": "O",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_004F"
+              }
+            },
+            {
+              "label": "P",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0050"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.6
+            },
+            {
+              "label": "A",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0041",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_00C6"
+                  },
+                  {
+                    "modifiers": 16,
+                    "id": "U_2C6D"
+                  }
+                ]
+              },
+              "longPress": [
+                "Æ",
+                "Ɑ"
+              ]
+            },
+            {
+              "label": "S",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0053",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_01A9"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ʃ"
+              ]
+            },
+            {
+              "label": "D",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0044",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_00D0"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ð"
+              ]
+            },
+            {
+              "label": "F",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0046"
+              }
+            },
+            {
+              "label": "G",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0047"
+              }
+            },
+            {
+              "label": "H",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0048"
+              }
+            },
+            {
+              "label": "J",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_004A"
+              }
+            },
+            {
+              "label": "K",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_004B"
+              }
+            },
+            {
+              "label": "L",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_004C"
+              }
+            },
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            }
+          ],
+          [
+            {
+              "label": "⇪",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:latin_default"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "Z",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_005A",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_01B7"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ʒ"
+              ]
+            },
+            {
+              "label": "X",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0058"
+              }
+            },
+            {
+              "label": "C",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0043"
+              }
+            },
+            {
+              "label": "V",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0056"
+              }
+            },
+            {
+              "label": "B",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0042"
+              }
+            },
+            {
+              "label": "N",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_004E",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "id": "U_014A"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ŋ"
+              ]
+            },
+            {
+              "label": "M",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_004D"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.65
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "output": "",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:numbers",
+                "id": "T_NEW_8759"
+              }
+            },
+            {
+              "label": "𐑖𐑷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "id": "T_NEW_5914"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.95
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "vkey": 188
+                  }
+                ]
+              },
+              "longPress": [
+                ","
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.65
+            }
+          ]
+        ]
+      }
+    },
+    "keyman": {
+      "keyboardId": "english_shavian_jafl"
+    }
+  }
+}

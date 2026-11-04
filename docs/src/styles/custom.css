@@ -1,0 +1,321 @@
+/* WM Keyboard docs theme.
+   Brand: launcher gradient #4C8DF6 → #8B5CF6 on deep navy (#191C42). */
+
+:root {
+	/* Brand stops, usable anywhere. */
+	--wm-blue: #4c8df6;
+	--wm-violet: #8b5cf6;
+	--wm-gradient: linear-gradient(135deg, var(--wm-blue), var(--wm-violet));
+}
+
+/* The `--sl-color-*` palette and the fonts come from starlight-theme-black
+   (configured in astro.config.mjs). Its stylesheets are appended after this file,
+   so a plain `:root` block here would simply lose. The doubled `:root:root`
+   selector below outweighs the theme's `:root` no matter which sheet lands first. */
+
+/* starlight-theme-black maps `--sl-color-accent` onto `--border`, a near-black
+   grey. That silently kills every accent in our own components: the gear in the
+   settings-path chip, the gesture trails, the highlighted language names and the
+   selected swatch outlines all render as dark-on-dark. Point the accent back at
+   the brand blue so those read again. */
+:root:root {
+	--sl-color-accent-low: #232a63;
+	--sl-color-accent: #6c74f6;
+	--sl-color-accent-high: #c8d3ff;
+
+	/* The theme's own content column is 40rem, tighter than Starlight's 45rem. */
+	--sl-content-width: 54rem;
+}
+
+:root[data-theme='light']:root {
+	--sl-color-accent-low: #dfe4ff;
+	--sl-color-accent: #5058dd;
+	--sl-color-accent-high: #29307f;
+}
+
+/* The theme hard-codes the same 40rem on the pane itself, so the variable alone
+   isn't enough to widen the column. `data-has-sidebar`/`data-has-toc` live on
+   <html>, i.e. on `:root` itself — so this has to be `:root:root[…]` and not
+   `:root [… ]`, which would look for a descendant and never match. Scoped like
+   the theme's own rule so splash pages keep their full-bleed layout. */
+:root:root[data-has-sidebar][data-has-toc] .main-pane {
+	max-width: var(--sl-content-width);
+}
+
+/* ---------- Sidebar scrollbar ---------- */
+
+/* The theme hides the sidebar scrollbar outright (`scrollbar-width: none`), which
+   leaves no hint that a long section scrolls at all. Give it a slim brand-tinted
+   one that only colours in on hover.
+
+   The theme also sizes the scrolling element to 14rem inside an 18.75rem pane,
+   which left the scrollbar floating 76px shy of the pane's divider line, adrift
+   in empty space. Filling the pane puts it flush against that divider — and
+   stops the longer labels wrapping a word early. */
+/* Starlight reserves a scrollbar gutter on the pane because normally the pane is
+   what scrolls. Under this theme it never can (`overflow: hidden`), so that
+   gutter is just 15px of dead space holding the scrollbar off the divider. */
+:root:root .sidebar-pane {
+	scrollbar-gutter: auto;
+}
+
+:root:root .sidebar-content {
+	width: 100%;
+	padding-inline-end: 0.3rem;
+	scrollbar-width: thin;
+	scrollbar-color: var(--sl-color-gray-5) transparent;
+	scrollbar-gutter: stable;
+}
+
+.sidebar-content::-webkit-scrollbar {
+	width: 8px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+	border: 2px solid transparent;
+	border-radius: 999px;
+	/* Padding the thumb via a transparent border needs background-clip, otherwise
+	   the border area paints too and the thumb looks full-width. */
+	background-clip: content-box;
+	background-color: var(--sl-color-gray-5);
+	transition: background-color 0.15s ease;
+}
+
+.sidebar-content:hover::-webkit-scrollbar-thumb {
+	background-color: var(--sl-color-gray-4);
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+	background-color: var(--sl-color-accent);
+}
+
+/* ---------- Hero ---------- */
+
+/* The headline gradient lives on a `.wm-gradient-text` span inside the hero
+   title (set in index.mdx frontmatter), so only the closing phrase glows.
+   The hero markup itself comes from src/components/Hero.astro. */
+
+/* The navbar logo is a full-bleed mark — round it like a launcher icon. */
+.site-title img {
+	border-radius: 22%;
+}
+
+/* Subtle radial wash behind the whole hero. */
+[data-has-hero] .page {
+	background:
+		radial-gradient(120rem 40rem at 50% -12rem, rgba(76, 141, 246, 0.12), transparent 60%),
+		var(--sl-color-bg);
+}
+
+/* ---------- Content polish ---------- */
+
+/* Rounded screenshots and images inside content. */
+.sl-markdown-content img {
+	border-radius: 0.75rem;
+}
+
+/* Card hover lift (Starlight <Card>/<LinkCard>). */
+.sl-markdown-content .card,
+.sl-markdown-content a.sl-link-card {
+	transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+.sl-markdown-content a.sl-link-card:hover,
+.sl-markdown-content .card:hover {
+	transform: translateY(-2px);
+	border-color: var(--sl-color-accent);
+	box-shadow: 0 6px 24px rgba(76, 141, 246, 0.14);
+}
+
+/* <kbd> — used by the KeyCap component and plain markdown alike. */
+.sl-markdown-content kbd {
+	display: inline-block;
+	min-width: 1.6em;
+	padding: 0.12em 0.5em;
+	border: 1px solid var(--sl-color-gray-4);
+	border-bottom-width: 2.5px;
+	border-radius: 0.45em;
+	background: var(--sl-color-gray-6);
+	color: var(--sl-color-white);
+	font-family: var(--sl-font-mono);
+	font-size: 0.82em;
+	line-height: 1.5;
+	text-align: center;
+	white-space: nowrap;
+}
+
+/* Sidebar: current-page marker gets a gradient bar. */
+.sidebar-content a[aria-current='page'] {
+	background: linear-gradient(
+		90deg,
+		rgba(76, 141, 246, 0.18),
+		rgba(139, 92, 246, 0.12)
+	);
+	border-inline-start: 3px solid var(--wm-blue);
+	border-start-start-radius: 0;
+	border-end-start-radius: 0;
+}
+
+
+/* Tables: rounded container, sticky-friendly. */
+.sl-markdown-content table {
+	border-radius: 0.6rem;
+	overflow: hidden;
+}
+
+/* Reusable gradient-text helper for MDX. */
+.wm-gradient-text {
+	background: var(--wm-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+/* ---------- Homepage ---------- */
+
+/* Everything below is scoped to the splash page ([data-has-hero]) so none of
+   it leaks into ordinary doc pages. The hero and feature rows carry their own
+   scoped styles in Hero.astro / ThemeDeck.astro / FeatureRow.astro; these are
+   the bits authored directly in index.mdx. */
+
+/* Stat strip: each number is a door into the docs. */
+[data-has-hero] .wm-stats {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.6rem 0.75rem;
+	margin-top: 1.5rem;
+}
+[data-has-hero] .wm-stats a {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 0.4em;
+	padding: 0.45em 1em;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 999px;
+	background: var(--sl-color-gray-6);
+	color: var(--sl-color-gray-2);
+	font-size: var(--sl-text-sm);
+	text-decoration: none;
+	transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+[data-has-hero] .wm-stats a strong {
+	font-size: 1.15em;
+	background: var(--wm-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+[data-has-hero] .wm-stats a:hover {
+	transform: translateY(-2px);
+	border-color: var(--sl-color-accent);
+	box-shadow: 0 6px 24px rgba(76, 141, 246, 0.14);
+	color: var(--sl-color-white);
+}
+
+/* Tiny gradient kicker above the section headings. */
+[data-has-hero] .wm-kicker {
+	margin: 3.5rem 0 0;
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	background: var(--wm-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	width: fit-content;
+}
+[data-has-hero] .wm-kicker + h2 {
+	margin-top: 0.4rem;
+}
+
+/* Closing call-to-action panel. */
+[data-has-hero] .wm-cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+	margin-top: 4rem;
+	padding: 2.5rem 1.5rem;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 1.25rem;
+	background:
+		radial-gradient(40rem 18rem at 50% -8rem, rgba(76, 141, 246, 0.16), transparent 70%),
+		linear-gradient(135deg, rgba(76, 141, 246, 0.08), rgba(139, 92, 246, 0.08));
+	text-align: center;
+}
+[data-has-hero] .wm-cta-kicker {
+	margin: 0;
+	font-size: var(--sl-text-xs);
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	background: var(--wm-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+[data-has-hero] .wm-cta h2 {
+	margin: 0;
+	color: var(--sl-color-white);
+	font-size: var(--sl-text-3xl);
+	font-weight: 600;
+}
+[data-has-hero] .wm-cta p:not(.wm-cta-kicker) {
+	margin: 0;
+	color: var(--sl-color-gray-2);
+}
+[data-has-hero] .wm-cta-actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75rem 1rem;
+	padding-top: 0.5rem;
+}
+[data-has-hero] .wm-cta .wm-cta-note {
+	padding-top: 0.5rem;
+	font-size: var(--sl-text-sm);
+}
+[data-has-hero] .wm-cta-note a {
+	color: var(--sl-color-text-accent);
+}
+
+/* A set-aside screenshot (<PhoneFrame side>) floats beside the prose; it
+   never runs on into the next section. Starlight wraps headings in
+   .sl-heading-wrapper, so clear both spellings. */
+.sl-markdown-content :is(h2, .sl-heading-wrapper.level-h2) {
+	clear: both;
+}
+
+/* starlight-theme-black hides the whole search box below 48rem, so on a phone
+   the header had no way into search at all (#665). Bring it back as an icon
+   button beside the menu, the way Starlight itself draws it on narrow screens. */
+@media (max-width: 47.99rem) {
+	site-search {
+		display: flex;
+		width: auto;
+	}
+
+	site-search::after {
+		display: none;
+	}
+
+	site-search > button[data-open-modal] {
+		background-color: transparent;
+		padding-inline: 0.5rem;
+	}
+
+	site-search > button[data-open-modal] svg {
+		display: block;
+		width: 1.125rem;
+		height: 1.125rem;
+	}
+
+	site-search > button > span {
+		display: none;
+	}
+}

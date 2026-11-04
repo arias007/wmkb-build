@@ -1,0 +1,79 @@
+---
+title: "Which build you have"
+description: "The standard, offline and F-Droid builds, what the F-Droid build leaves out, and how to tell which one you have."
+sidebar:
+  order: 4
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import Flavor from '@components/Flavor.astro';
+import Shot from '@components/Shot.astro';
+
+WM Keyboard is one app built from one source tree. Up to 0.6.2 it came in two editions, Full and Lite. From 0.6.3 there is no Lite: every build has the same features, and what differs is where the larger parts come from.
+
+- **Standard**, from GitHub and Google Play. Feature libraries such as the handwriting recogniser or the offline voice engines are not in the APK. Each one downloads the first time its feature is used, from Play on a Play install and from the project's own data repository otherwise.
+- **Offline**, from GitHub. The same app with no internet permission at all. Like the standard build it leaves the feature libraries and the other interface languages out, and since it can't fetch them, you [import](/privacy/offline/#the-offline-build) the ones you want from files fetched elsewhere. An all-languages version, for Android 7 to 10, has the 48 languages built in.
+- **F-Droid.** The standard build without Google's SDKs (ML Kit, LiteRT and LiteRT-LM), which F-Droid does not accept. Its feature libraries download only after you agree to it under Privacy, since that skips F-Droid's own checks.
+
+<PhoneFrame caption="The Tools panel on a standard build: Handwriting, Text scan, QR & barcode, Document scanner and Grammar check all appear.">
+  <Shot id="start/editions-toolbox-full" alt="The Tools panel on a standard build: Handwriting, Text scan, QR & barcode, Document scanner and Grammar check all appear." />
+</PhoneFrame>
+
+## What the F-Droid build leaves out
+
+The F-Droid build is compiled with one switch on, `wmkb.enableFdroid`, which leaves Google's SDKs out and puts small stand-ins where the code called them. No tool goes missing from the toolbox: every tool that runs on a Google library elsewhere has an open-source one in its place there, and two of them read less. Grammar check is in every build, and so is the Harper spell checker under Android's system spell-checker settings, because F-Droid compiles Harper from source.
+
+The document scanner is in every build. Where Google Play services can run Google's scanner it opens that one; on the F-Droid build, and on a phone without Play services, it opens the keyboard's own [built-in scanner](/tools/scanner/#scanning-a-document) instead.
+
+Text scan is in every build too. ML Kit's text recognizer, Tesseract's library and the LiteRT engine are all left out of the F-Droid build, so it reads with [PaddleOCR](/tools/scanner/#which-languages-it-reads) alone, run by MNN, the open-source engine the sticker generator also uses. That covers Chinese, Japanese and Latin-script text such as English or French, after one download of 21 MB. Other scripts read there only with the **Online model** reader you set up yourself. A standard build without Play services keeps ML Kit's Latin reader and Tesseract, because they come with the app.
+
+The QR & barcode scanner is in every build too. ML Kit's barcode reader is a Google library, so the F-Droid build reads codes with [zxing-cpp](/tools/scanner/#which-reader-decodes-codes) instead, an open-source reader that knows the same formats and a few more. So does the Google Play copy on a phone without Play services, where ML Kit's reader has no model. The result card, the Insert, Copy and Open buttons and pairing with WMK Desktop work the same with either reader.
+
+Handwriting is in every build, but the F-Droid one reads fewer languages, and less accurately. ML Kit's recogniser, which covers 126 languages, is a Google library; in its place the F-Droid build has zinnia, an open-source recogniser with models for Japanese, Simplified Chinese and Traditional Chinese, and [PaddleOCR's text recognisers](/tools/handwriting/#paddleocr-for-other-scripts) for Latin, Cyrillic, Arabic, Devanagari, Tamil, Telugu, Thai, Greek and Korean writing. For a language in any other script, Bangla among them, the panel says that this version cannot read it. The "Handwrite" option under **What a swipe does** follows the same rule.
+
+<PhoneFrame caption="The same panel on the F-Droid build: every tool is there.">
+  {/* shot: start/editions-toolbox-lite */}
+</PhoneFrame>
+
+See [Handwriting](/tools/handwriting/), [Scanner](/tools/scanner/), and [Grammar check](/smart/grammar/) for what each tool does in detail.
+
+## Other parts the F-Droid build lacks
+
+A few more features sit inside tools that every build has:
+
+- **Offline voice engines.** Every build offers [offline Whisper](/tools/whisper/) with its whisper.cpp models, [offline Asr4All](/tools/asr4all/), English dictation that writes the words while you speak, [offline Parakeet](/tools/parakeet/) for 25 European languages and [offline Moonshine](/tools/moonshine/), a small quick English model. The F-Droid build lacks Whisper's older LiteRT models and [offline Whistle](/tools/whistle/), whose library F-Droid can't build from source. The system recognizer stays the default everywhere until you switch it.
+- **LiteRT-LM models for on-device AI.** The F-Droid build has the [AI writing tools](/tools/ai/) "On your device" provider, but it runs only the [GGUF models](/tools/ai/#gguf-models-on-llamacpp) on llama.cpp, which F-Droid builds from source. The LiteRT-LM list (Gemma 4, Gemma 3, Qwen and SmolLM2 as `.litertlm` or `.task` files) is left out, and importing one of those files says it needs the Google Play or GitHub build.
+- **Smaller pieces.** The sticker editor's one-tap background remover, ML Kit's on-device translator (Bergamot, the open-source one, is in every build), Google Home in the smart home tool, the NPU as a compute choice, and search by meaning.
+
+## Why the download is small
+
+None of the builds that can reach the internet carry their feature libraries in the APK. On Play each arrives as an on-demand part the first time its feature is used: the LiteRT-LM runtime, ML Kit's translator, the LiteRT interpreter behind offline Whisper, the sticker editor's own background remover and the scanner's PaddleOCR reader, ML Kit's handwriting recogniser, the whisper.cpp, ExecuTorch and Whistle libraries behind the other offline voice engines, the Tesseract library behind the scanner's offline reader, zxing-cpp behind the QR scanner where ML Kit's reader is not used, and the Harper library behind the grammar tool and the spell checker. GitHub's standard build fetches the same libraries itself, checked against a hash the APK carries, and so does the F-Droid build once you allow it.
+
+Most of what that saves is runtime *library code*, not language data. The biggest models these features use (handwriting recognition per language, Whisper's transcription graphs, LLM weights) download on demand into app storage in every build, so none of those sit in the APK either.
+
+The offline build leaves out the same libraries, and takes each one as an import of the file the standard build would have downloaded, checked against the same hash. Up to 0.6.3 it carried every library and language instead, at about ten times the size.
+
+## Privacy doesn't change between builds
+
+The F-Droid build is a build with fewer Google parts, not a more private one. Every feature it lacks or reads differently already runs on-device and says so in its own settings caption. Handwriting recognition "runs fully on your device, with Google ML Kit or, for Chinese and Japanese, zinnia." Text scan says "no photo and no text leaves your device, and it works offline." Document scanning says "the processing runs on your device." Whisper "runs fully on your device across many languages and sends no audio anywhere." The on-device AI caption says the text you run an action on "stays on your device." The privacy policy the About screen opens does differ, because ML Kit reports usage to Google and the F-Droid build has no ML Kit to do so.
+
+## Telling which build you have
+
+<SettingsPath path="About / App / Version" />
+
+<PhoneFrame caption="Settings → About → Version names the build, build type, store and version code.">
+  <Shot id="start/editions-about-version" alt="Settings → About → Version names the build, build type, store and version code." />
+</PhoneFrame>
+
+The Version row shows "Standard build (release) · code …", or "Offline build" for the offline one, with " · F-Droid" or " · Play Store" after the build type when the app came from a store. The toolbox doesn't tell them apart: every tool is in both.
+
+## Switching builds
+
+There's no in-app switch. Which build you have depends on which APK you installed. They share a package name and the release signing key (F-Droid publishes its build with the project's own signature, from 0.5.10 on), so installing another build over your current one is a normal app update. Your settings, themes, learned words and the rest of the app's data stay in place. A GitHub install from 0.6.2 or earlier that was Lite moves onto the standard build at its next update.
+
+## Details & edge cases
+
+- In the F-Droid build, Text scan's **Text recognition** setting offers only Automatic and Online model, since ML Kit and Tesseract aren't there. A choice of either restored from another build's backup reads as Automatic.
+- Build release APKs on different machines without sharing a signing keystore and the packages carry different signatures. Installing one over the other then fails the way any mismatched-signature update does (see [Installation → Details & edge cases](/start/installation/#details--edge-cases)).
+- Exported debug logs stamp which language build (`intl` or `en`) produced them, which the bug-report bot needs to read the crash trace.

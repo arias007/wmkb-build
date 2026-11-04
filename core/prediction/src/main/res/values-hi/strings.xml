@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">सर्वर ने फ़ाइल नहीं भेजी। त्रुटि कोड HTTP %1$s है।</string>
+    <string name="core_pred_wordlist_malformed_error">वह शब्द सूची खाली है या पढ़ने योग्य नहीं है।</string>
+    <string name="core_pred_wordlist_memory_error">इस डिवाइस में इतने बड़े शब्दकोश के लिए पर्याप्त मेमोरी नहीं है। छोटा आकार चुनें।</string>
+    <string name="core_pred_wordlist_no_space_error">आपके डिवाइस पर पर्याप्त स्टोरेज नहीं है। कुछ फाइलें हटाएं, फिर दोबारा प्रयास करें।</string>
+    <string name="core_pred_wordlist_save_error">ऐप शब्द सूची को सहेज नहीं सकता। पुनः प्रयास करें।</string>
+    <string name="core_pred_wordlist_size_all_label">सब कुछ</string>
+    <string name="core_pred_wordlist_size_large_label">बड़ा</string>
+    <string name="core_pred_wordlist_size_medium_label">मध्यम</string>
+    <string name="core_pred_wordlist_size_small_label">छोटा</string>
+    <string name="core_pred_wordlist_source_aosp_detail">Android के अपने कीबोर्ड द्वारा उपयोग की जाने वाली क्यूरेटेड सूची। इसमें कम शब्द होते हैं और नामों व टाइपिंग संबंधी गलतियों की संभावना भी कम होती है।</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">सबटाइटल और वेब टेक्स्ट से गिना गया। बहुत सारे शब्द, अधिक नामों, स्लैंग और टाइपो के साथ।</string>
+    <string name="core_pred_wordlist_source_frequency_label">आवृत्ति</string>
+    <string name="core_pred_wordlist_variant_australia_label">ऑस्ट्रेलिया</string>
+    <string name="core_pred_wordlist_variant_brazil_label">ब्राज़ील</string>
+    <string name="core_pred_wordlist_variant_canada_label">कनाडा</string>
+    <string name="core_pred_wordlist_variant_europe_label">यूरोप</string>
+    <string name="core_pred_wordlist_variant_uk_label">यूनाइटेड किंगडम</string>
+    <string name="core_pred_wordlist_variant_us_label">संयुक्त राज्य अमेरिका</string>
+</resources>

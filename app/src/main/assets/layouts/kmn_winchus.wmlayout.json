@@ -1,0 +1,6721 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_kmn_winchus",
+    "name": "Winchus",
+    "langId": "qu",
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "q",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 81,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "vkey": 49
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0071_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "1"
+              ],
+              "flick": {
+                "up": "q'"
+              }
+            },
+            {
+              "label": "w",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 87,
+                "longPress": [
+                  {
+                    "vkey": 50
+                  }
+                ]
+              },
+              "longPress": [
+                "2"
+              ]
+            },
+            {
+              "label": "e",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 69,
+                "longPress": [
+                  {
+                    "id": "U_025B"
+                  },
+                  {
+                    "id": "U_00E8"
+                  },
+                  {
+                    "id": "U_00EB"
+                  },
+                  {
+                    "id": "U_00E9"
+                  },
+                  {
+                    "vkey": 51
+                  },
+                  {
+                    "id": "U_0259"
+                  },
+                  {
+                    "id": "U_00EA"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_00EB"
+                  },
+                  "right": {
+                    "id": "U_00E9"
+                  }
+                }
+              },
+              "longPress": [
+                "ɛ",
+                "è",
+                "ë",
+                "é",
+                "3",
+                "ə",
+                "ê"
+              ],
+              "flick": {
+                "up": "ë",
+                "right": "é"
+              }
+            },
+            {
+              "label": "r",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 82,
+                "longPress": [
+                  {
+                    "id": "U_0155"
+                  },
+                  {
+                    "vkey": 52
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0155"
+                  }
+                }
+              },
+              "longPress": [
+                "ŕ",
+                "4"
+              ],
+              "flick": {
+                "down": "ŕ"
+              }
+            },
+            {
+              "label": "t",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 84,
+                "longPress": [
+                  {
+                    "id": "U_03B8"
+                  },
+                  {
+                    "vkey": 53
+                  },
+                  {
+                    "id": "U_00FE"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0074_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "θ",
+                "5",
+                "þ"
+              ],
+              "flick": {
+                "up": "t'"
+              }
+            },
+            {
+              "label": "y",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 89,
+                "longPress": [
+                  {
+                    "id": "U_028E"
+                  },
+                  {
+                    "vkey": 54
+                  },
+                  {
+                    "id": "U_00FD"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0079_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "ʎ",
+                "6",
+                "ý"
+              ],
+              "flick": {
+                "up": "y'"
+              }
+            },
+            {
+              "label": "u",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 85,
+                "longPress": [
+                  {
+                    "id": "U_028A"
+                  },
+                  {
+                    "id": "U_00F9"
+                  },
+                  {
+                    "id": "U_00FC"
+                  },
+                  {
+                    "id": "U_00FA"
+                  },
+                  {
+                    "vkey": 55
+                  },
+                  {
+                    "id": "U_00FB"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_00FC"
+                  },
+                  "down": {
+                    "id": "U_0075_0027"
+                  },
+                  "left": {
+                    "id": "U_00FA"
+                  }
+                }
+              },
+              "longPress": [
+                "ʊ",
+                "ù",
+                "ü",
+                "ú",
+                "7",
+                "û"
+              ],
+              "flick": {
+                "up": "ü",
+                "down": "u'",
+                "left": "ú"
+              }
+            },
+            {
+              "label": "i",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 73,
+                "longPress": [
+                  {
+                    "id": "U_00EE"
+                  },
+                  {
+                    "id": "U_026A"
+                  },
+                  {
+                    "id": "U_00EC"
+                  },
+                  {
+                    "id": "U_00EF"
+                  },
+                  {
+                    "id": "U_00ED"
+                  },
+                  {
+                    "vkey": 56
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_00EF"
+                  },
+                  "left": {
+                    "id": "U_00ED"
+                  }
+                }
+              },
+              "longPress": [
+                "î",
+                "ɪ",
+                "ì",
+                "ï",
+                "í",
+                "8"
+              ],
+              "flick": {
+                "up": "ï",
+                "left": "í"
+              }
+            },
+            {
+              "label": "o",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 79,
+                "longPress": [
+                  {
+                    "id": "U_00F4"
+                  },
+                  {
+                    "id": "U_0254"
+                  },
+                  {
+                    "id": "U_00F5"
+                  },
+                  {
+                    "id": "U_00F8"
+                  },
+                  {
+                    "id": "U_0278"
+                  },
+                  {
+                    "vkey": 57
+                  },
+                  {
+                    "id": "U_00F2"
+                  },
+                  {
+                    "id": "U_00F6"
+                  },
+                  {
+                    "id": "U_00F3"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_00F6"
+                  },
+                  "left": {
+                    "id": "U_00F3"
+                  }
+                }
+              },
+              "longPress": [
+                "ô",
+                "ɔ",
+                "õ",
+                "ø",
+                "ɸ",
+                "9",
+                "ò",
+                "ö",
+                "ó"
+              ],
+              "flick": {
+                "up": "ö",
+                "left": "ó"
+              }
+            },
+            {
+              "label": "p",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 80,
+                "longPress": [
+                  {
+                    "vkey": 48
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0070_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "0"
+              ],
+              "flick": {
+                "up": "p'"
+              }
+            }
+          ],
+          [
+            {
+              "label": "a",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 65,
+                "longPress": [
+                  {
+                    "id": "U_00E4"
+                  },
+                  {
+                    "id": "U_00E1"
+                  },
+                  {
+                    "id": "U_00E6"
+                  },
+                  {
+                    "id": "U_0251"
+                  },
+                  {
+                    "id": "U_00E0"
+                  },
+                  {
+                    "id": "U_00E2"
+                  },
+                  {
+                    "id": "U_00E3"
+                  },
+                  {
+                    "id": "U_0040"
+                  }
+                ],
+                "flick": {
+                  "right": {
+                    "id": "U_00E1"
+                  },
+                  "up": {
+                    "id": "U_00E4"
+                  },
+                  "down": {
+                    "id": "U_0061_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "ä",
+                "á",
+                "æ",
+                "ɑ",
+                "à",
+                "â",
+                "ã",
+                "@"
+              ],
+              "flick": {
+                "right": "á",
+                "up": "ä",
+                "down": "a'"
+              }
+            },
+            {
+              "label": "s",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 83,
+                "longPress": [
+                  {
+                    "id": "U_0161"
+                  },
+                  {
+                    "id": "U_015D"
+                  },
+                  {
+                    "id": "U_015B"
+                  },
+                  {
+                    "id": "U_0283"
+                  },
+                  {
+                    "id": "U_00DF"
+                  }
+                ],
+                "flick": {
+                  "right": {
+                    "id": "U_0161"
+                  },
+                  "down": {
+                    "id": "U_015B"
+                  },
+                  "left": {
+                    "id": "U_015D"
+                  }
+                }
+              },
+              "longPress": [
+                "š",
+                "ŝ",
+                "ś",
+                "ʃ",
+                "ß"
+              ],
+              "flick": {
+                "right": "š",
+                "down": "ś",
+                "left": "ŝ"
+              }
+            },
+            {
+              "label": "d",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 68
+              }
+            },
+            {
+              "label": "f",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 70,
+                "longPress": [
+                  {
+                    "id": "U_0278"
+                  }
+                ]
+              },
+              "longPress": [
+                "ɸ"
+              ]
+            },
+            {
+              "label": "g",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 71,
+                "longPress": [
+                  {
+                    "id": "U_0262"
+                  },
+                  {
+                    "id": "U_0263"
+                  }
+                ]
+              },
+              "longPress": [
+                "ɢ",
+                "ɣ"
+              ]
+            },
+            {
+              "label": "h",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 72,
+                "longPress": [
+                  {
+                    "id": "U_02B0"
+                  },
+                  {
+                    "id": "U_0068_0301"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0068_0027"
+                  },
+                  "down": {
+                    "id": "U_0068_0301"
+                  }
+                }
+              },
+              "longPress": [
+                "ʰ",
+                "h́"
+              ],
+              "flick": {
+                "up": "h'",
+                "down": "h́"
+              }
+            },
+            {
+              "label": "j",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 74
+              }
+            },
+            {
+              "label": "k",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 75,
+                "flick": {
+                  "up": {
+                    "id": "U_006B_0027"
+                  }
+                }
+              },
+              "flick": {
+                "up": "k'"
+              }
+            },
+            {
+              "label": "l",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 76,
+                "longPress": [
+                  {
+                    "id": "U_028E"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_006C_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "ʎ"
+              ],
+              "flick": {
+                "up": "l'"
+              }
+            },
+            {
+              "label": "ñ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00F1"
+              }
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              }
+            },
+            {
+              "label": "z",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 90
+              }
+            },
+            {
+              "label": "x",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 88,
+                "longPress": [
+                  {
+                    "id": "U_03C7"
+                  }
+                ]
+              },
+              "longPress": [
+                "χ"
+              ]
+            },
+            {
+              "label": "c",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 67,
+                "longPress": [
+                  {
+                    "id": "U_0109"
+                  },
+                  {
+                    "id": "U_010D"
+                  },
+                  {
+                    "id": "U_0107"
+                  },
+                  {
+                    "id": "U_0254"
+                  },
+                  {
+                    "id": "U_00E7"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0063_0027"
+                  },
+                  "left": {
+                    "id": "U_0109"
+                  },
+                  "right": {
+                    "id": "U_010D"
+                  },
+                  "down": {
+                    "id": "U_0107"
+                  }
+                }
+              },
+              "longPress": [
+                "ĉ",
+                "č",
+                "ć",
+                "ɔ",
+                "ç"
+              ],
+              "flick": {
+                "up": "c'",
+                "left": "ĉ",
+                "right": "č",
+                "down": "ć"
+              }
+            },
+            {
+              "label": "v",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 86
+              }
+            },
+            {
+              "label": "b",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 66,
+                "longPress": [
+                  {
+                    "id": "U_03B2"
+                  }
+                ]
+              },
+              "longPress": [
+                "β"
+              ]
+            },
+            {
+              "label": "n",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 78,
+                "longPress": [
+                  {
+                    "id": "U_0272"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_006E_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "ɲ"
+              ],
+              "flick": {
+                "up": "n'"
+              }
+            },
+            {
+              "label": "m",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 77,
+                "longPress": [
+                  {
+                    "id": "U_005C"
+                  },
+                  {
+                    "id": "U_2014"
+                  },
+                  {
+                    "id": "U_003B"
+                  },
+                  {
+                    "id": "U_A78C"
+                  },
+                  {
+                    "id": "U_00BF"
+                  },
+                  {
+                    "id": "U_003F"
+                  }
+                ],
+                "flick": {
+                  "left": {
+                    "id": "U_00BF"
+                  },
+                  "up": {
+                    "id": "U_A78C"
+                  },
+                  "right": {
+                    "id": "U_003F"
+                  },
+                  "down": {
+                    "id": "U_2014"
+                  }
+                }
+              },
+              "longPress": [
+                "\\",
+                "—",
+                ";",
+                "ꞌ",
+                "¿",
+                "?"
+              ],
+              "flick": {
+                "left": "¿",
+                "up": "ꞌ",
+                "right": "?",
+                "down": "—"
+              }
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 190,
+                "longPress": [
+                  {
+                    "id": "U_0022"
+                  },
+                  {
+                    "id": "U_02D0"
+                  },
+                  {
+                    "id": "U_003A"
+                  },
+                  {
+                    "id": "U_00A1"
+                  },
+                  {
+                    "id": "U_0021"
+                  },
+                  {
+                    "id": "U_002D"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_0027"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "id": "U_0021"
+                  },
+                  "up": {
+                    "id": "U_00A1"
+                  },
+                  "left": {
+                    "id": "U_002D"
+                  }
+                }
+              },
+              "longPress": [
+                "\"",
+                "ː",
+                ":",
+                "¡",
+                "!",
+                "-",
+                ",",
+                "'"
+              ],
+              "flick": {
+                "down": "!",
+                "up": "¡",
+                "left": "-"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.4
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 5.75
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.4
+            }
+          ]
+        ]
+      },
+      "k:shift": {
+        "rows": [
+          [
+            {
+              "label": "Q",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 81,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "vkey": 49,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0051_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "1"
+              ],
+              "flick": {
+                "up": "Q'"
+              }
+            },
+            {
+              "label": "W",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 87,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_02B7"
+                  },
+                  {
+                    "vkey": 50,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ]
+              },
+              "longPress": [
+                "ʷ",
+                "2"
+              ]
+            },
+            {
+              "label": "E",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 69,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CA"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C8"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CB"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C9"
+                  },
+                  {
+                    "vkey": 51,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CB"
+                  },
+                  "right": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C9"
+                  }
+                }
+              },
+              "longPress": [
+                "Ê",
+                "È",
+                "Ë",
+                "É",
+                "3"
+              ],
+              "flick": {
+                "up": "Ë",
+                "right": "É"
+              }
+            },
+            {
+              "label": "R",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 82,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0154"
+                  },
+                  {
+                    "vkey": 52,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0154"
+                  }
+                }
+              },
+              "longPress": [
+                "Ŕ",
+                "4"
+              ],
+              "flick": {
+                "down": "Ŕ"
+              }
+            },
+            {
+              "label": "T",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 84,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "vkey": 53,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0054_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "5"
+              ],
+              "flick": {
+                "up": "T'"
+              }
+            },
+            {
+              "label": "Y",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 89,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00DD"
+                  },
+                  {
+                    "vkey": 54,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0059_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "Ý",
+                "6"
+              ],
+              "flick": {
+                "up": "Y'"
+              }
+            },
+            {
+              "label": "U",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 85,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00DB"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D9"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00DC"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00DA"
+                  },
+                  {
+                    "vkey": 55,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00DC"
+                  },
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0055_0027"
+                  },
+                  "left": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00DA"
+                  }
+                }
+              },
+              "longPress": [
+                "Û",
+                "Ù",
+                "Ü",
+                "Ú",
+                "7"
+              ],
+              "flick": {
+                "up": "Ü",
+                "down": "U'",
+                "left": "Ú"
+              }
+            },
+            {
+              "label": "I",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 73,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CE"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_026A"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CC"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CF"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CD"
+                  },
+                  {
+                    "vkey": 56,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0049_0027"
+                  },
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CF"
+                  },
+                  "left": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00CD"
+                  }
+                }
+              },
+              "longPress": [
+                "Î",
+                "ɪ",
+                "Ì",
+                "Ï",
+                "Í",
+                "8"
+              ],
+              "flick": {
+                "down": "I'",
+                "up": "Ï",
+                "left": "Í"
+              }
+            },
+            {
+              "label": "O",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 79,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D4"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D8"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D5"
+                  },
+                  {
+                    "vkey": 57,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D2"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D6"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D3"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D6"
+                  },
+                  "left": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00D3"
+                  }
+                }
+              },
+              "longPress": [
+                "Ô",
+                "Ø",
+                "Õ",
+                "9",
+                "Ò",
+                "Ö",
+                "Ó"
+              ],
+              "flick": {
+                "up": "Ö",
+                "left": "Ó"
+              }
+            },
+            {
+              "label": "P",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 80,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "vkey": 48,
+                    "modifiers": 16,
+                    "nextLayer": "letters"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0050_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "0"
+              ],
+              "flick": {
+                "up": "P'"
+              }
+            }
+          ],
+          [
+            {
+              "label": "A",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 65,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C4"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C1"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C0"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C2"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C3"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C6"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0040"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C4"
+                  },
+                  "right": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C1"
+                  },
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0041_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "Ä",
+                "Á",
+                "À",
+                "Â",
+                "Ã",
+                "Æ",
+                "@"
+              ],
+              "flick": {
+                "up": "Ä",
+                "right": "Á",
+                "down": "A'"
+              }
+            },
+            {
+              "label": "S",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 83,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0160"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_015C"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_015A"
+                  }
+                ],
+                "flick": {
+                  "right": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0160"
+                  },
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_015A"
+                  },
+                  "left": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_015C"
+                  }
+                }
+              },
+              "longPress": [
+                "Š",
+                "Ŝ",
+                "Ś"
+              ],
+              "flick": {
+                "right": "Š",
+                "down": "Ś",
+                "left": "Ŝ"
+              }
+            },
+            {
+              "label": "D",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 68,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "F",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 70,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "G",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 71,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0262"
+                  }
+                ]
+              },
+              "longPress": [
+                "ɢ"
+              ]
+            },
+            {
+              "label": "H",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 72,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0048_0301"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0048_0027"
+                  },
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0048_0301"
+                  }
+                }
+              },
+              "longPress": [
+                "H́"
+              ],
+              "flick": {
+                "up": "H'",
+                "down": "H́"
+              }
+            },
+            {
+              "label": "J",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 74,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "K",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 75,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_004B_0027"
+                  }
+                }
+              },
+              "flick": {
+                "up": "K'"
+              }
+            },
+            {
+              "label": "L",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 76,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_028E"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_004C_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "ʎ"
+              ],
+              "flick": {
+                "up": "L'"
+              }
+            },
+            {
+              "label": "Ñ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "id": "U_00D1"
+              }
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              }
+            },
+            {
+              "label": "Z",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 90,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "X",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 88,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "C",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 67,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0108"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_010C"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0106"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00C7"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0043_0027"
+                  },
+                  "left": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0108"
+                  },
+                  "right": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_010C"
+                  },
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0106"
+                  }
+                }
+              },
+              "longPress": [
+                "Ĉ",
+                "Č",
+                "Ć",
+                "Ç"
+              ],
+              "flick": {
+                "up": "C'",
+                "left": "Ĉ",
+                "right": "Č",
+                "down": "Ć"
+              }
+            },
+            {
+              "label": "V",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 86,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "B",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 66,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "N",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 78,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_004E_0027"
+                  }
+                }
+              },
+              "flick": {
+                "up": "N'"
+              }
+            },
+            {
+              "label": "M",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 77,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_005C"
+                  },
+                  {
+                    "modifiers": 16,
+                    "id": "U_2014"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_003B"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_A78C"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00BF"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_003F"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_A78B"
+                  },
+                  "left": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00BF"
+                  },
+                  "right": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_003F"
+                  },
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_2014"
+                  }
+                }
+              },
+              "longPress": [
+                "\\",
+                "—",
+                ";",
+                "ꞌ",
+                "¿",
+                "?"
+              ],
+              "flick": {
+                "up": "Ꞌ",
+                "left": "¿",
+                "right": "?",
+                "down": "—"
+              }
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "id": "U_002E",
+                "longPress": [
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0022"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_02D0"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_003A"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00A1"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0021"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_002D"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_002C"
+                  },
+                  {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0027"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_00A1"
+                  },
+                  "down": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_0021"
+                  },
+                  "left": {
+                    "modifiers": 16,
+                    "nextLayer": "letters",
+                    "id": "U_002D"
+                  }
+                }
+              },
+              "longPress": [
+                "\"",
+                "ː",
+                ":",
+                "¡",
+                "!",
+                "-",
+                ",",
+                "'"
+              ],
+              "flick": {
+                "up": "¡",
+                "down": "!",
+                "left": "-"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              },
+              "width": 1.4
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 5.75
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.4
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_ENTER": {
+            "vkey": 13,
+            "modifiers": 16,
+            "nextLayer": "k:shift"
+          }
+        }
+      },
+      "symbols": {
+        "rows": [
+          [
+            {
+              "label": "1",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 49
+              }
+            },
+            {
+              "label": "2",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 50
+              }
+            },
+            {
+              "label": "3",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 51
+              }
+            },
+            {
+              "label": "4",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 52
+              }
+            },
+            {
+              "label": "5",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 53
+              }
+            },
+            {
+              "label": "6",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 54
+              }
+            },
+            {
+              "label": "7",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 55
+              }
+            },
+            {
+              "label": "8",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 56
+              }
+            },
+            {
+              "label": "9",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 57
+              }
+            },
+            {
+              "label": "0",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 48
+              }
+            }
+          ],
+          [
+            {
+              "label": "«",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00AB",
+                "longPress": [
+                  {
+                    "id": "U_2039"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_2039"
+                  }
+                }
+              },
+              "longPress": [
+                "‹"
+              ],
+              "flick": {
+                "up": "‹"
+              }
+            },
+            {
+              "label": "»",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00BB",
+                "longPress": [
+                  {
+                    "id": "U_203A"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_203A"
+                  }
+                }
+              },
+              "longPress": [
+                "›"
+              ],
+              "flick": {
+                "up": "›"
+              }
+            },
+            {
+              "label": "“",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_201C",
+                "longPress": [
+                  {
+                    "id": "U_2018"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_2018"
+                  }
+                }
+              },
+              "longPress": [
+                "‘"
+              ],
+              "flick": {
+                "up": "‘"
+              }
+            },
+            {
+              "label": "”",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_201D",
+                "longPress": [
+                  {
+                    "id": "U_2019"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_2019"
+                  }
+                }
+              },
+              "longPress": [
+                "’"
+              ],
+              "flick": {
+                "up": "’"
+              }
+            },
+            {
+              "label": "%",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0025",
+                "longPress": [
+                  {
+                    "id": "U_0022"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0022"
+                  }
+                }
+              },
+              "longPress": [
+                "\""
+              ],
+              "flick": {
+                "up": "\""
+              }
+            },
+            {
+              "label": "@",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0040",
+                "longPress": [
+                  {
+                    "id": "U_0027"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "'"
+              ],
+              "flick": {
+                "up": "'"
+              }
+            },
+            {
+              "label": "=",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_003D"
+              }
+            },
+            {
+              "label": "$",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0024"
+              }
+            },
+            {
+              "label": "?",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_003F",
+                "longPress": [
+                  {
+                    "id": "U_0294"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_00BF"
+                  },
+                  "down": {
+                    "id": "U_0294"
+                  }
+                }
+              },
+              "longPress": [
+                "ʔ"
+              ],
+              "flick": {
+                "up": "¿",
+                "down": "ʔ"
+              }
+            },
+            {
+              "label": "!",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0021",
+                "longPress": [
+                  {
+                    "id": "U_00A1"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_00A1"
+                  }
+                }
+              },
+              "longPress": [
+                "¡"
+              ],
+              "flick": {
+                "up": "¡"
+              }
+            }
+          ],
+          [
+            {
+              "label": "#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols2"
+              }
+            },
+            {
+              "label": "[",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_005B",
+                "longPress": [
+                  {
+                    "id": "U_003C"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_003C"
+                  }
+                }
+              },
+              "longPress": [
+                "<"
+              ],
+              "flick": {
+                "up": "<"
+              }
+            },
+            {
+              "label": "(",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0028",
+                "longPress": [
+                  {
+                    "id": "U_007B"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_007B"
+                  }
+                }
+              },
+              "longPress": [
+                "{"
+              ],
+              "flick": {
+                "up": "{"
+              }
+            },
+            {
+              "label": ")",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_0029",
+                "longPress": [
+                  {
+                    "id": "U_007D"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_007D"
+                  }
+                }
+              },
+              "longPress": [
+                "}"
+              ],
+              "flick": {
+                "up": "}"
+              }
+            },
+            {
+              "label": "]",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_005D",
+                "longPress": [
+                  {
+                    "id": "U_003E"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_003E"
+                  }
+                }
+              },
+              "longPress": [
+                ">"
+              ],
+              "flick": {
+                "up": ">"
+              }
+            },
+            {
+              "label": "+",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_002B",
+                "longPress": [
+                  {
+                    "id": "U_002A"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_002A"
+                  }
+                }
+              },
+              "longPress": [
+                "*"
+              ],
+              "flick": {
+                "up": "*"
+              }
+            },
+            {
+              "label": "-",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_002D",
+                "longPress": [
+                  {
+                    "id": "U_02BC"
+                  },
+                  {
+                    "id": "U_2014"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_02BC"
+                  },
+                  "down": {
+                    "id": "U_2014"
+                  }
+                }
+              },
+              "longPress": [
+                "ʼ",
+                "—"
+              ],
+              "flick": {
+                "up": "ʼ",
+                "down": "—"
+              }
+            },
+            {
+              "label": ",",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 16,
+                "id": "U_002C"
+              }
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_002E"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              },
+              "width": 1.4
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 5.75
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.4
+            }
+          ]
+        ]
+      },
+      "symbols2": {
+        "rows": [
+          [
+            {
+              "label": "`",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0060"
+              }
+            },
+            {
+              "label": "~",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_007E"
+              }
+            },
+            {
+              "label": "^",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_005E"
+              }
+            },
+            {
+              "label": "¨",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00A8"
+              }
+            },
+            {
+              "label": "´",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00B4"
+              }
+            },
+            {
+              "label": "ꞌ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_A78C",
+                "longPress": [
+                  {
+                    "id": "U_A78B"
+                  }
+                ]
+              },
+              "longPress": [
+                "Ꞌ"
+              ]
+            },
+            {
+              "label": "&",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0026"
+              }
+            },
+            {
+              "label": "°",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00B0"
+              }
+            },
+            {
+              "label": "¯",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00AF"
+              }
+            },
+            {
+              "label": "/",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_002F",
+                "longPress": [
+                  {
+                    "id": "U_005C"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_005C"
+                  }
+                }
+              },
+              "longPress": [
+                "\\"
+              ],
+              "flick": {
+                "up": "\\"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ª",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00AA"
+              }
+            },
+            {
+              "label": "º",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00BA"
+              }
+            },
+            {
+              "label": "#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0023"
+              }
+            },
+            {
+              "label": "|",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_007C"
+              }
+            },
+            {
+              "label": "±",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00B1"
+              }
+            },
+            {
+              "label": "×",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00D7"
+              }
+            },
+            {
+              "label": "÷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00F7"
+              }
+            },
+            {
+              "label": "¦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00A6"
+              }
+            },
+            {
+              "label": "¿",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00BF",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_003F"
+                  }
+                }
+              },
+              "longPress": [
+                "?"
+              ],
+              "flick": {
+                "up": "?"
+              }
+            },
+            {
+              "label": "¡",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00A1",
+                "longPress": [
+                  {
+                    "id": "U_0021"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "id": "U_0021"
+                  }
+                }
+              },
+              "longPress": [
+                "!"
+              ],
+              "flick": {
+                "up": "!"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "_",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_005F"
+              }
+            },
+            {
+              "label": "©",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00A9"
+              }
+            },
+            {
+              "label": "®",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00AE"
+              }
+            },
+            {
+              "label": "£",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00A3"
+              }
+            },
+            {
+              "label": "€",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_20AC"
+              }
+            },
+            {
+              "label": "¥",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00A5"
+              }
+            },
+            {
+              "label": "•",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_2022"
+              }
+            },
+            {
+              "label": "·",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00B7",
+                "longPress": [
+                  {
+                    "id": "U_002C"
+                  }
+                ]
+              },
+              "longPress": [
+                ","
+              ]
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              },
+              "width": 1.4
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 5.75
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.4
+            }
+          ]
+        ]
+      },
+      "k:EMOJI_0": {
+        "rows": [
+          [
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F600"
+              }
+            },
+            {
+              "label": "😃",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F603"
+              }
+            },
+            {
+              "label": "😄",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F604"
+              }
+            },
+            {
+              "label": "😁",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F601"
+              }
+            },
+            {
+              "label": "😆",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F606"
+              }
+            },
+            {
+              "label": "😅",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F605"
+              }
+            },
+            {
+              "label": "😂",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F602"
+              }
+            },
+            {
+              "label": "🤣",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F923"
+              }
+            },
+            {
+              "label": "😭",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F62D"
+              }
+            },
+            {
+              "label": "😉",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F609"
+              }
+            }
+          ],
+          [
+            {
+              "label": "😗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F617"
+              }
+            },
+            {
+              "label": "😙",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F619"
+              }
+            },
+            {
+              "label": "😚",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F61A"
+              }
+            },
+            {
+              "label": "😘",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F618"
+              }
+            },
+            {
+              "label": "🥰",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F970"
+              }
+            },
+            {
+              "label": "😍",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F60D"
+              }
+            },
+            {
+              "label": "🤩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F929"
+              }
+            },
+            {
+              "label": "🥳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F973"
+              }
+            },
+            {
+              "label": "🙃",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F643"
+              }
+            },
+            {
+              "label": "🙂",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F642"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "shift"
+              }
+            },
+            {
+              "label": "😱",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F631"
+              }
+            },
+            {
+              "label": "😬",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F62C"
+              }
+            },
+            {
+              "label": "😋",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F60B"
+              }
+            },
+            {
+              "label": "🥺",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F97A"
+              }
+            },
+            {
+              "label": "🤔",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F914"
+              }
+            },
+            {
+              "label": "😞",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F61E"
+              }
+            },
+            {
+              "label": "☹️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_2639_FE0F"
+              }
+            },
+            {
+              "label": "🥲",
+              "output": "😕",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F615"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "😮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_1",
+                "id": "T_1"
+              }
+            },
+            {
+              "label": "❤️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_2",
+                "id": "T_2"
+              }
+            },
+            {
+              "label": "🦙",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_3",
+                "id": "T_3"
+              }
+            },
+            {
+              "label": "🍗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_4",
+                "id": "T_4"
+              }
+            },
+            {
+              "label": "🎻",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_5",
+                "id": "T_5"
+              }
+            },
+            {
+              "label": "👍️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_6",
+                "id": "T_6"
+              }
+            },
+            {
+              "label": "🙋‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_7",
+                "id": "T_7"
+              }
+            },
+            {
+              "label": "🚩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_8",
+                "id": "T_8"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ]
+      },
+      "k:EMOJI_1": {
+        "rows": [
+          [
+            {
+              "label": "😨",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F628"
+              }
+            },
+            {
+              "label": "😮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F62E"
+              }
+            },
+            {
+              "label": "😳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F633"
+              }
+            },
+            {
+              "label": "🤯",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F92F"
+              }
+            },
+            {
+              "label": "🥶",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F976"
+              }
+            },
+            {
+              "label": "🥵",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F975"
+              }
+            },
+            {
+              "label": "🤮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F92E"
+              }
+            },
+            {
+              "label": "🤧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F927"
+              }
+            },
+            {
+              "label": "😷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F637"
+              }
+            },
+            {
+              "label": "🤓",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F913"
+              }
+            }
+          ],
+          [
+            {
+              "label": "😐",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F610"
+              }
+            },
+            {
+              "label": "🧐",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9D0"
+              }
+            },
+            {
+              "label": "🥱",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F971"
+              }
+            },
+            {
+              "label": "😊",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F60A"
+              }
+            },
+            {
+              "label": "😌",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F60C"
+              }
+            },
+            {
+              "label": "😉",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F609"
+              }
+            },
+            {
+              "label": "🤗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F917"
+              }
+            },
+            {
+              "label": "🤨",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F928"
+              }
+            },
+            {
+              "label": "😺",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F63A"
+              }
+            },
+            {
+              "label": "😻",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F63B"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "shift"
+              }
+            },
+            {
+              "label": "☀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_2600_FE0F"
+              }
+            },
+            {
+              "label": "🌕",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F315"
+              }
+            },
+            {
+              "label": "🌈",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F308"
+              }
+            },
+            {
+              "label": "☁️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_2601_FE0F"
+              }
+            },
+            {
+              "label": "🌧️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F327_FE0F"
+              }
+            },
+            {
+              "label": "⛈️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_26C8_FE0F"
+              }
+            },
+            {
+              "label": "🌦️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F326_FE0F"
+              }
+            },
+            {
+              "label": "🌤️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F324_FE0F"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "💤",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4A4"
+              }
+            },
+            {
+              "label": "🌟",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F31F"
+              }
+            },
+            {
+              "label": "🔥",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F525"
+              }
+            },
+            {
+              "label": "🎉",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F389"
+              }
+            },
+            {
+              "label": "🎂",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F382"
+              }
+            },
+            {
+              "label": "👩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F469"
+              }
+            },
+            {
+              "label": "👨",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F468"
+              }
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "k:EMOJI_0"
+          }
+        }
+      },
+      "k:EMOJI_2": {
+        "rows": [
+          [
+            {
+              "label": "🩵",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FA75"
+              }
+            },
+            {
+              "label": "🔴",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F534"
+              }
+            },
+            {
+              "label": "🟠",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E0"
+              }
+            },
+            {
+              "label": "🟡",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E1"
+              }
+            },
+            {
+              "label": "🟢",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E2"
+              }
+            },
+            {
+              "label": "🔵",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F535"
+              }
+            },
+            {
+              "label": "🟣",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E3"
+              }
+            },
+            {
+              "label": "🟤",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E4"
+              }
+            },
+            {
+              "label": "⚫",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_26AB"
+              }
+            },
+            {
+              "label": "⚪",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_26AA"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🤍",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F90D"
+              }
+            },
+            {
+              "label": "🟥",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E5"
+              }
+            },
+            {
+              "label": "🟧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E7"
+              }
+            },
+            {
+              "label": "🟨",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E8"
+              }
+            },
+            {
+              "label": "🟩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E9"
+              }
+            },
+            {
+              "label": "🟦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7E6"
+              }
+            },
+            {
+              "label": "🟪",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7EA"
+              }
+            },
+            {
+              "label": "🟫",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F7EB"
+              }
+            },
+            {
+              "label": "⬛",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_2B1B"
+              }
+            },
+            {
+              "label": "⬜",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_2B1C"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              }
+            },
+            {
+              "label": "❤️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_2764_FE0F"
+              }
+            },
+            {
+              "label": "🧡",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9E1"
+              }
+            },
+            {
+              "label": "💛",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F49B"
+              }
+            },
+            {
+              "label": "💚",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F49A"
+              }
+            },
+            {
+              "label": "💙",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F499"
+              }
+            },
+            {
+              "label": "💜",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F49C"
+              }
+            },
+            {
+              "label": "🤎",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F90E"
+              }
+            },
+            {
+              "label": "🖤",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F5A4"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "🫂",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAC2"
+              }
+            },
+            {
+              "label": "💝",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F49D"
+              }
+            },
+            {
+              "label": "💖",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F496"
+              }
+            },
+            {
+              "label": "💗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F497"
+              }
+            },
+            {
+              "label": "💞",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F49E"
+              }
+            },
+            {
+              "label": "💘",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F498"
+              }
+            },
+            {
+              "label": "💓",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F493"
+              }
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ]
+      },
+      "k:EMOJI_3": {
+        "rows": [
+          [
+            {
+              "label": "🚵‍️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F6B5_200D_FE0F"
+              }
+            },
+            {
+              "label": "🚵‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F6B5_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "👶",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F476"
+              }
+            },
+            {
+              "label": "⛰️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_26F0_FE0F"
+              }
+            },
+            {
+              "label": "🏔️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F3D4_FE0F"
+              }
+            },
+            {
+              "label": "🌄",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F304"
+              }
+            },
+            {
+              "label": "🐹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F439"
+              }
+            },
+            {
+              "label": "🐭",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F42D"
+              }
+            },
+            {
+              "label": "🐰",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F430"
+              }
+            },
+            {
+              "label": "🐮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F42E"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🐷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F437"
+              }
+            },
+            {
+              "label": "🐴",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F434"
+              }
+            },
+            {
+              "label": "🐸",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F438"
+              }
+            },
+            {
+              "label": "🐁",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F401"
+              }
+            },
+            {
+              "label": "🐖",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F416"
+              }
+            },
+            {
+              "label": "🐄",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F404"
+              }
+            },
+            {
+              "label": "🐎",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F40E"
+              }
+            },
+            {
+              "label": "🐂",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F402"
+              }
+            },
+            {
+              "label": "🐑",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F411"
+              }
+            },
+            {
+              "label": "🐐",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F410"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              }
+            },
+            {
+              "label": "🐓",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F413"
+              }
+            },
+            {
+              "label": "🦙",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F999"
+              }
+            },
+            {
+              "label": "🐔",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F414"
+              }
+            },
+            {
+              "label": "🐥",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F425"
+              }
+            },
+            {
+              "label": "🦟",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F99F"
+              }
+            },
+            {
+              "label": "🐝",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F41D"
+              }
+            },
+            {
+              "label": "🦋",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F98B"
+              }
+            },
+            {
+              "label": "🐛",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F41B"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "🌹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F339"
+              }
+            },
+            {
+              "label": "🌻",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F33B"
+              }
+            },
+            {
+              "label": "🍃",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F343"
+              }
+            },
+            {
+              "label": "🪴",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAB4"
+              }
+            },
+            {
+              "label": "🪺",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FABA"
+              }
+            },
+            {
+              "label": "🐦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F426"
+              }
+            },
+            {
+              "label": "🌿",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F33F"
+              }
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ]
+      },
+      "k:EMOJI_4": {
+        "rows": [
+          [
+            {
+              "label": "🍓",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F353"
+              }
+            },
+            {
+              "label": "🍉",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F349"
+              }
+            },
+            {
+              "label": "🫐",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAD0"
+              }
+            },
+            {
+              "label": "🍐",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F350"
+              }
+            },
+            {
+              "label": "🍇",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F347"
+              }
+            },
+            {
+              "label": "🍅",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F345"
+              }
+            },
+            {
+              "label": "🧅",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9C5"
+              }
+            },
+            {
+              "label": "🌽",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F33D"
+              }
+            },
+            {
+              "label": "🥦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F966"
+              }
+            },
+            {
+              "label": "🫑",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAD1"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🍔",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F354"
+              }
+            },
+            {
+              "label": "🌭",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F32D"
+              }
+            },
+            {
+              "label": "🥪",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F96A"
+              }
+            },
+            {
+              "label": "🍟",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F35F"
+              }
+            },
+            {
+              "label": "🍕",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F355"
+              }
+            },
+            {
+              "label": "🥘",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F958"
+              }
+            },
+            {
+              "label": "🍝",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F35D"
+              }
+            },
+            {
+              "label": "🥗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F957"
+              }
+            },
+            {
+              "label": "🍲",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F372"
+              }
+            },
+            {
+              "label": "🍪",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F36A"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              }
+            },
+            {
+              "label": "🥔",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F954"
+              }
+            },
+            {
+              "label": "🥚",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F95A"
+              }
+            },
+            {
+              "label": "🥩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F969"
+              }
+            },
+            {
+              "label": "🍗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F357"
+              }
+            },
+            {
+              "label": "🥕",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F955"
+              }
+            },
+            {
+              "label": "🥑",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F951"
+              }
+            },
+            {
+              "label": "🍏",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F34F"
+              }
+            },
+            {
+              "label": "🍊",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F34A"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "🥭",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F96D"
+              }
+            },
+            {
+              "label": "🍍",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F34D"
+              }
+            },
+            {
+              "label": "🍌",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F34C"
+              }
+            },
+            {
+              "label": "🍠",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F360"
+              }
+            },
+            {
+              "label": "🧄",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9C4"
+              }
+            },
+            {
+              "label": "🧂",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9C2"
+              }
+            },
+            {
+              "label": "🥒",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F952"
+              }
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ]
+      },
+      "k:EMOJI_5": {
+        "rows": [
+          [
+            {
+              "label": "🎹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F3B9"
+              }
+            },
+            {
+              "label": "🎻",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F3BB"
+              }
+            },
+            {
+              "label": "📸",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4F8"
+              }
+            },
+            {
+              "label": "🕯️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F56F_FE0F"
+              }
+            },
+            {
+              "label": "🔦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F526"
+              }
+            },
+            {
+              "label": "🧱",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9F1"
+              }
+            },
+            {
+              "label": "🪥",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAA5"
+              }
+            },
+            {
+              "label": "🧼",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9FC"
+              }
+            },
+            {
+              "label": "🪒",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FA92"
+              }
+            },
+            {
+              "label": "🧺",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9FA"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🧣",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9E3"
+              }
+            },
+            {
+              "label": "👖",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F456"
+              }
+            },
+            {
+              "label": "👕",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F455"
+              }
+            },
+            {
+              "label": "🧳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9F3"
+              }
+            },
+            {
+              "label": "🥾",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F97E"
+              }
+            },
+            {
+              "label": "💉",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F489"
+              }
+            },
+            {
+              "label": "💊",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F48A"
+              }
+            },
+            {
+              "label": "🩺",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FA7A"
+              }
+            },
+            {
+              "label": "📌",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4CC"
+              }
+            },
+            {
+              "label": "📍",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4CD"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              }
+            },
+            {
+              "label": "⚽",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_26BD"
+              }
+            },
+            {
+              "label": "📞",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4DE"
+              }
+            },
+            {
+              "label": "✏️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_270F_FE0F"
+              }
+            },
+            {
+              "label": "📖",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4D6"
+              }
+            },
+            {
+              "label": "📚",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4DA"
+              }
+            },
+            {
+              "label": "📒",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4D2"
+              }
+            },
+            {
+              "label": "📄",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4C4"
+              }
+            },
+            {
+              "label": "📝",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4DD"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "🍼",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F37C"
+              }
+            },
+            {
+              "label": "🧸",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9F8"
+              }
+            },
+            {
+              "label": "🧷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9F7"
+              }
+            },
+            {
+              "label": "👶",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F476"
+              }
+            },
+            {
+              "label": "🛶",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F6F6"
+              }
+            },
+            {
+              "label": "🚗",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F697"
+              }
+            },
+            {
+              "label": "🛻",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F6FB"
+              }
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ]
+      },
+      "k:EMOJI_6": {
+        "rows": [
+          [
+            {
+              "label": "👍️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F44D_FE0F"
+              }
+            },
+            {
+              "label": "👎",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F44E"
+              }
+            },
+            {
+              "label": "💪",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F4AA"
+              }
+            },
+            {
+              "label": "👏",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F44F"
+              }
+            },
+            {
+              "label": "🙌",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F64C"
+              }
+            },
+            {
+              "label": "🤜",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F91C"
+              }
+            },
+            {
+              "label": "👋",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F44B"
+              }
+            },
+            {
+              "label": "👆",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F446"
+              }
+            },
+            {
+              "label": "👇",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F447"
+              }
+            },
+            {
+              "label": "🙏",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F64F"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🫶",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAF6"
+              }
+            },
+            {
+              "label": "🤲",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F932"
+              }
+            },
+            {
+              "label": "🤜",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F91C"
+              }
+            },
+            {
+              "label": "🤛",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F91B"
+              }
+            },
+            {
+              "label": "🫳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAF3"
+              }
+            },
+            {
+              "label": "🫴",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAF4"
+              }
+            },
+            {
+              "label": "🫱",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAF1"
+              }
+            },
+            {
+              "label": "🫲",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAF2"
+              }
+            },
+            {
+              "label": "👈",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F448"
+              }
+            },
+            {
+              "label": "👉",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F449"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              }
+            },
+            {
+              "label": "🤚",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F91A"
+              }
+            },
+            {
+              "label": "🖐️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F590_FE0F"
+              }
+            },
+            {
+              "label": "✍️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_270D_FE0F"
+              }
+            },
+            {
+              "label": "🤳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F933"
+              }
+            },
+            {
+              "label": "💅",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F485"
+              }
+            },
+            {
+              "label": "🤝",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F91D"
+              }
+            },
+            {
+              "label": "👐",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F450"
+              }
+            },
+            {
+              "label": "🫰",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1FAF0"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "👃",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F443"
+              }
+            },
+            {
+              "label": "👂",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F442"
+              }
+            },
+            {
+              "label": "🦶",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9B6"
+              }
+            },
+            {
+              "label": "🦵",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9B5"
+              }
+            },
+            {
+              "label": "✊",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_270A"
+              }
+            },
+            {
+              "label": "✈️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_2708_FE0F"
+              }
+            },
+            {
+              "label": "🏍️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F3CD_FE0F"
+              }
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ]
+      },
+      "k:EMOJI_7": {
+        "rows": [
+          [
+            {
+              "label": "🙋‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F64B_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "🙆‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F646_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "🤷‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F937_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "🤦‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F926_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "💇‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F487_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "🧍‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9CD_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "👩‍🦯",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F469_200D_1F9AF"
+              }
+            },
+            {
+              "label": "👩‍🦽",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F469_200D_1F9BD"
+              }
+            },
+            {
+              "label": "🚶‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F6B6_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "🏃‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F3C3_200D_2640_FE0F"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🙋‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F64B_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "🙆‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F646_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "🤷‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F937_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "🤦‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F926_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "💇‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F487_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "🧍‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F9CD_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "👨‍🦯",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F468_200D_1F9AF"
+              }
+            },
+            {
+              "label": "👨‍🦽",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F468_200D_1F9BD"
+              }
+            },
+            {
+              "label": "🚶‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F6B6_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "🏃‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F3C3_200D_2642_FE0F"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              }
+            },
+            {
+              "label": "👩‍⚕",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F469_200D_2695"
+              }
+            },
+            {
+              "label": "👩‍🏫",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F469_200D_1F3EB"
+              }
+            },
+            {
+              "label": "👩‍🌾",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F469_200D_1F33E"
+              }
+            },
+            {
+              "label": "👷‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F477_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "👮‍♀️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F46E_200D_2640_FE0F"
+              }
+            },
+            {
+              "label": "👩‍🔬",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F469_200D_1F52C"
+              }
+            },
+            {
+              "label": "👰️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F470_FE0F"
+              }
+            },
+            {
+              "label": "🎓",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F393"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "👨‍⚕",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F468_200D_2695"
+              }
+            },
+            {
+              "label": "👨‍🏫",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F468_200D_1F3EB"
+              }
+            },
+            {
+              "label": "👨‍🌾",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F468_200D_1F33E"
+              }
+            },
+            {
+              "label": "👷‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F477_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "👮‍♂️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F46E_200D_2642_FE0F"
+              }
+            },
+            {
+              "label": "👨‍🔬",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F468_200D_1F52C"
+              }
+            },
+            {
+              "label": "🤵️",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F935_FE0F"
+              }
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ]
+      },
+      "k:EMOJI_8": {
+        "rows": [
+          [
+            {
+              "label": "🇨🇦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E8_1F1E6"
+              }
+            },
+            {
+              "label": "🇺🇸",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1FA_1F1F8"
+              }
+            },
+            {
+              "label": "🇲🇽",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F2_1F1FD"
+              }
+            },
+            {
+              "label": "🇧🇿",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E7_1F1FF"
+              }
+            },
+            {
+              "label": "🇨🇷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E8_1F1F7"
+              }
+            },
+            {
+              "label": "🇸🇻",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F8_1F1FB"
+              }
+            },
+            {
+              "label": "🇬🇹",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EC_1F1F9"
+              }
+            },
+            {
+              "label": "🇭🇳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1ED_1F1F3"
+              }
+            },
+            {
+              "label": "🇳🇮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F3_1F1EE"
+              }
+            },
+            {
+              "label": "🇵🇦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F5_1F1E6"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🇦🇷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E6_1F1F7"
+              }
+            },
+            {
+              "label": "🇧🇴",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E7_1F1F4"
+              }
+            },
+            {
+              "label": "🇧🇷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E7_1F1F7"
+              }
+            },
+            {
+              "label": "🇨🇱",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E8_1F1F1"
+              }
+            },
+            {
+              "label": "🇨🇴",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E8_1F1F4"
+              }
+            },
+            {
+              "label": "🇪🇨",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EA_1F1E8"
+              }
+            },
+            {
+              "label": "🇬🇫",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EC_1F1EB"
+              }
+            },
+            {
+              "label": "🇬🇾",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EC_1F1FE"
+              }
+            },
+            {
+              "label": "🇵🇾",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F5_1F1FE"
+              }
+            },
+            {
+              "label": "🇵🇪",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F5_1F1EA"
+              }
+            }
+          ],
+          [
+            {
+              "label": "abc",
+              "action": {
+                "type": "letters"
+              }
+            },
+            {
+              "label": "🇸🇷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F8_1F1F7"
+              }
+            },
+            {
+              "label": "🇺🇾",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1FA_1F1FE"
+              }
+            },
+            {
+              "label": "🇦🇺",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E6_1F1FA"
+              }
+            },
+            {
+              "label": "🇨🇳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1E8_1F1F3"
+              }
+            },
+            {
+              "label": "🇰🇷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F0_1F1F7"
+              }
+            },
+            {
+              "label": "🇪🇸",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EA_1F1F8"
+              }
+            },
+            {
+              "label": "🇫🇷",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EB_1F1F7"
+              }
+            },
+            {
+              "label": "🇮🇳",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EE_1F1F3"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": "🇮🇱",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EE_1F1F1"
+              }
+            },
+            {
+              "label": "🇯🇵",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EF_1F1F5"
+              }
+            },
+            {
+              "label": "🇵🇸",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F5_1F1F8"
+              }
+            },
+            {
+              "label": "🇬🇧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1EC_1F1E7"
+              }
+            },
+            {
+              "label": "🇷🇺",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1F7_1F1FA"
+              }
+            },
+            {
+              "label": "🇺🇦",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F1FA_1F1E6"
+              }
+            },
+            {
+              "label": "🚩",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_1F6A9"
+              }
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ]
+      },
+      "k:caps": {
+        "rows": [
+          [
+            {
+              "label": "Q",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 81,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "vkey": 49,
+                    "modifiers": 256
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_0051_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "1"
+              ],
+              "flick": {
+                "up": "Q'"
+              }
+            },
+            {
+              "label": "W",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 87,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_02B7"
+                  },
+                  {
+                    "vkey": 50,
+                    "modifiers": 256
+                  }
+                ]
+              },
+              "longPress": [
+                "ʷ",
+                "2"
+              ]
+            },
+            {
+              "label": "E",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 69,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_00CA"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C8"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00CB"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C9"
+                  },
+                  {
+                    "vkey": 51,
+                    "modifiers": 256
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_00CB"
+                  },
+                  "right": {
+                    "modifiers": 256,
+                    "id": "U_00C9"
+                  }
+                }
+              },
+              "longPress": [
+                "Ê",
+                "È",
+                "Ë",
+                "É",
+                "3"
+              ],
+              "flick": {
+                "up": "Ë",
+                "right": "É"
+              }
+            },
+            {
+              "label": "R",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 82,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_0154"
+                  },
+                  {
+                    "vkey": 52,
+                    "modifiers": 256
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_0154"
+                  }
+                }
+              },
+              "longPress": [
+                "Ŕ",
+                "4"
+              ],
+              "flick": {
+                "down": "Ŕ"
+              }
+            },
+            {
+              "label": "T",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 84,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "vkey": 53,
+                    "modifiers": 256
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_0054_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "5"
+              ],
+              "flick": {
+                "up": "T'"
+              }
+            },
+            {
+              "label": "Y",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 89,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_00DD"
+                  },
+                  {
+                    "vkey": 54,
+                    "modifiers": 256
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_0059_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "Ý",
+                "6"
+              ],
+              "flick": {
+                "up": "Y'"
+              }
+            },
+            {
+              "label": "U",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 85,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_00DB"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00D9"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00DC"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00DA"
+                  },
+                  {
+                    "vkey": 55,
+                    "modifiers": 256
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_00DC"
+                  },
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_0055_0027"
+                  },
+                  "left": {
+                    "modifiers": 256,
+                    "id": "U_00DA"
+                  }
+                }
+              },
+              "longPress": [
+                "Û",
+                "Ù",
+                "Ü",
+                "Ú",
+                "7"
+              ],
+              "flick": {
+                "up": "Ü",
+                "down": "U'",
+                "left": "Ú"
+              }
+            },
+            {
+              "label": "I",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 73,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_00CE"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_026A"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00CC"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00CF"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00CD"
+                  },
+                  {
+                    "vkey": 56,
+                    "modifiers": 256
+                  }
+                ],
+                "flick": {
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_0049_0027"
+                  },
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_00CF"
+                  },
+                  "left": {
+                    "modifiers": 256,
+                    "id": "U_00CD"
+                  }
+                }
+              },
+              "longPress": [
+                "Î",
+                "ɪ",
+                "Ì",
+                "Ï",
+                "Í",
+                "8"
+              ],
+              "flick": {
+                "down": "I'",
+                "up": "Ï",
+                "left": "Í"
+              }
+            },
+            {
+              "label": "O",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 79,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_00D4"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00D8"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00D5"
+                  },
+                  {
+                    "vkey": 57,
+                    "modifiers": 256
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00D2"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00D6"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00D3"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_00D6"
+                  },
+                  "left": {
+                    "modifiers": 256,
+                    "id": "U_00D3"
+                  }
+                }
+              },
+              "longPress": [
+                "Ô",
+                "Ø",
+                "Õ",
+                "9",
+                "Ò",
+                "Ö",
+                "Ó"
+              ],
+              "flick": {
+                "up": "Ö",
+                "left": "Ó"
+              }
+            },
+            {
+              "label": "P",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 80,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "vkey": 48,
+                    "modifiers": 256
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_0050_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "0"
+              ],
+              "flick": {
+                "up": "P'"
+              }
+            }
+          ],
+          [
+            {
+              "label": "A",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 65,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C4"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C1"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C0"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C2"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C3"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C6"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_0040"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_00C4"
+                  },
+                  "right": {
+                    "modifiers": 256,
+                    "id": "U_00C1"
+                  },
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_0041_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "Ä",
+                "Á",
+                "À",
+                "Â",
+                "Ã",
+                "Æ",
+                "@"
+              ],
+              "flick": {
+                "up": "Ä",
+                "right": "Á",
+                "down": "A'"
+              }
+            },
+            {
+              "label": "S",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 83,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_0160"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_015C"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_015A"
+                  }
+                ],
+                "flick": {
+                  "right": {
+                    "modifiers": 256,
+                    "id": "U_0160"
+                  },
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_0160"
+                  },
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_015A"
+                  },
+                  "left": {
+                    "modifiers": 256,
+                    "id": "U_015C"
+                  }
+                }
+              },
+              "longPress": [
+                "Š",
+                "Ŝ",
+                "Ś"
+              ],
+              "flick": {
+                "right": "Š",
+                "up": "Š",
+                "down": "Ś",
+                "left": "Ŝ"
+              }
+            },
+            {
+              "label": "D",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 68,
+                "modifiers": 256
+              }
+            },
+            {
+              "label": "F",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 70,
+                "modifiers": 256
+              }
+            },
+            {
+              "label": "G",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 71,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_0262"
+                  }
+                ]
+              },
+              "longPress": [
+                "ɢ"
+              ]
+            },
+            {
+              "label": "H",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 72,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_0048_0301"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_0048_0027"
+                  },
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_0048_0301"
+                  }
+                }
+              },
+              "longPress": [
+                "H́"
+              ],
+              "flick": {
+                "up": "H'",
+                "down": "H́"
+              }
+            },
+            {
+              "label": "J",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 74,
+                "modifiers": 256
+              }
+            },
+            {
+              "label": "K",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 75,
+                "modifiers": 256,
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_004B_0027"
+                  }
+                }
+              },
+              "flick": {
+                "up": "K'"
+              }
+            },
+            {
+              "label": "L",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 76,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_028E"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_004C_0027"
+                  }
+                }
+              },
+              "longPress": [
+                "ʎ"
+              ],
+              "flick": {
+                "up": "L'"
+              }
+            },
+            {
+              "label": "Ñ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 256,
+                "id": "U_00D1"
+              }
+            }
+          ],
+          [
+            {
+              "label": "⇪",
+              "action": {
+                "type": "shift"
+              }
+            },
+            {
+              "label": "Z",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 90,
+                "modifiers": 256
+              }
+            },
+            {
+              "label": "X",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 88,
+                "modifiers": 256
+              }
+            },
+            {
+              "label": "C",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 67,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_0108"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_010C"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_0106"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00C7"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_0043_0027"
+                  },
+                  "left": {
+                    "modifiers": 256,
+                    "id": "U_0108"
+                  },
+                  "right": {
+                    "modifiers": 256,
+                    "id": "U_010C"
+                  },
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_0106"
+                  }
+                }
+              },
+              "longPress": [
+                "Ĉ",
+                "Č",
+                "Ć",
+                "Ç"
+              ],
+              "flick": {
+                "up": "C'",
+                "left": "Ĉ",
+                "right": "Č",
+                "down": "Ć"
+              }
+            },
+            {
+              "label": "V",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 86,
+                "modifiers": 256
+              }
+            },
+            {
+              "label": "B",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 66,
+                "modifiers": 256
+              }
+            },
+            {
+              "label": "N",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 78,
+                "modifiers": 256,
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_004E_0027"
+                  }
+                }
+              },
+              "flick": {
+                "up": "N'"
+              }
+            },
+            {
+              "label": "M",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 77,
+                "modifiers": 256,
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_005C"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_2014"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_003B"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_A78C"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00BF"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_003F"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_A78B"
+                  },
+                  "left": {
+                    "modifiers": 256,
+                    "id": "U_00BF"
+                  },
+                  "right": {
+                    "modifiers": 256,
+                    "id": "U_003F"
+                  },
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_2014"
+                  }
+                }
+              },
+              "longPress": [
+                "\\",
+                "—",
+                ";",
+                "ꞌ",
+                "¿",
+                "?"
+              ],
+              "flick": {
+                "up": "Ꞌ",
+                "left": "¿",
+                "right": "?",
+                "down": "—"
+              }
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 256,
+                "id": "U_002E",
+                "longPress": [
+                  {
+                    "modifiers": 256,
+                    "id": "U_0022"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_02D0"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_003A"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_00A1"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_0021"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_002D"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_002C"
+                  },
+                  {
+                    "modifiers": 256,
+                    "id": "U_0027"
+                  }
+                ],
+                "flick": {
+                  "up": {
+                    "modifiers": 256,
+                    "id": "U_00A1"
+                  },
+                  "down": {
+                    "modifiers": 256,
+                    "id": "U_0021"
+                  },
+                  "left": {
+                    "modifiers": 256,
+                    "id": "U_002D"
+                  }
+                }
+              },
+              "longPress": [
+                "\"",
+                "ː",
+                ":",
+                "¡",
+                "!",
+                "-",
+                ",",
+                "'"
+              ],
+              "flick": {
+                "up": "¡",
+                "down": "!",
+                "left": "-"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              },
+              "width": 1.4
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 5.75
+            },
+            {
+              "label": "😀",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "modifiers": 256,
+                "nextLayer": "k:EMOJI_0",
+                "id": "T_EMOJI_PICKER"
+              }
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.4
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_ENTER": {
+            "vkey": 13,
+            "modifiers": 256,
+            "nextLayer": "k:shift"
+          }
+        }
+      }
+    },
+    "keyman": {
+      "keyboardId": "winchus"
+    }
+  }
+}

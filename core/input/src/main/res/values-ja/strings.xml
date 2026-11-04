@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">ダウンロードしたファイルが破損しています。チェックサムが一致しません。もう一度ダウンロードしてください。</string>
+    <string name="core_input_cjk_download_error_http">サーバーがHTTPステータス %1$s を返しました。</string>
+    <string name="core_input_cjk_download_error_network">ダウンロードに失敗しました。接続を確認して再試行してください。</string>
+    <string name="core_input_cjk_download_error_network_detail">ダウンロードに失敗しました: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">デバイスのストレージ容量が不足しています。先に空き容量を確保してください。</string>
+    <string name="core_input_cjk_download_error_truncated">ダウンロード中に接続が中断されました。「再開」を押して続行してください。</string>
+    <string name="core_input_cjk_download_error_unavailable">このパックはまだ利用できません。</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">漢字の部首コード表（29,000文字）。キーボードが倉頡および速成レイアウトを使用するために必要なパックです。</string>
+    <string name="core_input_cjk_pack_cangjie_title">倉頡（Cangjie）辞書</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Mozc由来のかな読み、108万語、約42MB。日本語変換にはこのパックが必要です。</string>
+    <string name="core_input_cjk_pack_ja_kana_title">日本語かな漢字変換辞書</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">漢字に対する粤拼（Jyutping）読みのテーブル（163,000エントリ）。広東語変換にはこのパックが必要です。</string>
+    <string name="core_input_cjk_pack_jyutping_title">広東語粤拼（Jyutping）辞書</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">中国語のウェブサイトやニューステキストから集計された、単語のつながりに関するデータです。ピンイン辞書に含まれています。これを使用すると、「wbxh」のような頭文字を入力した際に、関連のない2つの単語ではなく、「我不喜欢（私は好きではない）」が優先的に変換されます。</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">中国語の単語ペア</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">CC-CEDICTに基づく12万語の漢字とフレーズ。中国語変換にはこのパックが必要です。</string>
+    <string name="core_input_cjk_pack_pinyin_title">中国語ピンイン辞書</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">OpenCCのフレーズ集（50,000語、約1MB）。繁体字を有効にすると、キーボードが「頭發」ではなく「頭髮」のような正しい形式の単語を入力するために使用します。</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">繁体字フレーズテーブル</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">漢字の筆順表です。キーボードのストロークレイアウトにはこのパックが必要です。</string>
+    <string name="core_input_cjk_pack_stroke_title">中国語筆画（笔画）辞書</string>
+    <string name="core_input_double_pinyin_custom_label">カスタム</string>
+    <string name="core_input_double_pinyin_off_label">オフ (フルピンイン)</string>
+    <string name="core_input_im_note_candidates">一部のキーでは、このメソッドは選択肢のリストを表示します。キーボードは常に最初の選択肢を使用します。</string>
+    <string name="core_input_im_note_missing_files">これらのファイルが選択されなかったため、その部分が欠落しています: %1$s。含めるには、再度インポートして一緒に選択してください。</string>
+    <string name="core_input_im_note_module">このメソッドは、キーボードで実行できないAnthyなどのプラグインを使用します。これを使用するキーはここでは機能しません。</string>
+    <string name="core_input_im_note_other_method">このメソッドは他の入力メソッドにキーを渡しますが、その部分はここでは機能しません。</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">アプリが%1$d個のスペルルールを読み取れないため、スキップします。</item>
+        <item quantity="other">アプリが%1$d個のスペルルールを読み取れないため、スキップします。</item>
+    </plurals>
+    <string name="core_input_im_note_space">このメソッドは、例えばトーンのためにスペースバーをキーとして使用します。ここでは、スペースバーは常にスペースを入力します。</string>
+    <string name="core_input_im_note_truncated">テーブルが非常に大きいため、アプリは最初の部分のみを保持しました。</string>
+    <string name="core_input_im_note_unused_files">アプリはこれらのファイルを使用しませんでした: %1$s。</string>
+    <string name="core_input_im_refused_broken">ファイルにエラーがあるため、アプリで読み取れません: %1$s</string>
+    <string name="core_input_im_refused_empty">ファイルに入力できる内容がありません。</string>
+    <string name="core_input_im_refused_no_dictionary">このスキーマには辞書が必要です。再度インポートし、%1$s も選択してください。</string>
+    <string name="core_input_im_refused_not_method">このアプリはそれを入力メソッドとして読み取ることができません。.cinテーブル、Rimeスキーマおよび辞書（.schema.yaml, .dict.yaml）、およびm17n .mimファイルを読み取ることができます。</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">アプリはこれを %1$d 個のエントリを持つ .cin テーブルとして読み込みました。コードを入力し、候補ストリップから文字を選択してください。</item>
+        <item quantity="other">アプリはこれを %1$d 個のエントリを持つ .cin テーブルとして読み込みました。コードを入力し、候補ストリップから文字を選択してください。</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">アプリはこれを%1$d個のルールを持つm17n入力メソッドとして読み取りました。キーを入力するとテキストが書き込まれます。</item>
+        <item quantity="other">アプリはこれを%1$d個のルールを持つm17n入力メソッドとして読み取りました。キーを入力するとテキストが書き込まれます。</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">アプリはこれを%1$d件の辞書エントリを持つRimeスキーマとして読み取りました。音節を入力し、候補ストリップから単語を選択してください。</item>
+        <item quantity="other">アプリはこれを%1$d件の辞書エントリを持つRimeスキーマとして読み取りました。音節を入力し、候補ストリップから単語を選択してください。</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">アプリはこのRimeコードテーブルを%1$d件のエントリとして読み取りました。コードを入力し、候補ストリップから文字を選択してください。</item>
+        <item quantity="other">アプリはこのRimeコードテーブルを%1$d件のエントリとして読み取りました。コードを入力し、候補ストリップから文字を選択してください。</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">接続コスト、セグメンター、サジェストフィルターを含むMozc独自のシステム辞書です。Mozcエンジンはこれを使用して変換を行いますが、組み込みエンジンは使用しません。</string>
+    <string name="core_input_mozc_pack_title">Mozc辞書</string>
+    <string name="core_input_rime_pack_base_subtitle">すべてのRIMEスキーマで使用される句読点、記号、単語頻度テーブル、および簡体字・繁体字変換です。最初のスキーマと一緒にダウンロードされます。</string>
+    <string name="core_input_rime_pack_base_title">RIMEエッセンシャル</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">標準の大千キーマップ上のRIMEの注音スキーマ。Terra Pinyinの辞書を使用。</string>
+    <string name="core_input_rime_pack_bopomofo_title">注音 (Bopomofo)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">RIMEの第5世代倉頡入力方式、文字およびフレーズ。</string>
+    <string name="core_input_rime_pack_cangjie5_title">倉頡五代 (Cangjie 5)</string>
+    <string name="core_input_rime_pack_ice_subtitle">ピンイン用の大規模で現代的な簡体字中国語語彙集。ダブルピンインおよび9キーバリアントに対応。コンパイルには1分以上かかる場合があります。</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">広東語用のrime-cantoneseスキーマ（単語およびフレーズリストを含む）。</string>
+    <string name="core_input_rime_pack_jyutping_title">粤拼（Jyutping）</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">RIME独自のピンインスキーマ。ストローク（画数）スキーマを使用して文字を検索します。</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">朙月拼音 (Luna Pinyin)</string>
+    <string name="core_input_zinnia_ja_pack_title">日本語手書き入力モデル</string>
+    <string name="core_input_zinnia_pack_subtitle">TegakiプロジェクトのZinnia用モデル。ML Kitが対応していない中国語や日本語を読み取るオフライン手書き認識エンジンです。</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">簡体字中国語手書き認識モデル</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">繁体字中国語手書き認識モデル</string>
+</resources>

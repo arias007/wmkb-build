@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The code editor that the "Edit as JSON" screens draw. The words here belong to
+  the editor itself, not to layouts, so a second screen that edits code can use
+  the same file.
+-->
+<resources>
+
+    <!-- Content description of the redo button. Undo, copy and paste use the common words. -->
+    <string name="code_redo_desc">Redo</string>
+    <!-- Content description of the wrap button while long lines run off the screen. -->
+    <string name="code_wrap_on_desc">Wrap long lines</string>
+    <!-- Content description of the wrap button while long lines wrap. -->
+    <string name="code_wrap_off_desc">Do not wrap long lines</string>
+
+    <!-- Where the caret is. %1$d is the line number, %2$d the column number. -->
+    <string name="code_position_label">Line %1$d, column %2$d</string>
+
+    <!-- Placeholder of the find field. -->
+    <string name="code_find_label">Find</string>
+    <!-- Placeholder of the replace field. -->
+    <string name="code_replace_label">Replace with</string>
+    <!-- Which result is showing. %1$d is its number, %2$d how many results there are. -->
+    <string name="code_find_count">%1$d of %2$d</string>
+    <string name="code_find_none">No results</string>
+    <string name="code_find_invalid">The pattern is not valid</string>
+    <!-- Content descriptions of the three search options, which are drawn as Aa, ab and .* -->
+    <string name="code_find_case_desc">Match case</string>
+    <string name="code_find_word_desc">Whole words only</string>
+    <string name="code_find_regex_desc">Use a regular expression</string>
+    <string name="code_find_previous_desc">Previous result</string>
+    <string name="code_find_next_desc">Next result</string>
+    <string name="code_find_close_desc">Close find</string>
+    <!-- A chip that shows the replace field under the find field. -->
+    <string name="code_replace_toggle">Replace</string>
+    <!-- A button that replaces the result that is showing. -->
+    <string name="code_replace_one">Replace</string>
+    <string name="code_replace_all">Replace all</string>
+    <string name="code_go_to_line_title">Go to line</string>
+    <string name="code_go_to_line_label">Line number</string>
+    <!-- %1$d is the number of the last line. -->
+    <string name="code_go_to_line_error">Enter a line from 1 to %1$d</string>
+    <!-- The button that goes to the line typed. -->
+    <string name="code_go_to_line_action">Go</string>
+
+    <!-- The row of code keys above the soft keyboard. -->
+    <string name="code_key_indent_desc">Indent the line. Hold to outdent it.</string>
+    <string name="code_keys_page_desc">Show the other keys</string>
+    <string name="code_key_left_desc">Move the caret left. Slide to move it further.</string>
+    <string name="code_key_right_desc">Move the caret right. Slide to move it further.</string>
+    <!-- Short labels of the editing commands on the second page of the row. -->
+    <string name="code_command_suggest">Suggest</string>
+    <string name="code_command_undo">Undo</string>
+    <string name="code_command_redo">Redo</string>
+    <string name="code_command_comment">Comment</string>
+    <string name="code_command_duplicate">Duplicate</string>
+    <string name="code_command_line_up">Line up</string>
+    <string name="code_command_line_down">Line down</string>
+    <string name="code_command_select_word">Select word</string>
+    <string name="code_command_select_line">Select line</string>
+    <string name="code_command_find">Find</string>
+    <string name="code_command_format">Format</string>
+
+    <!-- Commands that move the caret to the start and to the end of the block around it. -->
+    <string name="code_command_block_start">Block start</string>
+    <string name="code_command_block_end">Block end</string>
+
+    <!-- The dialog that arranges the row of code keys. -->
+    <string name="code_keys_title">Code keys</string>
+    <string name="code_keys_show_label">Show the row of code keys</string>
+    <string name="code_keys_caption">Drag a key by its handle to move it. Clear its box to hide it.</string>
+    <string name="code_keys_reset_action">Reset</string>
+    <!-- Content description of the box beside a key. %1$s is the key, such as == or local. -->
+    <string name="code_key_show_desc">Show %1$s</string>
+
+</resources>

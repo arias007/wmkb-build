@@ -1,0 +1,86 @@
+# Built application files & Gradle
+.gradle/
+.kotlin/
+build/
+**/build/
+local.properties
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Native C/C++ & NDK
+.externalNativeBuild/
+.cxx/
+cmake-build-*/
+
+# Keystores & Signing Keys
+*.keystore
+*.jks
+*.p12
+*.pem
+*.pk8
+
+# IDE & Editor files
+.idea/
+*.iml
+.navigation/
+captures/
+*.hprof
+.vscode/
+
+# OS metadata & temporary files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Rust (Cargo & Harper native engine)
+target/
+**/target/
+
+# Python (Emoji & build tools)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+
+# Screenshot import staging
+docs/screenshots/.incoming/
+
+# IDE (Eclipse/JDT language server) output
+bin/
+**/bin/
+
+# Internal working notes (kept locally, not published)
+ORIGINAL_PROMPT.md
+SETTINGS_AUDIT.md
+docs/SONNET_PROMPT.md
+
+# Tool artifacts & local build output
+build-out/
+.claude/
+.github/modernize/
+
+# Fastlane (runtime artifacts and the Play service-account key; the Fastfile,
+# Appfile and metadata/ ARE committed)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/test_output/
+fastlane/README.md
+fastlane/play-service-account.json
+fastlane/.env*
+.bundle/
+vendor/bundle/
+
+# Local wiki conversion output
+wiki-dist/

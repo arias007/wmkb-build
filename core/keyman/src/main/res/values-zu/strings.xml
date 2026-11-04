@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <plurals name="core_keyman_diagonal_flicks_dropped">
+        <item quantity="one">Uhlelo lokusebenza lususe ukuswayipha okukodwa okuyidiagonali. Le khibhodi isekela ukuswayipha phezulu, phansi, kwesobunxele nakwesokudla kuphela.</item>
+        <item quantity="other">Uhlelo lokusebenza lususe ukuswayipha okuyidiagonali okungu-%1$d. Le khibhodi isekela ukuswayipha phezulu, phansi, kwesobunxele nakwesokudla kuphela.</item>
+    </plurals>
+    <plurals name="core_keyman_keys_type_their_labels">
+        <item quantity="one">Inkinobho engu-%1$d ithayipha uhlamvu oluphrintwe kuyo. Ikhibhodi yasekuqaleni isebenzise umthetho ukunquma ukuthi ithayipha ini.</item>
+        <item quantity="other">Izinkinobho ezingu-%1$d zithayipha izinhlamvu eziphrintwe kuzo. Ikhibhodi yasekuqaleni isebenzise imithetho ukunquma ukuthi zithayipha ini.</item>
+    </plurals>
+    <plurals name="core_keyman_multitap_unconverted">
+        <item quantity="one">Le khibhodi inokhi eyodwa ongenza kuyo okumbalwa njalo ukuze uzungeze amakhasi noma izinhlamvu. Uhlelo lokusebenza alukwazi ukukopisha lokhu kuzungeza, ngakho ukuchofoza ngakunye kusebenza njengokuchofoza kokuqala.</item>
+        <item quantity="other">Le khibhodi inokhi okungu-%1$d ongeza kuyo okumbalwa njalo ukuze uzungeze amakhasi noma izinhlamvu. Uhlelo lokusebenza alukwazi ukukopisha lokhu kuzungeza, ngakho ukuchofoza ngakunye kusebenza njengokuchofoza kokuqala.</item>
+    </plurals>
+    <string name="core_keyman_rules_missing">Le khibhodi isebenzisa imithetho ukunquma ukuthi izinkinobho zayo zithayipha ini. Uhlelo lokusebenza alunawo leyo mithetho, ngakho inkinobho ngayinye ithayipha uhlamvu oluphrintwe kuyo.</string>
+    <plurals name="core_keyman_special_keys_dropped">
+        <item quantity="one">Uhlelo lokusebenza lususe ukhiye ongu-%1$d. Le ikhibhodi ayinawo ukhiye owenza into efanayo.</item>
+        <item quantity="other">Uhlelo lokusebenza lususe okhiye abangu-%1$d. Le ikhibhodi ayinawo okhiye abenza izinto ezifanayo.</item>
+    </plurals>
+</resources>

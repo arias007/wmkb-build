@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">Serwer nie wysłał pliku. Kod błędu to HTTP %1$s.</string>
+    <string name="core_pred_wordlist_malformed_error">Ta lista słów jest pusta lub nieczytelna.</string>
+    <string name="core_pred_wordlist_memory_error">To urządzenie nie ma wystarczającej ilości pamięci dla listy słów o tym rozmiarze. Wybierz mniejszy rozmiar.</string>
+    <string name="core_pred_wordlist_no_space_error">Na urządzeniu nie ma wystarczającej ilości miejsca. Usuń kilka plików i spróbuj ponownie.</string>
+    <string name="core_pred_wordlist_save_error">Aplikacja nie może zapisać listy słów. Spróbuj ponownie.</string>
+    <string name="core_pred_wordlist_size_all_label">Wszystko</string>
+    <string name="core_pred_wordlist_size_large_label">Duży</string>
+    <string name="core_pred_wordlist_size_medium_label">Średni</string>
+    <string name="core_pred_wordlist_size_small_label">Mały</string>
+    <string name="core_pred_wordlist_source_aosp_detail">Wyselekcjonowana lista używana przez klawiaturę Androida. Mniej słów, z mniejszą liczbą nazw i literówek.</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">Zliczone z napisów i tekstów internetowych. Znacznie więcej słów, w tym więcej imion, slangu i literówek.</string>
+    <string name="core_pred_wordlist_source_frequency_label">Częstotliwość</string>
+    <string name="core_pred_wordlist_variant_australia_label">Australia</string>
+    <string name="core_pred_wordlist_variant_brazil_label">Brazylia</string>
+    <string name="core_pred_wordlist_variant_canada_label">Kanada</string>
+    <string name="core_pred_wordlist_variant_europe_label">Europa</string>
+    <string name="core_pred_wordlist_variant_uk_label">Wielka Brytania</string>
+    <string name="core_pred_wordlist_variant_us_label">Stany Zjednoczone</string>
+</resources>

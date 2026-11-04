@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">Завантажений файл пошкоджено. Його контрольна сума не збігається. Спробуйте завантажити ще раз.</string>
+    <string name="core_input_cjk_download_error_http">Сервер повернув статус HTTP %1$s.</string>
+    <string name="core_input_cjk_download_error_network">Завантаження не вдалося. Перевірте підключення та спробуйте ще раз.</string>
+    <string name="core_input_cjk_download_error_network_detail">Не вдалося завантажити: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">На вашому пристрої недостатньо пам\'яті. Спочатку звільніть трохи місця.</string>
+    <string name="core_input_cjk_download_error_truncated">З\'єднання перервалося під час завантаження. Натисніть «Відновити», щоб продовжити.</string>
+    <string name="core_input_cjk_download_error_unavailable">Цей пакет ще недоступний.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">Таблиця радикальних кодів для ієрогліфів Hanzi, 29 000 символів. Клавіатурі потрібен цей пакет для розкладок Cangjie та Quick.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Словник Cangjie (倉頡)</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Читання кана з mozc, 1,08 мільйона записів, близько 42 МБ. Клавіатурі потрібен цей пакет для японської конвертації.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Словник японської кани для кандзі</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Таблиця відповідності читання за Ютпінгом ієрогліфам Ханьцзи, 163 000 записів. Клавіатурі потрібен цей пакет для кантонської конверсії.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Кантонський словник Jyutping</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Які слова йдуть одне за одним, підраховано на основі китайського веб-контенту та новин. Постачається зі словником Pinyin. Завдяки цьому ініціали, як-от wbxh, дають 我不喜欢, а не два непов\'язані слова.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Китайські словосполучення</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Ієрогліфи та фрази з CC-CEDICT, 120 000 записів. Клавіатурі потрібен цей пакет для китайської конвертації.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Китайський словник Піньїнь</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Фрази з OpenCC, 50 000 записів, близько 1 МБ. Коли ввімкнено традиційні ієрогліфи, клавіатура використовує їх для написання правильної форми слова, наприклад 頭髮, а не 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Таблиця фраз традиційними ієрогліфами</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">Таблиця порядку рисок для ієрогліфів Hanzi. Клавіатурі потрібен цей пакет для розкладки за рисками.</string>
+    <string name="core_input_cjk_pack_stroke_title">Словник китайських рисок (笔画)</string>
+    <string name="core_input_double_pinyin_custom_label">Користувацький</string>
+    <string name="core_input_double_pinyin_off_label">Вимкнено (повний Pinyin)</string>
+    <string name="core_input_im_note_candidates">Для деяких клавіш цей метод надає список варіантів. Клавіатура завжди використовує перший варіант.</string>
+    <string name="core_input_im_note_missing_files">Ці файли не були вибрані, тому їх частина відсутня: %1$s. Щоб включити їх, імпортуйте знову і виберіть їх разом.</string>
+    <string name="core_input_im_note_module">Цей метод використовує плагін, наприклад Anthy, який клавіатура не може запустити. Клавіші, що його використовують, тут не працюють.</string>
+    <string name="core_input_im_note_other_method">Цей метод надає деякі клавіші іншому методу введення. Ця частина тут не працює.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">Програма не може прочитати %1$d правило правопису, тому пропускає його.</item>
+        <item quantity="other">Програма не може прочитати %1$d правил правопису, тому пропускає їх.</item>
+    </plurals>
+    <string name="core_input_im_note_space">Цей метод використовує клавішу пробілу як клавішу, наприклад, для тону. Тут клавіша пробілу завжди вводить пробіл.</string>
+    <string name="core_input_im_note_truncated">Таблиця дуже велика, тому програма зберегла лише її першу частину.</string>
+    <string name="core_input_im_note_unused_files">Додаток не використовував ці файли: %1$s.</string>
+    <string name="core_input_im_refused_broken">Файл містить помилку, тому програма не може його прочитати: %1$s</string>
+    <string name="core_input_im_refused_empty">У файлі немає даних для введення.</string>
+    <string name="core_input_im_refused_no_dictionary">Схемі потрібен її словник. Імпортуйте знову, а також виберіть %1$s.</string>
+    <string name="core_input_im_refused_not_method">Програма не може прочитати це як метод введення. Вона зчитує таблиці .cin, схеми та словники Rime (.schema.yaml, .dict.yaml) і файли m17n .mim.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">Додаток прочитав це як таблицю .cin з %1$d записом. Введіть код, а потім виберіть символ зі смужки пропозицій.</item>
+        <item quantity="other">Додаток прочитав це як таблицю .cin з %1$d записами. Введіть код, а потім виберіть символ зі смужки пропозицій.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">Додаток розпізнав це як метод введення m17n з %1$d правилом. Клавіші записують текст під час введення.</item>
+        <item quantity="other">Додаток розпізнав це як метод введення m17n з %1$d правилами. Клавіші записують текст під час введення.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">Додаток розпізнав це як схему Rime з %1$d словниковим записом. Введіть склади, а потім виберіть слова зі смужки пропозицій.</item>
+        <item quantity="other">Додаток розпізнав це як схему Rime з %1$d словниковими записами. Введіть склади, а потім виберіть слова зі смужки пропозицій.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">Додаток розпізнав це як кодову таблицю Rime з %1$d записом. Введіть код, а потім виберіть символ зі смужки пропозицій.</item>
+        <item quantity="other">Додаток розпізнав це як кодову таблицю Rime з %1$d записами. Введіть код, а потім виберіть символ зі смужки пропозицій.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Власний системний словник Mozc з його витратами на з’єднання, сегментатором і фільтром пропозицій. Модуль Mozc виконує перетворення за допомогою цього словника; вбудований модуль його не використовує.</string>
+    <string name="core_input_mozc_pack_title">Словник Mozc</string>
+    <string name="core_input_rime_pack_base_subtitle">Пунктуація, символи, таблиця частоти слів, а також перетворення спрощеної та традиційної китайської мови, які використовує кожна схема RIME. Завантажується разом із першою схемою.</string>
+    <string name="core_input_rime_pack_base_title">Основи RIME</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">Схема Zhuyin від RIME на стандартній розкладці клавіш Dachen зі словником Terra Pinyin.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Чжуїнь (Bopomofo)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">П\'яте покоління схеми Cangjie для RIME, символи та фрази.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Великий сучасний словник спрощеної китайської мови для Pinyin, з варіантами Double Pinyin та 9-клавішною розкладкою. Компіляція займає хвилину або більше.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">Схема rime-cantonese для кантонської мови зі списками слів і фраз.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">Власна схема Pinyin для RIME, з якою вона шукає ієрогліфи за схемою рисок.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Модель рукописного введення японською мовою</string>
+    <string name="core_input_zinnia_pack_subtitle">Модель проєкту Tegaki для zinnia, офлайн-системи розпізнавання рукописного тексту, яка читає китайську та японську мови там, де ML Kit цього не робить.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Модель рукописного введення спрощеною китайською мовою</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Модель рукописного введення традиційною китайською мовою</string>
+</resources>

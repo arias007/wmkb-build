@@ -1,0 +1,186 @@
+---
+title: "Camera tool"
+description: "A viewfinder inside the keyboard for quick photo capture and insertion."
+sidebar:
+  order: 7
+---
+
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import Flavor from '@components/Flavor.astro';
+import Shot from '@components/Shot.astro';
+
+The Camera tool swaps the key rows for a live viewfinder, so you can snap a photo and send it into whatever you're typing in without ever leaving the keyboard. <Flavor edition="all" />: it's built on plain CameraX, not ML Kit, so it ships in every build.
+
+<PhoneFrame caption="The live viewfinder: flash and self-timer chips on the left, shutter in the middle, front/back switch on the right.">
+  {/* shot: tools/camera-viewfinder */}
+</PhoneFrame>
+
+## Taking a photo
+
+Open **Camera** from the [toolbar, or the toolbox](/tools/overview/) if you haven't pinned it. Camera isn't in the toolbar's default pinned set on a phone, where only Emoji, Clipboard, and Settings are. So the first time, you'll probably reach it through the toolbox or by typing its trigger keyword. See [smart suggestion chips](/smart/chips/).
+
+The viewfinder fills the width of the panel and behaves like any camera app:
+
+- **Tap anywhere to focus.** A tap starts focus-and-metering at that point.
+- **Pinch to zoom.** A zoom pill ("1.2x" style) appears top-center once you're past 1.05x, and the pinch is clamped to whatever range the current lens supports.
+- **Flash**: a chip on the bottom-left, shown only if the active lens reports a flash unit. Tapping it cycles Off → Auto → On.
+- **Self-timer**: the next chip over, cycling Off → 3s → 10s → Off. Once it's running, a large countdown digit appears at the center of the frame, with a feedback tick each second, before the shutter fires on its own.
+- **Front/back switch**: bottom-right, and only shown if the device has both a front and a back camera. [Start with the selfie camera](#options) below decides which one the tool opens on.
+- **Pick a photo**: the picture button beside it opens the keyboard's [file manager](/tools/files/), or Android's photo picker in the Play Store build, and the photo you choose lands on the confirm step as if you had just taken it. It's there while the confirm step has something to do with a photo besides sending it: a server under [Translate photos](#translating-a-photo), the [Search button](#search-by-photo-options), or a camera opened from web search.
+- **Shutter**: the button in the middle. Tap it to take the photo, or let the self-timer run out.
+
+### What you see is what you get
+
+There's no manual crop step, no drag handles, and no filters, whatever the word "crop" suggests elsewhere. The viewfinder is taller than the visible panel, because it spills upward to fill the panel's width at the sensor's aspect ratio. The moment you tap the shutter, WM Keyboard slices the raw capture down to exactly the region that was on screen. What you framed is what ends up in the photo.
+
+If you'd rather keep everything the sensor saw, turn on **Send the whole photo** in [Options](#options). The photo is then the full 4:3 frame, top and bottom strips included, and the confirm step fits all of it inside the panel instead of drawing it where the viewfinder had it.
+
+The capture itself stays modest. Photos are capped at the longest edge **Photo size** names, which is 1000, 1600 (the default), 2400 or 3200 px, rather than the sensor's full resolution. A photo headed straight into a chat message doesn't need 12+ megapixels, and a smaller capture processes faster. Each shot is written to the app's private storage as a JPEG before the confirm step appears.
+
+## Confirm, retake, or send
+
+<PhoneFrame caption="The confirm step: the captured photo shown exactly where the viewfinder had it, with Retake and Send underneath.">
+  {/* shot: tools/camera-confirm */}
+</PhoneFrame>
+
+After the shutter fires, the frozen photo is drawn at the exact spot and size the live preview had it. The confirm screen looks identical to the moment you took the shot, apart from a **Retake** and **Send** button pair underneath.
+
+- **Retake** discards the file and goes straight back to a live viewfinder.
+- **Send** hands the photo off (see [Where the photo goes](#where-the-photo-goes) below) and closes the panel back to your keys.
+- **Search** is a third button, off by default. Turn on **Search button** under [Search by photo](#search-by-photo-options) and it sits after Send. It looks up what is in the photo instead of sending it. See [Searching with a photo](#searching-with-a-photo) below.
+- **Translate** appears once a provider is set up under [Translate photos](#translating-a-photo). It replaces the photo with a copy whose text is translated.
+
+If you took the photo with the front camera and [Mirror selfies](#options) is on, the saved file is flipped horizontally to match what you saw while framing. Camera sensors record selfies un-mirrored by default: text reads the right way round, but the shot looks flipped against the live preview. Shutter sound and haptic feedback on the controls, timer ticks, and shutter are each their own setting. See [Options](#options).
+
+## Translating a photo
+
+Pointed the camera at a menu or a sign in another language? Add a [Rens](https://git.maid.zone/stuff/rens) server under <SettingsPath path="Tools / Camera / Translate photos" />, and the confirm step gets a **Translate** button. Rens is a free front end to Google Lens: your own server, or [a public one](https://git.maid.zone/stuff/rens#instances).
+
+- **What it does.** The photo goes to the server, which has Google Lens translate the text in it, and comes back as a new picture with the translated text drawn over the original. It replaces the photo on screen, so **Send** sends the translated one. **Retake** starts again.
+- **Keeping it without sending.** A translated photo has two round buttons at the top right: **Copy** puts the picture on the clipboard, and **Save to the gallery** writes it to `Pictures/WM Keyboard`, whether or not [Save to the gallery](#options) is on.
+- **A photo you already have.** Tap **Pick a photo** in the viewfinder and choose one, then **Translate**. A picture you copied is quicker still: press and hold it in the [clipboard panel](/tools/clipboard/) and tap **Translate**. The camera opens on that picture and translates it at once, without needing the camera permission, and its back button returns to the clipboard.
+- **Only some of the text.** Lens translates every word it finds. To translate one line, read the photo with [Text scan](/tools/scanner/#scanning-text-ocr) instead, keep the words you want, and tap **Translate** there.
+- **Which language.** The language the [Translate](/tools/translate/) tool translates into. Lens detects the language of the photo.
+- **More than one server.** **Translate photos** is a [provider list](/tools/providers/): the next server is asked when one fails. With **How to use them** on **Choose in the panel**, a chip at the top right of the photo picks the server.
+- **Privacy.** Rens strips the photo's metadata and renames it before it passes the photo on, so Google sees the server and not your phone. The server still sees the photo.
+- **Data saver.** It counts as a web search. On a connection where data saver asks first, the first press of Translate says so and the second sends the photo. Each translation shows in the [network activity log](/privacy/network-activity/) as **Search by photo**.
+
+## Putting the place on a photo
+
+With the [Location tool](/tools/location/) on, the viewfinder's control rail carries a pin next to the timer. Tap it and the photo is stamped: a band along the bottom with the place on one line and the coordinates, the time and the Plus code under it, white on a dark fade. A line over the viewfinder shows what the band will say before you shoot, or that the keyboard is still finding you. The stamp is in the picture itself, so every chat app shows it, and so do screenshots and forwards. The pin remembers whether it was on.
+
+The stamp follows the Location tool's settings: its [precision](/tools/location/#precision), so a city-level stamp says only the city, and its address lookup. The Location panel's camera button opens the camera with the stamp on for that one photo.
+
+The confirm step has **Add the place as text** above Retake and Send. On, Send types the place into the box first, in the Location tool's default format, and then sends the photo. Many chat apps take the text in the box as the photo's caption; others send it as a message of its own. That switch is remembered too.
+
+Either one asks Android for location access the first time, the same way the Location tool does. Nothing is read while both are off.
+
+## Where the photo goes
+
+Tapping **Send** inserts the photo the same way clipboard images, GIFs, and stickers do: through Android's `commitContent` API, matched against whatever image types the field you're typing into says it accepts. If the field doesn't advertise support for any compatible image type, the photo is copied to the system clipboard instead, with a toast:
+
+> This app does not accept images here. The keyboard copied the image. Paste it instead.
+
+Either way, the send closes the panel and hands you back the keys.
+
+## Searching with a photo
+
+Saw a plant or an insect and want to know what it is? **Search** looks up what's in the photo: similar pictures, the name of the thing, and pages about it. There are two ways to get the button:
+
+- **From web search.** The [Web search](/tools/search/#web-and-image-search) panel has a camera button beside its search bar. It opens this camera, and after the shutter the confirm step offers **Retake** and **Search**, with no Send. Back returns you to the search panel. This works whatever the setting below says.
+- **On the camera itself.** Turn on **Search button** under [Search by photo](#search-by-photo-options), and every photo you take gets Search next to Retake and Send.
+
+Where Search takes the photo is up to **Search with**:
+
+- **Google Lens**, the default. The photo opens in Lens, inside the Google app, which shows its matches right away. If the Google app isn't installed, which is the case on most phones without Google's apps, the share sheet opens instead.
+- **Web**. The keyboard sends the photo to the search site you pick under **Search site** and opens that site's results page in your browser. You don't need the Google app for this. The sites are **Google Lens** (on the web), **Bing**, **Yandex**, **TinEye**, and **Custom**. Before the upload, the photo is scaled down to at most 1280 px on its longest side, which is about what the sites work at anyway. The keyboard shows "Sending the photo to the search site" while it uploads.
+- **Share sheet**. Android's own share sheet opens every time, so you pick the app: Lens, a plant identifier, a shopping app, anything that takes an image.
+
+The panel closes once the search is on its way. If it can't start, the photo stays on screen so you can try again or send it after all. That covers a failed upload, no app to take it, and a data saver block.
+
+None of the search sites has a public way to upload a photo. **Web** does what each site's own "search by image" button does, so a site can stop working when it changes how that works. You'll then see "The search site did not send a results page", and picking a different site is the fix.
+
+**Custom** is for a server of your own, or any service you'd rather use. Two more fields appear when you pick it:
+
+- **Upload address**: where the keyboard posts the photo, as multipart form data.
+- **Photo field name**: the form field the photo goes in. `image` by default.
+
+The server answers with a redirect to its results page, with the results address as the whole reply, or with JSON like `{"url": "…"}`. A relative address counts from the upload address. The keyboard opens only `http` and `https` addresses, whatever the server sends back.
+
+Only **Web** uses the keyboard's own network connection, so it's the only route that answers to [Data saver](/privacy/data-saver/): it counts as a web search. On a connection where data saver asks first, the first press of Search shows "This connection is metered. To send the photo, press Search again." and the second press sends it. Each upload appears in the [network activity log](/privacy/network-activity/) as **Search by photo**. Lens and the share sheet give the photo to another app, and the keyboard itself sends nothing.
+
+By default that's the *only* copy that persists anywhere. The private file used to hand the image off is scratch storage, not a saved photo. On each panel open, anything beyond the four most recent capture files is deleted, which only matters if the app was killed mid-confirm. Want a permanent copy? Turn on **Save to the gallery**, off by default, and every photo you send or search with is also written to `Pictures/WM Keyboard` in your device's shared gallery, once, even if you search with it and then send it. See [your data on device](/privacy/data/) for how WM Keyboard's on-device storage is organized more generally. Capture, crop, save, and send are all local. The camera tool uses the network only for a search with **Search with** set to **Web** (see [Searching with a photo](#searching-with-a-photo)) and for **Translate** (see [Translating a photo](#translating-a-photo)). [Network policy](/privacy/network/) has the wider picture.
+
+## Granting camera access
+
+<PhoneFrame side caption="The permission gate shown before camera access is granted, with the Allow camera pill.">
+  <Shot id="tools/camera-permission-gate" alt="The permission gate shown before camera access is granted, with the Allow camera pill." />
+</PhoneFrame>
+
+The first time you open Camera, you'll likely see a short message instead of a live feed:
+
+> The camera tool needs permission to use the camera. The app takes a photo only when you press the shutter.
+
+Tapping **Allow camera** starts a small trampoline activity that exists for one reason. An IME service cannot show Android's runtime permission dialog itself, so this activity comes up instead. It shows a disclosure first, headed "Camera access for the camera tool", spelling out that the camera only runs while the tool is on screen and that no photo is uploaded anywhere. **Continue** hands you Android's own permission prompt. **Not now** leaves without asking for anything. Either way the activity closes the moment you answer, and the keyboard re-checks the permission as soon as it regains focus. You don't need to reopen the panel.
+
+This same trampoline is shared by the [OCR and QR scanner tools](/tools/scanner/): granting camera access from any one of the three covers all three, since they all request the same `android.permission.CAMERA`.
+
+:::note[If you've permanently denied the permission]
+Android stops showing its own prompt once you've denied camera access twice ("Don't ask again"). The disclosure still appears if that has happened, with a line saying so, and its button reads **Open system settings** instead of Continue. That takes you to WM Keyboard's permission page, which is the only place left to grant it.
+:::
+
+On a device with no camera at all, the panel shows "Your device has no camera." in place of the viewfinder. WM Keyboard installs and runs fine either way. Nothing about the app requires a camera.
+
+## Options
+
+<SettingsPath path="Tools / Camera" />
+
+<PhoneFrame side caption="Camera's Options screen: selfie camera, mirroring, gallery saving, shutter sound and haptics.">
+  <Shot id="tools/camera-options" alt="Camera's Options screen: selfie camera, mirroring, gallery saving, shutter sound and haptics." />
+</PhoneFrame>
+
+Like every tool on the [full tool list](/reference/settings/tools/), this screen opens with a **Turn on** switch. An **Icon colour** override follows it, but only while [colorful tool icons](/tools/overview/) are on globally. It's pink by default, and it becomes two rows instead of one if gradient tool colours are on as well.
+
+Under those sits the **Keyword shortcut** group, which every tool that ships a built-in keyword gets:
+
+- **Trigger words**: a text field pre-filled with "camera". Type that word on its own and the suggestion strip offers to open the tool, dropping the word (see [smart suggestion chips](/smart/chips/)). Commas separate more than one word. Clear the field and the tool stops offering itself this way.
+- **Match capitals**: off by default, so "camera", "Camera" and "CAMERA" all match. Turn it on and only the exact spelling in the field above counts. That's worth doing for a short trigger word that's also ordinary text.
+- **Reset to defaults**: only appears once you've edited the trigger words, and puts them back to "camera". Its subtitle shows what you'd be going back to.
+
+The tool's own settings, split into three groups:
+
+**Options**
+- **Start with the selfie camera**: off by default. Opens the panel on the front camera instead of the back one.
+- **Self-timer**: Off by default. The timer the panel opens on, so a habitual 3s user doesn't re-pick it every time. The in-panel chip still steps Off → 3s → 10s.
+- **Photo size**: 1600 px by default, from a choice of 1000, 1600, 2400 and 3200. It's the longest edge of the photos you take, and the camera picks the closest size its sensor offers. Larger photos hold more detail, which matters for a picture of a document somebody has to read, and they take longer to capture and to send.
+- **Mirror selfies**: on by default. See [Confirm, retake, or send](#confirm-retake-or-send) above for what this does and why it exists.
+- **Send the whole photo**: off by default. It skips the crop described in [What you see is what you get](#what-you-see-is-what-you-get) and sends the full 4:3 frame, including the strips that ran off the top and bottom of the screen. The live viewfinder is unchanged, so this is the one case where the photo holds more than you framed. The confirm step fits the whole picture inside the panel so you can see what you're about to send.
+- **Save to the gallery**: off by default. Also copies every capture into `Pictures/WM Keyboard`, on top of sending it.
+
+**Location**
+- **Stamp the place on photos**: off by default. The same switch as the pin on the viewfinder. See [Putting the place on a photo](#putting-the-place-on-a-photo).
+- **Add the place as text**: off by default. The same switch as the one on the confirm step.
+
+<a id="search-by-photo-options"></a>**Search by photo**
+- **Search button**: off by default. Adds **Search** after Retake and Send on the confirm step. The camera button in web search offers Search whatever this says.
+- **Search with**: **Google Lens** by default, then **Web** and **Share sheet**. See [Searching with a photo](#searching-with-a-photo) for what each does.
+- **Search site**: shown only while Search with is **Web**. **Google Lens** by default, then **Bing**, **Yandex**, **TinEye** and **Custom**.
+- **Upload address** and **Photo field name**: shown only for **Custom**. Where your server takes the photo, and the form field it reads.
+
+**Translate photos**
+- The servers that translate a photo for the **Translate** button. Empty by default, which hides the button. See [Translating a photo](#translating-a-photo).
+
+**Feedback**
+- **Shutter sound**: on by default. Plays the camera click when a photo is taken.
+- Vibration on the shutter, the controls and the timer countdown follows the keyboard's own haptics setting under [Key press › Haptics and sound](/typing/feedback/). There is no separate switch for the panel.
+
+The camera and the gallery are the **Camera and gallery** bundle on [Extensions](/reference/settings/extensions/). Off there, both tools leave the toolbar, the toolbox and the Tools list until the bundle is switched back on.
+
+## Details & edge cases
+
+- **No manual crop, no filters, no multi-shot.** One photo per open of the panel. Retaking replaces rather than appends.
+- **Search isn't an in-keyboard result list.** Every search route ends in another app or in your browser, which is where the results are worth reading. Nothing comes back into the field you're typing in.
+- **Not pinned or recommended by default.** Camera ships enabled, but it isn't in the toolbar's default pinned set and isn't part of the onboarding wizard's "Recommended" starter selection either. If you went through setup and picked "Recommended" rather than "Everything" on the tools page, you'll need to turn Camera on yourself under Settings → Tools.
+- **No direct-boot support.** Camera doesn't work on the lock screen before you've unlocked your device once after a restart, since it depends on the app's private storage, which isn't available that early.
+- **Every build, no gating.** Camera has no edition restriction anywhere in its code path. The scanners and handwriting are in the F-Droid build too, with open-source readers where they use Google ML Kit elsewhere.

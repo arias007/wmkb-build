@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">Server soubor neodeslal. Kód chyby je HTTP %1$s.</string>
+    <string name="core_pred_wordlist_malformed_error">Tento seznam slov je prázdný nebo nečitelný.</string>
+    <string name="core_pred_wordlist_memory_error">Toto zařízení nemá dostatek paměti pro seznam slov této velikosti. Zvolte menší velikost.</string>
+    <string name="core_pred_wordlist_no_space_error">V zařízení není dostatek úložného prostoru. Smažte některé soubory a zkuste to znovu.</string>
+    <string name="core_pred_wordlist_save_error">Aplikace nemůže uložit seznam slov. Zkuste to znovu.</string>
+    <string name="core_pred_wordlist_size_all_label">Vše</string>
+    <string name="core_pred_wordlist_size_large_label">Velké</string>
+    <string name="core_pred_wordlist_size_medium_label">Střední</string>
+    <string name="core_pred_wordlist_size_small_label">Malý</string>
+    <string name="core_pred_wordlist_source_aosp_detail">Kurátorský seznam, který používá vlastní klávesnice Androidu. Méně slov, s méně jmény a překlepy mezi nimi.</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">Počítáno z titulků a textů na webu. Mnohem více slov, včetně jmen, slangu a překlepů.</string>
+    <string name="core_pred_wordlist_source_frequency_label">Frekvence</string>
+    <string name="core_pred_wordlist_variant_australia_label">Austrálie</string>
+    <string name="core_pred_wordlist_variant_brazil_label">Brazílie</string>
+    <string name="core_pred_wordlist_variant_canada_label">Kanada</string>
+    <string name="core_pred_wordlist_variant_europe_label">Evropa</string>
+    <string name="core_pred_wordlist_variant_uk_label">Spojené království</string>
+    <string name="core_pred_wordlist_variant_us_label">Spojené státy</string>
+</resources>

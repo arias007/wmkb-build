@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_pred_wordlist_http_error">Sunucu dosyayı göndermedi. Hata kodu HTTP %1$s.</string>
+    <string name="core_pred_wordlist_malformed_error">Bu kelime listesi boş veya okunamıyor.</string>
+    <string name="core_pred_wordlist_memory_error">Bu cihazda bu boyutta bir kelime listesi için yeterli bellek yok. Daha küçük bir boyut seçin.</string>
+    <string name="core_pred_wordlist_no_space_error">Cihazınızda yeterli depolama alanı yok. Bazı dosyaları silin ve tekrar deneyin.</string>
+    <string name="core_pred_wordlist_save_error">Uygulama kelime listesini kaydedemiyor. Tekrar deneyin.</string>
+    <string name="core_pred_wordlist_size_all_label">Hepsi</string>
+    <string name="core_pred_wordlist_size_large_label">Büyük</string>
+    <string name="core_pred_wordlist_size_medium_label">Orta</string>
+    <string name="core_pred_wordlist_size_small_label">Küçük</string>
+    <string name="core_pred_wordlist_source_aosp_detail">Android\'in kendi klavyesinin kullandığı derlenmiş liste. Daha az kelime, daha az isim ve yazım hatası içerir.</string>
+    <string name="core_pred_wordlist_source_aosp_label">AOSP</string>
+    <string name="core_pred_wordlist_source_frequency_detail">Altyazılardan ve web metinlerinden sayılmıştır. Daha fazla isim, argo ve yazım hatası içeren çok daha fazla kelime.</string>
+    <string name="core_pred_wordlist_source_frequency_label">Sıklık</string>
+    <string name="core_pred_wordlist_variant_australia_label">Avustralya</string>
+    <string name="core_pred_wordlist_variant_brazil_label">Brezilya</string>
+    <string name="core_pred_wordlist_variant_canada_label">Kanada</string>
+    <string name="core_pred_wordlist_variant_europe_label">Avrupa</string>
+    <string name="core_pred_wordlist_variant_uk_label">Birleşik Krallık</string>
+    <string name="core_pred_wordlist_variant_us_label">Amerika Birleşik Devletleri</string>
+</resources>

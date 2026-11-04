@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+           xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- ==================================================================
+         Tool detail screen: one screen for each keyboard tool. The strings
+         below are grouped by tool, in the same order as the screen builds
+         them. Strings shared by more than one tool come first.
+         ================================================================== -->
+
+    <!-- Shared by every tool: the on/off switch and the icon colour row. -->
+    <string name="tooldetail_enabled_subtitle">Show this tool on the toolbar and in the toolbox</string>
+    <!-- Replaces the line above while the tool has no API key, when the switch cannot be pressed. -->
+    <string name="tooldetail_enabled_needs_key_subtitle">Add the API key below to turn this tool on</string>
+    <string name="tooldetail_enabled_needs_instance_subtitle">Needs a SearXNG instance. Add its address under Search settings.</string>
+    <string name="tooldetail_enabled_voice_off_subtitle">Voice typing is off. Turn it on under All voice typing settings below.</string>
+    <string name="tooldetail_enabled_needs_mix_source_subtitle">Add a source under Emoji › Emoji mixes first.</string>
+    <string name="tooldetail_enabled_needs_music_provider_subtitle">Set up a song recogniser with your key under Song recognisers below to turn this tool on</string>
+    <string name="tooldetail_enabled_needs_layout_subtitle">Make a secondary layout under Key layouts below to turn this tool on</string>
+    <!-- A switch under the one above. Off takes the tool out of the toolbox grid
+         (the panel that lists every tool) while it stays on everywhere else. -->
+    <string name="tooldetail_show_in_toolbox_title">Show in toolbox</string>
+    <string name="tooldetail_show_in_toolbox_subtitle">Off keeps it out of the toolbox. It still works from the toolbar, by typing its name and from selection actions.</string>
+    <string name="tooldetail_icon_colour_title">Icon colour</string>
+    <!-- The two ends of the icon gradient, shown instead of the row above
+         while "Gradient tool colors" is on. -->
+    <string name="tooldetail_icon_colour_start_title">Icon colour, top left</string>
+    <string name="tooldetail_icon_colour_end_title">Icon colour, bottom right</string>
+    <!-- Title of the colour picker dialog. %1$s is the name of the tool, for example "Clipboard". -->
+    <!-- Heading of the options group. Many tools use this one heading. -->
+    <string name="tooldetail_options_group">Options</string>
+    <!-- Heading of the fold that holds a screen's less used settings. Many screens use this one heading. -->
+    <string name="tooldetail_advanced_group">Advanced</string>
+    <!-- Heading of the fold at the end of every tool's page: show in toolbox, icon colour, press and hold. -->
+    <string name="tooldetail_toolbar_group">Toolbar and toolbox</string>
+
+    <!-- Rows that send the user to a bigger settings screen. -->
+    <string name="tooldetail_layout_nav_title">All layout and size settings</string>
+    <string name="tooldetail_layout_nav_split_subtitle">Keyboard height, width, alignment and split</string>
+    <string name="tooldetail_layout_nav_floating_subtitle">Keyboard height, width, alignment and floating mode</string>
+    <string name="tooldetail_layout_nav_persistent_subtitle">Keyboard height, width, alignment and the keep-on-screen switch</string>
+    <string name="tooldetail_layout_nav_one_handed_subtitle">Keyboard height, width, alignment and one-handed mode</string>
+
+    <!-- App-launcher tool. -->
+    <string name="tooldetail_launcher_group">App launcher</string>
+    <string name="tooldetail_launcher_sort_title">Sort order</string>
+    <string name="tooldetail_launcher_sort_subtitle">How the app grid orders the apps</string>
+    <string name="tooldetail_launcher_sort_alpha_label">A to Z</string>
+    <string name="tooldetail_launcher_sort_recent_label">Recent first</string>
+    <string name="tooldetail_launcher_labels_title">App names</string>
+    <string name="tooldetail_launcher_labels_subtitle">Show each app\'s name under its icon</string>
+    <string name="tooldetail_launcher_recents_title">Recent apps</string>
+    <string name="tooldetail_launcher_recents_subtitle">Show the apps you opened last in a row above the grid</string>
+    <string name="tooldetail_launcher_recents_info">The keyboard keeps the last 10 apps you opened from this tool, on your device only. Turn this off to stop the tracking and delete the list.</string>
+    <string name="tooldetail_launcher_drilldown_title">Open screens inside apps</string>
+    <string name="tooldetail_launcher_drilldown_subtitle">List an app’s screens on its page</string>
+    <string name="tooldetail_launcher_drilldown_info">Press and hold an app and pick the last item in the menu to open its page. With this off the page keeps its pin, hide and App info actions and leaves the screens out.</string>
+    <string name="tooldetail_launcher_non_exported_title">Show private screens</string>
+    <string name="tooldetail_launcher_non_exported_subtitle">Also list screens that only the app itself may open</string>
+    <string name="tooldetail_launcher_non_exported_info">Android does not let other apps open these screens. They show dimmed, and a press on one does nothing. Useful to explore what an app contains.</string>
+
+    <!-- Plugins tool. -->
+    <string name="tooldetail_plugins_group">Plugins</string>
+    <string name="tooldetail_plugins_manage_title">Manage plugins</string>
+    <string name="tooldetail_plugins_manage_subtitle">Turn plugins on, see which ones are installed, and see what each one can do</string>
+
+    <!-- Emoji tool. -->
+    <string name="tooldetail_emoji_group">Emoji</string>
+    <string name="tooldetail_emoji_all_title">All emoji settings</string>
+    <string name="tooldetail_emoji_all_subtitle">Suggestions, the history tab, the emoji row, skin tones and favourites</string>
+
+    <!-- Snippets tool. Everything it can be configured with lives on the Text
+         Expander screen, so the page is one row that opens it. -->
+    <string name="tooldetail_snippets_group">Snippets</string>
+    <string name="tooldetail_snippets_all_title">All Text Expander settings</string>
+    <string name="tooldetail_snippets_all_subtitle">Your snippets, triggers, patterns and template variables</string>
+
+    <!-- Clipboard tool. Everything it can be configured with lives on the
+         Clipboard screen, so the page is one row that opens it. -->
+    <string name="tooldetail_clipboard_group">Clipboard</string>
+    <string name="tooldetail_clipboard_all_title">All clipboard settings</string>
+    <string name="tooldetail_clipboard_all_subtitle">History, the panel, the paste chip, and what happens to a copied password</string>
+
+    <!-- Split keyboard tool. -->
+
+    <!-- Floating keyboard tool. -->
+
+    <!-- Flashlight tool. -->
+    <string name="tooldetail_flashlight_auto_off_title">Turn off with the keyboard</string>
+    <string name="tooldetail_flashlight_auto_off_subtitle">Turn the torch off when the keyboard closes</string>
+    <string name="tooldetail_flashlight_auto_off_info">On: a torch you turned on from the keyboard goes off when the keyboard closes or when you change apps, so it is never left on in your pocket. A torch turned on from the quick settings tile or another app is left alone. Off: the torch stays on until you turn it off again, from the tool or from the quick settings tile of the system.</string>
+
+    <!-- Compass tool. -->
+    <string name="tooldetail_compass_degrees_title">Degree readout</string>
+    <string name="tooldetail_compass_degrees_subtitle">Show the heading in numbers under the compass rose</string>
+    <string name="tooldetail_compass_qibla_title">Show the qibla</string>
+    <string name="tooldetail_compass_qibla_subtitle">Mark the direction of the Kaaba on the compass</string>
+    <string name="tooldetail_compass_qibla_info">The keyboard computes the qibla bearing from the location that you save in the weather tool. The two tools share that location. The keyboard computes everything on your device, and the compass never uses the network.</string>
+    <string name="tooldetail_compass_no_location_error">No location is saved yet. Set one under Tools → Weather.</string>
+
+    <!-- Bubble level tool. -->
+    <string name="tooldetail_level_angles_title">Angle readout</string>
+    <string name="tooldetail_level_angles_subtitle">Show the pitch and the roll in degrees under the bubble</string>
+
+    <!-- Undo and redo tools. -->
+    <string name="tooldetail_redo_ctrl_y_title">Redo sends Ctrl+Y</string>
+    <string name="tooldetail_redo_ctrl_y_subtitle">Instead of the default Ctrl+Shift+Z</string>
+    <string name="tooldetail_redo_ctrl_y_info">Both shortcuts are standard for redo. Which one works depends on the app that you type in. If redo does nothing, try the other one.</string>
+
+    <!-- Moon phase tool. -->
+    <string name="tooldetail_moon_southern_title">Southern hemisphere</string>
+    <string name="tooldetail_moon_southern_subtitle">Show the moon the way it looks south of the equator</string>
+    <string name="tooldetail_moon_arabic_title">Arabic names too</string>
+    <string name="tooldetail_moon_arabic_subtitle">Show the name of each phase in Arabic as well, under the name in your language</string>
+
+    <!-- Weather tool. -->
+    <string name="tooldetail_weather_fahrenheit_title">Fahrenheit</string>
+    <string name="tooldetail_weather_fahrenheit_subtitle">Show temperatures in °F instead of °C</string>
+    <string name="tooldetail_weather_auto_fetch_title">Fetch the forecast as you type</string>
+    <string name="tooldetail_weather_auto_fetch_subtitle">Off, a weather chip waits for your tap before it goes online</string>
+    <string name="tooldetail_weather_auto_fetch_info">This setting controls only the chip on the suggestion strip. The panel fetches the forecast when you open it. The F-Droid edition starts with this setting off.</string>
+    <string name="tooldetail_weather_info">The weather and the place search both use Open-Meteo, only when you use them. The keyboard makes no other network requests.</string>
+
+    <!-- Calendar tool. -->
+    <string name="tooldetail_calendar_group">Next to the Gregorian calendar</string>
+    <string name="tooldetail_calendar_first_title">First calendar</string>
+    <string name="tooldetail_calendar_first_subtitle">Its day number also shows inside each day cell</string>
+    <string name="tooldetail_calendar_second_title">Second calendar</string>
+    <string name="tooldetail_calendar_second_subtitle">The keyboard shows it in the header and under the selected day</string>
+    <string name="tooldetail_calendar_hijri_title">Hijri day adjustment</string>
+    <string name="tooldetail_calendar_hijri_subtitle">Move the computed Hijri date to match the local moon sighting</string>
+    <string name="tooldetail_calendar_hijri_info">The tool uses the arithmetic (tabular) Hijri calendar. Real Islamic months start at the sighting of the crescent moon. That can differ from the tables by one or two days. Set the offset that matches your local authority.</string>
+    <string name="tooldetail_calendar_info">Select any two calendars to show next to the Gregorian one. The keyboard computes Chinese dates from astronomy. The Hebrew, Persian, Hindu (Saka), Buddhist and Japanese calendars are exact arithmetic. Hijri is the tabular calendar, so it has the day offset above.\n\nAll three start from the region of your device: the Bengali calendar in Bangladesh, era years in Japan, a Friday and Saturday weekend across much of the Middle East. That is only a guess at what you want. You can change all of it here.</string>
+    <string name="tooldetail_calendar_events_info">Press a day to see its events from the calendar of your device, and press an event to change it, delete it or type it into your text. The keyboard asks to read your calendar the first time that you open the tool, and to write to it the first time that you save an event.</string>
+    <string name="tooldetail_calendar_new_group">New events</string>
+    <string name="tooldetail_calendar_save_mode_title">Save events</string>
+    <string name="tooldetail_calendar_save_mode_subtitle">Where Save puts a new event</string>
+    <string name="tooldetail_calendar_save_mode_info">In the keyboard writes the event straight into your calendar, and asks for calendar access the first time. In the calendar app opens your calendar app\'s own editor with the event filled in, and you save it there. Changing and deleting events always happens in the keyboard.</string>
+    <string name="tooldetail_calendar_save_keyboard_label">In the keyboard</string>
+    <string name="tooldetail_calendar_save_app_label">In the calendar app</string>
+    <string name="tooldetail_calendar_default_calendar_title">Default calendar</string>
+    <string name="tooldetail_calendar_default_calendar_subtitle">The calendar a new event starts in</string>
+    <string name="tooldetail_calendar_default_calendar_primary">Primary calendar</string>
+    <string name="tooldetail_calendar_default_calendar_no_access">Allow calendar access to choose one</string>
+    <string name="tooldetail_calendar_default_length_title">Event length</string>
+    <string name="tooldetail_calendar_default_length_subtitle">How long a new event runs</string>
+    <string name="tooldetail_calendar_default_reminder_title">Reminder</string>
+    <string name="tooldetail_calendar_default_reminder_subtitle">The reminder a new event starts with</string>
+    <string name="tooldetail_calendar_reminder_none">None</string>
+    <string name="tooldetail_calendar_reminder_at_start">At the start</string>
+    <plurals name="tooldetail_calendar_minutes_before">
+        <item quantity="one">%d minute before</item>
+        <item quantity="other">%d minutes before</item>
+    </plurals>
+    <plurals name="tooldetail_calendar_hours_before">
+        <item quantity="one">%d hour before</item>
+        <item quantity="other">%d hours before</item>
+    </plurals>
+    <plurals name="tooldetail_calendar_days_before">
+        <item quantity="one">%d day before</item>
+        <item quantity="other">%d days before</item>
+    </plurals>
+    <plurals name="tooldetail_calendar_length_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="tooldetail_calendar_length_hours">
+        <item quantity="one">%d hour</item>
+        <item quantity="other">%d hours</item>
+    </plurals>
+
+    <!-- Camera tool. -->
+    <string name="tooldetail_camera_front_title">Start with the selfie camera</string>
+    <string name="tooldetail_camera_front_subtitle">Open the tool on the front camera instead of the back one</string>
+    <string name="tooldetail_camera_mirror_title">Mirror selfies</string>
+    <string name="tooldetail_camera_mirror_subtitle">Save front camera photos the way the preview shows them</string>
+    <string name="tooldetail_camera_mirror_info">Camera sensors record selfies without a mirror. The text then reads correctly, but the photo looks turned around next to the preview. On: the saved photo matches what you saw while you framed it. Off: the keyboard keeps the true orientation of the sensor.</string>
+    <string name="tooldetail_camera_gallery_title">Save to the gallery</string>
+    <string name="tooldetail_camera_gallery_subtitle">Also keep photos in Pictures/WM Keyboard</string>
+    <string name="tooldetail_camera_gallery_info">This setting is off by default, because photos that you take here are normally one-time sends and not photos to keep. On: the keyboard copies every photo into the gallery and also sends it.</string>
+    <!-- Search by photo (#349): the camera tool's Search button. -->
+    <string name="tooldetail_camera_search_group">Search by photo</string>
+    <string name="tooldetail_camera_search_info">Search finds pages about what is in a photo: a plant, an insect, a landmark, a product. The image search tool has a camera button that always offers Search. The switch below adds Search to the camera tool too.</string>
+    <string name="tooldetail_camera_search_button_title">Search button</string>
+    <string name="tooldetail_camera_search_button_subtitle">Add Search next to Retake and Send</string>
+    <string name="tooldetail_camera_search_with_title">Search with</string>
+    <string name="tooldetail_camera_search_with_info">Google Lens and the share sheet give the photo to another app, and the keyboard sends nothing itself. Web sends the photo to the search site that you pick and opens the results in your browser.</string>
+    <string name="tooldetail_camera_search_with_lens">Google Lens</string>
+    <string name="tooldetail_camera_search_with_lens_desc">Opens Lens in the Google app. If the Google app is not installed, the share sheet opens.</string>
+    <string name="tooldetail_camera_search_with_web">Web</string>
+    <string name="tooldetail_camera_search_with_web_desc">Sends the photo to a search site and opens its results in your browser. No Google app necessary.</string>
+    <string name="tooldetail_camera_search_with_share">Share sheet</string>
+    <string name="tooldetail_camera_search_with_share_desc">Lets you pick an app that searches with a photo, each time.</string>
+    <string name="tooldetail_camera_search_engine_title">Search site</string>
+    <string name="tooldetail_camera_search_engine_info">None of these sites has a public way to send photos. The keyboard does what the site\'s own upload button does, so a site can stop working when it changes. If that happens, pick a different site. Custom sends the photo to your own server.</string>
+    <string name="tooldetail_camera_search_engine_lens" translatable="false">Google Lens</string>
+    <string name="tooldetail_camera_search_engine_bing" translatable="false">Bing</string>
+    <string name="tooldetail_camera_search_engine_yandex" translatable="false">Yandex</string>
+    <string name="tooldetail_camera_search_engine_tineye" translatable="false">TinEye</string>
+    <string name="tooldetail_camera_search_engine_custom">Custom</string>
+    <string name="tooldetail_camera_search_custom_url_label">Upload address</string>
+    <string name="tooldetail_camera_search_custom_url_hint">The keyboard sends the photo here as form data. The server answers with a redirect to the results, or with the results address.</string>
+    <string name="tooldetail_camera_search_custom_field_label">Photo field name</string>
+    <string name="tooldetail_camera_search_custom_field_hint">The form field that holds the photo</string>
+    <string name="tooldetail_camera_fullframe_title">Send the whole photo</string>
+    <string name="tooldetail_camera_fullframe_subtitle">Keep the full 4:3 picture instead of the part in the viewfinder</string>
+    <string name="tooldetail_camera_fullframe_info">The viewfinder is as wide as the keyboard, so the top and the bottom of the picture go off the screen. The keyboard usually cuts those parts away, and you send what you saw. On: you send the full 4:3 photo, which holds more than the viewfinder showed you. The preview does not change.</string>
+    <string name="tooldetail_camera_feedback_group">Feedback</string>
+    <string name="tooldetail_camera_shutter_title">Shutter sound</string>
+    <string name="tooldetail_camera_shutter_subtitle">Play the camera click when you take a photo</string>
+    <string name="tooldetail_camera_haptics_title">Haptics</string>
+    <string name="tooldetail_camera_haptics_subtitle">Vibrate on the shutter, the controls and the timer countdown</string>
+    <string name="tooldetail_camera_haptics_info">This uses the haptic style and strength of the keyboard, under Typing → Feedback. If the keyboard haptics are off, the camera tool stays silent too.</string>
+    <string name="tooldetail_camera_info">The keyboard cuts photos down to what the viewfinder shows, saves them in the private storage of the app and sends them into the chat. Nothing goes into your gallery, and the camera runs only while the tool is open.\n\nTurn on “Send the whole photo” if you want the full 4:3 picture and not only the part in the viewfinder.</string>
+
+    <!-- Dictionary tool. -->
+    <string name="tooldetail_dictionary_auto_title">Look up the word at the cursor</string>
+    <string name="tooldetail_dictionary_auto_subtitle">The tool searches the selected word or the current word when it opens</string>
+    <string name="tooldetail_dictionary_translations_group">Translations</string>
+    <string name="tooldetail_dictionary_translations_info">Translations come from Wiktionary. When the word was found in Wiktionary, its translations come on the same page, so nothing more is sent. When another source found the word, the tool asks Wiktionary for the translations as well, but only if Wiktionary is on in the dictionary sources.</string>
+    <string name="tooldetail_dictionary_translations_title">Show translations</string>
+    <string name="tooldetail_dictionary_translations_subtitle">Show the word in other languages under its definitions. Tap a translation to type it</string>
+    <string name="tooldetail_dictionary_translation_langs_title">Translate into</string>
+    <string name="tooldetail_dictionary_translation_langs_none_subtitle">Your keyboard languages. Add a language other than English, or pick some here</string>
+    <string name="tooldetail_dictionary_translation_langs_dialog_body">The tool shows the translations that Wiktionary has for these languages, in this order. Pick none to follow your keyboard languages.</string>
+    <string name="tooldetail_dictionary_info">Definitions come from the sources below, in their order, and the built-in ones define English words. For another language, add a dictionary under Imported dictionaries or use a dictionary app on the phone. Word lists downloaded under Languages &amp; layouts are for typing: they hold spellings, not definitions, so they don\'t help here. The keyboard sends the word that you look up to an online source only when you use the tool.</string>
+    <string name="tooldetail_dictionary_sources_title">Dictionary sources</string>
+    <string name="tooldetail_dictionary_sources_subtitle">Where the tool looks for definitions, in order</string>
+    <string name="tooldetail_dictionary_sources_info">The tool asks the first source that is on. When that source does not know the word, or cannot be reached, the tool asks the next one. Drag a source to change the order, and turn off a source to never ask it. Online sources receive only the word you look up.</string>
+    <string name="tooldetail_dictionary_packs_title">Vocabulary packs</string>
+    <string name="tooldetail_dictionary_offline_group">Offline dictionaries</string>
+    <string name="tooldetail_dictionary_imported_group">Imported dictionaries</string>
+    <string name="tooldetail_dictionary_imported_info">Yomichan and Yomitan dictionaries, in any language: Japanese with readings and pitch accent (JMdict, Jitendex), Chinese, Korean, and the Wiktionary dictionaries for many other languages. StarDict dictionaries work too, as plain text. Import the dictionary\'s zip or tar file. Inflected Japanese words find their dictionary form. The source list above asks them as one source, Imported dictionaries; inside it they answer in this order.</string>
+    <plurals name="tooldetail_dictionary_imported_entries">
+        <item quantity="one">%1$s entry</item>
+        <item quantity="other">%1$s entries</item>
+    </plurals>
+    <string name="tooldetail_dictionary_imported_up_desc">Move %1$s up</string>
+    <string name="tooldetail_dictionary_imported_down_desc">Move %1$s down</string>
+    <string name="tooldetail_dictionary_imported_import_title">Import a dictionary</string>
+    <string name="tooldetail_dictionary_imported_import_subtitle">A Yomichan or Yomitan dictionary zip, or a StarDict dictionary in a zip or tar. A large one takes some minutes.</string>
+    <string name="tooldetail_dictionary_imported_link">Yomitan dictionaries</string>
+    <string name="tooldetail_dictionary_offline_info">Whole English dictionaries kept on the phone, so the Dictionary tool can define ordinary words with no connection, and in the build without internet access. The vocabulary packs know only their own lists\' words. Once one is here, the source list above asks it wherever you put it; by default after the online sources, so it answers when they cannot be reached. Wiktionary, offline, is Wiktionary\'s common words with pronunciation (CC BY-SA 4.0). Open English WordNet has every single English word in WordNet, with shorter definitions (CC BY 4.0).</string>
+    <string name="tooldetail_dictionary_offline_available">%1$s download, %2$s</string>
+    <string name="tooldetail_dictionary_offline_installed">On this device, %1$s, %2$s</string>
+    <string name="tooldetail_dictionary_offline_downloading">Downloading, %1$s of %2$s</string>
+    <string name="tooldetail_dictionary_offline_queued">Waiting for the other download</string>
+    <string name="tooldetail_dictionary_offline_failed_not_a_pack">The file downloaded is not this dictionary. Try again later.</string>
+    <string name="tooldetail_dictionary_offline_failed_http">The server refused the download (HTTP %1$s). Try again later.</string>
+    <string name="tooldetail_dictionary_offline_download_desc">Download %1$s</string>
+    <string name="tooldetail_dictionary_offline_delete_desc">Delete %1$s</string>
+    <string name="tooldetail_dictionary_offline_import_title">Import a dictionary</string>
+    <string name="tooldetail_dictionary_offline_import_subtitle">A .wmdict.gz file fetched on another device or in a browser</string>
+    <string name="tooldetail_dictionary_packs_subtitle">The packs the Vocabulary packs source reads, offline. They know only the words of their own lists, so most words need an online source</string>
+
+    <!-- Text editing tool. -->
+    <string name="tooldetail_text_edit_repeat_title">Key repeat interval</string>
+    <string name="tooldetail_text_edit_repeat_subtitle">Pause between repeats while you hold an arrow or backspace. A lower value is faster</string>
+
+    <!-- Cursor tools on the toolbar. -->
+    <string name="tooldetail_cursor_repeat_title">Hold to repeat on the toolbar</string>
+    <string name="tooldetail_cursor_repeat_subtitle">Holding this tool on the toolbar keeps moving the cursor. Off, holding it opens this page instead</string>
+    <string name="tooldetail_cursor_repeat_info">One switch for all eight moving cursor tools. Dragging the tool from the toolbar still moves it.</string>
+    <string name="tooldetail_cursor_repeat_toolbox_title">Hold to repeat in the toolbox</string>
+    <string name="tooldetail_cursor_repeat_toolbox_subtitle">Do the same in the toolbox grid. This tool only, and off by default</string>
+    <string name="tooldetail_cursor_repeat_toolbox_info">A hold in the toolbox is how you open a tool\'s page from the keyboard, so this tool gives that up while this is on. Its page stays under Tools. Turn it on only for the moves you actually hold.</string>
+    <string name="tooldetail_cursor_repeat_speed_subtitle">Pause between moves while you hold the tool. A lower value is faster. Shared with the text editing tool</string>
+
+    <!-- Selection mode tool on the toolbar. -->
+    <string name="tooldetail_select_mode_hold_title">Press and hold to select</string>
+    <string name="tooldetail_select_mode_hold_subtitle">Selection mode stays on while you hold the tool. It stops when you let go, and the selected text stays selected</string>
+    <string name="tooldetail_select_mode_hold_info">This spends the press and hold on the toolbar, so this page is where you change the tool, or a hold in the toolbox. To move the tool, press and hold it and then drag it, as before.</string>
+    <string name="tooldetail_select_mode_taps_title">Two presses select a word</string>
+    <string name="tooldetail_select_mode_taps_subtitle">Two quick presses select the word at the cursor. Three select the full line</string>
+    <string name="tooldetail_select_mode_taps_info">The first press of a pair still turns selection mode on or off, in the same way the shift key gives you caps lock. Turn this off if you press the tool twice in quick succession and want no word selected.</string>
+    <string name="tooldetail_word_steps_group">Where a word ends</string>
+    <string name="tooldetail_word_steps_title">Word steps</string>
+    <string name="tooldetail_word_steps_subtitle">Where Word left and Word right stop, and what Select word takes</string>
+    <string name="tooldetail_word_steps_info">The same setting applies to Word left, Word right and Select word.\n\nPress Select word again to also select the word on each side. Press shift and then Select word to go back one step. If \"Shift changes the case of the selection\" is on, shift changes the case instead.</string>
+    <string name="tooldetail_word_steps_app">As the app decides</string>
+    <string name="tooldetail_word_steps_app_desc">The app moves the cursor as it does for Ctrl and an arrow key. Most apps treat \"wmkeyboard.pages.dev\" as one word.</string>
+    <string name="tooldetail_word_steps_spaces">At spaces</string>
+    <string name="tooldetail_word_steps_spaces_desc">The cursor stops only at spaces. An address is one word.</string>
+    <string name="tooldetail_word_steps_punctuation">At spaces and punctuation</string>
+    <string name="tooldetail_word_steps_punctuation_desc">The cursor also stops at a dot, a slash, an underscore or another mark, so it can stop at \"wmkeyboard.|\".</string>
+    <string name="tooldetail_word_steps_capitals_title">Stop at capitals</string>
+    <string name="tooldetail_word_steps_capitals_subtitle">\"GrapheneOS\" is two words: \"Graphene\" and \"OS\"</string>
+    <string name="tooldetail_word_steps_digits_title">Stop at numbers</string>
+    <string name="tooldetail_word_steps_digits_subtitle">\"word1\" is two words: \"word\" and \"1\"</string>
+    <string name="tooldetail_select_mode_info">While selection mode is on, every cursor move selects text: the cursor tools, the text editing panel, the spacebar cursor swipe and the volume keys. Turn it off to keep what you selected and stop selecting more.</string>
+
+    <!-- Trackpad tool on the toolbar (issue #39). -->
+    <string name="tooldetail_trackpad_step_x_title">Horizontal sensitivity</string>
+    <string name="tooldetail_trackpad_step_x_subtitle">How far your finger travels for each character. A lower value moves the cursor faster</string>
+    <string name="tooldetail_trackpad_step_y_title">Vertical sensitivity</string>
+    <string name="tooldetail_trackpad_step_y_subtitle">How far your finger travels for each line. A lower value moves the cursor faster</string>
+    <string name="tooldetail_trackpad_hold_title">Press and hold to open</string>
+    <string name="tooldetail_trackpad_hold_subtitle">The trackpad stays open while you hold the tool and closes when you let go. A tap opens it until the next tap</string>
+    <string name="tooldetail_trackpad_hold_info">This spends the press and hold on the toolbar, so this page is where you change the tool, or a hold in the toolbox. To move the tool, press and hold it and then drag it, as before.</string>
+    <string name="tooldetail_trackpad_taps_title">Two taps select a word</string>
+    <string name="tooldetail_trackpad_taps_subtitle">Two quick taps on the trackpad select the word at the cursor. Three select the full line</string>
+    <string name="tooldetail_trackpad_haptics_title">Vibrate on each move</string>
+    <string name="tooldetail_trackpad_haptics_subtitle">A short tick for every character or line the cursor moves</string>
+    <string name="tooldetail_trackpad_trail_title">Show the trail</string>
+    <string name="tooldetail_trackpad_trail_subtitle">Draw your finger\'s path and a crosshair on the trackpad while you drag</string>
+    <string name="tooldetail_trackpad_magnifier_title">Magnifier</string>
+    <string name="tooldetail_trackpad_magnifier_subtitle">Show the text at the cursor, larger, above the cursor while you drag</string>
+    <string name="tooldetail_trackpad_magnifier_info">The magnifier shows the line of text around the cursor. It goes above the cursor when the app tells the keyboard where the cursor is. If the app does not, it goes above the keyboard.</string>
+    <string name="tooldetail_trackpad_info">One finger moves the cursor. Hold, then drag to select. Two fingers move a word at a time, and a two-finger tap types a space.</string>
+
+    <!-- Numpad tool. -->
+    <string name="tooldetail_numpad_calc_title">Calculator layout</string>
+    <string name="tooldetail_numpad_calc_subtitle">7 8 9 on the top row, like a desk keypad. Off puts 1 2 3 on top, like a dialer</string>
+
+    <!-- Incognito tool. -->
+    <string name="tooldetail_incognito_group">While incognito is on</string>
+    <string name="tooldetail_incognito_learning_title">Pause learning</string>
+    <string name="tooldetail_incognito_learning_subtitle">The keyboard learns no words and no emoji habits from your typing</string>
+    <string name="tooldetail_incognito_clipboard_title">Pause clipboard capture</string>
+    <string name="tooldetail_incognito_clipboard_subtitle">Copies do not go into the history of the clipboard tool</string>
+    <string name="tooldetail_incognito_private_clipboard_title">Keep copies in the keyboard</string>
+    <string name="tooldetail_incognito_private_clipboard_subtitle">Copy and cut from the keyboard do not go to the system clipboard, so other apps cannot read them</string>
+    <string name="tooldetail_incognito_private_clipboard_info">While incognito is on, text you copy or cut with the keyboard stays inside the keyboard. The paste keys of the keyboard paste it back. When incognito goes off, the keyboard forgets it.\n\nIf you have not copied with the keyboard yet, paste gives what is on the system clipboard, as usual. The copy and paste menu of the app itself still uses the system clipboard.</string>
+
+    <!-- Power saving tool: when power saving runs. -->
+    <string name="tooldetail_chips_nav_title">Suggestion chip</string>
+    <string name="tooldetail_chips_nav_subtitle">Offer this tool\'s answer on the suggestion strip. Set under Typing</string>
+    <string name="tooldetail_incognito_auto_nav_title">Automatic incognito</string>
+    <string name="tooldetail_incognito_auto_nav_subtitle">Set under Privacy</string>
+    <string name="tooldetail_power_group">Power saving</string>
+    <string name="tooldetail_power_now_title">Power saving now</string>
+    <string name="tooldetail_power_now_subtitle">The same switch that the toolbar tool uses</string>
+    <string name="tooldetail_power_now_info">This drops the features below until you turn it off again. It stays on after a restart and at any battery level. A full battery does not turn it off.\n\nNothing is lost. The features come back exactly as you had them, because power saving never rewrites your settings. It only hides them while it is on.</string>
+    <string name="tooldetail_power_trigger_title">Turn on by itself</string>
+    <string name="tooldetail_power_trigger_subtitle">As well as the switch above</string>
+    <!-- One line under each option in the power saving trigger picker. -->
+    <string name="tooldetail_power_trigger_off_desc">Only the switch above turns power saving on</string>
+    <string name="tooldetail_power_trigger_system_desc">Follows the system switch, so the keyboard saves power when you asked your device to</string>
+    <string name="tooldetail_power_trigger_low_desc">Uses your own percentage below</string>
+    <string name="tooldetail_power_trigger_either_desc">Whichever of the two happens first</string>
+    <string name="tooldetail_power_trigger_info">\"Android battery saver\" follows the system switch, so the keyboard saves power exactly when you already asked your device to. \"Battery is low\" uses your own percentage below instead.</string>
+    <string name="tooldetail_power_battery_title">Low battery is</string>
+    <string name="tooldetail_power_battery_subtitle">Power saving starts at this level or below it</string>
+    <string name="tooldetail_power_charging_title">Off while charging</string>
+    <string name="tooldetail_power_charging_subtitle">Ignore the automatic triggers while the charger is in</string>
+    <string name="tooldetail_power_charging_info">There is nothing to save while the battery fills, so the automatic triggers stop. This does not change the switch above. If you turn power saving on by hand, it stays on.</string>
+
+    <!-- Power saving tool: which features it drops. -->
+    <string name="tooldetail_power_drop_group">Effects to drop</string>
+    <!-- One bundle over the twelve drop switches. -->
+    <string name="tooldetail_power_preset_title">What to drop</string>
+    <string name="tooldetail_power_preset_subtitle">A bundle of the switches further down</string>
+    <string name="tooldetail_power_preset_light">Light</string>
+    <string name="tooldetail_power_preset_light_desc">Vibration, sounds, animations, the glide trail, glass blur and the background watchers</string>
+    <string name="tooldetail_power_preset_balanced">Balanced</string>
+    <string name="tooldetail_power_preset_balanced_desc">Light, plus background fetches and the on-device models</string>
+    <string name="tooldetail_power_preset_aggressive">Aggressive</string>
+    <string name="tooldetail_power_preset_aggressive_desc">Balanced, plus glide typing, emoji suggestions and smart chips</string>
+    <string name="tooldetail_power_preset_custom">Custom</string>
+    <string name="tooldetail_power_preset_custom_desc">Your own mix of the switches further down</string>
+    <string name="tooldetail_power_drop_helpers_group">Typing helpers to drop</string>
+    <string name="tooldetail_power_drop_background_group">Background work to drop</string>
+    <string name="tooldetail_power_drop_haptics_title">Key vibration</string>
+    <string name="tooldetail_power_drop_haptics_subtitle">Stop the vibration motor</string>
+    <string name="tooldetail_power_drop_sound_title">Key sounds</string>
+    <string name="tooldetail_power_drop_sound_subtitle">Stop the key click</string>
+    <string name="tooldetail_power_drop_anim_title">Animations</string>
+    <string name="tooldetail_power_drop_anim_subtitle">Stop transitions and motion, as reduced motion does</string>
+    <string name="tooldetail_power_drop_trail_title">Glide trail</string>
+    <string name="tooldetail_power_drop_trail_subtitle">Stop drawing the trail behind a swiped word</string>
+    <string name="tooldetail_power_drop_trail_info">This drops only the trail. Glide typing still works. The keyboard draws the trail on every frame of a gesture, so it costs more than the decode that it decorates.</string>
+    <string name="tooldetail_power_drop_popup_title">Key popup</string>
+    <string name="tooldetail_power_drop_popup_subtitle">Stop the character bubble over each key</string>
+    <!-- A glass theme blurs the app behind the keyboard; this stops that blur. -->
+    <string name="tooldetail_power_drop_glass_blur_title">Glass blur</string>
+    <string name="tooldetail_power_drop_glass_blur_subtitle">Stop glass themes blurring the app behind the keyboard and its popups</string>
+    <string name="tooldetail_power_drop_glide_title">Glide typing</string>
+    <string name="tooldetail_power_drop_glide_subtitle">Turn glide typing off</string>
+    <string name="tooldetail_power_drop_glide_info">A swipe decode is the most expensive thing the keyboard does. It is also why many people use the keyboard, so this setting is off by default and only the trail is dropped.</string>
+    <string name="tooldetail_power_drop_emoji_title">Emoji suggestions</string>
+    <string name="tooldetail_power_drop_emoji_subtitle">Stop reading what you type for emoji to offer</string>
+    <string name="tooldetail_power_drop_chips_title">Smart chips</string>
+    <string name="tooldetail_power_drop_chips_subtitle">Stop matching sums, conversions and tool keywords as you type</string>
+    <string name="tooldetail_power_drop_network_title">Background network</string>
+    <string name="tooldetail_power_drop_network_subtitle">No link previews and no automatic look-ups</string>
+    <string name="tooldetail_power_drop_network_info">This stops the requests that happen without you asking: previews for copied links and for scanned QR codes, and the look-up of the dictionary when you select a word. Tools that you open yourself still work, such as translate, search and GIFs.</string>
+    <string name="tooldetail_power_drop_screenshot_title">Screenshot watching</string>
+    <string name="tooldetail_power_drop_screenshot_subtitle">Stop watching for new screenshots to offer in the clipboard</string>
+    <string name="tooldetail_power_drop_models_title">On-device models</string>
+    <string name="tooldetail_power_drop_models_subtitle">Use the system recognizer for voice typing, and glide a word instead of writing it</string>
+    <string name="tooldetail_power_drop_models_info">Offline voice typing and handwriting both run a neural model on the processor, which is the most expensive work the keyboard does. Voice typing goes back to the system recognizer, and the letter swipe goes back to glide typing.</string>
+    <string name="tooldetail_power_drop_media_pin_title">Media tool pin</string>
+    <string name="tooldetail_power_drop_media_pin_subtitle">Stop putting the media tool on the toolbar while music plays</string>
+    <string name="tooldetail_power_drop_stats_title">Typing statistics</string>
+    <string name="tooldetail_power_drop_stats_subtitle">Stop counting your typing. Days spent saving power record nothing</string>
+    <string name="tooldetail_power_info">Power saving is a view of your settings and never a rewrite of them. Everything that it turns off here comes back exactly as you had it the moment power saving ends.</string>
+
+    <!-- Autocorrect tool. -->
+    <string name="tooldetail_autocorrect_title">Autocorrect</string>
+    <string name="tooldetail_autocorrect_subtitle">The tool uses this same switch. You can also find it under Typing</string>
+    <string name="tooldetail_typing_nav_title">All typing settings</string>
+    <string name="tooldetail_typing_nav_subtitle">Suggestions, autocorrect, capital letters and more</string>
+
+    <!-- Selection actions tool. -->
+    <string name="tooldetail_selection_actions_title">Selection actions</string>
+    <string name="tooldetail_selection_actions_subtitle">The tool uses this same switch. You can also find it under Advanced</string>
+    <string name="tooldetail_phonetic_english_info">Turns English words on and off for the phonetic layout you are typing on (Avro, Hindi phonetic). The setting itself is on each language\'s own screen, next to Also suggest from, and needs English picked there.</string>
+    <string name="tooldetail_phonetic_english_nav_subtitle">Type English words as English, and the switch on the suggestion strip</string>
+    <string name="tooldetail_selection_actions_nav_title">All selection action settings</string>
+    <string name="tooldetail_selection_actions_nav_subtitle">Where the bar appears, which actions it offers, and their order</string>
+
+    <!-- Fancy text tool. -->
+    <string name="tooldetail_fancy_style_title">Style to start with</string>
+    <string name="tooldetail_fancy_style_subtitle">The style the tool turns on. The strip over the keys still changes it</string>
+    <string name="tooldetail_fancy_style_info">Select a style and the tool always starts there. The strip over the keys changes the style for the rest of the session, and your selection here stays as it is.</string>
+    <string name="tooldetail_fancy_style_follow">Last used</string>
+    <string name="tooldetail_fancy_keep_title">Keep the language after you turn it off</string>
+    <string name="tooldetail_fancy_keep_subtitle">Fancy text stays in the language cycle of the 🌐 key</string>
+    <string name="tooldetail_fancy_keep_info">The tool adds Fancy text to your languages when you turn it on. With this setting off, the tool deletes it again when you turn it off, so the 🌐 key cycles only the languages you read.</string>
+    <string name="tooldetail_fancy_auto_off_title">Turn off when the keyboard closes</string>
+    <string name="tooldetail_fancy_auto_off_subtitle">The next time you type, the keyboard is back in your own language</string>
+    <string name="tooldetail_fancy_auto_off_info">Fancy text is usually one name or one message. This setting takes the keyboard back to the language you came from as soon as you leave the field. It applies only when the tool turned Fancy text on.</string>
+    <string name="tooldetail_fancy_language_nav_title">Fancy text language</string>
+    <string name="tooldetail_fancy_language_nav_subtitle">The saved style, and the layout switch</string>
+    <string name="tooldetail_fancy_info">The tool types with Unicode letters, not with a font. The letters stay fancy in every app, but a screen reader cannot read them and a search cannot find them.</string>
+
+    <!-- Secondary layout tool. -->
+    <string name="tooldetail_custom_layout_layout_title">Layout to show</string>
+    <string name="tooldetail_custom_layout_layout_subtitle">The secondary layout the tool puts on screen, or a list to select from</string>
+    <string name="tooldetail_custom_layout_layout_info">With no layout selected here, the tool opens a list of all your secondary layouts, or the only one you have. Select a layout and the tool shows that one directly. A press while a secondary layout is on screen always takes it off again. A key on any layout can also open a secondary layout.</string>
+    <string name="tooldetail_custom_layout_first">Ask each time</string>
+    <string name="tooldetail_custom_layout_keymaps_nav_title">Key layouts</string>
+    <string name="tooldetail_custom_layout_keymaps_nav_subtitle">Make and edit secondary layouts</string>
+    <string name="tooldetail_custom_layout_info">A secondary layout is a grid of your own, such as a symbols page or a macro pad. It is not a language. It keeps the dictionary of the layout you type with.</string>
+
+    <!-- Sound and haptics tool. -->
+    <string name="tooldetail_keypress_nav_title">All key press settings</string>
+    <string name="tooldetail_keypress_nav_subtitle">Haptic style and strength, key preview, press and hold</string>
+    <string name="tooldetail_sound_haptics_info">The haptic style and strength are under Key press → Haptic feedback. The panel of the tool changes the same settings from the keyboard.</string>
+
+    <!-- Handwriting tool. -->
+    <string name="tooldetail_handwriting_input_group">Input</string>
+    <string name="tooldetail_handwriting_stylus_title">Stylus only</string>
+    <string name="tooldetail_handwriting_stylus_subtitle">Only an S Pen or another stylus draws. The keyboard ignores finger touches</string>
+    <string name="tooldetail_handwriting_stylus_info">This helps to reject the palm while you write with a stylus. Even with this setting off, the keyboard ignores finger touches for a short time after stylus strokes, so a resting palm does not draw.</string>
+    <string name="tooldetail_handwriting_auto_space_title">Automatic space</string>
+    <string name="tooldetail_handwriting_auto_space_subtitle">Put a space between words that you write one after another</string>
+    <string name="tooldetail_handwriting_zinnia_title">Offline recogniser for Chinese and Japanese</string>
+    <string name="tooldetail_handwriting_zinnia_subtitle">Read Chinese and Japanese with zinnia instead of Google ML Kit</string>
+    <string name="tooldetail_handwriting_zinnia_info">zinnia is a small open-source recogniser with models from the Tegaki project. It reads one character at a time and is less accurate than ML Kit, but needs nothing from Google. Builds without ML Kit, such as the F-Droid one, always use it. Simplified or Traditional Chinese follows the Traditional characters switch in Chinese settings.</string>
+    <string name="tooldetail_handwriting_pen_width_title">Pen thickness</string>
+    <string name="tooldetail_handwriting_pen_width_value">%1$d dp</string>
+    <string name="tooldetail_handwriting_pen_color_title">Pen color</string>
+    <string name="tooldetail_handwriting_pen_color_subtitle">Reset it to follow the theme\'s accent</string>
+    <string name="tooldetail_handwriting_ink_fade_title">When ink turns into text</string>
+    <string name="tooldetail_handwriting_ink_fade_subtitle">How the strokes leave the canvas</string>
+    <string name="tooldetail_handwriting_ink_fade_dissolve">Dissolve</string>
+    <string name="tooldetail_handwriting_ink_fade_fade">Fade</string>
+    <string name="tooldetail_handwriting_ink_fade_shrink">Shrink</string>
+    <string name="tooldetail_handwriting_ink_fade_rise">Rise</string>
+    <string name="tooldetail_handwriting_ink_fade_none">Disappear at once</string>
+    <string name="tooldetail_handwriting_height_title">Panel height</string>
+    <string name="tooldetail_handwriting_height_subtitle">Open the canvas taller than the keyboard, without changing the keys</string>
+    <string name="tooldetail_handwriting_pause_title">Recognition pause</string>
+    <string name="tooldetail_handwriting_pause_subtitle">How long after the last stroke the keyboard waits before it recognizes the word</string>
+    <string name="tooldetail_handwriting_pause_info">A shorter pause feels faster, but it can cut multi-stroke letters and Bengali conjuncts in half. A longer pause gives you more time between strokes. Gboard uses about half a second.</string>
+    <string name="tooldetail_handwriting_full_screen_title">Full-screen writing</string>
+    <string name="tooldetail_handwriting_full_screen_subtitle">How the full-screen canvas tells your writing apart from taps on the app</string>
+    <string name="tooldetail_handwriting_full_screen_info">Tap the expand button on the handwriting panel to write anywhere over the app. The keyboard shrinks to a small bar and the canvas is see-through, so you can watch the text arrive.</string>
+    <string name="tooldetail_handwriting_full_screen_manual_label">Pen button</string>
+    <string name="tooldetail_handwriting_full_screen_manual_desc">A pen button on the bar switches between writing and using the app. Works with a finger or any stylus</string>
+    <string name="tooldetail_handwriting_full_screen_automatic_label">Stylus</string>
+    <string name="tooldetail_handwriting_full_screen_automatic_desc">A stylus writes and a finger keeps using the app. Start each run of writing over a text field. Needs Android\'s own setting for writing in text fields with a stylus</string>
+    <string name="tooldetail_handwriting_models_header">Recognition models</string>
+    <string name="tooldetail_handwriting_models_info">One model for each language that you type in. Recognition runs fully on your device, with Google ML Kit, zinnia for Chinese and Japanese, or PaddleOCR where ML Kit has no model (one row per script). Each needs a one-time download, and its size is shown on its own row — they range from about 8 MB to about 52 MB. After that, handwriting works offline.</string>
+    <string name="tooldetail_handwriting_languages_title">Languages and layouts</string>
+    <string name="tooldetail_handwriting_languages_subtitle">Add a language to get its handwriting model here</string>
+
+    <!-- Themes tool. -->
+    <string name="tooldetail_themes_nav_title">All theme settings</string>
+    <!-- The tool's other three grids, each pointing at the screen that owns it. -->
+    <string name="tooldetail_appearance_icons_nav_title">Icon packs</string>
+    <string name="tooldetail_appearance_icons_nav_subtitle">Install and choose the icons on the keys and tools</string>
+    <string name="tooldetail_appearance_emoji_nav_title">Emoji font</string>
+    <string name="tooldetail_appearance_emoji_nav_subtitle">Choose which set the keyboard draws emoji with</string>
+    <string name="tooldetail_appearance_fonts_nav_title">Key fonts</string>
+    <string name="tooldetail_appearance_fonts_nav_subtitle">Choose the font the keys are lettered in</string>
+    <string name="tooldetail_themes_nav_subtitle">Create, edit, import and export keyboard themes</string>
+
+    <!-- Translate tool. -->
+    <string name="tooldetail_translate_engine_title">Translation engine</string>
+    <string name="tooldetail_translate_engine_subtitle">Where the translation comes from. You can also change this on the panel.</string>
+    <string name="tooldetail_translate_engine_info">Online sends the text to the translation service and knows the most languages. On device uses Google ML Kit models that you download, about 30 MB for each language: the text stays on the phone and it works with no connection. Automatic uses the device when the languages are downloaded and the online service for the rest. On-device translation is good for messages and short text, and less exact than the online service for long or technical text.</string>
+    <string name="tooldetail_translate_downloaded_first_title">Downloaded languages first</string>
+    <string name="tooldetail_translate_downloaded_first_subtitle">The language lists on the panel start with the languages on the device. With On device and Automatic.</string>
+    <string name="tooldetail_translate_only_downloaded_title">Only downloaded languages</string>
+    <string name="tooldetail_translate_only_downloaded_subtitle">With On device, the language lists on the panel show the downloaded languages, the languages you type in and the current selection. All languages, at the end of the list, shows the rest.</string>
+    <string name="tooldetail_translate_models_group">Languages on the device</string>
+    <string name="tooldetail_translate_models_info">Each language is one download. A translation needs the models of the two languages, and goes through English when neither of them is English. The list starts with the language you translate into and the languages you type in.</string>
+    <string name="tooldetail_translate_models_more_group">More languages</string>
+    <string name="tooldetail_translate_bergamot_group">Firefox Translations models</string>
+    <string name="tooldetail_translate_bergamot_info">Mozilla\'s models for the Bergamot engine, the same ones Firefox translates with. Each direction is its own download: French → English reads French, English → French writes it. A translation between two languages that are not English goes through English and needs both directions. The engine itself is a separate download of a few megabytes on builds that do not carry it. Needs a 64-bit phone with Android 9 or later.</string>
+    <string name="tooldetail_translate_bergamot_more_group">More directions</string>
+    <string name="tooldetail_translate_bergamot_engine">Firefox Translations engine</string>
+    <string name="tooldetail_translate_nllb_group">NLLB-200 model</string>
+    <string name="tooldetail_translate_nllb_info">Meta\'s NLLB-200, one model for 200 languages that translates between any two of them. It is the on-device engine for the pairs Firefox Translations and ML Kit have no model for. One download of 630 MB, plus its CTranslate2 engine of a few megabytes on builds that do not carry it. While Translate is open it takes about 1 GB of memory, and a sentence takes a few seconds. Needs a 64-bit phone with 6 GB of memory or more.</string>
+    <string name="tooldetail_translate_nllb_model">NLLB-200 (200 languages)</string>
+    <string name="tooldetail_translate_nllb_licence_title">NLLB-200 licence</string>
+    <string name="tooldetail_translate_nllb_licence_body">The NLLB-200 model (%1$s) downloads from Hugging Face under Meta\'s licence for it, Creative Commons Attribution-NonCommercial 4.0. You may use it for non-commercial purposes only, and its translations come with no warranty. Accept to download it.</string>
+    <string name="tooldetail_translate_nllb_licence_accept">Accept and download</string>
+    <string name="tooldetail_translate_nllb_licence_view">Read licence</string>
+    <string name="tooldetail_translate_module_missing_info">On-device translation is an extra part of the keyboard that downloads when you first need it. Download it, then select the languages.</string>
+    <string name="tooldetail_translate_module_installing_info">Downloading the on-device translation part…</string>
+    <string name="tooldetail_translate_module_installing_sized_info">Downloading the on-device translation part: <xliff:g id="done" example="4.1 MB">%1$s</xliff:g> of <xliff:g id="total" example="9 MB">%2$s</xliff:g></string>
+    <string name="tooldetail_translate_offline_build_info">This offline build cannot translate on this phone: its one engine, Firefox Translations, needs a 64-bit phone with Android 9 or later. To translate, install the standard build.</string>
+    <string name="tooldetail_translate_offline_import_info">This offline build translates on the phone only. Open On device (Firefox Translations) under Providers, then get its library and the language directions you want on another device, and import them.</string>
+    <string name="tooldetail_translate_module_failed_info">The download did not finish. Check the connection, then try again.</string>
+    <string name="tooldetail_translate_module_metered_body">The on-device translation part is a separate download.</string>
+    <string name="tooldetail_translate_model_builtin_label">Part of the engine. No download is necessary</string>
+    <string name="tooldetail_translate_model_cancel_desc">Cancel the download for %1$s</string>
+    <string name="tooldetail_translate_model_metered_body">The <xliff:g id="language" example="Bengali">%1$s</xliff:g> translation model is about <xliff:g id="size" example="30 MB">%2$s</xliff:g>.</string>
+    <string name="tooldetail_translate_key_group">API key</string>
+    <string name="tooldetail_translate_key_label">Cloud Translation API key (optional)</string>
+    <string name="tooldetail_translate_key_hint">Without a key, translation uses the free public endpoint of Google</string>
+    <string name="tooldetail_translate_info">The keyboard sends the text that you translate to Google either way, and only while the translate panel is open. The free endpoint is unofficial and rate limited. A Cloud Translation key makes it official and reliable. If you set up DeepL below, DeepL gets the text instead, and Google gets only the languages that DeepL does not have.</string>
+
+    <!-- The user's own translation server (issue #435). llama.cpp, Ollama, LM Studio, vLLM, LocalAI and OpenAI are names. -->
+    <string name="tooldetail_translate_server_group">Your translation server</string>
+    <string name="tooldetail_translate_server_info">Optional. For a server that you run, or a service that you pay for, that answers OpenAI chat completion requests: llama.cpp, Ollama, LM Studio, vLLM, LocalAI and others. With an address here, the Online engine sends all translations to this server, and to no other service, even when the server fails. On Automatic, the translations that do not happen on the device go to it. The keyboard asks the model to translate and sends the text.</string>
+    <string name="tooldetail_translate_server_url_label">Server address</string>
+    <string name="tooldetail_translate_server_url_hint">For example http://192.168.1.10:8080/v1. Keep empty to use the usual service.</string>
+    <string name="tooldetail_translate_server_model_label">Model (optional)</string>
+    <string name="tooldetail_translate_server_model_hint">The name of the model on the server. Keep empty if the server has only one model.</string>
+    <string name="tooldetail_translate_server_key_label">Server API key (optional)</string>
+    <string name="tooldetail_translate_server_key_hint">Only for a server that asks for a key</string>
+
+    <!-- DeepL (issue #331): the user's own key, for Translate and for DeepL Write. DeepL, DeepL Write, API Free and API Pro are names. -->
+    <string name="tooldetail_deepl_group">DeepL</string>
+    <string name="tooldetail_deepl_info">DeepL is optional. Nothing changes until you add a DeepL API key or a server address. Get a key in your DeepL account. The Free plan includes 500,000 characters each month. The keyboard sends text to DeepL only when you translate or when you tap DeepL Write.</string>
+    <string name="tooldetail_deepl_key_label">DeepL API key</string>
+    <string name="tooldetail_deepl_key_hint">Free keys end in :fx. The keyboard picks the correct DeepL server for your key.</string>
+    <string name="tooldetail_deepl_endpoint_label">DeepL server (optional)</string>
+    <string name="tooldetail_deepl_endpoint_hint">For a proxy that you run. Keep empty to use the DeepL servers.</string>
+    <string name="tooldetail_deepl_translate_title">Translate with DeepL</string>
+    <string name="tooldetail_deepl_translate_subtitle">The online engine uses DeepL. Languages that DeepL does not have use the usual service.</string>
+    <string name="tooldetail_deepl_write_title">DeepL Write</string>
+    <string name="tooldetail_deepl_write_subtitle">Adds a DeepL Write button to the grammar panel and a DeepL Write action to the selection actions</string>
+    <string name="tooldetail_deepl_write_info">DeepL Write corrects and rewrites text in the same language. It works with a DeepL API Pro key only. A Free key gets an error.</string>
+    <string name="tooldetail_deepl_style_title">Writing style</string>
+    <string name="tooldetail_deepl_style_subtitle">How DeepL Write rewrites your text. Languages without styles ignore it.</string>
+
+    <!-- GIF and sticker tools. -->
+    <string name="tooldetail_sticker_packs_group">Your stickers</string>
+    <string name="tooldetail_sticker_packs_title">Sticker packs</string>
+    <string name="tooldetail_sticker_packs_subtitle">Make, edit, import and export your own packs</string>
+    <string name="tooldetail_sticker_suggest_group">Suggest while typing</string>
+    <string name="tooldetail_sticker_suggest_title">Offer your stickers as you type</string>
+    <string name="tooldetail_sticker_suggest_subtitle">In a chat, type the title of a sticker, one of its keywords or one of its emoji to see it</string>
+    <string name="tooldetail_sticker_suggest_info">Only your own stickers, from your sticker packs. A sticker shows when the text before the cursor ends with its full title, with one of its keywords, or with one of its emoji. Set the title and the keywords when you edit a sticker in its pack. The keyboard does this only in fields that can receive images, so it never offers a sticker that the app cannot take. It also works in the emoji panel: pick an emoji that one of your stickers has and the sticker shows above the panel. Nothing leaves the phone to find them.</string>
+    <string name="tooldetail_sticker_suggest_style_title">Where they show</string>
+    <string name="tooldetail_sticker_suggest_style_tray">Tray</string>
+    <string name="tooldetail_sticker_suggest_style_strip">On the strip</string>
+    <string name="tooldetail_sticker_suggest_style_chip">One chip</string>
+    <!-- One line under each option in the "Where they show" picker. -->
+    <string name="tooldetail_sticker_suggest_style_tray_desc">A row of large stickers at the top of the keyboard. The word suggestions stay where they are. Move the row in Rows and bars</string>
+    <string name="tooldetail_sticker_suggest_style_strip_desc">Three small stickers on the suggestion strip, next to the words. A button shows the rest</string>
+    <string name="tooldetail_sticker_suggest_style_chip_desc">A small chip on the strip that says how many stickers there are. Tap it to see them</string>
+    <string name="tooldetail_sticker_suggest_trigger_title">After you send one</string>
+    <string name="tooldetail_sticker_suggest_trigger_delete">Remove the typed text</string>
+    <string name="tooldetail_sticker_suggest_trigger_keep">Keep the typed text</string>
+    <!-- One line under each option in the "After you send one" picker. -->
+    <string name="tooldetail_sticker_suggest_trigger_delete_desc">The sticker replaces the title, keyword or emoji that you typed</string>
+    <string name="tooldetail_sticker_suggest_trigger_keep_desc">The sticker is sent and your text stays in the field</string>
+    <string name="tooldetail_sticker_suggest_magnify_title">Hold to see them bigger</string>
+    <string name="tooldetail_sticker_suggest_magnify_subtitle">Hold a sticker in the tray to see it large, and slide to see the others</string>
+    <string name="tooldetail_media_layout_group">Layout</string>
+    <string name="tooldetail_media_full_bleed_title">Full-screen picker</string>
+    <string name="tooldetail_media_full_bleed_subtitle">Hide the toolbar and move the search up next to a back button</string>
+    <string name="tooldetail_media_full_bleed_info">The GIF and sticker panels take the whole keyboard. The toolbar, the emoji row and the symbol row step aside, and the search box moves into the row that they leave. The grid then gets every pixel. This applies to both tools.</string>
+    <string name="tooldetail_media_gif_per_row_title">GIFs per row</string>
+    <string name="tooldetail_media_gif_per_row_subtitle">The most GIFs side by side. Fewer makes each one bigger</string>
+    <string name="tooldetail_media_sticker_per_row_title">Stickers per row</string>
+    <string name="tooldetail_media_sticker_per_row_subtitle">The most stickers side by side. Fewer makes each one bigger</string>
+    <string name="tooldetail_media_per_row_info">Each picture keeps its shape, so a wide one takes more of its row than a square one, and a row of wide ones can hold fewer than this. To see more rows at one time, make the panel taller with Panel height, or drag the bar on top of the panel.</string>
+    <string name="tooldetail_media_spacing_title">Gap between cells</string>
+    <string name="tooldetail_media_spacing_subtitle">The space around each GIF and sticker in the grid. This applies to both tools</string>
+    <string name="tooldetail_media_spacing_value" tools:ignore="PluralsCandidate">%1$d dp</string>
+    <!-- Toggle: whether the GIF and sticker panels reopen on the last search. -->
+    <string name="tooldetail_media_remember_search_title">Remember the last search</string>
+    <string name="tooldetail_media_remember_search_subtitle">Open the panel on the search you left it on, instead of trending</string>
+    <string name="tooldetail_media_remember_search_info">On, closing the panel or moving to another text box keeps the search and the category chip you picked, and the panel opens on them next time. Off, the panel always opens on trending with no search typed. This applies to both tools.</string>
+    <string name="tooldetail_media_hide_header_title">Hide the search when you scroll</string>
+    <string name="tooldetail_media_hide_header_subtitle">Scroll down to fold the search box and the chips away, and scroll up to bring them back</string>
+    <string name="tooldetail_gif_collections_group">Favourites and recent</string>
+    <string name="tooldetail_gif_collections_info">Long-press a GIF and choose Add to favourites. A Favourites chip then leads the category chips. Long-press it again to remove it.</string>
+    <string name="tooldetail_gif_recent_title">Recent GIFs</string>
+    <string name="tooldetail_gif_recent_subtitle">Show a Recent chip with the GIFs you sent last</string>
+    <string name="tooldetail_gif_recent_info">The list keeps the last 48 GIFs and stays on the phone. Incognito does not add to it. Turn this off to delete the list.</string>
+    <string name="tooldetail_gif_favourites_offline_title">Keep favourites on the phone</string>
+    <string name="tooldetail_gif_favourites_offline_subtitle">Save a copy of each favourite, so it shows and sends without a connection</string>
+    <string name="tooldetail_gif_favourites_offline_info">The copies download when you add a favourite or open Favourites, and only on a connection that data saving allows. Turn this off to delete the copies. Your favourites stay.</string>
+    <string name="tooldetail_media_hide_header_info">The results get the room that the search box, the source chips and the category chips take. When you are at the top of the results, pull down to bring them back. While you type a search, the search box always shows. This applies to both tools.</string>
+    <string name="tooldetail_media_keys_group">Sources and API keys</string>
+    <string name="tooldetail_media_klipy_label">KLIPY API key</string>
+    <string name="tooldetail_media_klipy_hint">Free from partner.klipy.com. The Tenor API closed in the middle of 2026</string>
+    <string name="tooldetail_media_giphy_label">GIPHY API key</string>
+    <string name="tooldetail_media_giphy_hint">Free from developers.giphy.com</string>
+    <string name="tooldetail_media_gifcities_title">GifCities</string>
+    <string name="tooldetail_media_gifcities_subtitle">Search the Internet Archive\'s GeoCities GIFs too. No key needed</string>
+    <string name="tooldetail_media_gifcities_info">GifCities holds the GIFs the Internet Archive saved from GeoCities home pages before 2009: under construction signs, spinning globes, small animated clip art. Your search goes to gifcities.archive.org and the GIFs load from web.archive.org. These GIFs have no content rating, so the content filter does not apply to them. GIFs only, never stickers.</string>
+    <string name="tooldetail_media_info">The GIF and sticker tools share all of this, and the content filter below. Any one key is enough. Every source that has a key shows up in the panel.</string>
+    <string name="tooldetail_media_sending_group">Sending</string>
+    <string name="tooldetail_media_sticker_send_title">Send stickers as</string>
+    <string name="tooldetail_media_sticker_send_subtitle">What the sticker tool gives to the chat app</string>
+    <!-- One line under each option in the "Send stickers as" picker. -->
+    <string name="tooldetail_media_sticker_send_sticker_desc">Stickers arrive as real stickers in WhatsApp. Other apps get a plain image</string>
+    <string name="tooldetail_media_sticker_send_image_desc">Always a plain image, which every app accepts</string>
+    <string name="tooldetail_media_sticker_send_info">Android has no sticker mark. The only signal is the MIME type of the file, and the receiving app decides. Sticker: the keyboard offers the WhatsApp sticker type first, so stickers arrive as real stickers there. Apps that do not support it get a normal image. Image: the keyboard always sends a plain image.</string>
+    <string name="tooldetail_media_gif_send_title">Send GIFs as</string>
+    <string name="tooldetail_media_gif_send_subtitle">Images by default, because most chat apps animate them</string>
+    <!-- One line under each option in the "Send GIFs as" picker. -->
+    <string name="tooldetail_media_gif_send_image_desc">Always a plain image, which every app animates</string>
+    <string name="tooldetail_media_gif_send_sticker_desc">Only for GIFs that arrive in WebP form. The rest still go out as images</string>
+    <string name="tooldetail_media_gif_send_info">Sticker mode works only for GIFs that the source gives in WebP form. Android ships no encoder for animated WebP, so the keyboard cannot turn a real animated GIF into a sticker. Those GIFs always go out as images.</string>
+    <!-- The two ways to hand a picture to the chat app. -->
+    <string name="tooldetail_media_send_sticker_option">Sticker</string>
+    <string name="tooldetail_media_send_image_option">Image</string>
+    <string name="tooldetail_media_sources_header">Multiple sources</string>
+    <!-- One chip for each source. -->
+    <!-- Descriptions of the two ways the panel arranges its sources. -->
+    <string name="tooldetail_media_source_tabs_desc">One chip for each source on the panel</string>
+    <string name="tooldetail_media_source_mixed_desc">One grid, with the results from every source mixed evenly</string>
+    <string name="tooldetail_media_source_tabs">Tabs</string>
+    <!-- One grid with the results of every source together. -->
+    <string name="tooldetail_media_source_mixed">Mixed</string>
+    <string name="tooldetail_media_filter_header">Content filter</string>
+    <!-- Strength of the content filter. "Med" is short for medium and must stay short. -->
+    <string name="tooldetail_media_filter_low">Low</string>
+    <string name="tooldetail_media_filter_medium">Medium</string>
+    <string name="tooldetail_media_filter_high">High</string>
+    <!-- Descriptions of the four filter levels. G, PG, PG-13 and R are the
+         rating letters of KLIPY and GIPHY. Keep them as they are. -->
+    <string name="tooldetail_media_filter_off_desc">Every result. The R rating</string>
+    <string name="tooldetail_media_filter_low_desc">Hides only the strongest results. The PG-13 rating</string>
+    <string name="tooldetail_media_filter_medium_desc">Suitable for most chats. The PG rating</string>
+    <string name="tooldetail_media_filter_high_desc">Hides the most. The G rating</string>
+    <string name="tooldetail_media_filter_info">KLIPY and GIPHY give each result a rating. Each service applies your level to its own results.</string>
+    <string name="tooldetail_media_limit_group">Results</string>
+    <string name="tooldetail_media_limit_title">Results for each search</string>
+    <string name="tooldetail_media_limit_subtitle">How many items one search or the trending view loads. Your own sticker packs always show fully.</string>
+
+    <!-- Web search and image search tools. -->
+    <string name="tooldetail_search_group">Brave Search</string>
+    <string name="tooldetail_search_key_label">Brave API key</string>
+    <string name="tooldetail_search_key_hint">From api-dashboard.search.brave.com, with a free monthly credit</string>
+    <string name="tooldetail_search_info">Web search and image search share everything here. They search the whole web. The Brave plan includes a free monthly credit of about a thousand searches. Brave asks for attribution, so the panel shows \"via Brave\".</string>
+    <!-- Tavily is a brand name: keep it as it is. -->
+    <string name="tooldetail_tavily_group">Tavily</string>
+    <string name="tooldetail_tavily_key_label">Tavily API key</string>
+    <string name="tooldetail_tavily_key_hint">From app.tavily.com, with 1,000 free credits a month</string>
+    <string name="tooldetail_tavily_info">Another search service, made for AI tools. The free plan gives 1,000 credits a month, and each search uses one. With a key here, web search and image search use Tavily instead of Brave. Image search shows the pictures that Tavily found on the pages of its results, so it finds fewer pictures than Brave.</string>
+    <string name="tooldetail_search_results_group">Results</string>
+    <string name="tooldetail_search_safe_title">SafeSearch</string>
+    <string name="tooldetail_search_safe_subtitle">Filter explicit results</string>
+    <string name="tooldetail_search_count_title">Results for each search</string>
+    <string name="tooldetail_search_count_subtitle">Each search uses one API request either way</string>
+    <string name="tooldetail_ocr_engine_online">Online model</string>
+    <string name="tooldetail_ocr_online_group">Online text reader</string>
+    <string name="tooldetail_ocr_online_info">The online readers, in order. A vision model reads the photo at an address you choose and writes out the text it sees: any service with an OpenAI-compatible API works, such as OpenAI, OpenRouter, Gemini, Mistral, or Ollama or LM Studio on your own computer. A Rens server is a free front end to Google Lens. Both read any script and need no language data. Each scan sends the photo to the reader that is asked, and a paid service may charge for it.</string>
+    <string name="tooldetail_camera_translate_group">Translate photos</string>
+    <string name="tooldetail_camera_translate_info">Add a Rens server here to get a Translate button after you take a photo. The photo comes back with its text translated into the language that the Translate tool translates into. You can then send it, or retake it. The photo goes to the server you add, and from there to Google Lens.</string>
+    <string name="tooldetail_search_answer_title">Show the answer from the search engine</string>
+    <string name="tooldetail_search_answer_subtitle">A short answer above the results, when the engine writes one</string>
+    <string name="tooldetail_search_answer_info">Tavily writes a short answer to your query from the pages it found, and some SearXNG instances give instant answers. With this on, that answer shows in a box above the results, with buttons to copy it or put it in your text. Brave gives no answer with a normal search key, so nothing shows when Brave does the search. On Tavily the answer costs no extra credits.</string>
+    <string name="tooldetail_search_open_browser_title">Tap a result</string>
+    <string name="tooldetail_search_open_browser_subtitle">What a tap on a result does. Press and hold one for the menu</string>
+    <string name="tooldetail_search_tap_menu">Show the menu</string>
+    <string name="tooldetail_search_tap_menu_desc">Open in the browser, insert the link or copy it, and for a picture send it or save it to the gallery.</string>
+    <string name="tooldetail_search_tap_insert">Insert</string>
+    <string name="tooldetail_search_tap_insert_desc">Puts the link in your text, or the picture itself. The button beside a web result opens it.</string>
+    <string name="tooldetail_search_tap_open">Open in the browser</string>
+    <string name="tooldetail_search_tap_open_desc">Opens the page, or the page a picture is on. The button beside a web result inserts its link.</string>
+    <string name="tooldetail_tavily_advanced_title">Search depth</string>
+    <string name="tooldetail_tavily_advanced_subtitle">Faster answers, or better results for more credits</string>
+    <string name="tooldetail_tavily_advanced_info">Tavily has four search depths. Basic is the default. Ultra fast and Fast answer sooner and cost 1 credit, but they do not take SafeSearch, so results are not filtered at those depths. Advanced looks deeper into each page for the parts that match your query, and costs 2 credits. The free plan gives 1,000 credits each month.</string>
+    <!-- SearXNG is a brand name: keep it as it is. -->
+    <string name="tooldetail_searx_group">SearXNG</string>
+    <string name="tooldetail_searx_categories_title">Search categories</string>
+    <string name="tooldetail_searx_categories_subtitle">Show these beside All and Images in the search panel</string>
+    <string name="tooldetail_searx_categories_fallback">Your instance did not list its categories, so these are the usual ones</string>
+    <string name="tooldetail_searx_categories_info">SearXNG sorts its search engines into categories, such as news, videos, science and music. The ones you pick here show as chips in the search panel, beside All and Images, and a tap on one searches in that category only. The list comes from your instance, so it shows only the categories that the instance has. Images is always a tab of its own. The chips show only while a SearXNG instance does the search.</string>
+    <string name="tooldetail_tavily_depth_ultra_fast">Ultra fast</string>
+    <string name="tooldetail_tavily_depth_ultra_fast_desc">The quickest answer, with one short summary of each page. 1 credit. No SafeSearch.</string>
+    <string name="tooldetail_tavily_depth_fast">Fast</string>
+    <string name="tooldetail_tavily_depth_fast_desc">Quicker than Basic, with results nearly as good. 1 credit. No SafeSearch.</string>
+    <string name="tooldetail_tavily_depth_basic">Basic</string>
+    <string name="tooldetail_tavily_depth_basic_desc">The balance of speed and good results. 1 credit.</string>
+    <string name="tooldetail_tavily_depth_advanced">Advanced</string>
+    <string name="tooldetail_tavily_depth_advanced_desc">The best results, a little slower. 2 credits.</string>
+
+    <!-- Text scan (OCR) tool. -->
+    <string name="tooldetail_ocr_select_all_title">Start with everything selected</string>
+    <string name="tooldetail_ocr_select_all_subtitle">Deselect words to cut the capture down. Off starts empty, and you select the words one by one</string>
+    <string name="tooldetail_ocr_info">Recognition runs on your device. No photo and no text leaves your device, and it works offline. After a capture, press words to select exactly what the keyboard types or copies.</string>
+    <string name="tooldetail_ocr_engine_title">Text recognition</string>
+    <string name="tooldetail_ocr_engine_info">ML Kit reads Latin script text, for example English or French, and on a phone with Google Play services also Chinese, Japanese, Korean and Devanagari. Tesseract reads more than 100 languages in most scripts, for example Bangla, Arabic, Russian and Chinese, but each language needs a one-time download. Automatic reads with ML Kit what it can, Chinese and Japanese with PaddleOCR where ML Kit cannot, and every other script with Tesseract.</string>
+    <!-- The F-Droid build has neither ML Kit nor Tesseract: PaddleOCR or the online reader. -->
+    <string name="tooldetail_ocr_engine_info_paddle">Automatic reads Chinese, Japanese and Latin-script text, for example English or French, with PaddleOCR on your device, after a one-time download of 21 MB. Other scripts read only with Online model.</string>
+    <string name="tooldetail_ocr_engine_auto">Automatic</string>
+    <string name="tooldetail_ocr_engine_mlkit" translatable="false">ML Kit</string>
+    <string name="tooldetail_ocr_engine_tesseract" translatable="false">Tesseract</string>
+    <string name="tooldetail_ocr_packs_header">Language data</string>
+    <string name="tooldetail_ocr_packs_info">Tesseract reads a language only after the data for that language is on your device. There is one download for each language that you type in, from 0.4 MB to 12 MB. The data comes from the tessdata_fast set of the Tesseract project on GitHub. With Automatic, Chinese and Japanese share one download of 11 MB instead: the PP-OCRv5 models of PaddleOCR, which read them much better. You can also download a language from the scanner itself.</string>
+    <string name="tooldetail_ocr_packs_info_paddle">PaddleOCR reads only after its data is on your device: one download of 21 MB for every language it reads, the PP-OCRv5 models of the PaddleOCR project. You can also download it from the scanner itself.</string>
+    <!-- A row in the list of downloads: the languages that PaddleOCR reads. -->
+    <string name="tooldetail_ocr_pack_paddle_title"><xliff:g id="languages" example="Chinese, Japanese">%1$s</xliff:g>, with PaddleOCR</string>
+    <string name="tooldetail_ocr_packs_none_info">None of the languages you turned on has Tesseract data. Add a language on the Languages screen. Its data then shows here.</string>
+
+    <!-- QR and barcode scanner tool. -->
+    <string name="tooldetail_qr_scan_auto_title">Insert automatically</string>
+    <string name="tooldetail_qr_scan_auto_subtitle">Type the text of the code as soon as the keyboard finds one, with no confirm press</string>
+    <string name="tooldetail_qr_scan_haptics_title">Vibrate on detection</string>
+    <string name="tooldetail_qr_scan_haptics_subtitle">A short buzz when the keyboard finds a code</string>
+    <string name="tooldetail_qr_scan_preview_title">Load link details</string>
+    <string name="tooldetail_qr_scan_preview_subtitle">When a code is a web link, get the page title and description and show them above it. This needs an internet connection</string>
+    <string name="tooldetail_qr_scan_info">Decoding runs on your device with ML Kit. It works offline and uploads nothing. It reads QR codes and the common product barcode formats, such as EAN, UPC and Code 128. Insert types the text of the code at the cursor. A link also gets an Open button.</string>
+    <!-- zxing-cpp is the name of an open-source barcode library. Keep it as it is. -->
+    <string name="tooldetail_qr_scan_zxing_info">Decoding runs on your device with zxing-cpp, without Google services. It works offline and uploads nothing. It reads QR codes, Data Matrix, Aztec, PDF417 and the product and industrial barcodes, such as EAN, UPC and Code 128. Insert types the text of the code at the cursor. A link also gets an Open button.</string>
+    <string name="tooldetail_qr_scan_zxing_title">Read codes with zxing-cpp</string>
+    <string name="tooldetail_qr_scan_zxing_subtitle">Use the open-source reader instead of ML Kit. It is a separate download of about 1 MB</string>
+
+    <!-- Document scanner tool. -->
+    <string name="tooldetail_doc_scan_gallery_title">Save to the gallery</string>
+    <string name="tooldetail_doc_scan_gallery_subtitle">Also keep scanned pages in Pictures/WM Keyboard</string>
+    <string name="tooldetail_doc_scan_info">This opens the document scanner of Google, which is part of Google Play services, with edge detection, crop and shadow cleanup. Turn on the built-in scanner below to use the keyboard\'s own instead. Scanned pages come back as images. The keyboard puts them into the chat like a camera photo when it opens again. The processing runs on your device.</string>
+    <string name="tooldetail_doc_scan_builtin_info">This opens the keyboard\'s own document scanner. It finds the page in the camera picture or a photo, lets you move its corners, flattens it, and can clean it up to white paper in colour, grey or black and white. Scanned pages come back as images. The keyboard puts them into the chat like a camera photo when it opens again. Everything runs on your device, without Google Play services.</string>
+    <string name="tooldetail_doc_scan_builtin_title">Use the built-in scanner</string>
+    <string name="tooldetail_doc_scan_builtin_subtitle">Scan with the keyboard\'s own scanner instead of Google\'s</string>
+    <string name="tooldetail_doc_scan_module_missing_info">The built-in scanner is an extra part of the keyboard, about 2.5 MB. It downloads the first time you scan, or now.</string>
+    <string name="tooldetail_doc_scan_module_installing_info">Downloading the built-in scanner…</string>
+    <string name="tooldetail_doc_scan_module_installing_sized_info">Downloading the built-in scanner: <xliff:g id="done" example="0.4 MB">%1$s</xliff:g> of <xliff:g id="total" example="2.4 MB">%2$s</xliff:g></string>
+    <string name="tooldetail_doc_scan_module_metered_body">The built-in scanner is a separate download of about 2.5 MB.</string>
+
+    <!-- Voice typing tool. Everything it can be configured with lives on the
+         Voice typing screen, so the page is one row that opens it. -->
+    <string name="tooldetail_voice_group">Voice typing</string>
+    <string name="tooldetail_voice_all_title">All voice typing settings</string>
+    <string name="tooldetail_voice_all_subtitle">The recognition engine, the microphone view, spoken punctuation and the offline models</string>
+
+    <!-- Grammar check tool. -->
+    <string name="tooldetail_grammar_dialect_title">English dialect</string>
+    <string name="tooldetail_grammar_dialect_subtitle">The spelling and style rules to check against</string>
+    <string name="tooldetail_grammar_debounce_title">Re-check delay</string>
+    <string name="tooldetail_grammar_debounce_subtitle">Pause after you stop typing before the issues refresh. A lower value feels faster, a higher value does less work</string>
+    <string name="tooldetail_grammar_correctness_title">Correctness issues</string>
+    <string name="tooldetail_grammar_clarity_title">Clarity issues</string>
+    <string name="tooldetail_grammar_engagement_title">Engagement issues</string>
+    <string name="tooldetail_grammar_delivery_title">Delivery issues</string>
+    <string name="tooldetail_grammar_category_search_subtitle">Show or hide this kind of issue in the grammar panel</string>
+    <string name="tooldetail_grammar_category_toggle_subtitle">%1$d of %2$d kinds shown</string>
+    <string name="tooldetail_grammar_category_all_summary">Every kind</string>
+    <string name="tooldetail_grammar_category_none_summary">Nothing shown</string>
+    <string name="tooldetail_grammar_correctness_info">Plain mistakes: a misspelling, a verb that disagrees with its subject, a missing comma, a word swapped for one that sounds like it. Leave these on unless something here is noisy for the way you write.</string>
+    <string name="tooldetail_grammar_clarity_info">Writing that is correct but harder work to read than it needs to be: long sentences, a word repeated, a phrase that says the same thing twice.</string>
+    <string name="tooldetail_grammar_engagement_info">Suggestions rather than fixes, offering a stronger way to say the same thing. Turn the group off if you would rather only hear about mistakes.</string>
+    <string name="tooldetail_grammar_delivery_info">How the writing reads for its audience: spacing and formatting, a form that is standard in one region but not another, an informal turn of phrase.</string>
+    <string name="tooldetail_grammar_system_group">System-wide</string>
+    <string name="tooldetail_grammar_system_title">Use Harper everywhere</string>
+    <string name="tooldetail_grammar_system_subtitle">Set WM Keyboard as the spell checker of Android</string>
+    <string name="tooldetail_grammar_no_suggestions_title">Underline only, no fix popup</string>
+    <string name="tooldetail_grammar_no_suggestions_subtitle">Mark the spelling mistakes but offer no corrections</string>
+    <string name="tooldetail_grammar_providers_group">Checkers</string>
+    <string name="tooldetail_grammar_providers_info">Who checks your writing, in order. A check goes to the first checker that is on and knows the language you are typing in, and to the next one when that one cannot answer.\n\nHarper runs on the phone, works offline, and checks English only. Nothing you type leaves the phone with it.\n\nLanguageTool checks more than 30 languages, but it runs on a server, so the text in the field is sent there each time it is checked: to api.languagetool.org, LanguageTool\'s public server, unless you enter the address of a server you run yourself. It is off until you switch it on. It is never sent a password field or text typed in incognito. The public server takes 20 checks a minute, so a long note is checked a piece at a time.</string>
+    <string name="tooldetail_grammar_info">Harper, the grammar engine built into the keyboard, can also act as the system spell checker of Android. It runs on your device, works offline and uploads nothing that you type, whatever the Checkers list above says. The underlines and correction menus inside other apps then come from it as well. The button above opens the system Spell checker screen. Select WM Keyboard there. It follows the dialect that you select above. If your device hides that screen, the button opens the input method settings instead.</string>
+
+    <!-- Wikipedia tool. -->
+    <string name="tooldetail_wiki_language_label">Wikipedia language</string>
+    <string name="tooldetail_wiki_language_hint">Subdomain code: en, bn, de, fr, es …</string>
+    <string name="tooldetail_wiki_markdown_title">Markdown links</string>
+    <!-- [Title](url) is Markdown syntax and must stay as it is. -->
+    <string name="tooldetail_wiki_markdown_subtitle">Insert links as [Title](url) instead of the plain address</string>
+    <string name="tooldetail_wiki_info">The searches and the article text come from the free APIs of wikipedia.org, only while you use the tool.</string>
+
+    <!-- Special symbols tool. -->
+    <string name="tooldetail_symbols_recents_group">Recents</string>
+    <string name="tooldetail_symbols_edit_group">Your symbols</string>
+    <string name="tooldetail_symbols_edit_hint">Symbols, with a space between each. To offer more when one is held, join them with |, as in →|⇒|⟶</string>
+    <string name="tooldetail_symbols_edit_reset">Reset</string>
+    <string name="tooldetail_symbols_clear_title">Clear the recent symbols</string>
+    <string name="tooldetail_symbols_clear_empty">No recent symbols yet</string>
+    <!-- %1$d is how many symbols the tool remembers. -->
+    <plurals name="tooldetail_symbols_remembered_count">
+        <item quantity="one">%1$d symbol remembered</item>
+        <item quantity="other">%1$d symbols remembered</item>
+    </plurals>
+    <string name="tooldetail_symbols_info">Fractions, math operators, Greek letters, arrows, currency signs, superscripts, subscripts and typographic marks. Everything types on your device, like a normal key.</string>
+
+    <!-- Calculator tool. -->
+    <string name="tooldetail_calc_degrees_title">Degrees</string>
+    <string name="tooldetail_calc_degrees_subtitle">Trigonometry functions use degrees. Off uses radians</string>
+    <string name="tooldetail_calc_phone_layout_title">Phone layout</string>
+    <string name="tooldetail_calc_phone_layout_subtitle">1 2 3 on the top row, like a dialer and the numpad. Off puts 7 8 9 on top, like a desk calculator</string>
+    <string name="tooldetail_calc_precision_title">Result precision</string>
+    <string name="tooldetail_calc_precision_subtitle">Maximum number of decimal places. The unit converter uses it too</string>
+
+    <!-- Unit converter tool. -->
+    <string name="tooldetail_units_compound_title">Feet and inches</string>
+    <string name="tooldetail_units_compound_subtitle">Show a length in feet as feet and inches, not as a decimal</string>
+    <string name="tooldetail_units_compound_info">1 metre reads as \"3 ft 3.37 in\" instead of \"3.2808399 ft\". The chip writes the units the way that you did: \"1m\" answers with \"3 ft 3.37 in\" and \"1 meter\" answers with \"3 feet 3.37 inches\". Where there is no room for either, it falls back to \"3\'3\"\". Turn this off for the plain decimal.</string>
+    <string name="tooldetail_units_info">There are 14 categories: length, mass, temperature, area, volume, speed, time, data, energy, power, pressure, angle, frequency and fuel economy. All conversions run on your device. The result precision follows the calculator setting. The panel opens again on the category and the units that you used last.</string>
+
+    <!-- Currency converter tool. -->
+    <!-- %1$s is the currency code that the tool converts into, for example USD. -->
+    <string name="tooldetail_currency_decimals_title">Decimal places</string>
+    <string name="tooldetail_currency_decimals_subtitle">Rounding of the converted amount. Coins have their own setting</string>
+    <string name="tooldetail_currency_label_title">Write the result as</string>
+    <string name="tooldetail_currency_label_subtitle">How a currency chip names the currency that it converted into</string>
+    <string name="tooldetail_currency_label_info">Name writes \"96.04 Rupee\", Symbol writes \"₹96.04\" and Code writes \"96.04 INR\". A currency with no symbol of its own falls back to its code. Coins keep their ticker, such as BTC, with every choice.</string>
+    <string name="tooldetail_currency_label_name">Name</string>
+    <string name="tooldetail_currency_label_symbol">Symbol</string>
+    <string name="tooldetail_currency_label_code">Code</string>
+    <string name="tooldetail_currency_refresh_title">Refresh the rates every</string>
+    <string name="tooldetail_currency_refresh_subtitle">How long a fetched exchange rate stays fresh</string>
+    <string name="tooldetail_currency_refresh_info">The upstream rates update about one time each day. A value below 24 hours mostly changes how soon the keyboard tries a failed fetch again.</string>
+    <string name="tooldetail_currency_auto_fetch_title">Fetch rates as you type</string>
+    <string name="tooldetail_currency_auto_fetch_subtitle">Off, a currency chip waits for your tap before it goes online</string>
+    <string name="tooldetail_currency_auto_fetch_info">This setting controls only the chip on the suggestion strip. The panel fetches rates when you open it, and rates that the keyboard already has convert with no fetch. The F-Droid edition starts with this setting off.</string>
+    <string name="tooldetail_currency_info">Rates come from the source that you select in Currency rates from. None of the sources needs an API key. The keyboard remembers the from and to pair that you select on the panel.</string>
+
+    <!-- Cryptocurrency in the currency tool. -->
+    <string name="tooldetail_crypto_group_title">Cryptocurrency</string>
+    <string name="tooldetail_crypto_enable_title">Convert coins</string>
+    <string name="tooldetail_crypto_enable_subtitle">Read amounts like \"1 btc\" and show coins in the converter</string>
+    <string name="tooldetail_crypto_enable_info">\"1 btc\", \"0.5 ETH\", \"2 bitcoin\" and \"100000 sats\" put the amount in your currency on the suggestion strip. Tickers that are also ordinary words, such as DOT, LINK and NEAR, only count when you type them in capitals. Coin prices are fetched only when you type a coin amount or select a coin on the panel.</string>
+    <string name="tooldetail_crypto_decimals_title">Coin decimal places</string>
+    <string name="tooldetail_crypto_decimals_subtitle">Automatic keeps five meaningful digits, which fits both a whole coin and a fraction of one</string>
+    <string name="tooldetail_crypto_decimals_auto">Auto</string>
+    <string name="tooldetail_crypto_refresh_title">Refresh coin prices every</string>
+    <string name="tooldetail_crypto_refresh_subtitle">Coin prices move much faster than the daily currency table</string>
+    <string name="tooldetail_crypto_coins_title">Coins</string>
+    <!-- %1$d is how many coins are turned on. -->
+    <string name="tooldetail_crypto_coins_subtitle" tools:ignore="PluralsCandidate">%1$d on. Select the coins that the keyboard reads and offers</string>
+    <string name="tooldetail_crypto_add_action">Add a ticker</string>
+    <string name="tooldetail_crypto_add_title">Add a ticker</string>
+    <string name="tooldetail_crypto_add_hint">Ticker, for example PEPE</string>
+    <string name="tooldetail_crypto_add_info">Any ticker that your coin source quotes works. A ticker the source does not carry simply never converts.</string>
+    <!-- %1$s is the ticker. -->
+    <string name="tooldetail_crypto_remove_desc">Remove %1$s</string>
+    <string name="tooldetail_currency_source_title">Currency rates from</string>
+    <string name="tooldetail_currency_source_subtitle">Where the fiat exchange rates are fetched</string>
+    <string name="tooldetail_crypto_source_title">Coin prices from</string>
+    <string name="tooldetail_crypto_source_subtitle">Where the coin prices are fetched</string>
+    <string name="tooldetail_rate_fallback_title">Try the other sources</string>
+    <string name="tooldetail_rate_fallback_subtitle">Fall back to the remaining sources when the first one fails</string>
+    <string name="tooldetail_rate_source_er_api">ExchangeRate-API</string>
+    <string name="tooldetail_rate_source_frankfurter">Frankfurter</string>
+    <string name="tooldetail_rate_source_coinbase">Coinbase</string>
+    <string name="tooldetail_rate_source_currency_api">currency-api</string>
+    <string name="tooldetail_rate_source_coingecko">CoinGecko</string>
+    <string name="tooldetail_crypto_info">Coin prices come from the source that you select in Coin prices from. None of the sources needs an API key. Prices are indicative and are not advice to buy or sell anything.</string>
+
+    <!-- QR code generator tool. -->
+    <string name="tooldetail_qr_gen_size_title">Image size</string>
+    <string name="tooldetail_qr_gen_size_subtitle">Side length of the PNG that the keyboard inserts</string>
+    <string name="tooldetail_qr_gen_send_title">Send as</string>
+    <string name="tooldetail_qr_gen_send_subtitle">QR codes go out as images by default</string>
+    <!-- One line under each option in the QR code "Send as" picker. -->
+    <string name="tooldetail_qr_gen_send_image_desc">Always a plain image, which every app accepts</string>
+    <string name="tooldetail_qr_gen_send_sticker_desc">Offers the WhatsApp sticker type, where the app supports it</string>
+    <string name="tooldetail_qr_gen_send_info">Some chat apps draw a plain incoming image with no bubble. That can look like a sticker, even though it was sent as an image. Sticker mode offers the WhatsApp sticker type instead, where the app supports it.</string>
+    <string name="tooldetail_qr_gen_gallery_title">Save to the gallery</string>
+    <string name="tooldetail_qr_gen_gallery_subtitle">Also keep generated codes in Pictures/WM Keyboard</string>
+    <string name="tooldetail_qr_gen_ecc_header">Error correction</string>
+    <!-- Descriptions of the four error correction levels. The percentage is
+         how much of a damaged code the scanner can still read. -->
+    <string name="tooldetail_qr_gen_ecc_l_desc">Repairs about 7% of a damaged code. Holds the most text</string>
+    <string name="tooldetail_qr_gen_ecc_m_desc">Repairs about 15%. Good for a code on a screen</string>
+    <string name="tooldetail_qr_gen_ecc_q_desc">Repairs about 25%. Good for a code that you print</string>
+    <string name="tooldetail_qr_gen_ecc_h_desc">Repairs about 30%. Holds the least text</string>
+    <string name="tooldetail_qr_gen_ecc_info">The keyboard generates the code on your device and follows what the text field contains.</string>
+
+    <!-- Password generator tool. -->
+    <string name="tooldetail_password_group">Password</string>
+    <string name="tooldetail_password_length_title">Length</string>
+    <string name="tooldetail_password_uppercase_title">Capital letters</string>
+    <string name="tooldetail_password_uppercase_subtitle">A to Z</string>
+    <string name="tooldetail_password_digits_title">Digits</string>
+    <string name="tooldetail_password_digits_subtitle">0 to 9</string>
+    <string name="tooldetail_password_symbols_title">Symbols</string>
+    <!-- A sample of the symbol characters. Not translated. -->
+    <string name="tooldetail_password_symbols_subtitle" translatable="false" formatted="false">!@#$%…</string>
+    <string name="tooldetail_password_ambiguous_title">Exclude look-alikes</string>
+    <!-- The run of characters is sample data and must stay as it is. -->
+    <string name="tooldetail_password_ambiguous_subtitle">Skip Il1O0o5S8B and similar characters</string>
+    <string name="tooldetail_passphrase_group">Passphrase</string>
+    <string name="tooldetail_passphrase_words_title">Words</string>
+    <string name="tooldetail_passphrase_separator_label">Separator</string>
+    <string name="tooldetail_passphrase_separator_hint">Between words, for example - or . Leave it blank for none</string>
+    <string name="tooldetail_passphrase_capitalize_title">Capitalize the words</string>
+    <!-- Sample of what capitalization does. Not translated. -->
+    <string name="tooldetail_passphrase_capitalize_subtitle" translatable="false">correct-Horse → Correct-Horse</string>
+    <string name="tooldetail_passphrase_digit_title">Include a digit</string>
+    <string name="tooldetail_passphrase_digit_subtitle">The keyboard adds it to a random word</string>
+    <string name="tooldetail_pin_group">PIN</string>
+    <string name="tooldetail_pin_length_title">Digits</string>
+    <string name="tooldetail_pin_avoid_weak_title">No easy PINs</string>
+    <!-- The digits are examples of PINs the generator skips. Keep them as they are. -->
+    <string name="tooldetail_pin_avoid_weak_subtitle">Skip PINs like 1111, 1234, 1212 and dates, which many apps refuse and guessers try first</string>
+    <string name="tooldetail_password_info">The keyboard generates everything on your device with a cryptographic random source. It never stores it and never logs it. Passphrase words come from the bundled English word list of the keyboard.</string>
+
+    <!-- Text repeat tool. The panel edits these too, so they are also where it was last left. -->
+    <string name="tooldetail_repeat_group">Repeating</string>
+    <string name="tooldetail_repeat_group_info">The panel changes these as you use it, so they are also how it opens next time.</string>
+    <string name="tooldetail_repeat_count_title">Times</string>
+    <string name="tooldetail_repeat_count_subtitle">How many copies the panel opens on</string>
+    <string name="tooldetail_repeat_mode_title">Mode</string>
+    <string name="tooldetail_repeat_mode_subtitle">Copies in a row, the last letter stretched, or a staircase</string>
+    <string name="tooldetail_repeat_mode_repeat">Repeat</string>
+    <string name="tooldetail_repeat_mode_stretch">Stretch</string>
+    <string name="tooldetail_repeat_mode_stairs">Stairs</string>
+    <!-- Samples of each mode. Not translated. -->
+    <string name="tooldetail_repeat_mode_repeat_desc" translatable="false">ha ha ha ha</string>
+    <string name="tooldetail_repeat_mode_stretch_desc" translatable="false">no → nooooo</string>
+    <string name="tooldetail_repeat_mode_stairs_desc" translatable="false">ha / haha / hahaha</string>
+    <string name="tooldetail_repeat_separator_title">Between the copies</string>
+    <string name="tooldetail_repeat_separator_subtitle">Nothing, a space, a new line, a comma, or your own</string>
+    <string name="tooldetail_repeat_sep_none">None</string>
+    <string name="tooldetail_repeat_sep_space">Space</string>
+    <string name="tooldetail_repeat_sep_newline">New line</string>
+    <string name="tooldetail_repeat_sep_comma">Comma</string>
+    <string name="tooldetail_repeat_sep_custom">Custom</string>
+    <string name="tooldetail_repeat_custom_label">Custom separator</string>
+    <string name="tooldetail_repeat_custom_hint">Up to 8 characters, for example " | "</string>
+    <string name="tooldetail_repeat_numbered_title">Number each copy</string>
+    <!-- Sample of the numbering. Not translated. -->
+    <string name="tooldetail_repeat_numbered_subtitle" translatable="false">1. ha  2. ha  3. ha</string>
+    <string name="tooldetail_repeat_alternate_title">Alternate the case</string>
+    <!-- Sample of the alternation. Not translated. -->
+    <string name="tooldetail_repeat_alternate_subtitle" translatable="false">ha HA ha HA</string>
+    <string name="tooldetail_repeat_limits_group">Limits and the chip</string>
+    <string name="tooldetail_repeat_max_chars_title">Longest result</string>
+    <string name="tooldetail_repeat_max_chars_subtitle">The panel stops at the last whole copy that fits and says so</string>
+    <string name="tooldetail_repeat_chip_insert_title">When opened from the chip</string>
+    <string name="tooldetail_repeat_chip_insert_subtitle">What Insert does with the copies you had already typed</string>
+    <string name="tooldetail_repeat_chip_insert_replace">Replace them</string>
+    <string name="tooldetail_repeat_chip_insert_append">Add after them</string>
+    <string name="tooldetail_repeat_chip_insert_replace_desc">The copies you typed go, and the whole count takes their place, so the text ends with exactly that many.</string>
+    <string name="tooldetail_repeat_chip_insert_append_desc">The copies you typed stay, and the count is added after them.</string>
+    <string name="tooldetail_repeat_chip_after_title">Chip after this many repeats</string>
+    <string name="tooldetail_repeat_chip_after_subtitle">Type the same thing this many times in a row and the strip offers the tool</string>
+    <string name="tooldetail_repeat_recents_group">Recent texts</string>
+    <string name="tooldetail_repeat_recents_title">Remember recent texts</string>
+    <string name="tooldetail_repeat_recents_subtitle">The panel offers the last ten texts you repeated</string>
+    <string name="tooldetail_repeat_recents_info">Kept on this phone only, and never in a backup. Nothing is remembered in incognito mode, in password fields, or in fields that ask not to be learnt from.</string>
+    <string name="tooldetail_repeat_recents_clear_title">Clear recent texts</string>
+    <string name="tooldetail_repeat_recents_clear_action">Clear</string>
+    <plurals name="tooldetail_repeat_recents_count">
+        <item quantity="one">%d text remembered</item>
+        <item quantity="other">%d texts remembered</item>
+    </plurals>
+
+    <!-- Keyboard modes tool. -->
+    <string name="tooldetail_modes_group">Modes</string>
+    <string name="tooldetail_modes_edit_title">Edit the keyboard modes</string>
+    <string name="tooldetail_modes_edit_subtitle">Setups for each app and each field, and what each one changes</string>
+    <string name="tooldetail_image_columns_title">Images per row</string>
+    <string name="tooldetail_image_columns_subtitle">How many images sit side by side on the Images tab</string>
+    <string name="tooldetail_image_search_moved_title">Settings are on Web search</string>
+    <string name="tooldetail_image_search_moved_subtitle">This button opens the Images tab of web search, and shares its settings</string>
+    <string name="tooldetail_image_columns_info">Fewer columns means larger previews, which is easier to judge before you send one. More columns fits more results without scrolling. GIF results are not affected: they are laid out in justified rows so each one keeps its own shape. This setting is 3 by default.</string>
+
+    <string name="tooldetail_launcher_recents_count_title">How many recent apps</string>
+    <string name="tooldetail_launcher_recents_count_subtitle">Length of the recent apps row</string>
+    <string name="tooldetail_launcher_recents_count_info">A number that divides by the apps per row of your grid fills whole rows and leaves no gap at the end.</string>
+
+    <string name="tooldetail_launcher_columns_title">Apps per row</string>
+    <string name="tooldetail_launcher_columns_subtitle">How many apps sit side by side in the grid</string>
+    <string name="tooldetail_launcher_columns_auto_label">Auto</string>
+    <string name="tooldetail_launcher_columns_info">Auto fits as many apps as the keyboard width holds, three to six on most phones. Set a number to get larger targets or more apps on the screen. If the icons do not fit in a row, they become smaller.</string>
+    <string name="tooldetail_launcher_icon_size_title">Icon size</string>
+    <string name="tooldetail_launcher_icon_size_subtitle">How large each app icon is in the grid</string>
+    <string name="tooldetail_launcher_icon_size_info">With apps per row on Auto, larger icons also make each cell wider, so fewer apps fit in a row. The pinned and recent row keeps its own size.</string>
+    <string name="tooldetail_launcher_icon_shape_title">Icon shape</string>
+    <string name="tooldetail_launcher_icon_shape_subtitle">The outline of each app icon</string>
+    <string name="tooldetail_launcher_icon_shape_circle_label">Circle</string>
+    <string name="tooldetail_launcher_icon_shape_rounded_label">Rounded square</string>
+    <string name="tooldetail_launcher_icon_shape_system_label">As on the phone</string>
+    <string name="tooldetail_launcher_icon_shape_info">As on the phone shows each icon with the shape your home screen gives it. Old apps without an adaptive icon keep their own outline.</string>
+    <string name="tooldetail_launcher_hidden_title">Hidden apps</string>
+    <string name="tooldetail_launcher_hidden_none_subtitle">No apps are hidden. Press and hold an app in the panel, open its page from the menu, then tap the eye.</string>
+    <plurals name="tooldetail_launcher_hidden_count">
+        <item quantity="one">%1$d app hidden. Tap to show it again.</item>
+        <item quantity="other">%1$d apps hidden. Tap to show all of them again.</item>
+    </plurals>
+    <string name="tooldetail_launcher_open_mode_title">Open apps</string>
+    <string name="tooldetail_launcher_open_mode_subtitle">What a tap on an app does</string>
+    <string name="tooldetail_launcher_open_mode_normal_label">Normally</string>
+    <string name="tooldetail_launcher_open_mode_floating_label">Floating</string>
+    <string name="tooldetail_launcher_open_mode_split_label">Split screen</string>
+    <string name="tooldetail_launcher_open_mode_info">A press and hold on an app offers all three whatever you pick here. Split screen puts the app beside the one you are typing in and needs Android 12L or later, or the split screen helper. A floating window needs a device with a desktop or freeform window mode, such as many tablets; elsewhere the app opens full screen.</string>
+    <string name="tooldetail_launcher_open_mode_info_no_split">A press and hold on an app offers both whatever you pick here. A floating window needs a device with a desktop or freeform window mode, such as many tablets; elsewhere the app opens full screen. Split screen needs Android 12L or later, or the split screen helper.</string>
+    <string name="tooldetail_launcher_split_helper_title">Split screen helper</string>
+    <string name="tooldetail_launcher_split_helper_off_subtitle">Off. Turn on if split screen opens apps full screen</string>
+    <string name="tooldetail_launcher_split_helper_on_subtitle">On. Split screen goes through Android\'s split screen switch</string>
+    <string name="tooldetail_launcher_combos_title">Split screen pairs</string>
+    <plurals name="tooldetail_launcher_combos_count">
+        <item quantity="one">%1$d pair</item>
+        <item quantity="other">%1$d pairs</item>
+    </plurals>
+    <string name="tooldetail_launcher_combos_none_subtitle">Two apps that open side by side with one tap</string>
+    <string name="tooldetail_launcher_work_title">Work apps</string>
+    <string name="tooldetail_launcher_work_subtitle">Also list the apps in your work profile</string>
+    <string name="tooldetail_launcher_work_info">Work apps carry a briefcase on their icon. While work apps are paused they show dimmed, and opening one asks Android to turn work apps back on. The keyboard needs no extra permission for this.</string>
+    <string name="tooldetail_launcher_folders_title">App folders</string>
+    <string name="tooldetail_launcher_folders_none_subtitle">No folders yet. Press and hold an app in the panel and pick Add to folder.</string>
+    <plurals name="tooldetail_launcher_folders_count">
+        <item quantity="one">%1$d folder. Tap to remove it and put its apps back in the grid.</item>
+        <item quantity="other">%1$d folders. Tap to remove all of them and put their apps back in the grid.</item>
+    </plurals>
+
+    <string name="tooldetail_camera_timer_title">Self-timer</string>
+    <string name="tooldetail_camera_timer_subtitle">The timer the camera opens on</string>
+    <string name="tooldetail_camera_timer_info">The camera panel has a timer button that steps through off, 3 seconds and 10 seconds. This is where it starts each time you open the panel, so if you always use the same one you do not have to set it again.</string>
+
+    <string name="tooldetail_weather_refresh_title">How often to check</string>
+    <string name="tooldetail_weather_refresh_subtitle">Time before the tool fetches the weather again</string>
+    <string name="tooldetail_weather_refresh_info">The tool reuses the last reading for this long instead of asking the service again, which saves data and battery. Set it shorter if you are watching weather that is changing, longer if you only glance at it. Opening the tool after this time has passed fetches fresh numbers.</string>
+
+    <string name="tooldetail_camera_resolution_title">Photo size</string>
+    <string name="tooldetail_camera_resolution_subtitle">Longest edge of the photos you take</string>
+    <!-- One line under each option in the photo size picker. -->
+    <string name="tooldetail_camera_resolution_small_desc">The smallest file, and the fastest to send</string>
+    <string name="tooldetail_camera_resolution_medium_desc">A good size for a photo in a chat</string>
+    <string name="tooldetail_camera_resolution_large_desc">Enough detail to read a page of text</string>
+    <string name="tooldetail_camera_resolution_max_desc">The most detail, and the biggest file</string>
+    <string name="tooldetail_camera_resolution_info">Larger photos hold more detail, which matters for a picture of a document somebody has to read. They also take longer to capture and to send, and use more data. The camera picks the closest size its sensor offers.</string>
+
+    <string name="tooldetail_qr_max_chars_title">Longest text</string>
+    <string name="tooldetail_qr_max_chars_subtitle">How much text the code may hold</string>
+    <string name="tooldetail_qr_max_chars_info">A QR code holds more text at a lower error correction level, and less at a higher one. Raise this to fit a longer link or note; if the code then refuses to build, lower the error correction above, or shorten the text.</string>
+
+    <string name="tooldetail_wiki_link_limit_title">Links per article</string>
+    <string name="tooldetail_wiki_link_limit_subtitle">How many outgoing links the Links tab lists</string>
+    <string name="tooldetail_wiki_link_limit_info">A long article can have hundreds of links. The tool asks for this many and a longer list is cut short. 500 is as many as Wikipedia will return at once.</string>
+
+    <string name="tooldetail_password_pool_label">Symbols to use</string>
+    <string name="tooldetail_password_pool_hint">Leave empty for the usual set</string>
+    <string name="tooldetail_password_pool_info">Some sites accept only a few punctuation marks. Type the ones that site allows and the generator draws from those, so you do not have to generate again and again until a password comes out clean. Leave it empty to use the full set.</string>
+
+    <!-- Row on every tool's own page: what a press and hold on the tool does
+         while it is pinned to the toolbar. -->
+    <string name="tooldetail_hold_title">Press and hold on the toolbar</string>
+    <string name="tooldetail_hold_subtitle">Do a second thing with this tool. Toolbar only: in the toolbox, press and hold always opens a tool\'s settings.</string>
+    <!-- The row's value, and the "None" choice in its picker, when nothing is bound. -->
+    <string name="tooldetail_hold_settings_value">Opens this tool\'s settings</string>
+    <string name="tooldetail_hold_repeats_subtitle">Press and hold repeats the move, so it cannot do a second action</string>
+    <string name="tooldetail_hold_selects_subtitle">Press and hold turns selection mode on, so it cannot do a second action</string>
+    <string name="tooldetail_hold_trackpad_subtitle">Press and hold opens the trackpad, so it cannot do a second action</string>
+    <string name="tooldetail_hold_voice_modes_subtitle">Press and hold picks a voice typing mode, so it cannot do a second action. Turn that off under Voice typing to bind one.</string>
+    <!-- %1$s is the name of a tool, for example "Undo". -->
+    <string name="tooldetail_hold_pick_title">Press and hold <xliff:g id="tool" example="Undo">%1$s</xliff:g></string>
+
+    <!-- Notes tool (#560). -->
+    <string name="tooldetail_notes_group">Notes</string>
+    <string name="tooldetail_notes_open_title">Your notes</string>
+    <plurals name="tooldetail_notes_open_subtitle">
+        <item quantity="one">%1$d note</item>
+        <item quantity="other">%1$d notes</item>
+    </plurals>
+    <string name="tooldetail_notes_open_none_subtitle">Nothing saved yet</string>
+    <string name="tooldetail_notes_tags_subtitle">Rename, recolour or remove the tags on your notes</string>
+    <string name="tooldetail_notes_share_title">Save to notes from other apps</string>
+    <string name="tooldetail_notes_share_subtitle">An entry in the share sheet</string>
+    <string name="tooldetail_notes_share_info">Share text from any app and choose Save to notes, and it becomes a note. Share a link, a page from the browser say, and the note gets the page\'s title and its text with the layout taken off, under the link and tagged Read later, so the Read back tool can read it to you. A page that cannot be read is saved as the link alone. Works with the keyboard closed.</string>
+    <string name="tooldetail_notes_trash_subtitle">Notes you deleted, until they are gone for good</string>
+    <string name="tooldetail_notes_sort_title">Sort notes by</string>
+    <string name="tooldetail_notes_sort_updated_label">Last edited</string>
+    <string name="tooldetail_notes_sort_created_label">Date created</string>
+    <string name="tooldetail_notes_sort_title_label">Title</string>
+    <string name="tooldetail_notes_markdown_title">Format Markdown</string>
+    <string name="tooldetail_notes_markdown_subtitle">Show headings, lists and checklists formatted in the keyboard and in previews. Off, every note is plain text.</string>
+    <string name="tooldetail_notes_panel_start_title">The keyboard panel opens on</string>
+    <string name="tooldetail_notes_panel_start_subtitle">What you see when you tap the tool</string>
+    <string name="tooldetail_notes_panel_start_list_label">The list of notes</string>
+    <string name="tooldetail_notes_panel_start_last_label">The note you edited last</string>
+    <string name="tooldetail_notes_panel_layout_title">Keyboard panel layout</string>
+    <string name="tooldetail_notes_panel_layout_subtitle">How the list of notes is laid out in the keyboard</string>
+    <string name="tooldetail_notes_panel_layout_shelf_label">Shelf: pinned notes as wide cards, the rest in a grid</string>
+    <string name="tooldetail_notes_panel_layout_timeline_label">Timeline: one row per note, grouped by day</string>
+    <string name="tooldetail_notes_trash_days_title">Keep trashed notes for</string>
+    <string name="tooldetail_notes_trash_7_label">7 days</string>
+    <string name="tooldetail_notes_trash_30_label">30 days</string>
+    <string name="tooldetail_notes_trash_90_label">90 days</string>
+    <string name="tooldetail_notes_trash_never_label">Until I delete them</string>
+    <string name="tooldetail_notes_save_selection_title">Save as note from a selection</string>
+    <string name="tooldetail_notes_save_selection_subtitle">What the selection bar\'s Save as note does</string>
+    <string name="tooldetail_notes_save_new_label">Make a new note each time</string>
+    <string name="tooldetail_notes_save_append_label">Add to the note I edited last</string>
+    <string name="tooldetail_notes_clear_title">Delete all notes</string>
+    <string name="tooldetail_notes_clear_subtitle">Every note, every tag and the trash</string>
+    <string name="tooldetail_notes_clear_confirm">Delete every note? This cannot be undone. A backup that holds the Notes section can bring them back.</string>
+
+    <!-- Media control tool. -->
+    <string name="tooldetail_mediactl_group">Media control</string>
+    <string name="tooldetail_find_history_title">Remember searches</string>
+    <string name="tooldetail_find_history_subtitle">Offer your last ten searches when the Find field is empty. Never kept in incognito or from a password field</string>
+    <string name="tooldetail_find_history_clear_title">Search history</string>
+    <string name="tooldetail_find_history_clear_action">Clear</string>
+    <plurals name="tooldetail_find_history_count">
+        <item quantity="one">%d search remembered</item>
+        <item quantity="other">%d searches remembered</item>
+    </plurals>
+    <string name="tooldetail_mediactl_pin_title">Pin while music plays</string>
+    <string name="tooldetail_mediactl_pin_subtitle">Put the media tool on the toolbar on its own while a music app is playing</string>
+    <string name="tooldetail_mediactl_pin_info">The pin is temporary. It goes on the end of the toolbar, it never moves the tools you pinned yourself, and it disappears when the player does. If you have already pinned the media tool, nothing changes.</string>
+    <string name="tooldetail_mediactl_apps_title">Music players</string>
+    <!-- %1$d is a count of apps, for example "12". -->
+    <string name="tooldetail_mediactl_apps_subtitle">Which apps count as music. <xliff:g id="count" example="12">%1$d</xliff:g> chosen</string>
+    <string name="tooldetail_mediactl_access_title">Notification access</string>
+    <string name="tooldetail_mediactl_access_granted">Granted. The media tool can read and steer what is playing</string>
+    <string name="tooldetail_mediactl_access_missing">Needed before the keyboard can see what is playing. Tap to grant</string>
+    <string name="tooldetail_mediactl_info">Android only lets an app read other apps\' playback through a notification listener. The listener WM Keyboard registers reads no notifications at all. It exists so the media tool can find the session it steers.</string>
+
+    <!-- Vocabulary tool page. -->
+    <string name="tooldetail_vocab_manage_group">Your vocabulary</string>
+    <string name="tooldetail_vocab_packs_title">Vocabulary packs</string>
+    <string name="tooldetail_vocab_packs_none_subtitle">Download a word list to start</string>
+    <plurals name="tooldetail_vocab_packs_subtitle">
+        <item quantity="one">%d pack on</item>
+        <item quantity="other">%d packs on</item>
+    </plurals>
+    <string name="tooldetail_vocab_lists_title">My lists</string>
+    <string name="tooldetail_vocab_lists_subtitle">Lists you make yourself</string>
+    <string name="tooldetail_vocab_review_title">Review</string>
+    <string name="tooldetail_vocab_review_subtitle">Flashcards for what is due today</string>
+    <plurals name="tooldetail_vocab_due_value">
+        <item quantity="one">%d due</item>
+        <item quantity="other">%d due</item>
+    </plurals>
+    <string name="tooldetail_vocab_browse_title">Browse words</string>
+    <string name="tooldetail_vocab_browse_subtitle">Every word in your packs</string>
+    <string name="tooldetail_vocab_nudges_group">Nudges</string>
+    <string name="tooldetail_vocab_nudges_info">When you type a plain word that a pack has a stronger alternative for, a chip on the suggestion strip offers it: “hate → abhor”. Tap it for the word’s card, hold it to swap the word.</string>
+    <string name="tooldetail_vocab_nudges_title">Offer stronger words</string>
+    <string name="tooldetail_vocab_nudges_subtitle">A chip when a plainer word could be one from your packs</string>
+    <string name="tooldetail_vocab_nudge_self_title">Also for the words themselves</string>
+    <string name="tooldetail_vocab_nudge_self_subtitle">Typing a pack word offers its card</string>
+    <string name="tooldetail_vocab_tap_title">Tapping the chip</string>
+    <string name="tooldetail_vocab_tap_subtitle">Holding it does the other</string>
+    <string name="tooldetail_vocab_tap_open_label">Opens the word card</string>
+    <string name="tooldetail_vocab_tap_replace_label">Swaps in the stronger word</string>
+    <string name="tooldetail_vocab_scope_title">Which words nudge</string>
+    <string name="tooldetail_vocab_scope_unlearnt_label">Words you have not learnt</string>
+    <string name="tooldetail_vocab_scope_all_label">Every word</string>
+    <string name="tooldetail_vocab_scope_learnt_label">Only words you have learnt</string>
+    <string name="tooldetail_vocab_level_title">Sensitivity</string>
+    <string name="tooldetail_vocab_level_subtitle">How much plainer the typed word has to be</string>
+    <string name="tooldetail_vocab_level_low_label">Low</string>
+    <string name="tooldetail_vocab_level_medium_label">Medium</string>
+    <string name="tooldetail_vocab_level_high_label">High</string>
+    <string name="tooldetail_vocab_cooldown_title">Repeat a nudge</string>
+    <string name="tooldetail_vocab_cooldown_every_label">Every time</string>
+    <string name="tooldetail_vocab_cooldown_field_label">Once per text field</string>
+    <string name="tooldetail_vocab_cooldown_day_label">Once a day</string>
+    <string name="tooldetail_vocab_card_group">Card sections</string>
+    <string name="tooldetail_vocab_card_info">Where each part of a word card is shown: in the keyboard panel and the app, in the app only, or nowhere.</string>
+    <string name="tooldetail_vocab_visibility_off_label">Off</string>
+    <string name="tooldetail_vocab_visibility_settings_label">In the app only</string>
+    <string name="tooldetail_vocab_visibility_keyboard_label">Keyboard and app</string>
+    <string name="tooldetail_vocab_related_group">Related words</string>
+    <string name="tooldetail_vocab_related_title">Tapping a synonym or antonym</string>
+    <string name="tooldetail_vocab_related_subtitle">Holding one always types it</string>
+    <string name="tooldetail_vocab_related_open_label">Opens its card, or types it</string>
+    <string name="tooldetail_vocab_related_insert_label">Types it</string>
+    <string name="tooldetail_vocab_related_lookup_label">Looks it up in the Dictionary tool</string>
+    <string name="tooldetail_vocab_translations_title">Translation languages</string>
+    <string name="tooldetail_vocab_translations_auto_subtitle">Your keyboard languages</string>
+    <!-- %1$s is a comma-separated list of language names. -->
+    <string name="tooldetail_vocab_translations_auto_named_subtitle">Your keyboard languages: <xliff:g id="languages" example="Bangla, Hindi">%1$s</xliff:g></string>
+    <string name="tooldetail_vocab_translations_dialog_body">Translations come from Wiktionary and are downloaded per pack and language, on their own once you pick them here or add a keyboard language.</string>
+    <string name="tooldetail_vocab_audio_group">Speaker</string>
+    <string name="tooldetail_vocab_audio_info">Wiktionary’s recordings are fetched over the network; on mobile data they follow Data saver. Speech synthesis works offline and is the fallback.</string>
+    <string name="tooldetail_vocab_audio_source_title">Voice</string>
+    <string name="tooldetail_vocab_audio_auto_label">Recording when there is one, else synthesised</string>
+    <string name="tooldetail_vocab_audio_wiktionary_label">Wiktionary recording</string>
+    <string name="tooldetail_vocab_audio_tts_label">Speech synthesis</string>
+    <string name="tooldetail_vocab_accent_title">Accent</string>
+    <string name="tooldetail_vocab_accent_subtitle">The pronunciation shown and spoken</string>
+    <string name="tooldetail_vocab_accent_us_label">American</string>
+    <string name="tooldetail_vocab_accent_uk_label">British</string>
+    <string name="tooldetail_vocab_tts_rate_title">Speech speed</string>
+    <string name="tooldetail_vocab_tts_pitch_title">Speech pitch</string>
+    <!-- A multiplier on the synthesiser's default, like "1.2×". -->
+    <string name="tooldetail_vocab_speed_value">%1$.1f×</string>
+    <string name="tooldetail_vocab_audio_test_title">Play a sample</string>
+    <string name="tooldetail_vocab_flashcards_group">Flashcards</string>
+    <string name="tooldetail_vocab_flashcards_info">Review in the keyboard panel or on the Review screen. Both use the same schedule.</string>
+    <string name="tooldetail_vocab_scheduler_title">Scheduling</string>
+    <string name="tooldetail_vocab_scheduler_leitner_label">Leitner boxes</string>
+    <string name="tooldetail_vocab_scheduler_leitner_desc">Five boxes with gaps of 1, 3, 7, 14 and 30 days. A right answer moves a card up a box, a wrong one back to the first.</string>
+    <string name="tooldetail_vocab_scheduler_sm2_label">SM-2</string>
+    <string name="tooldetail_vocab_scheduler_sm2_desc">The SuperMemo rule Anki uses: each card has an ease that good answers raise, and gaps that grow with it.</string>
+    <string name="tooldetail_vocab_goal_title">New words a day</string>
+    <string name="tooldetail_vocab_goal_subtitle">Added to a review session on top of what is due</string>
+    <string name="tooldetail_vocab_wotd_group">Word of the day</string>
+    <string name="tooldetail_vocab_wotd_card_title">Card on the home screen</string>
+    <string name="tooldetail_vocab_wotd_card_subtitle">One word a day, drawn from your packs</string>
+    <string name="tooldetail_vocab_wotd_chip_title">Chip on the keyboard</string>
+    <string name="tooldetail_vocab_wotd_chip_subtitle">Offered on the suggestion strip until you tap or dismiss it</string>
+    <string name="tooldetail_vocab_wotd_interval_title">A new word every</string>
+    <string name="tooldetail_vocab_wotd_interval_subtitle">The same word for everyone with your packs, in that span</string>
+    <string name="tooldetail_vocab_wotd_interval_day_label">Day</string>
+    <string name="tooldetail_vocab_wotd_interval_12h_label">12 hours</string>
+    <string name="tooldetail_vocab_wotd_interval_6h_label">6 hours</string>
+    <string name="tooldetail_vocab_wotd_interval_3h_label">3 hours</string>
+    <string name="tooldetail_vocab_wotd_interval_hour_label">Hour</string>
+    <string name="tooldetail_vocab_wotd_chip_times_title">Times the chip comes back</string>
+    <string name="tooldetail_vocab_wotd_chip_times_subtitle">How many text fields may offer the same word before it stops; dismissing it stops it at once</string>
+    <string name="tooldetail_vocab_field_ipa_title">Pronunciation (IPA)</string>
+    <string name="tooldetail_vocab_field_respelling_title">Respelling</string>
+    <string name="tooldetail_vocab_field_examples_title">Example sentences</string>
+    <string name="tooldetail_vocab_field_quotations_title">Quotations from print</string>
+    <string name="tooldetail_vocab_field_synonyms_title">Synonyms</string>
+    <string name="tooldetail_vocab_field_antonyms_title">Antonyms</string>
+    <string name="tooldetail_vocab_field_family_title">Word family</string>
+    <string name="tooldetail_vocab_field_hypernyms_title">Broader and narrower words</string>
+    <string name="tooldetail_vocab_field_tags_title">Register tags</string>
+    <string name="tooldetail_vocab_field_topics_title">Topics</string>
+    <string name="tooldetail_vocab_field_etymology_title">Etymology</string>
+    <string name="tooldetail_vocab_field_origin_title">Origin chain</string>
+    <string name="tooldetail_vocab_field_root_title">Root</string>
+    <string name="tooldetail_vocab_field_attested_title">First used</string>
+    <string name="tooldetail_vocab_field_mnemonic_title">Mnemonic</string>
+    <string name="tooldetail_vocab_field_translations_title">Translations</string>
+    <string name="tooldetail_vocab_field_sources_title">Word lists</string>
+    <string name="tooldetail_vocab_field_hyphenation_title">Hyphenation</string>
+    <string name="tooldetail_vocab_field_rhymes_title">Rhymes</string>
+    <string name="tooldetail_vocab_field_forms_title">Forms</string>
+    <string name="tooldetail_vocab_field_wikipedia_title">Wikipedia</string>
+
+
+    <!-- F-Droid build only: the free-software services replace the keyed ones,
+         so these fields take a server address rather than an API key. Every one
+         of them is overridable, which is what F-Droid's rule on network
+         services asks for. -->
+    <string name="tooldetail_translate_instance_group">LibreTranslate server</string>
+    <string name="tooldetail_translate_instance_info">This edition translates with LibreTranslate, which is free software you can run yourself. Enter the address of an instance you trust.</string>
+    <string name="tooldetail_translate_instance_label">Server address</string>
+    <string name="tooldetail_translate_instance_hint">https://libretranslate.example.org</string>
+    <string name="tooldetail_translate_instance_key_label">API key (optional)</string>
+    <string name="tooldetail_translate_instance_key_hint">Only needed by instances that ask for one</string>
+    <string name="tooldetail_search_instance_label">SearXNG instance</string>
+    <string name="tooldetail_search_instance_hint">https://searx.example.org</string>
+    <string name="tooldetail_media_wiki_group">Media source</string>
+    <string name="tooldetail_media_wiki_info">GIFs come from Wikimedia Commons, whose collection is largely educational rather than reactive. Leave this empty for Commons, or point it at another MediaWiki.</string>
+    <string name="tooldetail_media_wiki_label">MediaWiki address</string>
+    <string name="tooldetail_media_wiki_hint">https://commons.wikimedia.org</string>
+    <string name="tooldetail_hold_nothing_value">Does nothing</string>
+    <string name="tooldetail_hold_nothing_subtitle">The hold only vibrates. Nothing opens and nothing runs.</string>
+    <string name="tooldetail_hold_default_title">Default</string>
+    <!-- %1$s is the name of a tool, for example Redo. -->
+    <string name="tooldetail_hold_default_pairing_subtitle">Runs <xliff:g id="tool" example="Redo">%1$s</xliff:g>, the same pair as HeliBoard</string>
+    <string name="tooldetail_hold_settings_title">Settings page</string>
+    <string name="tooldetail_hold_settings_subtitle">Opens the settings of this tool, as the hold did before</string>
+</resources>

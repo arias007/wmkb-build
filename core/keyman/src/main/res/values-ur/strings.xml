@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <plurals name="core_keyman_diagonal_flicks_dropped">
+        <item quantity="one">ایپ نے %1$d ترچھی فلک کو ہٹا دیا ہے۔ یہ کی بورڈ صرف اوپر، نیچے، بائیں اور دائیں فلک کو سپورٹ کرتا ہے۔</item>
+        <item quantity="other">ایپ نے %1$d ترچھی فلکس کو ہٹا دیا ہے۔ یہ کی بورڈ صرف اوپر، نیچے، بائیں اور دائیں فلک کو سپورٹ کرتا ہے۔</item>
+    </plurals>
+    <plurals name="core_keyman_keys_type_their_labels">
+        <item quantity="one">%1$d کلید اس پر چھپے ہوئے کریکٹر کو ٹائپ کرتی ہے۔ اصل کی بورڈ نے یہ فیصلہ کرنے کے لیے کہ وہ کیا ٹائپ کرتا ہے، ایک اصول کا استعمال کیا۔</item>
+        <item quantity="other">%1$d کلیدیں ان پر چھپے ہوئے کریکٹرز کو ٹائپ کرتی ہیں۔ اصل کی بورڈ نے یہ فیصلہ کرنے کے لیے کہ وہ کیا ٹائپ کرتے ہیں، اصولوں کا استعمال کیا۔</item>
+    </plurals>
+    <plurals name="core_keyman_multitap_unconverted">
+        <item quantity="one">اس کی بورڈ میں %1$d کلید ہے جسے آپ صفحات یا حروف کے درمیان چکر لگانے کے لیے بار بار ٹیپ کرتے ہیں۔ ایپ اس چکر کی نقل نہیں کر سکتی، اس لیے ہر ٹیپ پہلے ٹیپ کے طور پر کام کرتا ہے۔</item>
+        <item quantity="other">اس کی بورڈ میں %1$d کلیدیں ہیں جنہیں آپ صفحات یا حروف کے درمیان چکر لگانے کے لیے بار بار ٹیپ کرتے ہیں۔ ایپ ان چکروں کی نقل نہیں کر سکتی، اس لیے ہر ٹیپ پہلے ٹیپ کے طور پر کام کرتا ہے۔</item>
+    </plurals>
+    <string name="core_keyman_rules_missing">یہ کی بورڈ یہ فیصلہ کرنے کے لیے اصول استعمال کرتا ہے کہ اس کی کلیدیں کیا ٹائپ کرتی ہیں۔ ایپ کے پاس وہ اصول نہیں ہیں، لہذا ہر کلید اس پر چھپے ہوئے حرف کو ٹائپ کرتی ہے۔</string>
+    <plurals name="core_keyman_special_keys_dropped">
+        <item quantity="one">ایپ نے %1$d کلید ہٹا دی ہے۔ اس کی بورڈ میں کوئی ایسی کلید نہیں ہے جو وہی کام کرتی ہو۔</item>
+        <item quantity="other">ایپ نے %1$d کلیدیں ہٹا دی ہیں۔ اس کی بورڈ میں کوئی ایسی کلیدیں نہیں ہیں جو وہی کام کرتی ہوں۔</item>
+    </plurals>
+</resources>

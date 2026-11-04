@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">הקובץ שהורד פגום. בדיקת היתירות (checksum) אינה תואמת. נסה להוריד שוב.</string>
+    <string name="core_input_cjk_download_error_http">השרת החזיר סטטוס HTTP %1$s.</string>
+    <string name="core_input_cjk_download_error_network">ההורדה נכשלה. בדוק את החיבור שלך ונסה שוב.</string>
+    <string name="core_input_cjk_download_error_network_detail">ההורדה לא עבדה: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">אין מספיק שטח אחסון במכשיר שלך. פנה תחילה מעט מקום.</string>
+    <string name="core_input_cjk_download_error_truncated">החיבור הופסק במהלך ההורדה. לחץ על \'המשך\' כדי להמשיך.</string>
+    <string name="core_input_cjk_download_error_unavailable">חבילה זו אינה זמינה עדיין.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">טבלה של קודי רדיקלים לתווי האנזי, 29,000 תווים. המקלדת זקוקה לחבילה זו עבור פריסות Cangjie ו-Quick.</string>
+    <string name="core_input_cjk_pack_cangjie_title">מילון Cangjie (倉頡)</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">קריאות קאנה מ-mozc, 1.08 מיליון ערכים, כ-42 MB. המקלדת זקוקה לחבילה זו עבור המרה ליפנית.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">מילון קאנה ליפנית לקאנג\'י</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">טבלה של קריאות Jyutping לתווי Hanzi, עם 163,000 ערכים. המקלדת זקוקה לחבילה זו עבור המרה לקנטונזית.</string>
+    <string name="core_input_cjk_pack_jyutping_title">מילון קנטונזית Jyutping</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">אילו מילים עוקבות אחרי אילו, לפי ספירה מתוך טקסטים בסינית מהאינטרנט ומחדשות. מגיע עם מילון פין-יין. בעזרתו, ראשי תיבות כמו wbxh יתנו קודם את 我不喜欢 ולא שתי מילים לא קשורות.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">זוגות מילים בסינית</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">תווים וביטויים בסינית (Hanzi) מתוך CC-CEDICT, עם 120,000 ערכים. המקלדת זקוקה לחבילה זו להמרת סינית.</string>
+    <string name="core_input_cjk_pack_pinyin_title">מילון פין-יין סיני</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">ביטויים מ-OpenCC, 50,000 ערכים, כ-1 מגה-בייט. כשהתווים המסורתיים מופעלים, המקלדת משתמשת בהם כדי לכתוב את הצורה הנכונה של המילה, כמו 頭髮 ולא 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">טבלת ביטויים בסינית מסורתית</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">טבלה של סדר משיכות עבור תווים סיניים. המקלדת זקוקה לחבילה זו עבור פריסת המשיכות.</string>
+    <string name="core_input_cjk_pack_stroke_title">מילון משיכות סיני (笔画)</string>
+    <string name="core_input_double_pinyin_custom_label">מותאם אישית</string>
+    <string name="core_input_double_pinyin_off_label">כבוי (פין-יין מלא)</string>
+    <string name="core_input_im_note_candidates">עבור מקשים מסוימים שיטה זו נותנת רשימת אפשרויות. המקלדת תמיד משתמשת בבחירה הראשונה.</string>
+    <string name="core_input_im_note_missing_files">קבצים אלו לא נבחרו, לכן חלקם חסר: %1$s. כדי לכלול אותם, ייבא שוב ובחר אותם יחד.</string>
+    <string name="core_input_im_note_module">שיטה זו משתמשת בתוסף, כמו Anthy, שהמקלדת אינה יכולה להריץ. המקשים שמשתמשים בו לא יבצעו שום פעולה כאן.</string>
+    <string name="core_input_im_note_other_method">שיטה זו מעבירה כמה מקשים לשיטת קלט אחרת. חלק זה לא עובד כאן.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">האפליקציה אינה יכולה לקרוא כלל איות %1$d, לכן היא מדלגת עליו.</item>
+        <item quantity="other">האפליקציה אינה יכולה לקרוא %1$d כללי איות, לכן היא מדלגת עליהם.</item>
+    </plurals>
+    <string name="core_input_im_note_space">שיטה זו משתמשת במקש הרווח כמקש, למשל עבור צליל. כאן מקש הרווח תמיד מקליד רווח.</string>
+    <string name="core_input_im_note_truncated">הטבלה גדולה מאוד, לכן האפליקציה שמרה רק את חלקה הראשון.</string>
+    <string name="core_input_im_note_unused_files">האפליקציה לא השתמשה בקבצים אלו: %1$s.</string>
+    <string name="core_input_im_refused_broken">בקובץ יש שגיאה, לכן האפליקציה לא יכולה לקרוא אותו: %1$s</string>
+    <string name="core_input_im_refused_empty">בקובץ אין תוכן להקלדה.</string>
+    <string name="core_input_im_refused_no_dictionary">הסכימה זקוקה למילון שלה. ייבא שוב ובחר גם את %1$s.</string>
+    <string name="core_input_im_refused_not_method">האפליקציה אינה יכולה לקרוא זאת כשיטת קלט. היא קוראת טבלאות .cin, סכימות ומילונים של Rime (.schema.yaml, .dict.yaml), וקבצי m17n .mim.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">האפליקציה קראה זאת כטבלת .cin עם %1$d ערך. הקלד קוד, ואז בחר את התו מפס ההצעות.</item>
+        <item quantity="other">האפליקציה קראה זאת כטבלת .cin עם %1$d ערכים. הקלד קוד, ואז בחר את התו מפס ההצעות.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">האפליקציה קראה זאת כשיטת קלט m17n עם כלל אחד (%1$d). המקשים כותבים את הטקסט בזמן ההקלדה.</item>
+        <item quantity="other">האפליקציה קראה זאת כשיטת קלט m17n עם %1$d כללים. המקשים כותבים את הטקסט בזמן ההקלדה.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">האפליקציה זיהתה זאת כסכמת Rime עם ערך מילוני %1$d. הקלד את ההברות, ולאחר מכן בחר את המילים מרצועת ההצעות.</item>
+        <item quantity="other">האפליקציה זיהתה זאת כסכמת Rime עם %1$d ערכים מילוניים. הקלד את ההברות, ולאחר מכן בחר את המילים מרצועת ההצעות.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">האפליקציה זיהתה זאת כטבלת קוד Rime עם ערך %1$d. הקלד קוד, ולאחר מכן בחר את התו מרצועת ההצעות.</item>
+        <item quantity="other">האפליקציה זיהתה זאת כטבלת קוד Rime עם %1$d ערכים. הקלד קוד, ולאחר מכן בחר את התו מרצועת ההצעות.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">מילון המערכת של Mozc, עם עלויות החיבור, המקטע ומסנן ההצעות שלו. מנוע Mozc מבצע המרה בעזרתו; המנוע המובנה אינו משתמש בו.</string>
+    <string name="core_input_mozc_pack_title">מילון Mozc</string>
+    <string name="core_input_rime_pack_base_subtitle">סימני פיסוק, סמלים, טבלת תדירות המילים והמרת סינית פשוטה ומסורתית שבהם משתמש כל סכימת RIME. מורד עם הסכימה הראשונה.</string>
+    <string name="core_input_rime_pack_base_title">יסודות RIME</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">סכימת Zhuyin של RIME על מפת המקשים הסטנדרטית של Dachen, עם המילון של Terra Pinyin.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">סכמת צאנג-ג\'יה מהדור החמישי של RIME, תווים וביטויים.</string>
+    <string name="core_input_rime_pack_cangjie5_title">קנג\'יה 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">אוצר מילים סיני מפושט מודרני וגדול עבור פין-יין, עם גרסאות פין-יין כפול ו-9 מקשים. הידורו לוקח דקה או יותר.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">סכימת rime-cantonese עבור קנטונזית, עם רשימות המילים והביטויים שלה.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">סכימת הפין-יין של RIME, עם סכימת המשיכות שדרכה הוא מחפש תווים.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">מודל כתב יד ליפנית</string>
+    <string name="core_input_zinnia_pack_subtitle">המודל של פרויקט Tegaki עבור zinnia, מזהה כתב היד הלא מקוון שקורא סינית ויפנית במקומות שבהם ML Kit לא מצליח.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">מודל כתב יד סינית מפושטת</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">מודל כתב יד סיני מסורתי</string>
+</resources>

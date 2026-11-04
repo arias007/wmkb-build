@@ -1,0 +1,529 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_tig",
+    "name": "ትግራይት (Tigre)",
+    "langId": "tig",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ሀ",
+              "shiftLabel": "ሇ",
+              "longPress": [
+                "ሁ",
+                "ሂ",
+                "ሃ",
+                "ሄ",
+                "ህ",
+                "ሆ"
+              ]
+            },
+            {
+              "label": "ለ",
+              "shiftLabel": "ሏ",
+              "longPress": [
+                "ሉ",
+                "ሊ",
+                "ላ",
+                "ሌ",
+                "ል",
+                "ሎ"
+              ]
+            },
+            {
+              "label": "ሐ",
+              "shiftLabel": "ሗ",
+              "longPress": [
+                "ሑ",
+                "ሒ",
+                "ሓ",
+                "ሔ",
+                "ሕ",
+                "ሖ"
+              ]
+            },
+            {
+              "label": "መ",
+              "shiftLabel": "ሟ",
+              "longPress": [
+                "ሙ",
+                "ሚ",
+                "ማ",
+                "ሜ",
+                "ም",
+                "ሞ"
+              ]
+            },
+            {
+              "label": "ረ",
+              "shiftLabel": "ሯ",
+              "longPress": [
+                "ሩ",
+                "ሪ",
+                "ራ",
+                "ሬ",
+                "ር",
+                "ሮ"
+              ]
+            },
+            {
+              "label": "ሰ",
+              "shiftLabel": "ሷ",
+              "longPress": [
+                "ሱ",
+                "ሲ",
+                "ሳ",
+                "ሴ",
+                "ስ",
+                "ሶ"
+              ]
+            },
+            {
+              "label": "ሸ",
+              "shiftLabel": "ሿ",
+              "longPress": [
+                "ሹ",
+                "ሺ",
+                "ሻ",
+                "ሼ",
+                "ሽ",
+                "ሾ"
+              ]
+            },
+            {
+              "label": "ቀ",
+              "shiftLabel": "ቋ",
+              "longPress": [
+                "ቁ",
+                "ቂ",
+                "ቃ",
+                "ቄ",
+                "ቅ",
+                "ቆ",
+                "ቇ",
+                "ቈ",
+                "ቊ",
+                "ቌ",
+                "ቍ"
+              ]
+            },
+            {
+              "label": "ቐ",
+              "shiftLabel": "ቛ",
+              "longPress": [
+                "ቑ",
+                "ቒ",
+                "ቓ",
+                "ቔ",
+                "ቕ",
+                "ቖ",
+                "ቘ",
+                "ቚ",
+                "ቜ",
+                "ቝ"
+              ]
+            },
+            {
+              "label": "በ",
+              "shiftLabel": "ቧ",
+              "longPress": [
+                "ቡ",
+                "ቢ",
+                "ባ",
+                "ቤ",
+                "ብ",
+                "ቦ"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ቨ",
+              "shiftLabel": "ቯ",
+              "longPress": [
+                "ቩ",
+                "ቪ",
+                "ቫ",
+                "ቬ",
+                "ቭ",
+                "ቮ"
+              ]
+            },
+            {
+              "label": "ተ",
+              "shiftLabel": "ቷ",
+              "longPress": [
+                "ቱ",
+                "ቲ",
+                "ታ",
+                "ቴ",
+                "ት",
+                "ቶ"
+              ]
+            },
+            {
+              "label": "ቸ",
+              "shiftLabel": "ቿ",
+              "longPress": [
+                "ቹ",
+                "ቺ",
+                "ቻ",
+                "ቼ",
+                "ች",
+                "ቾ"
+              ]
+            },
+            {
+              "label": "ኀ",
+              "shiftLabel": "ኋ",
+              "longPress": [
+                "ኁ",
+                "ኂ",
+                "ኃ",
+                "ኄ",
+                "ኅ",
+                "ኆ",
+                "ኇ",
+                "ኈ",
+                "ኊ",
+                "ኌ",
+                "ኍ"
+              ]
+            },
+            {
+              "label": "ነ",
+              "shiftLabel": "ኗ",
+              "longPress": [
+                "ኑ",
+                "ኒ",
+                "ና",
+                "ኔ",
+                "ን",
+                "ኖ"
+              ]
+            },
+            {
+              "label": "ኘ",
+              "shiftLabel": "ኟ",
+              "longPress": [
+                "ኙ",
+                "ኚ",
+                "ኛ",
+                "ኜ",
+                "ኝ",
+                "ኞ"
+              ]
+            },
+            {
+              "label": "አ",
+              "shiftLabel": "ኧ",
+              "longPress": [
+                "ኡ",
+                "ኢ",
+                "ኣ",
+                "ኤ",
+                "እ",
+                "ኦ"
+              ]
+            },
+            {
+              "label": "ከ",
+              "shiftLabel": "ኳ",
+              "longPress": [
+                "ኩ",
+                "ኪ",
+                "ካ",
+                "ኬ",
+                "ክ",
+                "ኮ",
+                "ኯ",
+                "ኰ",
+                "ኲ",
+                "ኴ",
+                "ኵ"
+              ]
+            },
+            {
+              "label": "ኸ",
+              "shiftLabel": "ዃ",
+              "longPress": [
+                "ኹ",
+                "ኺ",
+                "ኻ",
+                "ኼ",
+                "ኽ",
+                "ኾ",
+                "ዀ",
+                "ዂ",
+                "ዄ",
+                "ዅ"
+              ]
+            },
+            {
+              "label": "ወ",
+              "shiftLabel": "ዏ",
+              "longPress": [
+                "ዉ",
+                "ዊ",
+                "ዋ",
+                "ዌ",
+                "ው",
+                "ዎ"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ዐ",
+              "longPress": [
+                "ዑ",
+                "ዒ",
+                "ዓ",
+                "ዔ",
+                "ዕ",
+                "ዖ"
+              ]
+            },
+            {
+              "label": "ዘ",
+              "shiftLabel": "ዟ",
+              "longPress": [
+                "ዙ",
+                "ዚ",
+                "ዛ",
+                "ዜ",
+                "ዝ",
+                "ዞ"
+              ]
+            },
+            {
+              "label": "ዠ",
+              "shiftLabel": "ዧ",
+              "longPress": [
+                "ዡ",
+                "ዢ",
+                "ዣ",
+                "ዤ",
+                "ዥ",
+                "ዦ"
+              ]
+            },
+            {
+              "label": "የ",
+              "shiftLabel": "ዯ",
+              "longPress": [
+                "ዩ",
+                "ዪ",
+                "ያ",
+                "ዬ",
+                "ይ",
+                "ዮ"
+              ]
+            },
+            {
+              "label": "ደ",
+              "shiftLabel": "ዷ",
+              "longPress": [
+                "ዱ",
+                "ዲ",
+                "ዳ",
+                "ዴ",
+                "ድ",
+                "ዶ"
+              ]
+            },
+            {
+              "label": "ጀ",
+              "shiftLabel": "ጇ",
+              "longPress": [
+                "ጁ",
+                "ጂ",
+                "ጃ",
+                "ጄ",
+                "ጅ",
+                "ጆ"
+              ]
+            },
+            {
+              "label": "ገ",
+              "shiftLabel": "ጓ",
+              "longPress": [
+                "ጉ",
+                "ጊ",
+                "ጋ",
+                "ጌ",
+                "ግ",
+                "ጎ",
+                "ጏ",
+                "ጐ",
+                "ጒ",
+                "ጔ",
+                "ጕ"
+              ]
+            },
+            {
+              "label": "ጠ",
+              "shiftLabel": "ጧ",
+              "longPress": [
+                "ጡ",
+                "ጢ",
+                "ጣ",
+                "ጤ",
+                "ጥ",
+                "ጦ"
+              ]
+            },
+            {
+              "label": "ጨ",
+              "shiftLabel": "ጯ",
+              "longPress": [
+                "ጩ",
+                "ጪ",
+                "ጫ",
+                "ጬ",
+                "ጭ",
+                "ጮ"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "ጰ",
+              "shiftLabel": "ጷ",
+              "longPress": [
+                "ጱ",
+                "ጲ",
+                "ጳ",
+                "ጴ",
+                "ጵ",
+                "ጶ"
+              ]
+            },
+            {
+              "label": "ጸ",
+              "shiftLabel": "ጿ",
+              "longPress": [
+                "ጹ",
+                "ጺ",
+                "ጻ",
+                "ጼ",
+                "ጽ",
+                "ጾ"
+              ]
+            },
+            {
+              "label": "ፀ",
+              "shiftLabel": "ፇ",
+              "longPress": [
+                "ፁ",
+                "ፂ",
+                "ፃ",
+                "ፄ",
+                "ፅ",
+                "ፆ"
+              ]
+            },
+            {
+              "label": "ፈ",
+              "shiftLabel": "ፏ",
+              "longPress": [
+                "ፉ",
+                "ፊ",
+                "ፋ",
+                "ፌ",
+                "ፍ",
+                "ፎ"
+              ]
+            },
+            {
+              "label": "ፐ",
+              "shiftLabel": "ፗ",
+              "longPress": [
+                "ፑ",
+                "ፒ",
+                "ፓ",
+                "ፔ",
+                "ፕ",
+                "ፖ"
+              ]
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "፣",
+              "longPress": [
+                "፡",
+                "፤",
+                "፥",
+                "፦",
+                "፧",
+                "፨",
+                ",",
+                "!",
+                "?"
+              ],
+              "role": "Comma"
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.0
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ],
+              "role": "Period"
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

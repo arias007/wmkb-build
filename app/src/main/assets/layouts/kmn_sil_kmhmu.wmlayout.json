@@ -1,0 +1,915 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_kmn_sil_kmhmu",
+    "name": "SIL Kmhmu",
+    "langId": "kjg-Laoo",
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ຢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EA2"
+              },
+              "width": 0.1
+            },
+            {
+              "label": "ຟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E9F"
+              }
+            },
+            {
+              "label": "ໂ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EC2"
+              }
+            },
+            {
+              "label": "ໟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EDF"
+              }
+            },
+            {
+              "label": "ກຸ",
+              "output": "ຸ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB8"
+              }
+            },
+            {
+              "label": "ກູ",
+              "output": "ູ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB9"
+              }
+            },
+            {
+              "label": "ຄ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E84"
+              }
+            },
+            {
+              "label": "ຕ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E95"
+              }
+            },
+            {
+              "label": "ຈ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E88"
+              }
+            },
+            {
+              "label": "ຊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E8A"
+              }
+            },
+            {
+              "label": "ກໍ",
+              "output": "ໍ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0ECD"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ໄ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EC4"
+              }
+            },
+            {
+              "label": "ກຳ",
+              "output": "ຳ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB3"
+              }
+            },
+            {
+              "label": "ພ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E9E"
+              }
+            },
+            {
+              "label": "ະ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB0"
+              }
+            },
+            {
+              "label": "ກິ",
+              "output": "ິ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB4"
+              }
+            },
+            {
+              "label": "ກີ",
+              "output": "ີ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB5"
+              }
+            },
+            {
+              "label": "ຣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EA3"
+              }
+            },
+            {
+              "label": "ນ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E99"
+              }
+            },
+            {
+              "label": "ຍ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E8D"
+              }
+            },
+            {
+              "label": "ບ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E9A"
+              }
+            },
+            {
+              "label": "ລ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EA5"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ຫ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EAB"
+              }
+            },
+            {
+              "label": "ກ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E81"
+              }
+            },
+            {
+              "label": "ດ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E94"
+              }
+            },
+            {
+              "label": "ເ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EC0"
+              }
+            },
+            {
+              "label": "ໞ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EDE"
+              }
+            },
+            {
+              "label": "ກ່",
+              "output": "່",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EC8"
+              }
+            },
+            {
+              "label": "າ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB2"
+              }
+            },
+            {
+              "label": "ສ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EAA"
+              }
+            },
+            {
+              "label": "ວ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EA7"
+              }
+            },
+            {
+              "label": "ງ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E87"
+              }
+            },
+            {
+              "label": "ຽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EBD"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            },
+            {
+              "label": "ປ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E9B"
+              }
+            },
+            {
+              "label": "ແ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EC1"
+              }
+            },
+            {
+              "label": "ອ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EAD"
+              }
+            },
+            {
+              "label": "ກຶ",
+              "output": "ຶ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB6"
+              }
+            },
+            {
+              "label": "ກື",
+              "output": "ື",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB7"
+              }
+            },
+            {
+              "label": "ທ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0E97"
+              }
+            },
+            {
+              "label": "ມ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EA1"
+              }
+            },
+            {
+              "label": "ກົ",
+              "output": "ົ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EBB"
+              }
+            },
+            {
+              "label": "ກັ",
+              "output": "ັ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_0EB1"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols2"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.5
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 7.55
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      },
+      "symbols2": {
+        "rows": [
+          [
+            {
+              "label": "1",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 49,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED1"
+                  }
+                ]
+              },
+              "longPress": [
+                "໑"
+              ]
+            },
+            {
+              "label": "2",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 50,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED2"
+                  }
+                ]
+              },
+              "longPress": [
+                "໒"
+              ]
+            },
+            {
+              "label": "3",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 51,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED3"
+                  }
+                ]
+              },
+              "longPress": [
+                "໓"
+              ]
+            },
+            {
+              "label": "4",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 52,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED4"
+                  }
+                ]
+              },
+              "longPress": [
+                "໔"
+              ]
+            },
+            {
+              "label": "5",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 55,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED5"
+                  }
+                ]
+              },
+              "longPress": [
+                "໕"
+              ]
+            },
+            {
+              "label": "6",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 56,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED6"
+                  }
+                ]
+              },
+              "longPress": [
+                "໖"
+              ]
+            },
+            {
+              "label": "7",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 57,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED7"
+                  }
+                ]
+              },
+              "longPress": [
+                "໗"
+              ]
+            },
+            {
+              "label": "8",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 48,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED8"
+                  }
+                ]
+              },
+              "longPress": [
+                "໘"
+              ]
+            },
+            {
+              "label": "9",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 189,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED9"
+                  }
+                ]
+              },
+              "longPress": [
+                "໙"
+              ]
+            },
+            {
+              "label": "0",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 87,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "id": "U_0ED0"
+                  }
+                ]
+              },
+              "longPress": [
+                "໐"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "-",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 219,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "_",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 82,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "+",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 84,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "=",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 222,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "(",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 88,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "nextLayer": "letters",
+                    "id": "U_007B"
+                  },
+                  {
+                    "nextLayer": "letters",
+                    "id": "U_005B"
+                  }
+                ]
+              },
+              "longPress": [
+                "{",
+                "["
+              ]
+            },
+            {
+              "label": ")",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 191,
+                "modifiers": 16,
+                "nextLayer": "letters",
+                "longPress": [
+                  {
+                    "nextLayer": "letters",
+                    "id": "U_007D"
+                  },
+                  {
+                    "nextLayer": "letters",
+                    "id": "U_005D"
+                  }
+                ]
+              },
+              "longPress": [
+                "}",
+                "]"
+              ]
+            },
+            {
+              "label": "“",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_201C"
+              }
+            },
+            {
+              "label": "”",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_201D"
+              }
+            },
+            {
+              "label": "ຯ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_0EAF"
+              }
+            },
+            {
+              "label": "ໆ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_0EC6"
+              }
+            }
+          ],
+          [
+            {
+              "label": "/",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 192,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": ";",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 83,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": ".",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 68,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": ",",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 70,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": ":",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 71,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "'",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_0027"
+              }
+            },
+            {
+              "label": "!",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 75,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "?",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 76,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "%",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 186,
+                "modifiers": 16,
+                "nextLayer": "letters"
+              }
+            },
+            {
+              "label": "\\",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 220,
+                "nextLayer": "letters"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.5
+            },
+            {
+              "label": "₭",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_20AD"
+              }
+            },
+            {
+              "label": "฿",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_0E3F"
+              }
+            },
+            {
+              "label": "@",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_0040"
+              }
+            },
+            {
+              "label": "#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_0023"
+              }
+            },
+            {
+              "label": "*",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_002A"
+              }
+            },
+            {
+              "label": "&",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_0026"
+              }
+            },
+            {
+              "label": "<",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_003C"
+              }
+            },
+            {
+              "label": ">",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_003E"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "letters"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.5
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 6.35
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.55
+            }
+          ]
+        ]
+      }
+    },
+    "keyman": {
+      "keyboardId": "sil_kmhmu"
+    }
+  }
+}

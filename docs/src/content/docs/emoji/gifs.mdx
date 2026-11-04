@@ -1,0 +1,158 @@
+---
+title: "GIFs"
+description: "Search GIFs from KLIPY and GIPHY and send them, with a copy-to-clipboard fallback when an app won't take them directly."
+sidebar:
+  order: 3
+---
+
+import KeyCap from '@components/KeyCap.astro';
+import PhoneFrame from '@components/PhoneFrame.astro';
+import SettingsPath from '@components/SettingsPath.astro';
+import Shot from '@components/Shot.astro';
+
+The GIF tool searches KLIPY and GIPHY from a panel inside the keyboard, then sends the result straight into the field you're typing in. No switching apps, no copy-paste. On the F-Droid build it also searches Wikimedia Commons without any key at all, an educational corpus rather than reaction GIFs. Every other build needs a KLIPY or GIPHY key before the tool can search anything online, unless you turn on [GifCities](#gifcities), which needs no key. [Offline GIF packs](#offline-gif-packs) need neither a key nor a connection.
+
+<PhoneFrame caption="The GIF panel, showing trending results on open.">
+  <Shot id="emoji/gif-panel-trending" alt="The GIF panel, showing trending results on open." />
+</PhoneFrame>
+
+## Searching for a GIF
+
+Open the GIF tool and it fetches trending GIFs immediately, before you type anything. Close the panel or move to another text box and it keeps your search: it opens on that search next time, unless you turn off **Remember the last search**, which makes every opening start on trending. Start typing in the search box and results update live, 450ms after you stop. There's no Enter to press. While there's a query, an ✕ at the end of the search box empties it in one tap and brings trending back, with the keys still on the box for a new search. That's different from the [web and image search tools](/tools/search/), which wait for you to submit the query; GIF and sticker lookups are cheap enough on KLIPY and GIPHY to search as you type.
+
+Results are laid out as justified rows of animated previews rather than a fixed grid: every preview keeps its own aspect ratio and nothing is cropped, so squarish results sit three across and a pair of wide ones fills a row on its own. **GIFs per row** sets how many share a row, from one to six, and **Gap between cells** the space around each one. The search box names where results come from. On KLIPY it reads "Search KLIPY" and on GIPHY "Search GIPHY", each with that service's small "Powered by" mark at its end, as both services ask of apps that use them. GIPHY's mark keeps its colours, so on a light theme it sits on its own small black plate. The same goes for the sticker panel.
+
+Before you've typed anything, a scrollable row of category chips sits above the grid: Trending first, then Reactions, Love, Happy, Sad and so on. Tap one to run it as a search, which is a way to browse without thinking of a word. Tap the active chip, or Trending, to go back. The chips come from the provider itself when it publishes categories, and from a built-in list when it doesn't, so the row is there offline too. It belongs to the default view only. Type anything and it steps aside for the results. With the full-screen picker turned off it also needs a certain amount of key height to be worth drawing, so a short three-row layout with the number row off loses it rather than losing the last row of the grid.
+
+Along the bottom sits the same row the [emoji panel](/emoji/picker/#switching-to-gifs-and-stickers) ends in: <KeyCap>ABC</KeyCap>, a switch to emoji, GIFs and stickers, space and backspace. The switch jumps straight to the emoji or sticker panel, and so does a sideways swipe across the results: right for emoji, left for stickers. <KeyCap>ABC</KeyCap> goes back to the keys. <SettingsPath path="Emoji / Emoji panel / Switch to GIFs and stickers" /> moves the switch next to the search box instead, or turns it off, and the row keeps its <KeyCap>ABC</KeyCap>, space and backspace either way. If you rearranged the emoji panel's bottom row, the GIF panel takes your row. The row steps aside while you type a search, since the keys come back under the panel then.
+
+The GIF panel is a [panel layout](/languages/custom-layouts/#panel-layouts) too, so you can lay it out yourself: <SettingsPath path="Tools / GIFs / Layout / Panel layout" />. The search box, the chips and the results are one component, **GIF search and results**, and every other cell is a key, so the panel can carry a different bottom row, a second row of keys, or the switch in a place of its own. Once you change it, it stops following the emoji panel. The panel is as tall as <SettingsPath path="Emoji / Emoji panel / Panel height" /> makes the emoji panel, so the three panels never change the keyboard's height between them.
+
+### Favourites and recent GIFs
+
+Long-press a GIF and choose **Add to favourites**. A **Favourites** chip then leads the category chips, ahead of Trending, and tapping it shows every GIF you added, the newest first. To take one out, long-press it (in Favourites or anywhere else it shows up) and choose **Remove from favourites**. The chip only appears once you have a favourite. You can keep up to 500.
+
+The category chips are left out when the keyboard is too short for them, or in a field that can't take images. Then a **star** button sits at the end of the search bar instead: tap it to show your favourites, and again to go back.
+
+Turn on **Recent GIFs** and a **Recent** chip sits next to it, with the last 48 GIFs you sent from the panel, the newest first. It is off by default, because it keeps a record of what you sent. While [incognito](/privacy/incognito/) is on, sending a GIF does not add it to the list. Turning the setting off deletes the list.
+
+Favourites and recent GIFs are the provider's GIFs, so they normally load from the provider like any other result and need a connection. Turn on **Keep favourites on the phone** and the keyboard saves a copy of each favourite, so Favourites shows and sends with no connection, and a GIF stays even if the provider drops it. The copies download when you add a favourite or open Favourites, and only on a connection that [data saving](/privacy/data-saver/) allows. Turning the setting off deletes the copies. The favourites stay, and load from the provider again. Favourites and recent GIFs are for the GIF panel only. The sticker panel has [your own sticker packs](/emoji/stickers/) instead.
+
+Both chips sit in the category row, so they follow its rules: they go away while you type a search, and a short panel that has no room for the row has no room for them either.
+
+### Making the panel taller
+
+A short bar sits across the top of the panel. Drag it up to make the panel taller, so more rows of results show at one time, and drag it down to make it shorter. When you let go, the panel keeps that height from then on. The bar sets the same **Panel height** as the emoji settings, so the emoji and sticker panels change with it, and the three still open at one height. The panel never covers more than most of the screen, and the bar is not there while you type a search, or where the screen has no room for a taller panel.
+
+### Hiding the search while you scroll
+
+With **Hide the search when you scroll** on, scrolling down the results folds the search box and the rows of chips away, and the results get their room. Scroll back up, or pull down at the top of the results, and they come back. The panel itself stays the same height. While you type a search, the search box always shows. Off by default, and shared with the sticker tool.
+
+If neither provider has a key configured and no offline pack is installed, the panel shows a "needs an API key" notice with a shortcut into settings instead of a grid. The F-Droid build never hits that notice, since Commons is already searching.
+
+## Sending a GIF
+
+<PhoneFrame side caption="A field that can't accept images. The panel dims and shows the standing notice.">
+  <Shot id="emoji/gif-no-rich-media" alt="A field that can't accept images. The panel dims and shows the standing notice." />
+</PhoneFrame>
+
+Tap a result and it downloads and lands in the field in one step. There's no separate "insert" confirmation.
+
+You don't have to wait for one to arrive before tapping the next. Tap several in a row and they queue up: the first downloads while the rest wait, each with a small number in its corner for its place in the line, and they go out one after another in the order you tapped them. Tap a numbered GIF again to take it back out of the queue. If you leave the field before the queue is done, the GIFs still waiting are dropped rather than sent somewhere else.
+
+What happens to each one depends on what the field will accept:
+
+1. **The field doesn't take images at all.** Plain text boxes can't receive a GIF through Android's `commitContent` mechanism. The panel shows a standing notice, "This field does not accept GIFs. Try a chat app or a notes app.", and tapping a result does nothing beyond a short vibration. Nothing downloads. This is a pre-send check, not a failed attempt.
+2. **The field takes images.** The full-size file downloads and commits using a MIME type the field advertises it can accept. With <SettingsPath path="Tools / GIFs / Send GIFs as" /> set to Sticker, a WebP result first offers WhatsApp's private sticker MIME (`image/webp.wasticker`) before falling back to plain `image/webp`. Android has no official "this is a sticker" flag, so this is a best-effort convention rather than a documented API. The PNG fallback only ever applies to a WebP-format download. If the field won't take `image/webp` but does accept PNG, a still WebP is re-encoded to a still PNG rather than failing outright. An animated WebP is skipped, since a PNG can't hold the animation. A plain `image/gif` download (what most GIF-panel results actually are) has no such fallback. If the field doesn't accept `image/gif`, it goes straight to the clipboard fallback below.
+3. **Nothing matches.** If the field won't take any form the tool can produce, the file goes to the system clipboard instead, with a toast: "This app does not accept images here. The keyboard copied the image. Paste it instead." Paste it in manually from there.
+
+Animated GIFs can never actually become stickers. Android has no animated-WebP encoder, so a GIF-format result keeps sending as a plain image no matter what `Send GIFs as` is set to. Only sources that already provide WebP can take the Sticker path.
+
+## Offline GIF packs
+
+The panel can also show GIFs kept on the phone, which need no key and no connection: [CleverKeys' offline GIF packs](https://github.com/tribixbite/CleverKeys/releases/tag/CleverKeys-GIF). Download a pack in your browser, then under <SettingsPath path="Tools / GIFs / Providers" /> press **Offline GIF packs** to open its screen, press **Import** and pick the zip. **Get the files** on the same row opens the release page.
+
+Once a pack is installed the panel gains an **Offline** chip. It is a grid of its own in every provider mode, never mixed in with online results, and like the user's own sticker packs it never asks about [mobile data](/privacy/data-saver/). Search matches the words each GIF is tagged with; the category chips are the packs' own (Funny, Love, Sad and the rest), and one searches for everything filed under it. A search lists up to 240 GIFs. Tapping one sends it as any other result is sent, without a download.
+
+Only the **Discord community** packs (about 100 MB each, around 900 animated GIFs) carry GIFs to send. The **thumbnail** packs hold 80-pixel still previews and nothing else, so the import refuses them and says so. Each pack installed is listed with its size and a Delete. Importing a pack again replaces it.
+
+Everything about getting files onto a phone that cannot download is on [Using it without internet](/privacy/offline/).
+
+## Long-pressing a result
+
+Long-press a GIF instead of tapping it and a small menu opens over the grid. At its top are the GIF's name and, for a GIPHY result whose uploader GIPHY names, who made it ("by @name").
+
+- **Add to favourites** puts the GIF in the [Favourites chip](#favourites-and-recent-gifs). On a GIF that is already a favourite the row reads **Remove from favourites** and takes it out.
+- **Copy** downloads the GIF and puts it on the system clipboard, so you can paste it wherever you like rather than into the field you happen to be in. It's the same thing the fallback in step 3 above does, except you asked for it instead of finding out afterwards that the field wouldn't take the file.
+- **Report** opens a mail draft to the maintainer naming the provider, your search term, and the result's id and URL, with room at the top to say what's wrong with it. Nothing is sent from the keyboard. The draft lands in your mail app, and you can read, edit, or abandon it. KLIPY and GIPHY answer a search out of their own catalogues, so a result nobody vetted can come back. This is where that goes.
+
+Back (or tapping outside the menu) closes it without doing anything.
+
+Saving to a pack is sticker-only, since a GIF can't become one. That row shows on the [sticker panel's](/emoji/stickers/) version of this menu, not here.
+
+<PhoneFrame caption="Long-press menu over a GIF result: Copy and Report.">
+  <Shot id="emoji/gif-long-press" alt="Long-press menu over a GIF result: Copy and Report." />
+</PhoneFrame>
+
+## Options
+
+<SettingsPath path="Tools / GIFs" />
+
+GIFs are part of the **Stickers, GIFs and emoji mixes** bundle on [Extensions](/reference/settings/extensions/). One switch there takes the GIF panel off the toolbar and the toolbox along with the stickers and the mixes, and brings it back with the providers you had chosen.
+
+| Setting | Default | What it does |
+|---|---|---|
+| Providers | Depends on the build | Who the panel asks, in order: KLIPY, GIPHY, Wikimedia Commons or another MediaWiki, GifCities and offline GIF packs. Add, reorder, switch off or set up each one, and choose **Tabs**, **Mixed** or **One at a time**. See [Choosing providers](#choosing-providers). |
+| Full-screen picker | On | The toolbar, emoji row and symbol row step aside so the GIF grid gets the full keyboard height, with search moved up next to a back button. Shared with the sticker tool. |
+| GIFs per row | 3 | A slider from 1 to 6: the most GIFs side by side in a row. Fewer makes each one bigger. A row of wide GIFs can hold fewer than this. The sticker tool has its own. |
+| Gap between cells | 4 dp | A slider from 0 to 12 dp: the space around each result. Shared with the sticker tool. |
+| Panel height | Same as keyboard | How much taller than the keyboard the emoji, GIF and sticker panels open, up to 400 dp more. The same setting as <SettingsPath path="Emoji / Emoji panel / Panel height" /> and the [bar on top of the panel](#making-the-panel-taller). |
+| Remember the last search | On | Reopening the panel lands on the search and category chip it was left on. Off, it always opens on trending. Shared with the sticker tool. |
+| Hide the search when you scroll | Off | Scrolling down folds the search box and the chips away, scrolling up brings them back. See [Hiding the search while you scroll](#hiding-the-search-while-you-scroll). Shared with the sticker tool. |
+| Recent GIFs | Off | A **Recent** chip with the last 48 GIFs you sent. Turning it off deletes the list. See [Favourites and recent GIFs](#favourites-and-recent-gifs). |
+| Keep favourites on the phone | Off | Saves a copy of each favourite, so it shows and sends with no connection. Turning it off deletes the copies and keeps the favourites. |
+| Panel layout | Standard | The keys around the results. **Standard** ends the way the emoji panel ends. See [Panel layouts](/languages/custom-layouts/#panel-layouts). |
+| Send GIFs as | Image | Whether a tap tries to land the result as a sticker-style MIME first or always as a plain image. See the sticker-limitation note above. |
+| Content filter | High | Four levels (Off, Low, Medium, High) mapped to each provider's own content rating (High maps to G-rated results, Off to R). Shared with the sticker tool. |
+| Results for each search | 24 | A slider from 6 to 48. How many GIFs one search or the trending view loads. Shared with the sticker tool. |
+
+You only need one working provider for the tool to work: a KLIPY or GIPHY key, Commons (already in the list on the F-Droid build), GifCities, or an offline pack. **Send GIFs as** is only shown here, and the sticker tool's **Send stickers as** only on its own page. Each governs the panel it sits under, so neither page offers the other's setting. See [Stickers](/emoji/stickers/) for that one.
+
+## Choosing providers
+
+<SettingsPath path="Tools / GIFs / Providers" /> is the list of services the panel asks. It works like every other [provider list](/tools/providers/): drag to reorder, switch a row off to skip it, and use **Add a provider** for another one.
+
+- **KLIPY** and **GIPHY** need an API key, unless the build carries one. Paste a free key from `partner.klipy.com` or `developers.giphy.com` in the provider's setup. KLIPY replaced Tenor after Google retired Tenor's third-party API in mid-2026. The keys are shared with the sticker tool.
+- **Wikimedia Commons** needs no key. Its GIFs are mostly educational rather than reactions. Add it again with an address to search another MediaWiki as well.
+- **GifCities** needs no key. See [GifCities](#gifcities).
+- **Offline GIF packs** is the packs you imported. Its screen lists them, each with a Delete, and the row that imports more.
+
+**How to use them** decides the chip row:
+
+- **Tabs** (the default): one chip per provider, to switch between them.
+- **Mixed**: one grid that interleaves every provider evenly, with an **Online** chip for it and an **Offline** chip for your offline GIF packs. GIPHY keeps a chip and a grid of its own, because its terms forbid mixing its results with another service's.
+- **One at a time**: one grid from the first provider that answers. If it fails or finds nothing, the next one is asked. Offline packs keep their own chip.
+
+Without an offline pack or GIPHY next to another provider, Mixed and One at a time show no chip row at all.
+
+## GifCities
+
+GifCities is the Internet Archive's search over the GIFs it saved from GeoCities home pages before GeoCities closed in 2009. Add **GifCities** under <SettingsPath path="Tools / GIFs / Providers" /> and it joins the panel as one more provider, with a chip of its own in Tabs mode or mixed into the Online grid. It needs no key and no account, so it works on every build.
+
+Expect the 1990s web rather than reaction GIFs: under construction signs, spinning globes, dancing figures, animated email icons. Results smaller than 32 pixels on a side (bullets, spacers) are left out. GifCities has no trending feed, so with the search box empty it shows a search for a different classic term each day.
+
+- **What it sends.** Your search goes to `gifcities.archive.org`. Previews and the file you send load from the Wayback Machine at `web.archive.org`.
+- **No content filter.** These GIFs carry no rating, so **Content filter** has nothing to apply to them.
+- **GIFs only.** The sticker panel never offers it, and it has no category list of its own, so the panel's built-in categories stay up.
+
+## Details & edge cases
+
+- **Not pinned to the toolbar by default on a phone.** The onboarding wizard turns the GIF tool on for every persona, but a phone's out-of-the-box pinned toolbar only holds Emoji, Clipboard and Settings, so GIF sits in the [toolbox](/tools/overview/) until you drag it onto the bar or open it from there. A tablet is the exception: its wider default bar pins GIF from the start.
+- **Trending, not random.** An empty search box always shows each provider's trending feed, not a blank grid, useful as a starting point before you type a query.
+- **24 results per fetch, and you can change it.** That's the number each provider is asked for on a search or a trending call, and the **Results for each search** slider moves it anywhere from 6 to 48. In Mixed mode every provider is asked for that many and the merged grid is then cut back down to it, so the number is what the grid holds in total, not what each source contributes.
+- **Two of these rows never grow a restore button.** Settings you've moved off their shipped value normally pick up [a small restore button](/reference/settings/#putting-one-setting-back) next to the control. **Content filter** is the exception on this screen. It's drawn as a bare segmented row under a heading rather than as a full setting row, so there's nowhere for the button to sit. Put it back by picking High yourself. The provider list has **Reset to default** instead.
+- **No size cap on downloads.** Stickers cap the source file size. A GIF download has no maximum, so a very large or very long GIF still downloads in full before sending.
+- **Recently sent files are cached, not stored permanently.** Downloaded files are kept in a local cache, so re-picking the same GIF skips re-downloading it. The cache keeps only the 30 most recently touched files and deletes the rest, so it isn't a place to go looking for something you sent a while ago.
+- **Network use is opt-in and tool-scoped.** KLIPY and GIPHY are only contacted while the GIF panel is open: trending on open, live search as you type, and the download on tap. Nothing happens in the background. See [Network policy](/privacy/network/) for the full breakdown of what each online tool sends.
+
+For custom sticker packs, long-press-to-save, and the Local tab, see [Stickers](/emoji/stickers/). For the toolbar and toolbox in general, see [The toolbar](/tools/overview/).

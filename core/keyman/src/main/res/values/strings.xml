@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <!--
+      Notes shown after converting a Keyman touch layout. Each states what did
+      not survive rather than whether anything did, because "converted with
+      warnings" tells the user nothing they can act on.
+    -->
+    <!-- %1$d: how many keys lost their cycle. Keys that type keep their cycle; these are mostly keys that cycle through the symbol pages. -->
+    <plurals name="core_keyman_multitap_unconverted">
+        <item quantity="one">This keyboard has %1$d key you tap repeatedly to cycle through pages or characters. The app cannot copy this cycle, so each tap acts as the first tap.</item>
+        <item quantity="other">This keyboard has %1$d keys you tap repeatedly to cycle through pages or characters. The app cannot copy these cycles, so each tap acts as the first tap.</item>
+    </plurals>
+
+    <plurals name="core_keyman_diagonal_flicks_dropped">
+        <item quantity="one">The app removed %1$d flick. Its direction is not one of the eight compass directions.</item>
+        <item quantity="other">The app removed %1$d flicks. Their directions are not one of the eight compass directions.</item>
+    </plurals>
+
+    <plurals name="core_keyman_special_keys_dropped">
+        <item quantity="one">The app removed %1$d key. This keyboard has no key that does the same thing.</item>
+        <item quantity="other">The app removed %1$d keys. This keyboard has no keys that do the same thing.</item>
+    </plurals>
+
+    <plurals name="core_keyman_keys_type_their_labels">
+        <item quantity="one">%1$d key types the character printed on it. The original keyboard used a rule to decide what it types.</item>
+        <item quantity="other">%1$d keys type the characters printed on them. The original keyboard used rules to decide what they type.</item>
+    </plurals>
+
+
+
+    <string name="core_keyman_rules_missing">This keyboard uses rules to decide what its keys type. The app does not have those rules, so each key types the character printed on it.</string>
+
+</resources>

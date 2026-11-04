@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">Prenesena datoteka je poškodovana. Njena kontrolna vsota se ne ujema. Poskusite znova prenesti.</string>
+    <string name="core_input_cjk_download_error_http">Strežnik je vrnil status HTTP %1$s.</string>
+    <string name="core_input_cjk_download_error_network">Prenos ni uspel. Preverite povezavo in poskusite znova.</string>
+    <string name="core_input_cjk_download_error_network_detail">Prenos ni uspel: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">V vaši napravi ni dovolj prostora za shranjevanje. Najprej sprostite nekaj prostora.</string>
+    <string name="core_input_cjk_download_error_truncated">Povezava je bila med prenosom prekinjena. Pritisnite Nadaljuj za nadaljevanje.</string>
+    <string name="core_input_cjk_download_error_unavailable">Ta paket še ni na voljo.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">Tabela radikalnih kod za znake Hanzi, 29.000 znakov. Tipkovnica potrebuje ta paket za postavitvi Cangjie in Quick.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Slovar Cangjie (倉頡)</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Branja Kana iz mozc, 1,08 milijona vnosov, približno 42 MB. Tipkovnica potrebuje ta paket za pretvorbo japonščine.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Japonski slovar kana v kandži</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Tabela branja Jyutping za znake Hanzi, 163.000 vnosov. Tipkovnica potrebuje ta paket za pretvorbo kantonščine.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Kantonski slovar Jyutping</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Katere besede sledijo katerim, izračunano iz kitajskega spleta in novičarskih besedil. Priložen je slovar Pinyin. Z njim začetnice, kot je wbxh, najprej dajo 我不喜欢 in ne dveh nepovezanih besed.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Kitajski besedni pari</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Znaki in fraze Hanzi iz CC-CEDICT, 120.000 vnosov. Tipkovnica potrebuje ta paket za pretvorbo v kitajščino.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Kitajski slovar Pinyin</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Besedne zveze iz OpenCC, 50.000 vnosov, približno 1 MB. Z vklopljenimi tradicionalnimi pismenkami jih tipkovnica uporablja za zapis pravilne oblike besede, na primer 頭髮 in ne 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Tabela fraz za tradicionalne pismenke</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">Tabela vrstnega reda potez za znake Hanzi. Tipkovnica potrebuje ta paket za postavitev potez.</string>
+    <string name="core_input_cjk_pack_stroke_title">Kitajski slovar potez (笔画)</string>
+    <string name="core_input_double_pinyin_custom_label">Po meri</string>
+    <string name="core_input_double_pinyin_off_label">Izklopljeno (polni Pinyin)</string>
+    <string name="core_input_im_note_candidates">Pri nekaterih tipkah ta metoda poda seznam izbir. Tipkovnica vedno uporabi prvo izbiro.</string>
+    <string name="core_input_im_note_missing_files">Te datoteke niso bile izbrane, zato njihov del manjka: %1$s. Če jih želite vključiti, jih znova uvozite in izberite skupaj.</string>
+    <string name="core_input_im_note_module">Ta metoda uporablja vtičnik, kot je Anthy, ki ga tipkovnica ne more zagnati. Tipke, ki ga uporabljajo, tukaj ne delujejo.</string>
+    <string name="core_input_im_note_other_method">Ta metoda daje nekatere tipke drugemu načinu vnosa. Ta del tukaj ne deluje.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">Aplikacija ne more prebrati %1$d pravila črkovanja, zato ga preskoči.</item>
+        <item quantity="other">Aplikacija ne more prebrati %1$d pravil črkovanja, zato jih preskoči.</item>
+    </plurals>
+    <string name="core_input_im_note_space">Ta metoda uporablja preslednico kot tipko, na primer za ton. Tukaj preslednica vedno vnese presledek.</string>
+    <string name="core_input_im_note_truncated">Tabela je zelo velika, zato je aplikacija obdržala le njen prvi del.</string>
+    <string name="core_input_im_note_unused_files">Aplikacija ni uporabila teh datotek: %1$s.</string>
+    <string name="core_input_im_refused_broken">Datoteka vsebuje napako, zato je aplikacija ne more prebrati: %1$s</string>
+    <string name="core_input_im_refused_empty">Datoteka nima ničesar za tipkanje.</string>
+    <string name="core_input_im_refused_no_dictionary">Shema potrebuje svoj slovar. Uvozite znova in izberite tudi %1$s.</string>
+    <string name="core_input_im_refused_not_method">Aplikacija tega ne more prebrati kot način vnosa. Bere tabele .cin, sheme Rime in slovarje (.schema.yaml, .dict.yaml) ter datoteke m17n .mim.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">Aplikacija je to prebrala kot tabelo .cin z %1$d vnosom. Vnesite kodo in nato izberite znak iz vrstice s predlogi.</item>
+        <item quantity="other">Aplikacija je to prebrala kot tabelo .cin z %1$d vnosi. Vnesite kodo in nato izberite znak iz vrstice s predlogi.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">Aplikacija je to prebrala kot vnosno metodo m17n z %1$d pravilom. Tipke pišejo besedilo, ko tipkate.</item>
+        <item quantity="other">Aplikacija je to prebrala kot vnosno metodo m17n z %1$d pravili. Tipke pišejo besedilo, ko tipkate.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">Aplikacija je to prebrala kot shemo Rime z %1$d vnosom v slovarju. Vtipkajte zloge, nato izberite besede iz vrstice s predlogi.</item>
+        <item quantity="other">Aplikacija je to prebrala kot shemo Rime z %1$d vnosi v slovarju. Vtipkajte zloge, nato izberite besede iz vrstice s predlogi.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">Aplikacija je to prebrala kot kodno tabelo Rime z %1$d vnosom. Vtipkajte kodo, nato izberite znak iz vrstice s predlogi.</item>
+        <item quantity="other">Aplikacija je to prebrala kot kodno tabelo Rime z %1$d vnosi. Vtipkajte kodo, nato izberite znak iz vrstice s predlogi.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Mozcov lasten sistemski slovar s stroški povezave, segmentatorjem in filtrom predlogov. Mehanizem Mozc pretvarja s tem; vgrajen mehanizem ga ne uporablja.</string>
+    <string name="core_input_mozc_pack_title">Slovar Mozc</string>
+    <string name="core_input_rime_pack_base_subtitle">Ločila, simboli, tabela pogostosti besed ter pretvorba v poenostavljeno in tradicionalno pisavo, ki jo uporablja vsaka shema RIME. Preneseno s prvo shemo.</string>
+    <string name="core_input_rime_pack_base_title">Osnove RIME</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">RIME-ova Zhuyin shema na standardni razporeditvi tipk Dachen, s slovarjem Terra Pinyin.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">RIME-ova shema Cangjie pete generacije, znaki in besedne zveze.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Obsežen sodoben nabor poenostavljenega kitajskega besedišča za Pinjin, z različicami za dvojni Pinjin in tipkovnico z 9 tipkami. Prevajanje lahko traja minuto ali več.</string>
+    <string name="core_input_rime_pack_ice_title">Rime led (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">Shema rime-cantonese za kantonščino, s svojimi seznami besed in besednih zvez.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">RIME-ova lastna shema Pinyin, s shemo potez, po kateri išče znake.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Model za japonsko rokopisno pisanje</string>
+    <string name="core_input_zinnia_pack_subtitle">Model projekta Tegaki za zinnia, prepoznavalnik rokopisa brez povezave, ki bere kitajščino in japonščino, kjer ML Kit tega ne zmore.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Model za rokopis v poenostavljeni kitajščini</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Model za tradicionalno kitajsko rokopisno pisavo</string>
+</resources>

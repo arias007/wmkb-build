@@ -1,0 +1,222 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_ka_qwerty",
+    "name": "ქართული (Georgian)",
+    "langId": "ka",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ქ"
+            },
+            {
+              "label": "წ",
+              "shiftLabel": "ჭ",
+              "longPress": [
+                "ჭ"
+              ]
+            },
+            {
+              "label": "ე",
+              "longPress": [
+                "ჱ"
+              ]
+            },
+            {
+              "label": "რ",
+              "longPress": [
+                "ღ"
+              ]
+            },
+            {
+              "label": "ტ",
+              "shiftLabel": "თ",
+              "longPress": [
+                "თ"
+              ]
+            },
+            {
+              "label": "ყ",
+              "longPress": [
+                "ჸ"
+              ]
+            },
+            {
+              "label": "უ"
+            },
+            {
+              "label": "ი",
+              "longPress": [
+                "ჲ"
+              ]
+            },
+            {
+              "label": "ო"
+            },
+            {
+              "label": "პ"
+            }
+          ],
+          [
+            {
+              "label": "ა",
+              "longPress": [
+                "ჺ"
+              ]
+            },
+            {
+              "label": "ს",
+              "shiftLabel": "შ",
+              "longPress": [
+                "შ"
+              ]
+            },
+            {
+              "label": "დ"
+            },
+            {
+              "label": "ფ",
+              "longPress": [
+                "ჶ"
+              ]
+            },
+            {
+              "label": "გ",
+              "shiftLabel": "ღ",
+              "longPress": [
+                "ჹ"
+              ]
+            },
+            {
+              "label": "ჰ",
+              "longPress": [
+                "ჵ"
+              ]
+            },
+            {
+              "label": "ჯ",
+              "shiftLabel": "ჟ",
+              "longPress": [
+                "ჷ",
+                "ჟ"
+              ]
+            },
+            {
+              "label": "კ"
+            },
+            {
+              "label": "ლ"
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "ზ",
+              "shiftLabel": "ძ",
+              "longPress": [
+                "ძ"
+              ]
+            },
+            {
+              "label": "ხ",
+              "longPress": [
+                "ჴ"
+              ]
+            },
+            {
+              "label": "ც",
+              "shiftLabel": "ჩ",
+              "longPress": [
+                "ჩ"
+              ]
+            },
+            {
+              "label": "ვ",
+              "longPress": [
+                "ჳ"
+              ]
+            },
+            {
+              "label": "ბ"
+            },
+            {
+              "label": "ნ",
+              "longPress": [
+                "ჼ"
+              ]
+            },
+            {
+              "label": "მ"
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": ",",
+              "longPress": [
+                "!",
+                "?"
+              ],
+              "role": "Comma"
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ],
+              "role": "Period"
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Machine translated by Google Play. Do not edit by hand:
+     regenerate with tools/i18n/pull-play-translations.py. -->
+<resources>
+    <string name="core_input_cjk_download_error_checksum">Niðurhalaða skráin er skemmd. Athugunarsumma hennar passar ekki. Reyndu að hlaða niður aftur.</string>
+    <string name="core_input_cjk_download_error_http">Þjónninn skilaði HTTP stöðu %1$s.</string>
+    <string name="core_input_cjk_download_error_network">Niðurhalið tókst ekki. Athugaðu tenginguna og reyndu aftur.</string>
+    <string name="core_input_cjk_download_error_network_detail">Niðurhalið tókst ekki: %1$s</string>
+    <string name="core_input_cjk_download_error_no_space">Ekki er nægilegt geymslupláss á tækinu þínu. Losaðu um pláss fyrst.</string>
+    <string name="core_input_cjk_download_error_truncated">Tengingin rofnaði meðan á niðurhali stóð. Ýttu á Halda áfram til að halda áfram.</string>
+    <string name="core_input_cjk_download_error_unavailable">Þessi pakki er ekki tiltækur ennþá.</string>
+    <string name="core_input_cjk_pack_cangjie_subtitle">Tafla yfir róttækarkóða fyrir Hanzi-tákn, 29.000 tákn. Lyklaborðið þarf þennan pakka fyrir Cangjie og Quick skipulögin.</string>
+    <string name="core_input_cjk_pack_cangjie_title">Cangjie (倉頡) orðabók</string>
+    <string name="core_input_cjk_pack_ja_kana_subtitle">Kana-lestur frá mozc, 1,08 milljón færslur, um 42 MB. Lyklaborðið þarf þennan pakka fyrir japanska umbreytingu.</string>
+    <string name="core_input_cjk_pack_ja_kana_title">Japönsk kana yfir í kanji-orðabók</string>
+    <string name="core_input_cjk_pack_jyutping_subtitle">Tafla yfir Jyutping-framburð á Hanzi-táknum, 163.000 færslur. Lyklaborðið þarf þennan pakka fyrir kantónska umbreytingu.</string>
+    <string name="core_input_cjk_pack_jyutping_title">Kantónsk Jyutping orðabók</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_subtitle">Hvaða orð fylgja hverju, talið út frá kínverskum vef- og fréttatexta. Fylgir með Pinyin-orðabókinni. Með því gefa upphafsstafir eins og wbxh 我不喜欢 fyrst en ekki tvö ótengd orð.</string>
+    <string name="core_input_cjk_pack_pinyin_ngrams_title">Kínversk orðapör</string>
+    <string name="core_input_cjk_pack_pinyin_subtitle">Hanzi-tákn og orðasambönd úr CC-CEDICT, 120.000 færslur. Lyklaborðið þarf þennan pakka fyrir kínverska umbreytingu.</string>
+    <string name="core_input_cjk_pack_pinyin_title">Kínversk Pinyin-orðabók</string>
+    <string name="core_input_cjk_pack_s2t_phrases_subtitle">Setningar frá OpenCC, 50.000 færslur, um 1 MB. Þegar hefðbundnir stafir eru virkir notar lyklaborðið þetta til að skrifa rétta mynd orðsins, svo sem 頭髮 en ekki 頭發.</string>
+    <string name="core_input_cjk_pack_s2t_phrases_title">Töflu yfir hefðbundin tákn</string>
+    <string name="core_input_cjk_pack_stroke_subtitle">Tafla yfir strokaröð fyrir Hanzi-tákn. Lyklaborðið þarf þennan pakka fyrir strokaskipanina.</string>
+    <string name="core_input_cjk_pack_stroke_title">Kínversk strikaorðabók (笔画)</string>
+    <string name="core_input_double_pinyin_custom_label">Sérsniðið</string>
+    <string name="core_input_double_pinyin_off_label">Slökkt (fullt Pinyin)</string>
+    <string name="core_input_im_note_candidates">Fyrir suma takka gefur þessi aðferð lista yfir valkosti. Lyklaborðið notar alltaf fyrsta valkostinn.</string>
+    <string name="core_input_im_note_missing_files">Þessar skrár voru ekki valdar, svo hluti þeirra vantar: %1$s. Til að taka þær með, flyttu inn aftur og veldu þær saman.</string>
+    <string name="core_input_im_note_module">Þessi aðferð notar viðbót, eins og Anthy, sem lyklaborðið getur ekki keyrt. Lyklarnir sem nota hana gera ekkert hér.</string>
+    <string name="core_input_im_note_other_method">Þessi aðferð gefur suma takka til annarrar innsláttaraðferðar. Sá hluti virkar ekki hér.</string>
+    <plurals name="core_input_im_note_skipped_rules">
+        <item quantity="one">Forritið getur ekki lesið %1$d stafsetningarreglu, svo það sleppir henni.</item>
+        <item quantity="other">Forritið getur ekki lesið %1$d stafsetningarreglur, svo það sleppir þeim.</item>
+    </plurals>
+    <string name="core_input_im_note_space">Þessi aðferð notar bilslána sem takka, til dæmis fyrir tón. Hér slær bilsláin alltaf inn bil.</string>
+    <string name="core_input_im_note_truncated">Taflan er mjög stór, svo forritið geymdi aðeins fyrsta hlutann.</string>
+    <string name="core_input_im_note_unused_files">Forritið notaði ekki þessar skrár: %1$s.</string>
+    <string name="core_input_im_refused_broken">Skráin inniheldur villu, svo forritið getur ekki lesið hana: %1$s</string>
+    <string name="core_input_im_refused_empty">Skráin inniheldur ekkert til að skrifa með.</string>
+    <string name="core_input_im_refused_no_dictionary">Skemað þarf orðabókina sína. Flyttu inn aftur og veldu einnig %1$s.</string>
+    <string name="core_input_im_refused_not_method">Forritið getur ekki lesið þetta sem innsláttaraðferð. Það les .cin töflur, Rime-skemu og orðabækur (.schema.yaml, .dict.yaml), og m17n .mim skrár.</string>
+    <plurals name="core_input_im_summary_cin">
+        <item quantity="one">Forritið las þetta sem .cin-töflu með %1$d færslu. Sláðu inn kóða og veldu síðan stafinn af tillögustikunni.</item>
+        <item quantity="other">Forritið las þetta sem .cin-töflu með %1$d færslum. Sláðu inn kóða og veldu síðan stafinn af tillögustikunni.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_m17n">
+        <item quantity="one">Forritið las þetta sem m17n-innsláttaraðferð með %1$d reglu. Lyklarnir skrifa textann um leið og þú slærð inn.</item>
+        <item quantity="other">Forritið las þetta sem m17n-innsláttaraðferð með %1$d reglum. Lyklarnir skrifa textann um leið og þú slærð inn.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_reading">
+        <item quantity="one">Forritið las þetta sem Rime-skema með %1$d orðabókarfærslu. Sláðu inn atkvæðin og veldu síðan orðin af tillögustikunni.</item>
+        <item quantity="other">Forritið las þetta sem Rime-skema með %1$d orðabókarfærslum. Sláðu inn atkvæðin og veldu síðan orðin af tillögustikunni.</item>
+    </plurals>
+    <plurals name="core_input_im_summary_rime_table">
+        <item quantity="one">Forritið las þetta sem Rime kóðatöflu með %1$d færslu. Sláðu inn kóða og veldu síðan stafinn úr tillögustrimlinum.</item>
+        <item quantity="other">Forritið las þetta sem Rime kóðatöflu með %1$d færslum. Sláðu inn kóða og veldu síðan stafinn úr tillögustrimlinum.</item>
+    </plurals>
+    <string name="core_input_mozc_pack_subtitle">Eigin kerfisorðabók Mozc, með tengikostnaði, hluta- og tillögusíu. Mozc-vélin umbreytir með þessu; innbyggða vélin notar það ekki.</string>
+    <string name="core_input_mozc_pack_title">Mozc-orðabók</string>
+    <string name="core_input_rime_pack_base_subtitle">Greinarmerki, tákn, orðatíðnitöflur og einfölduð og hefðbundin umbreyting sem hvert RIME-skema notar. Hlaðið niður með fyrsta skemanu.</string>
+    <string name="core_input_rime_pack_base_title">RIME grunnþættir</string>
+    <string name="core_input_rime_pack_bopomofo_subtitle">Zhuyin-kerfi RIME á staðlaða Dachen-lyklaborðinu, með orðasafni Terra Pinyin.</string>
+    <string name="core_input_rime_pack_bopomofo_title">Bopomofo (注音)</string>
+    <string name="core_input_rime_pack_cangjie5_subtitle">Fimmta kynslóð Cangjie-kerfis RIME, stafir og orðasambönd.</string>
+    <string name="core_input_rime_pack_cangjie5_title">Cangjie 5 (倉頡五代)</string>
+    <string name="core_input_rime_pack_ice_subtitle">Stór, nútímalegur orðaforði fyrir einfaldaða kínversku fyrir Pinyin, með tvöföldu Pinyin og 9-takka útgáfum. Það tekur mínútu eða lengur að þýða það yfir í keyrsluhæft form.</string>
+    <string name="core_input_rime_pack_ice_title">Rime Ice (雾凇拼音)</string>
+    <string name="core_input_rime_pack_jyutping_subtitle">Rime-cantonese kerfið fyrir kantónsku, með orða- og setningalistum sínum.</string>
+    <string name="core_input_rime_pack_jyutping_title">Jyutping (粵拼)</string>
+    <string name="core_input_rime_pack_luna_pinyin_subtitle">Eigið Pinyin-skema RIME, með höggskemanu sem það flettir upp stöfum með.</string>
+    <string name="core_input_rime_pack_luna_pinyin_title">Luna Pinyin (朙月拼音)</string>
+    <string name="core_input_zinnia_ja_pack_title">Japanskt rithandarlíkan</string>
+    <string name="core_input_zinnia_pack_subtitle">Líkan Tegaki-verkefnisins fyrir zinnia, ótengda handskriftarþekkjarann sem les kínversku og japönsku þar sem ML Kit gerir það ekki.</string>
+    <string name="core_input_zinnia_zh_hans_pack_title">Handskriftarlíkan fyrir einfaldaða kínversku</string>
+    <string name="core_input_zinnia_zh_hant_pack_title">Handskriftarlíkan fyrir hefðbundna kínversku</string>
+</resources>

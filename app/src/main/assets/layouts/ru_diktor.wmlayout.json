@@ -1,0 +1,288 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_ru_diktor",
+    "name": "Диктор (Diktor)",
+    "langId": "ru",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ц",
+              "longPress": [
+                "1"
+              ]
+            },
+            {
+              "label": "ь",
+              "longPress": [
+                "2",
+                "ъ"
+              ]
+            },
+            {
+              "label": "я",
+              "longPress": [
+                "3",
+                ",",
+                "я́"
+              ]
+            },
+            {
+              "label": "з",
+              "longPress": [
+                "4",
+                "."
+              ]
+            },
+            {
+              "label": "в",
+              "longPress": [
+                "5"
+              ]
+            },
+            {
+              "label": "к",
+              "longPress": [
+                "6"
+              ]
+            },
+            {
+              "label": "д",
+              "longPress": [
+                "7"
+              ]
+            },
+            {
+              "label": "ч",
+              "longPress": [
+                "8"
+              ]
+            },
+            {
+              "label": "ш",
+              "longPress": [
+                "9"
+              ]
+            },
+            {
+              "label": "щ",
+              "longPress": [
+                "0",
+                "ў"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "у",
+              "longPress": [
+                "@",
+                "у́",
+                "ў",
+                "ү",
+                "ү́"
+              ]
+            },
+            {
+              "label": "и",
+              "longPress": [
+                "#",
+                "и́",
+                "і",
+                "ї",
+                "і́"
+              ]
+            },
+            {
+              "label": "е",
+              "longPress": [
+                "$",
+                "ё",
+                "е́",
+                "ѣ"
+              ]
+            },
+            {
+              "label": "о",
+              "longPress": [
+                "_",
+                "о́",
+                "ө",
+                "ө́"
+              ]
+            },
+            {
+              "label": "а",
+              "longPress": [
+                "&",
+                "а́"
+              ]
+            },
+            {
+              "label": "л",
+              "longPress": [
+                "-"
+              ]
+            },
+            {
+              "label": "н",
+              "longPress": [
+                "+",
+                "ң"
+              ]
+            },
+            {
+              "label": "т",
+              "longPress": [
+                "("
+              ]
+            },
+            {
+              "label": "с",
+              "longPress": [
+                ")"
+              ]
+            },
+            {
+              "label": "р"
+            },
+            {
+              "label": "й",
+              "longPress": [
+                "/"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "ф",
+              "longPress": [
+                "*",
+                "ѳ"
+              ]
+            },
+            {
+              "label": "э",
+              "longPress": [
+                "\"",
+                "э́",
+                "є"
+              ]
+            },
+            {
+              "label": "х",
+              "longPress": [
+                "'"
+              ]
+            },
+            {
+              "label": "ы",
+              "longPress": [
+                ":",
+                "ы́"
+              ]
+            },
+            {
+              "label": "ю",
+              "longPress": [
+                ";",
+                "ю́"
+              ]
+            },
+            {
+              "label": "б",
+              "longPress": [
+                "!"
+              ]
+            },
+            {
+              "label": "м",
+              "longPress": [
+                "?"
+              ]
+            },
+            {
+              "label": "п"
+            },
+            {
+              "label": "г",
+              "longPress": [
+                "ґ"
+              ]
+            },
+            {
+              "label": "ж"
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": ",",
+              "longPress": [
+                "!",
+                "?"
+              ],
+              "role": "Comma"
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ],
+              "role": "Period"
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

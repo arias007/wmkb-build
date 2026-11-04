@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================================================================
+         Snippets screen: the template-variable reference card and the
+         dialog that creates or edits one snippet.
+         =================================================================== -->
+
+    <!-- Stands in for the name of the app in the preview of a snippet. -->
+    <string name="rows_snippet_preview_app_name">this app</string>
+
+    <!-- Shown under a template variable. %1$s is the value the variable
+         produces, for example a date or a piece of text. -->
+    <string name="rows_snippet_variable_example">For example: %1$s</string>
+    <!-- Example value for the {clip} variable. -->
+    <string name="rows_snippet_sample_clip">the last text you copied</string>
+    <!-- Example value for the {selection} variable. -->
+    <string name="rows_snippet_sample_selection">the text you selected</string>
+    <!-- Example value for the {cursor} variable, which inserts no text. -->
+    <string name="rows_snippet_sample_cursor">nothing. The cursor moves to this point</string>
+
+    <string name="rows_snippet_new_title">New snippet</string>
+    <string name="rows_snippet_edit_title">Edit snippet</string>
+    <string name="rows_snippet_unsaved_title">Save this snippet?</string>
+    <string name="rows_snippet_unsaved_body">You changed this snippet and did not save it. If you leave now, the changes are lost.</string>
+    <string name="rows_snippet_unsaved_discard">Discard</string>
+    <string name="rows_snippet_label_label">Label</string>
+    <!-- Text field label. The names in braces are variable tokens the user
+         types. Keep them exactly as they are. -->
+    <string name="rows_snippet_text_label">Text (supports {date} {time} {clip} {app} {cursor} …)</string>
+    <!-- Every word or phrase that expands this snippet. The user types one and
+         presses enter to add it; each becomes a small removable chip. -->
+    <string name="rows_snippet_triggers_label">Triggers (optional)</string>
+    <string name="rows_snippet_triggers_body">Type a trigger and press the + button next to the box to add it. A comma or the enter key adds it too, and you can add as many as you like without saving in between. The keyboard expands the snippet when you type any of them on its own. A trigger may start with punctuation, as in :shrug, and it may hold spaces, as in gr db. It must end in a word.</string>
+    <!-- The X on a chip. %1$s is the word or tag the chip holds. -->
+    <string name="rows_snippet_chip_remove_desc">Remove %1$s</string>
+    <!-- Read out for the + button that adds what is typed to the list above
+         it. %1$s is the name of the box, such as "Triggers (optional)". -->
+    <string name="rows_snippet_chip_add_desc">Add to %1$s</string>
+    <!-- Shown when the user adds more triggers than the app keeps. %1$d is how
+         many it keeps, and is also what picks the form. -->
+    <plurals name="rows_snippet_triggers_capped_error">
+        <item quantity="one">The app keeps the first %1$d trigger.</item>
+        <item quantity="other">The app keeps the first %1$d triggers.</item>
+    </plurals>
+
+    <!-- The list of texts one snippet can insert. The first is the default. -->
+    <string name="rows_snippet_expansions_label">Expansions</string>
+    <string name="rows_snippet_expansions_body">The first one is the default. Add more and the keyboard offers all of them on the suggestion bar.</string>
+    <string name="rows_snippet_expansion_default_label">Default</string>
+    <string name="rows_snippet_expansion_empty_label">Empty</string>
+    <string name="rows_snippet_expansion_add_action">Add expansion</string>
+
+    <!-- Per-snippet answer to the app-wide setting of the same name. -->
+    <string name="rows_snippet_multi_expand_label">When this snippet has several expansions</string>
+    <!-- %1$s is the choice the app-wide setting is on, such as "Chips only". -->
+    <string name="rows_snippet_multi_expand_default_label">App setting (%1$s)</string>
+    <!-- One line under the "App setting" option in a snippet's expansions picker. -->
+    <string name="rows_snippet_multi_expand_default_desc">This snippet follows the setting in Snippets</string>
+
+    <!-- Snippets this one points at. Typing its trigger offers them too. -->
+    <string name="rows_snippet_linked_label">Linked snippets</string>
+    <string name="rows_snippet_linked_body">Typing this snippet\'s trigger offers these snippets as well. Use it to put every continent under \"continent\", or every address under \"address\".</string>
+    <string name="rows_snippet_linked_add_action">Add linked snippet</string>
+    <!-- %1$s is a list of snippet names, separated by commas. -->
+    <string name="rows_snippet_linked_from_label">Linked from: %1$s</string>
+    <string name="rows_snippet_linked_picker_title">Choose snippets</string>
+    <string name="rows_snippet_linked_picker_empty">No other snippet matches.</string>
+
+    <!-- Free words the user files a snippet under, to find it again. -->
+    <string name="rows_snippet_tags_label">Tags (optional)</string>
+    <string name="rows_snippet_tags_body">Type a tag and press the + button next to the box to add it. A comma or the enter key adds it too. Tags help you find a snippet in a long list.</string>
+
+    <!-- Carrying the trigger's own capitals into what it expands to. -->
+    <string name="rows_snippet_propagate_case_label">Match the trigger\'s capitals</string>
+    <string name="rows_snippet_propagate_case_body">Typing the trigger in capitals expands to capitals. Useful for snippets that fix ordinary words rather than codes.</string>
+    <!-- Caption over the choice of which letters get the capitals. -->
+    <string name="rows_snippet_case_style_label">Which letters to make capitals</string>
+    <string name="rows_snippet_case_first_label">First letter</string>
+    <string name="rows_snippet_case_words_label">Every word</string>
+    <string name="rows_snippet_case_all_label">All capitals</string>
+
+    <!-- Which folder the snippet goes in. The first choice means no folder. -->
+    <string name="rows_snippet_folder_label">Folder</string>
+    <string name="rows_snippet_folder_none_label">None</string>
+
+    <!-- The two ways a snippet can expand as the user types. -->
+    <!-- Caption over that choice. -->
+    <string name="rows_snippet_mode_label">What starts the snippet</string>
+    <!-- Descriptions of the two ways a snippet starts. -->
+    <string name="rows_snippet_mode_word_desc">The snippet expands when you type one of its trigger words</string>
+    <string name="rows_snippet_mode_pattern_desc">The snippet expands when the words before the cursor match a pattern that you write</string>
+    <string name="rows_snippet_mode_word_label">Word</string>
+    <string name="rows_snippet_mode_pattern_label">Pattern</string>
+
+    <!-- Heading over the whole section: the trigger words, or the pattern. -->
+    <string name="rows_snippet_trigger_group_label">Trigger</string>
+    <string name="rows_snippet_pattern_label">Pattern</string>
+    <!-- The symbols in this line are code. Keep them exactly as they are. -->
+    <string name="rows_snippet_pattern_body">A pattern matches the words before the cursor. Write (.+) where the text changes, then put $1 in the text above to use what it matched.</string>
+    <string name="rows_snippet_pattern_error">The app cannot read this pattern.</string>
+    <string name="rows_snippet_pattern_slow_info">This pattern does not start with a plain word, so the keyboard tries it after every word that you type. Start it with a word to make it faster.</string>
+    <string name="rows_snippet_pattern_stopped_error">This pattern takes too long. The keyboard stops it. Make it more simple.</string>
+
+    <string name="rows_snippet_words_label">Words to match</string>
+    <string name="rows_snippet_words_body">The largest number of words before the cursor that this pattern can replace.</string>
+
+    <!-- Per-snippet switch: expand on its own, or wait to be tapped. -->
+    <string name="rows_snippet_confirm_label">Ask before it expands</string>
+    <string name="rows_snippet_confirm_body">The keyboard shows the snippet on the suggestion bar and writes it only when you tap it. Your own words stay as you typed them if you do not.</string>
+
+    <!-- Per-snippet switch: expand on the trigger's last letter, with no space after it. -->
+    <string name="rows_snippet_immediate_label">Expand immediately</string>
+    <string name="rows_snippet_immediate_body">The snippet replaces the trigger as soon as you type its last letter. You do not need a space. Press backspace once to get the trigger back. To keep a trigger as text, type the escape character, a backslash by default, just before it.</string>
+    <string name="rows_snippet_inside_words_label">Also inside words</string>
+    <string name="rows_snippet_inside_words_body">The trigger also works in the middle of a word. If this is off, it works only at the start of a word.</string>
+
+    <string name="rows_snippet_test_label">Try it</string>
+    <string name="rows_snippet_test_body">Type what you would type on the keyboard. The result shows here.</string>
+    <string name="rows_snippet_test_no_match_label">The pattern does not match this text.</string>
+    <!-- %1$s is the text that the snippet inserts for the trial text above. -->
+    <string name="rows_snippet_test_result_label">Result: %1$s</string>
+
+    <!-- ===================================================================
+         Rows screen: which rows sit above the keys, and in what order.
+         =================================================================== -->
+
+    <!-- The strip entry when the tools share it. With the tools on a row of
+         their own, the strip is suggestions alone and takes the title below. -->
+    <string name="rows_bar_topbar_title">Suggestions and toolbar</string>
+    <string name="rows_bar_topbar_suggestions_title">Suggestions</string>
+    <!-- The entry that stands for the keys themselves in the row order. -->
+    <string name="rows_bar_keyboard_title">Keyboard</string>
+    <string name="rows_bar_emoji_title">Emoji row</string>
+    <string name="rows_bar_fancy_title">Fancy text styles</string>
+    <string name="rows_bar_tools_title">Tools row</string>
+    <string name="rows_bar_tools_button_subtitle">Behind the arrow button on the suggestion strip</string>
+    <string name="rows_bar_fancy_off_subtitle">Shown while Fancy text is on</string>
+    <string name="rows_bar_emoji_off_subtitle">Off. Turn it on in Emoji settings</string>
+    <string name="rows_bar_emoji_button_subtitle">Behind a toolbar button</string>
+    <!-- Row order status: how many keyboard modes show, hide or restyle the row differently from its global setting. %1$d is the count. -->
+    <plurals name="rows_bar_mode_overrides">
+        <item quantity="one">Changed by %1$d mode</item>
+        <item quantity="other">Changed by %1$d modes</item>
+    </plurals>
+    <!-- Above the chips naming the keyboard modes that override a row's global setting. -->
+    <string name="rows_mode_overrides_caption">These keyboard modes set this row their own way while they are active. Tap one to change it.</string>
+    <!-- One chip per overriding mode. %1$s is the mode's name, %2$s what it sets the row to (On, Off, Button, Own row). -->
+    <string name="rows_mode_override_chip">%1$s: %2$s</string>
+
+    <string name="rows_symbol_row_title">Symbol row</string>
+    <string name="rows_symbol_row_subtitle">A row of special characters and snippets above the keys</string>
+    <string name="rows_symbol_row_info">The row shows one symbol set at a time. It can be @gmail.com and similar for email, https:// for the web, or brackets for coding. The chip at the left edge of the row changes the set. A keyboard mode can select a set for each app automatically.</string>
+    <string name="rows_symbol_row_height_title">Symbol row height</string>
+    <string name="rows_symbol_row_height_subtitle">How tall the symbol row is</string>
+    <string name="rows_symbol_row_height_info">The number row has its own height setting under Layout &amp; size. This is the same setting for the symbol row, so you can make the two rows match, or make this one shorter to give the keys below more room.</string>
+    <string name="rows_symbol_row_lines_title">Lines of symbols</string>
+    <string name="rows_symbol_row_lines_subtitle">How many lines the symbol row stacks</string>
+    <string name="rows_symbol_row_lines_info">Each line is one symbol row height tall and shows the next entries of the set, so more of a set is on screen without a scroll. The row keeps its picker at the left edge whatever the count.</string>
+    <string name="rows_symbol_row_scroll_title">Scrolling</string>
+    <string name="rows_symbol_row_scroll_subtitle">How the lines move when you scroll sideways</string>
+    <string name="rows_symbol_row_scroll_together_label">Together</string>
+    <string name="rows_symbol_row_scroll_separate_label">Each line alone</string>
+    <string name="rows_symbol_row_scroll_together_desc">The lines move as one grid. A scroll on any line moves all of them.</string>
+    <string name="rows_symbol_row_scroll_separate_desc">Each line scrolls on its own, so one line can be at its start while another is at its end.</string>
+
+    <string name="rows_fancy_title">Fancy text</string>
+    <string name="rows_fancy_subtitle">Type in 𝐛𝐨𝐥𝐝, 𝘪𝘵𝘢𝘭𝘪𝘤, 𝔉𝔯𝔞𝔨𝔱𝔲𝔯 and other Unicode styles, picked from a row above the keys</string>
+    <string name="rows_fancy_info">This switches the keyboard to the Fancy text layout and back, the same as the Fancy text tool on the toolbar. While it is on, a row of styles sits above the keys; the Normal style at its start types plain letters again. Turning it off returns to the language you were typing in and takes Fancy text out of the language list, unless the tool\'s "Keep the language after you turn it off" option is on.</string>
+
+    <string name="rows_dictionary_bar_title">Dictionary bar</string>
+    <string name="rows_dictionary_bar_subtitle">A row of chips above the keys that turns each dictionary on or off</string>
+    <string name="rows_dictionary_bar_info">The bar lists every dictionary on the device: each language\'s word list, its emoji keywords, and every word list that you imported. A coloured chip is on; tap it to turn that dictionary off, and tap again to turn it back on. The chip at the left edge of the bar filters the row to one language, or shows all of them. The same switches live on each language\'s own settings screen.</string>
+
+    <string name="rows_recent_words_placement_title">Where the recent words go</string>
+    <string name="rows_recent_words_placement_row">A row of their own</string>
+    <string name="rows_recent_words_placement_inline">At the start of the strip</string>
+    <string name="rows_recent_words_placement_info">A row of their own sits in the row order above, over the suggestion strip unless you move it, and keeps the strip\'s full width for the suggestions. At the start of the strip, the recent words take its left end and the suggestions follow them, so the keyboard never grows for them.</string>
+    <string name="rows_recent_words_steady_title">Keep the row\'s height</string>
+    <string name="rows_recent_words_steady_subtitle">The row stays while it is empty, so the keyboard doesn\'t change height between messages</string>
+    <string name="rows_recent_words_steady_info">Without this, the row is there only while it has words to show, so the keyboard grows by it after your first word and shrinks again when a chat app empties the box on send. With it on, the row keeps its place empty instead.</string>
+
+    <string name="rows_row_order_title">Row order</string>
+    <string name="rows_row_order_caption">The rows stack from top to bottom in this order. Rows above Keyboard sit over the keys, rows below it sit under them. A hidden row keeps its slot.</string>
+    <string name="rows_move_up_desc">Move up</string>
+    <string name="rows_move_down_desc">Move down</string>
+
+    <!-- ===================================================================
+         Symbol sets: the list on the Rows screen, and the set editor.
+         =================================================================== -->
+
+    <string name="rows_symbol_sets_title">Symbol sets</string>
+    <string name="rows_symbol_sets_caption">A checked set appears in the picker of the symbol row. When you edit a built-in set, the modes that use it keep its name. Reset a set to get the built-in characters back.</string>
+    <string name="rows_symbol_set_new_title">New symbol set</string>
+    <string name="rows_symbol_set_edit_builtin_desc">Edit built-in set</string>
+    <string name="rows_symbol_set_edit_desc">Edit set</string>
+
+    <!-- Shown at the top of the editor for a set that ships with the app.
+         %1$s is the name of that set, for example Email or Coding. -->
+    <string name="rows_symbol_set_builtin_caption">This is a built-in set. Your changes override it. Everything that uses “%1$s” gets your changes. Press reset to get the original set back.</string>
+    <string name="rows_symbol_set_name_label">Name</string>
+    <string name="rows_symbol_set_chars_label">Characters and snippets</string>
+    <string name="rows_symbol_set_chars_hint">Put a space between entries. An entry is one character (© § →) or a whole snippet (@gmail.com https://).</string>
+    <string name="rows_symbol_set_popups_title">Press and hold</string>
+    <string name="rows_symbol_set_popups_caption">Select an entry, then type the characters and snippets it offers when you press and hold it. The entries with a popup show a count.</string>
+    <string name="rows_symbol_set_popups_empty">Add entries above to give them a popup.</string>
+    <!-- %1$s is the entry the popup belongs to, for example @ or https:// -->
+    <string name="rows_symbol_set_popup_label">Popup of %1$s</string>
+    <string name="rows_symbol_set_popup_hint">Put a space between entries. A tap on the entry itself types it. The first one here is what a press and release types.</string>
+    <string name="rows_symbol_set_reset_action">Reset set</string>
+    <string name="rows_symbol_set_delete_action">Delete set</string>
+    <!-- Name given to a new set when the user leaves the name box empty. -->
+    <string name="rows_symbol_set_default_name">My set</string>
+
+    <!-- ===================================================================
+         Keyboard modes: the one-line recap of when a mode switches on, and
+         the names of the field types a mode can bind to.
+         =================================================================== -->
+
+    <!-- How many apps a mode is bound to. %1$d is the count. -->
+    <plurals name="rows_mode_bindings_apps">
+        <item quantity="one">%1$d app</item>
+        <item quantity="other">%1$d apps</item>
+    </plurals>
+    <!-- %1$s is a list of field type names in lower case, separated by commas. -->
+    <string name="rows_mode_bindings_fields">%1$s fields</string>
+    <!-- How many hint texts a mode is bound to. %1$d is the count. -->
+    <plurals name="rows_mode_bindings_hints">
+        <item quantity="one">%1$d hint</item>
+        <item quantity="other">%1$d hints</item>
+    </plurals>
+    <string name="rows_mode_bindings_device">device or time condition</string>
+    <string name="rows_mode_bindings_manual">Manual only, from the Modes tool</string>
+    <!-- %1$s lists what makes the mode switch on, for example "2 apps + email fields". -->
+    <string name="rows_mode_bindings_auto">Automatic: %1$s</string>
+
+    <string name="rows_mode_field_password_label">Password</string>
+    <string name="rows_mode_field_email_label">Email</string>
+    <string name="rows_mode_field_url_label">URL</string>
+    <string name="rows_mode_field_number_label">Number</string>
+    <string name="rows_mode_field_phone_label">Phone</string>
+    <string name="rows_mode_field_text_label">Text</string>
+    <string name="rows_mode_field_notification_reply_label">Notification replies</string>
+    <string name="rows_mode_field_multiline_label">Multi-line text</string>
+    <string name="rows_mode_field_single_line_label">Single-line text</string>
+    <!-- Fields that asked the keyboard to show no word suggestions, for
+         example a code editor. -->
+    <string name="rows_mode_field_no_suggestions_label">No suggestions</string>
+    <!-- Fields whose Enter key the app labels Send, Search, Go or Done. -->
+    <string name="rows_mode_field_send_key_label">Send key</string>
+    <string name="rows_mode_field_search_key_label">Search key</string>
+    <string name="rows_mode_field_go_key_label">Go key</string>
+    <string name="rows_mode_field_done_key_label">Done key</string>
+
+    <!-- The same field type names, written the way they read inside a
+         sentence such as "Automatic: email, password fields". -->
+    <string name="rows_mode_field_password_lowercase_label">password</string>
+    <string name="rows_mode_field_email_lowercase_label">email</string>
+    <string name="rows_mode_field_url_lowercase_label">URL</string>
+    <string name="rows_mode_field_number_lowercase_label">number</string>
+    <string name="rows_mode_field_phone_lowercase_label">phone</string>
+    <string name="rows_mode_field_text_lowercase_label">text</string>
+    <string name="rows_mode_field_notification_reply_lowercase_label">notification replies</string>
+    <string name="rows_mode_field_multiline_lowercase_label">multi-line text</string>
+    <string name="rows_mode_field_single_line_lowercase_label">single-line text</string>
+    <string name="rows_mode_field_no_suggestions_lowercase_label">no-suggestions</string>
+    <string name="rows_mode_field_send_key_lowercase_label">Send key</string>
+    <string name="rows_mode_field_search_key_lowercase_label">Search key</string>
+    <string name="rows_mode_field_go_key_lowercase_label">Go key</string>
+    <string name="rows_mode_field_done_key_lowercase_label">Done key</string>
+
+    <!-- ===================================================================
+         Reorder dialog: drag rows into the order the user wants.
+         =================================================================== -->
+
+    <string name="rows_reorder_caption">Drag the handles to change the order. The item at the top of the list comes first.</string>
+    <!-- Position of a row in the list. %1$d is the number, counted from 1. -->
+    <string name="rows_reorder_position_label">%1$d.</string>
+    <!-- Screen reader label for the drag handle. %1$s is the name of the row. -->
+    <string name="rows_reorder_handle_desc">Reorder %1$s</string>
+    <!-- Screen reader label for the bin that removes a row from the list.
+         %1$s is the name of the row. -->
+    <string name="rows_reorder_remove_desc">Remove %1$s</string>
+    <string name="rows_reorder_empty_subtitle">Select two or more items above to set an order</string>
+
+    <string name="rows_reset_order_title">Reset row order</string>
+
+    <!-- The row that appears while text is selected (see Advanced ->
+         Selection macros). Its subtitle says "Suggestion strip" when the
+         feature is on but drawing over the strip, where this row is unused. -->
+    <string name="rows_bar_macros_title">Selection actions</string>
+    <string name="rows_bar_macros_strip_subtitle">On the suggestion strip</string>
+    <string name="rows_bar_stickers_title">Sticker suggestions</string>
+    <!-- Status under the sticker row in the row order list. The row is only there while something typed matches a sticker. -->
+    <string name="rows_bar_stickers_subtitle">Shows when what you type matches one of your stickers</string>
+    <string name="rows_bar_stickers_button_subtitle">Opens from the sticker chip on the suggestion strip</string>
+
+</resources>

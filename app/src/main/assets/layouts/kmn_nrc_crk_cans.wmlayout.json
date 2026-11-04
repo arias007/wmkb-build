@@ -1,0 +1,5563 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_kmn_nrc_crk_cans",
+    "name": "ᓀᐦᐃᔭᐍᐏᐣ (Cree Syllabics)",
+    "langId": "crk-Cans",
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:wV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᐃ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1403"
+              }
+            },
+            {
+              "label": "ᐄ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1404"
+              }
+            },
+            {
+              "label": "ᐆ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1406"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᐋ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_140B"
+              }
+            },
+            {
+              "label": "ᐊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_140A"
+              }
+            },
+            {
+              "label": "ᐅ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1405"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᐁ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1401"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:wV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᐏ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_140F"
+              }
+            },
+            {
+              "label": "ᐑ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1411"
+              }
+            },
+            {
+              "label": "ᐕ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1415"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᐚ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_141A"
+              }
+            },
+            {
+              "label": "ᐘ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1418"
+              }
+            },
+            {
+              "label": "ᐓ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1413"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᐍ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_140D"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:pV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pwV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᐱ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1431"
+              }
+            },
+            {
+              "label": "ᐲ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1432"
+              }
+            },
+            {
+              "label": "ᐴ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1434"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᐹ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1439"
+              }
+            },
+            {
+              "label": "ᐸ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1438"
+              }
+            },
+            {
+              "label": "ᐳ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1433"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᐯ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_142F"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:pwV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᐽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_143D"
+              }
+            },
+            {
+              "label": "ᐿ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_143F"
+              }
+            },
+            {
+              "label": "ᑃ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1443"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᑇ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1447"
+              }
+            },
+            {
+              "label": "ᑅ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1445"
+              }
+            },
+            {
+              "label": "ᑁ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1441"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᐻ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_143B"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "k:pV"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:tV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:twV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᑎ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_144E"
+              }
+            },
+            {
+              "label": "ᑏ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_144F"
+              }
+            },
+            {
+              "label": "ᑑ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1451"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᑖ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1456"
+              }
+            },
+            {
+              "label": "ᑕ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1455"
+              }
+            },
+            {
+              "label": "ᑐ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1450"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᑌ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_144C"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:twV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᑚ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_145A"
+              }
+            },
+            {
+              "label": "ᑜ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_145C"
+              }
+            },
+            {
+              "label": "ᑠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1460"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᑤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1464"
+              }
+            },
+            {
+              "label": "ᑢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1462"
+              }
+            },
+            {
+              "label": "ᑞ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_145E"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᑘ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1458"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "k:tV"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:kV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kwV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᑭ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_146D"
+              }
+            },
+            {
+              "label": "ᑮ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_146E"
+              }
+            },
+            {
+              "label": "ᑰ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1470"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᑳ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1473"
+              }
+            },
+            {
+              "label": "ᑲ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1472"
+              }
+            },
+            {
+              "label": "ᑯ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_146F"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᑫ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_146B"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:kwV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᑷ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1477"
+              }
+            },
+            {
+              "label": "ᑹ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1479"
+              }
+            },
+            {
+              "label": "ᑽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_147D"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᒁ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1481"
+              }
+            },
+            {
+              "label": "ᑿ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_147F"
+              }
+            },
+            {
+              "label": "ᑻ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_147B"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᑵ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1475"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "k:kV"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:cV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cwV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᒋ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_148B"
+              }
+            },
+            {
+              "label": "ᒌ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_148C"
+              }
+            },
+            {
+              "label": "ᒎ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_148E"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᒑ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1491"
+              }
+            },
+            {
+              "label": "ᒐ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1490"
+              }
+            },
+            {
+              "label": "ᒍ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_148D"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᒉ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1489"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:cwV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᒕ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1495"
+              }
+            },
+            {
+              "label": "ᒗ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1497"
+              }
+            },
+            {
+              "label": "ᒛ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_149B"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᒟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_149F"
+              }
+            },
+            {
+              "label": "ᒝ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_149D"
+              }
+            },
+            {
+              "label": "ᒙ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1499"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᒓ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1493"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "k:cV"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:mV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mwV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᒥ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14A5"
+              }
+            },
+            {
+              "label": "ᒦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14A6"
+              }
+            },
+            {
+              "label": "ᒨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14A8"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᒫ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14AB"
+              }
+            },
+            {
+              "label": "ᒪ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14AA"
+              }
+            },
+            {
+              "label": "ᒧ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14A7"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᒣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14A3"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:mwV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᒯ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14AF"
+              }
+            },
+            {
+              "label": "ᒱ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14B1"
+              }
+            },
+            {
+              "label": "ᒵ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14B5"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᒹ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14B9"
+              }
+            },
+            {
+              "label": "ᒷ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14B7"
+              }
+            },
+            {
+              "label": "ᒳ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14B3"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᒭ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14AD"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "k:mV"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:nV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nwV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᓂ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14C2"
+              }
+            },
+            {
+              "label": "ᓃ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14C3"
+              }
+            },
+            {
+              "label": "ᓅ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14C5"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᓈ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14C8"
+              }
+            },
+            {
+              "label": "ᓇ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14C7"
+              }
+            },
+            {
+              "label": "ᓄ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14C4"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᓀ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14C0"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:nwV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᣆ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_18C6"
+              }
+            },
+            {
+              "label": "ᣈ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_18C8"
+              }
+            },
+            {
+              "label": "ᣌ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_18CC"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᓎ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14CE"
+              }
+            },
+            {
+              "label": "ᓌ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14CC"
+              }
+            },
+            {
+              "label": "ᣊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_18CA"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᓊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14CA"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "k:nV"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:sV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:swV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᓯ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EF"
+              }
+            },
+            {
+              "label": "ᓰ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14F0"
+              }
+            },
+            {
+              "label": "ᓲ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14F2"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᓵ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14F5"
+              }
+            },
+            {
+              "label": "ᓴ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14F4"
+              }
+            },
+            {
+              "label": "ᓱ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14F1"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᓭ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14ED"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:swV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᓹ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14F9"
+              }
+            },
+            {
+              "label": "ᓻ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14FB"
+              }
+            },
+            {
+              "label": "ᓿ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14FF"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᔃ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1503"
+              }
+            },
+            {
+              "label": "ᔁ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1501"
+              }
+            },
+            {
+              "label": "ᓽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14FD"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᓷ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14F7"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "k:sV"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:yV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:ywV",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᔨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1528"
+              }
+            },
+            {
+              "label": "ᔩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1529"
+              }
+            },
+            {
+              "label": "ᔫ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_152B"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᔮ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_152E"
+              }
+            },
+            {
+              "label": "ᔭ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_152D"
+              }
+            },
+            {
+              "label": "ᔪ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_152A"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᔦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1526"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "letters"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "k:ywV": {
+        "rows": [
+          [
+            {
+              "label": "ᕽ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_157D"
+              }
+            },
+            {
+              "label": "ᒼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:mV",
+                "id": "U_14BC"
+              }
+            },
+            {
+              "label": "ᐣ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:nV",
+                "id": "U_1423"
+              }
+            },
+            {
+              "label": "ᐩ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:yV",
+                "id": "U_1429"
+              }
+            },
+            {
+              "label": "ᐤ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1424"
+              }
+            },
+            {
+              "label": "ᔲ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1532"
+              }
+            },
+            {
+              "label": "ᔴ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1534"
+              }
+            },
+            {
+              "label": "ᔸ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1538"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓬ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_14EC"
+              }
+            },
+            {
+              "label": "ᑊ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:pV",
+                "id": "U_144A"
+              }
+            },
+            {
+              "label": "ᐠ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:kV",
+                "id": "U_1420"
+              }
+            },
+            {
+              "label": "ᐢ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:sV",
+                "id": "U_1422"
+              }
+            },
+            {
+              "label": "ᔼ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_153C"
+              }
+            },
+            {
+              "label": "ᔺ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_153A"
+              }
+            },
+            {
+              "label": "ᔶ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1536"
+              }
+            },
+            {
+              "label": "ᕒ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1552"
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              }
+            },
+            {
+              "label": "ᐨ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:cV",
+                "id": "U_1428"
+              }
+            },
+            {
+              "label": "ᐟ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "k:tV",
+                "id": "U_141F"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_202F"
+              },
+              "width": 2.15
+            },
+            {
+              "label": "ᔰ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1530"
+              }
+            },
+            {
+              "label": "ᐦ",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_1426"
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "symbols"
+              }
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4.45
+            },
+            {
+              "label": "᙮",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "nextLayer": "letters",
+                "id": "U_166E",
+                "longPress": [
+                  {
+                    "id": "U_003F"
+                  },
+                  {
+                    "id": "U_00AB"
+                  },
+                  {
+                    "id": "U_002C"
+                  },
+                  {
+                    "id": "U_00BB"
+                  },
+                  {
+                    "id": "U_002E"
+                  },
+                  {
+                    "id": "U_0021"
+                  }
+                ]
+              },
+              "longPress": [
+                "?",
+                "«",
+                ",",
+                "»",
+                ".",
+                "!"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              }
+            }
+          ]
+        ],
+        "keymanFrames": {
+          "K_BKSP": {
+            "vkey": 8,
+            "nextLayer": "k:yV"
+          },
+          "K_SPACE": {
+            "vkey": 32,
+            "nextLayer": "letters"
+          },
+          "K_ENTER": {
+            "vkey": 13,
+            "nextLayer": "letters"
+          }
+        }
+      },
+      "symbols": {
+        "rows": [
+          [
+            {
+              "label": "1",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 49
+              }
+            },
+            {
+              "label": "2",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 50
+              }
+            },
+            {
+              "label": "3",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 51
+              }
+            },
+            {
+              "label": "4",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 52
+              }
+            },
+            {
+              "label": "5",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 53
+              }
+            },
+            {
+              "label": "6",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 54
+              }
+            },
+            {
+              "label": "7",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 55
+              }
+            },
+            {
+              "label": "8",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 56
+              }
+            },
+            {
+              "label": "9",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 57
+              }
+            },
+            {
+              "label": "0",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 48
+              }
+            }
+          ],
+          [
+            {
+              "label": "@",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 50,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "#",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 51,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "$",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 52,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "&",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 55,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "_",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 189,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "-",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 189
+              }
+            },
+            {
+              "label": "(",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 57,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "vkey": 219
+                  },
+                  {
+                    "vkey": 188,
+                    "modifiers": 16
+                  },
+                  {
+                    "vkey": 219,
+                    "modifiers": 16
+                  }
+                ]
+              },
+              "longPress": [
+                "[",
+                "<",
+                "{"
+              ]
+            },
+            {
+              "label": ")",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 48,
+                "modifiers": 16,
+                "longPress": [
+                  {
+                    "vkey": 221
+                  },
+                  {
+                    "vkey": 190,
+                    "modifiers": 16
+                  },
+                  {
+                    "vkey": 221,
+                    "modifiers": 16
+                  }
+                ]
+              },
+              "longPress": [
+                "]",
+                ">",
+                "}"
+              ]
+            },
+            {
+              "label": "=",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 187
+              }
+            },
+            {
+              "label": "%",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 53,
+                "modifiers": 16
+              }
+            }
+          ],
+          [
+            {
+              "label": "",
+              "action": {
+                "type": "none"
+              },
+              "width": 0.1
+            },
+            {
+              "label": "«",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00AB"
+              }
+            },
+            {
+              "label": "*",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 56,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "»",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 0,
+                "id": "U_00BB"
+              }
+            },
+            {
+              "label": ",",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 188
+              }
+            },
+            {
+              "label": "/",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 191
+              }
+            },
+            {
+              "label": "!",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 49,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "?",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 191,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "+",
+              "action": {
+                "type": "keyman_key",
+                "vkey": 187,
+                "modifiers": 16
+              }
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              }
+            }
+          ],
+          [
+            {
+              "label": "ᓀᐦᐃᔭᐤ",
+              "action": {
+                "type": "letters"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              },
+              "width": 1.2
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 6.1
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    },
+    "keyman": {
+      "keyboardId": "nrc_crk_cans"
+    }
+  }
+}

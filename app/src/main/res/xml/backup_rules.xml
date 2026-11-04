@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   The pre-API-31 half of the same policy as data_extraction_rules.xml — see
+   there for why each of these is excluded. Devices on API 31 and up ignore
+   this file. As there, a backup only happens at all if the user has turned it
+   on; WMBackupAgent enforces that.
+-->
+<full-backup-content>
+    <exclude domain="file" path="models" />
+    <exclude domain="file" path="whisper" />
+    <exclude domain="file" path="cutout" />
+    <exclude domain="file" path="dict" />
+    <exclude domain="file" path="cjk_dicts" />
+    <exclude domain="file" path="emoji_dict" />
+    <exclude domain="file" path="emoji_keywords" />
+    <exclude domain="file" path="camera" />
+    <exclude domain="file" path="docscan" />
+    <exclude domain="file" path="clipboard/images" />
+    <exclude domain="file" path="stickers/.originals" />
+    <exclude domain="file" path="send" />
+    <exclude domain="file" path="kdeconnect" />
+    <exclude domain="file" path="homeassistant" />
+    <exclude domain="file" path="netlog" />
+</full-backup-content>

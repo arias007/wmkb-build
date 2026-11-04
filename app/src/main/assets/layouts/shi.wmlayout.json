@@ -1,0 +1,204 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_shi",
+    "name": "ⵜⴰⵛⵍⵃⵉⵢⵜ (Tachelhit)",
+    "langId": "shi",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ⵇ"
+            },
+            {
+              "label": "ⵡ",
+              "shiftLabel": "ⵯ"
+            },
+            {
+              "label": "ⴻ"
+            },
+            {
+              "label": "ⵔ",
+              "shiftLabel": "ⵕ",
+              "longPress": [
+                "ⵕ"
+              ]
+            },
+            {
+              "label": "ⵜ",
+              "shiftLabel": "ⵟ",
+              "longPress": [
+                "ⵟ"
+              ]
+            },
+            {
+              "label": "ⵢ"
+            },
+            {
+              "label": "ⵓ"
+            },
+            {
+              "label": "ⵉ"
+            },
+            {
+              "label": "ⵄ"
+            },
+            {
+              "label": "ⵃ"
+            }
+          ],
+          [
+            {
+              "label": "ⴰ"
+            },
+            {
+              "label": "ⵙ",
+              "shiftLabel": "ⵚ",
+              "longPress": [
+                "ⵚ"
+              ]
+            },
+            {
+              "label": "ⴷ",
+              "shiftLabel": "ⴹ",
+              "longPress": [
+                "ⴹ"
+              ]
+            },
+            {
+              "label": "ⴼ"
+            },
+            {
+              "label": "ⴳ",
+              "longPress": [
+                "ⴳⵯ"
+              ]
+            },
+            {
+              "label": "ⵀ",
+              "longPress": [
+                "ⵁ"
+              ]
+            },
+            {
+              "label": "ⵊ"
+            },
+            {
+              "label": "ⴽ",
+              "longPress": [
+                "ⴽⵯ",
+                "ⴾ"
+              ]
+            },
+            {
+              "label": "ⵍ"
+            }
+          ],
+          [
+            {
+              "label": "⇧",
+              "action": {
+                "type": "shift"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "ⵣ",
+              "shiftLabel": "ⵥ",
+              "longPress": [
+                "ⵥ"
+              ]
+            },
+            {
+              "label": "ⵅ"
+            },
+            {
+              "label": "ⵛ",
+              "longPress": [
+                "ⵞ"
+              ]
+            },
+            {
+              "label": "ⵖ",
+              "longPress": [
+                "ⴴ"
+              ]
+            },
+            {
+              "label": "ⴱ",
+              "longPress": [
+                "ⴲ",
+                "ⵒ"
+              ]
+            },
+            {
+              "label": "ⵏ"
+            },
+            {
+              "label": "ⵎ"
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": ",",
+              "longPress": [
+                "!",
+                "?"
+              ],
+              "role": "Comma"
+            },
+            {
+              "label": "🌐",
+              "action": {
+                "type": "language_switch"
+              }
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 4
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ],
+              "role": "Period"
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

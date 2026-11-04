@@ -1,0 +1,301 @@
+# Every Gradle invocation here passes the channel flags as -P project
+# properties, not environment variables. flag() in app/build.gradle.kts reads
+# gradle properties before local.properties before the environment, so -P is
+# the only form that beats whatever a developer machine has in
+# local.properties. An env var would silently lose to it.
+
+opt_out_usage
+
+default_platform(:android)
+
+# Channel property sets. These mirror the table in
+# docs/src/content/docs/development/releasing.mdx — keep them in step.
+PLAY_PROPS = {
+  "wmkb.enablePlayStore" => "true",
+  "wmkb.enableGms" => "true",
+  # A developer's local.properties may turn the diagnostic crash screen on. Its
+  # handler kills the process instead of passing the crash on, so a Play build
+  # carrying it reports no crashes to Android vitals or the pre-launch report.
+  "wmkb.enableCrashScreen" => "false",
+}.freeze
+
+SIDELOAD_PROPS = {
+  "wmkb.enablePlayStore" => "false",
+  "wmkb.enableGms" => "true",
+  "wmkb.splitApks" => "true",
+}.freeze
+
+# Play and F-Droid read different metadata trees, because the two builds are
+# not the same app.
+#
+# F-Droid scans `fastlane/metadata/android/<locale>/` out of the source repo and
+# there is no way to point it somewhere else, so that tree is F-Droid's. Its
+# description must not promise handwriting, text and QR scanning, offline
+# Whisper dictation or the on-device AI models: F-Droid's build carries none of
+# Google's libraries behind them, and F-Droid's readers are exactly the people
+# who check.
+#
+# Play's tree is the one below, chosen with supply's `metadata_path`. Only the
+# three text files diverge. Images and changelogs stay in the shared tree and
+# are uploaded by the `graphics` and `internal` lanes, which read the default
+# path, so there is one copy of each and nothing to keep in step. The one
+# exception is a Play-only changelog, see play_changelog_override below.
+PLAY_METADATA_PATH = File.expand_path("play/metadata/android", __dir__)
+PLAY_LISTING_DIR = File.join(PLAY_METADATA_PATH, "en-US")
+FDROID_LISTING_DIR = File.expand_path("metadata/android/en-US", __dir__)
+
+# Play rejects an over-length listing rather than truncating it, and the error
+# names neither the field nor the limit. Both trees are checked, not just the
+# one being uploaded, so an edit that overruns on the F-Droid side is caught
+# here rather than on an F-Droid build weeks later.
+LISTING_LIMITS = { "title.txt" => 30, "short_description.txt" => 80, "full_description.txt" => 4000 }.freeze
+
+def ensure_listing_limits!
+  { "Play" => PLAY_LISTING_DIR, "F-Droid" => FDROID_LISTING_DIR }.each do |label, dir|
+    LISTING_LIMITS.each do |name, limit|
+      path = File.join(dir, name)
+      UI.user_error!("#{label} listing is missing #{name} (#{path})") unless File.exist?(path)
+      # Explicit UTF-8, not the locale's encoding. The description quotes
+      # Bengali ("ami valo achi" becomes আমি ভালো আছি), so a machine whose
+      # locale is not UTF-8 — which fastlane itself warns about — reads those
+      # bytes as US-ASCII and raises Encoding::CompatibilityError on `strip`
+      # instead of checking anything. `length` then also counts characters
+      # rather than bytes, which is what Play's limit is measured in.
+      length = File.read(path, encoding: "UTF-8").strip.length
+      next if length <= limit
+
+      UI.user_error!("#{label} #{name} is #{length} characters; Play allows #{limit}.")
+    end
+  end
+  UI.success("Listing text is within Play's limits on both trees")
+end
+
+# gradle.properties is the single source of version truth (both :app and
+# :core:config read it), so fastlane reads it too rather than keeping a copy.
+def gradle_prop(name)
+  path = File.expand_path("../gradle.properties", __dir__)
+  line = File.readlines(path).find { |l| l.start_with?("#{name}=") }
+  UI.user_error!("#{name} not found in gradle.properties") unless line
+  line.split("=", 2).last.strip
+end
+
+def version_code
+  gradle_prop("wmkb.versionCode")
+end
+
+# What the bundle's manifest says, and so what Play knows the release by:
+# from 0.6.2 every build's versionCode is wmkb.versionCode * 10 plus an ABI
+# digit, 0 for the bundle (abiDigits in app/build.gradle.kts).
+def bundle_version_code
+  code = version_code.to_i
+  code >= 35 ? code * 10 : code
+end
+
+def version_name
+  gradle_prop("wmkb.versionName")
+end
+
+# The release build produces an *unsigned* AAB/APK when the keystore is not
+# configured (deliberate, see the signing block in app/build.gradle.kts), and
+# Play rejects unsigned uploads with a much less helpful error than this one.
+def ensure_signing!
+  local_props = File.expand_path("../local.properties", __dir__)
+  configured = ENV["RELEASE_STORE_FILE"].to_s != "" ||
+    (File.exist?(local_props) &&
+      File.readlines(local_props).any? { |l| l.start_with?("RELEASE_STORE_FILE=") && l.split("=", 2).last.strip != "" })
+  UI.user_error!(
+    "Release signing is not configured. Set RELEASE_STORE_FILE / " \
+    "RELEASE_STORE_PASSWORD / RELEASE_KEY_ALIAS / RELEASE_KEY_PASSWORD in " \
+    "local.properties or the environment."
+  ) unless configured
+end
+
+# Release notes come from the same changelog file F-Droid reads; a release
+# without one would go out with silently empty notes.
+def ensure_changelog!
+  changelog = File.expand_path("metadata/android/en-US/changelogs/#{version_code}.txt", __dir__)
+  UI.user_error!(
+    "No changelog for versionCode #{version_code}. Write " \
+    "fastlane/metadata/android/en-US/changelogs/#{version_code}.txt — " \
+    "F-Droid and Play both read it, it is the only place the release notes live."
+  ) unless File.exist?(changelog)
+  # Play reads the bundle's copy (<code>0.txt) and F-Droid one per ABI.
+  sh(File.expand_path("../scripts/changelog-abi-copies.sh", __dir__), "--check") do |status, _result, _cmd|
+    UI.user_error!("Changelog copies are missing or stale. Run scripts/changelog-abi-copies.sh and commit them.") unless status.success?
+  end
+end
+
+# A changelog under the Play tree, when there is one, is what Play gets for that
+# version, and the shared one stays F-Droid's. For a note only F-Droid users
+# need: 0.5.10 tells F-Droid installs to reinstall once for the switch to
+# reproducible builds, which would only confuse a Play user. Most versions have
+# no override and Play reads the shared file as before.
+def play_changelog_override
+  path = File.join(PLAY_LISTING_DIR, "changelogs", "#{bundle_version_code}.txt")
+  File.exist?(path) ? path : nil
+end
+
+platform :android do
+  desc "Verify version, changelog and signing are consistent before a release"
+  lane :preflight do
+    ensure_changelog!
+    ensure_signing!
+    ensure_listing_limits!
+    UI.success("#{version_name} (#{version_code}) — changelog present, signing configured")
+  end
+
+  # Play always gets the `en` build. Play translates the app strings itself and
+  # injects them into the bundle at upload, so a Play installer reads the app in
+  # their own language either way. The 48 translations in the repo were
+  # recovered from Play to begin with, and an `intl` bundle would only hand
+  # them back. They are there for the channels nobody translates for: F-Droid
+  # builds `intl`, and GitHub offers both.
+  #
+  desc "Build the Play AAB (bundleEnRelease with the Play channel flags)"
+  lane :bundle_play do
+    ensure_signing!
+    gradle(task: "bundleEnRelease", properties: PLAY_PROPS)
+  end
+
+  desc "Build the sideload/GitHub-release APKs in both language builds, one APK per ABI"
+  lane :apks do
+    ensure_signing!
+    gradle(
+      task: "assembleIntlRelease assembleEnRelease",
+      properties: SIDELOAD_PROPS,
+    )
+    UI.success("APKs under app/build/outputs/apk/*/release/")
+  end
+
+  desc "Upload to the Play internal track. Builds the AAB unless aab:path is given"
+  lane :internal do |options|
+    ensure_changelog!
+    aab = options[:aab]
+    if aab
+      # Prebuilt (CI hands over the bundle-job artifact); signing already
+      # happened wherever it was built, so no keystore is needed here.
+      #
+      # Anchored to the repo root rather than taken as given. fastlane runs a
+      # lane with the working directory set to this folder, so a relative path
+      # from the caller is resolved against fastlane/ and never found: the
+      # release workflow hands over `dist/app-full-release.aab`, which it built
+      # at the repo root, and v0.4.0's upload died on "No AAB at
+      # dist/app-full-release.aab" while the file sat there the whole time.
+      # The repo root is where both CI and a human invoking this are standing.
+      aab = File.expand_path(aab, File.expand_path("..", __dir__)) unless File.absolute_path?(aab)
+      UI.user_error!("No AAB at #{aab}") unless File.exist?(aab)
+    else
+      bundle_play
+      aab = lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH]
+    end
+    upload = {
+      track: "internal",
+      aab: aab,
+      release_status: "completed",
+      # The gradle action reports every APK it finds under build/outputs as well
+      # as the bundle, and supply refuses "both apk(s) and aab". A machine that
+      # has ever assembled a release APK has one lying there, so 0.5.11's local
+      # upload died on it after a clean build. Only the bundle goes to Play.
+      skip_upload_apk: true,
+      # Seconds per Play API call, the bundle upload included. fastlane's 300
+      # cut off a ~500 MB bundle mid-upload twice on 0.6.4, after which the
+      # commit fails on "Some of the Android App Bundle uploads are not
+      # completed yet". The strings-pull upload went through at 3600.
+      timeout: 3600,
+      # Binary and release notes only. The listing (text, images) has its own
+      # lanes below so a routine release can never half-rewrite the store page.
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      # First uploads and some policy states cannot be auto-submitted for
+      # review; land the change in the Console instead of failing the lane.
+      rescue_changes_not_sent_for_review: true,
+    }
+    # Only changelogs are read from metadata_path here (metadata, images and
+    # screenshots are all skipped above), so pointing it at the Play tree swaps
+    # the release notes and nothing else.
+    if (override = play_changelog_override)
+      UI.message("Release notes from the Play-only #{override}")
+      upload[:metadata_path] = PLAY_METADATA_PATH
+    end
+    upload_to_play_store(**upload)
+    UI.success("#{version_name} (#{version_code}) is on the internal track")
+  end
+
+  desc "Promote internal → production. Options: rollout:0.2 to:beta from:internal"
+  lane :promote do |options|
+    upload_to_play_store(
+      track: options[:from] || "internal",
+      track_promote_to: options[:to] || "production",
+      track_promote_release_status: "completed",
+      rollout: options[:rollout],
+      skip_upload_aab: true,
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      version_code: bundle_version_code,
+    )
+    UI.success("Promoted #{options[:from] || 'internal'} → #{options[:to] || 'production'}")
+  end
+
+  desc "Push the Play store-listing text (no binaries, no images, no changelogs)"
+  lane :listing do
+    ensure_listing_limits!
+    upload_to_play_store(
+      # The Play tree, not the shared one. See PLAY_METADATA_PATH above for why
+      # the two differ; uploading the F-Droid text here would advertise
+      # handwriting and scanning as missing on a build that has them.
+      metadata_path: PLAY_METADATA_PATH,
+      # Listing text belongs to the app, not to a track, but supply still looks
+      # up a release on `track` to hang release notes on, skipped or not, and
+      # fails when it finds none. Its default is production, which is empty
+      # until the first production release; internal always has one.
+      track: "internal",
+      skip_upload_aab: true,
+      skip_upload_apk: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      # Release notes live in the shared tree and ride along with the binary in
+      # `internal`. Uploading them from here would need a second copy of every
+      # changelog under the Play tree, and two copies drift.
+      skip_upload_changelogs: true,
+    )
+    UI.success("Listing text synced from fastlane/play/metadata/android/en-US/")
+  end
+
+  desc "Push the icon, feature graphic and screenshots to Play (no binaries, no text)"
+  lane :graphics do
+    # Play refuses a screenshot whose long side is more than twice its short
+    # side, and the phone slides are composed on a 1080x2400 device canvas, so
+    # they are padded to 1200x2400 by play/pipeline/pad_phone_shots.py before
+    # they land here. Checked rather than assumed: the upload fails with a
+    # generic API error that says nothing about which file or which rule.
+    Dir[File.expand_path("metadata/android/en-US/images/*Screenshots/*.png", __dir__)].each do |shot|
+      w, h = FastImage.size(shot)
+      next if [w, h].max <= [w, h].min * 2
+
+      UI.user_error!(
+        "#{File.basename(File.dirname(shot))}/#{File.basename(shot)} is #{w}x#{h}. " \
+        "Play caps a screenshot's long side at twice its short side. Run " \
+        "`python3 play/pipeline/pad_phone_shots.py` for the phone set."
+      )
+    end
+    upload_to_play_store(
+      # See the listing lane: a track with a release, not the default production.
+      track: "internal",
+      skip_upload_aab: true,
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+    )
+    UI.success("Images and screenshots synced from fastlane/metadata/android/en-US/images/")
+  end
+
+  desc "Validate the service-account key against the Play API without changing anything"
+  lane :check_key do
+    validate_play_store_json_key
+    UI.success("Play API key works")
+  end
+end

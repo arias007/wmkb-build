@@ -1,0 +1,289 @@
+package com.wasimaster.wmkeyboard.app
+
+import androidx.compose.runtime.saveable.SaverScope
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Test
+
+/**
+ * The path strip is only as honest as this trail. It has to match the back
+ * stack in every shape navigation can leave it in: a push, a return, the two
+ * frames of an animation where the arriving and the leaving screen are both
+ * drawn, and a screen replaced out from under itself by
+ * `popUpTo(inclusive = true)`.
+ */
+class SettingsCrumbTrailTest {
+
+    /**
+     * A back stack and the trail that follows it, driven the way navigation
+     * drives the real one: a screen records itself once it is drawn, and the
+     * trail asks the stack which screen is on top.
+     */
+    private class Walk {
+        val stack = mutableListOf<String>()
+        val trail = SettingsCrumbTrail()
+
+        /** Routes a pressed seeded step asked to be opened, in order. */
+        val opened = mutableListOf<String>()
+
+        init {
+            trail.bind(
+                topEntryId = { stack.lastOrNull() },
+                pop = {
+                    val more = stack.size > 1
+                    if (more) stack.removeAt(stack.lastIndex)
+                    more
+                },
+                open = { route ->
+                    // What `popUpTo(home)` then `navigate(route)` leaves
+                    // behind: every entry above home destroyed, which is what
+                    // takes its step off the trail.
+                    opened.add(route)
+                    while (stack.size > 1) trail.forget(stack.removeAt(stack.lastIndex))
+                },
+            )
+        }
+
+        /** Opens a screen: navigation pushes the entry, then the screen draws. */
+        fun push(id: String, title: String) = apply {
+            stack.add(id)
+            trail.enter(id, title)
+        }
+
+        /** Goes back to a screen already on the stack, the way a back press does. */
+        fun back(id: String, title: String) = apply {
+            while (stack.size > 1 && stack.last() != id) stack.removeAt(stack.lastIndex)
+            trail.enter(id, title)
+        }
+
+        fun titles(crumbs: List<SettingsCrumb>) = crumbs.map { it.title }
+    }
+
+    private fun walkTo(vararg steps: Pair<String, String>) = Walk().apply {
+        steps.forEach { (id, title) -> push(id, title) }
+    }
+
+    @Test
+    fun `a push adds a step and the home screen has no path`() {
+        val walk = walkTo("a" to "Home", "b" to "Appearance", "c" to "Themes")
+
+        assertEquals(emptyList<String>(), walk.titles(walk.trail.ancestorsOf("a")))
+        assertEquals(listOf("Home"), walk.titles(walk.trail.ancestorsOf("b")))
+        assertEquals(listOf("Home", "Appearance"), walk.titles(walk.trail.ancestorsOf("c")))
+    }
+
+    @Test
+    fun `the strip is drawn from the third level, not the second`() {
+        val walk = walkTo("a" to "Home", "b" to "Typing", "c" to "Autocorrect")
+
+        // A second-level page keeps its path but does not draw it: its heading
+        // already says where it is. The third level is the first with a
+        // middle step to show.
+        assertTrue(walk.trail.ancestorsOf("b").size < MinCrumbDepth)
+        assertTrue(walk.trail.ancestorsOf("c").size >= MinCrumbDepth)
+    }
+
+    @Test
+    fun `returning to a screen drops everything that was above it`() {
+        val walk = walkTo("a" to "Home", "b" to "Appearance", "c" to "Themes")
+
+        walk.back("b", "Appearance")
+
+        assertEquals(listOf("Home", "Appearance"), walk.titles(walk.trail.path))
+        assertEquals(listOf("Home"), walk.titles(walk.trail.ancestorsOf("b")))
+    }
+
+    @Test
+    fun `a screen the trail has not heard of yet reads the whole path`() {
+        // The frame between a screen being drawn and its own step being
+        // recorded, and every frame of a screen animating out after the one
+        // below it trimmed the trail. Both want the trail exactly as it stands.
+        val walk = walkTo("a" to "Home", "b" to "Appearance", "c" to "Themes")
+
+        assertEquals(
+            listOf("Home", "Appearance", "Themes"),
+            walk.titles(walk.trail.ancestorsOf("d")),
+        )
+    }
+
+    @Test
+    fun `a replaced screen is forgotten and stops showing in the path`() {
+        // popUpTo(inclusive = true): the list is replaced by what it opened.
+        val walk = walkTo("a" to "Home", "b" to "AI chats", "c" to "New chat")
+
+        walk.trail.forget("b")
+
+        assertEquals(listOf("Home", "New chat"), walk.titles(walk.trail.path))
+        assertEquals(listOf("Home"), walk.titles(walk.trail.ancestorsOf("c")))
+    }
+
+    @Test
+    fun `a screen renamed under the one above it keeps that screen`() {
+        // A theme renamed while its own editor sits on top of it. The rename
+        // must not read as a return and take the editor out of the trail.
+        val walk = walkTo("a" to "Home", "b" to "Untitled theme", "c" to "Colours")
+
+        walk.trail.enter("b", "Midnight")
+
+        assertEquals(listOf("Home", "Midnight", "Colours"), walk.titles(walk.trail.path))
+    }
+
+    @Test
+    fun `pressing a step pops exactly as far as that step`() {
+        val walk = walkTo(
+            "a" to "Home",
+            "b" to "Tools",
+            "c" to "Clipboard",
+            "d" to "Phone number formats",
+        )
+
+        walk.trail.popTo("b")
+
+        assertEquals(listOf("a", "b"), walk.stack)
+    }
+
+    @Test
+    fun `pressing the step already on top pops nothing`() {
+        val walk = walkTo("a" to "Home", "b" to "Tools")
+
+        walk.trail.popTo("b")
+
+        assertEquals(listOf("a", "b"), walk.stack)
+    }
+
+    @Test
+    fun `a step the trail does not hold pops nothing at all`() {
+        // The stack must never be emptied by a strip that lost its place.
+        val walk = walkTo("a" to "Home", "b" to "Tools")
+
+        walk.trail.popTo("zzz")
+
+        assertEquals(listOf("a", "b"), walk.stack)
+    }
+
+    @Test
+    fun `a saved path comes back with its steps in order`() {
+        val walk = walkTo("a" to "Home", "b" to "Tools", "c" to "Clipboard")
+        // The scope only decides what may go in a Bundle, and every value the
+        // saver writes is a String.
+        val scope = SaverScope { true }
+
+        val saved = with(SettingsCrumbTrail.Saver) { scope.save(walk.trail) }!!
+        val restored = SettingsCrumbTrail.Saver.restore(saved)!!
+
+        assertEquals(listOf("Home", "Tools", "Clipboard"), restored.path.map { it.title })
+        assertEquals(listOf("Home", "Tools"), restored.ancestorsOf("c").map { it.title })
+    }
+
+    @Test
+    fun `a saved path keeps each step's route and a step without one stays without`() {
+        // The route is what a step's glyph is looked up by, so it has to come
+        // back with the step — and a tool page, which has none, must not come
+        // back with an empty one.
+        val walk = Walk()
+        walk.stack.add("a")
+        walk.trail.enter("a", "Home", "home")
+        walk.stack.add("b")
+        walk.trail.enter("b", "Tools", "tools")
+        walk.stack.add("c")
+        walk.trail.enter("c", "Clipboard")
+        val scope = SaverScope { true }
+
+        val saved = with(SettingsCrumbTrail.Saver) { scope.save(walk.trail) }!!
+        val restored = SettingsCrumbTrail.Saver.restore(saved)!!
+
+        assertEquals(listOf("home", "tools", null), restored.path.map { it.route })
+    }
+
+    // ---- seeded steps (#111) ----
+
+    @Test
+    fun `a seeded path names the screens a jump skipped over`() {
+        val walk = walkTo("a" to "Home")
+        walk.trail.seed(
+            listOf(
+                SettingsCrumb("seed:Typing", "Typing", "typing"),
+                SettingsCrumb("seed:Suggestions", "Suggestions", "typing/suggestions"),
+            ),
+        )
+        walk.push("b", "Personal dictionary")
+
+        assertEquals(
+            listOf("Home", "Typing", "Suggestions"),
+            walk.titles(walk.trail.ancestorsOf("b")),
+        )
+    }
+
+    @Test
+    fun `a second jump replaces the first jump's seeding`() {
+        val walk = walkTo("a" to "Home")
+        walk.trail.seed(listOf(SettingsCrumb("seed:Typing", "Typing", "typing")))
+        walk.push("b", "Personal dictionary")
+        // Backing out to the results list destroys the screen that was opened.
+        walk.stack.removeAt(walk.stack.lastIndex)
+        walk.trail.forget("b")
+
+        walk.trail.seed(listOf(SettingsCrumb("seed:Look & feel", "Look & feel", "appearance")))
+        walk.push("c", "Themes")
+
+        assertEquals(listOf("Home", "Look & feel"), walk.titles(walk.trail.ancestorsOf("c")))
+    }
+
+    @Test
+    fun `walking back to the home screen throws the seeding away`() {
+        val walk = walkTo("a" to "Home")
+        walk.trail.seed(listOf(SettingsCrumb("seed:Typing", "Typing", "typing")))
+        walk.push("b", "Personal dictionary")
+
+        walk.back("a", "Home")
+
+        assertEquals(listOf("Home"), walk.trail.path.map { it.title })
+    }
+
+    @Test
+    fun `pressing a seeded step opens its route instead of popping to it`() {
+        val walk = walkTo("a" to "Home")
+        val typing = SettingsCrumb("seed:Typing", "Typing", "typing")
+        walk.trail.seed(listOf(typing))
+        walk.push("b", "Personal dictionary")
+
+        walk.trail.goTo(walk.trail.path.first { it.seeded })
+        // The navigation the binding stands for, replayed: home is all that is
+        // left of the jump, and the screen walked to records itself.
+        walk.push("c", "Typing")
+
+        assertEquals(listOf("typing"), walk.opened)
+        assertEquals(listOf("Home", "Typing"), walk.trail.path.map { it.title })
+    }
+
+    @Test
+    fun `pressing a real step still pops back to it`() {
+        val walk = walkTo("a" to "Home")
+        walk.trail.seed(listOf(SettingsCrumb("seed:Typing", "Typing", "typing")))
+        walk.push("b", "Personal dictionary")
+        walk.push("c", "Custom dictionaries")
+
+        walk.trail.goTo(walk.trail.path.first { it.entryId == "b" })
+        walk.trail.enter("b", "Personal dictionary")
+
+        assertEquals(emptyList<String>(), walk.opened)
+        assertEquals("b", walk.stack.last())
+        assertEquals(
+            listOf("Home", "Typing", "Personal dictionary"),
+            walk.trail.path.map { it.title },
+        )
+    }
+
+    @Test
+    fun `a saved path remembers which steps nobody opened`() {
+        val walk = walkTo("a" to "Home")
+        walk.trail.seed(listOf(SettingsCrumb("seed:Typing", "Typing", "typing")))
+        walk.push("b", "Personal dictionary")
+        val scope = SaverScope { true }
+
+        val saved = with(SettingsCrumbTrail.Saver) { scope.save(walk.trail) }!!
+        val restored = SettingsCrumbTrail.Saver.restore(saved)!!
+
+        assertEquals(listOf(false, true, false), restored.path.map { it.seeded })
+    }
+}

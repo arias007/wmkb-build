@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Text Expander: the snippet manager that used to sit on the Snippets tool
+  page. The tool page now holds one row that opens this screen, the same shape
+  the Emoji tool has.
+-->
+<resources>
+
+    <string name="expander_intro_info">Text you use again and again, inserted with one press from the snippet panel.</string>
+
+    <string name="expander_variables_title">Template variables</string>
+    <!-- Meaning of the {date:…} variable, shown next to the token itself. -->
+    <string name="expander_var_date_pattern_info">any date format that you want</string>
+    <string name="expander_var_location_info">where you are, from the location tool. Add :link, :address, :coordinates, :dms, :plus_code or :message for one format</string>
+    <string name="expander_var_location_sample">📍 your street and a map link</string>
+    <string name="expander_var_place_info">a place you saved in the location tool, by name. A format can follow, as for {location}</string>
+    <string name="expander_var_place_sample">📍 Home and a map link</string>
+    <!-- The braces and the words inside them are code. Do not translate them. -->
+    <string name="expander_variables_info">A variable expands at the moment that you insert the snippet, not when you save it. Because of this, {date} always gives the current date. {date:…} takes a pattern, for example {date:EEEE} or {date:dd/MM/yy}.</string>
+
+    <string name="expander_add_action">Add snippet</string>
+    <!-- Read out for the pencil that turns a list of snippets into one you
+         drag into order. -->
+    <string name="expander_reorder_title">Snippet order</string>
+    <!-- Heading over the snippets that are in no folder, when there are no
+         folders at all and so nothing to tell them apart from. -->
+    <string name="expander_snippets_title">Snippets</string>
+    <string name="expander_snippets_empty">You have no snippets yet. Press the + button to write one.</string>
+    <!-- Bar shown after a snippet is deleted, naming it. %1$s is the snippet's name. -->
+    <string name="expander_deleted_snackbar">Deleted %1$s</string>
+
+    <!-- Folders: named groups of snippets. A folder that is switched off keeps
+         its snippets, but they no longer appear by themselves while you type. -->
+    <string name="expander_folders_title">Folders</string>
+    <string name="expander_folders_info">Put snippets that belong together in a folder. Switch a folder off and its snippets stop appearing while you type. You can still insert them from the snippet panel of the keyboard. A snippet pack that you install gets a folder of its own.</string>
+    <string name="expander_folder_new_action">New folder</string>
+    <string name="expander_folder_new_title">New folder</string>
+    <string name="expander_folder_rename_title">Rename folder</string>
+    <string name="expander_folder_name_label">Folder name</string>
+    <string name="expander_folder_order_title">Folder order</string>
+
+    <!-- The folder's own page, opened by pressing the folder in the list. -->
+    <string name="expander_folder_title">Folder</string>
+    <string name="expander_folder_settings_title">This folder</string>
+    <string name="expander_folder_icon_title">Icon</string>
+    <string name="expander_folder_icon_subtitle">The snippet panel shows this icon on the folder</string>
+    <string name="expander_folder_icon_picker_title">Folder icon</string>
+    <!-- The choice that puts the plain folder drawing back. -->
+    <string name="expander_folder_icon_none_label">Plain folder</string>
+    <string name="expander_folder_enabled_title">Expand while you type</string>
+    <string name="expander_folder_enabled_subtitle">Off keeps the snippets in the panel, but they no longer appear by themselves</string>
+    <string name="expander_folder_empty">Nothing is in this folder yet. Press the + button to write a snippet here.</string>
+    <!-- Section that holds every snippet that is in no folder. -->
+    <string name="expander_no_folder_title">Not in a folder</string>
+    <string name="expander_no_folder_empty">Every snippet you have is in a folder.</string>
+    <!-- Subtitle of a folder row. %1$d is how many snippets are in it. -->
+    <plurals name="expander_folder_count">
+        <item quantity="one">%1$d snippet</item>
+        <item quantity="other">%1$d snippets</item>
+    </plurals>
+    <!-- Added to the folder row when the folder is switched off. -->
+    <string name="expander_folder_off_label">Off while you type</string>
+    <!-- Read out for the switch on a folder row. %1$s is the folder name. -->
+    <string name="expander_folder_switch_desc">Expand the snippets in %1$s while you type</string>
+
+    <!-- Asked before a folder goes. %1$s is the folder name. -->
+    <string name="expander_folder_delete_title">Delete %1$s?</string>
+    <!-- %1$d is how many snippets are in the folder, and it picks the form. -->
+    <plurals name="expander_folder_delete_body">
+        <item quantity="one">%1$d snippet is in this folder. It stays in your list.</item>
+        <item quantity="other">%1$d snippets are in this folder. They stay in your list.</item>
+    </plurals>
+    <!-- Switch in that question. Off means the snippets stay. -->
+    <string name="expander_folder_delete_all_action">Delete the snippets too</string>
+
+    <!-- %1$s is the snippet text after every variable in it expands. -->
+    <string name="expander_inserts_as_label">Inserts as: %1$s</string>
+    <!-- %1$s is the short text that the user types to insert the snippet. -->
+    <string name="expander_trigger_label">Expands by itself from: %1$s</string>
+    <!-- %1$s is the pattern, for example ^hello (.+)$ — leave it as it is. -->
+    <string name="expander_pattern_label">Expands by itself from the pattern: %1$s</string>
+    <!-- The same two lines for a snippet that waits to be tapped. %1$s is the
+         short text that the user types; in the second line it is the pattern,
+         for example ^hello (.+)$ — leave that as it is. -->
+    <string name="expander_trigger_asks_label">Offers itself after: %1$s</string>
+    <string name="expander_pattern_asks_label">Offers itself after the pattern: %1$s</string>
+
+    <string name="expander_pattern_title">Patterns</string>
+    <!-- The symbols in this line are code. Keep them exactly as they are. -->
+    <string name="expander_pattern_info">A pattern lets one snippet take a different piece of text each time. Give the snippet the pattern ^hello (.+)$ and the text \"Hello, $1! Nice to meet you.\" Then type \"hello John\" and a space, and the keyboard writes \"Hello, John! Nice to meet you.\" Use $1 to $9 for each part in brackets, and ${1:upper}, ${1:lower}, ${1:title} or ${1:trim} to change one. One backspace puts back what you typed.</string>
+
+    <!-- Result of an export. %1$d is the number of snippets in the file. -->
+    <plurals name="expander_saved_count">
+        <item quantity="one">The app saved %1$d snippet.</item>
+        <item quantity="other">The app saved %1$d snippets.</item>
+    </plurals>
+    <string name="expander_export_error">The app cannot write that file.</string>
+
+    <!-- Result of an import. %1$d is the number of snippets that came in. -->
+    <plurals name="expander_imported_count">
+        <item quantity="one">The app imported %1$d snippet.</item>
+        <item quantity="other">The app imported %1$d snippets.</item>
+    </plurals>
+    <!-- Heading above the list of repairs the app made to an imported file. -->
+    <string name="expander_import_repairs_title">Changed during the import:</string>
+    <string name="expander_import_error">That file is not a snippet pack the app can read.</string>
+
+    <!-- Espanso is a text expander for computers, and the name of its app. Do
+         not translate it. -->
+    <string name="expander_import_source_title">Import snippets from</string>
+    <string name="expander_source_native">A WM Keyboard file</string>
+    <string name="expander_source_native_body">A .wmsnippets.json file exported from this app.</string>
+    <string name="expander_source_espanso">An Espanso file</string>
+    <string name="expander_source_espanso_body">A .yml match file or a package .zip from the Espanso Hub.</string>
+    <string name="expander_source_csv">A table (CSV)</string>
+    <!-- A column is a vertical part of a table. Trigger and text are the two
+         parts of a snippet. -->
+    <string name="expander_source_csv_body">A .csv or .tsv file from another text expander or a spreadsheet. Use one column for the trigger and one for the text.</string>
+    <!-- Gboard is Google's keyboard; do not translate the name. -->
+    <string name="expander_source_gboard">Gboard\'s dictionary</string>
+    <string name="expander_source_gboard_body">The PersonalDictionary.zip that Gboard exports. Its shortcuts become snippets.</string>
+    <string name="expander_source_url">A web address</string>
+    <string name="expander_source_url_body">Paste a link to an Espanso package or match file.</string>
+
+    <string name="expander_export_target_title">Export snippets as</string>
+    <string name="expander_target_native">A WM Keyboard file</string>
+    <string name="expander_target_native_body">Keeps everything, including folders and which snippets ask first.</string>
+    <string name="expander_target_espanso">An Espanso match file</string>
+    <string name="expander_target_espanso_body">A .yml file to put in Espanso\'s match folder on a computer.</string>
+    <string name="expander_target_package">An Espanso package</string>
+    <string name="expander_target_package_body">A .zip you can install on a computer or share with others.</string>
+
+    <string name="expander_url_title">Import from a web address</string>
+    <string name="expander_url_label">Address</string>
+    <string name="expander_url_body">An https address for an Espanso package page, or a direct link to a .yml or .zip file.</string>
+    <string name="expander_url_error">The app cannot read a snippet file from that address.</string>
+
+    <!-- %1$d is how many snippets the file holds, and also picks the form. -->
+    <plurals name="expander_espanso_import_title">
+        <item quantity="one">Import %1$d snippet from Espanso?</item>
+        <item quantity="other">Import %1$d snippets from Espanso?</item>
+    </plurals>
+    <!-- %1$d is how many snippets the table holds, and also picks the form. -->
+    <plurals name="expander_csv_import_title">
+        <item quantity="one">Import %1$d snippet from the table?</item>
+        <item quantity="other">Import %1$d snippets from the table?</item>
+    </plurals>
+    <!-- Gboard is Google's keyboard; do not translate the name. %1$d is how
+         many snippets the file holds, and also picks the form. -->
+    <plurals name="expander_gboard_import_title">
+        <item quantity="one">Import %1$d shortcut from Gboard?</item>
+        <item quantity="other">Import %1$d shortcuts from Gboard?</item>
+    </plurals>
+    <string name="expander_espanso_folder_label">Folder name</string>
+    <string name="expander_espanso_folder_body">The snippets go in this folder, so you can switch the whole set off at once. Clear the name to leave them ungrouped.</string>
+    <string name="expander_espanso_changes_title">What changes on the way in</string>
+
+    <string name="expander_package_title">Espanso package</string>
+    <string name="expander_package_name_label">Package name</string>
+    <!-- %1$s is the name after the app has made it fit Espanso's rules. -->
+    <string name="expander_package_name_body">Espanso allows small letters, numbers and hyphens, so the app will use: %1$s</string>
+    <string name="expander_package_author_label">Author (optional)</string>
+    <string name="expander_package_description_label">Description (optional)</string>
+    <string name="expander_export_notes_title">What Espanso cannot carry</string>
+
+    <!-- What the keyboard does when a snippet it expands has more than one
+         text to insert, or points at other snippets. -->
+    <string name="expander_behaviour_title">Behaviour</string>
+    <string name="expander_titles_only_title">Names only</string>
+    <string name="expander_titles_only_subtitle">Show each snippet in the panel by its name alone, without its text, so more fit</string>
+    <string name="expander_panel_stays_title">Stay open after inserting</string>
+    <string name="expander_panel_stays_subtitle">Keep the snippets panel open when you tap a snippet, to insert several in a row</string>
+    <string name="expander_grid_columns_title">Panel columns</string>
+    <string name="expander_grid_columns_subtitle">How many snippet tiles sit side by side in the keyboard\'s panel</string>
+    <string name="expander_secure_fields_title">Expand in password fields</string>
+    <string name="expander_secure_fields_subtitle">Let a trigger you type turn into its snippet inside a password box</string>
+    <string name="expander_secure_fields_info">Off by default. With it on, pressing space or Enter in a password field, or typing the symbol a trigger ends in, makes the keyboard read back the few characters before the cursor and check them against your triggers. Nothing it reads is learned, kept or sent. The space that ends a trigger is not typed into the password; Enter still does what the field asks. Patterns, chips that ask first and apps typing snippets through automation stay off in password fields, and number-only PIN fields are not covered.</string>
+    <string name="expander_escape_title">Escape character</string>
+    <string name="expander_escape_subtitle">Type it in front of a trigger that expands immediately to keep the trigger as text</string>
+    <string name="expander_escape_info">A snippet set to expand immediately replaces its trigger as soon as you type the last letter. Type this character just before the trigger and the trigger stays as text. The character itself is removed. The default is a backslash, so \\btw gives btw. Choose Off if you use this character in front of words.</string>
+    <string name="expander_escape_backslash_label">Backslash \\</string>
+    <string name="expander_escape_backtick_label">Backtick `</string>
+    <string name="expander_escape_off_label">Off</string>
+    <string name="expander_grid_columns_info">More columns show more snippets at once, which suits short labels. Fewer give each tile more room for its text. Folders use the same grid. The default is 2.</string>
+    <string name="expander_multi_expand_title">When a snippet has several expansions</string>
+    <string name="expander_multi_expand_subtitle">What happens after you type the trigger</string>
+    <string name="expander_multi_expand_info">A snippet can hold more than one text, and can point at other snippets. Chips only: the suggestion bar offers all of them and nothing goes in until you press one. Insert first: the keyboard inserts the default straight away and offers the rest, so pressing one swaps what it put in. Each snippet can answer this on its own.</string>
+    <string name="expander_multi_expand_chips_label">Chips only</string>
+    <string name="expander_multi_expand_insert_label">Insert first</string>
+    <!-- One line under each option in the several expansions picker. -->
+    <string name="expander_multi_expand_chips_desc">The suggestion strip offers them all. Nothing goes in until you press one</string>
+    <string name="expander_multi_expand_insert_desc">The default goes in at once. Press another chip to swap it</string>
+
+    <!-- %1$d is how many texts a snippet can insert, and picks the form. -->
+    <plurals name="expander_expansion_count">
+        <item quantity="one">%1$d expansion</item>
+        <item quantity="other">%1$d expansions</item>
+    </plurals>
+    <!-- %1$d is how many snippets this one points at, and picks the form. -->
+    <plurals name="expander_linked_count">
+        <item quantity="one">%1$d linked snippet</item>
+        <item quantity="other">%1$d linked snippets</item>
+    </plurals>
+
+</resources>

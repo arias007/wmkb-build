@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- The Storage screen, opened from About. -->
+    <string name="about_storage_title">Storage</string>
+    <string name="import_hub_title">Import</string>
+    <string name="import_hub_subtitle">Every import in one place, for setting up after an install</string>
+    <string name="import_hub_files_group">Downloaded files</string>
+    <string name="import_hub_screens_group">Your own files</string>
+    <string name="import_hub_backup_title">A backup</string>
+    <string name="import_hub_backup_subtitle">Everything at once, from this app or another keyboard</string>
+    <string name="import_hub_languages_title">Layouts and word lists</string>
+    <string name="import_hub_languages_subtitle">Under the language they are for</string>
+    <string name="import_hub_themes_title">Themes</string>
+    <string name="import_hub_themes_subtitle">Your own files, and themes from other keyboards</string>
+    <string name="import_hub_icons_title">Icon packs</string>
+    <string name="import_hub_icons_subtitle">Icons for the keys and tools</string>
+    <string name="import_hub_stickers_title">Stickers</string>
+    <string name="import_hub_stickers_subtitle">Packs, and sets from Signal, WhatsApp and Telegram</string>
+    <string name="import_hub_sounds_title">Sounds</string>
+    <string name="import_hub_sounds_subtitle">Key sounds and sound packs</string>
+    <string name="import_hub_vocab_title">Vocabulary</string>
+    <string name="import_hub_vocab_subtitle">Word lists to study</string>
+    <string name="import_hub_plugins_title">Plugins</string>
+    <string name="import_hub_plugins_subtitle">Lua plugins</string>
+    <string name="about_storage_subtitle">See what the app keeps on your device, and delete it</string>
+
+    <!-- the summary at the top -->
+
+    <string name="storage_total_label">Used in total</string>
+    <!-- The outer ring. All three are sizes the user reads, for example "123 GB".
+         %1$s is the space in use on the whole device, %2$s its capacity, %3$s what is left. -->
+    <string name="storage_device_caption">Your device: %1$s of %2$s used, %3$s free</string>
+    <string name="storage_measuring_label">Measuring…</string>
+    <!-- Shown only on Android 7, where the system cannot give an exact figure. -->
+    <string name="storage_estimate_caption">Your device cannot report exact sizes, so these are close estimates.</string>
+    <string name="storage_refresh_action">Measure again</string>
+    <!-- Spoken by a screen reader in place of the ring diagram. -->
+    <string name="storage_ring_desc">%1$s in total: %2$s for the app, %3$s of data and %4$s of cache</string>
+
+    <string name="storage_bucket_app">App</string>
+    <string name="storage_bucket_data">Data</string>
+    <string name="storage_bucket_cache">Cache</string>
+
+    <!-- Button that deletes every cache in one press. %1$s is a size. -->
+    <string name="storage_free_up_action">Free up %1$s</string>
+    <string name="storage_free_up_caption">Deletes the caches only. The app downloads what it needs again.</string>
+    <string name="storage_show_all_action">Show what uses nothing</string>
+    <string name="storage_show_less_action">Hide what uses nothing</string>
+
+    <!-- groups -->
+
+    <string name="storage_group_app_title">The app itself</string>
+    <string name="storage_group_downloads_title">Downloads</string>
+    <string name="storage_group_looks_title">Looks and add-ons</string>
+    <string name="storage_group_personal_title">Your data</string>
+    <string name="storage_group_cache_title">Caches</string>
+    <string name="storage_group_system_title">The rest</string>
+
+    <!-- categories -->
+
+    <string name="storage_app_package_title">App package</string>
+    <string name="storage_app_package_subtitle">The app itself, and the code your device compiled from it</string>
+
+    <string name="storage_wordlists_title">Word lists</string>
+    <!-- One item in Word lists: RIME's compiled schemas and the words it learned. RIME stays in Latin letters. -->
+    <string name="storage_rime_label">RIME schemas and learned words</string>
+    <!-- One item in Word lists: what the Mozc engine learned from the user's picks. Mozc stays in Latin letters. -->
+    <string name="storage_mozc_label">Mozc learned conversions</string>
+    <string name="storage_wordlists_subtitle">Dictionaries you downloaded for prediction</string>
+    <string name="storage_bundled_dicts_title">Built-in dictionaries</string>
+    <string name="storage_bundled_dicts_subtitle">Unpacked from the app. They come back when you next type.</string>
+    <string name="storage_emoji_dicts_title">Emoji words</string>
+    <string name="storage_emoji_dicts_subtitle">Emoji search words in your languages</string>
+    <string name="storage_voice_models_title">Voice models</string>
+    <string name="storage_voice_models_subtitle">Speech recognition that runs on your device</string>
+    <string name="storage_glide_models_title">Glide models</string>
+    <string name="storage_glide_models_subtitle">FUTO Swipe, when it reads your glides</string>
+    <string name="storage_ai_models_title">AI models</string>
+    <string name="storage_ai_models_subtitle">Language models that run on your device</string>
+    <string name="storage_stickergen_title">Sticker generator</string>
+    <string name="storage_stickergen_subtitle">The models that draw stickers from a prompt, the picture filter, and the upscaler</string>
+    <string name="storage_upscaler_item">Upscaler</string>
+    <string name="storage_meaning_title">Search by meaning</string>
+    <string name="storage_meaning_subtitle">The model that finds things by what they mean, and the indexes it built from your things</string>
+    <string name="storage_meaning_text">Text model</string>
+    <string name="storage_meaning_pictures">Pictures model</string>
+    <string name="storage_meaning_index">Search indexes</string>
+    <string name="storage_meaning_index_detail">Built from your clipboard, notes, snippets, stickers and photos. Deleting them turns Search by meaning off.</string>
+    <string name="storage_ocr_packs_title">Text scanner languages</string>
+    <string name="storage_ocr_packs_subtitle">Tesseract data that the text scanner reads each language with</string>
+    <string name="storage_addon_index_title">Add-on sources</string>
+    <string name="storage_feature_libraries_title">Feature libraries</string>
+    <string name="storage_play_modules_title">Play Store modules</string>
+    <string name="storage_play_modules_subtitle">Features the app fetched from the Play Store the first time you used them, such as voice typing, translation and on-device AI</string>
+    <!-- Under a module the user removed: Play uninstalls it later, not at once. -->
+    <string name="storage_play_module_removing">Play removes it later, usually within a day</string>
+    <string name="storage_language_packs_title">Interface languages</string>
+    <string name="storage_language_packs_subtitle">The app\'s menus and settings in languages other than English, downloaded when you picked them</string>
+    <string name="storage_feature_libraries_subtitle">Native code that features such as voice typing, grammar checking, the scanner and on-device AI downloaded the first time you used them Press one to open the settings of the feature it belongs to.</string>
+    <!-- Under each file on Feature libraries: what the library is for. -->
+    <string name="storage_lib_llm">On-device AI, for models in the LiteRT format</string>
+    <string name="storage_lib_translate">ML Kit\'s on-device translator, for the Translate tool</string>
+    <string name="storage_lib_litert">Offline Whisper voice typing and the sticker background remover</string>
+    <string name="storage_lib_handwriting">ML Kit\'s handwriting recognizer</string>
+    <string name="storage_lib_speech">whisper.cpp and Whistle voice typing, and noise removal for dictation</string>
+    <string name="storage_lib_opus">Makes dictation audio smaller before it goes to a transcription server</string>
+    <string name="storage_lib_executorch">Asr4All, Parakeet and Moonshine voice typing, and the FUTO Swipe glide engine</string>
+    <string name="storage_lib_onnx">Sherpa voice typing and the voices that read text aloud</string>
+    <string name="storage_lib_xlit">Neural suggestions on phonetic layouts</string>
+    <string name="storage_lib_nikud">Add niqqud for Hebrew</string>
+    <string name="storage_lib_kiwi">Korean spacing correction</string>
+    <string name="storage_lib_webrtc">PairDrop in Send files</string>
+    <string name="storage_lib_grammar">Harper, the on-device grammar checker</string>
+    <string name="storage_lib_spell">Spell checking with Hunspell, Divvunspell and Voikko dictionaries</string>
+    <string name="storage_lib_ocr">Tesseract, for offline text scanning</string>
+    <string name="storage_lib_rime">The RIME engine for Chinese</string>
+    <string name="storage_lib_mozc">The Mozc engine for Japanese</string>
+    <string name="storage_lib_bergamot">Bergamot, the free on-device engine in the Translate tool</string>
+    <string name="storage_lib_ct2">The NLLB engine in the Translate tool</string>
+    <string name="storage_lib_zinnia">Offline handwriting for Chinese and Japanese</string>
+    <string name="storage_lib_llama">On-device AI, for GGUF models</string>
+    <string name="storage_lib_docscan">The built-in document scanner</string>
+    <string name="storage_lib_zxing">The built-in QR code scanner</string>
+    <string name="storage_lib_imagegen">The sticker generator, and text scanning with PaddleOCR</string>
+    <string name="storage_lib_npu">On-device AI on the phone\'s NPU</string>
+    <string name="storage_lib_scanner">ML Kit\'s text and barcode readers, for the scanner tools</string>
+    <string name="storage_addon_index_subtitle">The list of add-on sources, and what you installed from them</string>
+
+    <!-- The Feature libraries page: every native library on one screen. -->
+    <string name="feature_libraries_title">Feature libraries</string>
+    <string name="feature_libraries_subtitle">See which libraries are missing, and download them in one place</string>
+    <!-- %1$d of %2$d: libraries on the phone, of all this phone can use. -->
+    <string name="feature_libraries_summary">%1$d of %2$d on this phone</string>
+    <string name="feature_libraries_caption">Each feature downloads its library when you first use it. Download them here to have them ready. Press a row to open the settings of its feature.</string>
+    <string name="feature_libraries_download_all">Download all missing</string>
+    <!-- %1$s is a size. -->
+    <string name="feature_libraries_download_all_sized">Download all missing (%1$s)</string>
+    <string name="feature_libraries_downloading">Downloading…</string>
+    <string name="feature_libraries_state_here">On this phone</string>
+    <string name="feature_libraries_state_missing">Not on this phone</string>
+    <string name="feature_libraries_state_failed">The download did not finish</string>
+    <string name="feature_libraries_built_in">This build has every feature library in the app. There is nothing to download.</string>
+    <!-- After a backup is restored. A backup does not carry downloads. -->
+    <plurals name="feature_libraries_after_restore">
+        <item quantity="one">A backup does not include downloads. %1$d feature library is not on this phone.</item>
+        <item quantity="other">A backup does not include downloads. %1$d feature libraries are not on this phone.</item>
+    </plurals>
+
+    <string name="storage_themes_title">Themes and photos</string>
+    <string name="storage_themes_subtitle">Background images for your themes</string>
+    <string name="storage_stickers_title">Sticker packs</string>
+    <string name="storage_stickers_subtitle">Stickers you made or imported</string>
+    <string name="storage_stickers_originals_label">Images you made stickers from</string>
+    <string name="storage_stickers_originals_detail">The app opens these when you edit a sticker again. It does not put them in an export.</string>
+    <string name="storage_stickers_cutout_label">Background remover</string>
+    <string name="storage_stickers_cutout_detail">The sticker editor uses this to remove a background. The app can download it again.</string>
+    <string name="storage_icon_packs_title">Icon packs</string>
+    <string name="storage_icon_packs_subtitle">Key icons you made or imported</string>
+    <string name="storage_fonts_title">Fonts</string>
+    <string name="storage_fonts_subtitle">Fonts you installed for the keyboard</string>
+    <string name="storage_key_sounds_title">Key sounds</string>
+    <string name="storage_key_sounds_subtitle">Sounds you imported</string>
+    <string name="storage_plugins_title">Plugins</string>
+    <string name="storage_plugins_subtitle">Plugin code, the data each one saves, and its log</string>
+
+    <string name="storage_learned_title">Learned words</string>
+    <string name="storage_learned_subtitle">What the keyboard learned from your typing</string>
+    <string name="storage_file_netlog_rows_label">Requests</string>
+    <string name="storage_file_netlog_days_label">Daily totals</string>
+    <string name="storage_netlog_title">Network activity log</string>
+    <string name="storage_netlog_subtitle">Which servers the keyboard contacted, never what it sent</string>
+    <string name="storage_typing_stats_title">Typing statistics</string>
+    <string name="storage_typing_stats_subtitle">Your daily typing counts, kept on your device only</string>
+    <string name="storage_clipboard_title">Clipboard</string>
+    <string name="storage_clipboard_subtitle">Your clip history, and the images in it</string>
+    <string name="storage_snippets_title">Snippets</string>
+    <string name="storage_snippets_subtitle">The phrases you saved</string>
+    <string name="storage_ai_history_title">AI history</string>
+    <string name="storage_ai_history_subtitle">What you sent to an AI action, and what came back</string>
+    <string name="storage_custom_wordlists_title">Your word lists</string>
+    <string name="storage_custom_wordlists_subtitle">Word lists you imported yourself</string>
+    <string name="storage_captures_title">Camera and scans</string>
+    <string name="storage_captures_subtitle">Photos and scans the keyboard took. Each is deleted a day after it was taken</string>
+    <string name="storage_settings_data_title">Settings</string>
+    <string name="storage_settings_data_subtitle">Every setting, and the themes, layouts and modes you made</string>
+
+    <string name="storage_cache_images_title">Image cache</string>
+    <string name="storage_cache_images_subtitle">Thumbnails from the GIF, sticker and photo tools</string>
+    <string name="storage_cache_media_title">Sent media</string>
+    <string name="storage_cache_media_subtitle">Copies of the GIFs, stickers and pictures you sent. Each is deleted a day after it was sent</string>
+    <string name="storage_cache_addons_title">Add-on downloads</string>
+    <string name="storage_cache_addons_subtitle">Part-finished downloads, and add-on previews</string>
+    <string name="storage_neural_phonetic_title">Neural suggestions model</string>
+    <string name="storage_neural_phonetic_subtitle">Reads Indic words typed in English letters. One model serves every language, and deleting it turns neural suggestions off</string>
+    <string name="storage_romanized_dictation_title">Romanized dictation model</string>
+    <string name="storage_romanized_dictation_subtitle">Spells dictated Indic words in Latin letters when the spelling lists do not have them. Without it, the spelling rules do</string>
+    <string name="storage_app_compiled_label">Code your device compiled from the app</string>
+    <string name="storage_app_compiled_detail">Android turns the app\'s code into faster machine code after it installs. It comes back with every update</string>
+    <string name="storage_cache_llm_title">AI model working files</string>
+    <string name="storage_cache_llm_subtitle">What the on-device AI built from its models. Rebuilt, slower once, the next time a model loads</string>
+    <string name="storage_cache_temp_title">Temporary files</string>
+    <string name="storage_cache_temp_subtitle">Previews, downloads being browsed, imports in progress and files the app shared. Each comes back when it is needed</string>
+    <string name="storage_other_cache_title">Other cached files</string>
+    <string name="storage_other_cache_subtitle">Cache your device counts that the app does not name</string>
+
+    <string name="storage_logs_title">Diagnostics</string>
+    <string name="storage_logs_subtitle">The crash log, kept on your device only</string>
+    <!-- The cached list of releases the update check reads. -->
+    <string name="storage_file_releases_label">Release list</string>
+
+    <!-- The downloaded app update, on builds that install their own updates. -->
+    <string name="storage_updates_title">Downloaded update</string>
+    <string name="storage_updates_subtitle">A new version waiting to be installed. Deleting it only costs the download</string>
+
+    <string name="storage_other_data_title">Other data</string>
+    <string name="storage_other_data_subtitle">Files your device counts that the app does not name</string>
+
+    <!-- notes under a row -->
+
+    <!-- Shown under categories the running keyboard holds open. -->
+    <string name="storage_note_mapped">Your device frees this space when you next close the keyboard.</string>
+    <string name="storage_note_rebuilds">The app makes these again when it needs them.</string>
+
+    <!-- rows and detail screens -->
+
+    <!-- %1$s is a size, %2$s is a count of items, for example "3 items". -->
+    <string name="storage_row_summary">%1$s · %2$s</string>
+    <plurals name="storage_item_count">
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+    <string name="storage_empty_label">Nothing saved</string>
+    <string name="storage_detail_empty">There is nothing here to delete</string>
+    <string name="storage_detail_manage_action">Open the settings for this</string>
+    <string name="storage_delete_item_desc">Delete %1$s</string>
+    <string name="storage_delete_all_desc">Delete everything in %1$s</string>
+    <!-- A part-finished download left behind. -->
+    <string name="storage_item_partial_label">Unfinished download</string>
+    <string name="storage_item_unknown_label">Unnamed</string>
+
+    <!-- names for the files inside a category
+
+         Each of these replaces a file name on a detail screen, and the file
+         name moves underneath it as the subtitle. So they say what the file is
+         for, and never repeat the name they are standing in for. -->
+
+    <!-- add-on sources -->
+    <string name="storage_file_repos_label">Source list</string>
+    <string name="storage_file_installed_label">Add-ons you installed</string>
+    <string name="storage_file_seeded_label">First-run marker</string>
+
+    <!-- learned words -->
+    <string name="storage_file_lexicon_label">Words the keyboard learned</string>
+    <string name="storage_file_pending_learn_label">Words it is still counting</string>
+    <string name="storage_file_corrections_label">Corrections you accepted</string>
+    <string name="storage_file_phonetic_picks_label">Phonetic words you picked</string>
+    <string name="storage_file_context_adapter_label">Context model record</string>
+    <string name="storage_file_emoji_usage_label">Emoji you use most</string>
+    <string name="storage_file_cjk_history_label">Chinese, Japanese and Cantonese picks</string>
+    <string name="storage_file_language_mix_label">How you mix languages</string>
+    <string name="storage_file_word_ranks_label">Words you ranked higher or lower</string>
+    <string name="storage_file_key_offsets_label">Where your finger lands on keys</string>
+    <string name="storage_file_learned_corrections_label">Fixes you taught autocorrect</string>
+    <string name="storage_file_tap_offsets_label">Where your finger lands when tapping</string>
+    <string name="storage_file_app_language_mix_label">Which language you write in each app</string>
+    <string name="storage_file_typed_emails_label">Email addresses you typed</string>
+    <string name="storage_file_typed_numbers_label">Numbers you typed</string>
+    <string name="storage_file_phonetic_script_choices_label">Words you switched between English and Bengali or Hindi</string>
+    <string name="storage_file_glide_outcomes_label">Swipe readings you corrected</string>
+    <string name="storage_file_glide_shapes_label">How you draw each word</string>
+
+    <!-- your own data -->
+    <string name="storage_file_typing_stats_label">Your typing counts</string>
+    <string name="storage_file_typing_stats_devices_label">Typing counts from your other devices</string>
+    <string name="storage_file_clip_history_label">Clip history</string>
+    <string name="storage_file_clip_images_label">Images you copied</string>
+    <string name="storage_file_snippets_label">Saved phrases</string>
+    <string name="storage_file_ai_history_label">AI action history</string>
+    <string name="storage_file_ai_chats_label">AI chats</string>
+
+    <!-- settings -->
+    <string name="storage_file_settings_store_label">Every setting</string>
+    <string name="storage_file_locked_settings_label">The settings the keyboard reads before you unlock</string>
+
+    <!-- diagnostics -->
+    <string name="storage_file_crash_log_label">Crash log</string>
+    <string name="storage_file_debug_log_label">Debug log</string>
+
+    <!-- theme images -->
+    <string name="storage_file_background_label">Background</string>
+    <string name="storage_file_background_land_label">Landscape background</string>
+    <string name="storage_file_texture_key_label">Key texture</string>
+    <string name="storage_file_texture_modifier_label">Modifier key texture</string>
+    <string name="storage_file_texture_enter_label">Enter key texture</string>
+    <string name="storage_file_texture_space_label">Spacebar texture</string>
+    <string name="storage_file_texture_pressed_label">Pressed key texture</string>
+    <string name="storage_file_texture_popup_label">Popup texture</string>
+    <string name="storage_file_decal_label">Decal</string>
+    <string name="storage_file_effect_label">Effect image</string>
+    <string name="storage_file_crop_label">Image you cropped</string>
+
+    <!-- the photo rotation pool -->
+    <string name="storage_file_photo_stock_label">Photo from a photo site</string>
+    <string name="storage_file_photo_device_label">Photo from your gallery</string>
+    <string name="storage_file_photo_source_label">Photo from a search</string>
+    <string name="storage_file_photo_pool_label">The list of saved photos</string>
+
+    <!-- camera and scans -->
+    <string name="storage_file_camera_shot_label">Photo you took</string>
+    <string name="storage_file_scan_label">Document scan</string>
+
+    <!-- caches -->
+    <string name="storage_file_skia_cache_label">Graphics shaders your device built</string>
+    <string name="storage_file_gl_cache_label">OpenGL shaders your device built</string>
+    <string name="storage_file_webview_cache_label">Browser engine cache</string>
+    <string name="storage_file_llm_cache_label">AI model working files</string>
+    <string name="storage_file_keysound_cache_label">Key sounds the app built</string>
+    <string name="storage_file_diagnostics_label">Logs you shared</string>
+
+    <!-- the rest of the app's data directory -->
+    <string name="storage_file_no_backup_label">Files kept out of backups</string>
+    <string name="storage_file_shared_prefs_label">Preference files</string>
+    <string name="storage_file_databases_label">Databases</string>
+    <string name="storage_file_llm_cpu_weights_label">%1$s: weights laid out for the processor</string>
+    <string name="storage_file_llm_gpu_weights_label">%1$s: weights laid out for the graphics chip</string>
+    <string name="storage_file_llm_gpu_programs_label">%1$s: programs built for the graphics chip</string>
+    <string name="storage_file_bergamot_label">Offline translation models</string>
+    <string name="storage_file_mlkit_translate_label">Translation models from Google</string>
+    <string name="storage_file_xlit_label">Neural suggestions model</string>
+    <string name="storage_file_xlit_latin_label">Romanized dictation model</string>
+    <string name="storage_file_backup_id_label">This phone\'s backup name</string>
+    <string name="storage_file_otp_capture_label">Whether codes are read from notifications</string>
+    <string name="storage_file_work_db_label">Background jobs waiting to run</string>
+    <string name="storage_file_layout_previews_label">Layout pictures for the pickers</string>
+    <string name="storage_file_rboard_label">Rboard theme list and downloads</string>
+    <string name="storage_file_gboard_preview_label">Gboard theme being imported</string>
+    <string name="storage_file_telegram_stickers_label">Telegram stickers you browsed</string>
+    <string name="storage_file_signal_stickers_label">Signal stickers you browsed</string>
+    <string name="storage_file_shared_notes_label">Notes you shared</string>
+    <string name="storage_file_send_queue_label">Files waiting to be sent</string>
+    <string name="storage_file_remote_restore_label">Backup fetched to restore</string>
+    <string name="storage_file_keyman_downloads_label">Keyman keyboards being fetched</string>
+    <string name="storage_file_import_preview_label">Files opened to preview an import</string>
+    <string name="storage_file_link_import_label">Files fetched from a link</string>
+    <string name="storage_file_offline_import_label">Files being imported</string>
+    <string name="storage_file_kaomoji_import_label">Kaomoji pack being imported</string>
+    <string name="storage_file_upscale_label">Pictures being enlarged</string>
+    <string name="storage_file_imagegen_label">Generated stickers not saved yet</string>
+    <string name="storage_file_mediapipe_label">Model files Google\'s on-device AI unpacked</string>
+    <string name="storage_file_ink_models_label">Handwriting models from Google</string>
+    <string name="storage_file_gms_config_label">Settings Google\'s libraries keep</string>
+    <string name="storage_file_notes_label">Your notes</string>
+    <string name="storage_file_kaomoji_label">Your kaomoji</string>
+    <string name="storage_file_keyman_label">Keyman keyboards you added</string>
+    <string name="storage_file_smart_home_label">Smart home connections</string>
+    <string name="storage_file_kdeconnect_label">KDE Connect pairings</string>
+    <string name="storage_file_gif_collections_label">Your GIF collections</string>
+    <string name="storage_file_send_history_label">What you sent and received</string>
+    <string name="storage_file_clock_label">Your alarms, timers and clocks</string>
+    <string name="storage_file_backup_staging_label">Backup being written</string>
+    <string name="storage_file_ink_imports_label">Handwriting packs you imported</string>
+    <string name="storage_file_gallery_sent_label">Pictures you sent from the gallery</string>
+    <string name="storage_file_code_cache_label">Code your device compiled</string>
+    <string name="storage_file_cache_label">Cache</string>
+    <string name="storage_file_app_files_label">App files</string>
+    <string name="storage_file_profile_installed_label">Start-up speed marker</string>
+    <string name="storage_file_native_libs_label">Native libraries</string>
+    <string name="storage_file_webview_data_label">Browser engine data</string>
+    <string name="storage_file_apk_base_label">The app</string>
+    <string name="storage_file_apk_split_label">Part of the app</string>
+
+    <!-- anything, anywhere -->
+    <string name="storage_file_staging_label">Unfinished import</string>
+    <string name="storage_file_temp_label">Half-written file</string>
+    <string name="storage_file_version_marker_label">Version marker</string>
+    <string name="storage_file_nomedia_label">Hides this folder from your gallery</string>
+
+    <!-- Under a file that lives in the storage the keyboard can read before the
+         phone is unlocked. %1$s is the file name. Two rows can otherwise carry
+         the same name, one from each half of the app's storage. -->
+    <string name="storage_file_direct_boot_detail">%1$s · readable before you unlock</string>
+
+    <!-- confirmation dialogs -->
+
+    <!-- %1$s is a category name, for example "Voice models". -->
+    <string name="storage_confirm_title">Delete %1$s?</string>
+    <!-- %1$s is a size. -->
+    <string name="storage_confirm_free_body">This frees %1$s.</string>
+    <string name="storage_confirm_redownload_body">This frees %1$s. You can download it again when you want it.</string>
+    <string name="storage_confirm_personal_body">This frees %1$s. You cannot get this data back.</string>
+    <string name="storage_confirm_item_title">Delete %1$s?</string>
+
+    <string name="storage_confirm_reset_title">Delete every setting?</string>
+    <string name="storage_confirm_reset_body">This deletes every setting, and the themes, layouts, keyboard modes, symbol sets and AI actions you made. The keyboard goes back to how it was when you installed it. You cannot get this back.</string>
+    <string name="storage_confirm_reset_again_title">Are you sure?</string>
+    <!-- %1$s is a size. -->
+    <string name="storage_confirm_reset_again_body">Press delete again to erase every setting and free %1$s.</string>
+
+    <string name="storage_confirm_free_up_title">Delete the caches?</string>
+    <!-- %1$s is a size. -->
+    <string name="storage_confirm_free_up_body">This frees %1$s. The app downloads what it needs again, so this is safe.</string>
+
+    <string name="storage_deleting_label">Deleting…</string>
+
+    <string name="storage_vocab_title">Vocabulary</string>
+    <string name="storage_vocab_subtitle">Downloaded packs, your lists and your learning progress</string>
+    <string name="storage_file_vocab_progress_label">Learning progress</string>
+
+</resources>

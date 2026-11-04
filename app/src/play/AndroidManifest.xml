@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Play-channel builds only, added by `channelManifests` in build.gradle.kts.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+       PlayAppUpdater asks who installed the app before it touches Play Core,
+       because Play's update API only works for an install Play made and fails
+       noisily for every other one. From API 30 package visibility hides the
+       Play Store from getInstallSourceInfo() unless it is named here.
+    -->
+    <queries>
+        <package android:name="com.android.vending" />
+    </queries>
+
+    <!--
+       Play rejected version code 26 over these (2026-09-28), so the Play APK
+       does not declare them. The photos pair backs the clipboard's
+       screenshot watcher, which Play ruled should use the photo picker; the
+       picker cannot watch for new screenshots, so the feature is left out
+       instead. The gallery tool's grid (#708) needs the whole set, video and
+       the Android 14 partial grant too; in a Play build the tool opens the
+       photo picker instead, which needs none of them. ChannelFeatures in
+       :core:common hides the matching settings rows.
+    -->
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VIDEO"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
+        tools:node="remove" />
+
+    <!--
+       The keyboard's file manager. Play keeps All files access for apps whose
+       core job is managing files, and a keyboard is not one. Every pick there
+       goes to Android's picker, as ChannelFeatures.FILE_MANAGER routes it. The
+       storage pair goes back to what save-to-gallery alone needs.
+    -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:replace="android:maxSdkVersion" />
+
+    <!--
+       The clock tool's ring service. Play keeps the systemExempted
+       foreground-service type for apps whose core job is an alarm clock, and
+       would refuse a keyboard that declares it, so the Play APK has neither
+       the type's permission nor the service. Alarms there ring through the
+       insistent alarm notification channel; ChannelFeatures.CLOCK_RING_SERVICE
+       routes ClockRinger to it and hides the settings that only the service
+       can honour (alarm and timer sound, fade-in).
+    -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED"
+        tools:node="remove" />
+
+    <!--
+       The clock's ring screen over the lock screen. Play keeps this one for
+       alarm-clock and calling apps too; without it a ringing alarm is a
+       heads-up notification, and a tap on it opens the ring screen.
+       ChannelFeatures.CLOCK_FULL_SCREEN hides the matching grant rows.
+    -->
+    <uses-permission
+        android:name="android.permission.USE_FULL_SCREEN_INTENT"
+        tools:node="remove" />
+
+    <application>
+        <!--
+           TalkBack gesture pass-through. Play wants the store listing built
+           around an AccessibilityService, so the Play APK ships without one;
+           Gestures mode is hidden there and the keyboard's own fallback to
+           Explore covers anyone who had it on.
+        -->
+        <service
+            android:name="com.wasimaster.wmkeyboard.core.accessibility.TouchPassthroughService"
+            tools:node="remove" />
+
+        <!--
+           The floating AI button's screen reading, for the same reason as the
+           service above: Play wants an AccessibilityService to be the app's
+           core purpose. The AI button still opens its chat there, without the
+           screen's text; ChannelFeatures.SCREEN_CONTEXT hides the grant row.
+        -->
+        <service
+            android:name="com.wasimaster.wmkeyboard.core.accessibility.ScreenContextService"
+            tools:node="remove" />
+
+        <!--
+           The app launcher's split-screen helper, for the same reason again.
+           Split screen still opens through the keyboard's own launch-adjacent
+           start, which is all stock Android 12L and later needs;
+           ChannelFeatures.SPLIT_SCREEN_HELPER hides the grant row.
+        -->
+        <service
+            android:name="com.wasimaster.wmkeyboard.core.accessibility.SplitScreenHelperService"
+            tools:node="remove" />
+
+        <!-- See the permission above. -->
+        <service
+            android:name="com.wasimaster.wmkeyboard.core.clock.ClockRingService"
+            tools:node="remove" />
+
+        <!-- The file manager's picks and its Android 7 to 10 grant; see MANAGE_EXTERNAL_STORAGE above. -->
+        <provider
+            android:name="com.wasimaster.wmkeyboard.core.files.LocalFilesProvider"
+            android:authorities="${applicationId}.localfiles"
+            tools:node="remove" />
+        <activity
+            android:name="com.wasimaster.wmkeyboard.app.FilesPermissionActivity"
+            tools:node="remove" />
+
+        <!--
+           The ML Kit registrars of the two on-demand ML Kit modules, declared
+           in the base while their classes ship in the :feature:translate and
+           :feature:handwriting splits. Each library's own manifest declares
+           the same MlKitComponentDiscoveryService with its registrar as
+           meta-data, and each feature's manifest removes that copy, because
+           AGP merges a feature's components into the base manifest under
+           android:splitName and the platform hides a component whose split
+           is not installed: merged from a split, the one shared service
+           element would take the base's own registrars (text recognition,
+           barcodes, subject segmentation) down with it until that split
+           arrived.
+
+           Declared here, every registrar is visible from the first process
+           start. ML Kit reads this service's meta-data once, when its context
+           comes up, keeps a lazy provider per registrar, skips one whose
+           class is not loadable yet with a logged warning ("Class ... is not
+           an found."), and retries the ones it kept when its dynamic-feature
+           support library hears a split install; SplitCompat has made the
+           class loadable by then. Read off firebase-components 16.1.0 and
+           playstore-dynamic-feature-support 16.0.0-beta2. tools:node="merge"
+           adds these entries to the service the base's other ML Kit
+           libraries declare.
+        -->
+        <service
+            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.nl.translate.NaturalLanguageTranslateRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.nl.languageid.bundled.internal.ThickLanguageIdRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.mlkit.vision.digitalink.recognition.internal.DigitalInkRecognitionRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,280 @@
+{
+  "format": "wmkeyboard-layout",
+  "version": 1,
+  "layout": {
+    "id": "asset_ckb_phonetic",
+    "name": "قوەرتی نوێ (New Qwerty)",
+    "langId": "ckb",
+    "version": 2,
+    "layers": {
+      "letters": {
+        "rows": [
+          [
+            {
+              "label": "ق",
+              "longPress": [
+                "1",
+                "ٯ",
+                "؈"
+              ]
+            },
+            {
+              "label": "و",
+              "longPress": [
+                "2",
+                "وو"
+              ]
+            },
+            {
+              "label": "ە",
+              "longPress": [
+                "3",
+                "ة",
+                "ہ"
+              ]
+            },
+            {
+              "label": "ر",
+              "longPress": [
+                "4",
+                "ڕ"
+              ]
+            },
+            {
+              "label": "ت",
+              "longPress": [
+                "5",
+                "ط"
+              ]
+            },
+            {
+              "label": "ی",
+              "longPress": [
+                "6",
+                "ي",
+                "ۍ",
+                "ې"
+              ]
+            },
+            {
+              "label": "ێ",
+              "longPress": [
+                "7",
+                "ؽ"
+              ]
+            },
+            {
+              "label": "ئ",
+              "longPress": [
+                "8",
+                "ء",
+                "ﺋ",
+                "ﹳ"
+              ]
+            },
+            {
+              "label": "ۆ",
+              "longPress": [
+                "9",
+                "ؤ",
+                "ۋ",
+                "ۊ",
+                "ۉ",
+                "ۇ",
+                "ۏ"
+              ]
+            },
+            {
+              "label": "پ",
+              "longPress": [
+                "0",
+                "ث"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ا",
+              "longPress": [
+                "أ",
+                "إ",
+                "آ",
+                "ٱ"
+              ]
+            },
+            {
+              "label": "س",
+              "longPress": [
+                "ص"
+              ]
+            },
+            {
+              "label": "ش",
+              "longPress": [
+                "ض"
+              ]
+            },
+            {
+              "label": "د",
+              "longPress": [
+                "ذ",
+                "ﮆ"
+              ]
+            },
+            {
+              "label": "ف",
+              "longPress": [
+                "ڤ"
+              ]
+            },
+            {
+              "label": "ھ",
+              "longPress": [
+                "ھ"
+              ]
+            },
+            {
+              "label": "ژ",
+              "longPress": [
+                "ـ"
+              ]
+            },
+            {
+              "label": "ل",
+              "longPress": [
+                "ڵ"
+              ]
+            },
+            {
+              "label": "ک",
+              "longPress": [
+                "ك",
+                "ڪ"
+              ]
+            },
+            {
+              "label": "گ",
+              "longPress": [
+                "غ"
+              ]
+            }
+          ],
+          [
+            {
+              "label": "ز",
+              "longPress": [
+                "ظ"
+              ]
+            },
+            {
+              "label": "خ",
+              "longPress": [
+                "\""
+              ]
+            },
+            {
+              "label": "ج",
+              "longPress": [
+                "'"
+              ]
+            },
+            {
+              "label": "چ",
+              "longPress": [
+                ":"
+              ]
+            },
+            {
+              "label": "ح",
+              "longPress": [
+                ";"
+              ]
+            },
+            {
+              "label": "ع",
+              "longPress": [
+                "ﷲ",
+                "ﷻ"
+              ]
+            },
+            {
+              "label": "ب",
+              "longPress": [
+                "﷽"
+              ]
+            },
+            {
+              "label": "ن",
+              "longPress": [
+                "~"
+              ]
+            },
+            {
+              "label": "م",
+              "longPress": [
+                "ﷴ",
+                "ﷺ"
+              ]
+            },
+            {
+              "label": "⌫",
+              "action": {
+                "type": "delete"
+              },
+              "width": 1.5
+            }
+          ],
+          [
+            {
+              "label": "?123",
+              "action": {
+                "type": "symbols"
+              },
+              "width": 1.5
+            },
+            {
+              "label": "،",
+              "longPress": [
+                "؟",
+                "؛",
+                "ـ",
+                ",",
+                "!",
+                "?"
+              ]
+            },
+            {
+              "label": " ",
+              "action": {
+                "type": "space"
+              },
+              "width": 5
+            },
+            {
+              "label": ".",
+              "longPress": [
+                "…",
+                "؟",
+                "،",
+                "؛",
+                "٪",
+                ",",
+                "?",
+                "!",
+                ":",
+                ";"
+              ]
+            },
+            {
+              "label": "⏎",
+              "action": {
+                "type": "enter"
+              },
+              "width": 1.5
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
